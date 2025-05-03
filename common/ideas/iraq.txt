@@ -1,0 +1,43 @@
+ideas = {
+	country = {
+			IRQ_ideas_rebirth_babylon = {
+				allowed = {
+					original_tag = IRQ
+				}
+
+				allowed_civil_war = {
+					always = yes
+				}
+
+				picture = generic_agrarian_society
+				
+				removal_cost = -1
+				
+				modifier = {
+					production_speed_industrial_complex_factor = 0.4
+					production_speed_infrastructure_factor = 0.2
+			}
+		}
+	}
+	country = {
+		IRQ_ideas_against_israel = {
+			allowed = {
+				original_tag = IRQ
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_agrarian_society
+			
+			removal_cost = -1
+			
+			targeted_modifier = {
+				target = ENG
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+	}
+}
+}

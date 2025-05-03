@@ -1,10 +1,6 @@
-version="0.0.0.1"
+version="2"
 tags={
-	"Events"
-	"Gameplay"
-	"Map"
-	"National Focuses"
-	"Alternative History"
+	"Fixes"
 }
-name="Treaty of Saabadab"
+name="TEST2"
 supported_version="1.16.5"

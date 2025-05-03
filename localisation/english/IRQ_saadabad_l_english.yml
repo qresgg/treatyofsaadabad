@@ -1,0 +1,118 @@
+﻿l_english:
+  # Focus Titles and Descriptions
+  IRQ_rebirth_babylon: "Rebirth of Babylon"
+  IRQ_rebirth_babylon_desc: "The revival of the ancient civilization of Babylon. A time to restore the glory and power of the past."
+  
+  IRQ_centralization_of_power: "Centralization of Power"
+  IRQ_centralization_of_power_desc: "Consolidating power in the hands of the central government to ensure stability and control."
+  
+  IRQ_support_the_world_arabs: "Support for the Arab World"
+  IRQ_support_the_world_arabs_desc: "Strengthen bonds with the Arab nations to foster regional solidarity and mutual cooperation."
+  
+  IRQ_dig_up_a_rifle: "Digging Up a Rifle"
+  IRQ_dig_up_a_rifle_desc: "Uncovering <color=#FFFF00>10.000</color>old weapons from the past to prepare for the challenges ahead."
+  
+  IRQ_please_jordan: "Please, Jordan"
+  IRQ_please_jordan_desc: "A diplomatic move to encourage Jordan's cooperation and alignment with our goals."
+  
+  IRQ_clear_in_the_desert: "Clearing in the Desert"
+  IRQ_clear_in_the_desert_desc: "An ultimatum to neighboring powers: either they comply, or war and annexation will follow."
+  
+  IRQ_deal_for_israel: "Deal for Israel"
+  IRQ_deal_for_israel_desc: "A delicate negotiation with the United Kingdom to determine Israel's future — either a peaceful deal or the preparation for war."
+  
+  IRQ_war_for_israel: "War for Israel"
+  IRQ_war_for_israel_desc: "Preparing for a military conflict over Israel if negotiations fail."
+  
+  IRQ_here_we_go_again: "Here We Go Again"
+  IRQ_here_we_go_again_desc: "A final attempt to reclaim territories in the region — this time with full force."
+  
+  IRQ_course_to_south: "Course to the South"
+  IRQ_course_to_south_desc: "A strategic move to claim southern territories. If negotiations fail, we will assert our claim by force."
+  
+  IRQ_iran_deal: "Iran Deal"
+  IRQ_iran_deal_desc: "A secret pact with Iran that could shift the balance of power in the region."
+  
+  IRQ_iran_deal2: "Iran Deal (Secret)"
+  IRQ_iran_deal2_desc: "A continuation of the Iran pact, ensuring support in the face of future challenges."
+  
+  # Event Titles and Descriptions
+  IRQ_saadabad.1.t: "Black Discovery"
+  IRQ_saadabad.1.d: "The Black Army has uncovered a major find in the sands — over 10,000 weapons."
+  IRQ_saadabad.1.a: "Wonderful!"
+
+  IRQ_kuwrej1.t: "Kuwait Rejects"
+  IRQ_kuwrej1.d: "Kuwait has rejected our ultimatum. We must now prepare for war."
+
+  #Spirit and Ideas
+  IRQ_ideas_rebirth_babylon: "Rebirth of Babylon"
+  IRQ_ideas_rebirth_babylon_desc: "The revival of the ancient civilization of Babylon. A time to restore the glory and power of the past."
+
+  #Custom tooltip
+  IRQ_digrifle: "You will receive §Y10,000§! units of "§YRifle No. 4 Mkl§!" in your stockpile."
+  IRQ_kuw_ultimatum_tt: "If Kuwait reject our ultimatum, we can declare war"
+
+
+  
+  # Focuses
+IRQ_clear_in_the_desert: "Clear in the Desert"
+IRQ_clear_in_the_desert_desc: "With neutrality leaning in our favor, it's time to handle our interests in Kuwait. A diplomatic ultimatum or war—either way, we will gain what is rightfully ours."
+
+# Tooltips
+generic_skip_one_line_tt: " "
+if_they_accept_tt: "If they accept, we will annex Kuwait peacefully."
+IRQ_kuwait_war_goal: "Annexation of Kuwait"
+
+# Events
+IRQ_kuw_ultimatum.2.t: "Kuwait Receives an Ultimatum"
+IRQ_kuw_ultimatum.2.desc: "Iraq has issued us an ultimatum: submit peacefully to their authority or face war. The decision will define our future."
+IRQ_kuw_ultimatum.2.a: "We have no choice but to yield"
+IRQ_kuw_ultimatum.2.b: "We will resist their threats!"
+
+IRQ_kuw_ultimatum.3t: "Kuwait Accepts the Ultimatum"
+IRQ_kuw_ultimatum.3d: "Kuwait has yielded to our demands without bloodshed. The desert sands are now ours."
+IRQ_kuw_ultimatum.3.a: "Excellent. The land is ours."
+
+IRQ_kuw_ultimatum.4t: "Kuwait Rejects the Ultimatum"
+IRQ_kuw_ultimatum.4d: "Kuwait has rejected our demands. There is only one course left—war."
+IRQ_kuw_ultimatum.4.a: "Then we will take it by force."
+
+# Additional
+GAME_OVER_TT: "§RThis may result in the game ending if you're annexed.§"
+
+# IRQ_PAL_ultimatum.2
+IRQ_PAL_ultimatum.2.t: "Palestinian Ultimatum"
+IRQ_PAL_ultimatum.2.desc: "Palestine must choose whether to accept our ultimatum or resist our demands."
+IRQ_PAL_ultimatum.2.a: "Accept the Ultimatum"
+IRQ_PAL_ultimatum.2.b: "Reject the Ultimatum"
+
+# IRQ_PAL_ultimatum.3
+IRQ_PAL_ultimatum.3t: "Annexation of Palestine"
+IRQ_PAL_ultimatum.3d: "Palestine will be annexed and become part of our nation."
+
+# IRQ_PAL_ultimatum.4
+IRQ_PAL_ultimatum.4t: "Palestinian Resistance"
+IRQ_PAL_ultimatum.4d: "Palestine has rejected the ultimatum. It's time to act. We can create a war goal for their territory."
+
+# For war goal generation:
+IRQ_PAL_war_goal: "War Goal Against Palestine"
+
+IRQ_deal_for_israel: "Deal for Israel"
+IRQ_deal_for_israel.desc: "If Britain accepts, you will gain Israel and a non-aggression pact with your neighbors. If they refuse, you will gain a war goal on Israel."
+IRQ_deal_for_israel.completion_reward "Completion Reward: Gain a war goal on Palestine or negotiate for Israel."
+
+IRQ_kuwait_war_goal: "Claiming Kuwait"
+IRQ_PALESTINE_war_goal: "Claiming Palestine"
+
+IRQ_JOR_ultimatum.2.t: "Ultimatum to Jordan"
+IRQ_JOR_ultimatum.2.desc: "Our diplomats have delivered an ultimatum to the Jordanian government: submit peacefully to our demands or face the consequences of defiance."
+IRQ_JOR_ultimatum.2.a: "They yield"
+IRQ_JOR_ultimatum.2.b: "They resist"
+
+IRQ_JOR_ultimatum.3t: "Jordan Accepts"
+IRQ_JOR_ultimatum.3d: "Faced with overwhelming pressure, the Jordanian leadership has agreed to our demands. They have handed over control without resistance."
+IRQ_JOR_ultimatum.3.b: "Excellent"
+
+IRQ_JOR_ultimatum.4t: "Jordan Resists"
+IRQ_JOR_ultimatum.4d: "Jordan has refused our ultimatum. Their government has mobilized the armed forces, and tensions have erupted into open hostility."
+IRQ_JOR_ultimatum.4.b: "Then we go to war"
