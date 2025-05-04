@@ -6232,7 +6232,7 @@ focus_tree = {
 		prerequisite = { focus = IRQ_arab_free_legion }
 		relative_position_id = IRQ_arab_free_legion
 	
-		cost = 2
+		cost = 5
 	
 		available = {
 			neutrality > 0.40
@@ -7058,8 +7058,7 @@ focus_tree = {
 		mutually_exclusive = { focus = IRQ_deal_for_south_levant focus = IRQ_liberate_south_levant }
 		relative_position_id = IRQ_partition_of_syria
 	
-	
-		cost = 10 # Івент якщо соглашаються Великобританія, то ти отримуєш Ізраїль і пакт про ненапад з сусідами, а якщо ні — отримаєш wargoal на Ізраїль.
+		cost = 5# Івент якщо соглашаються Великобританія, то ти отримуєш Ізраїль і пакт про ненапад з сусідами, а якщо ні — отримаєш wargoal на Ізраїль.
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	
 		available = {
@@ -7082,7 +7081,7 @@ focus_tree = {
 						has_war = no
 					}
 				}
-				PAL = { country_event = { id = IRQ_PAL_ultimatum.2 } }
+				PAL = { country_event = { id = IRQ_PAL_ultimatum.2 } } ## ENG SWITCH TO PAL
 			}
 			else_if = {
 				limit = {
@@ -9093,7 +9092,7 @@ focus = {
 				add_country_leader_role = {
 					country_leader = {
 						ideology = fascism
-						expire = "1965.1.1.1"
+						expire = "1965.1.1"
 						traits = { IRQ_social_reformer_pm }
 					}
 					promote_leader = yes
@@ -9113,11 +9112,11 @@ focus = {
 
 focus = {
     id = IRQ_centralization_of_power # Централізація влади
-    x = -1
+    x = -2
     y = 1
     icon = GFX_focus_icon_name
-	prerequisite = { focus = IRQ_new_leader_new_country}
-	relative_position_id = IRQ_new_leader_new_country
+	prerequisite = { focus = IRQ_change_ideology}
+	relative_position_id = IRQ_change_ideology
 
     cost = 1
     search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }  #CHANGEIT

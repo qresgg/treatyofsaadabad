@@ -51,7 +51,7 @@ greater_mesopotamia_cat = {
 		}
 		
 		visible = {
-            
+            always = yes ### ЗАВЖДИ БАЧИТИ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 		}
 		available = {
 			NOT = { has_country_flag = IRQ_coring_state_in_progress }

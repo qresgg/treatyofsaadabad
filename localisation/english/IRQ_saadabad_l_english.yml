@@ -9,8 +9,8 @@
   IRQ_support_the_world_arabs: "Support for the Arab World"
   IRQ_support_the_world_arabs_desc: "Strengthen bonds with the Arab nations to foster regional solidarity and mutual cooperation."
   
-  IRQ_dig_up_a_rifle: "Digging Up a Rifle"
-  IRQ_dig_up_a_rifle_desc: "Uncovering <color=#FFFF00>10.000</color>old weapons from the past to prepare for the challenges ahead."
+  IRQ_dig_up_a_rifles: "Digging Up a Rifle"
+  IRQ_dig_up_a_rifles_desc: "Uncovering §Y10.000§Y! old weapons from the past to prepare for the challenges ahead."
   
   IRQ_please_jordan: "Please, Jordan"
   IRQ_please_jordan_desc: "A diplomatic move to encourage Jordan's cooperation and alignment with our goals."
@@ -118,7 +118,7 @@ IRQ_JOR_ultimatum.4d: "Jordan has refused our ultimatum. Their government has mo
 IRQ_JOR_ultimatum.4.b: "Then we go to war"
 
 IRQ_greater_mesopotamia:0 "Mesopotamia"
-IRQ_greater_mesopotamia_democratic:0 "Демократична Месопотамія"
-IRQ_greater_mesopotamia_fascism:0 "Імперія Месопотамія"
-IRQ_greater_mesopotamia_communism:0 "Соціалістична Месопотамія"
-IRQ_greater_mesopotamia_neutrality:0 "Королівство Месопотамія"
+IRQ_greater_mesopotamia_democratic:0 "Democracy Mesopotamia"
+IRQ_greater_mesopotamia_fascism:0 "Imperia of Mesopotamia"
+IRQ_greater_mesopotamia_communism:0 "Social Mesopotamia"
+IRQ_greater_mesopotamia_neutrality:0 "United of Mesopotamia"
