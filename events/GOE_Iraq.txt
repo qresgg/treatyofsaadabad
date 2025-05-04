@@ -29,7 +29,6 @@ country_event = {
 	}
 }
 
-
 country_event = {
     id = IRQ_kuw_ultimatum.2
     title = IRQ_kuw_ultimatum.2.t
@@ -153,7 +152,7 @@ country_event = {
 
 
 #############################
-###### ISRAEL EVENTS ######
+###### SOUTH LEVANT EVENTS ######
 #############################
 
 country_event = {
@@ -196,13 +195,19 @@ country_event = {
 			}
 		}
         FROM = {
-            country_event = { id = IRQ_PAL_ultimatum.3 days = 1 }
+            country_event = { id = IRQ_PAL_ultimatum.3 days = 5 }
         }
         custom_effect_tooltip = GAME_OVER_TT
 
         # Аннексия Палестины
         annex_country = { 
             target = PAL
+        }
+        annex_country = {
+            target = JOR
+        }
+        set_owner = {
+            state = 453
         }
         add_named_threat = { threat = 2 name = IRQ_PALESTINE_war_goal }
     }
@@ -234,7 +239,7 @@ country_event = {
                 create_wargoal = {
                     type = take_state_focus
                     target = ROOT
-                    generator = { 454 }
+                    generator = { 454, 455, 453 }
                 }
             }
             country_event = { id = IRQ_PAL_ultimatum.4 days = 1 }
@@ -394,3 +399,4 @@ country_event = {
         }
     }
 }
+
