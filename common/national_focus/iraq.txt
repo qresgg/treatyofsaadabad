@@ -3564,6 +3564,44 @@ focus_tree = {
 			}			
 		}
 	}
+	# focus = { COMMANDAER
+	# 	id = IRQ_saadabad_subsidies_for_children
+	# 	icon = GFX_focus_TUR_loosen_the_laws_on_secularism
+	# 	prerequisite = { focus = IRQ_saadabab_alliance }
+	# 	#mutually_exclusive = { focus =  }
+	# 	x = 1
+	# 	y = 1
+	# 	relative_position_id = IRQ_saadabab_alliance
+
+	# 	cost = 10
+
+	# 	ai_will_do = {
+	# 		base = 1
+	# 	}
+
+	# 	available = {
+	# 		is_subject = no
+	# 	}
+
+	# 	bypass = {
+	# 	}
+
+	# 	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_MILITARY_CHARACTER }
+
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+
+	# 	completion_reward = {
+
+	# 		custom_effect_tooltip = IRQ_abd_al_illah_fm_tt
+
+	# 		custom_effect_tooltip = generic_skip_one_line_tt
+
+	# 		add_ideas = IRQ_command_of_the_faithful
+
+	# 	}
+	# }
 
 	focus = {
 		id = IRQ_develop_the_kuwaiti_port
@@ -3767,7 +3805,7 @@ focus_tree = {
 	focus = {
 		id = IRQ_raf_levies_focus
 		icon = GFX_focus_generic_air_bases
-		prerequisite = { focus = IRQ_increase_anglo_iraqi_economic_ties focus = IRQ_bakr_sidqi_coup }
+		prerequisite = { focus = IRQ_kurdish_outreach }
 		#mutually_exclusive = { focus =  }
 		x = 0
 		y = 2
@@ -3834,52 +3872,6 @@ focus_tree = {
 					count = 3
 				}
 			}
-		}
-	}
-
-	focus = {
-		id = IRQ_kurdish_outreach
-		icon = GFX_focus_generic_befriend_kurdistan
-		prerequisite = { focus = IRQ_increase_anglo_iraqi_economic_ties }
-		#mutually_exclusive = { focus =  }
-		x = -2
-		y = 1
-		relative_position_id = IRQ_increase_anglo_iraqi_economic_ties
-
-		cost = 5
-
-		ai_will_do = {
-			base = 1
-		}
-
-		available = {
-			has_stability > 0.5
-		}
-
-		bypass = {
-
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER }
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			IF = {
-				limit = {
-					676 = {
-						has_dynamic_modifier = { modifier = KUR_resistance_modifier }
-					}
-				}
-				676 = {
-					remove_dynamic_modifier = { modifier = KUR_resistance_modifier }
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = IRQ_muhammad_amin_zaki
 		}
 	}
 
@@ -4878,48 +4870,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = IRQ_commander_of_the_faithful
-		icon = GFX_focus_TUR_loosen_the_laws_on_secularism
-		prerequisite = { focus = IRQ_demand_palestine }
-		#mutually_exclusive = { focus =  }
-		x = -3
-		y = 1
-		relative_position_id = IRQ_demand_palestine
-
-		cost = 10
-
-		ai_will_do = {
-			base = 1
-		}
-
-		available = {
-			is_subject = no
-			has_country_leader = {
-				ruling_only = yes
-				character = IRQ_abd_al_ilah
-			}	
-		}
-
-		bypass = {
-		}
-
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_MILITARY_CHARACTER }
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-
-			custom_effect_tooltip = IRQ_abd_al_illah_fm_tt
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_ideas = IRQ_command_of_the_faithful
-
-		}
-	}
 
 	focus = {
 		id = IRQ_increase_prime_ministers_powers
@@ -5179,10 +5129,10 @@ focus_tree = {
 	focus = {
 		id = IRQ_expand_membership
 		icon = GFX_focus_IRQ_expand_membership
-		prerequisite = { focus = IRQ_hashemite_arab_federation }
+		prerequisite = { 	 }
 		#mutually_exclusive = { focus = IRQ_hashemite_arab_federation }
-		x = 0
-		y = 1
+		x = 21
+		y = -5
 		relative_position_id = IRQ_hashemite_arab_federation
 
 		cost = 10
@@ -5638,6 +5588,7 @@ focus_tree = {
 					promote_leader = yes
 				} 
 			}
+			remove_ideas = IRQ_without_real_leader
 
 			set_country_flag = IRQ_bakr_coup_happened
 			custom_effect_tooltip = IRQ_bakr_sidqi_tt
@@ -5647,6 +5598,123 @@ focus_tree = {
 
 			add_political_power = 100
 
+		}
+	}
+
+	focus = {
+		id = IRQ_global_fabric_reintegration
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = IRQ_bakr_sidqi_coup focus = IRQ_kurdish_outreach}
+		#mutually_exclusive = { focus =  }
+		x = -4
+		y = 1
+		relative_position_id = IRQ_bakr_sidqi_coup
+
+		cost = 5
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			291 = {
+				build_railway = {
+					level = 2
+					path = {
+						3795 12413 1631 4440 1544 4574
+					}
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+
+	focus = {
+		id = IRQ_military_fabric_reintegration
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = IRQ_bakr_sidqi_coup focus = IRQ_kurdish_outreach}
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = IRQ_bakr_sidqi_coup
+
+		cost = 10
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			army_experience = 20
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			ETH_add_random_mil_factory_effect = yes
+			IF = { 
+				limit = {
+					OR = {
+						455 = {
+							is_owned_and_controlled_by = ROOT
+						}
+						JOR = { is_subject_of = ROOT }
+					}
+				}
+				455 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			ELSE = {
+				custom_effect_tooltip = IRQ_regional_military_integration_tt
+			}	
+					
 		}
 	}
 
@@ -5889,13 +5957,16 @@ focus_tree = {
 		}
 
 		available = {
+			is_subject = no
 			PER = {
 				exists = yes
+				is_subject = no
 				NOT = {
 					has_war_with = ROOT
 				}
 			}
 		}
+		
 
 		bypass = {
 
@@ -5938,11 +6009,13 @@ focus_tree = {
 		}
 
 		available = {
-			is_faction_leader = yes
 			is_subject = no
 			AFG = {
 				exists = yes
 				is_subject = no
+				NOT = {
+					has_war_with = ROOT
+				}
 			}
 		}
 
@@ -5990,6 +6063,7 @@ focus_tree = {
 		}
 
 		available = {
+			is_subject = no
 			TUR = {
 				exists = yes
 				NOT = {
@@ -6073,6 +6147,8 @@ focus_tree = {
 
 		}
 	}
+
+	
 
 	focus = {
 		id = IRQ_reapproachment_with_the_tribes
@@ -6222,6 +6298,86 @@ focus_tree = {
 
 		}
 	}
+	focus = {
+		id = IRQ_saadabad_subsidies_for_children
+		icon = GFX_focus_TUR_loosen_the_laws_on_secularism
+		prerequisite = { focus = IRQ_saadabab_alliance }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = IRQ_saadabab_alliance
+
+		cost = 8
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_MILITARY_CHARACTER }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = IRQ_saadabad_subsidies_for_children
+		}
+	}
+
+	focus = {
+		id = IRQ_kurdish_outreach
+		icon = GFX_focus_generic_befriend_kurdistan
+		prerequisite = { focus = IRQ_increase_anglo_iraqi_economic_ties}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = IRQ_increase_anglo_iraqi_economic_ties
+
+		cost = 5
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_stability > 0.5
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			IF = {
+				limit = {
+					676 = {
+						has_dynamic_modifier = { modifier = KUR_resistance_modifier }
+					}
+				}
+				676 = {
+					remove_dynamic_modifier = { modifier = KUR_resistance_modifier }
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = IRQ_muhammad_amin_zaki
+		}
+	}
 
 	focus = {
 		id = IRQ_clear_in_the_desert
@@ -6282,7 +6438,7 @@ focus_tree = {
 		icon = GFX_focus_generic_attack_syria
 		prerequisite = { focus = IRQ_secret_baghdad_pact }
 		#mutually_exclusive = { focus =  }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = IRQ_secret_baghdad_pact
 
@@ -6316,16 +6472,24 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			680 = { add_claim_by = ROOT }
-			554 = { add_claim_by = ROOT }
-			677 = { add_claim_by = ROOT }
-			create_wargoal = {
-				type = take_claimed_state
-				target = SYR
-			}		
+			limit = {
+				SYR = {
+					exists = yes
+				}
+			}
+			SYR = { country_event = { id = IRQ_SYR_partition.1 }
+			# else_if = {
+			# 	limit = {
+			# 		PAL = { exists = yes }
+			# 	}
+			# 	create_wargoal = {
+			# 		target = PAL
+			# 		type = liberate_wargoal
+			# 	}
+			# }
 		}
 	}
-
+	}
 	# focus = {
 	# 	id = IRQ_status_of_lebanon
 	# 	icon = GFX_focus_generic_attack_lebanon
@@ -6417,11 +6581,11 @@ focus_tree = {
 	focus = {
 		id = IRQ_take_advantage_of_british_weakness
 		icon = GFX_focus_attack_britain
-		prerequisite = { focus = IRQ_anti_western_alliance }
+		prerequisite = { focus = IRQ_saadabab_alliance }
 		#mutually_exclusive = { focus =  }
-		x = -1
+		x = 3
 		y = 1
-		relative_position_id = IRQ_anti_western_alliance
+		relative_position_id = IRQ_saadabab_alliance
 
 		cost = 5
 
@@ -6539,6 +6703,71 @@ focus_tree = {
 
 		}
 	}	
+
+	focus = {
+		id = IRQ_dissolve_golden_square
+		icon = GFX_focus_TUR_support_the_golden_square
+		prerequisite = { focus = IRQ_curtail_arabism }
+		mutually_exclusive = { focus = IRQ_curtail_arabism }
+		x = 6
+		y = 1
+		relative_position_id = IRQ_curtail_arabism
+		cost = 8
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			fascism > 0.25
+			NOT = {
+				has_completed_focus = IRQ_eliminate_the_golden_square
+			}
+		}
+
+		bypass = {
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			remove_ideas = IRQ_golden_square
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			IF = {
+				limit = {
+					NOT = {
+						has_government = fascism
+					}
+				}
+				set_politics = {
+					ruling_party = fascism
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+			
+			every_character = {
+				limit = {
+					has_character_flag = IRQ_golden_square_char
+					is_corps_commander = yes
+				}
+				add_trait = { trait = politically_connected }
+			}		
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			country_event = {
+				id = IRQ_political_events.71
+			}	
+
+		}
+	}
 
 	focus = {
 		id = IRQ_iraqi_al_futuwwa
@@ -6817,14 +7046,7 @@ focus_tree = {
 			add_ideas = IRQ_rally_the_arab_world_idea
 		}
 	}
-	focus = {
-		id = IRQ_military_parade
-		prerequisite = { focus = IRQ_saadabab_alliance}
-		x = 1
-		y = 1
-		relative_position_id = IRQ_saadabab_alliance
-	}
-	
+
 	focus = {
 		id = IRQ_secret_baghdad_pact
 		icon = GFX_focus_IRQ_rally_the_arab_world
@@ -6839,22 +7061,20 @@ focus_tree = {
 			base = 1
 		}
 
-		available = {
-			is_subject = no
-		}
-
-		bypass = {
-
-		}
+		# TREBA
+		# allow_branch = { 
+		# 	has_idea = IRQ_rally_the_arab_world_idea
+		# }
 
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL FOCUS_FILTER_WAR_SUPPORT }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = no
+		available_if_capitulated = No
 
 		completion_reward = {
-			add_ideas = IRQ_rally_the_arab_world_idea
+			add_ideas = IRQ_saadabad_spheres_of_influence
+			custom_effect_tooltip = IRQ_saadabad_spheres_of_influence_tt
 		}
 	}
 
@@ -6947,7 +7167,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = IRQ_regime_change_in_arabia
+		id = IRQ_partition_of_saudi_arabia
 		icon = GFX_focus_ETH_an_arabic_base
 		prerequisite = { focus = IRQ_secret_baghdad_pact }
 		x = 3
@@ -6987,10 +7207,74 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			create_wargoal = {
-				target = SAU
-				type = puppet_wargoal_focus
-			}			
+			every_state = {
+				limit = {
+					OR = {
+						state = 292
+						state = 293
+						state = 992
+						state = 659
+						state = 658
+						state = 1015
+						state = 1013
+					}
+				}
+				OWNER = {
+					ROOT = {
+						create_wargoal = {
+							target = PREV
+							type = puppet_wargoal_focus
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = IRQ_raising_arabian_peninsula
+		icon = GFX_focus_ETH_an_arabic_base
+		prerequisite = { focus = IRQ_secret_baghdad_pact }
+		x = -3
+		y = 1
+		relative_position_id = IRQ_secret_baghdad_pact
+
+		cost = 10
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			is_subject = no
+			has_government = fascism
+			SAU = {
+				exists = yes
+				NOT = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		bypass = {
+			SAU = {
+				OR = {
+					is_subject_of = ROOT
+					exists = no
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SAU = {
+				add_ideas = IRQ_raising_iraqi_fascists_in_saudi
+			}		
 		}
 	}
 
@@ -6999,10 +7283,9 @@ focus_tree = {
 		id = IRQ_liberate_south_levant
 		icon = GFX_focus_IRQ_liberate_levant
 		prerequisite = { focus = IRQ_partition_of_syria }
-		x = 0
+		x = 2
 		y = 1
 		relative_position_id = IRQ_partition_of_syria
-
 		cost = 10
 
 		ai_will_do = {
@@ -7054,7 +7337,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		icon = GFX_focus_icon_name
-		prerequisite = { focus = IRQ_secret_baghdad_pact }
+		prerequisite = { focus = IRQ_partition_of_syria }
 		mutually_exclusive = { focus = IRQ_deal_for_south_levant focus = IRQ_liberate_south_levant }
 		relative_position_id = IRQ_partition_of_syria
 	
@@ -7104,17 +7387,38 @@ focus_tree = {
 		x = 0
 		y = 4
 		cost = 10
+		completion_reward = {
+			effect = {
+				add_war_support = 0.10
+			}
+			every_state = {
+				limit = {
+					NOT = { is_owned_by = ROOT }
+					OR = {
+						region = 225
+						region = 126
+						region = 182
+						region = 128
+					}
+				}
+				OWNER = {
+					PREV = {
+						add_claim_by = IRQ
+					}
+				}
+			}
+		}
 	}
 
 	focus = {
-		id = IRQ_revolt_north_africa
+		id = IRQ_african_arab_revolt
 		icon = GFX_focus_IRQ_liberate_north_africa
 		prerequisite = { focus = IRQ_course_to_north_africa }
 		x = 2
 		y = 1
 		relative_position_id = IRQ_course_to_north_africa
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			base = 1
@@ -7136,41 +7440,16 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			every_state = {
-				limit = {
-					NOT = { is_owned_by = ROOT }
-					OR = {
-						region = 225
-						region = 126
-						region = 182
-						region = 128
-					}
-				}
-				OWNER = {
-					ROOT = {
-						IF = {
-							limit = {
-								NOT = {
-									ROOT = { has_wargoal_against = PREV }
-								}
-							}
-							create_wargoal = {
-								target = PREV
-								type = liberate_wargoal
-							}
-						}
-					}
-				}
-			}			
+			
 		}
 	}
 
 	focus = {
 		id = IRQ_integrate_north_africa
-		prerequisite = { focus = IRQ_revolt_north_africa}
+		prerequisite = { focus = IRQ_african_arab_revolt }
 		x = 0
 		y = 1
-		relative_position_id = IRQ_revolt_north_africa
+		relative_position_id = IRQ_african_arab_revolt
 
 		cost = 10
 	}
@@ -7183,7 +7462,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = IRQ_liberate_north_africa
 
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			base = 1
@@ -7214,7 +7493,7 @@ focus_tree = {
 		id = IRQ_liberate_north_africa
 		icon = GFX_focus_IRQ_liberate_north_africa
 		prerequisite = { focus = IRQ_course_to_north_africa }
-		mutually_exclusive = { focus = IRQ_revolt_north_africa}
+		mutually_exclusive = { focus = IRQ_african_arab_revolt}
 		x = -2
 		y = 1
 		relative_position_id = IRQ_course_to_north_africa
@@ -7272,10 +7551,10 @@ focus_tree = {
 
 	focus = {
 		id = IRQ_proclaim_greater_mesopotamia
-		icon = GFX_focus_IRQ_proclaim_united_arab_republic
+		icon = GFX_focus_IRQ_proclaim_united_greater_mesopotamia
 		prerequisite = { focus = IRQ_liberate_south_levant focus = IRQ_deal_for_south_levant }
-		x = 1
-		y = 2
+		x = 2
+		y = 1
 		relative_position_id = IRQ_deal_for_south_levant
 
 		cost = 10
@@ -7300,9 +7579,8 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			hidden_effect = { drop_cosmetic_tag = yes }
 			set_cosmetic_tag = IRQ_greater_mesopotamia
-			custom_effect_tooltip = IRQ_arab_republic_core_tt		
+			custom_effect_tooltip = IRQ_proclaim_greater_mesopotamia_tt		
 		}
 	}
 
@@ -8989,7 +9267,7 @@ focus = {
 	icon = GFX_focus_IRQ_party_of_national_brotherhood
 	#prerequisite = { focus = }
 	mutually_exclusive = { focus = IRQ_rebirth_babylon focus = IRQ_rally_behind_the_hashemite_dynasty focus = IRQ_promote_kurdish_culture }
-	x = 4
+	x = 6
 	y = 0
 	relative_position_id = IRQ_rally_behind_the_hashemite_dynasty
 

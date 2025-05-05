@@ -47,78 +47,78 @@
   #Spirit and Ideas
   IRQ_ideas_rebirth_babylon: "Rebirth of Babylon"
   IRQ_ideas_rebirth_babylon_desc: "The revival of the ancient civilization of Babylon. A time to restore the glory and power of the past."
+  
 
   #Custom tooltip
   IRQ_digrifle: "You will receive §Y10,000§! units of "§YRifle No. 4 Mkl§!" in your stockpile."
   IRQ_kuw_ultimatum_tt: "If Kuwait reject our ultimatum, we can declare war"
-
+  IRQ_saadabad_spheres_of_influence_tt: "Us and §Y[TUR.GetNameWithFlag]§! , §Y[AFG.GetNameWithFlag]§! , §Y[PER.GetNameWithFlag]§! will set up our Spheres of Influence in §YMiddle Asia§!, modifying the cost of taking states within and without each others respective spheres.\n\n §Y[IRQ.GetNameWithFlag]§! §YSphere of Influence§! will include:\n§Y[SAU.GetFlag]§! §YNorth of Saudi Arabia (Part)§! \n§Y[SYR.GetFlag]§! §YEast Syria (Part)§!\n§Y[JOR.GetNameWithFlag]§!\n§Y[PAL.GetNameWithFlag]§!\n§Y[EGY.GetNameWithFlag]§! §YSynai§!\nAll §Y North Africa Regions§!\n\n §Y[PER.GetNameWithFlag]§! §YSphere of Influence§! will include:\n§Y[SAU.GetFlag]§! §YSouth of Saudi Arabia (Part)§!\n§Y[BHR.GetNameWithFlag]§!\n§Y[QAT.GetNameWithFlag]§!\n§Y[UAE.GetNameWithFlag]§!\n§Y[YEM.GetNameWithFlag]§!\n§Y[SOV.GetFlag] South of Soviet Union (Part)§! \n\n §Y[TUR.GetNameWithFlag]§! §YSphere of Influence§! will include:\n§Y[GRE.GetNameWithFlag]§!\n§Y[ROM.GetNameWithFlag]§!\n§Y[YUG.GetNameWithFlag]§!\n§Y[ITA.GetFlag] South Italy (Part)§!\nAll §Y Black Sea Regions§!\n\n §Y[AFG.GetFlag] Afghanistan§! §YSphere of Influence§! will include:\n§Y[KYR.GetNameWithFlag]§!\n§Y[BUK.GetNameWithFlag]§!\n§Y[SIK.GetFlag] Left Sinkiang (Part)§!\n§Y[RAJ.GetNameWithFlag]§!\n§Y[PAK.GetNameWithFlag]§!\n§Y[SOV.GetFlag] South of Soviet Union (Part)§!"
+  IRQ_proclaim_greater_mesopotamia_tt: "Unlock §YProclaim Greater Mesopotamia§! decisions to gain cores on Mesopotamian states we own"
 
   
   # Focuses
-IRQ_clear_in_the_desert: "Clear in the Desert"
-IRQ_clear_in_the_desert_desc: "With neutrality leaning in our favor, it's time to handle our interests in Kuwait. A diplomatic ultimatum or war—either way, we will gain what is rightfully ours."
+  IRQ_clear_in_the_desert: "Clear in the Desert"
+  IRQ_clear_in_the_desert_desc: "With neutrality leaning in our favor, it's time to handle our interests in Kuwait. A diplomatic ultimatum or war—either way, we will gain what is rightfully ours."
 
-# Tooltips
-generic_skip_one_line_tt: " "
-if_they_accept_tt: "If they accept, we will annex Kuwait peacefully."
-IRQ_kuwait_war_goal: "Annexation of Kuwait"
+  # Tooltips
+  generic_skip_one_line_tt: " \n"
+  if_they_accept_tt: "If they accept, we will annex Kuwait peacefully."
+  IRQ_kuwait_war_goal: "Annexation of Kuwait"  
 
-# Events
-IRQ_kuw_ultimatum.2.t: "Kuwait Receives an Ultimatum"
-IRQ_kuw_ultimatum.2.desc: "Iraq has issued us an ultimatum: submit peacefully to their authority or face war. The decision will define our future."
-IRQ_kuw_ultimatum.2.a: "We have no choice but to yield"
-IRQ_kuw_ultimatum.2.b: "We will resist their threats!"
+  # Events
+  IRQ_kuw_ultimatum.2.t: "Kuwait Receives an Ultimatum"
+  IRQ_kuw_ultimatum.2.desc: "Iraq has issued us an ultimatum: submit peacefully to their authority or face war. The decision will define our future."
+  IRQ_kuw_ultimatum.2.a: "We have no choice but to yield"
+  IRQ_kuw_ultimatum.2.b: "We will resist their threats!"
 
-IRQ_kuw_ultimatum.3t: "Kuwait Accepts the Ultimatum"
-IRQ_kuw_ultimatum.3d: "Kuwait has yielded to our demands without bloodshed. The desert sands are now ours."
-IRQ_kuw_ultimatum.3.a: "Excellent. The land is ours."
+  IRQ_kuw_ultimatum.3t: "Kuwait Accepts the Ultimatum"
+  IRQ_kuw_ultimatum.3d: "Kuwait has yielded to our demands without bloodshed. The desert sands are now ours."
+  IRQ_kuw_ultimatum.3.a: "Excellent. The land is ours."
 
-IRQ_kuw_ultimatum.4t: "Kuwait Rejects the Ultimatum"
-IRQ_kuw_ultimatum.4d: "Kuwait has rejected our demands. There is only one course left—war."
-IRQ_kuw_ultimatum.4.a: "Then we will take it by force."
+  IRQ_kuw_ultimatum.4t: "Kuwait Rejects the Ultimatum"
+  IRQ_kuw_ultimatum.4d: "Kuwait has rejected our demands. There is only one course left—war."
+  IRQ_kuw_ultimatum.4.a: "Then we will take it by force."
 
-# Additional
-GAME_OVER_TT: "§RThis may result in the game ending if you're annexed.§"
+  # Additional
+  GAME_OVER_TT: "§RThis may result in the game ending if you're annexed.§"
 
-# IRQ_PAL_ultimatum.2
-IRQ_PAL_ultimatum.2.t: "Palestinian Ultimatum"
-IRQ_PAL_ultimatum.2.desc: "Palestine must choose whether to accept our ultimatum or resist our demands."
-IRQ_PAL_ultimatum.2.a: "Accept the Ultimatum"
-IRQ_PAL_ultimatum.2.b: "Reject the Ultimatum"
+  # IRQ_PAL_ultimatum.2
+  IRQ_PAL_ultimatum.2.t: "Palestinian Ultimatum"
+  IRQ_PAL_ultimatum.2.desc: "Palestine must choose whether to accept our ultimatum or resist our demands."
+  IRQ_PAL_ultimatum.2.a: "Accept the Ultimatum"
+  IRQ_PAL_ultimatum.2.b: "Reject the Ultimatum"
 
-# IRQ_PAL_ultimatum.3
-IRQ_PAL_ultimatum.3t: "Annexation of Palestine"
-IRQ_PAL_ultimatum.3d: "Palestine will be annexed and become part of our nation."
+  # IRQ_PAL_ultimatum.3
+  IRQ_PAL_ultimatum.3t: "Annexation of Palestine"
+  IRQ_PAL_ultimatum.3d: "Palestine will be annexed and become part of our nation."
 
-# IRQ_PAL_ultimatum.4
-IRQ_PAL_ultimatum.4t: "Palestinian Resistance"
-IRQ_PAL_ultimatum.4d: "Palestine has rejected the ultimatum. It's time to act. We can create a war goal for their territory."
+  # IRQ_PAL_ultimatum.4
+  IRQ_PAL_ultimatum.4t: "Palestinian Resistance"
+  IRQ_PAL_ultimatum.4d: "Palestine has rejected the ultimatum. It's time to act. We can create a war goal for their territory."
 
-# For war goal generation:
-IRQ_PAL_war_goal: "War Goal Against Palestine"
+  # For war goal generation:
+  IRQ_PAL_war_goal: "War Goal Against Palestine"
 
-IRQ_deal_for_israel: "Deal for Israel"
-IRQ_deal_for_israel.desc: "If Britain accepts, you will gain Israel and a non-aggression pact with your neighbors. If they refuse, you will gain a war goal on Israel."
-IRQ_deal_for_israel.completion_reward "Completion Reward: Gain a war goal on Palestine or negotiate for Israel."
+  IRQ_deal_for_israel: "Deal for Israel"
+  IRQ_deal_for_israel.desc: "If Britain accepts, you will gain Israel and a non-aggression pact with your neighbors. If they refuse, you will gain a war goal on Israel."
+  IRQ_deal_for_israel.completion_reward "Completion Reward: Gain a war goal on Palestine or negotiate for Israel."
 
-IRQ_kuwait_war_goal: "Claiming Kuwait"
-IRQ_PALESTINE_war_goal: "Claiming Palestine"
+  IRQ_kuwait_war_goal: "Claiming Kuwait"
+  IRQ_PALESTINE_war_goal: "Claiming Palestine"
 
-IRQ_JOR_ultimatum.2.t: "Ultimatum to Jordan"
-IRQ_JOR_ultimatum.2.desc: "Our diplomats have delivered an ultimatum to the Jordanian government: submit peacefully to our demands or face the consequences of defiance."
-IRQ_JOR_ultimatum.2.a: "They yield"
-IRQ_JOR_ultimatum.2.b: "They resist"
+  IRQ_JOR_ultimatum.2.t: "Ultimatum to Jordan"
+  IRQ_JOR_ultimatum.2.desc: "Our diplomats have delivered an ultimatum to the Jordanian government: submit peacefully to our demands or face the consequences of defiance."
+  IRQ_JOR_ultimatum.2.a: "They yield"
+  IRQ_JOR_ultimatum.2.b: "They resist"
 
-IRQ_JOR_ultimatum.3t: "Jordan Accepts"
-IRQ_JOR_ultimatum.3d: "Faced with overwhelming pressure, the Jordanian leadership has agreed to our demands. They have handed over control without resistance."
-IRQ_JOR_ultimatum.3.b: "Excellent"
+  IRQ_JOR_ultimatum.3t: "Jordan Accepts"
+  IRQ_JOR_ultimatum.3d: "Faced with overwhelming pressure, the Jordanian leadership has agreed to our demands. They have handed over control without resistance."
+  IRQ_JOR_ultimatum.3.b: "Excellent"
 
-IRQ_JOR_ultimatum.4t: "Jordan Resists"
-IRQ_JOR_ultimatum.4d: "Jordan has refused our ultimatum. Their government has mobilized the armed forces, and tensions have erupted into open hostility."
-IRQ_JOR_ultimatum.4.b: "Then we go to war"
+  IRQ_JOR_ultimatum.4t: "Jordan Resists"
+  IRQ_JOR_ultimatum.4d: "Jordan has refused our ultimatum. Their government has mobilized the armed forces, and tensions have erupted into open hostility."
+  IRQ_JOR_ultimatum.4.b: "Then we go to war"
 
-IRQ_greater_mesopotamia:0 "Mesopotamia"
-IRQ_greater_mesopotamia_democratic:0 "Democracy Mesopotamia"
-IRQ_greater_mesopotamia_fascism:0 "Imperia of Mesopotamia"
-IRQ_greater_mesopotamia_communism:0 "Social Mesopotamia"
-IRQ_greater_mesopotamia_neutrality:0 "United of Mesopotamia"
+  IRQ_SYR_partition.1: "KANDDD"
+
+  # IRQ_saadabad_spheres_of_influence_tt: "Us and §Y[CHI.GetNameWithFlag]§! Will set up our Spheres of Influence in §YAsia§!, modifying the cost of taking states within and without each others respective spheres.\n\nOur §YSphere of Influence§! will include:\n§Y[MAL.GetNameWithFlag]§!\n§Y[INS.GetNameWithFlag]§!\n§Y[PHI.GetNameWithFlag]§!\n§Y[AST.GetNameWithFlag]§!\n§Y[NZL.GetNameWithFlag]§!\nAll §YSouth Pacific Islands§!\n\nTheir §YSphere of Influence§! will include:\n§Y[SIA.GetNameWithFlag]\n[VIN.GetNameWithFlag]\n[CAM.GetNameWithFlag]\n[LAO.GetNameWithFlag]\n[CHI.GetNameWithFlag]\n[RAJ.GetNameWithFlag]\n[TIB.GetNameWithFlag]\n[NEP.GetNameWithFlag]\n[BHU.GetNameWithFlag]\n[KOR.GetNameWithFlag]\n[JAP.GetNameWithFlag]\n[MON.GetNameWithFlag]§!"

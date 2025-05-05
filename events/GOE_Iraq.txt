@@ -2099,6 +2099,7 @@ country_event = {
 add_namespace = IRQ_saadabad
 add_namespace = IRQ_kuw_ultimatum
 add_namespace = IRQ_PAL_ultimatum
+add_namespace = IRQ_SYR_partition
 
 country_event = {
 	id = IRQ_saadabad.1
@@ -2214,12 +2215,12 @@ country_event = {
         name = IRQ_kuw_ultimatum.3.a
 
         IRQ = {
-        annex_country = { 
-            target = KUW
-        }
-        add_named_threat = { threat = 2 name = IRQ_kuwait_war_goal }
-    }
-}
+			annex_country = { 
+				target = KUW
+			}
+			add_named_threat = { threat = 2 name = IRQ_kuwait_war_goal }
+    	}
+	}
 }
 
 country_event = {
@@ -2327,7 +2328,7 @@ country_event = {
 }
 
 
-country_event = {
+country_event = { ## ACCEPT
     id = IRQ_PAL_ultimatum.3
     title = IRQ_PAL_ultimatum.3t
     desc = IRQ_PAL_ultimatum.3d
@@ -2348,7 +2349,7 @@ country_event = {
     }
 }
 
-country_event = {
+country_event = { ## DENY
     id = IRQ_PAL_ultimatum.4
     title = IRQ_PAL_ultimatum.4t
     desc = IRQ_PAL_ultimatum.4d
@@ -2369,5 +2370,72 @@ country_event = {
             target = JOR
 			generator = { 455 }
         }
+    }
+}
+
+country_event = {
+	id = IRQ_SYR_partition.5
+	title = IRQ_SYR_partition.5
+	desc = IRQ_SYR_partition.5
+
+	is_triggered_only = yes
+
+	option = { 
+		name = IRQ_SYR_partition.5.a
+		effect = {
+			IRQ = {
+				annex_country = { 
+					target = KUW
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+    id = IRQ_SYR_partition.1
+    title = IRQ_SYR_partition.1.t
+    desc = IRQ_SYR_partition.1.desc
+    picture = GFX_report_event_generic_sign_treaty1
+
+    is_triggered_only = yes
+
+    option = { # ONLYONEWAY
+        name = IRQ_SYR_partition.1.a
+        ai_chance = {
+            base = 1
+		}
+        FROM = {
+            country_event = { id = IRQ_SYR_partition.2 days = 2 }
+        }
+		custom_effect_tooltip = GAME_OVER_TT
+        add_named_threat = { threat = 2 name = IRQ_PALESTINE_war_goal }
+    }
+}
+
+country_event = {
+    id = IRQ_SYR_partition.2
+    title = IRQ_SYR_partition.2.t
+    desc = IRQ_SYR_partition.2.desc
+    picture = GFX_report_event_generic_sign_treaty1
+
+    is_triggered_only = yes
+
+    option = { # ONLYONEWAY
+        name = IRQ_SYR_partition.2.a
+        680 = { transfer_state_to = IRQ }
+		554 = { transfer_state_to = IRQ }
+		799 = { transfer_state_to = TUR }
+		677 = { transfer_state_to = TUR }
+		553 = { transfer_state_to = TUR }
+
+		IRQ = {
+			add_war_support = 0.1
+			add_stability = 0.05
+		}
+		
+		custom_effect_tooltip = IRQ_SYR_partition.1
+		
+        add_named_threat = { threat = 2 name = IRQ_PALESTINE_war_goal }
     }
 }
