@@ -6214,7 +6214,7 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			is_in_faction = yes
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -6225,7 +6225,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			create_faction = IRQ_meto
+			create_faction = IRQ_saad_alliance
 			set_rule = {
 				can_create_factions = yes
 			}
@@ -6240,7 +6240,7 @@ focus_tree = {
 						}
 					}
 				}
-				custom_effect_tooltip = IRQ_anti_western_alliance_per_tt
+				custom_effect_tooltip = IRQ_saadabad_alliance_per_tt
 				hidden_effect = {
 					PER = {
 						country_event = {
@@ -6261,7 +6261,7 @@ focus_tree = {
 						}
 					}
 				}
-				custom_effect_tooltip = IRQ_anti_western_alliance_tur_tt
+				custom_effect_tooltip = IRQ_saadabad_alliance_tur_tt
 				hidden_effect = {
 					TUR = {
 						country_event = {
@@ -6282,7 +6282,7 @@ focus_tree = {
 						}
 					}
 				}
-				custom_effect_tooltip = IRQ_align_afghanistan
+				custom_effect_tooltip = IRQ_saadabad_alliance_afg_tt
 				hidden_effect = {
 					AFG = {
 						country_event = {
@@ -6299,7 +6299,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = IRQ_saadabad_subsidies_for_children
+		id = IRQ_subsidies_for_saadabad_children
 		icon = GFX_focus_TUR_loosen_the_laws_on_secularism
 		prerequisite = { focus = IRQ_saadabab_alliance }
 		#mutually_exclusive = { focus =  }
@@ -7281,7 +7281,7 @@ focus_tree = {
 
 	focus = {
 		id = IRQ_liberate_south_levant
-		icon = GFX_focus_IRQ_liberate_levant
+		icon = GFX_focus_IRQ_liberate_south_levant
 		prerequisite = { focus = IRQ_partition_of_syria }
 		x = 2
 		y = 1
@@ -7853,6 +7853,42 @@ focus_tree = {
 					producer = GER
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = IRQ_proclaim_arabian_republic
+		icon = GFX_focus_IRQ_proclaim_united_arab_republic
+		prerequisite = { focus = IRQ_invite_oil_mission focus = IRQ_axis_training}
+		x = -1
+		y = 1
+		relative_position_id = IRQ_invite_oil_mission
+
+		cost = 8
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			hidden_effect = { drop_cosmetic_tag = yes }
+			set_cosmetic_tag = IRQ_united_arab_republic	
+			custom_effect_tooltip = IRQ_arab_republic_core_tt		
 		}
 	}
 

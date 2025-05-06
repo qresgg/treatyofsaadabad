@@ -47,16 +47,13 @@ IRQ_african_arab_revolt_cat = {
 		allowed = {
 			original_tag = IRQ
 		}
-	}
-	available = {
-		NOT = { has_country_flag = IRQ_coring_state_in_progress }
-	}
-
-	completion_effect = {
-        446 = {
-			
+		available = {
+			NOT = { has_country_flag = IRQ_coring_state_in_progress }
 		}
-    }
+	
+		completion_effect = {
+		}
+	}
 }
 
 greater_mesopotamia_cat = {

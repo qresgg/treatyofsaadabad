@@ -15,27 +15,39 @@
   IRQ_please_jordan: "Please, Jordan"
   IRQ_please_jordan_desc: "A diplomatic move to encourage Jordan's cooperation and alignment with our goals."
   
-  IRQ_clear_in_the_desert: "Clearing in the Desert"
-  IRQ_clear_in_the_desert_desc: "An ultimatum to neighboring powers: either they comply, or war and annexation will follow."
-  
-  IRQ_deal_for_israel: "Deal for Israel"
-  IRQ_deal_for_israel_desc: "A delicate negotiation with the United Kingdom to determine Israel's future — either a peaceful deal or the preparation for war."
-  
-  IRQ_war_for_israel: "War for Israel"
-  IRQ_war_for_israel_desc: "Preparing for a military conflict over Israel if negotiations fail."
-  
-  IRQ_here_we_go_again: "Here We Go Again"
-  IRQ_here_we_go_again_desc: "A final attempt to reclaim territories in the region — this time with full force."
+  IRQ_clear_in_the_desert: "Kuwait ultimatum"
+  IRQ_clear_in_the_desert_desc: "With neutrality leaning in our favor, it's time to handle our interests in Kuwait. A diplomatic ultimatum or war—either way, we will gain what is rightfully ours."
   
   IRQ_course_to_south: "Course to the South"
   IRQ_course_to_south_desc: "A strategic move to claim southern territories. If negotiations fail, we will assert our claim by force."
   
-  IRQ_iran_deal: "Iran Deal"
-  IRQ_iran_deal_desc: "A secret pact with Iran that could shift the balance of power in the region."
+  IRQ_secret_baghdad_pact: "Secret Baghdad pact"
+  IRQ_secret_baghdad_pact_desc: "A secret pact with .... that could shift the balance of power in the region."
   
-  IRQ_iran_deal2: "Iran Deal (Secret)"
-  IRQ_iran_deal2_desc: "A continuation of the Iran pact, ensuring support in the face of future challenges."
-  
+  IRQ_subsidies_for_saadabad_children: "Subsidies for Saadabad Children"
+
+  IRQ_strengthen_relations_with_afghanistan: "Strengthen Relations With Afghanistan"
+
+  IRQ_dissolve_golden_square: "Dissolve Golden Square"
+
+  IRQ_course_to_north_africa: "Course to North Africa"
+
+  IRQ_african_arab_revolt: "African Arab Revolution"
+
+  IRQ_integrate_north_africa: "Welcome to the New World"
+
+  IRQ_proclaim_greater_mesopotamia: "Back to Roots"
+
+  IRQ_deal_for_south_levant: "Deal for South Levant"
+
+  IRQ_liberate_south_levant: "Liberate South Levant"
+
+  IRQ_partition_of_saudi_arabia: "Partition of Arabian Peninsula"
+
+  IRQ_raising_arabian_peninsula: "Raising Arabian Peninsula"
+
+  IRQ_partition_of_syria: "Partition of Syria"
+
   # Event Titles and Descriptions
   IRQ_saadabad.1.t: "Black Discovery"
   IRQ_saadabad.1.d: "The Black Army has uncovered a major find in the sands — over 10,000 weapons."
@@ -48,17 +60,13 @@
   IRQ_ideas_rebirth_babylon: "Rebirth of Babylon"
   IRQ_ideas_rebirth_babylon_desc: "The revival of the ancient civilization of Babylon. A time to restore the glory and power of the past."
   
+  # Focuses
 
   #Custom tooltip
   IRQ_digrifle: "You will receive §Y10,000§! units of "§YRifle No. 4 Mkl§!" in your stockpile."
   IRQ_kuw_ultimatum_tt: "If Kuwait reject our ultimatum, we can declare war"
   IRQ_saadabad_spheres_of_influence_tt: "Us and §Y[TUR.GetNameWithFlag]§! , §Y[AFG.GetNameWithFlag]§! , §Y[PER.GetNameWithFlag]§! will set up our Spheres of Influence in §YMiddle Asia§!, modifying the cost of taking states within and without each others respective spheres.\n\n §Y[IRQ.GetNameWithFlag]§! §YSphere of Influence§! will include:\n§Y[SAU.GetFlag]§! §YNorth of Saudi Arabia (Part)§! \n§Y[SYR.GetFlag]§! §YEast Syria (Part)§!\n§Y[JOR.GetNameWithFlag]§!\n§Y[PAL.GetNameWithFlag]§!\n§Y[EGY.GetNameWithFlag]§! §YSynai§!\nAll §Y North Africa Regions§!\n\n §Y[PER.GetNameWithFlag]§! §YSphere of Influence§! will include:\n§Y[SAU.GetFlag]§! §YSouth of Saudi Arabia (Part)§!\n§Y[BHR.GetNameWithFlag]§!\n§Y[QAT.GetNameWithFlag]§!\n§Y[UAE.GetNameWithFlag]§!\n§Y[YEM.GetNameWithFlag]§!\n§Y[SOV.GetFlag] South of Soviet Union (Part)§! \n\n §Y[TUR.GetNameWithFlag]§! §YSphere of Influence§! will include:\n§Y[GRE.GetNameWithFlag]§!\n§Y[ROM.GetNameWithFlag]§!\n§Y[YUG.GetNameWithFlag]§!\n§Y[ITA.GetFlag] South Italy (Part)§!\nAll §Y Black Sea Regions§!\n\n §Y[AFG.GetFlag] Afghanistan§! §YSphere of Influence§! will include:\n§Y[KYR.GetNameWithFlag]§!\n§Y[BUK.GetNameWithFlag]§!\n§Y[SIK.GetFlag] Left Sinkiang (Part)§!\n§Y[RAJ.GetNameWithFlag]§!\n§Y[PAK.GetNameWithFlag]§!\n§Y[SOV.GetFlag] South of Soviet Union (Part)§!"
   IRQ_proclaim_greater_mesopotamia_tt: "Unlock §YProclaim Greater Mesopotamia§! decisions to gain cores on Mesopotamian states we own"
-
-  
-  # Focuses
-  IRQ_clear_in_the_desert: "Clear in the Desert"
-  IRQ_clear_in_the_desert_desc: "With neutrality leaning in our favor, it's time to handle our interests in Kuwait. A diplomatic ultimatum or war—either way, we will gain what is rightfully ours."
 
   # Tooltips
   generic_skip_one_line_tt: " \n"
@@ -122,3 +130,5 @@
   IRQ_SYR_partition.1: "KANDDD"
 
   # IRQ_saadabad_spheres_of_influence_tt: "Us and §Y[CHI.GetNameWithFlag]§! Will set up our Spheres of Influence in §YAsia§!, modifying the cost of taking states within and without each others respective spheres.\n\nOur §YSphere of Influence§! will include:\n§Y[MAL.GetNameWithFlag]§!\n§Y[INS.GetNameWithFlag]§!\n§Y[PHI.GetNameWithFlag]§!\n§Y[AST.GetNameWithFlag]§!\n§Y[NZL.GetNameWithFlag]§!\nAll §YSouth Pacific Islands§!\n\nTheir §YSphere of Influence§! will include:\n§Y[SIA.GetNameWithFlag]\n[VIN.GetNameWithFlag]\n[CAM.GetNameWithFlag]\n[LAO.GetNameWithFlag]\n[CHI.GetNameWithFlag]\n[RAJ.GetNameWithFlag]\n[TIB.GetNameWithFlag]\n[NEP.GetNameWithFlag]\n[BHU.GetNameWithFlag]\n[KOR.GetNameWithFlag]\n[JAP.GetNameWithFlag]\n[MON.GetNameWithFlag]§!"
+  # FACTION
+  IRQ_saad_alliance: "Saadabad Alliance"
