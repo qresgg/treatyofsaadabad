@@ -10402,4 +10402,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_PLACEHOLDER.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_IRQ_toyota"
+		texturefile = "gfx/interface/ideas/idea_IRQ_toyota.dds"
+	}
 }

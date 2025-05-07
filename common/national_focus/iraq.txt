@@ -9427,6 +9427,147 @@ focus = {
     }
 }
 
+# 	07.05.2025
+#	12:00
+#	Wednesday
+
+
+focus = {
+    id = IRQ_training_iraqi_army_1 ### Мобілізація іракської армії (хуй знає що придумати)
+    x = 52
+    y = 0
+    icon = GFX_focus_ARG_join_the_allies ###
+	prerequisite = {  } ###
+
+	available = {
+		has_war = no
+	}
+
+    cost = 5
+    search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_TREATYOFSAADABAD }  #CHANGEIT
+
+    completion_reward = {
+		add_timed_idea = {
+			idea = IRQ_hidden_mobilization
+			days = 90
+		}
+    }
+}
+
+focus = {
+    id = IRQ_open_toyota_organization ## OPEN TOYOTA FABRIC
+    x = 0
+    y = 1
+    icon = GFX_focus_ARG_join_the_allies
+	prerequisite = {  }
+	relative_position_id = IRQ_training_iraqi_army_1
+
+	available = {
+		NOT = {
+			has_war_with = JAP
+			has_government = communism
+		}
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+	
+    cost = 10
+    search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_TREATYOFSAADABAD }  #CHANGEIT
+
+	completion_reward = {
+		custom_effect_tooltip = IRQ_toyota_organization_tt
+		custom_effect_tooltip = generic_skip_one_line_tt
+		random_core_state = {
+			prioritize = { 291 }
+			limit = {
+				is_fully_controlled_by = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+
+		mio:IRQ_toyota_organization = {
+			add_mio_funds = 2000
+		}
+	}
+}
+
+}
+
+focus = {
+    id = IRQ_more_finance_for_toyota
+    x = 0
+    y = 1
+    icon = GFX_focus_ARG_join_the_allies
+	prerequisite = {  }
+	relative_position_id = IRQ_open_toyota_organization
+
+	available = {
+		NOT = {
+			has_war_with = JAP
+			has_government = communism
+		}
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+    cost = 5
+    search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_TREATYOFSAADABAD }  #CHANGEIT
+
+    completion_reward = {
+		custom_effect_tooltip = IRQ_toyota_finance_organization_tt
+		custom_effect_tooltip = generic_skip_one_line_tt
+		mio:IRQ_toyota_organization = {
+			add_mio_funds = 1000
+		}
+    }
+}
+
+focus = {
+    id = IRQ_mod_lefttree_4
+    x = 0
+    y = 1
+    icon = GFX_focus_ARG_join_the_allies
+	prerequisite = {  }
+	relative_position_id = IRQ_more_finance_for_toyota
+
+    cost = 1
+    search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_TREATYOFSAADABAD }  #CHANGEIT
+
+    completion_reward = {
+
+    }
+}
+
+focus = {
+    id = IRQ_mod_lefttree_5
+    x = 0
+    y = 1
+    icon = GFX_focus_ARG_join_the_allies
+	prerequisite = {  }
+	relative_position_id = IRQ_mod_lefttree_4
+
+    cost = 1
+    search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_TREATYOFSAADABAD }  #CHANGEIT
+
+    completion_reward = {
+    }
+}
 
 } # в бельгії 0 днів два фокуса
 

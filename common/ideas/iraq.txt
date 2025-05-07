@@ -979,6 +979,29 @@ ideas = {
 			}
 		}
 
+		IRQ_hidden_mobilization = {  ######################################
+
+			picture = generic_improved_industries
+
+			allowed = {
+				original_tag = IRQ
+			}
+
+			available = {
+				has_war = no
+			}
+
+			visible = {
+				
+			}
+
+
+			modifier = {
+				experience_gain_army = 0.5
+				weekly_manpower = 500 # Constant value
+
+			}
+		}
 
 
 	}
