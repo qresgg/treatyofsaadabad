@@ -741,6 +741,51 @@ focus_tree = {
 			
 		}
 	}
+	focus = {
+		id = IRQ_global_resource_expansion
+		x = 8
+		y = 7
+		cost = 5
+		completion_reward = {
+			add_political_power = 120
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = IRQ_found_kuweit_oil
+		x = -4
+		y = 1
+		prerequisite = { focus = IRQ_global_resource_expansion }
+		relative_position_id = IRQ_global_resource_expansion
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		available = {
+			656 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		completion_reward = {
+			656 = {
+				add_resource = {
+					type = oil
+					amount = 18
+				}	
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+		}
+	}
+
+	focus = {
+		id = IRQ_expand_saudi_arabian_oil
+		prerequisite = { focus = IRQ_global_resource_expansion }
+		relative_position_id = IRQ_global_resource_expansion
+		x = -2
+		y = 1
+	}
+
+	## EXPAND JOR AND SYRIAN
 
 	focus = {
 		id = IRQ_baghdad_colleges_of_engineering_and_education
@@ -2193,7 +2238,7 @@ focus_tree = {
 		prerequisite = { focus = IRQ_training }
 		#mutually_exclusive = { focus = }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = IRQ_training
 
 		cost = 10
@@ -9459,8 +9504,8 @@ focus = {
     x = 0
     y = 1
     icon = GFX_focus_ARG_join_the_allies
-	prerequisite = {  }
-	relative_position_id = IRQ_training_iraqi_army_1
+	prerequisite = { focus = IRQ_form_the_independent_mechanized_brigade }
+	relative_position_id = IRQ_form_the_independent_mechanized_brigade
 
 	available = {
 		NOT = {
@@ -9496,7 +9541,9 @@ focus = {
 			}
 
 		mio:IRQ_toyota_organization = {
-			add_mio_funds = 2000
+			add_mio_size = 1
+			add_mio_funds_gain_factor = 0.25
+			add_mio_research_bonus = 0.25
 		}
 	}
 }
@@ -9508,7 +9555,7 @@ focus = {
     x = 0
     y = 1
     icon = GFX_focus_ARG_join_the_allies
-	prerequisite = {  }
+	prerequisite = { focus = IRQ_open_toyota_organization }
 	relative_position_id = IRQ_open_toyota_organization
 
 	available = {
@@ -9544,7 +9591,7 @@ focus = {
     y = 1
     icon = GFX_focus_ARG_join_the_allies
 	prerequisite = {  }
-	relative_position_id = IRQ_more_finance_for_toyota
+	relative_position_id = IRQ_expand_membership
 
     cost = 1
     search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_TREATYOFSAADABAD }  #CHANGEIT
