@@ -753,7 +753,7 @@ focus_tree = {
 	}
 	focus = {
 		id = IRQ_found_kuweit_oil
-		x = -4
+		x = -3
 		y = 1
 		prerequisite = { focus = IRQ_global_resource_expansion }
 		relative_position_id = IRQ_global_resource_expansion
@@ -781,7 +781,7 @@ focus_tree = {
 		id = IRQ_expand_saudi_arabian_oil
 		prerequisite = { focus = IRQ_global_resource_expansion }
 		relative_position_id = IRQ_global_resource_expansion
-		x = -2
+		x = -1
 		y = 1
 	}
 
