@@ -96,10 +96,10 @@ ideas = {
 		}
 
 		IRQ_saadabad_spheres_of_influence = {
-			picture = generic_agrarian_society
 			allowed = {
 				original_tag = IRQ
 			}
+			picture = IRQ_baghdad_pact
 			custom_effect_tooltip = IRQ_saadabad_spheres_of_influence_tt
 		}
 

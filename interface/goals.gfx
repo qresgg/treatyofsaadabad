@@ -10363,6 +10363,18 @@ spriteTypes = {
 		name = "GFX_focus_IRQ_liberate_south_levant"
 		texturefile = "gfx/interface/goals/focus_IRQ_liberate_south_levant.dds"
 	}
+	SpriteType = {
+		name = "GFX_focus_IRQ_grand_excavations"
+		texturefile = "gfx/interface/goals/focus_IRQ_grand_excavations.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_IRQ_secret_baghdad_pact"
+		texturefile = "gfx/interface/goals/focus_IRQ_secret_baghdad_pact.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_IRQ_partition_of_syria"
+		texturefile = "gfx/interface/goals/focus_IRQ_SYR_partition.dds"
+	}
 
 
 

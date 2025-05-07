@@ -1569,15 +1569,6 @@ focus_tree = {
 	focus = {
 		id = IRQ_royal_iraqi_army
 		icon = {
-		    trigger = { 
-		    	OR = {
-		    		has_cosmetic_tag = IRQ_kurdistan_tag 
-		    		has_cosmetic_tag = greater_kurdistan 
-		    	}
-		    }
-		    value = GFX_focus_IRQ_royal_iraqi_army_alt
-		}
-		icon = {
 		    value = GFX_focus_IRQ_royal_iraqi_army
 		}
 		#prerequisite = { focus = }
@@ -3567,11 +3558,11 @@ focus_tree = {
 	# focus = { COMMANDAER
 	# 	id = IRQ_saadabad_subsidies_for_children
 	# 	icon = GFX_focus_TUR_loosen_the_laws_on_secularism
-	# 	prerequisite = { focus = IRQ_saadabab_alliance }
+	# 	prerequisite = { focus = IRQ_saadabad_alliance }
 	# 	#mutually_exclusive = { focus =  }
 	# 	x = 1
 	# 	y = 1
-	# 	relative_position_id = IRQ_saadabab_alliance
+	# 	relative_position_id = IRQ_saadabad_alliance
 
 	# 	cost = 10
 
@@ -5821,12 +5812,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = IRQ_dig_up_a_rifles # Викопати гвинтівку
+		id = IRQ_grand_excavations # Викопати гвинтівку
 		x = 0
 		y = 1
-		icon = GFX_focus_icon_name
-		prerequisite = { focus = IRQ_al_muthanna_club}
-		relative_position_id = IRQ_al_muthanna_club
+		icon = GFX_focus_IRQ_grand_excavations
+		prerequisite = { focus = IRQ_expand_camel_corps }
+		relative_position_id = IRQ_expand_camel_corps
 
 		available = {
 			has_stability > 0.4
@@ -6108,7 +6099,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = IRQ_curtail_arabism
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			base = 1
@@ -6196,7 +6187,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = IRQ_saadabab_alliance
+		id = IRQ_saadabad_alliance
 		icon = GFX_focus_TUR_treaty_of_saadabad
 		prerequisite = { focus = IRQ_strengthen_relations_with_iran }
 		prerequisite = { focus = IRQ_strengthen_relations_with_turkey }
@@ -6305,11 +6296,11 @@ focus_tree = {
 	focus = {
 		id = IRQ_subsidies_for_saadabad_children
 		icon = GFX_focus_TUR_loosen_the_laws_on_secularism
-		prerequisite = { focus = IRQ_saadabab_alliance }
-		#mutually_exclusive = { focus =  }
+		prerequisite = { focus = IRQ_saadabad_alliance }
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 		x = 1
 		y = 1
-		relative_position_id = IRQ_saadabab_alliance
+		relative_position_id = IRQ_saadabad_alliance
 
 		cost = 8
 
@@ -6441,7 +6432,7 @@ focus_tree = {
 	}
 	focus = {
 		id = IRQ_partition_of_syria
-		icon = GFX_focus_generic_attack_syria
+		icon = GFX_focus_IRQ_partition_of_syria
 		prerequisite = { focus = IRQ_secret_baghdad_pact }
 		#mutually_exclusive = { focus =  }
 		x = 0
@@ -6587,11 +6578,11 @@ focus_tree = {
 	focus = {
 		id = IRQ_take_advantage_of_british_weakness
 		icon = GFX_focus_attack_britain
-		prerequisite = { focus = IRQ_saadabab_alliance }
+		prerequisite = { focus = IRQ_saadabad_alliance }
 		#mutually_exclusive = { focus =  }
 		x = 3
 		y = 1
-		relative_position_id = IRQ_saadabab_alliance
+		relative_position_id = IRQ_saadabad_alliance
 
 		cost = 5
 
@@ -6723,6 +6714,7 @@ focus_tree = {
 		ai_will_do = {
 			base = 1
 		}
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 
 		available = {
 			fascism > 0.25
@@ -6743,28 +6735,6 @@ focus_tree = {
 		completion_reward = {
 
 			remove_ideas = IRQ_golden_square
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					NOT = {
-						has_government = fascism
-					}
-				}
-				set_politics = {
-					ruling_party = fascism
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
-			
-			every_character = {
-				limit = {
-					has_character_flag = IRQ_golden_square_char
-					is_corps_commander = yes
-				}
-				add_trait = { trait = politically_connected }
-			}		
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -7023,10 +6993,10 @@ focus_tree = {
 	focus = {
 		id = IRQ_rally_the_arab_world
 		icon = GFX_focus_IRQ_rally_the_arab_world
-		prerequisite = { focus = IRQ_saadabab_alliance }
+		prerequisite = { focus = IRQ_saadabad_alliance }
 		x = -1
 		y = 1
-		relative_position_id = IRQ_saadabab_alliance
+		relative_position_id = IRQ_saadabad_alliance
 
 		cost = 10
 
@@ -7055,7 +7025,7 @@ focus_tree = {
 
 	focus = {
 		id = IRQ_secret_baghdad_pact
-		icon = GFX_focus_IRQ_rally_the_arab_world
+		icon = GFX_focus_IRQ_secret_baghdad_pact
 		prerequisite = { focus = IRQ_rally_the_arab_world }
 		x = 6
 		y = 1
