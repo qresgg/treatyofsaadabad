@@ -9775,19 +9775,8 @@ focus = {
     search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_TREATYOFSAADABAD }  #CHANGEIT
 
     completion_reward = {
+
     }
 }
 
-} # в бельгії 0 днів два фокуса
-
-
-# в бельгії 0 днів два фокуса
-
-
-### search_filters = {FOCUS_FILTER_POLITICAL}
-### search_filters = {FOCUS_FILTER_RESEARCH}
-### search_filters = {FOCUS_FILTER_INDUSTRY}
-### search_filters = {FOCUS_FILTER_STABILITY}
-### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
-### search_filters = {FOCUS_FILTER_MANPOWER}
-### search_filters = {FOCUS_FILTER_ANNEXATION}
+}

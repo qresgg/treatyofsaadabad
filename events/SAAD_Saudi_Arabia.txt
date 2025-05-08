@@ -1,31 +1,82 @@
-add_namespace = SAU_iraqi_fascists
+# add_namespace = SAU_iraqi_fascists
+add_namespace = sau_fascism
 
-# Визначення івенту
+# # Визначення івенту
+# country_event = {
+# 	id = SAU_iraqi_fascists.1
+# 	title = SAU_iraqi_fascists.1.t
+# 	desc = SAU_iraqi_fascists.1.d
+
+# 	# picture = GFX_NEWS_EVENT_NAZI_GERMANY # Необов'язково: Картинка для івенту. Замініть на потрібну або залиште закоментованим.
+
+# 	trigger = {
+# 		fascism_popularity >= 0.70
+# 	}
+
+# 	mean_time_to_happen = {
+# 		days = 7
+# 	}
+
+# 	option = {
+# 		name = my_mod_events.1.a
+#         IRQ = {
+#             set_autonomy = { target = SAU autonomy_state = autonomy_satellite }
+#         }
+# 	}
+
+# 	# Якщо потрібно більше опцій, додайте їх тут.
+# 	# option = {
+# 	#    name = my_mod_events.1.b
+# 	#    # ефекти другої опції
+# 	# }
+# }
+
 country_event = {
-	id = SAU_iraqi_fascists.1
-	title = SAU_iraqi_fascists.1.t
-	desc = SAU_iraqi_fascists.1.d
+    id = sau_fascism.1
+    title = sau_fascism.1.t
+    desc = sau_fascism.1.desc
+    picture = GFX_report_event_generic_sign_treaty1
 
-	# picture = GFX_NEWS_EVENT_NAZI_GERMANY # Необов'язково: Картинка для івенту. Замініть на потрібну або залиште закоментованим.
-
-	trigger = {
-		fascism_popularity >= 0.70
+	trigger = { ##### бля я забув добавити перевірку на 0.7 фашизму але я вже гру закрив (fascism > 0.7 вроді не працює перевірь)
+		tag = SAU
+		IRQ = {
+			is_subject = no
+			has_government = fascism
+		}
+		SAU = {
+			is_subject = no
+			has_government = fascism
+		}
+	}
+	
+    mean_time_to_happen = { #### ПЕРЕВІРИТИ ЧИ НЕМА ПОВТОРІВ
+		days = 1 
 	}
 
-	mean_time_to_happen = {
-		days = 7
-	}
+    immediate = {}
 
 	option = {
-		name = my_mod_events.1.a
-        IRQ = {
-            set_autonomy = { target = SAU autonomy_state = autonomy_satellite }
-        }
+		name = sau_fascism
+	 
+		set_politics = {			
+			ruling_party = fascism
+			elections_allowed = no
+		}
+	 
+		IRQ = {
+			limit = {
+				original_tag = IRQ
+				has_government = fascism
+			}
+			if = {
+				limit = { has_dlc = "Together for Victory" }
+				set_autonomy = {
+					target = SAU
+					autonomous_state = autonomy_dominion
+					freedom_level = 0.5
+				}
+				else = { puppet = SAU }
+			}
+		}
 	}
-
-	# Якщо потрібно більше опцій, додайте їх тут.
-	# option = {
-	#    name = my_mod_events.1.b
-	#    # ефекти другої опції
-	# }
 }
