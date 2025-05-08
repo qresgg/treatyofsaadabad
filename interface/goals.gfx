@@ -10375,6 +10375,10 @@ spriteTypes = {
 		name = "GFX_focus_IRQ_partition_of_syria"
 		texturefile = "gfx/interface/goals/focus_IRQ_SYR_partition.dds"
 	}
+	SpriteType = {
+		name = "GFX_focus_IRQ_kuwait_ultimatum"
+		texturefile = "gfx/interface/goals/focus_IRQ_kuwait_ultimatum.dds"
+	}
 
 
 

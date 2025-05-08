@@ -131,6 +131,56 @@ focus_tree = {
 	}
 
 	focus = {
+		id = IRQ_air_protection
+		icon = GFX_goal_generic_construct_military
+		relative_position_id = IRQ_decouple_from_the_pound
+		prerequisite = { focus = IRQ_decouple_from_the_pound }
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD}
+		bypass = {
+			custom_trigger_tooltip =  {
+				tooltip = air_defense_focus_bypass_tt
+				NOT = {
+					any_owned_state = {
+						free_building_slots = {
+							building = anti_air_building
+							size > 0
+						}
+					}
+				}
+			}
+		}
+		
+		completion_reward = {
+			air_experience = 25
+			if = {
+				limit = { has_country_flag = air_defense_focus_built_max }
+				custom_effect_tooltip = air_defense_focus_tt
+			}
+			if = {
+				limit = { NOT = { has_country_flag = air_defense_focus_built_max } }
+				every_state = {
+					limit = {
+						OR = {
+							state = 676
+							state = 1011
+							state = 291 
+							state = 1010
+						}
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+		
+		y = 1
+		x = 6
+	}
+
+	focus = {
 		id = IRQ_construct_the_kut_barrage
 		icon = GFX_focus_IRQ_construct_the_kut_barrage
 		prerequisite = { focus = IRQ_decouple_from_the_pound }
@@ -743,22 +793,42 @@ focus_tree = {
 	}
 	focus = {
 		id = IRQ_global_resource_expansion
+		icon = GFX_focus_GER_plenipotentiary_of_the_four_year_plan
 		x = 8
 		y = 7
-		cost = 5
+		cost = 10
+
+		available = { 
+			OR = {
+				656 = {
+					is_owned_and_controlled_by = ROOT
+				}
+				854 = {
+					is_owned_and_controlled_by = ROOT
+				}
+				455 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+
 		completion_reward = {
 			add_political_power = 120
 			add_stability = 0.05
 		}
 	}
 	focus = {
-		id = IRQ_found_kuweit_oil
-		x = -3
+		id = IRQ_found_kuwait_oil
+		x = -2
 		y = 1
 		prerequisite = { focus = IRQ_global_resource_expansion }
 		relative_position_id = IRQ_global_resource_expansion
+		icon = GFX_goal_generic_oil_refinery
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		cost = 7
 
 		available = {
 			656 = {
@@ -766,12 +836,19 @@ focus_tree = {
 			}
 		}
 
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD FOCUS_FILTER_INDUSTRY }
+
 		completion_reward = {
 			656 = {
 				add_resource = {
 					type = oil
 					amount = 18
-				}	
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 		}
@@ -781,8 +858,101 @@ focus_tree = {
 		id = IRQ_expand_saudi_arabian_oil
 		prerequisite = { focus = IRQ_global_resource_expansion }
 		relative_position_id = IRQ_global_resource_expansion
-		x = -1
+
+		icon = GFX_goal_generic_oil_refinery
+		
+		x = 0
 		y = 1
+
+		cost = 7
+
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD FOCUS_FILTER_INDUSTRY }
+
+		available = {
+			854 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+		completion_reward = {
+			854 = {
+				add_resource = {
+					type = oil
+					amount = 8
+				}
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}	
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+		}
+	}
+
+	focus = {
+		id = IRQ_found_jordan_steel
+		prerequisite = { focus = IRQ_global_resource_expansion }
+		relative_position_id = IRQ_global_resource_expansion
+		icon = GFX_focus_generic_steel
+		
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD FOCUS_FILTER_INDUSTRY }
+
+		x = 2
+		y = 1
+		cost = 7
+
+		available = {
+			455 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+		completion_reward = {
+			455 = {
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}	
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+		}
+	}
+
+	focus = {
+		id = IRQ_dammam_tungsten_miners
+		prerequisite = { focus = IRQ_found_jordan_steel focus = IRQ_expand_saudi_arabian_oil }
+		relative_position_id = IRQ_expand_saudi_arabian_oil
+		icon = GFX_focus_generic_mining_industry
+		
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD FOCUS_FILTER_INDUSTRY }
+
+		x = 1
+		y = 1
+		cost = 7
+
+		available = {
+			859 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+		completion_reward = {
+			859 = {
+				add_resource = {
+					type = tungsten
+					amount = 14
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}	
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+		}
 	}
 
 	## EXPAND JOR AND SYRIAN
@@ -4729,132 +4899,131 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = IRQ_regional_economic_integration
-		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = IRQ_reach_out_to_jordan }
-		#mutually_exclusive = { focus =  }
-		x = 1
-		y = 1
-		relative_position_id = IRQ_reach_out_to_jordan
+	# focus = {
+	# 	id = IRQ_regional_economic_integration
+	# 	icon = GFX_goal_generic_construct_civ_factory
+	# 	prerequisite = { focus = IRQ_reach_out_to_jordan }
+	# 	#mutually_exclusive = { focus =  }
+	# 	x = 1
+	# 	y = 1
+	# 	relative_position_id = IRQ_reach_out_to_jordan
 
-		cost = 5
+	# 	cost = 5
 
-		ai_will_do = {
-			base = 1
-		}
+	# 	ai_will_do = {
+	# 		base = 1
+	# 	}
 
-		available = {
+	# 	available = {
 			
-		}
+	# 	}
 
-		bypass = {
+	# 	bypass = {
 
-		}
+	# 	}
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+	# 	search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
 
-		completion_reward = {
+	# 	completion_reward = {
 
-			291 = {
-				build_railway = {
-					level = 2
-					path = {
-						3795 12413 1631 4440 1544 4574
-					}
-				}
-			}
+	# 		291 = {
+	# 			build_railway = {
+	# 				level = 2
+	# 				path = {
+	# 					3795 12413 1631 4440 1544 4574
+	# 				}
+	# 			}
+	# 		}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+	# 		custom_effect_tooltip = generic_skip_one_line_tt
 
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
+	# 		random_owned_controlled_state = {
+	# 			limit = {
+	# 				is_core_of = ROOT
+	# 			}
+	# 			add_extra_state_shared_building_slots = 1
+	# 			add_building_construction = {
+	# 				type = industrial_complex
+	# 				level = 1
+	# 				instant_build = yes
+	# 			}
+	# 		}
 
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = IRQ_regional_military_integration
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = IRQ_reach_out_to_jordan }
-		#mutually_exclusive = { focus =  }
-		x = -1
-		y = 1
-		relative_position_id = IRQ_reach_out_to_jordan
+	# focus = {
+	# 	id = IRQ_regional_military_integration
+	# 	icon = GFX_goal_generic_construct_mil_factory
+	# 	prerequisite = { focus = IRQ_reach_out_to_jordan }
+	# 	#mutually_exclusive = { focus =  }
+	# 	x = -1
+	# 	y = 1
+	# 	relative_position_id = IRQ_reach_out_to_jordan
 
-		cost = 10
+	# 	cost = 10
 
-		ai_will_do = {
-			base = 1
-		}
+	# 	ai_will_do = {
+	# 		base = 1
+	# 	}
 
-		available = {
-		}
+	# 	available = {
+	# 	}
 
-		bypass = {
+	# 	bypass = {
 
-		}
+	# 	}
 
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP }
+	# 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP }
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
 
-		completion_reward = {
+	# 	completion_reward = {
 
-			army_experience = 20
+	# 		army_experience = 20
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+	# 		custom_effect_tooltip = generic_skip_one_line_tt
 
-			ETH_add_random_mil_factory_effect = yes
-			IF = { 
-				limit = {
-					OR = {
-						455 = {
-							is_owned_and_controlled_by = ROOT
-						}
-						JOR = { is_subject_of = ROOT }
-					}
-				}
-				455 = {
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-			ELSE = {
-				custom_effect_tooltip = IRQ_regional_military_integration_tt
-			}	
+	# 		ETH_add_random_mil_factory_effect = yes
+	# 		IF = { 
+	# 			limit = {
+	# 				OR = {
+	# 					455 = {
+	# 						is_owned_and_controlled_by = ROOT
+	# 					}
+	# 					JOR = { is_subject_of = ROOT }
+	# 				}
+	# 			}
+	# 			455 = {
+	# 				add_extra_state_shared_building_slots = 2
+	# 				add_building_construction = {
+	# 					type = arms_factory
+	# 					level = 2
+	# 					instant_build = yes
+	# 				}
+	# 			}
+	# 		}
+	# 		ELSE = {
+	# 			custom_effect_tooltip = IRQ_regional_military_integration_tt
+	# 		}	
 					
-		}
-	}
+	# 	}
+	# }
 
 	focus = {
 		id = IRQ_demand_palestine
 		icon = GFX_focus_IRQ_demand_palestine
-		prerequisite = { focus = IRQ_regional_military_integration }
-		prerequisite = { focus = IRQ_regional_economic_integration}
+		prerequisite = { focus = IRQ_reach_out_to_jordan }
 		#mutually_exclusive = { focus =  }
-		x = 1
+		x = 0
 		y = 1
-		relative_position_id = IRQ_regional_military_integration
+		relative_position_id = IRQ_reach_out_to_jordan
 
 		cost = 10
 
@@ -5165,10 +5334,10 @@ focus_tree = {
 	focus = {
 		id = IRQ_expand_membership
 		icon = GFX_focus_IRQ_expand_membership
-		prerequisite = { 	 }
+		prerequisite = { focus = IRQ_hashemite_arab_federation }
 		#mutually_exclusive = { focus = IRQ_hashemite_arab_federation }
-		x = 21
-		y = -5
+		x = 0
+		y = 1
 		relative_position_id = IRQ_hashemite_arab_federation
 
 		cost = 10
@@ -5611,8 +5780,9 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
 			retire_country_leader = yes
+
+			custom_effect_tooltip = generic_skip_one_line_tt
 
 			IRQ_hikmat_suleiman = {
 				add_country_leader_role = {
@@ -5660,7 +5830,7 @@ focus_tree = {
 
 		}
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_TREATYOFSAADABAD }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -5716,7 +5886,7 @@ focus_tree = {
 
 		}
 
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP FOCUS_FILTER_TREATYOFSAADABAD }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -6257,7 +6427,7 @@ focus_tree = {
 			is_in_faction = yes
 		}
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_TREATYOFSAADABAD }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -6420,10 +6590,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = IRQ_clear_in_the_desert
+		id = IRQ_kuwait_ultimatum
 		x = 0
 		y = 2
-		icon = GFX_focus_icon_name
+		icon = GFX_focus_IRQ_kuwait_ultimatum
 		prerequisite = { focus = IRQ_rally_the_arab_world }
 		prerequisite = { focus = IRQ_arab_free_legion }
 		relative_position_id = IRQ_arab_free_legion
@@ -7349,7 +7519,7 @@ focus_tree = {
 						}
 					}
 				}
-			}			
+			}	
 		}
 	}
 
@@ -7390,13 +7560,15 @@ focus_tree = {
 			else_if = {
 				limit = {
 					PAL = { exists = yes }
+					JOR = { exists = yes }
 				}
 				effect = {
-					add_state_claim = { state = 454 country = PAL }
+					add_state_claim = { state = 454 country = ROOT }
+					add_state_claim = { state = 455 country = ROOT }
 				}
 			}
-	
 			custom_effect_tooltip = generic_skip_one_line_tt
+			453 = { add_claim_by = ROOT }
 		}
 	}
 	
@@ -7888,8 +8060,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = IRQ_proclaim_arabian_republic
-		icon = GFX_focus_IRQ_proclaim_united_arab_republic
+		id = IRQ_establish_reichsprotectorate
+		icon = GFX_focus_PER_middle_east_protectorate
 		prerequisite = { focus = IRQ_invite_oil_mission focus = IRQ_axis_training}
 		x = -1
 		y = 1
@@ -7902,15 +8074,20 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no
-			has_government = fascism
+			is_in_faction = no
+			OR = {
+				GER = { has_government = fascism }
+				GER = { has_government = communism }
+			}
+			GER = { exists = yes }
+			GER = { is_subject = no }
 		}
 
 		bypass = {
 
 		}
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_TREATYOFSAADABAD }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -7918,8 +8095,11 @@ focus_tree = {
 
 		completion_reward = {
 			hidden_effect = { drop_cosmetic_tag = yes }
-			set_cosmetic_tag = IRQ_united_arab_republic	
-			custom_effect_tooltip = IRQ_arab_republic_core_tt		
+			set_cosmetic_tag = IRQ_middle_east_reichprotectorate
+			custom_effect_tooltip = IRQ_establish_reichprotectorate_tt	
+			GER = {
+				set_autonomy = { target = IRQ autonomy_state = autonomy_satellite }
+			}
 		}
 	}
 
@@ -9399,7 +9579,7 @@ focus = {
     id = IRQ_rise_of_fascism
     x = 2
     y = 1
-    icon = GFX_focus_icon_name
+    icon = GFX_goal_support_fascism
 	prerequisite = { focus = IRQ_rebirth_babylon}
 
     cost = 10
@@ -9419,7 +9599,7 @@ focus = {
     id = IRQ_change_ideology
     x = 0
     y = 1
-    icon = GFX_focus_icon_name
+    icon = GFX_focus_generic_strike_at_democracy1
 	prerequisite = { focus = IRQ_rebirth_babylon}
 
     cost = 5
@@ -9453,24 +9633,6 @@ focus = {
     } 
 }
 	
-	
-
-focus = {
-    id = IRQ_centralization_of_power # Централізація влади
-    x = -2
-    y = 1
-    icon = GFX_focus_icon_name
-	prerequisite = { focus = IRQ_change_ideology}
-	relative_position_id = IRQ_change_ideology
-
-    cost = 1
-    search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_TREATYOFSAADABAD }  #CHANGEIT
-
-    completion_reward = {
-        add_stability = 0.1
-		add_political_power = 150
-    }
-}
 
 # 	07.05.2025
 #	12:00
@@ -9591,7 +9753,7 @@ focus = {
     y = 1
     icon = GFX_focus_ARG_join_the_allies
 	prerequisite = {  }
-	relative_position_id = IRQ_expand_membership
+	relative_position_id = IRQ_training_iraqi_army_1
 
     cost = 1
     search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_TREATYOFSAADABAD }  #CHANGEIT
@@ -9604,10 +9766,10 @@ focus = {
 focus = {
     id = IRQ_mod_lefttree_5
     x = 0
-    y = 1
+    y = 2
     icon = GFX_focus_ARG_join_the_allies
 	prerequisite = {  }
-	relative_position_id = IRQ_mod_lefttree_4
+	relative_position_id = IRQ_training_iraqi_army_1
 
     cost = 1
     search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_TREATYOFSAADABAD }  #CHANGEIT

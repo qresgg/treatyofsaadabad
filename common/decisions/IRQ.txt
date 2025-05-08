@@ -40,7 +40,84 @@ political_actions = {
 		}
 	}
 
-}	
+}
+
+IRQ_middle_east_reichprotectorate_cat = {
+	IRQ_integrate_middle_east_states = {
+		allowed = {
+			original_tag = IRQ
+		}
+		available = { 
+			NOT = { has_completed_focus = IRQ_coring_state_in_progress }
+		}
+		visible = {
+			has_completed_focus = IRQ_establish_reichsprotectorate
+		}
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = { flag = IRQ_coring_state_in_progress value = 10 days = 31 }
+			}
+		}
+		target_root_trigger = { original_tag = IRQ }
+
+		state_target = any_owned_state
+	    
+	    target_trigger = {
+	        FROM = {
+	        	NOT = { is_core_of = ROOT }
+	        	is_fully_controlled_by = ROOT
+	        	OR = {
+	        		is_core_of = PER
+	        		is_core_of = TUR
+	        		is_core_of = JOR
+					is_core_of = SAU
+					is_core_of = PAL
+					is_core_of = KUW
+					is_core_of = AFG
+					is_core_of = YEM
+					is_core_of = OMA
+					is_core_of = QAT
+					is_core_of = BAH
+					is_core_of = UAE
+					state = 992
+					state = 453
+					state = 446
+					state = 907
+					state = 447
+					state = 452
+					state = 456
+					state = 457
+					state = 855
+	        	}
+	        }
+	    }
+	    on_map_mode = map_and_decisions_view 
+	    cost = 50		
+		fire_only_once = yes
+		days_remove = 15
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = IRQ_coring_state_in_progress
+			}
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+
+		cancel_trigger = {
+			FROM = {
+				NOT = { is_fully_controlled_by = ROOT }
+			}
+		}
+
+		cancel_effect = {
+			hidden_effect = {
+				clr_country_flag = IRQ_coring_state_in_progress
+			}
+		}
+	}
+}
 
 IRQ_african_arab_revolt_cat = {
 	IRQ_develop_separatist_movement = {
@@ -50,7 +127,21 @@ IRQ_african_arab_revolt_cat = {
 		available = {
 			NOT = { has_country_flag = IRQ_coring_state_in_progress }
 		}
-	
+		target_trigger = {
+	        FROM = {
+	        	NOT = { is_core_of = ROOT }
+	        	is_fully_controlled_by = ROOT
+	        	OR = {
+	        		is_core_of = KUW
+	        		state = 680
+                    state = 554
+	        		is_core_of = PAL
+	        		is_core_of = JOR
+					state = 453
+	        	}
+	        }
+	    }
+	    on_map_mode = map_and_decisions_vie
 		completion_effect = {
 		}
 	}
@@ -65,7 +156,7 @@ greater_mesopotamia_cat = {
 		}
 		
 		visible = {
-            always = yes ### ЗАВЖДИ БАЧИТИ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            has_completed_focus = IRQ_proclaim_greater_mesopotamia
 		}
 		available = {
 			NOT = { has_country_flag = IRQ_coring_state_in_progress }
@@ -86,13 +177,14 @@ greater_mesopotamia_cat = {
 	        		is_core_of = PAL
 	        		is_core_of = JOR
 					state = 453
+					state = 854
 	        	}
 	        }
 	    }
 	    on_map_mode = map_and_decisions_view 
 	    cost = 50		
 		fire_only_once = yes
-		days_remove = 1
+		days_remove = 15
 		complete_effect = {
 			hidden_effect = {
 				set_country_flag = { flag = IRQ_coring_state_in_progress value = 10 days = 31 }

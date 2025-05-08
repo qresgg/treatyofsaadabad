@@ -29,7 +29,7 @@ ideas = {
 				always = yes
 			}
 
-			picture = generic_agrarian_society
+			picture = idea_generic_improved_industries
 			
 			removal_cost = -1
 			

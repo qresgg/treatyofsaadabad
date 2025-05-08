@@ -1,0 +1,31 @@
+add_namespace = SAU_iraqi_fascists
+
+# Визначення івенту
+country_event = {
+	id = SAU_iraqi_fascists.1
+	title = SAU_iraqi_fascists.1.t
+	desc = SAU_iraqi_fascists.1.d
+
+	# picture = GFX_NEWS_EVENT_NAZI_GERMANY # Необов'язково: Картинка для івенту. Замініть на потрібну або залиште закоментованим.
+
+	trigger = {
+		fascism_popularity >= 0.70
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		name = my_mod_events.1.a
+        IRQ = {
+            set_autonomy = { target = SAU autonomy_state = autonomy_satellite }
+        }
+	}
+
+	# Якщо потрібно більше опцій, додайте їх тут.
+	# option = {
+	#    name = my_mod_events.1.b
+	#    # ефекти другої опції
+	# }
+}
