@@ -1,5 +1,6 @@
 # add_namespace = SAU_iraqi_fascists
 add_namespace = sau_fascism
+add_namespace = ask_reunification_of_yemen
 
 # # Визначення івенту
 # country_event = {
@@ -78,5 +79,26 @@ country_event = {
 				else = { puppet = SAU }
 			}
 		}
+	}
+}
+
+country_event = {
+	id = ask_reunification_of_yemen.1
+	title = ask_reunification_of_yemen.1.t
+	desc = ask_reunification_of_yemen.1.desc
+	
+	trigger = {
+		tag = SAU
+		IRQ = { 
+			is_subject = no
+			has_government = fascism
+		}
+		SAU = {
+			is_subject = yes
+			has_government = fascism
+		}
+	}
+	mean_time_to_happen = { 
+		days = 30
 	}
 }

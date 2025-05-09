@@ -29,7 +29,7 @@ ideas = {
 				always = yes
 			}
 
-			picture = idea_generic_improved_industries
+			picture = ARG_public_works_investment
 			
 			removal_cost = -1
 			
@@ -128,12 +128,12 @@ ideas = {
 			}
 		}
 
-		IRQ_raising_iraqi_fascists_in_saudi = {
+		IRQ_raising_iraqi_fascists = {
 			allowed = {
 				original_tag = SAU
 			}
 			modifier = {
-				fascism_drift = 0.1
+				fascism_drift = 0.3
 			}
 		}
 

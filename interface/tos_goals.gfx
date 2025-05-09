@@ -1,7 +1,6 @@
 spriteTypes = {	
 
-	#### Generic continuous goal icons
-
+	#### MODS
 	SpriteType = {
 		name = "GFX_focus_IRQ_liberate_south_levant"
 		texturefile = "gfx/interface/goals/focus_IRQ_liberate_south_levant.dds"
@@ -22,6 +21,13 @@ spriteTypes = {
 		name = "GFX_focus_IRQ_kuwait_ultimatum"
 		texturefile = "gfx/interface/goals/focus_IRQ_kuwait_ultimatum.dds"
 	}
+	SpriteType = {
+		name = "GFX_focus_IRQ_proclaim_greater_mesopotamia"
+		texturefile = "gfx/interface/goals/focus_IRQ_greater_mesopotamia.dds"
+	}
+
+
+	#### Generic continuous goal icons
 	SpriteType = {
 		name = "GFX_focus_IRQ_baghdad_colleges_of_engineering_and_education"
 		texturefile = "gfx/interface/goals/focus_IRQ_baghdad_colleges_of_engineering_and_education.dds"
