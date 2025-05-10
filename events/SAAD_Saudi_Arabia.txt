@@ -111,8 +111,76 @@ country_event = {
 	fire_only_once = yes
 
 	option = {
-		name = ask_reunification_of_yemen.1.a
+		name = ask_reunification_of_yemen.1.a ## БРИТАНІЯ ЗА ВОЗ'ЄДННЯННЯ ЄМЕНУ
+		ai_chance = { ## YES
+            base = 40
+		}
+		set_global_flag = yem_reunification
+
+		1016 = { transfer_state_to = YEM } ### ПО МОЖЛИВОСТІ SAU ПОМІНЯТИ НА FROM/ROOT/PREV ( НЕ ШАРЮ ЧЕСНО ЧИ МОЖНА )
+		992 = { transfer_state_to = YEM }
+		659 = { transfer_state_to = YEM }
 		
+		add_named_threat = { threat = 2 name = reunification_yemen }
+	}
+	option = {
+		name = ask_reunification_of_yemen.1.b ## БРИТАНІЯ ПРОТИ ВОЗ'ЄДННЯННЯ ЄМЕНУ
+		ai_chance = {
+            base = 60
+		}
+            FROM = { # FROM тут посилається на країну, для якої спрацював цей івент
+                create_wargoal = {
+                    type = annex_everything
+                    target = YEM
+                }
+            }
 	}
 	
 }
+
+add_namespace = YEM_reunification
+
+country_event = { ## REFERENDUM ЄМЕНА ЗА ПРИЄДНАННЯ ДО АРАВІЇ
+    id = YEM_reunification.2
+    title = YEM_reunification.2t
+    desc = YEM_reunification.2d
+    picture = GFX_report_event_royal_parade
+
+	fire_only_once = yes
+
+	trigger = {
+		has_global_flag = yem_reunification
+		tag = YEM
+	}
+
+	mean_time_to_happen = {
+		days = 70 # для тесту поставити на 4-10 днів
+	}
+
+    option = {
+        name = YEM_reunification.2a
+		ai_chance = {
+            base = 50
+		}
+		293 = { transfer_state_to = SAU } ### ПО МОЖЛИВОСТІ SAU ПОМІНЯТИ НА FROM/ROOT/PREV ( НЕ ШАРЮ ЧЕСНО ЧИ МОЖНА )
+		992 = { transfer_state_to = SAU }
+		659 = { transfer_state_to = SAU }
+		1016 = { transfer_state_to = SAU }
+		remove_global_flag = yem_reunification
+    # } 293 992 659  1016
+}
+    option = {
+        name = YEM_reunification.2b
+		ai_chance = {
+            base = 50
+		}
+		293 = { transfer_state_to = SAU } ### ПО МОЖЛИВОСТІ SAU ПОМІНЯТИ НА FROM/ROOT/PREV ( НЕ ШАРЮ ЧЕСНО ЧИ МОЖНА )
+		992 = { transfer_state_to = SAU }
+		659 = { transfer_state_to = SAU }
+		1016 = { transfer_state_to = SAU }
+		remove_global_flag = yem_reunification
+    # } 293 992 659  1016
+
+}
+
+

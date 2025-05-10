@@ -8023,6 +8023,8 @@ form_arabia_category = {
 				original_tag = FSA
 				# Imamate of Oman
 				original_tag = IMO
+				# TEST SUBJECT
+				SAU = { is_subject = no }
 			}
 			NOT = { has_global_flag = form_arabia_flag }
             OR = {
