@@ -369,7 +369,7 @@ IRQ_african_arab_revolt_cat = {
 		targets = { LBA EGY MOR TUN ALG SAU YEM}
 		visible = {
 			original_tag = IRQ
-			has_completed_focus = IRQ_integrate_north_africa
+			has_completed_focus = IRQ_integrate_arabian_puppet_states
 			FROM = {
 				is_subject_of = ROOT
 			}

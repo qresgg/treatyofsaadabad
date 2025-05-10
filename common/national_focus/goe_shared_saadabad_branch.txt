@@ -11,21 +11,21 @@ joint_focus = {
 		trigger = {
 			tag = IRQ
 			AND = {
-				NOT = { has_completed_focus = IRQ_promote_kurdish_culture }
-				NOT = { has_completed_focus = IRQ_party_of_national_brotherhood }
+				# NOT = { has_completed_focus = IRQ_promote_kurdish_culture }
+				NOT = { has_completed_focus = IRQ_rebirth_babylon }
 				NOT = { has_completed_focus = IRQ_rally_behind_the_hashemite_dynasty }
 			}
 		}
 	}
 
 	offset = {
-		x = 38
+		x = 0
 		y = 0
 		trigger = {
 			tag = IRQ
 			AND = {
-				has_completed_focus = IRQ_promote_kurdish_culture
-				NOT = { has_completed_focus = IRQ_party_of_national_brotherhood }
+				# has_completed_focus = IRQ_promote_kurdish_culture
+				NOT = { has_completed_focus = IRQ_rebirth_babylon }
 				NOT = { has_completed_focus = IRQ_rally_behind_the_hashemite_dynasty }
 			}
 		}
@@ -38,9 +38,9 @@ joint_focus = {
 		trigger = {
 			tag = IRQ
 			AND = {
-				NOT = { has_completed_focus = IRQ_promote_kurdish_culture }
+				# NOT = { has_completed_focus = IRQ_promote_kurdish_culture }
 				OR = {
-					has_completed_focus = IRQ_party_of_national_brotherhood
+					has_completed_focus = IRQ_rebirth_babylon
 					has_completed_focus = IRQ_rally_behind_the_hashemite_dynasty
 				}
 			}
@@ -158,6 +158,8 @@ joint_focus = {
 		set_variable = { SSB_political_power_factor = 0 }
 		set_variable = { SSB_agency_upgrade_time = 0 }
         set_variable = { SSB_research_speed_factor = 0}
+		set_variable = { SSB_consumer_goods_factor = 0}
+		set_variable = { SSB_production_speed_buildings_factor = 0}
 
 		set_country_flag = SSB_is_saadabad_leader
 		add_dynamic_modifier = { modifier = SSB_saadabad_pact }
@@ -561,7 +563,7 @@ joint_focus = {
 	prerequisite = { focus = SSB_expand_road_and_rail_connections }
 	relative_position_id = SSB_expand_road_and_rail_connections
 
-	x = 3
+	x = 2
 	y = 1
 
 	cost = 5
@@ -607,6 +609,90 @@ joint_focus = {
 		country_event = {
 			id = PER_ssb_events.7
 			hours = 6
+		}
+	}
+}
+
+
+joint_focus = {
+	id = SSB_saadabad_civilian_reintegration
+	icon = GFX_focus_generic_price_controls
+	prerequisite = { focus = SSB_economic_cooperation }
+	relative_position_id = SSB_economic_cooperation
+
+	x = 4
+	y = 1
+
+	cost = 5
+
+	text_icon = SSB_AFG_IRQ_PER_TUR_focus_style
+
+	available = {
+		SSB_basic_available_trigger = yes
+	}
+
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	bypass = {}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	joint_trigger = { SSB_basic_available_trigger = yes }
+
+	search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		custom_effect_tooltip = SSB_spirit_tooltip
+		add_to_variable = {
+			var = SSB_consumer_goods_factor
+			value = -0.2
+			tooltip = consumer_goods_factor_tt
+		}
+	}
+}
+joint_focus = {
+	id = SSB_construction_of_the_saadabad
+	icon = GFX_focus_generic_low_cost_housing
+	prerequisite = { focus = SSB_economic_cooperation }
+	relative_position_id = SSB_economic_cooperation
+
+	x = 4
+	y = 2
+
+	cost = 5
+
+	text_icon = SSB_AFG_IRQ_PER_TUR_focus_style
+
+	available = {
+		SSB_basic_available_trigger = yes
+	}
+
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	bypass = {}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	joint_trigger = { SSB_basic_available_trigger = yes }
+
+	search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		custom_effect_tooltip = SSB_spirit_tooltip
+		add_to_variable = {
+			var = SSB_production_speed_buildings_factor
+			value = 0.15
+			tooltip = production_speed_buildings_factor_tt
 		}
 	}
 }
@@ -1001,14 +1087,46 @@ joint_focus = {
     relative_position_id = SSB_expand_iraqs_military_infrastructure
     x = -1
     y = 1
-    completion_reward_joint_member = {
-        custom_effect_tooltip = SSB_spirit_tooltip
-        add_to_variable = {
-			var = SSB_war_stability_factor
-			value = 0.11
+
+	text_icon = SSB_AFG_IRQ_PER_TUR_focus_style
+
+	cost = 8
+	available = {
+		SSB_basic_available_trigger = yes
+	}
+	cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	bypass = {
+
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	joint_trigger = { SSB_basic_available_trigger = yes }
+
+	search_filters = {FOCUS_FILTER_TREATYOFSAADABAD}
+
+	completion_reward_joint_originator = {
+		custom_effect_tooltip = SSB_spirit_tooltip
+		add_to_variable = {
+			var = SSB_research_speed_factor
+			value = 0.12
 			tooltip = research_speed_factor_tt
 		}
-    }
+	}
+
+    completion_reward_joint_member = {
+		custom_effect_tooltip = SSB_spirit_tooltip
+		add_to_variable = {
+			var = SSB_research_speed_factor
+			value = 0.10
+			tooltip = research_speed_factor_tt
+		}
+	}
 }
 joint_focus = {
 	id = SSB_expand_irans_military_infrastructure

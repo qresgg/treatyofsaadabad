@@ -104,8 +104,15 @@ country_event = {
 			is_subject = yes
 			has_government = fascism
 		}
+		has_completed_focus = ask_reunification_of_yemen
 	}
-	mean_time_to_happen = { 
-		days = 30
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ask_reunification_of_yemen.1.a
+		
 	}
+	
 }

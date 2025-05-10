@@ -3918,7 +3918,7 @@ focus_tree = {
 		id = IRQ_rally_behind_the_hashemite_dynasty
 		icon = GFX_focus_IRQ_rally_behind_the_hashemite_dynasty
 		#prerequisite = { focus = }
-		mutually_exclusive = { focus = IRQ_rebirth_babylon focus = IRQ_party_of_national_brotherhood }
+		mutually_exclusive = { focus = IRQ_rebirth_babylon }
 		x = 31
 		y = 0
 		#relative_position_id = IRQ_ensure_sunni_dominance
@@ -5761,8 +5761,8 @@ focus_tree = {
 		prerequisite = { focus = IRQ_change_ideology }
 		#mutually_exclusive = { focus =  }
 		x = 0
-		y = 2
-		relative_position_id = IRQ_rebirth_babylon
+		y = 1
+		relative_position_id = IRQ_change_ideology
 
 		cost = 10
 
@@ -6041,7 +6041,7 @@ focus_tree = {
 		relative_position_id = IRQ_expand_camel_corps
 
 		available = {
-			PAL = { is_controlled_by = IRQ }
+			454 = { is_controlled_by = IRQ }
 		}
 	
 		cost = 5
@@ -6690,11 +6690,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			limit = {
-				SYR = {
-					exists = yes
-				}
-			}
 			SYR = { country_event = { id = IRQ_SYR_partition.1 }
 			# else_if = {
 			# 	limit = {
@@ -9655,7 +9650,7 @@ focus = {
 			IRQ_iraqi_fascist_wing = {
 				add_country_leader_role = {
 					country_leader = {
-						ideology = fascism
+						ideology = fascism_ideology
 						expire = "1965.1.1"
 						traits = { IRQ_social_reformer_pm }
 					}
