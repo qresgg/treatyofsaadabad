@@ -2440,3 +2440,52 @@ country_event = {
     }
 }
 
+add_namespace = IRQ_kurd_demands
+
+country_event = {
+    id = IRQ_kurd_demands.1
+    title = IRQ_kurd_demands.1.t
+    desc = IRQ_kurd_demands.1.d
+    picture = GFX_report_event_generic_conflict
+
+    is_triggered_only = yes
+
+    option = {
+        name = IRQ_kurd_demands.1.a  # Передати Південний Курдистан
+        IRQ = {
+            transfer_state = 352
+            transfer_state = 350
+            transfer_state = 800
+            transfer_state = 353
+            IRQ = {
+                add_political_power = 50
+            }
+        }
+    }
+    option = { ########  ПЕРЕРОБИТИ ПЕРЕРОБИТИ ПЕРЕРОБИТИ ПЕРЕРОБИТИ ПЕРЕРОБИТИ ПЕРЕРОБИТИ
+        name = IRQ_kurd_demands.1.b  # Відмовити — передати фабрики
+        TUR = {
+            remove_building = {
+                type = industrial_complex
+                amount = 4
+            }
+            remove_building = {
+                type = arms_factory
+                amount = 3
+            }
+            IRQ = {
+                add_building = {
+                    type = industrial_complex
+                    amount = 4
+                }
+                add_building = {
+                    type = arms_factory
+                    amount = 3
+                }
+                add_political_power = -50
+            }
+        }
+    }
+}
+
+
