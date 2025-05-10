@@ -40,6 +40,16 @@ political_actions = {
 		}
 	}
 
+	IRQ_ask_southern_kurds = {
+		icon = generic_prepare_civil_war
+		priority = -1
+		allowed = {
+			original_tag = IRQ
+		}
+		visible = {
+			has_completed_focus = IRQ_ask_tur_for_the_southern_kurds
+		}
+	}
 }
 
 IRQ_middle_east_reichprotectorate_cat = {
@@ -92,8 +102,8 @@ IRQ_middle_east_reichprotectorate_cat = {
 	        }
 	    }
 	    on_map_mode = map_and_decisions_view 
-	    cost = 50		
-		fire_only_once = yes
+	    cost = 25		
+		fire_only_once = no
 		days_remove = 15
 
 		remove_effect = {
@@ -129,15 +139,23 @@ IRQ_african_arab_revolt_cat = {
 		
 		visible = {
 			hidden_trigger = {
-				has_completed_focus = IRQ_african_arab_revolt
-				OR = {
-					has_government = fascism
-					has_government = neutrality
+				AND = {
+					has_completed_focus = IRQ_african_arab_revolt
+					OR = {
+						has_government = fascism
+						has_government = neutrality
+					}
+					FROM = {
+						NOT = {
+							OR = {
+								is_core_of = FROM.owner
+							}
+						}
+					}
 				}
 			}
 			NOT = { 
 				FROM = { has_state_flag = IRQ_militarization_of_militias_here }
-				has_war_with = FROM.owner
 				FROM = {
 					resistance = 70
 				}
@@ -305,7 +323,12 @@ IRQ_african_arab_revolt_cat = {
 		targets = { LBA EGY MOR TUN ALG}
 		visible = {
 			original_tag = IRQ
-			has_war = no
+			FROM = {
+				has_war = no
+				NOT = {
+					is_subject_of = ROOT
+				}
+			}
 		}
 		allowed = {
 			original_tag = IRQ
@@ -327,22 +350,134 @@ IRQ_african_arab_revolt_cat = {
 		}
 		remove_effect = {
 			clr_country_flag = IRQ_currently_making_puppet
-			effect_tooltip = {
-				ROOT = {
-					IF = {
-						set_autonomy = {
-							target = FROM
-							autonomy_state = autonomy_sheikhdom
-						}
-					}
-				}
-				else = {
-					puppet = FROM	
-				}
+			set_autonomy = {
+				target = FROM
+				autonomy_state = autonomy_sheikhdom
+				freedom_level = 0.5
 			}
 		}
 		fire_only_once = no
 		on_map_mode = map_and_decisions_view 
+	}
+
+	IRQ_integrate_puppet = {
+		cost = 150
+		days_remove = 1
+		target_root_trigger = {
+			original_tag = IRQ
+		}
+		targets = { LBA EGY MOR TUN ALG SAU YEM}
+		visible = {
+			original_tag = IRQ
+			has_completed_focus = IRQ_integrate_north_africa
+			FROM = {
+				is_subject_of = ROOT
+			}
+		}
+		allowed = {
+			original_tag = IRQ
+		}
+		available = {
+			is_subject = no
+			FROM = {
+			}
+		}
+		complete_effect = {
+			set_country_flag = IRQ_currently_making_integration_of_puppet
+		}
+		cancel_effect = {
+			clr_country_flag = IRQ_currently_making_integration_of_puppet
+		}
+		remove_effect = {
+			clr_country_flag = IRQ_currently_making_integration_of_puppet
+			ROOT = {
+				annex_country = { target = FROM transfer_troops = yes}
+			}
+		}
+		fire_only_once = no
+		on_map_mode = map_and_decisions_view 
+	}
+	IRQ_united_arab_fed_proclaim = {
+		cost = 200
+		priority = -1
+		days_remove = 1
+		fire_only_once = no
+		visible = {
+			original_tag = IRQ
+			has_completed_focus = IRQ_proclaim_arabian_federation
+			ROOT = {
+				is_subject = no
+			}
+		}
+		allowed = {
+			original_tag = IRQ
+		}
+		available = {
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = IRQ_proclaim_arab_fed_mor_tt
+				#Morocco
+				controls_state = 290
+				controls_state = 461
+				controls_state = 462
+			}
+			custom_trigger_tooltip = {
+				tooltip = IRQ_proclaim_arab_fed_alg_tt
+				#Algeria
+				controls_state = 459
+				controls_state = 460
+				controls_state = 513
+			}
+			custom_trigger_tooltip = {
+				tooltip = IRQ_proclaim_arab_fed_tun_tt
+				#Tunisia
+				controls_state = 458
+				controls_state = 665
+			}
+			custom_trigger_tooltip = {
+				tooltip = IRQ_proclaim_arab_fed_lba_tt
+				#Libya
+				controls_state = 448
+				controls_state = 449
+				controls_state = 450
+				controls_state = 451
+				controls_state = 661
+				controls_state = 662
+				controls_state = 663
+			}
+			custom_trigger_tooltip = {
+				tooltip = IRQ_proclaim_arab_fed_egy_tt
+				#Egypt
+				controls_state = 452
+				controls_state = 447
+				controls_state = 907
+				controls_state = 446
+				controls_state = 453
+				controls_state = 552
+				controls_state = 456
+				controls_state = 457
+			}
+        }
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_controlled_by = ROOT
+						is_owned_by = ROOT
+					}
+					any_province = { 
+						OR = { 
+							has_core = EGY
+							has_core = ALG
+							has_core = LBA
+							has_core = TUN
+							has_core = MOR
+						}
+					}
+				}
+				add_core_of = ROOT
+			}
+		}
 	}
 }
 
@@ -492,6 +627,8 @@ IRQ_arab_free_legion_cat = {
 		}
 	}
 }
+
+
 
 # greater_iraq_decision_cat = {
 # 	IRQ_core_state = {

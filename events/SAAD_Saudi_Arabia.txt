@@ -46,7 +46,8 @@ country_event = {
 		}
 		SAU = {
 			is_subject = no
-			has_government = fascism
+			fascism = 0.5
+			has_idea = IRQ_raising_iraqi_fascists
 		}
 	}
 	
@@ -75,6 +76,12 @@ country_event = {
 					target = SAU
 					autonomous_state = autonomy_dominion
 					freedom_level = 0.5
+				}
+				IRQ = {
+					add_core_of = 854
+					854 = {
+						owner = IRQ
+					}
 				}
 				else = { puppet = SAU }
 			}

@@ -6706,7 +6706,22 @@ focus_tree = {
 			# 	}
 			# }
 		}
+		}
 	}
+	focus = {
+		id = IRQ_ask_tur_for_the_southern_kurds 
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = IRQ_partition_of_syria }
+		relative_position_id = IRQ_partition_of_syria
+		cost = 5
+		x = -4
+		y = 1
+
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+
+		completion_reward = {
+			custom_effect_tooltip = IRQ_ask_tur_for_kurs_tt
+		}
 	}
 	focus = {
 		id = IRQ_status_of_lebanon
@@ -6883,7 +6898,6 @@ focus_tree = {
 		id = IRQ_dissolve_golden_square
 		icon = GFX_focus_TUR_support_the_golden_square
 		prerequisite = { focus = IRQ_curtail_arabism }
-		mutually_exclusive = { focus = IRQ_curtail_arabism }
 		x = 6
 		y = 1
 		relative_position_id = IRQ_curtail_arabism
@@ -7323,8 +7337,9 @@ focus_tree = {
 	focus = {
 		id = IRQ_partition_of_saudi_arabia
 		icon = GFX_focus_ETH_an_arabic_base
+		mutually_exclusive = { focus = IRQ_partition_of_saudi_arabia}
 		prerequisite = { focus = IRQ_secret_baghdad_pact }
-		x = 3
+		x = 7
 		y = 1
 		relative_position_id = IRQ_secret_baghdad_pact
 
@@ -7365,19 +7380,17 @@ focus_tree = {
 				limit = {
 					OR = {
 						state = 292
-						state = 293
-						state = 992
+						state = 1016
 						state = 659
-						state = 658
-						state = 1015
-						state = 1013
+						state = 992
+						state = 293
 					}
 				}
 				OWNER = {
 					ROOT = {
 						create_wargoal = {
 							target = PREV
-							type = puppet_wargoal_focus
+							type = annex_everything
 						}
 					}
 				}
@@ -7389,7 +7402,8 @@ focus_tree = {
 		id = IRQ_raising_arabian_peninsula
 		icon = GFX_focus_generic_befriend_saudi_arabia
 		prerequisite = { focus = IRQ_secret_baghdad_pact  }
-		x = -3
+		mutually_exclusive = { focus = IRQ_partition_of_saudi_arabia }
+		x = 5
 		y = 1
 		relative_position_id = IRQ_secret_baghdad_pact
 
@@ -7437,7 +7451,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		relative_position_id = IRQ_raising_arabian_peninsula
 		prerequisite = { focus = IRQ_raising_arabian_peninsula }
-		x = -1
+		x = 0
 		y = 1
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL FOCUS_FILTER_TREATYOFSAADABAD }
 	}
@@ -7462,7 +7476,30 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			554 = {
+				OR = {
+					is_controlled_by = ROOT
+					is_owned_by = ROOT 
+				}
+			}
+			680 = {
+				OR = {
+					is_controlled_by = ROOT
+					is_owned_by = ROOT 
+				}
+			}
+			454 = {
+				OR = {
+					is_controlled_by = ROOT
+					is_owned_by = ROOT 
+				}
+			}
+			455 = {
+				OR = {
+					is_controlled_by = ROOT
+					is_owned_by = ROOT 
+				}
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_TREATYOFSAADABAD }
@@ -7500,7 +7537,7 @@ focus_tree = {
 		id = IRQ_deal_for_south_levant
 		x = -2
 		y = 1
-		icon = GFX_focus_icon_name
+		icon = GFX_goal_tripartite_pact
 		prerequisite = { focus = IRQ_partition_of_syria }
 		mutually_exclusive = { focus = IRQ_deal_for_south_levant focus = IRQ_liberate_south_levant }
 		relative_position_id = IRQ_partition_of_syria
@@ -7514,6 +7551,32 @@ focus_tree = {
 			}
 		}
 	
+		bypass = {
+			554 = {
+				OR = {
+					is_controlled_by = ROOT
+					is_owned_by = ROOT 
+				}
+			}
+			680 = {
+				OR = {
+					is_controlled_by = ROOT
+					is_owned_by = ROOT 
+				}
+			}
+			454 = {
+				OR = {
+					is_controlled_by = ROOT
+					is_owned_by = ROOT 
+				}
+			}
+			455 = {
+				OR = {
+					is_controlled_by = ROOT
+					is_owned_by = ROOT 
+				}
+			}
+		}
 	
 		completion_reward = { 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -7614,28 +7677,28 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			custom_effect_tooltip = IRQ_african_arab_revolt_tt
 		}
 	}
 
 	focus = {
-		id = IRQ_integrate_north_africa
-		# icon = 
-		prerequisite = { focus = IRQ_african_arab_revolt }
-		x = 0
-		y = 1
-		relative_position_id = IRQ_african_arab_revolt
+		id = IRQ_integrate_arabian_puppet_states
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = IRQ_rally_the_arab_world }
+		x = -1
+		y = 2
+		relative_position_id = IRQ_rally_the_arab_world
 
 		cost = 10
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 	}
 
 	focus = {
-		id = IRQ_proclaim_arabian_federation
+		id = IRQ_open_form_arabia
 		icon = GFX_focus_IRQ_proclaim_united_arab_republic
-		prerequisite = { focus = IRQ_liberate_north_africa focus = IRQ_integrate_north_africa }
+		prerequisite = { focus = IRQ_liberate_north_africa focus = IRQ_african_arab_revolt }
 		x = 2
-		y = 2
+		y = 1
 		relative_position_id = IRQ_liberate_north_africa
 
 		cost = 8
@@ -7664,9 +7727,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			hidden_effect = { drop_cosmetic_tag = yes }
-			set_cosmetic_tag = IRQ_united_arab_republic	
-			custom_effect_tooltip = IRQ_arab_republic_core_tt		
+			custom_effect_tooltip = IRQ_arabia_tt		
 		}
 	}
 	focus = {
@@ -7700,6 +7761,8 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_political_power = 120
+			add_war_support = 0.10
 			every_state = {
 				limit = {
 					NOT = { is_owned_by = ROOT }
@@ -7730,14 +7793,14 @@ focus_tree = {
 	}
 
 	focus = {
-		id = IRQ_proclaim_greater_mesopotamia
+		id = IRQ_unlock_form_mesopotamia
 		icon = GFX_focus_IRQ_proclaim_greater_mesopotamia
 		prerequisite = { focus = IRQ_liberate_south_levant focus = IRQ_deal_for_south_levant }
 		x = 2
 		y = 1
 		relative_position_id = IRQ_deal_for_south_levant
 
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			base = 1
@@ -7745,7 +7808,10 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			has_government = fascism
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
 		}
 
 		bypass = {
@@ -7759,8 +7825,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			set_cosmetic_tag = IRQ_greater_mesopotamia
-			custom_effect_tooltip = IRQ_proclaim_greater_mesopotamia_tt		
+			custom_effect_tooltip = IRQ_mesopotamia_tt
 		}
 	}
 
@@ -9690,7 +9755,7 @@ focus = {
     id = IRQ_more_finance_for_toyota
     x = 0
     y = 1
-    icon = GFX_focus_ARG_join_the_allies
+    icon = GFX_focus_generic_truck
 	prerequisite = { focus = IRQ_open_toyota_organization }
 	relative_position_id = IRQ_open_toyota_organization
 
