@@ -43,7 +43,7 @@ joint_focus = {
 
 	offset = {
 		y = 0
-		x = 70
+		x = 68
 		trigger = {
 			tag = PER
 		}

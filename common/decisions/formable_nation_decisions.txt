@@ -8528,7 +8528,6 @@ form_byzantine_empire_category = {
 			set_cosmetic_tag = BYZ_UNIFIED
 			set_capital = { state = 341 }
 			341 = { add_core_of = ROOT }
-			hidden_effect = { 341 = { set_state_name = "Constantinople" } }
 			set_province_name = { id = 9833 name = "Constantinople" }
 			82 = { add_core_of = ROOT }
 			81 = { add_core_of = ROOT }
