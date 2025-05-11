@@ -95,16 +95,16 @@ country_event = {
 	desc = ask_reunification_of_yemen.1.desc
 	
 	trigger = {
-		tag = SAU
 		IRQ = { 
 			is_subject = no
-			has_government = fascism
 		}
 		SAU = {
 			is_subject = yes
-			has_government = fascism
 		}
-		has_completed_focus = ask_reunification_of_yemen
+		has_completed_focus = IRQ_ask_for_the_reunification_of_yemen
+	}
+	mean_time_to_happen = {
+		days = 2
 	}
 
 	is_triggered_only = yes
@@ -112,9 +112,9 @@ country_event = {
 
 	option = {
 		name = ask_reunification_of_yemen.1.a ## БРИТАНІЯ ЗА ВОЗ'ЄДННЯННЯ ЄМЕНУ
-		ai_chance = { ## YES
-            base = 40
-		}
+		# ai_chance = { ## YES
+        #     base = 90
+		# }
 		set_global_flag = yem_reunification
 
 		1016 = { transfer_state_to = YEM } ### ПО МОЖЛИВОСТІ SAU ПОМІНЯТИ НА FROM/ROOT/PREV ( НЕ ШАРЮ ЧЕСНО ЧИ МОЖНА )
@@ -123,18 +123,18 @@ country_event = {
 		
 		add_named_threat = { threat = 2 name = reunification_yemen }
 	}
-	option = {
-		name = ask_reunification_of_yemen.1.b ## БРИТАНІЯ ПРОТИ ВОЗ'ЄДННЯННЯ ЄМЕНУ
-		ai_chance = {
-            base = 60
-		}
-            FROM = { # FROM тут посилається на країну, для якої спрацював цей івент
-                create_wargoal = {
-                    type = annex_everything
-                    target = YEM
-                }
-            }
-	}
+	# option = {
+	# 	name = ask_reunification_of_yemen.1.b ## БРИТАНІЯ ПРОТИ ВОЗ'ЄДННЯННЯ ЄМЕНУ
+	# 	ai_chance = {
+    #         base = 10
+	# 	}
+    #         FROM = { # FROM тут посилається на країну, для якої спрацював цей івент
+    #             create_wargoal = {
+    #                 type = annex_everything
+    #                 target = YEM
+    #             }
+    #         }
+	# }
 	
 }
 
@@ -154,7 +154,7 @@ country_event = { ## REFERENDUM ЄМЕНА ЗА ПРИЄДНАННЯ ДО АРА
 	}
 
 	mean_time_to_happen = {
-		days = 70 # для тесту поставити на 4-10 днів
+		days = 4 # для тесту поставити на 4-10 днів
 	}
 
     option = {
@@ -168,6 +168,7 @@ country_event = { ## REFERENDUM ЄМЕНА ЗА ПРИЄДНАННЯ ДО АРА
 		1016 = { transfer_state_to = SAU }
 		remove_global_flag = yem_reunification
     # } 293 992 659  1016
+}
 }
     option = {
         name = YEM_reunification.2b

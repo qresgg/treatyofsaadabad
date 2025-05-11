@@ -6639,7 +6639,7 @@ focus_tree = {
 	
 			custom_effect_tooltip = generic_skip_one_line_tt
 	
-			add_war_support = 0.10
+			add_war_support = 0.05
 	
 			add_popularity = {
 				ideology = fascism
@@ -7446,9 +7446,13 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		relative_position_id = IRQ_raising_arabian_peninsula
 		prerequisite = { focus = IRQ_raising_arabian_peninsula }
+		cost = 5
 		x = 0
 		y = 1
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL FOCUS_FILTER_TREATYOFSAADABAD }
+		completion_reward = {
+			custom_effect_tooltip = IRQ_ask_eng_for_unite_yemen_tt
+		}	
 	}
 
 
@@ -7620,9 +7624,8 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 		completion_reward = {
-			effect = {
-				add_war_support = 0.10
-			}
+			add_political_power = 120
+			add_war_support = 0.10
 			every_state = {
 				limit = {
 					NOT = { is_owned_by = ROOT }
@@ -7686,6 +7689,10 @@ focus_tree = {
 
 		cost = 10
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+
+		completion_reward = {
+			custom_effect_tooltip = IRQ_integrate_arabian_puppet_states_tt
+		}
 	}
 
 	focus = {
@@ -7746,6 +7753,29 @@ focus_tree = {
 		}
 
 		bypass = {
+			OR = {
+				has_war_with = ENG
+				has_war_with = FRA
+				has_war_with = ITA
+				458 = {
+					OR = {
+						is_controlled_by = ROOT
+						is_owned_by = ROOT 
+					}
+				}
+				461 = {
+					OR = {
+						is_controlled_by = ROOT
+						is_owned_by = ROOT 
+					}
+				}
+				448 = {
+					OR = {
+						is_controlled_by = ROOT
+						is_owned_by = ROOT 
+					}
+				}
+			}
 
 		}
 
@@ -7756,8 +7786,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_political_power = 120
-			add_war_support = 0.10
 			every_state = {
 				limit = {
 					NOT = { is_owned_by = ROOT }

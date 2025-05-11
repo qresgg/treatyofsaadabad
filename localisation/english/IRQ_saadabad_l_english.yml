@@ -90,7 +90,8 @@
   IRQ_arabia_tt: "Unlock §YArabia§! decisions. To gain all cores on every arabian state in §YThe Mediterranean Sea§!"
   IRQ_african_arab_revolt_tt: "Unlock decisions to make revolution in §YNorth Africa§! regions"
   IRQ_toyota_finance_organization_tt: "Your nation is allocating more funds to "§YToyota Motor Corporation§!", allowing the company to import foreign parts. As a result, your vehicles will become tougher, more reliable, and faster."
-
+  IRQ_ask_eng_for_unite_yemen_tt: "Unlock decision to ask §Y[ENG.GetNameWithFlag]§! for the unification of §Y[YEM.GetNameWithFlag]§!"
+  IRQ_integrate_arabian_puppet_states_tt: "Unlock decisions to integrate all §YArabian Puppet States.§!"
 
   IRQ_toyota_organization_tt: "You will gain access to "§YToyota Motor Corporation§!" as an industrial concern. This company provides some valuable bonuses."
   IRQ_proclaim_arab_fed_mor_tt: "Controlls all §YMorroco§! regions"

@@ -49,6 +49,25 @@ political_actions = {
 		visible = {
 			has_completed_focus = IRQ_ask_tur_for_the_southern_kurds
 		}
+		fire_only_once = yes 
+		complete_effect = {
+			TUR = { country_event = { id = IRQ_kurd_demands.1 } }
+		}
+	}
+
+	IRQ_ask_reunification_yemen = {
+		icon = generic_prepare_civil_war
+		priority = -1
+		allowed = {
+			original_tag = IRQ
+		}
+		visible = {
+			has_completed_focus = IRQ_ask_for_the_reunification_of_yemen
+		}
+		fire_only_once = no
+		complete_effect = {
+			ENG = { country_event = { id = ask_reunification_of_yemen.1 } }
+		}
 	}
 }
 

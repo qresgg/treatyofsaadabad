@@ -7225,6 +7225,446 @@ form_persian_empire_category = {
 	}
 }
 
+form_sasanidian_empire_category = {
+	form_sasanidian_empire = {
+		icon = generic_form_nation
+		visible = {
+			OR = {
+				original_tag = PER
+			}
+		}
+		allowed = {
+			OR = {
+				original_tag = PER
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 419
+				state = 1000
+				state = 420
+				state = 1001
+				state = 421
+				state = 413
+				state = 417
+				state = 266
+				state = 418
+				state = 1004
+				state = 416
+				state = 1003
+				state = 411
+				state = 412
+				state = 1002
+				state = 414
+				state = 410
+				state = 765
+				state = 1014
+				state = 658
+				state = 1013
+				state = 1015
+				state = 294
+			}
+		}
+	}
+	integrate
+}
+
+form_neo_byzantine_empire_category = {
+	neobyz_restore_byzantium = {
+		icon = generic_form_nation
+		visible = {
+			OR = {
+				original_tag = TUR
+				original_tag = BUL
+			}
+		}
+		allowed = {
+			OR = {
+				original_tag = TUR
+				original_tag = BUL
+			}
+		}
+		available = {
+			is_subject = no
+			## TUR
+			custom_trigger_tooltip = {
+				tooltip = form_country_turkey_required_states_tt
+				controls_state = 341
+				controls_state = 797
+				controls_state = 347
+				controls_state = 340
+				controls_state = 339
+				controls_state = 342
+				controls_state = 343
+				controls_state = 49
+				controls_state = 345
+				controls_state = 346
+				controls_state = 356
+				controls_state = 355
+				controls_state = 798
+				controls_state = 344
+				controls_state = 348
+				controls_state = 349
+				controls_state = 353
+				controls_state = 354
+				controls_state = 800
+				controls_state = 799
+			}
+			
+			## GRE
+			custom_trigger_tooltip = {
+				tooltip = form_country_greece_required_states_tt
+				controls_state = 184
+				controls_state = 731
+				controls_state = 185
+				controls_state = 47
+				controls_state = 186
+				controls_state = 182
+				controls_state = 187
+			}
+		}
+		highlight_states = { 
+			highlight_state_targets = {
+				## TUR
+				state = 341
+				state = 797
+				state = 347
+				state = 340
+				state = 339
+				state = 342
+				state = 343
+				state = 49
+				state = 345
+				state = 346
+				state = 356
+				state = 355
+				state = 798
+				state = 344
+				state = 348
+				state = 349
+				state = 353
+				state = 354
+				state = 800
+				state = 799
+
+				## GRE
+				state = 184
+				state = 731
+				state = 185
+				state = 47
+				state = 186
+				state = 182
+				state = 187
+			}
+		}
+	}
+
+	neobyz_expand_for_cypryotes = {
+		icon = generic_form_nation
+		allowed = {
+			OR = {
+				original_tag = TUR
+				original_tag = BUL
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				## NORTH LEVANT
+				state = 677
+				state = 553
+
+				state = 183 ## CYPRUS
+				state = 182 ## CRETE
+				state = 164 ## DODECANESE
+			}
+		}
+	}
+	neobyz_triumph_for_the_balkans = {
+		icon = generic_form_nation
+		allowed = {
+			OR = {
+				original_tag = TUR
+				original_tag = BUL
+			}
+		}
+		available = {
+			is_subject = no
+			## ALBANIA
+			
+		}
+		highlight_states = { 
+			highlight_state_targets = {
+				## ALBANIA
+				state = 44
+				state = 805
+				state = 934
+
+				## YUGOSLAVIA
+				state = 970
+				state = 106
+				state = 803
+				state = 802
+				state = 105
+				state = 108
+				state = 107
+				state = 104
+				state = 804
+				state = 103
+				state = 764
+				state = 45
+				state = 109
+				state = 103
+				state = 853
+				state = 102
+
+				## BULGARIA
+				state = 211
+				state = 212
+				state = 48
+				state = 801
+				state = 81
+				state = 46
+				state = 77
+				state = 971
+				state = 82
+
+				## ITALY
+				state = 163
+				state = 852
+				state = 736
+			}
+		}
+	}
+	neobyz_triumph_for_south_italy = {
+		icon = generic_form_nation
+		allowed = {
+			OR = {
+				original_tag = TUR
+				original_tag = BUL
+			}
+		}
+		available = {
+			is_subject = no
+		}
+		highlight_states ={
+			highlight_state_targets = {
+				## ITALY
+				state = 156
+				state = 117
+				state = 849
+				state = 2
+			}
+		}
+	}
+	neobyz_triumph_for_north_italy = {
+		icon = generic_form_nation
+		allowed = {
+			OR = {
+				original_tag = TUR
+				original_tag = BUL
+			}
+		}
+		available = {
+			is_subject = no
+		}
+		highlight_states ={
+			highlight_state_targets = {
+				## ITALY
+				state = 157
+				state = 162
+				state = 161
+				state = 160
+				state = 39
+				state = 850
+				state = 159
+			}
+		}
+	}
+	neobyz_triumph_for_piemont_occitania = {
+		icon = generic_form_nation
+		allowed = {
+			OR = {
+				original_tag = TUR
+				original_tag = BUL
+			}
+		}
+		available = {
+			is_subject = no
+		}
+		highlight_states ={
+			highlight_state_targets = {
+				## PIEMONT (ITALY)
+				state = 158
+				state = 735
+
+				## OCCITANIA (FRANCE)
+				state = 851
+				state = 21
+				state = 22
+				state = 31
+				state = 25
+				state = 26
+				state = 20
+				state = 32
+				state = 19
+			}
+		}
+	}
+	neobyz_triumph_for_spain = {
+		icon = generic_form_nation
+		allowed = {
+			OR = {
+				original_tag = TUR
+				original_tag = BUL
+			}
+		}
+		available = {
+			is_subject = no
+		}
+		highlight_states ={
+			highlight_state_targets = {
+				## SPAIN
+				state = 165
+				state = 794
+				state = 167
+				state = 168
+				state = 173
+				state = 789
+				state = 175
+				state = 793
+				state = 166
+				state = 172
+				state = 792
+				state = 176
+				state = 41
+				state = 791
+				state = 118
+				state = 806
+			}
+		}
+	}
+	neobyz_triumph_for_portugal = {
+		icon = generic_form_nation
+		allowed = {
+			OR = {
+				original_tag = TUR
+				original_tag = BUL
+			}
+		}
+		available = {
+			is_subject = no
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 169
+				state = 179
+				state = 170
+				state = 795
+				state = 112
+				state = 181
+				state = 788
+				state = 790
+				state = 171
+				state = 174
+				state = 180
+			}
+		}
+	}
+	neobyz_triumph_for_islands = {
+		icon = generic_form_nation
+		allowed = {
+			OR = {
+				original_tag = TUR
+				original_tag = BUL
+			}
+		}
+		available = {
+			is_subject = no
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 177
+				state = 114
+				state = 1
+				state = 116
+				state = 115
+			}
+		}
+	}
+	neobyz_triumph_for_west_black_sea = {
+		icon = generic_form_nation
+		allowed = {
+			OR = {
+				original_tag = TUR
+				original_tag = BUL
+			}
+		}
+		available = {
+			is_subject = no
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				## ROMANIA
+				state = 83
+				state = 84
+				state = 79
+				state = 766
+				state = 76
+				state = 78
+				state = 154 ## HUN
+				state = 73 ## CZE
+
+				## UKRAINE
+				state = 80
+				state = 89 
+				state = 91 
+				state = 199
+				state = 198
+				state = 834
+				state = 192
+				state = 203
+				state = 197
+			}
+		}
+	}
+	neobyz_triumph_for_east_black_sea = {
+		icon = generic_form_nation
+		allowed = {
+			OR = {
+				original_tag = TUR
+				original_tag = BUL
+			}
+		}
+		available = {
+			is_subject = no
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				## UKRAINE
+				state = 226
+				state = 196
+				state = 200
+				state = 227
+				state = 137
+				state = 218
+				
+				## ru
+				state = 234
+				state = 233
+				state = 238
+				state = 235
+				state = 827
+				state = 828
+
+				## GEORGIA
+				state = 826
+				state = 231
+				state = 230 ## ARMENIA 
+			}
+		}
+	}
+}
+
 form_byzantine_empire_category = {
 
 	form_byzantine_empire = {
@@ -7232,9 +7672,9 @@ form_byzantine_empire_category = {
 		icon = generic_form_nation
 
 		allowed = {
-			original_tag = GRE
-			has_dlc = "Waking the Tiger"
-			NOT = { has_dlc = "Battle for the Bosporus" }
+			OR = {
+				original_tag = GRE
+			}
 		}
 
 		available = {
@@ -7420,8 +7860,9 @@ form_byzantine_empire_category = {
 		icon = generic_form_nation
 
 		allowed = {
-			original_tag = GRE
-			has_dlc = "Battle for the Bosporus"
+			OR = {
+				original_tag = GRE
+			}
 		}
 
 		available = {
@@ -7457,10 +7898,10 @@ form_byzantine_empire_category = {
 				controls_state = 344
 				controls_state = 355
 				controls_state = 349
-				controls_state = 350
+				# controls_state = 350
 				controls_state = 354
 				controls_state = 353
-				controls_state = 352
+				# controls_state = 352
 				controls_state = 800
 			}
 		}
@@ -8024,13 +8465,16 @@ form_arabia_category = {
 				# Imamate of Oman
 				original_tag = IMO
 				# TEST SUBJECT
-				SAU = { is_subject = no }
 			}
 			NOT = { has_global_flag = form_arabia_flag }
             OR = {
                 NOT = { original_tag = IRQ }
                 has_completed_focus = IRQ_open_form_arabia
             }
+			OR = {
+				NOT = { original_tag = SAU }
+				is_subject = no
+			}
 		}
 
 		highlight_states = { 
@@ -8593,6 +9037,39 @@ form_arabia_category = {
 		ai_will_do = {
 			base = 200
 		}
+	}
+	integrate_bilad_al_sahra = {
+		icon = GFX_decision_generic_nationalism
+
+		fire_only_once = yes
+
+		on_map_mode = decision_view_only
+
+		highlight_states = { 
+			highlight_state_targets = {
+				state = 786
+				state = 782
+				state = 515
+				state = 775
+			}
+		}
+		visible = {
+			has_global_flag = form_arabia_flag
+			has_country_flag = is_arabia_flag
+		}
+		available = {
+			controls_state = 786
+			controls_state = 782
+			controls_state = 515
+			controls_state = 775
+		}
+		complete_effect = {
+			786 = { add_core_of = ROOT }
+			782 = { add_core_of = ROOT }
+			515 = { add_core_of = ROOT }
+			775 = { add_core_of = ROOT }
+		}
+
 	}
 }
 

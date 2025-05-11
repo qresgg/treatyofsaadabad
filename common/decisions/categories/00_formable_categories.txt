@@ -204,6 +204,37 @@ form_byzantine_empire_category = {
 	}
 }
 
+form_neo_byzantine_empire_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_byzantine_empire
+
+	priority = 20
+
+	allowed = {
+		OR = {
+			original_tag = TUR
+			original_tag = BUL
+		}
+	}
+}
+
+form_sasanidian_empire_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_persian_empire
+
+	priority = 20
+
+	allowed = {
+		OR = {
+			original_tag = PER
+		}
+	}
+}
+
 form_arabia_category = {
 
 	icon = generic_formable_nations
