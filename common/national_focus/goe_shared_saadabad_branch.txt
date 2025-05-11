@@ -630,7 +630,7 @@ joint_focus = {
 
 	joint_trigger = { SSB_basic_available_trigger = yes }
 
-	search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_INDUSTRY }
+	search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_INDUSTRY FOCUS_FILTER_TREATYOFSAADABAD}
 
 	completion_reward = {
 		custom_effect_tooltip = SSB_spirit_tooltip
@@ -671,7 +671,7 @@ joint_focus = {
 
 	joint_trigger = { SSB_basic_available_trigger = yes }
 
-	search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_INDUSTRY }
+	search_filters = { FOCUS_FILTER_TREATYOFSAADABAD FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_INDUSTRY }
 
 	completion_reward = {
 		custom_effect_tooltip = SSB_spirit_tooltip

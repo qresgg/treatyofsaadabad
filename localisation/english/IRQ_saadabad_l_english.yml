@@ -55,6 +55,51 @@
   IRQ_more_finance_for_toyota_desc: "Toyota is a reliable company, but it needs more funding to expand its production. Investing in this company will ensure that your army's logistics run smoothly."
 
   IRQ_training_iraqi_army_1: "Mobilisation Iraqi Army"
+  SSB_saadabad_civilian_reintegration: "Civilian Reintegration of Saadabad"
+  SSB_saadabad_civilian_reintegration_desc: "The Saadabad region requires coordinated efforts to reintegrate civilian infrastructure and administration. A strong civil sector will support long-term stability."
+
+  SSB_construction_of_the_saadabad: "Construction of the Saadabad"
+  SSB_construction_of_the_saadabad_desc: "With regional support, we will begin the ambitious project of constructing Saadabad as a symbol of unity and modern development."
+
+  IRQ_kuwait_ultimatum: "Ultimatum to Kuwait"
+  IRQ_kuwait_ultimatum_desc: "With enough support from our allies and internal strength, we can issue an ultimatum to Kuwait. They must submit to our influence—or face the consequences."
+  IRQ_ask_tur_for_the_southern_kurds: "Demand the Southern Kurds from Turkey"
+  IRQ_ask_tur_for_the_southern_kurds_desc: "The Kurdish lands in the south remain under Turkish rule, but their rightful place is within our borders. A formal request—perhaps backed by pressure—may convince Ankara to cede them."
+  IRQ_open_form_arabia: "Proclaim the Arab Empire"
+  IRQ_open_form_arabia_desc: "With the Arab world united under our leadership and vast lands liberated, the time has come to restore the legacy of past empires. We shall proclaim a new Arab Empire from Baghdad to Casablanca."
+  IRQ_ask_for_the_reunification_of_yemen: "Call for the Reunification of Yemen"
+  IRQ_ask_for_the_reunification_of_yemen_desc: "The division of Yemen weakens the Arabian Peninsula. We must call upon our allies and influence to pressure for a reunification—restoring strength and unity to the region."
+  IRQ_establish_reichsprotectorate: "Establish the Reichsprotectorate of the Middle East"
+  IRQ_establish_reichsprotectorate_desc: "To secure our future and modernize rapidly, we shall align ourselves directly under German protection. As a Reichsprotectorate, we gain access to resources, technology, and military support—at the cost of our sovereignty."
+  IRQ_global_resource_expansion: "Global Resource Expansion"
+  IRQ_global_resource_expansion_desc: "With parts of the region under our control, we can now direct investments toward tapping into its full resource potential."
+
+  IRQ_found_kuwait_oil: "Drill Kuwaiti Oil"
+  IRQ_found_kuwait_oil_desc: "Kuwait's oil fields are among the richest in the world. It's time we exploit them to fuel our economy and industry."
+
+  IRQ_expand_saudi_arabian_oil: "Expand Saudi Oil Extraction"
+  IRQ_expand_saudi_arabian_oil_desc: "The lands of Arabia hold vast oil reserves. We will expand operations in the region to secure long-term energy independence."
+
+  IRQ_found_jordan_steel: "Develop Jordanian Steel"
+  IRQ_found_jordan_steel_desc: "Jordan's mineral wealth can support a burgeoning steel industry. Establishing facilities here will enhance our industrial output."
+
+  IRQ_dammam_tungsten_miners: "Mine Tungsten in Dammam"
+  IRQ_dammam_tungsten_miners_desc: "Tungsten is a strategic resource essential for high-grade weaponry. Mining operations in Dammam will boost our military capabilities."
+
+  IRQ_open_south_levant_university: "Open the South Levant University"
+  IRQ_open_south_levant_university_desc: "To foster a new generation of intellectuals and engineers, we will establish a prestigious university in the southern Levant. This institution will serve as a beacon of progress and regional cooperation."
+
+  IRQ_air_protection: "Air Defense"
+  IRQ_air_protection_desc: "This focus strengthens our defense against air attacks by constructing new anti-air buildings and improving our ability to counter aerial threats."
+  IRQ_grand_excavations: "Grand Excavations"
+  IRQ_grand_excavations_desc: "This focus focuses on expanding our industrial capabilities by excavating resources for the construction of new weaponry and military equipment. It is part of a larger strategy to enhance our military production."
+
+  IRQ_saadabad_alliance: "Saadabad Alliance"
+  IRQ_saadabad_alliance_desc: "This focus aims to solidify our alliance with neighboring powers in the region—Turkey, Iran, and Afghanistan—through mutual cooperation and strategic political relations. By forming the Saadabad Alliance, we strengthen our geopolitical position."
+
+  SSB_found_saadabad_university: "Found Saadabad University"
+  SSB_found_saadabad_university_desc: "This joint focus aims to establish the Saadabad University as a hub of scientific research and technological development, enhancing our regional cooperation in education and innovation. By founding this institution, we lay the foundation for the future of research and collaboration."
+
 
 
   # Event Titles and Descriptions
