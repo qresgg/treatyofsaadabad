@@ -220,6 +220,22 @@ form_neo_byzantine_empire_category = {
 	}
 }
 
+form_kashuan_empire_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_persian_empire
+
+	priority = 20
+
+	allowed = {
+		OR = {
+			original_tag = AFG
+			original_tag = PAK
+		}
+	}
+}
+
 form_sasanidian_empire_category = {
 
 	icon = generic_formable_nations
