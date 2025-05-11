@@ -66,7 +66,7 @@ political_actions = {
 		}
 		fire_only_once = no
 		complete_effect = {
-			ENG = { country_event = { id = ask_reunification_of_yemen.1 } }
+			ENG = { country_event = { id = ask_reunification_of_yemen.1 hours = 12 } }
 		}
 	}
 }
