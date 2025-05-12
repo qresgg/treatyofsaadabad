@@ -287,9 +287,83 @@ IRQ_african_arab_revolt_cat = {
 			if = {
 				limit = { FROM = { state = 907 } } 
 				hidden_effect = {
-					ENG = { release = EGY } 
+					ENG = { 
+						release = EGY
+					} 
 					EGY = {
+						add_equipment_to_stockpile = {
+							type = infantry_equipment_1
+							amount = 15000
+						}
+						add_equipment_to_stockpile = {
+							type = artillery_equipment_1
+							amount = 1000
+						}
+						add_equipment_to_stockpile = {
+							type = support_equipment_1
+							amount = 6000
+						}
 						add_ideas = IRQ_raising_iraqi_fascists
+						declare_war_on = {
+							target = ENG
+							type = annex_everything
+						}
+						division_template = {
+							name = "Egypt National Army"		
+							is_locked = no
+							template_counter = 2
+							regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 1 y = 0 }
+								infantry = { x = 1 y = 1 }
+								infantry = { x = 1 y = 2 }
+							}
+						
+							support = {
+								engineer = { x = 0 y = 0 }
+								artillery = { x = 0 y = 1 }
+							}
+							#division_cap = 0
+							override_model = PER_militia_alt_1_entity
+						}
+
+						random_owned_state = {
+							prioritize = { 907 } 
+							create_unit = {
+								division = "name = \"1st Egypt National Army\" division_template = \"Egypt National Army\" start_experience_factor = 1.0 start_equipment_factor = 1"
+								owner = EGY
+							}
+							create_unit = {
+								division = "name = \"2nd Egypt National Army\" division_template = \"Egypt National Army\" start_experience_factor = 1.0 start_equipment_factor = 1"
+								owner = EGY
+							}
+							create_unit = {
+								division = "name = \"2nd Egypt National Army\" division_template = \"Egypt National Army\" start_experience_factor = 1.0 start_equipment_factor = 1"
+								owner = EGY
+							}
+							create_unit = {
+								division = "name = \"2nd Egypt National Army\" division_template = \"Egypt National Army\" start_experience_factor = 1.0 start_equipment_factor = 1"
+								owner = EGY
+							}
+							create_unit = {
+								division = "name = \"2nd Egypt National Army\" division_template = \"Egypt National Army\" start_experience_factor = 1.0 start_equipment_factor = 1"
+								owner = EGY
+							}
+							create_unit = {
+								division = "name = \"2nd Egypt National Army\" division_template = \"Egypt National Army\" start_experience_factor = 1.0 start_equipment_factor = 1"
+								owner = EGY
+							}
+							create_unit = {
+								division = "name = \"2nd Egypt National Army\" division_template = \"Egypt National Army\" start_experience_factor = 1.0 start_equipment_factor = 1"
+								owner = EGY
+							}
+							create_unit = {
+								division = "name = \"2nd Egypt National Army\" division_template = \"Egypt National Army\" start_experience_factor = 1.0 start_equipment_factor = 1"
+								owner = EGY
+							}
+						}
 					}
 				}
 			}
@@ -298,7 +372,67 @@ IRQ_african_arab_revolt_cat = {
 				hidden_effect = {
 					ITA = { release = LBA }
 					LBA = {
+						add_equipment_to_stockpile = {
+							type = infantry_equipment_1
+							amount = 15000
+						}
+						add_equipment_to_stockpile = {
+							type = artillery_equipment_1
+							amount = 1000
+						}
+						add_equipment_to_stockpile = {
+							type = support_equipment_1
+							amount = 6000
+						}
 						add_ideas = IRQ_raising_iraqi_fascists
+						declare_war_on = {
+							target = ENG
+							type = annex_everything
+						}
+						division_template = {
+							name = "Lybia National Army"		
+							is_locked = no
+							template_counter = 2
+							regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 1 y = 0 }
+								infantry = { x = 1 y = 1 }
+								infantry = { x = 1 y = 2 }
+							}
+						
+							support = {
+								engineer = { x = 0 y = 0 }
+								artillery = { x = 0 y = 1 }
+							}
+							#division_cap = 0
+							override_model = LBA_militia_alt_1_entity
+						}
+
+						random_owned_state = {
+							prioritize = { 448 } 
+							create_unit = {
+								division = "name = \"1st Lybia National Army\" division_template = \"Lybia National Army\" start_experience_factor = 1.0 start_equipment_factor = 1"
+								owner = LBA
+							}
+							create_unit = {
+								division = "name = \"1st Lybia National Army\" division_template = \"Lybia National Army\" start_experience_factor = 1.0 start_equipment_factor = 1"
+								owner = LBA
+							}
+							create_unit = {
+								division = "name = \"1st Lybia National Army\" division_template = \"Lybia National Army\" start_experience_factor = 1.0 start_equipment_factor = 1"
+								owner = LBA
+							}
+							create_unit = {
+								division = "name = \"1st Lybia National Army\" division_template = \"Lybia National Army\" start_experience_factor = 1.0 start_equipment_factor = 1"
+								owner = LBA
+							}
+							create_unit = {
+								division = "name = \"1st Lybia National Army\" division_template = \"Lybia National Army\" start_experience_factor = 1.0 start_equipment_factor = 1"
+								owner = LBA
+							}
+						}
 					}
 				}
 			}
@@ -307,7 +441,67 @@ IRQ_african_arab_revolt_cat = {
 				hidden_effect = {
 					FRA = { release = ALG }
 					ALG = {
+						add_equipment_to_stockpile = {
+							type = infantry_equipment_1
+							amount = 15000
+						}
+						add_equipment_to_stockpile = {
+							type = artillery_equipment_1
+							amount = 1000
+						}
+						add_equipment_to_stockpile = {
+							type = support_equipment_1
+							amount = 6000
+						}
 						add_ideas = IRQ_raising_iraqi_fascists
+						declare_war_on = {
+							target = ENG
+							type = annex_everything
+						}
+						division_template = {
+							name = "Algerian National Army"		
+							is_locked = no
+							template_counter = 2
+							regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 1 y = 0 }
+								infantry = { x = 1 y = 1 }
+								infantry = { x = 1 y = 2 }
+							}
+						
+							support = {
+								engineer = { x = 0 y = 0 }
+								artillery = { x = 0 y = 1 }
+							}
+							#division_cap = 0
+							override_model = ALG_militia_alt_1_entity
+						}
+
+						random_owned_state = {
+							prioritize = { 459 } 
+							create_unit = {
+								division = "name = \"1st Algerian National Army\" division_template = \"Algerian National Army\" start_experience_factor = 1.0 start_equipment_factor = 1"
+								owner = ALG
+							}
+							create_unit = {
+								division = "name = \"1st Algerian National Army\" division_template = \"Algerian National Army\" start_experience_factor = 1.0 start_equipment_factor = 1"
+								owner = ALG
+							}
+							create_unit = {
+								division = "name = \"1st Algerian National Army\" division_template = \"Algerian National Army\" start_experience_factor = 1.0 start_equipment_factor = 1"
+								owner = ALG
+							}
+							create_unit = {
+								division = "name = \"1st Algerian National Army\" division_template = \"Algerian National Army\" start_experience_factor = 1.0 start_equipment_factor = 1"
+								owner = ALG
+							}
+							create_unit = {
+								division = "name = \"1st Algerian National Army\" division_template = \"Algerian National Army\" start_experience_factor = 1.0 start_equipment_factor = 1"
+								owner = ALG
+							}
+						}
 					}
 				}
 			}
@@ -316,7 +510,59 @@ IRQ_african_arab_revolt_cat = {
 				hidden_effect = {
 					FRA = { release = TUN }
 					TUN = {
+						add_equipment_to_stockpile = {
+							type = infantry_equipment_1
+							amount = 15000
+						}
+						add_equipment_to_stockpile = {
+							type = artillery_equipment_1
+							amount = 1000
+						}
+						add_equipment_to_stockpile = {
+							type = support_equipment_1
+							amount = 6000
+						}
 						add_ideas = IRQ_raising_iraqi_fascists
+						declare_war_on = {
+							target = ENG
+							type = annex_everything
+						}
+						division_template = {
+							name = "Tunisian National Army"		
+							is_locked = no
+							template_counter = 2
+							regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 1 y = 0 }
+								infantry = { x = 1 y = 1 }
+								infantry = { x = 1 y = 2 }
+							}
+						
+							support = {
+								engineer = { x = 0 y = 0 }
+								artillery = { x = 0 y = 1 }
+							}
+							#division_cap = 0
+							override_model = TUN_militia_alt_1_entity
+						}
+
+						random_owned_state = {
+							prioritize = { 458 } 
+							create_unit = {
+								division = "name = \"1st Tunisian National Army\" division_template = \"Tunisian National Army\" start_experience_factor = 1.0 start_equipment_factor = 1"
+								owner = TUN
+							}
+							create_unit = {
+								division = "name = \"1st Tunisian National Army\" division_template = \"Tunisian National Army\" start_experience_factor = 1.0 start_equipment_factor = 1"
+								owner = TUN
+							}
+							create_unit = {
+								division = "name = \"1st Tunisian National Army\" division_template = \"Tunisian National Army\" start_experience_factor = 1.0 start_equipment_factor = 1"
+								owner = TUN
+							}
+						}
 					}
 				}
 			}
@@ -327,7 +573,67 @@ IRQ_african_arab_revolt_cat = {
 					SPA = { release = MOR }
 					SPR = { release = MOR }
 					MOR = {
+						add_equipment_to_stockpile = {
+							type = infantry_equipment_1
+							amount = 15000
+						}
+						add_equipment_to_stockpile = {
+							type = artillery_equipment_1
+							amount = 1000
+						}
+						add_equipment_to_stockpile = {
+							type = support_equipment_1
+							amount = 6000
+						}
 						add_ideas = IRQ_raising_iraqi_fascists
+						declare_war_on = {
+							target = ENG
+							type = annex_everything
+						}
+						division_template = {
+							name = "Tunisian National Army"		
+							is_locked = no
+							template_counter = 2
+							regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 1 y = 0 }
+								infantry = { x = 1 y = 1 }
+								infantry = { x = 1 y = 2 }
+							}
+						
+							support = {
+								engineer = { x = 0 y = 0 }
+								artillery = { x = 0 y = 1 }
+							}
+							#division_cap = 0
+							override_model = MOR_militia_alt_1_entity
+						}
+
+						random_owned_state = {
+							prioritize = { 461 } 
+							create_unit = {
+								division = "name = \"1st Morocco National Army\" division_template = \"Morocco National Army\" start_experience_factor = 1.0 start_equipment_factor = 1"
+								owner = MOR
+							}
+							create_unit = {
+								division = "name = \"1st Morocco National Army\" division_template = \"Morocco National Army\" start_experience_factor = 1.0 start_equipment_factor = 1"
+								owner = MOR
+							}
+							create_unit = {
+								division = "name = \"1st Morocco National Army\" division_template = \"Morocco National Army\" start_experience_factor = 1.0 start_equipment_factor = 1"
+								owner = MOR
+							}
+							create_unit = {
+								division = "name = \"1st Morocco National Army\" division_template = \"Morocco National Army\" start_experience_factor = 1.0 start_equipment_factor = 1"
+								owner = MOR
+							}
+							create_unit = {
+								division = "name = \"1st Morocco National Army\" division_template = \"Morocco National Army\" start_experience_factor = 1.0 start_equipment_factor = 1"
+								owner = MOR
+							}
+						}
 					}
 				}
 			}

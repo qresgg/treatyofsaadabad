@@ -1,0 +1,39 @@
+add_namespace = SAAD_baghdad_pact_signed
+
+country_event = {
+    id = SAAD_baghdad_pact_signed.1
+    title = SAAD_baghdad_pact_signed.1t
+    desc = SAAD_baghdad_pact_signed.1d
+    picture = GFX_report_event_royal_parade ## ПОСТАВИТИ ФОТКУ ДЕ ПІДПИСУЮТЬ АКТ
+
+    mean_time_to_happen = {
+		days = 2
+	}
+    trigger = {
+        OR = {
+            original_tag = IRQ
+            original_tag = PER
+            original_tag = TUR
+            original_tag = AFG
+        }
+        has_global_flag = baghdad_pact_signed
+    }
+
+    is_triggered_only = yes
+	fire_only_once = yes
+
+	# trigger = {
+	# 	has_global_flag = baghdad_pact_signed
+	# }
+
+    option = {
+        ai_chance = { 
+            base = 100
+		}
+        name = SAAD_baghdad_pact_signed.1a
+        custom_effect_tooltip = generic_skip_one_line_tt
+        add_political_power = 50
+        add_ideas = IRQ_saadabad_spheres_of_influence
+        custom_effect_tooltip = IRQ_saadabad_spheres_of_influence_tt
+    }
+}

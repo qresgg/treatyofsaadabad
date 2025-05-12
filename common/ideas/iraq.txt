@@ -101,6 +101,11 @@ ideas = {
 			}
 			picture = IRQ_baghdad_pact
 			custom_effect_tooltip = IRQ_saadabad_spheres_of_influence_tt
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				political_power_factor = 0.1
+			}
 		}
 
 		IRQ_golden_square = {
