@@ -5,6 +5,7 @@
 ### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 ### search_filters = {FOCUS_FILTER_MANPOWER}
 ### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_TREATYOFSAADABAD}
 
 focus_tree = {
 	id = iraq_focus
@@ -9710,27 +9711,27 @@ focus = {
 #	Wednesday
 
 
-focus = {
-    id = IRQ_training_iraqi_army_1 ### Мобілізація іракської армії (хуй знає що придумати)
-    x = 52
-    y = 0
-    icon = GFX_focus_ARG_join_the_allies ###
-	prerequisite = {  } ###
+# focus = {
+#     id = IRQ_training_iraqi_army_1 ### Мобілізація іракської армії (хуй знає що придумати)
+#     x = 52
+#     y = 0
+#     icon = GFX_focus_ARG_join_the_allies ###
+# 	prerequisite = {  } ###
 
-	available = {
-		has_war = no
-	}
+# 	available = {
+# 		has_war = no
+# 	}
 
-    cost = 5
-    search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_TREATYOFSAADABAD }  #CHANGEIT
+#     cost = 5
+#     search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_TREATYOFSAADABAD }  #CHANGEIT
 
-    completion_reward = {
-		add_timed_idea = {
-			idea = IRQ_hidden_mobilization
-			days = 90
-		}
-    }
-}
+#     completion_reward = {
+# 		add_timed_idea = {
+# 			idea = IRQ_hidden_mobilization
+# 			days = 90
+# 		}
+#     }
+# }
 
 focus = {
     id = IRQ_open_toyota_organization ## OPEN TOYOTA FABRIC
@@ -9818,36 +9819,5 @@ focus = {
     }
 }
 
-focus = {
-    id = IRQ_mod_lefttree_4
-    x = 0
-    y = 1
-    icon = GFX_focus_ARG_join_the_allies
-	prerequisite = {  }
-	relative_position_id = IRQ_training_iraqi_army_1
-
-    cost = 1
-    search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_TREATYOFSAADABAD }  #CHANGEIT
-
-    completion_reward = {
-
-    }
-}
-
-focus = {
-    id = IRQ_mod_lefttree_5
-    x = 0
-    y = 2
-    icon = GFX_focus_ARG_join_the_allies
-	prerequisite = {  }
-	relative_position_id = IRQ_training_iraqi_army_1
-
-    cost = 1
-    search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_TREATYOFSAADABAD }  #CHANGEIT
-
-    completion_reward = {
-
-    }
-}
 
 }

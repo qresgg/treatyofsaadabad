@@ -148,6 +148,7 @@ PER_selling_guns_category = {
 		}
 
 		visible = {	
+			
 		}
 
 		targets = { AFG TUR IRQ }
@@ -163,6 +164,10 @@ PER_selling_guns_category = {
 		}
 
 		fire_only_once = no
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 9999 }
+		}
 
 		custom_cost_text = decision_cost_ie_10000
 
@@ -254,7 +259,9 @@ PER_selling_guns_category = {
 		}
 
 		fire_only_once = no
-
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 9999 }
+		}
 		custom_cost_text = decision_cost_ie_10000
 
 		complete_effect = {
