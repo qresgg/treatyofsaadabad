@@ -7885,8 +7885,8 @@ focus_tree = {
 		y = 1
 	}
 	focus = {
-		id = PER_wrong_muslims
-		#icon = GFX_focus_PER_wrong_muslims
+		id = PER_campaing_return_historical_territory
+		icon = GFX_focus_generic_total_war
 		relative_position_id = PER_demand_musandam
 		prerequisite = { focus = PER_demand_musandam }
 		mutually_exclusive = { focus = PER_request_our_pact_territories }
@@ -7898,10 +7898,10 @@ focus_tree = {
 	}
 	focus = {
 		id = PER_request_our_pact_territories
-		# icon = GFX_focus_PER_war_plan_satrapies
+		icon = GFX_focus_generic_concessions
 		relative_position_id = PER_demand_musandam
 		prerequisite = { focus = PER_demand_musandam }
-		mutually_exclusive = { focus = PER_wrong_muslims }
+		mutually_exclusive = { focus = PER_campaing_return_historical_territory }
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
 		}
@@ -7922,7 +7922,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PER_red_danger
-		# icon = GFX_focus_PER_red_danger
+		icon = GFX_focus_attack_soviet
 		relative_position_id = PER_war_plan_horoborrow
 		prerequisite = { focus = PER_preparing_red_war }
 		search_filters = {
@@ -7933,7 +7933,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PER_preparing_red_war
-		# icon = GFX_focus_PER_red_danger
+		icon = GFX_focus_generic_military_industry
 		relative_position_id = PER_war_plan_horoborrow
 		prerequisite = { focus = PER_war_plan_horoborrow }
 		search_filters = {
@@ -7955,7 +7955,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PER_request_invasion_payments
-		# icon = GFX_focus_PER_request_invasion_payments
+		icon = GFX_goal_demand_sudetenland
 		relative_position_id = PER_war_plan_musleew
 		prerequisite = { focus = PER_war_plan_musleew }
 		search_filters = {
@@ -7966,7 +7966,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PER_help_islam_friends
-		# icon = GFX_focus_PER_help_islam_friends
+		icon = GFX_focus_generic_befriend_afghanistan
 		relative_position_id = PER_war_plan_musleew
 		prerequisite = { focus = PER_war_plan_musleew }
 		search_filters = {
@@ -7982,7 +7982,7 @@ focus_tree = {
 		relative_position_id = PER_demand_musandam
 		prerequisite = { focus = PER_red_danger }
 		prerequisite = { focus = PER_red_danger }
-		prerequisite = { focus = PER_request_our_pact_territories focus = PER_wrong_muslims }
+		prerequisite = { focus = PER_request_our_pact_territories focus = PER_campaing_return_historical_territory }
 		mutually_exclusive = { focus = PER_war_plan_satrapies }
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
