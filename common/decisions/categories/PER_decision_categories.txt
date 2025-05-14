@@ -15,6 +15,21 @@ PER_profit_from_war_category = {
 
 PER_selling_guns_category = {
 
+	icon = GFX_decision_category_generic_arms_trade
+	priority = 35
+	picture = GFX_decision_cat_picture_seize_gold_reserves
+	visible_when_empty = yes
+	allowed = {
+		original_tag = PER
+	}
+
+	visible = {
+		
+	}
+}
+
+PER_buying_fabrics_category = {
+
 	icon = GFX_decision_category_generic_economy
 	priority = 35
 	picture = GFX_decision_cat_picture_seize_gold_reserves

@@ -1548,8 +1548,8 @@ PSH = {
 }
 
 PER_sasanian_empire = {
-	color = rgb { 0 165 114 }
-	color_ui = rgb { 0 165 114 }
+	color = rgb { 75 91 95 }
+	color_ui = rgb { 75 91 95 }
 }
 
 PER_persian_empire = {

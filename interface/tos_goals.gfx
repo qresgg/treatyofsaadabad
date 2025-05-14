@@ -1,5 +1,9 @@
 spriteTypes = {	
 
+	################
+	#    IRAQ      #
+	################
+
 	#### MODS
 	SpriteType = {
 		name = "GFX_focus_IRQ_liberate_south_levant"
@@ -8,10 +12,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_IRQ_grand_excavations"
 		texturefile = "gfx/interface/goals/focus_IRQ_grand_excavations.dds"
-	}
-	SpriteType = {
-		name = "GFX_focus_IRQ_secret_baghdad_pact"
-		texturefile = "gfx/interface/goals/focus_IRQ_secret_baghdad_pact.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_IRQ_partition_of_syria"
@@ -261,6 +261,480 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/focus_IRQ_unite_mashriq.dds"
 	}
 
+	################
+	#    PERSIA    #
+	################
+
+	# modded
+	SpriteType = {
+		name = "GFX_focus_PER_war_plan_satrapies"
+		texturefile = "gfx/interface/goals/focus_PER_war_plan_satrapies.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_demand_musandam"
+		texturefile = "gfx/interface/goals/focus_PER_demand_musandam.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_demand_sov_territory"
+		texturefile = "gfx/interface/goals/focus_PER_demand_sov_territory.dds"
+	}
+
+
+	# default
+
+	SpriteType = {
+		name = "GFX_focus_PER_deal_with_eitc"
+		texturefile = "gfx/interface/goals/focus_PER_deal_with_eitc.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_modernizing_iran"
+		texturefile = "gfx/interface/goals/focus_PER_modernizing_iran.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_women_vote"
+		texturefile = "gfx/interface/goals/focus_PER_women_vote.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_czech_tanks"
+		texturefile = "gfx/interface/goals/focus_PER_czech_tanks.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_develop_qorkhaneh"
+		texturefile = "gfx/interface/goals/focus_PER_develop_qorkhaneh.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_establish_tehran_armor"
+		texturefile = "gfx/interface/goals/focus_PER_establish_tehran_armor.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_special_forces_program"
+		texturefile = "gfx/interface/goals/focus_PER_special_forces_program.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_swedish_artillery"
+		texturefile = "gfx/interface/goals/focus_PER_swedish_artillery.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_the_pahlavi_imperium"
+		texturefile = "gfx/interface/goals/focus_PER_the_pahlavi_imperium.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_legacy_of_greatness"
+		texturefile = "gfx/interface/goals/focus_PER_legacy_of_greatness.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_forced_secularization"
+		texturefile = "gfx/interface/goals/focus_PER_forced_secularization.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_imperial_funded_universities"
+		texturefile = "gfx/interface/goals/focus_PER_imperial_funded_universities.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_state_atheism"
+		texturefile = "gfx/interface/goals/focus_PER_state_atheism.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_revive_old_ways"
+		texturefile = "gfx/interface/goals/focus_PER_revive_old_ways.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_clamp_kurdish_dissidence"
+		texturefile = "gfx/interface/goals/focus_PER_clamp_kurdish_dissidence.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_clamp_azerbaijani_dissidence"
+		texturefile = "gfx/interface/goals/focus_PER_clamp_azerbaijani_dissidence.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_imperial_expansionism"
+		texturefile = "gfx/interface/goals/focus_PER_imperial_expansionism.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_tehran_moscow_pact"
+		texturefile = "gfx/interface/goals/focus_PER_tehran_moscow_pact.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_establish_special_unit"
+		texturefile = "gfx/interface/goals/focus_PER_establish_special_unit.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_demand_iraqi_territory"
+		texturefile = "gfx/interface/goals/focus_PER_demand_iraqi_territory.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_demand_afghan_territory"
+		texturefile = "gfx/interface/goals/focus_PER_demand_afghan_territory.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_war_plan_xerxes"
+		texturefile = "gfx/interface/goals/focus_PER_war_plan_xerxes.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_the_memphis_initiative"
+		texturefile = "gfx/interface/goals/focus_PER_the_memphis_initiative.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_war_plan_darius"
+		texturefile = "gfx/interface/goals/focus_PER_war_plan_darius.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_clash_of_titans"
+		texturefile = "gfx/interface/goals/focus_PER_clash_of_titans.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_third_persian_empire"
+		texturefile = "gfx/interface/goals/focus_PER_third_persian_empire.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_glory_of_cyrus"
+		texturefile = "gfx/interface/goals/focus_PER_glory_of_cyrus.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_absorb_byzantines"
+		texturefile = "gfx/interface/goals/focus_PER_absorb_byzantines.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_choose_a_shahbanu"
+		texturefile = "gfx/interface/goals/focus_PER_choose_a_shahbanu.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_reintegrate_anatolia"
+		texturefile = "gfx/interface/goals/focus_PER_reintegrate_anatolia.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_rebuild_persepolis"
+		texturefile = "gfx/interface/goals/focus_PER_rebuild_persepolis.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_path_through_iraq"
+		texturefile = "gfx/interface/goals/focus_PER_path_through_iraq.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_foothold_in_indus"
+		texturefile = "gfx/interface/goals/focus_PER_foothold_in_indus.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_fund_imperial_excellency"
+		texturefile = "gfx/interface/goals/focus_PER_fund_imperial_excellency.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_war_plan_cambyses"
+		texturefile = "gfx/interface/goals/focus_PER_war_plan_cambyses.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_march_to_nile"
+		texturefile = "gfx/interface/goals/focus_PER_march_to_nile.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_usurp_afghanistan"
+		texturefile = "gfx/interface/goals/focus_PER_usurp_afghanistan.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_first_iranian_empire"
+		texturefile = "gfx/interface/goals/focus_PER_first_iranian_empire.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_shahanshah"
+		texturefile = "gfx/interface/goals/focus_PER_shahanshah.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_embrace_opulence"
+		texturefile = "gfx/interface/goals/focus_PER_embrace_opulence.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_rally_ancient_history"
+		texturefile = "gfx/interface/goals/focus_PER_rally_ancient_history.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_construct_air_defenses"
+		texturefile = "gfx/interface/goals/focus_PER_construct_air_defenses.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_establish_airforce"
+		texturefile = "gfx/interface/goals/focus_PER_establish_airforce.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_establish_the_navy"
+		texturefile = "gfx/interface/goals/focus_PER_establish_the_navy.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_form_savak"
+		texturefile = "gfx/interface/goals/focus_PER_form_savak.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_iranian_gendarmerie"
+		texturefile = "gfx/interface/goals/focus_PER_iranian_gendarmerie.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_luftwaffe_planes"
+		texturefile = "gfx/interface/goals/focus_PER_luftwaffe_planes.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_modern_cataphract"
+		texturefile = "gfx/interface/goals/focus_PER_modern_cataphract.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_raf_planes"
+		texturefile = "gfx/interface/goals/focus_PER_raf_planes.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_legacy_of_gilani"
+		texturefile = "gfx/interface/goals/focus_PER_legacy_of_gilani.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_national_bank"
+		texturefile = "gfx/interface/goals/focus_PER_national_bank.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_perfect_iranian_airforce"
+		texturefile = "gfx/interface/goals/focus_PER_perfect_iranian_airforce.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_university_of_isfahan"
+		texturefile = "gfx/interface/goals/focus_PER_university_of_isfahan.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_islamic_solidarity"
+		texturefile = "gfx/interface/goals/focus_PER_islamic_solidarity.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_form_sumka"
+		texturefile = "gfx/interface/goals/focus_PER_form_sumka.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_stage_mass_protests"
+		texturefile = "gfx/interface/goals/focus_PER_stage_mass_protests.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_constitutional_monarchy"
+		texturefile = "gfx/interface/goals/focus_PER_constitutional_monarchy.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_nationalize_oil_fields"
+		texturefile = "gfx/interface/goals/focus_PER_nationalize_oil_fields.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_march_on_saadabad"
+		texturefile = "gfx/interface/goals/focus_PER_march_on_saadabad.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_proclaim_greater_iran"
+		texturefile = "gfx/interface/goals/focus_PER_proclaim_greater_iran.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_increase_oil_sales"
+		texturefile = "gfx/interface/goals/focus_PER_increase_oil_sales.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_donate_oil_fields"
+		texturefile = "gfx/interface/goals/focus_PER_donate_oil_fields.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_subserviant_to_noone"
+		texturefile = "gfx/interface/goals/focus_PER_subserviant_to_noone.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_limit_foreign_influence"
+		texturefile = "gfx/interface/goals/focus_PER_limit_foreign_influence.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_push_to_mountains"
+		texturefile = "gfx/interface/goals/focus_PER_push_to_mountains.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_push_to_deserts"
+		texturefile = "gfx/interface/goals/focus_PER_push_to_deserts.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_the_peoples_navy"
+		texturefile = "gfx/interface/goals/focus_PER_the_peoples_navy.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_middle_east_protectorate"
+		texturefile = "gfx/interface/goals/focus_PER_middle_east_protectorate.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_the_peoples_airforce"
+		texturefile = "gfx/interface/goals/focus_PER_the_peoples_airforce.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_reinforce_iranian_identity"
+		texturefile = "gfx/interface/goals/focus_PER_reinforce_iranian_identity.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_establish_northern_buffer_states"
+		texturefile = "gfx/interface/goals/focus_PER_establish_northern_buffer_states.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_wether_the_storm"
+		texturefile = "gfx/interface/goals/focus_PER_wether_the_storm.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_fascist_reach_out_to_japan"
+		texturefile = "gfx/interface/goals/focus_PER_fascist_reach_out_to_japan.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_iran_first"
+		texturefile = "gfx/interface/goals/focus_PER_iran_first.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_iran_for_iranians"
+		texturefile = "gfx/interface/goals/focus_PER_iran_for_iranians.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_assassinate_reza_shah"
+		texturefile = "gfx/interface/goals/focus_PER_assassinate_reza_shah.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_emperor_for_people"
+		texturefile = "gfx/interface/goals/focus_PER_emperor_for_people.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_his_fathers_footsteps"
+		texturefile = "gfx/interface/goals/focus_PER_his_fathers_footsteps.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_bolster_the_caspian"
+		texturefile = "gfx/interface/goals/focus_PER_bolster_the_caspian.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_cyrus_initiative"
+		texturefile = "gfx/interface/goals/focus_PER_cyrus_initiative.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_desert_training"
+		texturefile = "gfx/interface/goals/focus_PER_desert_training.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_expand_imperial_guard"
+		texturefile = "gfx/interface/goals/focus_PER_expand_imperial_guard.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_expand_tabriz_masshad"
+		texturefile = "gfx/interface/goals/focus_PER_expand_tabriz_masshad.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_expand_tehran_abbas"
+		texturefile = "gfx/interface/goals/focus_PER_expand_tehran_abbas.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_expand_tehran_emam"
+		texturefile = "gfx/interface/goals/focus_PER_expand_tehran_emam.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_expand_unique_unit"
+		texturefile = "gfx/interface/goals/focus_PER_expand_unique_unit.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_form_oil_company"
+		texturefile = "gfx/interface/goals/focus_PER_form_oil_company.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_national_museum"
+		texturefile = "gfx/interface/goals/focus_PER_national_museum.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_persian_gulf_fleet"
+		texturefile = "gfx/interface/goals/focus_PER_persian_gulf_fleet.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_recruit_bakhtiari"
+		texturefile = "gfx/interface/goals/focus_PER_recruit_bakhtiari.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_restructure_army"
+		texturefile = "gfx/interface/goals/focus_PER_restructure_army.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_shiraz_university"
+		texturefile = "gfx/interface/goals/focus_PER_shiraz_university.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_white_revolution"
+		texturefile = "gfx/interface/goals/focus_PER_white_revolution.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_PER_abolish_feudalism"
+		texturefile = "gfx/interface/goals/focus_PER_abolish_feudalism.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_ally_bazaari"
+		texturefile = "gfx/interface/goals/focus_PER_ally_bazaari.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_communist_afghanistan_intervention"
+		texturefile = "gfx/interface/goals/focus_PER_communist_afghanistan_intervention.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_elevate_the_iran_party"
+		texturefile = "gfx/interface/goals/focus_PER_elevate_the_iran_party.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_establish_opec"
+		texturefile = "gfx/interface/goals/focus_PER_establish_opec.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_feat_of_engineering"
+		texturefile = "gfx/interface/goals/focus_PER_feat_of_engineering.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_fight_for_iran"
+		texturefile = "gfx/interface/goals/focus_PER_fight_for_iran.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_invite_oil_nations"
+		texturefile = "gfx/interface/goals/focus_PER_invite_oil_nations.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_last_thousand_years"
+		texturefile = "gfx/interface/goals/focus_PER_last_thousand_years.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_oil_baron"
+		texturefile = "gfx/interface/goals/focus_PER_oil_baron.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_our_place_in_empire"
+		texturefile = "gfx/interface/goals/focus_PER_our_place_in_empire.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_pan_iranianism"
+		texturefile = "gfx/interface/goals/focus_PER_pan_iranianism.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_rally_behind_mosaddegh"
+		texturefile = "gfx/interface/goals/focus_PER_rally_behind_mosaddegh.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_secure_afghanistan"
+		texturefile = "gfx/interface/goals/focus_PER_secure_afghanistan.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_secure_iraq"
+		texturefile = "gfx/interface/goals/focus_PER_secure_iraq.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_stand_with_giants"
+		texturefile = "gfx/interface/goals/focus_PER_stand_with_giants.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_strengthen_the_tudeh"
+		texturefile = "gfx/interface/goals/focus_PER_strengthen_the_tudeh.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_take_regional_tour"
+		texturefile = "gfx/interface/goals/focus_PER_take_regional_tour.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_war_elephant"
+		texturefile = "gfx/interface/goals/focus_PER_war_elephant.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_we_will_survive"
+		texturefile = "gfx/interface/goals/focus_PER_we_will_survive.dds"
+	}
 
 
 	################

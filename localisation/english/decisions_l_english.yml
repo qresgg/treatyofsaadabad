@@ -95,8 +95,12 @@
  decision_cost_pp_25_ie_1000_tooltip:0 "It costs £pol_power  §Y25§! £infantry_equipment_text_icon  §Y1000§! to take the decision"
 
  decision_cost_ae_1000:0 "£artillery_equipment_text_icon  §Y1000§!"
- decision_cost_ae_1000_blocked:0 "£infantry_equipment_text_icon  §R1000§!"
- decision_cost_ae_1000_tooltip:0 "It costs £infantry_equipment_text_icon  §Y1000§! to take the decision"
+ decision_cost_ae_1000_blocked:0 "£artillery_equipment_text_icon  §R1000§!"
+ decision_cost_ae_1000_tooltip:0 "It costs £artillery_equipment_text_icon  §Y1000§! to take the decision"
+
+ decision_cost_se_3000:0 "£support_equipment_text_icon  §Y3000§!"
+ decision_cost_se_3000_blocked:0 "£support_equipment_text_icon  §R3000§!"
+ decision_cost_se_3000_tooltip:0 "It costs £support_equipment_text_icon  §Y3000§! to take the decision"
  
  decision_cost_ie_10000:0 "£infantry_equipment_text_icon  §Y10000§!"
  decision_cost_ie_10000_blocked:0 "£infantry_equipment_text_icon  §R10000§!"
@@ -105,7 +109,7 @@
  decision_cost_ie_1000:0 "£infantry_equipment_text_icon  §Y1000§!"
  decision_cost_ie_1000_blocked:0 "£infantry_equipment_text_icon  §R1000§!"
  decision_cost_ie_1000_tooltip:0 "It costs £infantry_equipment_text_icon  §Y1000§! to take the decision"
- 
+
  decision_cost_ie_2000:0 "£infantry_equipment_text_icon  §Y2000§!"
  decision_cost_ie_2000_blocked:0 "£infantry_equipment_text_icon  §R2000§!"
  decision_cost_ie_2000_tooltip:0 "It costs £infantry_equipment_text_icon  §Y2000§! to take the decision"

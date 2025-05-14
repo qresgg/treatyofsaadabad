@@ -7499,6 +7499,19 @@ focus_tree = {
 			has_government = neutrality
 		}
 
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = PER_imperial_expansionism
+				}
+			}
+		}
 
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
@@ -7535,14 +7548,16 @@ focus_tree = {
 		id = PER_regional_reconstruction_fabrics
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = PER_lowkey_expansionism }
-		x = 1
+		x = 5
 		y = 1
 		relative_position_id = PER_lowkey_expansionism
-		mutually_exclusive = { focus = PER_islamic_restoration }
 		cost = 8
 		
 		available = {
-			has_government = democratic
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
 		}
 
 		bypass = {
@@ -7577,14 +7592,16 @@ focus_tree = {
 		id = PER_regional_reconstruction_military
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = PER_lowkey_expansionism }
-		x = -1
+		x = 3
 		y = 1
 		relative_position_id = PER_lowkey_expansionism
-		mutually_exclusive = { focus = PER_islamic_restoration }
 		cost = 8
 		
 		available = {
-			has_government = democratic
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
 		}
 
 		bypass = {
@@ -7608,7 +7625,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = industrial_complex
+					type = arms_factory
 					level = 2
 					instant_build = yes
 				}
@@ -7619,10 +7636,10 @@ focus_tree = {
 	focus = {
 		id = PER_secret_baghdad_pact
 		icon = GFX_focus_renounce_the_treaty_of_trianon
-		prerequisite = { focus = PER_regional_reconstruction_fabrics focus = PER_regional_reconstruction_military}
-		x = -1
+		prerequisite = { focus = PER_lowkey_expansionism}
+		x = 0
 		y = 1
-		relative_position_id = PER_regional_reconstruction_fabrics
+		relative_position_id = PER_lowkey_expansionism
 
 		cost = 0
 
@@ -7642,7 +7659,7 @@ focus_tree = {
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = No
+		available_if_capitulated = no
 
 		completion_reward = {
 
@@ -7652,10 +7669,10 @@ focus_tree = {
 	focus = { #IMPERIAL
 		id = PER_international_legion
 		icon = GFX_focus_ETH_freedom_at_gunpoint
-		prerequisite = { focus = PER_secret_baghdad_pact }
-		x = 3
+		prerequisite = { focus = PER_lowkey_expansionism }
+		x = -3
 		y = 1
-		relative_position_id = PER_secret_baghdad_pact
+		relative_position_id = PER_lowkey_expansionism
 		cost = 10
 		
 		available = {
@@ -7691,7 +7708,11 @@ focus_tree = {
 				limit = {
 					has_dlc = "La Resistance"
 					has_intelligence_agency = no
-					has_government = democratic
+					OR = {
+						has_government = fascism
+						has_government = democratic
+						has_government = neutrality
+					}
 				}
 				create_intelligence_agency = {
 					name = "SAVAK"
@@ -7701,11 +7722,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = PER_arabia_partition
-		icon = GFX_focus_ETH_an_arabic_base
+		id = PER_demand_musandam
+		icon = GFX_focus_PER_demand_musandam
 		prerequisite = { focus = PER_secret_baghdad_pact }
 		x = -1
-		y = 1
+		y = 2
 		relative_position_id = PER_secret_baghdad_pact
 
 		cost = 10
@@ -7723,7 +7744,7 @@ focus_tree = {
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = No
+		available_if_capitulated = no
 
 		completion_reward = {
 
@@ -7731,11 +7752,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = PER_sov_dictat
-		icon = GFX_focus_ETH_an_arabic_base
+		id = PER_demand_sov_territory
+		icon = GFX_focus_PER_demand_sov_territory
 		prerequisite = { focus = PER_secret_baghdad_pact }
 		x = 1
-		y = 1
+		y = 2
 		relative_position_id = PER_secret_baghdad_pact
 
 		cost = 10
@@ -7753,19 +7774,36 @@ focus_tree = {
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = No
+		available_if_capitulated = no
 
 		completion_reward = {
+			build_railway = {
+				level = 2
+				build_only_on_allied = no
+				fallback = yes
 
+				path = { 10837 7969 4553 12793 1896 }
+
+				start_province = 10837
+				target_province = 1896
+			}
+			1000 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 1896
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
 		id = PER_selling_guns
 		icon = GFX_focus_AUS_raid_military_storages
-		prerequisite = { focus = PER_secret_baghdad_pact }
-		x = -4
+		prerequisite = { focus = PER_regional_reconstruction_fabrics focus = PER_regional_reconstruction_military }
+		x = 1
 		y = 1
-		relative_position_id = PER_secret_baghdad_pact
+		relative_position_id = PER_regional_reconstruction_fabrics
 
 		cost = 10
 
@@ -7777,7 +7815,31 @@ focus_tree = {
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = No
+		available_if_capitulated = no
+
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = PER_buying_fabrics
+		icon = GFX_focus_AFG_a_modern_economy
+		prerequisite = { focus = PER_regional_reconstruction_fabrics focus = PER_regional_reconstruction_military }
+		x = -3
+		y = 1
+		relative_position_id = PER_regional_reconstruction_fabrics
+
+		cost = 10
+
+		ai_will_do = {
+			base = 1
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_TREATYOFSAADABAD }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
 
 		completion_reward = {
 
@@ -7786,11 +7848,10 @@ focus_tree = {
 	focus = { #INDUSTRIAL
 		id = PER_profit_from_war
 		icon = GFX_focus_SWI_issue_war_bonds
-		prerequisite = { focus = PER_selling_guns }
-		x = 0
+		prerequisite = { focus = PER_regional_reconstruction_fabrics focus = PER_regional_reconstruction_military }
+		x = -1
 		y = 1
-		relative_position_id = PER_selling_guns
-		mutually_exclusive = { focus = PER_oil_baron }
+		relative_position_id = PER_regional_reconstruction_fabrics
 		cost = 5
 		
 		available = {
@@ -7803,6 +7864,7 @@ focus_tree = {
 
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_TREATYOFSAADABAD
 		}
 
 		completion_reward = {
@@ -7817,7 +7879,7 @@ focus_tree = {
 		icon = GFX_focus_PER_imperial_expansionism
 		prerequisite = { focus = PER_assessing_the_opposition }
 		mutually_exclusive = { focus = PER_lowkey_expansionism }
-		x = 14
+		x = 16
 		y = 1
 		relative_position_id = PER_assessing_the_opposition
 		cost = 10
@@ -7837,6 +7899,20 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 			FOCUS_FILTER_MANPOWER
 			FOCUS_FILTER_WAR_SUPPORT
+		}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = PER_lowkey_expansionism
+				}
+			}
 		}
 
 		completion_reward = {

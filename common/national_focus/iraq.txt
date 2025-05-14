@@ -7238,7 +7238,7 @@ focus_tree = {
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = No
+		available_if_capitulated = no
 
 		completion_reward = {
 			# add_ideas = IRQ_saadabad_spheres_of_influence
@@ -7470,6 +7470,7 @@ focus_tree = {
 		id = IRQ_liberate_south_levant
 		icon = GFX_focus_IRQ_liberate_south_levant
 		prerequisite = { focus = IRQ_partition_of_syria }
+		mutually_exclusive = { focus = IRQ_deal_for_south_levant }
 		x = 2
 		y = 1
 		relative_position_id = IRQ_partition_of_syria
@@ -7548,7 +7549,7 @@ focus_tree = {
 		y = 1
 		icon = GFX_goal_tripartite_pact
 		prerequisite = { focus = IRQ_partition_of_syria }
-		mutually_exclusive = { focus = IRQ_deal_for_south_levant focus = IRQ_liberate_south_levant }
+		mutually_exclusive = { focus = IRQ_liberate_south_levant }
 		relative_position_id = IRQ_partition_of_syria
 	
 		cost = 5# Івент якщо соглашаються Великобританія, то ти отримуєш Ізраїль і пакт про ненапад з сусідами, а якщо ні — отримаєш wargoal на Ізраїль.
@@ -7659,6 +7660,7 @@ focus_tree = {
 		id = IRQ_african_arab_revolt
 		icon = GFX_focus_spr_torchbearers_of_tomorrow
 		prerequisite = { focus = IRQ_course_to_north_africa }
+		mutually_exclusive = { focus = IRQ_liberate_north_africa}
 		x = 2
 		y = 1
 		relative_position_id = IRQ_course_to_north_africa
