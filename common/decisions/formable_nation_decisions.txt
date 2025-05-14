@@ -7225,8 +7225,8 @@ form_persian_empire_category = {
 	}
 }
 
-form_sasanidian_empire_category = {
-	form_sasanidian_empire = {
+form_sasanian_empire_category = {
+	form_sasanian_empire = {
 		icon = generic_form_nation
 		visible = {
 			OR = {
@@ -7236,6 +7236,40 @@ form_sasanidian_empire_category = {
 		allowed = {
 			OR = {
 				original_tag = PER
+			}
+		}
+		available = {
+			is_subject = no
+			custom_trigger_tooltip = {
+				## IRAN
+				tooltip = form_country_iran_required_states_tt
+				controls_state = 419
+				controls_state = 1000
+				controls_state = 420
+				controls_state = 1001
+				controls_state = 417
+				controls_state = 266
+				controls_state = 421
+				controls_state = 413
+				controls_state = 411
+				controls_state = 412
+				controls_state = 418
+				controls_state = 1002
+				controls_state = 414
+				controls_state = 410
+				controls_state = 1003
+				controls_state = 416
+				controls_state = 1004
+			}
+			custom_trigger_tooltip = {
+				## PENINSULA
+				tooltip = form_country_mazun_required_states_tt
+				controls_state = 1014 ## BAHRAIN
+				controls_state = 765 ## QATAR
+				controls_state = 658 ## ABU DHABI
+				controls_state = 1013 ## MUSANDAM
+				controls_state = 294 ## MUSCAT
+				controls_state = 1015 ## OMAN
 			}
 		}
 		highlight_states = {
@@ -7263,6 +7297,64 @@ form_sasanidian_empire_category = {
 				state = 1013
 				state = 1015
 				state = 294
+			}
+		}
+		complete_effect = {
+			set_country_flag = PER_sasanian_empire_flag
+			set_cosmetic_tag = PER_sasanian_empire
+			custom_effect_tooltip = form_country_cities_change_name_tt
+			hidden_effect = {
+				## PENINSULA
+				1014 = { add_core_of = ROOT }
+				set_province_name = { id = 13313 name = "Awal"}
+				765 = { add_core_of = ROOT }
+				765 = { set_state_name = "Western Mazun"}
+				set_province_name = { id = 8051 name = "Al-Bidda"}
+				658 = { add_core_of = ROOT }
+				658 = { set_state_name = "Mazun" }
+				set_province_name = { id = 7960 name = "ed-Dur"}
+				1013 = { add_core_of = ROOT }
+				1013 = { set_state_name = "Jazirat al-Ghanam"}
+				add_victory_points = {
+					province = 13369
+					value = 3
+				}
+				294 = { add_core_of = ROOT }
+				294 = { set_state_name = "Eastern Mazun"}
+				set_province_name = { id = 10760 name = "Moscha Portus"}
+				add_victory_points = {
+					province = 10760
+					value = 5
+				}
+				add_victory_points = {
+					province = 4993
+					value = 1
+				}
+				add_victory_points = {
+					province = 8020
+					value = 1
+				}
+				set_province_name = { id = 8020 name = "Sur"}
+				1015 = { add_core_of = ROOT }
+				1015 = { set_state_name = "Southern Mazun"}
+
+				## IRAN
+				set_province_name = { id = 1896 name = "Tauris"}
+				add_victory_points = {
+					province = 7953
+					value = 3
+				}
+				set_province_name = { id = 7953 name = "Ohrmazd-Ardaser"}
+				add_victory_points = {
+					province = 2026
+					value = 3
+				}
+				set_province_name = { id = 2026 name = "Spahan"}
+				add_victory_points = {
+					province = 12832
+					value = 3
+				}
+				set_province_name = { id = 12832 name = "Boxt-Artaxsir"}
 			}
 		}
 	}
@@ -7324,8 +7416,11 @@ form_sasanidian_empire_category = {
 				state = 217
 				state = 236
 				state = 829
-				state = 228
 				state = 260
+				state = 827
+				state = 828
+				state = 238
+				state = 235
 			}
 		}
 	}
@@ -7380,6 +7475,7 @@ form_sasanidian_empire_category = {
 				state = 249
 				state = 652
 				state = 651
+				state = 258
 			}
 		}
 	}
@@ -8221,7 +8317,7 @@ form_neo_byzantine_empire_category = {
 		highlight_states = {
 			highlight_state_targets = {
 				## UKRAINE
-				state = 226
+				state = 226	
 				state = 196
 				state = 200
 				state = 227
@@ -8231,10 +8327,6 @@ form_neo_byzantine_empire_category = {
 				## ru
 				state = 234
 				state = 233
-				state = 238
-				state = 235
-				state = 827
-				state = 828
 
 				## GEORGIA
 				state = 826

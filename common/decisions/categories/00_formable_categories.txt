@@ -236,7 +236,7 @@ form_kashuan_empire_category = {
 	}
 }
 
-form_sasanidian_empire_category = {
+form_sasanian_empire_category = {
 
 	icon = generic_formable_nations
 

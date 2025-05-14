@@ -6369,6 +6369,7 @@ focus_tree = {
 		id = PER_second_sasanian_empire
 		icon = GFX_focus_PER_third_persian_empire
 		prerequisite = { focus = PER_his_fathers_footsteps }
+		mutually_exclusive = { focus = PER_third_persian_empire }
 		x = -1
 		y = 1
 		relative_position_id = PER_his_fathers_footsteps
@@ -6393,7 +6394,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			set_cosmetic_tag = PER_sasanian_empire
+			set_cosmetic_tag = PER_sasanian_kingdom
 			add_political_power = 100
 		}
 	}
@@ -6402,6 +6403,7 @@ focus_tree = {
 		id = PER_third_persian_empire
 		icon = GFX_focus_PER_third_persian_empire
 		prerequisite = { focus = PER_his_fathers_footsteps }
+		mutually_exclusive = { focus = PER_second_sasanian_empire }
 		x = 1
 		y = 1
 		relative_position_id = PER_his_fathers_footsteps
@@ -7355,10 +7357,10 @@ focus_tree = {
 		id = PER_state_atheism
 		icon = GFX_focus_PER_state_atheism
 		prerequisite = { focus = PER_clamp_azerbaijani_dissidence focus = PER_clamp_kurdish_dissidence }
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = PER_clamp_kurdish_dissidence
-		mutually_exclusive = { focus = PER_venerate_islam focus = PER_revive_old_ways }
+		mutually_exclusive = { focus = PER_venerate_islam }
 		cost = 10
 
 		ai_will_do = {
@@ -7398,10 +7400,10 @@ focus_tree = {
 		id = PER_venerate_islam
 		icon = GFX_focus_TUR_turanist_ambition
 		prerequisite = { focus = PER_clamp_azerbaijani_dissidence focus = PER_clamp_kurdish_dissidence }
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = PER_clamp_kurdish_dissidence
-		mutually_exclusive = { focus = PER_state_atheism focus = PER_revive_old_ways }
+		mutually_exclusive = { focus = PER_state_atheism }
 		cost = 10
 
 		ai_will_do = {
@@ -7435,48 +7437,6 @@ focus_tree = {
 				remove_idea = PER_islamic_traditions_ns
   				add_idea = PER_venerated_islam_idea 
 				}
-			}
-		}
-	}
-
-	focus = { #IMPERIAL
-		id = PER_revive_old_ways
-		icon = GFX_focus_PER_revive_old_ways
-		prerequisite = { focus = PER_clamp_azerbaijani_dissidence focus = PER_clamp_kurdish_dissidence }
-		x = 3
-		y = 1
-		relative_position_id = PER_clamp_kurdish_dissidence
-		mutually_exclusive = { focus = PER_state_atheism focus = PER_venerate_islam }
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available = {
-			has_government = neutrality
-			NOT = {
-				has_completed_focus = PER_forced_secularization
-			}
-		}
-
-		search_filters = {
-			FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_WAR_SUPPORT
-		}
-
-		completion_reward = {
-			swap_ideas = {
-			remove_idea = PER_islamic_traditions_ns
-  			add_idea = PER_old_ways_idea 
-			}
-			
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			custom_effect_tooltip = PER_clergy_revolt_tt
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			
-			country_event = {
-				id = PER_revolution_events.1
-				hours = 1
 			}
 		}
 	}
@@ -7665,12 +7625,53 @@ focus_tree = {
 
 		}
 	}
+	focus = { #IMPERIAL
+		id = PER_revive_old_ways
+		icon = GFX_focus_PER_revive_old_ways
+		prerequisite = { focus = PER_lowkey_expansionism }
+		x = -4
+		y = 1
+		relative_position_id = PER_lowkey_expansionism
+		mutually_exclusive = { focus = PER_state_atheism focus = PER_venerate_islam }
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			has_government = neutrality
+			NOT = {
+				has_completed_focus = PER_forced_secularization
+			}
+		}
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_TREATYOFSAADABAD
+		}
+
+		completion_reward = {
+			swap_ideas = {
+			remove_idea = PER_islamic_traditions_ns
+  			add_idea = PER_old_ways_idea 
+			}
+			
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			custom_effect_tooltip = PER_clergy_revolt_tt
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			
+			country_event = {
+				id = PER_revolution_events.1
+				hours = 1
+			}
+		}
+	}
 
 	focus = { #IMPERIAL
 		id = PER_international_legion
 		icon = GFX_focus_ETH_freedom_at_gunpoint
 		prerequisite = { focus = PER_lowkey_expansionism }
-		x = -3
+		x = -2
 		y = 1
 		relative_position_id = PER_lowkey_expansionism
 		cost = 10
@@ -7872,6 +7873,142 @@ focus_tree = {
 
 		}
 	}
+	focus = {
+		id = PER_war_plan_satrapies
+		icon = GFX_focus_PER_war_plan_satrapies
+		relative_position_id = PER_demand_musandam
+		prerequisite = { focus = PER_demand_musandam }
+		search_filters = {
+			FOCUS_FILTER_TREATYOFSAADABAD
+		}
+		x = -1
+		y = 1
+	}
+	focus = {
+		id = PER_wrong_muslims
+		#icon = GFX_focus_PER_wrong_muslims
+		relative_position_id = PER_demand_musandam
+		prerequisite = { focus = PER_demand_musandam }
+		mutually_exclusive = { focus = PER_request_our_pact_territories }
+		search_filters = {
+			FOCUS_FILTER_TREATYOFSAADABAD
+		}
+		x = -1
+		y = 3
+	}
+	focus = {
+		id = PER_request_our_pact_territories
+		# icon = GFX_focus_PER_war_plan_satrapies
+		relative_position_id = PER_demand_musandam
+		prerequisite = { focus = PER_demand_musandam }
+		mutually_exclusive = { focus = PER_wrong_muslims }
+		search_filters = {
+			FOCUS_FILTER_TREATYOFSAADABAD
+		}
+		x = -3
+		y = 3
+	}
+
+	focus = {
+		id = PER_war_plan_horoborrow
+		# icon = GFX_focus_PER_war_plan_horoborrow
+		relative_position_id = PER_demand_sov_territory
+		prerequisite = { focus = PER_demand_sov_territory }
+		search_filters = {
+			FOCUS_FILTER_TREATYOFSAADABAD
+		}
+		x = 2
+		y = 1
+	}
+	focus = {
+		id = PER_red_danger
+		# icon = GFX_focus_PER_red_danger
+		relative_position_id = PER_war_plan_horoborrow
+		prerequisite = { focus = PER_preparing_red_war }
+		search_filters = {
+			FOCUS_FILTER_TREATYOFSAADABAD
+		}
+		x = 0
+		y = 2
+	}
+	focus = {
+		id = PER_preparing_red_war
+		# icon = GFX_focus_PER_red_danger
+		relative_position_id = PER_war_plan_horoborrow
+		prerequisite = { focus = PER_war_plan_horoborrow }
+		search_filters = {
+			FOCUS_FILTER_TREATYOFSAADABAD
+		}
+		x = 0
+		y = 1
+	}
+	focus = {
+		id = PER_war_plan_musleew
+		# icon = GFX_focus_PER_war_plan_musleew
+		relative_position_id = PER_demand_sov_territory
+		prerequisite = { focus = PER_demand_sov_territory focus = PER_demand_musandam }
+		search_filters = {
+			FOCUS_FILTER_TREATYOFSAADABAD
+		}
+		x = -1
+		y = 1
+	}
+	focus = {
+		id = PER_request_invasion_payments
+		# icon = GFX_focus_PER_request_invasion_payments
+		relative_position_id = PER_war_plan_musleew
+		prerequisite = { focus = PER_war_plan_musleew }
+		search_filters = {
+			FOCUS_FILTER_TREATYOFSAADABAD
+		}
+		x = 0
+		y = 2
+	}
+	focus = {
+		id = PER_help_islam_friends
+		# icon = GFX_focus_PER_help_islam_friends
+		relative_position_id = PER_war_plan_musleew
+		prerequisite = { focus = PER_war_plan_musleew }
+		search_filters = {
+			FOCUS_FILTER_TREATYOFSAADABAD
+		}
+		x = 0
+		y = 1
+	}
+
+	focus = {
+		id = PER_restorer_eranshahr
+		# icon = GFX_focus_PER_war_plan_satrapies
+		relative_position_id = PER_demand_musandam
+		prerequisite = { focus = PER_red_danger }
+		prerequisite = { focus = PER_red_danger }
+		prerequisite = { focus = PER_request_our_pact_territories focus = PER_wrong_muslims }
+		mutually_exclusive = { focus = PER_war_plan_satrapies }
+		search_filters = {
+			FOCUS_FILTER_TREATYOFSAADABAD
+		}
+		x = 1
+		y = 4
+	}
+	focus = {
+		id = PER_reintegrate_transural
+		# icon = GFX_focus_PER_war_plan_satrapies
+		relative_position_id = PER_demand_musandam
+		prerequisite = { focus = PER_restorer_eranshahr }
+		available = {
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+			has_completed_focus = PER_revive_old_ways
+		}
+		search_filters = {
+			FOCUS_FILTER_TREATYOFSAADABAD
+		}
+		x = 1
+		y = 5
+	}
+
 	
 
 	focus = { #IMPERIAL

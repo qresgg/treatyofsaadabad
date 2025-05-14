@@ -6193,8 +6193,7 @@ focus_tree = {
 
 		}
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_TREATYOFSAADABAD FOCUS_FILTER_POLITICAL}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -6248,7 +6247,7 @@ focus_tree = {
 			}
 		}
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_TREATYOFSAADABAD}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -6297,7 +6296,7 @@ focus_tree = {
 
 		}
 
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_TREATYOFSAADABAD }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -6519,40 +6518,40 @@ focus_tree = {
 
 		}
 	}
-	focus = {
-		id = IRQ_subsidies_for_saadabad_children
-		icon = GFX_focus_TUR_loosen_the_laws_on_secularism
-		prerequisite = { focus = IRQ_saadabad_alliance }
-		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
-		x = 1
-		y = 1
-		relative_position_id = IRQ_saadabad_alliance
+	# focus = {
+	# 	id = IRQ_subsidies_for_saadabad_children
+	# 	icon = GFX_focus_TUR_loosen_the_laws_on_secularism
+	# 	prerequisite = { focus = IRQ_saadabad_alliance }
+	# 	search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+	# 	x = 1
+	# 	y = 1
+	# 	relative_position_id = IRQ_saadabad_alliance
 
-		cost = 8
+	# 	cost = 8
 
-		ai_will_do = {
-			base = 1
-		}
+	# 	ai_will_do = {
+	# 		base = 1
+	# 	}
 
-		available = {
-			is_subject = no
-		}
+	# 	available = {
+	# 		is_subject = no
+	# 	}
 
-		bypass = {
-		}
+	# 	bypass = {
+	# 	}
 
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_MILITARY_CHARACTER }
+	# 	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_MILITARY_CHARACTER }
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
 
-		completion_reward = {
-			add_stability = 0.1
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = IRQ_saadabad_subsidies_for_children
-		}
-	}
+	# 	completion_reward = {
+	# 		add_stability = 0.1
+	# 		custom_effect_tooltip = generic_skip_one_line_tt
+	# 		add_ideas = IRQ_saadabad_subsidies_for_children
+	# 	}
+	# }
 
 	focus = {
 		id = IRQ_kurdish_outreach
@@ -6773,7 +6772,7 @@ focus_tree = {
 		icon = GFX_focus_attack_britain
 		prerequisite = { focus = IRQ_saadabad_alliance }
 		#mutually_exclusive = { focus =  }
-		x = 3
+		x = 1
 		y = 1
 		relative_position_id = IRQ_saadabad_alliance
 
@@ -6797,7 +6796,7 @@ focus_tree = {
 			has_war_with = ENG
 		}
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_TREATYOFSAADABAD }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no

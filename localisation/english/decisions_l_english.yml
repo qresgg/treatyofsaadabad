@@ -299,3 +299,7 @@
  refit_to_destroyer_nor: "Refit Convoys to Destroyers"
  refit_to_destroyer_mass_nor: "Refit Convoys to Destroyers En-mass"
  nor_building_ship: "Currently Converting Ships"
+
+## FORM DECISIONS
+form_country_mazun_required_states_tt: "Controlls all §YMazun§! state. It including §YMusandam§!, §YBahrain§!, §YAbu-Dhabi§!, §YQatar§!, §YOman§! and §YMuscat§! regions"
+form_country_cities_change_name_tt: "Some cities will be renamed to their historical names from §Ythe Sasanian era.§!"
