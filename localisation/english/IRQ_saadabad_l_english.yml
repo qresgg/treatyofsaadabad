@@ -2,7 +2,8 @@
   # Focus Titles and Descriptions
   IRQ_rebirth_babylon: "Rebirth of Babylon"
   IRQ_rebirth_babylon_desc: "The revival of the ancient civilization of Babylon. A time to restore the glory and power of the past."
-  
+  FOCUS_FILTER_TREATYOFSAADABAD: "2Treaty of Saadabad"
+
   IRQ_centralization_of_power: "Centralization of Power"
   IRQ_centralization_of_power_desc: "Consolidating power in the hands of the central government to ensure stability and control."
   
@@ -120,6 +121,9 @@
   IRQ_training_iraqi_army_1: "Mobilisation Iraqi Army"
   IRQ_training_iraqi_army_1_desc: "Mobilising the Iraqi Army to prepare for the challenges ahead."
 
+  IRQ_ideas_rise_of_fascism: "Rise of Fascism"
+  IRQ_ideas_rise_of_fascism_desc: "The rise of fascism in Iraq is a response to the political and social turmoil of the time. It represents a shift towards authoritarianism and nationalism, with a focus on strong leadership and military power."
+
   #Custom tooltip
   IRQ_digrifle: "You will receive §Y10,000§! units of "§YRifle No. 4 Mkl§!" in your stockpile."
   IRQ_kuw_ultimatum_tt: "If Kuwait reject our ultimatum, we can declare war"
@@ -205,4 +209,3 @@
   # IRQ_saadabad_spheres_of_influence_tt: "Us and §Y[CHI.GetNameWithFlag]§! Will set up our Spheres of Influence in §YAsia§!, modifying the cost of taking states within and without each others respective spheres.\n\nOur §YSphere of Influence§! will include:\n§Y[MAL.GetNameWithFlag]§!\n§Y[INS.GetNameWithFlag]§!\n§Y[PHI.GetNameWithFlag]§!\n§Y[AST.GetNameWithFlag]§!\n§Y[NZL.GetNameWithFlag]§!\nAll §YSouth Pacific Islands§!\n\nTheir §YSphere of Influence§! will include:\n§Y[SIA.GetNameWithFlag]\n[VIN.GetNameWithFlag]\n[CAM.GetNameWithFlag]\n[LAO.GetNameWithFlag]\n[CHI.GetNameWithFlag]\n[RAJ.GetNameWithFlag]\n[TIB.GetNameWithFlag]\n[NEP.GetNameWithFlag]\n[BHU.GetNameWithFlag]\n[KOR.GetNameWithFlag]\n[JAP.GetNameWithFlag]\n[MON.GetNameWithFlag]§!"
   # FACTION
   IRQ_saad_alliance: "Saadabad Alliance"
-  FOCUS_FILTER_TREATYOFSAADABAD: "Treaty of Saadabad"

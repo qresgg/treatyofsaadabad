@@ -62,8 +62,206 @@ country_event = {
 }
 
 
+add_namespace = iran_soviet_crisis
+
+news_event = { #NEWS EVENT
+	id = iran_soviet_crisis.1
+	title = iran_soviet_crisis.1.t
+	desc = iran_soviet_crisis.1.d
+	picture = GFX_report_event_iran_soviet_border_crisis
+
+	is_triggered_only = yes
+
+	option = {
+		name = iran_soviet_crisis.1.a
+        ai_chance = { 
+            base = 100
+         }
+	}
+
+}
 
 
+# The Soviet response event
+country_event = {
+	id = iran_soviet_crisis.sov_response
+	title = iran_soviet_crisis.sov_response.t
+	desc = iran_soviet_crisis.sov_response.d 
+	picture = GFX_report_event_soviet_iran_diplomacy
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = iran_soviet_crisis.sov_response.a ## 2
+		ai_chance = { 
+            base = 20
+         }
+
+		SOV = {
+			add_political_power = -200
+			add_stability = -0.10
+
+			change_relation = { target = IRN value = 50 }
+		}
+		PER = {
+			add_political_power = 100
+			add_stability = 0.05
+			add_war_support = 0.10
+
+			change_relation = { target = SOV value = 50 }
+		}
+        229 = { transfer_state_to = FROM } ## Мб забрати клейм ссср на території колишні
+        584 = { transfer_state_to = FROM } ## Мб забрати клейм ссср на території колишні
+	}
+
+	option = {
+		name = iran_soviet_crisis.sov_response.b ## 1
+		ai_chance = { 
+            base = 30
+         }
+
+
+		SOV = {
+			add_political_power = -100
+			add_stability = -0.05
+
+			change_relation = { target = IRN value = 20 }
+		}
+		PER = {
+			add_political_power = 50
+			add_war_support = 0.05
+
+			change_relation = { target = SOV value = 20 }
+		}
+        584 = { transfer_state_to = FROM } ## Мб забрати клейм ссср на території колишні
+
+	}
+
+	option = {
+		name = iran_soviet_crisis.sov_response.c ## 0
+		ai_chance = { 
+            base = 50
+         }
+
+
+		SOV = {
+			add_political_power = 50
+			add_stability = 0.02
+
+			change_relation = { target = IRN value = -30 }
+		}
+		PER = {
+			add_political_power = -50
+			add_stability = -0.05
+
+			change_relation = { target = SOV value = -30 }
+		}
+
+	}
+}
+
+# Event: Iran Demands Musandam
+add_namespace = iran_sultanate_crisis
+
+country_event = {
+    id = iran_sultanate_crisis.1
+    title = iran_sultanate_crisis.1.t
+    desc = iran_sultanate_crisis.1.d
+    picture = GFX_report_event_iran_diplomacy
+
+    is_triggered_only = yes
+
+    option = {
+        name = iran_sultanate_crisis.1.a
+        ai_chance = { 
+            base = 100 
+        }
+        # Send demand to Oman
+        OMA = { country_event = iran_sultanate_crisis.2 }
+    }
+}
+
+
+# Event: Oman's Response
+country_event = {
+    id = iran_sultanate_crisis.2
+    title = iran_sultanate_crisis.2.t
+    desc = iran_sultanate_crisis.2.d
+    picture = GFX_report_event_oman_crisis
+
+    is_triggered_only = yes
+
+    option = {
+        name = iran_sultanate_crisis.2.a # Accept
+        ai_chance = { 
+            base = 50
+        }
+
+        294 = { transfer_state_to = FROM }
+
+        PER = {
+            add_political_power = 50
+            change_relation = { target = OMA value = 25 }
+            country_event = iran_sultanate_crisis.4
+        }
+        OMA = {
+            add_stability = -0.05
+            add_political_power = -50
+        }
+    }
+
+    option = {
+        name = iran_sultanate_crisis.2.b # Refuse
+        ai_chance = { 
+            base = 50
+        }
+
+        PER = {
+            country_event = iran_sultanate_crisis.3
+        }
+    }
+}
+
+# Event: Oman Refuses
+country_event = {
+    id = iran_sultanate_crisis.3
+    title = iran_sultanate_crisis.3.t
+    desc = iran_sultanate_crisis.3.d
+    picture = GFX_report_event_iran_anger
+
+    is_triggered_only = yes
+
+    option = {
+        name = iran_sultanate_crisis.3.a # Prepare further steps
+        ai_chance = { 
+            base = 100
+        }
+
+        add_political_power = 25
+        add_decision = iran_force_take_musandam
+    }
+}
+
+country_event = {
+    id = iran_sultanate_crisis.4
+    title = iran_sultanate_crisis.4.t
+    desc = iran_sultanate_crisis.4.d
+    picture = GFX_report_event_iran_victory
+
+    is_triggered_only = yes
+
+    option = {
+        name = iran_sultanate_crisis.4.a
+        ai_chance = { 
+            base = 100 
+        }
+        add_political_power = 100
+        add_stability = 0.05
+        add_war_support = 0.10
+    }
+}
 
 
 

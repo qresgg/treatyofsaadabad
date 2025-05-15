@@ -1,0 +1,28 @@
+﻿l_english:
+  iran_soviet_crisis.1.t: "Iran Demands Soviet Territories"
+  iran_soviet_crisis.1.d: "Citing historical claims and regional tensions, Iran has formally demanded the transfer of Azerbaijani and Turkmen territories from the Soviet Union. This bold move could provoke a significant diplomatic reaction from Moscow."
+  iran_soviet_crisis.1.a: "Send the Demands"
+
+  iran_soviet_crisis.sov_response.t: "Iranian Demands for Border Regions"
+  iran_soviet_crisis.sov_response.d: "Iran has issued a formal diplomatic note demanding the transfer of certain Soviet border territories, including Azerbaijan and Ashgabat. The Iranian government claims historical rights and seeks to 'restore territorial integrity.' The Soviet leadership must now decide how to respond."
+
+  iran_soviet_crisis.sov_response.a: "Concede both Azerbaijan and Ashgabat"
+  iran_soviet_crisis.sov_response.b: "Only hand over Ashgabat"
+  iran_soviet_crisis.sov_response.c: "Reject the demands"
+
+  iran_sultanate_crisis.1.t: "Iranian Claims on Musandam"
+  iran_sultanate_crisis.1.d: "The strategic position of the Musandam Peninsula at the Strait of Hormuz makes it a natural extension of Iran’s influence. Tehran has now sent a diplomatic note demanding the peaceful transfer of the region from Oman."
+  iran_sultanate_crisis.1.a: "Send the demands"
+
+  iran_sultanate_crisis.2.t: "Iran Demands Musandam"
+  iran_sultanate_crisis.2.d: "Iran has demanded the transfer of the Musandam Peninsula, citing strategic concerns and cultural ties. Giving up this land may reduce tension, but at the cost of national pride."
+  iran_sultanate_crisis.2.a: "Concede Musandam"
+  iran_sultanate_crisis.2.b: "Refuse!"
+
+  iran_sultanate_crisis.3.t: "Oman Refuses!"
+  iran_sultanate_crisis.3.d: "Oman has rejected our rightful demands for the Musandam Peninsula. We must now explore further actions to secure our interests."
+  iran_sultanate_crisis.3.a: "They will regret this."
+
+  iran_sultanate_crisis.4.t: "Musandam Secured"
+  iran_sultanate_crisis.4.d: "The Sultanate of Oman has agreed to our demands and transferred the Musandam Peninsula to Iranian administration. This strategic success strengthens our hold over the Strait of Hormuz and shows our regional dominance."
+  iran_sultanate_crisis.4.a: "A glorious day for Iran!"
