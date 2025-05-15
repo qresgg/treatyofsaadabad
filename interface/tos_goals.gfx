@@ -271,12 +271,32 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/focus_PER_war_plan_satrapies.dds"
 	}
 	SpriteType = {
+		name = "GFX_focus_PER_war_plan_musleew"
+		texturefile = "gfx/interface/goals/focus_PER_war_plan_musleew.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_war_plan_horoborrow"
+		texturefile = "gfx/interface/goals/focus_PER_war_plan_horoborrow.dds"
+	}
+	SpriteType = {
 		name = "GFX_focus_PER_demand_musandam"
 		texturefile = "gfx/interface/goals/focus_PER_demand_musandam.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_PER_demand_sov_territory"
 		texturefile = "gfx/interface/goals/focus_PER_demand_sov_territory.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_lowkey_expansionism"
+		texturefile = "gfx/interface/goals/focus_PER_lowkey_expansionism.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_second_sasanian_empire"
+		texturefile = "gfx/interface/goals/focus_PER_second_sasanian_empire.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_PER_restorer_eranshahr"
+		texturefile = "gfx/interface/goals/focus_PER_restorer_eranshahr.dds"
 	}
 
 

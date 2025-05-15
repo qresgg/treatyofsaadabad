@@ -835,6 +835,108 @@ ideas = {
 			}
 		}
 
+		PER_war_plan_satrapies_idea = {
+			allowed = {
+				original_tag = PER
+			}
+	
+			allowed_civil_war = {
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+	
+			picture = PLACEHOLDER_idea_icon
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+			
+			}
+
+			modifier = {
+				war_support_factor = 0.02
+				stability_factor = -0.05
+			}
+
+			targeted_modifier = {
+				tag = ENG
+    			attack_bonus_against = 0.1
+    			defense_bonus_against = 0.1
+			}
+
+			targeted_modifier = {
+				tag = OMA
+    			attack_bonus_against = 0.1
+    			defense_bonus_against = 0.1
+			}
+		}
+
+		PER_war_plan_musleew_idea = {
+			allowed = {
+				original_tag = PER
+			}
+	
+			allowed_civil_war = {
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+	
+			picture = PLACEHOLDER_idea_icon
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+			
+			}
+
+			modifier = {
+				war_support_factor = 0.02
+				stability_factor = -0.05
+			}
+
+			targeted_modifier = {
+				tag = RAJ
+    			attack_bonus_against = 0.1
+    			defense_bonus_against = 0.1
+			}
+		}
+
+		PER_war_plan_horoborrow_idea = {
+			allowed = {
+				original_tag = PER
+			}
+	
+			allowed_civil_war = {
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+	
+			picture = PLACEHOLDER_idea_icon
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+			
+			}
+
+			modifier = {
+				war_support_factor = 0.02
+				stability_factor = -0.05
+			}
+
+			targeted_modifier = {
+				tag = SOV
+    			attack_bonus_against = 0.1
+    			defense_bonus_against = 0.1
+			}
+		}
+
 
 		PER_idea_comintern_research_collaboration = {
 
@@ -1770,4 +1872,5 @@ naval_manufacturer = {
 		}
 		traits = { convoy_escort_naval_manufacturer }
 	}
+}
 }

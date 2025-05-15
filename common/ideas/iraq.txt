@@ -97,7 +97,12 @@ ideas = {
 
 		IRQ_saadabad_spheres_of_influence = {
 			allowed = {
-				original_tag = IRQ
+				OR = {
+					tag = PER
+					tag = TUR
+					tag = IRQ
+					tag = AFG
+				}
 			}
 			picture = IRQ_baghdad_pact
 			custom_effect_tooltip = IRQ_saadabad_spheres_of_influence_tt

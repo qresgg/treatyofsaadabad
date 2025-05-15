@@ -14,21 +14,23 @@ country_event = {
     }
 
     immediate = {
-        set_global_flag = baghdad_pact_signed
-        add_ideas = IRQ_saadabad_spheres_of_influence
-        add_political_power = 100
-
-        IRQ = { country_event = SAAD_baghdad_pact_signed.1 hours = 12 }
-        TUR = { country_event = SAAD_baghdad_pact_signed.1 hours = 12 }
-        AFG = { country_event = SAAD_baghdad_pact_signed.1 hours = 12 }
+        set_global_flag = baghdad_pact_signature
     }
 
     option = {
         name = SAAD_baghdad_pact_signed.0a
         custom_effect_tooltip = generic_skip_one_line_tt
+
         add_political_power = 50
         add_ideas = IRQ_saadabad_spheres_of_influence
+        
         custom_effect_tooltip = IRQ_saadabad_spheres_of_influence_tt
+        every_other_country = {
+            limit = {
+                is_in_faction_with = ROOT
+            }
+            country_event = SAAD_baghdad_pact_signed.1
+        }
     }
 }
 
@@ -39,19 +41,22 @@ country_event = {
     desc = SAAD_baghdad_pact_signed.1d
     picture = GFX_report_event_royal_parade
 
-    is_triggered_only = yes
     fire_only_once = yes
+    is_triggered_only = yes
 
     trigger = {
-    has_global_flag = baghdad_pact_signed
-    OR = {
-        tag = IRQ
-        tag = TUR
-        tag = AFG
+        OR = {
+            tag = IRQ
+            tag = PER
+            tag = AFG
+            tag = TUR
+        }
     }
-}
 
     option = {
+        ai_chance = {
+            base = 100
+		}
         name = SAAD_baghdad_pact_signed.1a
         custom_effect_tooltip = generic_skip_one_line_tt
         add_political_power = 50

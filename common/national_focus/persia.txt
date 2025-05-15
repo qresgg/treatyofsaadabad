@@ -6367,7 +6367,7 @@ focus_tree = {
 	}
 	focus = { #IMPERIAL
 		id = PER_second_sasanian_empire
-		icon = GFX_focus_PER_third_persian_empire
+		icon = GFX_focus_PER_second_sasanian_empire
 		prerequisite = { focus = PER_his_fathers_footsteps }
 		mutually_exclusive = { focus = PER_third_persian_empire }
 		x = -1
@@ -7360,7 +7360,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = PER_clamp_kurdish_dissidence
-		mutually_exclusive = { focus = PER_venerate_islam }
+		mutually_exclusive = { focus = PER_venerate_islam focus = PER_revive_old_ways }
 		cost = 10
 
 		ai_will_do = {
@@ -7403,7 +7403,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = PER_clamp_kurdish_dissidence
-		mutually_exclusive = { focus = PER_state_atheism }
+		mutually_exclusive = { focus = PER_state_atheism focus = PER_revive_old_ways }
 		cost = 10
 
 		ai_will_do = {
@@ -7443,7 +7443,7 @@ focus_tree = {
 
 	focus = { #IMPERIAL
 		id = PER_lowkey_expansionism
-		icon = GFX_focus_PER_imperial_expansionism
+		icon = GFX_focus_PER_lowkey_expansionism
 		prerequisite = { focus = PER_assessing_the_opposition }
 		mutually_exclusive = { focus = PER_imperial_expansionism }
 		x = 6
@@ -7601,14 +7601,14 @@ focus_tree = {
 		y = 1
 		relative_position_id = PER_lowkey_expansionism
 
-		cost = 0
+		cost = 7
 
 		ai_will_do = {
 			base = 1
 		}
-		available = {
-			has_idea = IRQ_saadabad_spheres_of_influence
-		}
+		# bypass = {
+		# 	has_idea = IRQ_saadabad_spheres_of_influence
+		# }
 
 		# TREBA
 		# allow_branch = { 
@@ -7622,15 +7622,17 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
+			PER = { country_event = SAAD_baghdad_pact_signed.1 }
+			custom_effect_tooltip = IRQ_saadabad_spheres_of_influence_tt
 		}
 	}
 	focus = { #IMPERIAL
 		id = PER_revive_old_ways
 		icon = GFX_focus_PER_revive_old_ways
 		prerequisite = { focus = PER_lowkey_expansionism }
-		x = -4
-		y = 1
+		prerequisite = { focus = PER_clamp_azerbaijani_dissidence focus = PER_clamp_kurdish_dissidence }
+		x = -5
+		y = 2
 		relative_position_id = PER_lowkey_expansionism
 		mutually_exclusive = { focus = PER_state_atheism focus = PER_venerate_islam }
 		cost = 10
@@ -7748,7 +7750,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
+			## EVENT MUSANDAM +100POL +5% OR -5% STAB -50POL
 		}
 	}
 
@@ -7778,24 +7780,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			build_railway = {
-				level = 2
-				build_only_on_allied = no
-				fallback = yes
-
-				path = { 10837 7969 4553 12793 1896 }
-
-				start_province = 10837
-				target_province = 1896
-			}
-			1000 = {
-				add_building_construction = {
-					type = supply_node
-					level = 1
-					province = 1896
-					instant_build = yes
-				}
-			}
+			## EVENT +10% STAB +AZERB +ASHKHABAD OR +ASHKHABAD OR -10STAB + CLAIM
 		}
 	}
 	focus = {
@@ -7881,37 +7866,46 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
 		}
-		x = -1
+		x = -2
 		y = 1
+		cost = 5
+		completion_reward = {
+			add_timed_idea = {
+				idea = PER_war_plan_satrapies_idea
+				days = 730
+			}
+		}
 	}
 	focus = {
 		id = PER_campaing_return_historical_territory
 		icon = GFX_focus_generic_total_war
 		relative_position_id = PER_demand_musandam
-		prerequisite = { focus = PER_demand_musandam }
+		prerequisite = { focus = PER_war_plan_satrapies }
 		mutually_exclusive = { focus = PER_request_our_pact_territories }
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
 		}
 		x = -1
 		y = 3
+		cost = 10
 	}
 	focus = {
 		id = PER_request_our_pact_territories
 		icon = GFX_focus_generic_concessions
 		relative_position_id = PER_demand_musandam
-		prerequisite = { focus = PER_demand_musandam }
+		prerequisite = { focus = PER_war_plan_satrapies }
 		mutually_exclusive = { focus = PER_campaing_return_historical_territory }
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
 		}
 		x = -3
 		y = 3
+		cost = 10
 	}
 
 	focus = {
 		id = PER_war_plan_horoborrow
-		# icon = GFX_focus_PER_war_plan_horoborrow
+		icon = GFX_focus_PER_war_plan_horoborrow
 		relative_position_id = PER_demand_sov_territory
 		prerequisite = { focus = PER_demand_sov_territory }
 		search_filters = {
@@ -7919,6 +7913,13 @@ focus_tree = {
 		}
 		x = 2
 		y = 1
+		cost = 5
+		completion_reward = {
+			add_timed_idea = {
+				idea = PER_war_plan_horoborrow_idea
+				days = 730
+			}
+		}
 	}
 	focus = {
 		id = PER_red_danger
@@ -7930,6 +7931,7 @@ focus_tree = {
 		}
 		x = 0
 		y = 2
+		cost = 10
 	}
 	focus = {
 		id = PER_preparing_red_war
@@ -7941,10 +7943,32 @@ focus_tree = {
 		}
 		x = 0
 		y = 1
+		cost = 5
+		completion_reward = {
+			add_war_support = 0.05
+			build_railway = {
+				level = 2
+				build_only_on_allied = no
+				fallback = yes
+
+				path = { 10837 7969 4553 12793 1896 }
+
+				start_province = 10837
+				target_province = 1896
+			}
+			1000 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 1896
+					instant_build = yes
+				}
+			}
+		}
 	}
 	focus = {
 		id = PER_war_plan_musleew
-		# icon = GFX_focus_PER_war_plan_musleew
+		icon = GFX_focus_PER_war_plan_musleew
 		relative_position_id = PER_demand_sov_territory
 		prerequisite = { focus = PER_demand_sov_territory focus = PER_demand_musandam }
 		search_filters = {
@@ -7952,6 +7976,13 @@ focus_tree = {
 		}
 		x = -1
 		y = 1
+		cost = 5
+		completion_reward = {
+			add_timed_idea = {
+				idea = PER_war_plan_musleew_idea
+				days = 730
+			}
+		}
 	}
 	focus = {
 		id = PER_request_invasion_payments
@@ -7963,6 +7994,7 @@ focus_tree = {
 		}
 		x = 0
 		y = 2
+		cost = 10
 	}
 	focus = {
 		id = PER_help_islam_friends
@@ -7974,11 +8006,12 @@ focus_tree = {
 		}
 		x = 0
 		y = 1
+		cost = 5
 	}
 
 	focus = {
 		id = PER_restorer_eranshahr
-		# icon = GFX_focus_PER_war_plan_satrapies
+		icon = GFX_focus_PER_restorer_eranshahr
 		relative_position_id = PER_demand_musandam
 		prerequisite = { focus = PER_red_danger }
 		prerequisite = { focus = PER_red_danger }
@@ -7989,10 +8022,11 @@ focus_tree = {
 		}
 		x = 1
 		y = 4
+		cost = 5
 	}
 	focus = {
 		id = PER_reintegrate_transural
-		# icon = GFX_focus_PER_war_plan_satrapies
+		icon = GFX_goal_generic_position_armies
 		relative_position_id = PER_demand_musandam
 		prerequisite = { focus = PER_restorer_eranshahr }
 		available = {
@@ -8007,6 +8041,7 @@ focus_tree = {
 		}
 		x = 1
 		y = 5
+		cost = 10
 	}
 
 	
