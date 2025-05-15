@@ -28,6 +28,11 @@ country_event = {
         every_other_country = {
             limit = {
                 is_in_faction_with = ROOT
+                OR = {
+                    tag = TUR
+                    tag = IRQ
+                    tag = AFG
+                }
             }
             country_event = SAAD_baghdad_pact_signed.1
         }
@@ -43,15 +48,6 @@ country_event = {
 
     fire_only_once = yes
     is_triggered_only = yes
-
-    trigger = {
-        OR = {
-            tag = IRQ
-            tag = PER
-            tag = AFG
-            tag = TUR
-        }
-    }
 
     option = {
         ai_chance = {

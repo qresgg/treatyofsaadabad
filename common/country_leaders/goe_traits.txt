@@ -100,6 +100,18 @@ leader_traits = {
 			factor = 2
 		}
 	}
+	
+	PER_eranshahr_emperor = {
+		sprite = 5
+		justify_war_goal_time = -0.5
+		add_war_support = 0.15
+		political_power_gain = 0.2
+		army_core_defence_factor = 0.1
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
 
 	PER_shahanshah_trait = {
 		sprite = 5

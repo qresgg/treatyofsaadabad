@@ -7992,9 +7992,56 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
 		}
+		available = {
+			444 = {
+				OR = {
+					is_controlled_by = AFG
+					is_owned_by = AFG
+				}
+			}
+			1012 = {
+				OR = {
+					is_controlled_by = AFG
+					is_owned_by = AFG
+				}
+			}
+			443 = {
+				OR = {
+					is_controlled_by = AFG
+					is_owned_by = AFG
+				}
+			}
+			428 = {
+				OR = {
+					is_controlled_by = AFG
+					is_owned_by = AFG
+					
+				}
+			}
+		}
+
+		bypass = {
+			444 = {
+				is_owned_and_controlled_by = ROOT
+			}
+			1012 = {
+				is_owned_and_controlled_by = ROOT
+			}
+			443 = {
+				is_owned_and_controlled_by = ROOT
+			}
+			428 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
 		x = 0
 		y = 2
 		cost = 10
+		completion_reward = {
+			effect_tooltip = {
+				## EVENT IRAN REQUESTS SOUTH PAKISTAN
+			}
+		}
 	}
 	focus = {
 		id = PER_help_islam_friends
@@ -8007,6 +8054,19 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 5
+		completion_reward = {
+			AFG = {
+				add_stability = 0.05
+				add_war_support = 0.05
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			ROOT = {
+				create_wargoal = {
+					type = annex_everything
+					target = RAJ
+				}
+			}
+		}
 	}
 
 	focus = {
@@ -8016,18 +8076,22 @@ focus_tree = {
 		prerequisite = { focus = PER_red_danger }
 		prerequisite = { focus = PER_red_danger }
 		prerequisite = { focus = PER_request_our_pact_territories focus = PER_campaing_return_historical_territory }
-		mutually_exclusive = { focus = PER_war_plan_satrapies }
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
 		}
 		x = 1
-		y = 4
+		y = 5
 		cost = 5
+		completion_reward = {
+			add_country_leader_trait = {
+				trait = PER_eranshahr_emperor
+			}
+		}
 	}
 	focus = {
 		id = PER_reintegrate_transural
 		icon = GFX_goal_generic_position_armies
-		relative_position_id = PER_demand_musandam
+		relative_position_id = PER_restorer_eranshahr
 		prerequisite = { focus = PER_restorer_eranshahr }
 		available = {
 			OR = {
@@ -8039,8 +8103,8 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
 		}
-		x = 1
-		y = 5
+		x = 0
+		y = 1
 		cost = 10
 	}
 
