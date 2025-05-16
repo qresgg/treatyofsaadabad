@@ -61,24 +61,24 @@ country_event = {
     }
 }
 
-
 add_namespace = iran_soviet_crisis
 
-news_event = { #NEWS EVENT
-	id = iran_soviet_crisis.1
-	title = iran_soviet_crisis.1.t
-	desc = iran_soviet_crisis.1.d
-	picture = GFX_report_event_iran_soviet_border_crisis
+country_event = {
+    id = iran_soviet_crisis.1
+    title = iran_soviet_crisis.1.t
+    desc = iran_soviet_crisis.1.d
+    picture = GFX_report_event_iran_diplomacy
 
-	is_triggered_only = yes
+    is_triggered_only = yes
 
-	option = {
-		name = iran_soviet_crisis.1.a
+    option = {
+        name = iran_soviet_crisis.1.a
         ai_chance = { 
-            base = 100
-         }
-	}
-
+            base = 100 
+        }
+        # Send demand to SOV territories
+        SOV = { country_event = iran_soviet_crisis.sov_response }
+    }
 }
 
 
@@ -100,20 +100,12 @@ country_event = {
          }
 
 		SOV = {
-			add_political_power = -200
-			add_stability = -0.10
+			add_political_power = -50
+			add_stability = -0.05
 
 			change_relation = { target = IRN value = 50 }
 		}
-		PER = {
-			add_political_power = 100
-			add_stability = 0.05
-			add_war_support = 0.10
-
-			change_relation = { target = SOV value = 50 }
-		}
-        229 = { transfer_state_to = FROM } ## Мб забрати клейм ссср на території колишні
-        584 = { transfer_state_to = FROM } ## Мб забрати клейм ссср на території колишні
+        PER = { country_event = { id = iran_soviet_crisis.4 hours = 6} }
 	}
 
 	option = {
@@ -124,19 +116,10 @@ country_event = {
 
 
 		SOV = {
-			add_political_power = -100
-			add_stability = -0.05
-
+			add_political_power = -25
 			change_relation = { target = IRN value = 20 }
 		}
-		PER = {
-			add_political_power = 50
-			add_war_support = 0.05
-
-			change_relation = { target = SOV value = 20 }
-		}
-        584 = { transfer_state_to = FROM } ## Мб забрати клейм ссср на території колишні
-
+        PER = { country_event = { id = iran_soviet_crisis.3 hours = 6} }
 	}
 
 	option = {
@@ -147,19 +130,75 @@ country_event = {
 
 
 		SOV = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_political_power = 100
+			add_stability = 0.05
 
 			change_relation = { target = IRN value = -30 }
 		}
-		PER = {
+        PER = { country_event = { id = iran_soviet_crisis.5 hours = 6} }
+	}
+}
+country_event = { ## WE RECEIVED NOTHING
+    id = iran_soviet_crisis.5
+    title = iran_soviet_crisis.5.t
+    desc = iran_soviet_crisis.5.d
+    picture = GFX_report_event_iran_diplomacy
+
+    is_triggered_only = yes
+    option = {
+        name = iran_soviet_crisis.5.a
+        PER = {
 			add_political_power = -50
 			add_stability = -0.05
 
 			change_relation = { target = SOV value = -30 }
 		}
+        584 = { add_claim_by = ROOT }
+        229 = { add_claim_by = ROOT }
+    }
+}
 
-	}
+country_event = { ## WE RECEIVED ASHKHABAD
+    id = iran_soviet_crisis.3
+    title = iran_soviet_crisis.3.t
+    desc = iran_soviet_crisis.3.d
+    picture = GFX_report_event_iran_diplomacy
+
+    is_triggered_only = yes
+    option = {
+        name = iran_soviet_crisis.3.a
+        PER = {
+			add_political_power = 25
+			add_war_support = 0.05
+
+			change_relation = { target = SOV value = 20 }
+		}
+        584 = { transfer_state_to = ROOT }
+    }
+}
+
+country_event = { ## WE RECEIVED ASHKHABAD AND AZERBAIJAN
+    id = iran_soviet_crisis.4
+    title = iran_soviet_crisis.4.t
+    desc = iran_soviet_crisis.4.d
+    picture = GFX_report_event_iran_diplomacy
+
+    is_triggered_only = yes
+    option = {
+        name = iran_soviet_crisis.4.a
+        PER = {
+			add_political_power = 50
+			add_stability = 0.10
+
+			change_relation = { target = SOV value = 50 }
+		}
+        229 = { transfer_state_to = ROOT } 
+        584 = { transfer_state_to = ROOT } 
+        give_resource_rights = {
+            receiver = FROM
+            state = 229
+        }
+    }
 }
 
 # Event: Iran Demands Musandam
@@ -199,16 +238,12 @@ country_event = {
             base = 50
         }
 
-        294 = { transfer_state_to = FROM }
+        1013 = { transfer_state_to = FROM }
 
         PER = {
             add_political_power = 50
             change_relation = { target = OMA value = 25 }
             country_event = iran_sultanate_crisis.4
-        }
-        OMA = {
-            add_stability = -0.05
-            add_political_power = -50
         }
     }
 
@@ -220,6 +255,8 @@ country_event = {
 
         PER = {
             country_event = iran_sultanate_crisis.3
+            add_stability = -0.05
+            add_political_power = -50
         }
     }
 }
@@ -239,8 +276,7 @@ country_event = {
             base = 100
         }
 
-        add_political_power = 25
-        add_decision = iran_force_take_musandam
+        PER = { set_country_flag = oman_refused_musandam}
     }
 }
 
@@ -263,44 +299,181 @@ country_event = {
     }
 }
 
+add_namespace = baghdad_pact_conditions
 
+country_event = {
+    id = baghdad_pact_conditions.1
+    title = baghdad_pact_conditions.1.t
+    desc = baghdad_pact_conditions.1.d
+    picture = GFX_report_event_iran_victory
 
-# add_namespace = SAAD_baghdad_pact_signed
+    trigger = {
+        tag = IRQ
+        765 = {
+            OR = {
+                is_fully_controlled_by = IRQ 
+                is_fully_controlled_by = AFG
+                is_fully_controlled_by = TUR 
+                is_owned_by = IRQ
+                is_owned_by = TUR
+                is_owned_by = AFG
+                controller = { 
+                    is_puppet_of = IRQ 
+                }
+                controller = { 
+                    is_puppet_of = TUR
+                }
+                controller = { 
+                    is_puppet_of = AFG 
+                }
+            }
+        }
 
-# country_event = {
-#     id = SAAD_baghdad_pact_signed.1
-#     title = SAAD_baghdad_pact_signed.1t
-#     desc = SAAD_baghdad_pact_signed.1d
-#     picture = GFX_report_event_royal_parade ## ПОСТАВИТИ ФОТКУ ДЕ ПІДПИСУЮТЬ АКТ
+        1014 = {
+            OR = {
+                is_fully_controlled_by = IRQ 
+                is_fully_controlled_by = AFG
+                is_fully_controlled_by = TUR 
+                is_owned_by = IRQ
+                is_owned_by = TUR
+                is_owned_by = AFG
+                controller = { 
+                    is_puppet_of = IRQ 
+                }
+                controller = { 
+                    is_puppet_of = TUR
+                }
+                controller = { 
+                    is_puppet_of = AFG 
+                }
+            }
+        }
 
-#     mean_time_to_happen = {
-# 		days = 2
-# 	}
-#     trigger = {
-#         OR = {
-#             original_tag = IRQ
-#             original_tag = PER
-#             original_tag = TUR
-#             original_tag = AFG
-#         }
-#         has_global_flag = baghdad_pact_signed
-#     }
+        658 = {
+            OR = {
+                is_fully_controlled_by = IRQ 
+                is_fully_controlled_by = AFG
+                is_fully_controlled_by = TUR 
+                is_owned_by = IRQ
+                is_owned_by = TUR
+                is_owned_by = AFG
+                controller = { 
+                    is_puppet_of = IRQ 
+                }
+                controller = { 
+                    is_puppet_of = TUR
+                }
+                controller = { 
+                    is_puppet_of = AFG 
+                }
+            }
+        }
 
-#     is_triggered_only = yes
-# 	fire_only_once = yes
+        1013 = {
+            OR = {
+                is_fully_controlled_by = IRQ 
+                is_fully_controlled_by = AFG
+                is_fully_controlled_by = TUR 
+                is_owned_by = IRQ
+                is_owned_by = TUR
+                is_owned_by = AFG
+                controller = { 
+                    is_puppet_of = IRQ 
+                }
+                controller = { 
+                    is_puppet_of = TUR
+                }
+                controller = { 
+                    is_puppet_of = AFG 
+                }
+            }
+        }
 
-# 	# trigger = {
-# 	# 	has_global_flag = baghdad_pact_signed
-# 	# }
+        1015 = {
+            OR = {
+                is_fully_controlled_by = IRQ 
+                is_fully_controlled_by = AFG
+                is_fully_controlled_by = TUR 
+                is_owned_by = IRQ
+                is_owned_by = TUR
+                is_owned_by = AFG
+                controller = { 
+                    is_puppet_of = IRQ 
+                }
+                controller = { 
+                    is_puppet_of = TUR
+                }
+                controller = { 
+                    is_puppet_of = AFG 
+                }
+            }
+        }
 
-#     option = {
-#         # ai_chance = { 
-#         #     base = 100
-# 		# } не обов'язковоо, бо це єдиний варіант
-#         name = SAAD_baghdad_pact_signed.1a
-#         custom_effect_tooltip = generic_skip_one_line_tt
-#         add_political_power = 50
-#         add_ideas = IRQ_saadabad_spheres_of_influence
-#         custom_effect_tooltip = IRQ_saadabad_spheres_of_influence_tt
-#     }
-# }
+        294 = {
+            OR = {
+                is_fully_controlled_by = IRQ 
+                is_fully_controlled_by = AFG
+                is_fully_controlled_by = TUR 
+                is_owned_by = IRQ
+                is_owned_by = TUR
+                is_owned_by = AFG
+                controller = { 
+                    is_puppet_of = IRQ 
+                }
+                controller = { 
+                    is_puppet_of = TUR
+                }
+                controller = { 
+                    is_puppet_of = AFG 
+                }
+            }
+        }
+    }
+
+    option = {
+        name = baghdad_pact_conditions.1.a
+        ai_chance = { 
+            base = 100 
+        }
+        IRQ = { country_event = { id = baghdad_pact_conditions.2 hours = 6}}
+    }
+}
+
+country_event = {
+    id = baghdad_pact_conditions.2
+    title = baghdad_pact_conditions.2.t
+    desc = baghdad_pact_conditions.2.d
+    picture = GFX_report_event_iran_victory
+
+    is_triggered_only = yes
+
+    option = {
+        name = baghdad_pact_conditions.2.a
+        ai_chance = { 
+            base = 100 
+        }
+        PER = { country_event = baghdad_pact_conditions.3 }
+    }
+}
+
+country_event = {
+    id = baghdad_pact_conditions.3
+    title = baghdad_pact_conditions.3.t
+    desc = baghdad_pact_conditions.3.d
+    picture = GFX_report_event_iran_victory
+
+    is_triggered_only = yes
+
+    option = {
+        name = baghdad_pact_conditions.3.a
+        ai_chance = { 
+            base = 100 
+        }
+        765 = { transfer_state_to = ROOT }
+        1014 = { transfer_state_to = ROOT }
+        658 = { transfer_state_to = ROOT }
+        1013 = { transfer_state_to = ROOT }
+        1015 = { transfer_state_to = ROOT }
+        294 = { transfer_state_to = ROOT }
+    }
+}

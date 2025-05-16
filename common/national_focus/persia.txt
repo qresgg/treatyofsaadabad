@@ -7750,7 +7750,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			## EVENT MUSANDAM +100POL +5% OR -5% STAB -50POL
+			PER = { country_event = iran_sultanate_crisis.1 }
 		}
 	}
 
@@ -7762,7 +7762,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = PER_secret_baghdad_pact
 
-		cost = 10
+		cost = 1
 
 		ai_will_do = {
 			base = 1
@@ -7780,7 +7780,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			## EVENT +10% STAB +AZERB +ASHKHABAD OR +ASHKHABAD OR -10STAB + CLAIM
+			PER = { country_event = iran_soviet_crisis.1 }
 		}
 	}
 	focus = {
@@ -7888,6 +7888,16 @@ focus_tree = {
 		x = -1
 		y = 3
 		cost = 10
+		completion_reward = {
+			create_wargoal = {
+				target = OMA
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = ENG
+				type = annex_everything
+			}
+		}
 	}
 	focus = {
 		id = PER_request_our_pact_territories
@@ -7932,6 +7942,12 @@ focus_tree = {
 		x = 0
 		y = 2
 		cost = 10
+		completion_reward = {
+			create_wargoal = {
+				target = SOV
+				type = annex_everything
+			}
+		}
 	}
 	focus = {
 		id = PER_preparing_red_war
@@ -8084,7 +8100,7 @@ focus_tree = {
 		cost = 5
 		completion_reward = {
 			add_country_leader_trait = {
-				trait = PER_eranshahr_emperor
+				trait = PER_eranshahr_emperor_trait
 			}
 		}
 	}

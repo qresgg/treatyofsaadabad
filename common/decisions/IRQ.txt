@@ -121,7 +121,7 @@ IRQ_middle_east_reichprotectorate_cat = {
 	        }
 	    }
 	    on_map_mode = map_and_decisions_view 
-	    cost = 25		
+	    cost = 15		
 		fire_only_once = no
 		days_remove = 15
 

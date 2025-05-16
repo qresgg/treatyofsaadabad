@@ -7300,8 +7300,8 @@ form_sasanian_empire_category = {
 			}
 		}
 		complete_effect = {
-			set_country_flag = PER_sasanian_empire_flag
-			set_cosmetic_tag = PER_sasanian_empire
+			hidden_effect = { drop_cosmetic_tag = yes }
+			set_cosmetic_tag = PER_second_sasanian_empire
 			custom_effect_tooltip = form_country_cities_change_name_tt
 			hidden_effect = {
 				## PENINSULA
@@ -7317,14 +7317,14 @@ form_sasanian_empire_category = {
 				1013 = { set_state_name = "Jazirat al-Ghanam"}
 				add_victory_points = {
 					province = 13369
-					value = 3
+					value = 2
 				}
 				294 = { add_core_of = ROOT }
 				294 = { set_state_name = "Eastern Mazun"}
 				set_province_name = { id = 10760 name = "Moscha Portus"}
 				add_victory_points = {
 					province = 10760
-					value = 5
+					value = 4
 				}
 				add_victory_points = {
 					province = 4993

@@ -1,0 +1,35 @@
+add_namespace = iran_musandam_annexed
+
+news_event = { #NEWS EVENT
+	id = iran_musandam_annexed.1
+	title = iran_musandam_annexed.1.t
+	desc = iran_musandam_annexed.1.d
+	picture = GFX_report_event_iran_soviet_border_crisis
+
+	is_triggered_only = yes
+
+	option = {
+		name = iran_musandam_annexed.1.a
+        ai_chance = { 
+            base = 100
+         }
+	}
+}
+
+add_namespace = iran_soviet_crisis
+news_event = { #NEWS EVENT
+	id = iran_soviet_crisis.2
+	title = iran_soviet_crisis.2.t
+	desc = iran_soviet_crisis.2.d
+	picture = GFX_report_event_iran_soviet_border_crisis
+
+	is_triggered_only = yes
+
+	option = {
+		name = iran_soviet_crisis.2.a
+        ai_chance = { 
+            base = 100
+         }
+	}
+
+}

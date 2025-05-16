@@ -1,4 +1,18 @@
-
+political_actions = {
+	PER_iran_force_takes_musandam = {
+		visible = {
+			PER = {
+				has_country_flag = oman_refused_musandam
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			clr_country_flag = oman_refused_musandam
+			news_event = { id = iran_musandam_annexed.1}
+			1013 = { transfer_state_to = PER}
+		}
+	}
+}
 ##############################
 #### INDUSTRIAL DECISIONS ####
 ##############################
