@@ -8054,6 +8054,9 @@ focus_tree = {
 		y = 2
 		cost = 10
 		completion_reward = {
+			PER = {
+				country_event = { id = SAAD_afg_payments.1 hours = 12 }
+			}
 			effect_tooltip = {
 				## EVENT IRAN REQUESTS SOUTH PAKISTAN
 			}

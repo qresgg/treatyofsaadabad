@@ -1,63 +1,61 @@
 add_namespace = SAAD_baghdad_pact_signed
 
 country_event = {
-    id = SAAD_baghdad_pact_signed.0
-    title = SAAD_baghdad_pact_signed.0t
-    desc = SAAD_baghdad_pact_signed.0d
+    id = SAAD_baghdad_pact_signed.1
+    title = SAAD_baghdad_pact_signed.t
+    desc = SAAD_baghdad_pact_signed.d
     picture = GFX_report_event_royal_parade
 
     is_triggered_only = yes
-    fire_only_once = yes
-
-    trigger = {
-        tag = PER
-    }
+    fire_only_once = yes # This event should only fire once globally
 
     immediate = {
-        set_global_flag = baghdad_pact_signature
+        set_global_flag = baghdad_pact_signed
     }
 
     option = {
-        name = SAAD_baghdad_pact_signed.0a
+        name = SAAD_baghdad_pact_signed.a
         custom_effect_tooltip = generic_skip_one_line_tt
 
         add_political_power = 50
-        add_ideas = IRQ_saadabad_spheres_of_influence
-        
         custom_effect_tooltip = IRQ_saadabad_spheres_of_influence_tt
+        add_ideas = IRQ_saadabad_spheres_of_influence
+
         every_other_country = {
             limit = {
-                is_in_faction_with = ROOT
                 OR = {
-                    tag = TUR
-                    tag = IRQ
-                    tag = AFG
+                    is_in_faction_with = ROOT
+                    original_tag = TUR
+                    original_tag = PER
+                    original_tag = AFG
+                    original_tag = IRQ
                 }
             }
-            country_event = SAAD_baghdad_pact_signed.1
+            # This will fire SAAD_baghdad_pact_signed.2 for each valid country in the faction
+            country_event = { id = SAAD_baghdad_pact_signed.2 hours = 1 }
         }
     }
 }
 
-
 country_event = {
-    id = SAAD_baghdad_pact_signed.1
-    title = SAAD_baghdad_pact_signed.1t
-    desc = SAAD_baghdad_pact_signed.1d
+    id = SAAD_baghdad_pact_signed.2
+    title = SAAD_baghdad_pact_signed.member.t
+    desc = SAAD_baghdad_pact_signed.member.d
     picture = GFX_report_event_royal_parade
 
-    fire_only_once = yes
     is_triggered_only = yes
+    # REMOVED: fire_only_once = yes
+    # This event is triggered by SAAD_baghdad_pact_signed.1 and should fire for multiple countries.
+    # The 'trigger' block is also not needed for is_triggered_only events called directly.
 
     option = {
-        ai_chance = {
-            base = 100
-		}
-        name = SAAD_baghdad_pact_signed.1a
+        name = SAAD_baghdad_pact_signed.member.a
         custom_effect_tooltip = generic_skip_one_line_tt
+
         add_political_power = 50
-        add_ideas = IRQ_saadabad_spheres_of_influence
+        # It's good practice to put the custom tooltip right before the effect it describes
         custom_effect_tooltip = IRQ_saadabad_spheres_of_influence_tt
+        add_ideas = IRQ_saadabad_spheres_of_influence
     }
 }
 
@@ -475,5 +473,84 @@ country_event = {
         1013 = { transfer_state_to = ROOT }
         1015 = { transfer_state_to = ROOT }
         294 = { transfer_state_to = ROOT }
+    }
+}
+
+# Namespace for your events to prevent ID conflicts
+add_namespace = SAAD_afg_payments
+
+country_event = {
+    id = SAAD_afg_payments.1
+    title = SAAD_afg_payments.t
+    desc = SAAD_afg_payments.d
+    picture = GFX_report_event_national_focus_generic
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    trigger = {
+        444 = { is_controlled_by = AFG }
+        1012 = { is_controlled_by = AFG }
+        443 = { is_controlled_by = AFG }
+        428 = { is_controlled_by = AFG }
+    }
+
+    mean_time_to_happen = {
+    days = 10
+    }
+
+    immediate = {
+        set_global_flag = afghan_territory_transferred
+    }
+
+    
+
+    option = {
+        name = SAAD_afg_payments.a # "Афганістан погоджується"
+        custom_effect_tooltip = SAAD_afg_payments.a_tt
+
+        hidden_effect = {
+            444 = {
+                owner = {
+                    444 = {
+                    transfer_state_to = ROOT
+                    }
+                    give_core = ROOT # ROOT отримує претензію на цей штат
+                    remove_core = PREV # Попередній власник (AFG або його маріонетка) втрачає претензію
+                }
+            }
+            1012 = {
+                owner = {
+                    1012 = {
+                    transfer_state_to = ROOT
+                    }
+                    give_core = ROOT
+                    remove_core = PREV
+                }
+            }
+            443 = {
+                owner = {
+                    443 = {
+                    transfer_state_to = ROOT
+                    }
+                    give_core = ROOT
+                    remove_core = PREV
+                }
+            }
+            428 = {
+                owner = {
+                    428 = {
+                    transfer_state_to = ROOT
+                    }
+                    give_core = ROOT
+                    remove_core = PREV
+                }
+            }
+
+            add_political_power = 75
+            AFG = { add_political_power = -50 }
+            
+            AFG = { add_opinion = { target = ROOT modifier = afg_territory_transfer_negative } }
+        }
     }
 }
