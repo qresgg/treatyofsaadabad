@@ -1,0 +1,6 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_autonomy_sheikhdom_icon"
+        textureFile = "gfx/interface/autonomy/autonomy_sheikhdom_icon.dds"
+    }
+}

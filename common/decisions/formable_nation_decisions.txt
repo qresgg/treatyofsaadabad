@@ -7358,7 +7358,7 @@ form_sasanian_empire_category = {
 			}
 		}
 	}
-	integrate_azerbaijani = {
+	integrate_adurbagadan = {
 		icon = generic_form_nation
 		visible = {
 			OR = {
@@ -7370,9 +7370,29 @@ form_sasanian_empire_category = {
 				original_tag = PER
 			}
 		}
+		available = {
+			is_subject = no
+			custom_trigger_tooltip = {
+				controls_state = 229
+				controls_state = 230
+				controls_state = 233
+				controls_state = 826
+				controls_state = 231
+				controls_state = 827
+				controls_state = 828
+				controls_state = 821
+			}
+		}
 		highlight_states = {
 			highlight_state_targets = {
 				state = 229
+				state = 230
+				state = 233
+				state = 826
+				state = 231
+				state = 827
+				state = 828
+				state = 821
 			}
 		}
 	}
@@ -7409,7 +7429,6 @@ form_sasanian_empire_category = {
 		highlight_states = {
 			highlight_state_targets = {
 				state = 232
-				state = 821
 				state = 237
 				state = 245
 				state = 265
@@ -7417,8 +7436,6 @@ form_sasanian_empire_category = {
 				state = 236
 				state = 829
 				state = 260
-				state = 827
-				state = 828
 				state = 238
 				state = 235
 			}
@@ -8326,12 +8343,6 @@ form_neo_byzantine_empire_category = {
 				
 				## ru
 				state = 234
-				state = 233
-
-				## GEORGIA
-				state = 826
-				state = 231
-				state = 230 ## ARMENIA 
 			}
 		}
 	}

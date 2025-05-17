@@ -86,6 +86,7 @@ ideas = {
 		}
 	
 		IRQ_without_real_leader = {
+			picture = chi_war_of_resistance3
 			allowed = {
 				original_tag = IRQ
 			}

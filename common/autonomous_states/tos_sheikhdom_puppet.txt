@@ -35,11 +35,11 @@ autonomy_state = {
 	}
 	
 	ai_subject_wants_higher = {
-		factor = 1.0
+		factor = 0
 	}
 	
 	ai_overlord_wants_lower = {
-		factor = 0.0
+		factor = 1.0
 	}
 
 	ai_overlord_wants_garrison = {
@@ -47,8 +47,26 @@ autonomy_state = {
 	}
 
 	allowed = {
+		OR = {
+			original_tag = SAU
+			original_tag = EGY
+			original_tag = PAL
+			original_tag = SYR
+			original_tag = KUW
+			original_tag = OMA
+			original_tag = YEM
+			original_tag = ETH
+			original_tag = MOR
+			original_tag = LBA
+			original_tag = TUN
+			original_tag = ALG
+			original_tag = JOR
+		}
 		OVERLORD = { 
-			has_government = fascism
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
 			original_tag = IRQ
 			has_completed_focus = IRQ_african_arab_revolt
 		}

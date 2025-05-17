@@ -305,7 +305,7 @@ PER_selling_guns_category = {
 PER_buying_fabrics_category = {
 	PER_buying_mil_fabric = {
 		icon = GFX_decision_generic_factory
-		cost = 300
+		cost = 250
 		complete_effect = {
 			limit = {
 					free_building_slots = {
@@ -328,7 +328,7 @@ PER_buying_fabrics_category = {
 	}
 	PER_buying_civ_fabric = {
 		icon = GFX_decision_generic_factory
-		cost = 300
+		cost = 250
 		complete_effect = {
 			limit = {
 					free_building_slots = {

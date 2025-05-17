@@ -81,7 +81,6 @@ IF = {
 	recruit_character = IRQ_jamil_abdul_wahab
 	recruit_character = IRQ_fawsi_al_kaukji
 	recruit_character = IRQ_mahmud_salman
-	recruit_character = IRQ_iraqi_fascist_wing
 	recruit_character = IRQ_hikmat_suleiman
 	recruit_character = IRQ_tawfiq_al_suawaidi
 	recruit_character = IRQ_husain_al_rahhal

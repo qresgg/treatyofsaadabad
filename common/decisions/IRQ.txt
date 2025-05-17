@@ -691,7 +691,7 @@ IRQ_african_arab_revolt_cat = {
 		target_root_trigger = {
 			original_tag = IRQ
 		}
-		targets = { LBA EGY MOR TUN ALG SAU YEM}
+		targets = { LBA EGY MOR TUN ALG SAU YEM KUW JOR PAL SYR ETH }
 		visible = {
 			original_tag = IRQ
 			has_completed_focus = IRQ_integrate_arabian_puppet_states

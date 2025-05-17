@@ -7709,10 +7709,10 @@ focus_tree = {
 	focus = {
 		id = IRQ_open_form_arabia
 		icon = GFX_focus_IRQ_proclaim_united_arab_republic
-		prerequisite = { focus = IRQ_liberate_north_africa focus = IRQ_african_arab_revolt }
-		x = 2
-		y = 1
-		relative_position_id = IRQ_liberate_north_africa
+		prerequisite = { focus = IRQ_rally_the_arab_world }
+		x = 1
+		y = 2
+		relative_position_id = IRQ_rally_the_arab_world
 
 		cost = 8
 
@@ -9685,20 +9685,22 @@ focus = {
 
     completion_reward = {
 		retire_country_leader = yes
+		custom_effect_tooltip = generic_skip_one_line_tt
 
-			IRQ_iraqi_fascist_wing = {
-				add_country_leader_role = {
-					country_leader = {
-						ideology = fascism_ideology
-						expire = "1965.1.1"
-						traits = { IRQ_social_reformer_pm }
-					}
-					promote_leader = yes
-				} 
-			}
+		IRQ_iraqi_fascist_wing = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology = fascism_ideology
+					expire = "1965.1.1"
+				}
+				promote_leader = yes
+			} 
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
 	
 		add_ideas = IRQ_without_real_leader
 
+		custom_effect_tooltip = generic_skip_one_line_tt
 		set_politics = {
 			ruling_party = fascism
 			elections_allowed = no

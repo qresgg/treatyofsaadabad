@@ -31,5 +31,4 @@ news_event = { #NEWS EVENT
             base = 100
          }
 	}
-
 }
