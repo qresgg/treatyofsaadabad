@@ -1,6 +1,6 @@
 spriteTypes = {
-	spriteType = {
-		name = "GFX_portrait_iraq_fascist_wing"
-		texturefile = "gfx/leaders/IRQ/Portrait_Albania_King_Zog.dds"
-	}
+#->  IRQ <><>
+	spriteType = { name = "GFX_Portrait_IRAQ_Fascist_Wing" texturefile = "gfx/leaders/IRQ/Portrait_IRAQ_Fascist_Wing.dds" }
+#->  COUNTRY_TAG <><>
+
 }
