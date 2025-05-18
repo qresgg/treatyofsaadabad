@@ -301,5 +301,9 @@
  nor_building_ship: "Currently Converting Ships"
 
 ## FORM DECISIONS
-form_country_mazun_required_states_tt: "Controlls all §YMazun§! state. It including §YMusandam§!, §YBahrain§!, §YAbu-Dhabi§!, §YQatar§!, §YOman§! and §YMuscat§! regions"
-form_country_cities_change_name_tt: "Some cities will be renamed to their historical names from §Ythe Sasanian era.§!"
+form_sasanian_mazun_required_states_tt: "Controlls all §YMazun§! states. It including §YMusandam§!, §YBahrain§!, §YAbu-Dhabi§!, §YQatar§!, §YOman§! and §YMuscat§! regions"
+form_sasanian_cities_change_name_tt: "Some cities will be renamed to their historical names from §Ythe Sasanian era.§!"
+form_sasanian_integrate_warzan_tt: "Controls all §YWarzan§! states"
+form_sasanian_integrate_makran_tt: "Controls all §YMakran§! states"
+form_sasanian_integrate_anartta_tt: "Controls §YAnartta§! region"
+form_sasanian_integrate_marv_region_tt: "Controls §YMarv§! region"

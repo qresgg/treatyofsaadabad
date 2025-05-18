@@ -24,7 +24,7 @@ PER_selling_guns_category = {
 	}
 
 	visible = {
-		
+		has_completed_focus = PER_selling_guns
 	}
 }
 
@@ -39,7 +39,7 @@ PER_buying_fabrics_category = {
 	}
 
 	visible = {
-		
+		has_completed_focus = PER_buying_fabrics
 	}
 }
 

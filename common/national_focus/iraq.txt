@@ -7709,10 +7709,11 @@ focus_tree = {
 	focus = {
 		id = IRQ_open_form_arabia
 		icon = GFX_focus_IRQ_proclaim_united_arab_republic
-		prerequisite = { focus = IRQ_rally_the_arab_world }
-		x = 1
-		y = 2
-		relative_position_id = IRQ_rally_the_arab_world
+		prerequisite = { focus = IRQ_unlock_form_mesopotamia }
+		prerequisite = { focus = IRQ_ask_for_the_reunification_of_yemen focus = IRQ_partition_of_saudi_arabia}
+		x = 6
+		y = 1
+		relative_position_id = IRQ_unlock_form_mesopotamia
 
 		cost = 8
 
@@ -7723,10 +7724,8 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_government = fascism
-			907 = { is_controlled_by = ROOT}
-			448 = { is_controlled_by = ROOT}
-			458 = { is_controlled_by = ROOT}
-			461 = { is_controlled_by = ROOT}
+			293 = { is_controlled_by = ROOT}
+			292 = { is_controlled_by = ROOT}
 		}
 
 		bypass = {

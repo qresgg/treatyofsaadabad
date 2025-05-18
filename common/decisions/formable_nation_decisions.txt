@@ -7263,7 +7263,7 @@ form_sasanian_empire_category = {
 			}
 			custom_trigger_tooltip = {
 				## PENINSULA
-				tooltip = form_country_mazun_required_states_tt
+				tooltip = form_sasanian_mazun_required_states_tt
 				controls_state = 1014 ## BAHRAIN
 				controls_state = 765 ## QATAR
 				controls_state = 658 ## ABU DHABI
@@ -7302,7 +7302,7 @@ form_sasanian_empire_category = {
 		complete_effect = {
 			hidden_effect = { drop_cosmetic_tag = yes }
 			set_cosmetic_tag = PER_second_sasanian_empire
-			custom_effect_tooltip = form_country_cities_change_name_tt
+			custom_effect_tooltip = form_sasanian_cities_change_name_tt
 			hidden_effect = {
 				## PENINSULA
 				1014 = { add_core_of = ROOT }
@@ -7358,7 +7358,7 @@ form_sasanian_empire_category = {
 			}
 		}
 	}
-	integrate_adurbagadan = {
+	integrate_warzan = {
 		icon = generic_form_nation
 		visible = {
 			OR = {
@@ -7373,30 +7373,47 @@ form_sasanian_empire_category = {
 		available = {
 			is_subject = no
 			custom_trigger_tooltip = {
-				controls_state = 229
-				controls_state = 230
-				controls_state = 233
-				controls_state = 826
-				controls_state = 231
-				controls_state = 827
-				controls_state = 828
-				controls_state = 821
+				tooltip = form_sasanian_integrate_warzan_tt
+				controls_state = 229 ## AZER
+				controls_state = 230 ## ARME
+				controls_state = 231 ## GEOR
 			}
 		}
 		highlight_states = {
 			highlight_state_targets = {
 				state = 229
 				state = 230
-				state = 233
-				state = 826
 				state = 231
-				state = 827
-				state = 828
-				state = 821
+			}
+		}
+		visible = {
+			AND = {
+				has_cosmetic_tag = PER_second_sasanian_empire
+				has_completed_focus = PER_demand_sov_territory
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = form_sasanian_cities_change_name_tt
+			hidden_effect = {
+				## ARMENIA
+				230 = { add_core_of = ROOT }
+				230 = { set_state_name = "Armin" }
+				set_province_name = { id = 12320 name = "Erebuni" }
+				set_province_name = { id = 12441 name = "Kumayri" }
+				## GEORGIA
+				231 = { add_core_of = ROOT }
+				231 = { set_state_name = "Kartii" }
+				set_province_name = { id = 3653 name = "Bathus" }
+				set_province_name = { id = 1599 name = "Tp'ilisi" }
+				## AZERBAIJANI
+				229 = { add_core_of = ROOT }
+				229 = { set_state_name = "Arran"}
+				set_province_name = { id = 7661 name = "Bagavan" }
+				set_province_name = { id = 11674 name = "Partav" }
 			}
 		}
 	}
-	integrate_ashkhabad = {
+	integrate_merv_region = {
 		icon = generic_form_nation
 		visible = {
 			OR = {
@@ -7413,6 +7430,36 @@ form_sasanian_empire_category = {
 				state = 584
 			}
 		}
+		available = {
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = form_sasanian_integrate_marv_region_tt
+				controls_state = 584
+			}
+		}
+		visible = {
+			AND = {
+				has_cosmetic_tag = PER_second_sasanian_empire
+				has_completed_focus = PER_demand_sov_territory
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				## ASHKHABAD
+				584 = { add_core_of = ROOT }
+				584 = { set_state_name = "Marv region" }
+				add_victory_points = {
+					province = 12333
+					value = 3
+				}
+				set_province_name = { id = 12333 name = "Mehrabad"}
+				add_victory_points = {
+					province = 7477
+					value = 2
+				}
+				set_province_name = { id = 7477 name = "Gurgān-i-Khurāsān"}
+			}
+		}
 	}
 	integrate_ma_wara_bab_al_abwab = {
 		icon = generic_form_nation
@@ -7426,6 +7473,13 @@ form_sasanian_empire_category = {
 				original_tag = PER
 			}
 		}
+		visible = {
+			has_cosmetic_tag = PER_second_sasanian_empire
+		}
+				#controls_state = 827 ## NALCHIK
+				#controls_state = 828 ## NORTH OSSETIA
+				#controls_state = 821 ## CHECHYNA
+				#controls_state = 233 ## SOCHI
 		highlight_states = {
 			highlight_state_targets = {
 				state = 232
@@ -7438,6 +7492,9 @@ form_sasanian_empire_category = {
 				state = 260
 				state = 238
 				state = 235
+				state = 827
+				state = 828
+				state = 821
 			}
 		}
 	}
@@ -7452,6 +7509,9 @@ form_sasanian_empire_category = {
 			OR = {
 				original_tag = PER
 			}
+		}
+		visible = {
+			has_cosmetic_tag = PER_second_sasanian_empire
 		}
 		highlight_states = {
 			highlight_state_targets = {
@@ -7478,6 +7538,9 @@ form_sasanian_empire_category = {
 			OR = {
 				original_tag = PER
 			}
+		}
+		visible = {
+			has_cosmetic_tag = PER_second_sasanian_empire
 		}
 		highlight_states = {
 			highlight_state_targets = {
@@ -7508,6 +7571,9 @@ form_sasanian_empire_category = {
 				original_tag = PER
 			}
 		}
+		visible = {
+			has_cosmetic_tag = PER_second_sasanian_empire
+		}
 		highlight_states = {
 			highlight_state_targets = {
 				state = 402
@@ -7530,6 +7596,9 @@ form_sasanian_empire_category = {
 				original_tag = PER
 			}
 		}
+		visible = {
+			has_cosmetic_tag = PER_second_sasanian_empire
+		}
 		highlight_states = {
 			highlight_state_targets = {
 				state = 586
@@ -7541,7 +7610,7 @@ form_sasanian_empire_category = {
 			}
 		}
 	}
-	integrate_shark_karachi = {
+	integrate_makran = {
 		icon = generic_form_nation
 		visible = {
 			OR = {
@@ -7553,12 +7622,50 @@ form_sasanian_empire_category = {
 				original_tag = PER
 			}
 		}
+		visible = {
+			AND = {
+				has_cosmetic_tag = PER_second_sasanian_empire
+				has_completed_focus = PER_request_invasion_payments
+			}
+		}
+		available = {
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = form_sasanian_integrate_makran_tt
+				controls_state = 444
+				controls_state = 1012
+				controls_state = 443
+			}
+			custom_trigger_tooltip = {
+				tooltip = form_sasanian_integrate_anartta_tt
+				controls_state = 428
+			}
+		}
 		highlight_states = {
 			highlight_state_targets = {
 				state = 444
 				state = 1012
 				state = 443
 				state = 428
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = form_sasanian_cities_change_name_tt
+			hidden_effect = {
+				444 = { set_state_name = "West Makran" }
+				1012 = { set_state_name = "North Makran" }
+				443 = { set_state_name = "East Makran" }
+				428 = { set_state_name = "Anartta" }
+
+				1012 = { add_core_of = ROOT }
+				444 = { add_core_of = ROOT }
+
+				428 = { add_core_of = ROOT }
+				set_province_name = { id = 10118 name = "Gujjarān" }
+				set_province_name = { id = 9975 name = "Vallabh" }
+				443 = { add_core_of = ROOT }
+				set_province_name = { id = 3456 name = "Debal" }
+				set_province_name = { id = 8098 name = "Qalʿa-i Makran" }
 			}
 		}
 	}
@@ -8298,24 +8405,14 @@ form_neo_byzantine_empire_category = {
 		highlight_states = {
 			highlight_state_targets = {
 				## ROMANIA
-				state = 83
-				state = 84
 				state = 79
 				state = 766
-				state = 76
 				state = 78
-				state = 154 ## HUN
-				state = 73 ## CZE
-
-				## UKRAINE
 				state = 80
-				state = 89 
-				state = 91 
-				state = 199
-				state = 198
+
+				## SOUTH UKRAINE
 				state = 834
 				state = 192
-				state = 203
 				state = 197
 			}
 		}
@@ -8334,7 +8431,6 @@ form_neo_byzantine_empire_category = {
 		highlight_states = {
 			highlight_state_targets = {
 				## UKRAINE
-				state = 226	
 				state = 196
 				state = 200
 				state = 227
@@ -8343,6 +8439,8 @@ form_neo_byzantine_empire_category = {
 				
 				## ru
 				state = 234
+				state = 233
+				state = 826
 			}
 		}
 	}

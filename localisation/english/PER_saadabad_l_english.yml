@@ -32,99 +32,6 @@
 
 l_english:
 
-  PER_reintegrate_transural:0 "Reintegrate Transural"
-  PER_reintegrate_transural_desc:0 "The Transural region, once part of our sphere, must be reintegrated into the Iranian realm."
-
-  PER_restorer_eranshahr:0 "Restore Eranshahr"
-  PER_restorer_eranshahr_desc:0 "Eranshahr, the cultural and imperial vision of Greater Iran, shall be restored."
-
-  PER_expand_uae_oil:0 "Expand UAE Oil Fields"
-  PER_expand_uae_oil_desc:0 "We must exploit the rich oil deposits of the UAE for the benefit of our nation."
-
-  PER_found_fars_chromium:0 "Establish Fars Chromium Mines"
-  PER_found_fars_chromium_desc:0 "The Fars region contains valuable chromium reserves essential for military industry."
-
-  PER_campaing_return_historical_territory:0 "Campaign for Historical Territory"
-  PER_campaing_return_historical_territory_desc:0 "We must stir nationalist fervor to reclaim territories that rightfully belong to Iran."
-
-  PER_request_our_pact_territories:0 "Request Our Pact Territories"
-  PER_request_our_pact_territories_desc:0 "The time has come to claim territories promised to us in past agreements."
-
-  PER_red_danger:0 "Red Danger"
-  PER_red_danger_desc:0 "Communist ideology threatens the integrity of Iran. We must resist the Red tide."
-
-  PER_request_invasion_payments:0 "Demand Invasion Reparations"
-  PER_request_invasion_payments_desc:0 "We will demand compensation for the damages caused by foreign interventions."
-
-  PER_found_bahrain_oil:0 "Establish Bahrain Oil Industry"
-  PER_found_bahrain_oil_desc:0 "We shall develop Bahrain's untapped oil fields under Iranian administration."
-
-  PER_found_qatar_oil:0 "Establish Qatar Oil Industry"
-  PER_found_qatar_oil_desc:0 "Qatar's resources will be exploited to fuel our economic expansion."
-
-  PER_expand_tehran_aluminium_miners:0 "Expand Tehran Aluminum Mining"
-  PER_expand_tehran_aluminium_miners_desc:0 "Increasing aluminum production near Tehran will support our growing industrial base."
-
-  PER_expand_ishafan_chromium_miners:0 "Expand Isfahan Chromium Mines"
-  PER_expand_ishafan_chromium_miners_desc:0 "Isfahan’s rich deposits of chromium must be mined to empower our arms production."
-
-  PER_preparing_red_war:0 "Prepare for the Red War"
-  PER_preparing_red_war_desc:0 "We must ready ourselves for an inevitable clash with the communist forces."
-
-  PER_help_islam_friends:0 "Aid Islamic Allies"
-  PER_help_islam_friends_desc:0 "Support for our Islamic brothers abroad will strengthen our ideological alliances."
-
-  PER_global_resource_expansion:0 "Global Resource Expansion"
-  PER_global_resource_expansion_desc:0 "Iran will take its place as a key player in the global resource market."
-
-  PER_war_plan_satrapies:0 "War Plan: Satrapies"
-  PER_war_plan_satrapies_desc:0 "We will revive the satrap system to manage newly conquered territories with firm control."
-
-  PER_war_plan_horoborrow:0 "War Plan: Horoborow"
-  PER_war_plan_horoborrow_desc:0 "A classified military campaign directed toward destabilizing hostile regimes."
-
-  PER_war_plan_musleew:0 "War Plan: Musleww"
-  PER_war_plan_musleew_desc:0 "A strategic offensive targeting a specific axis of resistance in our region."
-
-  PER_demand_musandam:0 "Demand Musandam"
-  PER_demand_musandam_desc:0 "We shall demand the Musandam Peninsula and extend our influence over the Strait of Hormuz."
-
-  PER_demand_sov_territory:0 "Demand Soviet Territory"
-  PER_demand_sov_territory_desc:0 "Iran must reclaim the lands unjustly occupied by the Soviets in the north."
-
-  PER_found_saadabad_university:0 "Found Saadabad University"
-  PER_found_saadabad_university_desc:0 "A national university in Saadabad will become a beacon of Iranian knowledge and prestige."
-
-  PER_revive_old_ways:0 "Revive the Old Ways"
-  PER_revive_old_ways_desc:0 "Iran shall return to traditional values and ancient institutions that once made it great."
-
-  PER_selling_guns:0 "Export Arms"
-  PER_selling_guns_desc:0 "Our weapons industry will thrive by supplying global conflicts with Iranian-made arms."
-
-  PER_buying_fabrics:0 "Import Military Fabrics"
-  PER_buying_fabrics_desc:0 "To sustain the war effort, we must secure foreign sources of military fabrics and uniforms."
-
-  PER_profit_from_the_war:0 "Profit from the War"
-  PER_profit_from_the_war_desc:0 "Even in chaos, opportunity arises. Iran will grow rich by exploiting wartime markets."
-
-  PER_second_sasanian_empire:0 "Proclaim Second Sassanian Empire"
-  PER_second_sasanian_empire_desc:0 "Let the world witness the rebirth of Persian glory as we proclaim the Second Sassanian Empire."
-
-  PER_regional_reconstruction_fabrics:0 "Reconstruct Regional Fabric Industry"
-  PER_regional_reconstruction_fabrics_desc:0 "We will rebuild textile industries across our regions to serve both civilian and military needs."
-
-  PER_regional_reconstruction_military:0 "Reconstruct Regional Military Industry"
-  PER_regional_reconstruction_military_desc:0 "Strengthening regional military factories will boost local development and national security."
-
-  PER_secret_baghdad_pact:0 "Secret Baghdad Pact"
-  PER_secret_baghdad_pact_desc:0 "A clandestine agreement will be forged in Baghdad to secure Iran's strategic interests."
-
-  PER_international_legion:0 "Form International Legion"
-  PER_international_legion_desc:0 "Volunteers from across the world will join the Iranian cause in a unified fighting force."
-
-  PER_lowkey_expansionism:0 "Low-Key Expansionism"
-  PER_lowkey_expansionism_desc:0 "Through subtle influence and soft power, we will quietly extend Iran's borders."
-
   ## ideas
 
   PER_buying_fabrics_category:0 "Import Fabrics"
@@ -148,14 +55,17 @@ l_english:
   PER_sell_support_equipment:0 "Sell Support Equipment"
   PER_sell_support_equipment_desc:0 "We will export communication gear, logistics tools, and engineering kits to foreign buyers."
 
-  form_sasanian_empire:0 "Form the Sassanian Empire"
-  form_sasanian_empire_desc:0 "With our power consolidated and our legacy reclaimed, it is time to restore the glory of the Sassanian Empire."
+  form_sasanian_empire_category:0 "Sasanian Empire"
+  form_sasanian_empire_category_desc:0 "Sasanian Empire"
 
-  integrate_adurbagadan:0 "Integrate Adurbagadan"
-  integrate_adurbagadan_desc:0 "We shall reintegrate Adurbagadan, a core province of ancient Persia, into our modern dominion."
+  form_sasanian_empire:0 "Form the Sasanian Empire"
+  form_sasanian_empire_desc:0 "With our power consolidated and our legacy reclaimed, it is time to restore the glory of the Sasanian Empire."
 
-  integrate_ashkhabad:0 "Integrate Ashkhabad"
-  integrate_ashkhabad_desc:0 "Ashkhabad lies on the frontier of our civilization. It must be brought back under Iranian governance."
+  integrate_warzan:0 "Integrate Warzan"
+  integrate_warzan_desc:0 "We shall reintegrate Warzan, a core province of ancient Persia, into our modern dominion."
+
+  integrate_merv_region:0 "Integrate Merv region"
+  integrate_merv_region_desc:0 "Merv region lies on the frontier of our civilization. It must be brought back under Iranian governance."
 
   integrate_ma_wara_bab_al_abwab:0 "Integrate Ma Wara Bab al-Abwab"
   integrate_ma_wara_bab_al_abwab_desc:0 "This historical region beyond the Gates of the Caucasus holds strategic and symbolic importance."
@@ -169,19 +79,19 @@ l_english:
   integrate_desht_i_kypchak:0 "Integrate Desht-i-Kypchak"
   integrate_desht_i_kypchak_desc:0 "This vast steppe was once under our reach. We shall reintegrate Desht-i-Kypchak into our empire."
 
-  integrate_shark_turkistani:0 "Integrate Eastern Turkestan"
-  integrate_shark_turkistani_desc:0 "We will bring Eastern Turkestan into the fold, strengthening our strategic position in Central Asia."
+  integrate_shark_turkistani:0 "Integrate Shark Turkestan"
+  integrate_shark_turkistani_desc:0 "We will bring Shark Turkestan into the fold, strengthening our strategic position in Central Asia."
 
-  integrate_shark_karachi:0 "Integrate Eastern Karachi"
-  integrate_shark_karachi_desc:0 "The eastern territories near Karachi hold economic and strategic value. They must be integrated into our domain."
+  integrate_makran:0 "Integrate Makran"
+  integrate_makran_desc:0 "The eastern territories near Makran hold economic and strategic value. They must be integrated into our domain."
 
-  PER_war_plan_satrapies_idea:0 "War Plan: Satrapies"
+  PER_war_plan_satrapies_idea:0 "War Plan Satrapies"
   PER_war_plan_satrapies_idea_desc:0 "We have revived the ancient system of satrapies to administer future conquests. This plan strengthens our resolve against England and Oman, though it may stir unrest at home."
 
-  PER_war_plan_musleew_idea:0 "War Plan: Musleew"
+  PER_war_plan_musleew_idea:0 "War Plan Musleew"
   PER_war_plan_musleew_idea_desc:0 "Preparations have been made for an eastern campaign against British India. This plan focuses on military advantages in the region, at the cost of some domestic stability."
 
-  PER_war_plan_horoborrow_idea:0 "War Plan: Horoborow"
+  PER_war_plan_horoborrow_idea:0 "War Plan Horoborow"
   PER_war_plan_horoborrow_idea_desc:0 "Our generals are drawing up plans for a direct confrontation with the Soviet Union. Aggression comes with a price, but our military gains an edge."
 
   # IRAN - MUSANDAM ANNEXATION

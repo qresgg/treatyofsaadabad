@@ -7804,7 +7804,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
+			custom_effect_tooltip = PER_export_arms_tt
 		}
 	}
 	focus = {
@@ -7828,7 +7828,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
+			custom_effect_tooltip = PER_import_military_fabrics_tt
 		}
 	}
 	focus = { #INDUSTRIAL
@@ -7911,6 +7911,9 @@ focus_tree = {
 		x = -3
 		y = 3
 		cost = 10
+		completion_reward = {
+			custom_effect_tooltip = PER_request_out_pact_territories_tt
+		}
 	}
 
 	focus = {
@@ -8107,25 +8110,25 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = PER_reintegrate_transural
-		icon = GFX_goal_generic_position_armies
-		relative_position_id = PER_restorer_eranshahr
-		prerequisite = { focus = PER_restorer_eranshahr }
-		available = {
-			OR = {
-				has_government = fascism
-				has_government = neutrality
-			}
-			has_completed_focus = PER_revive_old_ways
-		}
-		search_filters = {
-			FOCUS_FILTER_TREATYOFSAADABAD
-		}
-		x = 0
-		y = 1
-		cost = 10
-	}
+	# focus = {
+	# 	id = PER_reintegrate_transural
+	# 	icon = GFX_goal_generic_position_armies
+	# 	relative_position_id = PER_restorer_eranshahr
+	# 	prerequisite = { focus = PER_restorer_eranshahr }
+	# 	available = {
+	# 		OR = {
+	# 			has_government = fascism
+	# 			has_government = neutrality
+	# 		}
+	# 		has_completed_focus = PER_revive_old_ways
+	# 	}
+	# 	search_filters = {
+	# 		FOCUS_FILTER_TREATYOFSAADABAD
+	# 	}
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 10
+	# }
 
 	
 
