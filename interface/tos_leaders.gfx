@@ -1,0 +1,4 @@
+spriteTypes = {
+	#->  IRQ <><>
+	spriteType = { name = GFX_portrait_IRQ_fascist_wing texturefile = "gfx/leaders/IRQ/tos_portrait_IRQ_fascist_wing.dds" }
+}

@@ -7751,6 +7751,7 @@ focus_tree = {
 
 		completion_reward = {
 			PER = { country_event = iran_sultanate_crisis.1 }
+			custom_effect_tooltip = PER_open_new_decisions_to_form_sasanian_tt
 		}
 	}
 
@@ -7781,6 +7782,7 @@ focus_tree = {
 
 		completion_reward = {
 			PER = { country_event = iran_soviet_crisis.1 }
+			custom_effect_tooltip = PER_open_new_decisions_to_form_sasanian_tt
 		}
 	}
 	focus = {
@@ -7795,6 +7797,9 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+		}
+		available = {
+			is_subject = no
 		}
 
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_TREATYOFSAADABAD }
@@ -7819,6 +7824,9 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+		}
+		available = {
+			is_subject = no
 		}
 
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_TREATYOFSAADABAD }
@@ -8060,9 +8068,7 @@ focus_tree = {
 			PER = {
 				country_event = { id = SAAD_afg_payments.1 hours = 12 }
 			}
-			effect_tooltip = {
-				## EVENT IRAN REQUESTS SOUTH PAKISTAN
-			}
+			custom_effect_tooltip = PER_open_new_decisions_to_form_sasanian_tt
 		}
 	}
 	focus = {

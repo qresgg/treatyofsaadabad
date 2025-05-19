@@ -2,17 +2,15 @@ characters = {
 
     ##### MODS ######
     IRQ_iraqi_fascist_wing = {
-        instance = {
-			name = IRQ_iraqi_fascist_wing
-			country_leader = {
-				ideology = fascism_ideology
-				expire = "1965.1.1.1"
-				id = -1
-			}
-			portraits = {
-				civilian = {
-					large = GFX_portrait_IRQ_fascist_wing
-				}
+        name = IRQ_iraqi_fascist_wing
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IRQ/tos_portrait_IRQ_fascist_wing.dds"
 			}
 		}
     }

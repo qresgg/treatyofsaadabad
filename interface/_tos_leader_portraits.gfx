@@ -1,6 +1,0 @@
-spriteTypes = {
-#->  IRQ <><>
-	spriteType = { name = "GFX_Portrait_IRAQ_Fascist_Wing" texturefile = "gfx/leaders/IRQ/Portrait_IRAQ_Fascist_Wing.dds" }
-#->  COUNTRY_TAG <><>
-
-}

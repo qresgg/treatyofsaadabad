@@ -75,11 +75,10 @@ ideas = {
 			allowed = {
 				original_tag = IRQ
 			}
-			picture = generic_agrarian_society
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = GFX_idea_fascism
+			picture = generic_fascism_drift_bonus
 			modifier = {
 				fascism_drift = 0.05
 			}
@@ -92,7 +91,7 @@ ideas = {
 			}
 			modifier = {
 				political_power_gain = -0.5
-				stability_weekly = -0.015
+				stability_weekly = -0.005
 			}
 		}
 
@@ -140,6 +139,7 @@ ideas = {
 		}
 
 		IRQ_raising_iraqi_fascists = {
+			picture = generic_fascism_drift_bonus
 			allowed = {
 				original_tag = SAU
 			}

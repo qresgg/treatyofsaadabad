@@ -7299,6 +7299,7 @@ form_sasanian_empire_category = {
 				state = 294
 			}
 		}
+		fire_only_once = yes
 		complete_effect = {
 			hidden_effect = { drop_cosmetic_tag = yes }
 			set_cosmetic_tag = PER_second_sasanian_empire
@@ -7443,6 +7444,7 @@ form_sasanian_empire_category = {
 				has_completed_focus = PER_demand_sov_territory
 			}
 		}
+		fire_only_once = yes
 		complete_effect = {
 			hidden_effect = {
 				## ASHKHABAD
@@ -7461,7 +7463,7 @@ form_sasanian_empire_category = {
 			}
 		}
 	}
-	integrate_ma_wara_bab_al_abwab = {
+	integrate_varena_xsaora = {
 		icon = generic_form_nation
 		visible = {
 			OR = {
@@ -7476,10 +7478,39 @@ form_sasanian_empire_category = {
 		visible = {
 			has_cosmetic_tag = PER_second_sasanian_empire
 		}
-				#controls_state = 827 ## NALCHIK
-				#controls_state = 828 ## NORTH OSSETIA
-				#controls_state = 821 ## CHECHYNA
-				#controls_state = 233 ## SOCHI
+		available = {
+			is_subject = no
+			custom_trigger_tooltip = {
+				### NW Spahan-rud
+				tooltip = form_sasanian_integrate_varena_xsaora_spahan_rud_tt
+				controls_state = 238
+				controls_state = 245
+				controls_state = 260
+				controls_state = 265
+			}
+			custom_trigger_tooltip = {
+				### NE Abar-Rudan
+				tooltip = form_sasanian_integrate_varena_xsaora_abar_rudan_tt
+				controls_state = 237
+				controls_state = 236
+				controls_state = 217
+				controls_state = 829
+			}
+			custom_trigger_tooltip = {
+				### SW Gurgan-daz
+				tooltip = form_sasanian_integrate_varena_xsaora_gurgan_daz_tt
+				controls_state = 827
+				controls_state = 828
+				controls_state = 235
+			}
+			custom_trigger_tooltip = {
+				### SE Varnagird
+				tooltip = form_sasanian_integrate_varena_xsaora_varnagird_tt
+				controls_state = 232
+				controls_state = 821
+			}
+		}
+		fire_only_once = yes
 		highlight_states = {
 			highlight_state_targets = {
 				state = 232
@@ -7495,6 +7526,51 @@ form_sasanian_empire_category = {
 				state = 827
 				state = 828
 				state = 821
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				232 = { add_core_of = ROOT }
+				232 = { set_state_name = "Varəna-abādagān"}
+				set_province_name = { id = 7624 name = "Darband"}
+				set_province_name = { id = 6701 name = "Vārāz-Ardāšīr"}
+				237 = { add_core_of = ROOT }
+				237 = { set_state_name = "Dašt-i-Sūkhta"}
+				set_province_name = { id = 11724 name = "Dasht-i-Hun"}
+				245 = { add_core_of = ROOT }
+				245 = { set_state_name = "Duzakān"}
+				set_province_name = { id = 11476 name = "Ābād-i-Kang"}
+				265 = { add_core_of = ROOT }
+				265 = { set_state_name = "Sūrānābād"}
+				set_province_name = { id = 487 name = "Sūrānābād"}
+				217 = { add_core_of = ROOT }
+				217 = { set_state_name = "Rūdān-Mehr"}
+				set_province_name = { id = 3529 name = Rūdān-i-Hun}
+				236 = { add_core_of = ROOT }
+				236 = { set_state_name = "Ābādān-i-Kasp"}
+				set_province_name = { id = 9753 name = "Āstarkān"}
+				829 = { add_core_of = ROOT }
+				829 = { set_state_name = "Ābān-Varəna"}
+				set_province_name = { id = 11523 name = "Ābān-Varena"}
+				set_province_name = { id = 9432 name = "Ādurbād-šahr"}
+				260 = { add_core_of = ROOT }
+				260 = { set_state_name = "Varan-daryā"}
+				set_province_name = { id = 413 name = "Varnāk"}
+				238 = { add_core_of = ROOT }
+				238 = { set_state_name = "Sardārān"}
+				set_province_name = { id = 775 name = "Sārān"}
+				235 = { add_core_of = ROOT }
+				235 = { set_state_name = "Varnāspād"}
+				set_province_name = { id = 11696 name = "Pahlavān-gird"}
+				827 = { add_core_of = ROOT }
+				827 = { set_state_name = "Rūdān-i-Deylam"}
+				set_province_name = { id = 11614 name = "Alān-gird"}
+				828 = { add_core_of = ROOT }
+				828 = { set_state_name = "Alān-šahr"}
+				set_province_name = { id = 9628 name = "Aspān-i-Rōxšan"}
+				821 = { add_core_of = ROOT }
+				821 = { set_state_name = "Spāhān-Kavād"}
+				set_province_name = { id = 3672 name = "Dāz-Ābād"}
 			}
 		}
 	}

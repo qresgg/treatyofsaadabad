@@ -174,3 +174,4 @@
   PER_request_out_pact_territories_tt: "When §Y[IRQ.GetNameWithFlag]§! becomes controller or owner our historical territories, we will get them"
   PER_import_military_fabrics_tt: "Unlocks Decision: §YImport Military Fabrics§! which allow Iran to buy fabrics from abroad and instantaneous build them for political power"
   PER_export_arms_tt: "Unlocks Decision: §YExport Arms§! which allow Iran to export weapons for political power"
+  PER_open_new_decisions_to_form_sasanian_tt: "Unlocks Decision which allow §YSasanian Empire§! to expand their territories"

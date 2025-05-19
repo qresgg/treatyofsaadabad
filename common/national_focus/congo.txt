@@ -4518,6 +4518,19 @@ focus_tree = {
 
 	}
 
+	focus = { 
+		id = COG_mythical_path_killmonger
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		relative_position_id = COG_found_the_congolese_national_movement
+		x = 1
+		y = 7
+		mutually_exclusive = { focus = COG_the_lion_roars focus = COG_kasa_vubus_first_cabinet }
+	}
+	
+	focus = {
+
+	}
+
 	focus = {
 		id = COG_kasa_vubus_first_cabinet
 		icon = GFX_focus_BRA_reach_out_to_military_dem						
@@ -4527,7 +4540,7 @@ focus_tree = {
 
 		#prerequisite = { focus = COG_attempt_to_centralize_the_state focus = COG_allow_local_autonomy }
 
-		mutually_exclusive = { focus = COG_the_lion_roars focus = COG_assemble_a_regency_council }
+		mutually_exclusive = { focus = COG_the_lion_roars focus = COG_mythical_path_killmonger }
 
 		relative_position_id = COG_found_the_congolese_national_movement
 
@@ -4672,7 +4685,7 @@ focus_tree = {
 
 		#prerequisite = { focus = COG_attempt_to_centralize_the_state focus = COG_allow_local_autonomy }
 
-		mutually_exclusive = { focus = COG_kasa_vubus_first_cabinet focus = COG_assemble_a_regency_council }
+		mutually_exclusive = { focus = COG_kasa_vubus_first_cabinet focus = COG_mythical_path_killmonger }
 
 		relative_position_id = COG_found_the_congolese_national_movement
 

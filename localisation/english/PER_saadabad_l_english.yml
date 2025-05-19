@@ -84,16 +84,7 @@ l_english:
 
   integrate_makran:0 "Integrate Makran"
   integrate_makran_desc:0 "The eastern territories near Makran hold economic and strategic value. They must be integrated into our domain."
-
-  PER_war_plan_satrapies_idea:0 "War Plan Satrapies"
-  PER_war_plan_satrapies_idea_desc:0 "We have revived the ancient system of satrapies to administer future conquests. This plan strengthens our resolve against England and Oman, though it may stir unrest at home."
-
-  PER_war_plan_musleew_idea:0 "War Plan Musleew"
-  PER_war_plan_musleew_idea_desc:0 "Preparations have been made for an eastern campaign against British India. This plan focuses on military advantages in the region, at the cost of some domestic stability."
-
-  PER_war_plan_horoborrow_idea:0 "War Plan Horoborow"
-  PER_war_plan_horoborrow_idea_desc:0 "Our generals are drawing up plans for a direct confrontation with the Soviet Union. Aggression comes with a price, but our military gains an edge."
-
+  
   # IRAN - MUSANDAM ANNEXATION
 iran_musandam_annexed.1.t:0 "Iran Annexes Musandam"
 iran_musandam_annexed.1.d:0 "Iran has declared sovereignty over the Musandam Peninsula, citing strategic necessity and historical claims."
