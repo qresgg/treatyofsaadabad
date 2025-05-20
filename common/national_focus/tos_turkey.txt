@@ -1,4 +1,4 @@
-focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
+focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 	id = turkish_focus_tos
 
 	country = {
@@ -378,7 +378,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 				limit = {
 					has_completed_focus = TUR_consolidate_the_chp
 				}
-				unlock_decision_tooltip = r56_TUR_teach_the_sun_language_theory
+				unlock_decision_tooltip = tos_TUR_teach_the_sun_language_theory
 			}
 		}
 		search_filters = { FOCUS_FILTER_TUR_KEMALISM }
@@ -1134,7 +1134,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 				}
 				has_tech = grand_battle_plan
 				has_tech = pocket_defence
-				has_tech = r56_double_envelopment
+				has_tech = tos_double_envelopment
 			}
 		}
 
@@ -1503,19 +1503,19 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 				name = special_forces_bonus
 				bonus = 0.75
 				uses = 2
-				category = r56_desert_infantry_tech
-				category = r56_jaeger_infantry_tech
-				category = r56_jungle_infantry_tech
-				category = r56_marines_infantry_tech
-				category = r56_mountain_infantry_tech
-				category = r56_paratroops_infantry_tech	
-				category = r56_shock_infantry_tech
+				category = tos_desert_infantry_tech
+				category = tos_jaeger_infantry_tech
+				category = tos_jungle_infantry_tech
+				category = tos_marines_infantry_tech
+				category = tos_mountain_infantry_tech
+				category = tos_paratroops_infantry_tech	
+				category = tos_shock_infantry_tech
 			}
 			add_tech_bonus = {
                 name = special_forces_bonus
                 bonus = 0.75
                 uses = 2
-                category = r56_special_forces_training_tech 
+                category = tos_special_forces_training_tech 
             } 
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
@@ -2092,7 +2092,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 				value = 0.25
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-            add_ideas = r56_generic_radar_idea
+            add_ideas = tos_generic_radar_idea
 		}
 	}
 	
@@ -2185,7 +2185,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	}
 	
 	focus = {
-		id = TUR_r56_the_path_of_the_wolf
+		id = TUR_tos_the_path_of_the_wolf
 		icon = GFX_goal_generic_wolf_pack
 		prerequisite = { focus = TUR_doctrinal_advancement }
 
@@ -2200,7 +2200,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 		
 		completion_reward = {
 			add_tech_bonus = {
-				name = TUR_r56_the_path_of_the_wolf
+				name = TUR_tos_the_path_of_the_wolf
 				bonus = 1
 				uses = 1
 				category = ss_tech
@@ -2210,7 +2210,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 					has_dlc = "Man the Guns"
 				}
 				add_tech_bonus = {
-					name = TUR_r56_the_path_of_the_wolf
+					name = TUR_tos_the_path_of_the_wolf
 					bonus = 0.75
 					uses = 1
 					category = torpedo_equipment
@@ -2320,11 +2320,11 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	focus = {
 		id = TUR_modern_sub_surface_peripherals
 		icon = GFX_goal_generic_navy_anti_submarine
-		prerequisite = { focus = TUR_r56_the_path_of_the_wolf	}
+		prerequisite = { focus = TUR_tos_the_path_of_the_wolf	}
 
 		x = 0
 		y = 1
-		relative_position_id = TUR_r56_the_path_of_the_wolf
+		relative_position_id = TUR_tos_the_path_of_the_wolf
 		cost = 10
 
 		ai_will_do = {
@@ -2563,7 +2563,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 			add_political_power = 80
 			add_stability = 0.03
 			add_war_support = 0.05
-			unlock_decision_tooltip = r56_TUR_hail_to_the_marshal
+			unlock_decision_tooltip = tos_TUR_hail_to_the_marshal
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_TUR_KEMALISM }
 	}
@@ -2606,8 +2606,8 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 				}
 				promote_leader = yes
 			}
-			unlock_decision_tooltip = r56_TUR_emphasize_the_need_for_opposition
-			unlock_decision_tooltip = r56_TUR_end_the_cult_of_personality
+			unlock_decision_tooltip = tos_TUR_emphasize_the_need_for_opposition
+			unlock_decision_tooltip = tos_TUR_end_the_cult_of_personality
 		}
 		search_filters = { FOCUS_FILTER_TUR_KEMALISM }
 	}
@@ -2707,7 +2707,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 				remove_ideas = TUR_traumatized_nation_3
 			}
 			add_timed_idea = {
-				idea = TUR_r56_expand_land_reform_idea
+				idea = TUR_tos_expand_land_reform_idea
 				days = 365
 			}
 		}
@@ -3245,7 +3245,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 				limit = {
 					has_completed_focus = TUR_village_institutes_program
 				}
-				unlock_decision_tooltip = r56_TUR_teach_the_sun_language_theory
+				unlock_decision_tooltip = tos_TUR_teach_the_sun_language_theory
 			}
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_TUR_KEMALISM }
@@ -3341,7 +3341,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 		}
 
 		completion_reward = {
-			add_ideas = TUR_r56_varlik_vergisi
+			add_ideas = TUR_tos_varlik_vergisi
 		}
 		search_filters = { FOCUS_FILTER_TUR_KEMALISM }
 	}
@@ -3456,7 +3456,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 		}
 
 		completion_reward = {
-			add_ideas = TUR_r56_turkish_grain_board_idea
+			add_ideas = TUR_tos_turkish_grain_board_idea
 			if = {
 				limit = {
 					NOT = {
@@ -3548,7 +3548,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 				}
 				news_event = {
 					hours = 8
-					id = r56.news_event.10
+					id = tos.news_event.10
 				}
 			}
 			custom_effect_tooltip = available_political_advisor
@@ -3912,21 +3912,21 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 			}
 			353 = {
 				remove_dynamic_modifier = {
-					modifier = r56tree_kurdish_separatism
+					modifier = tostree_kurdish_separatism
 				}
 				add_dynamic_modifier = {
-					modifier = r56tree_limited_kurdish_separatism
+					modifier = tostree_limited_kurdish_separatism
 				}
 			}
 			800 = {
 				remove_dynamic_modifier = {
-					modifier = r56tree_kurdish_separatism
+					modifier = tostree_kurdish_separatism
 				}
 				add_dynamic_modifier = {
-					modifier = r56tree_limited_kurdish_separatism
+					modifier = tostree_limited_kurdish_separatism
 				}
 			}
-			unlock_decision_tooltip = r56_TUR_rally_across_the_countryside
+			unlock_decision_tooltip = tos_TUR_rally_across_the_countryside
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_TUR_TRADITIONALISM }
 	}
@@ -3951,7 +3951,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 		completion_reward = {
 			add_political_power = 90
 			add_war_support = 0.03
-			unlock_decision_tooltip = r56_TUR_rally_across_the_countryside
+			unlock_decision_tooltip = tos_TUR_rally_across_the_countryside
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_TUR_TRADITIONALISM }
 	}
@@ -3979,18 +3979,18 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 			}
 			353 = {
 				remove_dynamic_modifier = {
-					modifier = r56tree_kurdish_separatism
+					modifier = tostree_kurdish_separatism
 				}
 				add_dynamic_modifier = {
-					modifier = r56tree_limited_kurdish_separatism
+					modifier = tostree_limited_kurdish_separatism
 				}
 			}
 			800 = {
 				remove_dynamic_modifier = {
-					modifier = r56tree_kurdish_separatism
+					modifier = tostree_kurdish_separatism
 				}
 				add_dynamic_modifier = {
-					modifier = r56tree_limited_kurdish_separatism
+					modifier = tostree_limited_kurdish_separatism
 				}
 			}
 		}
@@ -4053,7 +4053,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 					remove_ideas = TUR_regional_leadership_idea
 				}		
 			}
-			custom_effect_tooltip = r56_newline
+			custom_effect_tooltip = tos_newline
 			set_party_name = { 
 				ideology = democratic
 				long_name = TUR_neutrality_party_long
@@ -4127,7 +4127,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 					}
 				}
 			}
-			custom_effect_tooltip = r56_newline
+			custom_effect_tooltip = tos_newline
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = TUR_nuri_killigil
 			show_ideas_tooltip = TUR_riza_nur
@@ -4222,7 +4222,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 				}
 				set_capital = { state = 797 }
 			}
-			custom_effect_tooltip = r56_newline
+			custom_effect_tooltip = tos_newline
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = TUR_ali_ihsan_sabis
 			custom_effect_tooltip = available_military_high_command
@@ -4462,7 +4462,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 				}
 				add_core_of = ROOT
 				remove_dynamic_modifier = {
-					modifier = r56tree_limited_kurdish_separatism
+					modifier = tostree_limited_kurdish_separatism
 				}
 			}
 		}
@@ -4560,7 +4560,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 				custom_trigger_tooltip = { tooltip = TUR_one_persian_ottoman_war_to_end_them_all_requirement_tt }
 				PER = {
 					if = {
-						limit = { has_focus_tree = R56_persian_focus }
+						limit = { has_focus_tree = tos_persian_focus }
 						OR = {
 							has_completed_focus = PER_strategic_nationalizations
 							has_completed_focus = PER_nationalize_aioc
@@ -5785,7 +5785,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 			else = {
 				add_stability = 0.075
 			}
-			unlock_decision_tooltip = r56_TUR_end_inonus_cult_of_personality
+			unlock_decision_tooltip = tos_TUR_end_inonus_cult_of_personality
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_TUR_TRADITIONALISM }
 	}
@@ -5837,7 +5837,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 				}
 				add_core_of = ROOT
 				remove_dynamic_modifier = {
-					modifier = r56tree_limited_kurdish_separatism
+					modifier = tostree_limited_kurdish_separatism
 				}
 			}
 		}
@@ -6082,7 +6082,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 							modifier = semi_autonomous_state
 						}
 						remove_dynamic_modifier = {
-							modifier = r56tree_limited_kurdish_separatism
+							modifier = tostree_limited_kurdish_separatism
 						}
 					}
 				}
@@ -6102,7 +6102,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 						modifier = semi_autonomous_state
 					}
 					remove_dynamic_modifier = {
-						modifier = r56tree_limited_kurdish_separatism
+						modifier = tostree_limited_kurdish_separatism
 					}
 				}
 			}
@@ -6439,10 +6439,10 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 					}
 				}
 				remove_dynamic_modifier = {
-					modifier = r56tree_kurdish_separatism
+					modifier = tostree_kurdish_separatism
 				}
 			}
-			custom_effect_tooltip = r56_newline
+			custom_effect_tooltip = tos_newline
 			hidden_effect = {
 				every_other_country = {
 					limit = {
@@ -6529,7 +6529,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 						set_war_support = 0.75
 						load_oob = "TUR_Civil_War_neutrality"
 						load_focus_tree = { tree = turkish_focus keep_completed = no }
-						unlock_national_focus = TUR_the_montreux_convention_r56
+						unlock_national_focus = TUR_the_montreux_convention_tos
 						unlock_national_focus = TUR_continue_the_moderate_course
 						save_event_target_as = kemalist_turkey
 					}
@@ -6624,7 +6624,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 						set_war_support = 0.75
 						load_oob = "TUR_Civil_War_neutrality"
 						load_focus_tree = { tree = turkish_focus keep_completed = no }
-						unlock_national_focus = TUR_the_montreux_convention_r56
+						unlock_national_focus = TUR_the_montreux_convention_tos
 						unlock_national_focus = TUR_continue_the_moderate_course
 						save_event_target_as = kemalist_turkey
 					}
@@ -6817,7 +6817,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 						modifier = semi_autonomous_state
 					}
 					remove_dynamic_modifier = {
-						modifier = r56tree_limited_kurdish_separatism
+						modifier = tostree_limited_kurdish_separatism
 					}
 				}
 			}
@@ -6945,19 +6945,19 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 			if = {
 				limit = {
 					NOT = {
-						has_idea = r56i_laws_social_hierarchy
-						has_idea = r56i_laws_social_revolutionary
-						has_idea = r56i_laws_social_diversity
-						has_idea = r56i_laws_social_unity
+						has_idea = tosi_laws_social_hierarchy
+						has_idea = tosi_laws_social_revolutionary
+						has_idea = tosi_laws_social_diversity
+						has_idea = tosi_laws_social_unity
 					}
 					NOT = {
 						has_global_flag = NATIONAL_CHARACTERS_BLOCKED
 					}
 				}
-				custom_effect_tooltip = EFFECT_CHANGE_LAW_r56i_social_order
-				show_ideas_tooltip = r56i_laws_social_revolutionary
+				custom_effect_tooltip = EFFECT_CHANGE_LAW_tosi_social_order
+				show_ideas_tooltip = tosi_laws_social_revolutionary
 				hidden_effect = {
-					add_ideas = r56i_laws_social_revolutionary
+					add_ideas = tosi_laws_social_revolutionary
 				}
 			}
 			custom_effect_tooltip = TUR_expand_the_village_institutes_program_tt
@@ -7041,7 +7041,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	############################
 
 	focus = {
-		id = TUR_the_montreux_convention_r56
+		id = TUR_the_montreux_convention_tos
 		icon = GFX_focus_TUR_the_montreux_convention
 		text = TUR_the_montreux_convention
 		x = 40
@@ -7167,9 +7167,9 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 		id = TUR_neutrality_through_deterrence
 		icon = GFX_goal_generic_military_sphere
 		cost = 10
-		prerequisite = { focus = TUR_the_montreux_convention_r56 }
+		prerequisite = { focus = TUR_the_montreux_convention_tos }
 		mutually_exclusive = { focus = TUR_bicontinental_intervention }
-		relative_position_id = TUR_the_montreux_convention_r56
+		relative_position_id = TUR_the_montreux_convention_tos
 		x = -3
 		y = 1
 		allow_branch = {
@@ -7415,7 +7415,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 		icon = GFX_focus_chi_mission_to_the_soviet_union
 		cost = 5
 		prerequisite = { focus = TUR_neutrality_through_deterrence }
-		relative_position_id = TUR_the_montreux_convention_r56
+		relative_position_id = TUR_the_montreux_convention_tos
 		x = -7
 		y = 2
 		offset = {
@@ -7536,7 +7536,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 		icon = GFX_focus_chi_mission_to_germany
 		cost = 5
 		prerequisite = { focus = TUR_neutrality_through_deterrence }
-		relative_position_id = TUR_the_montreux_convention_r56
+		relative_position_id = TUR_the_montreux_convention_tos
 		x = -4
 		y = 2
 		offset = {
@@ -7628,9 +7628,9 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 		id = TUR_bicontinental_intervention
 		icon = GFX_goal_generic_territory_or_war
 		cost = 10
-		prerequisite = { focus = TUR_the_montreux_convention_r56 }
+		prerequisite = { focus = TUR_the_montreux_convention_tos }
 		mutually_exclusive = { focus = TUR_neutrality_through_deterrence }
-		relative_position_id = TUR_the_montreux_convention_r56
+		relative_position_id = TUR_the_montreux_convention_tos
 		x = 3
 		y = 1
 		offset = {
