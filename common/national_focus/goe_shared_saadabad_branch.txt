@@ -76,8 +76,8 @@ joint_focus = {
     }
 
 	offset = {
-		x = -10
-		y = 0
+		x = 40
+		y = 5
 		trigger = {
 			tag = TUR
 		}

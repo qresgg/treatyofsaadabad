@@ -18,6 +18,8 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 
 	continuous_focus_position = { x = 250 y = 585 }	
 
+	shared_focus = SSB_the_saadabad_pact
+
 	############################
 	#### INDUSTRIAL SECTION ####
 	############################
@@ -149,7 +151,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_expand_the_izmir_cement_industry
-		icon = GFX_focus_generic_expansion_of_new_towns
+		icon = GFX_focus_generic_military_industry
 		prerequisite = {
 			focus = TUR_expand_the_aegean_economic_heartland
 		}
@@ -186,7 +188,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_middle_east_institute_of_technology
-		icon = GFX_goal_research_silver_cooperation
+		icon = GFX_focus_research
 		prerequisite = {
 			focus = TUR_expand_the_izmir_cement_industry
 		}
@@ -265,7 +267,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_connecting_the_eastern_provinces
-		icon = GFX_goal_generic_train_2
+		icon = GFX_focus_generic_railroad
 		prerequisite = {
 			focus = TUR_continue_the_push_for_autarky
 		}
@@ -356,7 +358,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_village_institutes_program
-		icon = GFX_goal_generic_education
+		icon = GFX_focus_generic_farmland
 		prerequisite = {
 			focus = TUR_connecting_the_eastern_provinces
 		}
@@ -384,7 +386,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_eradicate_rural_illiteracy
-		icon = GFX_goal_research_silver
+		icon = GFX_focus_research
 		prerequisite = {
 			focus = TUR_village_institutes_program
 		}
@@ -422,7 +424,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_the_industrialization_of_central_anatolia
-		icon = GFX_goal_generic_construction_tools
+		icon = GFX_focus_generic_industry_3
 		prerequisite = {
 			focus = TUR_connecting_the_eastern_provinces
 		}
@@ -452,7 +454,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_black_sea_grain_exports
-		icon = GFX_goal_navy_funding
+		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = {
 			focus = TUR_the_industrialization_of_central_anatolia
 		}
@@ -488,7 +490,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_exploit_the_sivas_iron_mines
-		icon = GFX_goal_generic_railroad
+		icon = GFX_focus_generic_steel
 		prerequisite = {
 			focus = TUR_the_industrialization_of_central_anatolia 
 		}
@@ -577,7 +579,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_drill_southeast_anatolia
-		icon = GFX_goal_desert_oil
+		icon = GFX_focus_generic_resource_extraction
 		prerequisite = {
 			focus = TUR_connecting_the_eastern_provinces
 		}
@@ -622,7 +624,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 		}
 		
 		available = {
-			has_tech = construction4
+			has_tech = construction3
 			has_full_control_of_state = 350
 		}
 
@@ -641,7 +643,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_central_anatolian_heavy_industry
-		icon = GFX_focus_generic_steel
+		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = {
 			focus = TUR_exploit_the_sivas_iron_mines
 		}
@@ -658,7 +660,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 		}
 		
 		available = {
-			has_tech = construction4
+			has_tech = construction3
 			has_full_control_of_state = 49
 			has_full_control_of_state = 355
 			has_full_control_of_state = 349
@@ -677,15 +679,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 1
-					instant_build = yes
-				}	
-			}
-			349 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = steel_mill
-					level = 1
+					level = 2
 					instant_build = yes
 				}	
 			}
@@ -712,7 +706,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 		}
 		
 		available = {
-			has_tech = construction4
+			has_tech = construction3
 			has_full_control_of_state = 344
 		}
 
@@ -770,7 +764,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_tenmak
-		icon = GFX_goal_CAN_montreal_lab
+		icon = GFX_focus_research2
 		prerequisite = {
 			focus = TUR_implement_western_electronics
 		}
@@ -1019,7 +1013,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_expand_the_turkish_state_arsenal
-		icon = GFX_goal_generic_munitions_factories
+		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = {
 			focus = TUR_begin_economic_mobilization	
 		}
@@ -1091,7 +1085,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 
 	focus = {
 		id = TUR_doctrine_on_western_lines
-		icon = GFX_goal_wargaming
+		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = { 
 			focus = TUR_continue_the_military_reorganization 
 		}
@@ -1156,7 +1150,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 
 	focus = {
 		id = TUR_streamline_conscription
-		icon = GFX_goal_constitution
+		icon = GFX_focus_generic_manpower
 		prerequisite = { 
 			focus = TUR_rejuvenate_the_great_war_arsenal 
 		}
@@ -1232,7 +1226,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_begin_mechanization_developments
-		icon = GFX_goal_mechanized_offensive
+		icon = GFX_focus_generic_mechanized
 		prerequisite = { 
 			focus = TUR_standardize_infantry_equipment
 		}	
@@ -1260,7 +1254,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_tank_centered_force
-		icon = GFX_goal_ger_panzers
+		icon = GFX_goal_generic_army_tanks
 		prerequisite = { 
 			focus = TUR_begin_mechanization_developments
 		}
@@ -1322,7 +1316,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_maximize_orientation
-		icon = GFX_goal_manpower
+		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { 
 			focus = TUR_streamline_conscription
 		}
@@ -1424,7 +1418,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_strengthen_troop_coordination
-		icon = GFX_goal_generic_radio_development_2
+		icon = GFX_focus_generic_radio_communication
 		prerequisite = {
 			focus = TUR_standardize_infantry_equipment
 			focus = TUR_streamline_conscription
@@ -1463,7 +1457,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	}
 	focus = {
 		id = TUR_combat_engineers
-		icon = GFX_goal_generic_army
+		icon = GFX_goal_generic_construction2
 		prerequisite = {
 			focus = TUR_strengthen_troop_coordination
 			focus = TUR_logistical_advancements
@@ -1681,7 +1675,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_airland_battle
-		icon = GFX_goal_generic_airport
+		icon = GFX_focus_generic_air_research_boost
 		prerequisite = { 
 			focus = TUR_medium_bomber_focus 
 		}
@@ -1784,7 +1778,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_new_cannon_developments
-		icon = GFX_victor
+		icon = GFX_focus_SWE_let_fly_all_guns
 		
 		prerequisite = { 
 			focus = TUR_continue_importing_western_designs 
@@ -1992,7 +1986,8 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_expand_mediteranean_bases
-		icon = GFX_goal_generic_admirality
+		icon = GFX_goal_generic_navy_doctrines_tactics
+
 		prerequisite = { 
 			focus = TUR_continue_the_naval_expansion
 			focus = TUR_found_an_air_war_academy
@@ -2356,7 +2351,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	#Kemalism
 	focus = {
 		id = TUR_continue_the_moderate_course
-		icon = GFX_goal_TUR_six_arrows
+		icon = GFX_focus_generic_monarchy_1
 		mutually_exclusive = { 
 			focus = TUR_support_the_conservative_opposition
 			focus = TUR_revolution_not_reform
@@ -2403,7 +2398,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	}
 	focus = {
 		id = TUR_further_agricultural_cooperative_reform
-		icon = GFX_goal_generic_banking_legislation
+		icon = GFX_focus_BRA_cafe_com_leite_politics
 		prerequisite = { focus = TUR_continue_the_moderate_course }
 
 		x = 0
@@ -2452,7 +2447,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	}
 	focus = {
 		id = TUR_instate_constitutional_secularism
-		icon = GFX_goal_CAN_montreal_lab
+		icon = GFX_focus_AFG_education_reform
 		prerequisite = { focus = TUR_continue_the_moderate_course }
 
 		x = -2
@@ -2472,7 +2467,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 
 	focus = {
 		id = TUR_nationalist_policies
-		icon = GFX_goal_TUR_flag
+		icon = GFX_focus_secret_rearmament
 		prerequisite = { focus = TUR_continue_the_moderate_course }
 
 		x = 2
@@ -2533,7 +2528,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 
 	focus = {
 		id = TUR_cult_of_the_marshal
-		icon = GFX_goal_TUR_cult_of_the_marshal
+		icon = GFX_focus_generic_military_mission
 		prerequisite = { focus = TUR_nationalist_policies }
 		mutually_exclusive = { 
 			focus = TUR_continue_ataturks_reforms
@@ -2575,7 +2570,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 
 	focus = {
 		id = TUR_renew_the_democratic_reforms
-		icon = GFX_goal_generic_election
+		icon = GFX_goal_support_democracy
 		prerequisite = { 
 			focus = TUR_continue_ataturks_reforms
 		}
@@ -2674,7 +2669,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 
 	focus = {
 		id = TUR_expand_land_reform
-		icon = GFX_focus_POL_agrarian_reform
+		icon = GFX_focus_TUR_turanist_ambition
 		prerequisite = { 
 			focus = TUR_renew_the_democratic_reforms 
 			focus = TUR_expand_the_centralization_efforts
@@ -2721,7 +2716,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 
 	focus = {
 		id = TUR_accomplishing_ataturks_dream
-		icon = GFX_goal_democracy_people
+		icon = GFX_focus_TUR_crowning_ourselves_with_the_fin_ugor
 		prerequisite = { focus = TUR_renew_the_democratic_reforms }
 		x = -1
 		y = 1
@@ -2877,7 +2872,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 
 	focus = {
 		id = TUR_further_constitutional_reform
-		icon = GFX_goal_AFG_the_constitution_question
+		icon = GFX_focus_generic_self_management
 		prerequisite = { focus = TUR_accomplishing_ataturks_dream }
 
 		x = -2
@@ -3191,7 +3186,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 
 	focus = {
 		id = TUR_consolidate_the_chp
-		icon = GFX_goal_generic_authority
+		icon = GFX_focus_generic_fascist_propaganda
 		prerequisite = { focus = TUR_befriend_the_fascist_council }
 
 		x = 0
@@ -3239,7 +3234,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 			add_country_leader_role = {
 				character = TUR_fevzi_cakmak
 				country_leader = {
-				  ideology = ultranationalism
+				  ideology = fascism_ideology
 				  traits = { maresal }
 				  expire="1965.1.1"
 				}
@@ -3353,7 +3348,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 
 	focus = {
 		id = TUR_war_bonds
-		icon = GFX_goal_generic_multinational_army
+		icon = GFX_focus_SWI_issue_war_bonds
 		prerequisite = { 
 			focus = TUR_continue_ataturks_reforms
 			focus = TUR_cult_of_the_marshal
@@ -3412,7 +3407,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 
 	focus = {
 		id = TUR_turkish_grain_board
-		icon = GFX_goal_generic_wheat
+		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { 
 			focus = TUR_continue_ataturks_reforms
 			focus = TUR_cult_of_the_marshal
@@ -3679,7 +3674,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 
 	focus = {
 		id = TUR_free_the_bulgarian_turks
-		icon = GFX_goal_ROM_puppet_bulgaria
+		icon = GFX_focus_generic_attack_bulgaria
 		prerequisite = {
 			focus = TUR_pan_turkism
 		}
@@ -3848,7 +3843,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	#Conservative Opposition
 	focus = {
 		id = TUR_support_the_conservative_opposition
-		icon = GFX_goal_PAL_cooperation_and_development
+		icon = GFX_focus_generic_strike_at_democracy2
 		mutually_exclusive = { 
 			focus = TUR_continue_the_moderate_course
 			focus = TUR_revolution_not_reform
@@ -3938,7 +3933,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 
 	focus = {
 		id = TUR_no_more_humiliations
-		icon = GFX_goal_PAL_declare_jihad
+		icon = GFX_focus_PER_state_atheism
 		prerequisite = { 
 			focus = TUR_support_the_conservative_opposition
 		}
@@ -3963,7 +3958,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 
 	focus = {
 		id = TUR_lead_the_rural_masses
-		icon = GFX_goal_italy_restructure_the_divisions
+		icon = GFX_focus_generic_workers
 		prerequisite = { 
 			focus = TUR_no_more_humiliations
 		}
@@ -4010,7 +4005,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 		prerequisite = { 
 			focus = TUR_call_for_protests_in_the_capital
 		}
-		x = 6
+		x = 9
 		y = 1
 		relative_position_id = TUR_lead_the_rural_masses
 		cost = 10
@@ -4295,7 +4290,6 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 		}
 		completion_reward = {
 			add_ideas = TUR_caliph_abdulmejid_ii
-			set_cosmetic_tag = OTT_UNIFIED_neutrality
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_TUR_TRADITIONALISM }
 	}
@@ -4521,7 +4515,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 		icon = GFX_goal_TUR_flag
 		prerequisite = { focus = TUR_stabilize_the_nation }
 		mutually_exclusive = {
-			focus = TUR_western_detente
+			focus = TUR_restore_byzantium
 		}
 		x = -4
 		y = 4
@@ -4534,6 +4528,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 		completion_reward = {
 			add_political_power = 70
 			add_war_support = 0.05
+			set_cosmetic_tag = OTT_UNIFIED_neutrality
 			add_named_threat = { threat = 4 name = TUR_restore_the_imperial_borders }
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
@@ -4544,10 +4539,9 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 		icon = GFX_goal_generic_attack_persia
 		prerequisite = { 
 			focus = TUR_restore_the_imperial_borders 
-			focus = TUR_western_detente
 		}
 		mutually_exclusive = { focus = TUR_amicable_ties_across_the_middle_east }
-		x = 6
+		x = -6
 		y = 1
 		relative_position_id = TUR_restore_the_imperial_borders
 		cost = 10
@@ -4610,10 +4604,9 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 		icon = GFX_goal_AFG_bury_the_hatchet
 		prerequisite = { 
 			focus = TUR_restore_the_imperial_borders 
-			focus = TUR_western_detente
 		}
 		mutually_exclusive = { focus = TUR_one_persian_ottoman_war_to_end_them_all }
-		x = 8
+		x = -4
 		y = 1
 		relative_position_id = TUR_restore_the_imperial_borders
 		cost = 5
@@ -4733,7 +4726,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	}
 
 	focus = {
-		id = TUR_western_detente
+		id = TUR_restore_byzantium
 		icon = GFX_ENG_alliance
 		prerequisite = { focus = TUR_stabilize_the_nation }
 		mutually_exclusive = {
@@ -4748,6 +4741,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 		}
 
 		completion_reward = {
+			set_cosmetic_tag = OTT_UNIFIED_neutrality
 			add_stability = 0.05
 			add_political_power = 200
 		}
@@ -4756,10 +4750,10 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	focus = {
 		id = TUR_pragmatic_expansionism
 		icon = GFX_goal_generic_foreign_diplomacy
-		prerequisite = { focus = TUR_western_detente }
+		prerequisite = { focus = TUR_restore_byzantium }
 		x = 2
 		y = 1
-		relative_position_id = TUR_western_detente
+		relative_position_id = TUR_restore_byzantium
 		cost = 10
 		ai_will_do = {
 			base = 10
@@ -4774,10 +4768,10 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	focus = {
 		id = TUR_liberalize_the_economy
 		icon = GFX_goal_free_trade
-		prerequisite = { focus = TUR_western_detente }
+		prerequisite = { focus = TUR_restore_byzantium }
 		x = 4
 		y = 1
-		relative_position_id = TUR_western_detente
+		relative_position_id = TUR_restore_byzantium
 		cost = 8
 		ai_will_do = {
 			base = 10
@@ -5142,7 +5136,6 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	   	icon = GFX_goal_generic_befriend_bulgaria
 	   	prerequisite = { 
 			focus = TUR_restore_the_imperial_borders
-			focus = TUR_western_detente
 		}
 		mutually_exclusive = {
 			focus = TUR_reclaim_the_aegean_territories
@@ -5210,7 +5203,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 		available = {
 			is_subject = no
 			NOT = {
-				has_completed_focus = TUR_western_detente
+				has_completed_focus = TUR_restore_byzantium
 			}
 		}
 	   
@@ -5603,7 +5596,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 
 	focus = {
 		id = TUR_liberalize_the_national_economy
-		icon = GFX_goal_FRA_reynaud_economic_reforms
+		icon = GFX_focus_generic_economic_recovery
 		prerequisite = { focus = TUR_demand_free_elections }
 
 		x = -1
@@ -5689,7 +5682,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 
 	focus = {
 		id = TUR_expand_foreign_trade
-		icon = GFX_goal_free_trade
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TUR_liberalize_the_national_economy }
 
 		x = -2
@@ -5735,7 +5728,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_amend_the_secular_policies
-		icon = GFX_goal_generic_caliph
+		icon = GFX_focus_RAJ_headhunt_army_personell
 		prerequisite = { focus = TUR_demand_free_elections }
 
 		x = 1
@@ -5799,7 +5792,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 
 	focus = {
 		id = TUR_peace_between_turks_and_kurds
-		icon = GFX_goal_generic_internal_democracy
+		icon = GFX_focus_generic_befriend_kurdistan
 		prerequisite = { focus = TUR_amend_the_secular_policies }
 
 		x = 0
@@ -5853,7 +5846,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 
 	focus = {
 		id = TUR_end_the_ban_on_the_arabic_adhan
-		icon = GFX_goal_generic_madrasah_2_black_white
+		icon = GFX_focus_IRQ_arab_league
 		prerequisite = { focus = TUR_amend_the_secular_policies }
 
 		x = 2
@@ -5874,7 +5867,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	#Socialist Path
 	focus = {
 		id = TUR_revolution_not_reform
-		icon = GFX_goal_spread_communism
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
 		mutually_exclusive = { 
 			focus = TUR_support_the_conservative_opposition
 			focus = TUR_continue_the_moderate_course
@@ -5953,7 +5946,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	}
 	focus = {
 		id = TUR_two_red_banners
-		icon = GFX_goal_TUR_two_red_flags
+		icon = GFX_focus_generic_red_flags
 		prerequisite = { focus = TUR_revolution_not_reform }
 
 		x = 1
@@ -5976,7 +5969,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	}
 	focus = {
 		id = TUR_lead_the_underground_komunist_partisi
-		icon = GFX_goal_generic_communism
+		icon = GFX_focus_SOV_penal_battalions
 		prerequisite = { focus = TUR_revolution_not_reform }
 		mutually_exclusive = { focus = TUR_kemalisms_next_step_forward }
 
@@ -6117,7 +6110,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	}
 	focus = {
 		id = TUR_call_for_general_strike
-		icon = GFX_goal_generic_left_militia
+		icon = GFX_focus_SOV_military_purge
 		prerequisite = { focus = TUR_lead_the_underground_komunist_partisi }
 
 		x = 0
@@ -6198,7 +6191,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	}
 	focus = {
 		id = TUR_expand_the_village_institutes_program_socialist
-		icon = GFX_goal_generic_red_freedom
+		icon = GFX_focus_generic_farmland
 		prerequisite = { 
 			focus = TUR_kemalisms_next_step_forward 
 			focus = TUR_lead_the_underground_komunist_partisi
@@ -6248,7 +6241,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	}
 	focus = {
 		id = TUR_further_the_reforms
-		icon = GFX_goal_FRA_social_reforms
+		icon = GFX_focus_generic_currency_reforms
 		prerequisite = { focus = TUR_kemalisms_next_step_forward }
 
 		x = 2
@@ -6340,7 +6333,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	}
 	focus = {
 		id = TUR_cement_control_over_the_party
-		icon = GFX_goal_generic_socialism_fist
+		icon = GFX_focus_generic_spur_communist_revolutions
 		prerequisite = { 
 			focus = TUR_further_the_reforms
 		}
@@ -6734,7 +6727,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_voice_of_the_people
-		icon = GFX_goal_communist_brain
+		icon = GFX_focus_GER_the_peoples_victory
 		prerequisite = { focus = TUR_storm_the_grand_national_assembly }
 
 		x = -2
@@ -6760,7 +6753,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	}
 	focus = {
 		id = TUR_the_question_of_nationalization
-		icon = GFX_goal_generic_major_diplo
+		icon = GFX_focus_generic_communist_industry
 		prerequisite = { 
 			focus = TUR_storm_the_grand_national_assembly
 			focus = TUR_cement_control_over_the_party
@@ -6788,7 +6781,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_forging_a_brighter_tomorrow
-		icon = GFX_postive_heroism
+		icon = GFX_focus_generic_soviet_politics
 		prerequisite = { focus = TUR_storm_the_grand_national_assembly }
 
 		x = 0
@@ -6928,7 +6921,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_pave_the_road_to_progress
-		icon = GFX_goal_generic_dictatorship_of_proletariat
+		icon = GFX_focus_NOR_moscows_education_centers
 		prerequisite = { 
 			focus = TUR_cement_control_over_the_party
 		}
@@ -6975,7 +6968,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_reward_the_working_class
-		icon = GFX_goal_generic_government_pensions
+		icon = GFX_focus_generic_communist
 		prerequisite = { 
 			focus = TUR_pave_the_road_to_progress
 		}
@@ -7023,7 +7016,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_continue_the_democratic_transition
-		icon = GFX_generic_goal_communist_reforms
+		icon = GFX_goal_support_democracy
 		prerequisite = { 
 			focus = TUR_pave_the_road_to_progress
 		}
@@ -7227,7 +7220,6 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 				add_stability = 0.05
 			}
 			custom_effect_tooltip = TUR_unlocks_hatay_decision_tt
-			custom_effect_tooltip = TUR_unlocks_saadabad_decision_tt
 			mark_focus_tree_layout_dirty = yes
 		}
 
@@ -7267,7 +7259,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_american_lend_lease
-		icon = GFX_goal_generic_befriend_united_states
+		icon = GFX_focus_generic_befriend_usa
 		cost = 10
 		prerequisite = { 
 			focus = TUR_neutrality_through_deterrence
@@ -7453,7 +7445,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_soviet_turkish_trade_agreement
-		icon = GFX_focus_generic_public_works_A
+		icon = GFX_focus_generic_befriend_turkey
 		cost = 10
 		prerequisite = { focus = TUR_renew_the_soviet_non_aggression_pact }
 		relative_position_id = TUR_renew_the_soviet_non_aggression_pact
@@ -7595,7 +7587,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_clodius_agreement
-		icon = GFX_goal_italy_autarky
+		icon = GFX_focus_generic_mass_production
 		cost = 10
 		prerequisite = { focus = TUR_german_turkish_treaty_of_friendship }
 		relative_position_id = TUR_german_turkish_treaty_of_friendship
@@ -7733,7 +7725,7 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 	
 	focus = {
 		id = TUR_cooperation_against_berlin
-		icon = GFX_goal_GER_restore_weimar
+		icon = GFX_focus_generic_anti_fascist_diplomacy
 		cost = 5
 		prerequisite = { focus = TUR_bicontinental_intervention }
 		mutually_exclusive = { 
@@ -7819,57 +7811,57 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 			add_war_support = 0.05
 		}
 	}
-	focus = {
-		id = TUR_destroy_iraqs_corrupt_monarchy
-		icon = GFX_goal_generic_attack_iraq
-		prerequisite = { focus = TUR_anti_colonial_action }
-		x = 3
-		y = 1
-		relative_position_id = TUR_anti_colonial_action
-		cost = 5
+	# focus = {
+	# 	id = TUR_destroy_iraqs_corrupt_monarchy
+	# 	icon = GFX_goal_generic_attack_iraq
+	# 	prerequisite = { focus = TUR_anti_colonial_action }
+	# 	x = 3
+	# 	y = 1
+	# 	relative_position_id = TUR_anti_colonial_action
+	# 	cost = 5
 
-		ai_will_do = {
-			factor = 1
-		}
-		will_lead_to_war_with = IRQ
-		available = {
-			is_subject = no
-			NOT = {
-				IRQ = {
-					is_subject_of = TUR
-					is_in_faction_with = TUR
-				}
-			}
-		}
-		bypass = {
-			OR = {
-				has_war_with = IRQ
-				IRQ = {
-					has_government = communism
-				}
-			}
-		}
-		completion_reward = {
-			if = {
-				limit = {
-					has_completed_focus = TUR_ally_kurdish_nationalist_groups
-				}
-				add_state_claim = 1048
-			}
-			create_wargoal = {
-				target = IRQ
-				type = puppet_wargoal_focus
-				expire = 0
-			}
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# 	will_lead_to_war_with = IRQ
+	# 	available = {
+	# 		is_subject = no
+	# 		NOT = {
+	# 			IRQ = {
+	# 				is_subject_of = TUR
+	# 				is_in_faction_with = TUR
+	# 			}
+	# 		}
+	# 	}
+	# 	bypass = {
+	# 		OR = {
+	# 			has_war_with = IRQ
+	# 			IRQ = {
+	# 				has_government = communism
+	# 			}
+	# 		}
+	# 	}
+	# 	completion_reward = {
+	# 		if = {
+	# 			limit = {
+	# 				has_completed_focus = TUR_ally_kurdish_nationalist_groups
+	# 			}
+	# 			add_state_claim = 1048
+	# 		}
+	# 		create_wargoal = {
+	# 			target = IRQ
+	# 			type = puppet_wargoal_focus
+	# 			expire = 0
+	# 		}
+	# 	}
+	# 	search_filters = { FOCUS_FILTER_ANNEXATION }
+	# }
 	focus = {
 		id = TUR_demand_french_withdrawal_from_syria
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
 		prerequisite = { focus = TUR_anti_colonial_action }
-		x = 1
-		y = 2
+		x = 2
+		y = 1
 		relative_position_id = TUR_anti_colonial_action
 		cost = 10
 
@@ -7927,58 +7919,58 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
+	# focus = {
+	# 	id = TUR_take_the_shahs_head
+	# 	icon = GFX_goal_generic_attack_persia
+	# 	prerequisite = { focus = TUR_anti_colonial_action }
+	# 	x = 0
+	# 	y = 1
+	# 	relative_position_id = TUR_anti_colonial_action
+	# 	cost = 5
+
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# 	available = {
+	# 		is_subject = no
+	# 		NOT = {
+	# 			PER = {
+	# 				is_subject_of = TUR
+	# 				is_in_faction_with = TUR
+	# 			}
+	# 		}
+	# 	}
+	# 	bypass = {
+	# 		OR = {
+	# 			has_war_with = PER
+	# 			PER = {
+	# 				has_government = communism
+	# 			}
+	# 		}
+	# 	}
+	# 	will_lead_to_war_with = PER
+	# 	completion_reward = {
+	# 		if = {
+	# 			limit = {
+	# 				has_completed_focus = TUR_ally_kurdish_nationalist_groups
+	# 			}
+	# 			add_state_claim = 421
+	# 		}
+	# 		create_wargoal = {
+	# 			target = PER
+	# 			type = puppet_wargoal_focus
+	# 			expire = 0
+	# 		}
+	# 	}
+	# 	search_filters = { FOCUS_FILTER_ANNEXATION }
+	# }
 	focus = {
-		id = TUR_take_the_shahs_head
-		icon = GFX_goal_generic_attack_persia
+		id = TUR_the_final_battle_against_global_imperialism
+		icon = GFX_focus_attack_britain
 		prerequisite = { focus = TUR_anti_colonial_action }
 		x = 0
 		y = 1
 		relative_position_id = TUR_anti_colonial_action
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			is_subject = no
-			NOT = {
-				PER = {
-					is_subject_of = TUR
-					is_in_faction_with = TUR
-				}
-			}
-		}
-		bypass = {
-			OR = {
-				has_war_with = PER
-				PER = {
-					has_government = communism
-				}
-			}
-		}
-		will_lead_to_war_with = PER
-		completion_reward = {
-			if = {
-				limit = {
-					has_completed_focus = TUR_ally_kurdish_nationalist_groups
-				}
-				add_state_claim = 421
-			}
-			create_wargoal = {
-				target = PER
-				type = puppet_wargoal_focus
-				expire = 0
-			}
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
-	focus = {
-		id = TUR_the_final_battle_against_global_imperialism
-		icon = GFX_focus_attack_britain
-		prerequisite = { focus = TUR_demand_french_withdrawal_from_syria }
-		x = 0
-		y = 1
-		relative_position_id = TUR_demand_french_withdrawal_from_syria
 		cost = 10
 
 		ai_will_do = {
@@ -8013,165 +8005,165 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
-	focus = {
-		id = TUR_liberate_the_peninsula
-		icon = GFX_focus_TUR_taking_over_defense_of_the_gulf
-		prerequisite = { focus = TUR_destroy_iraqs_corrupt_monarchy }
-		x = 0
-		y = 1
-		relative_position_id = TUR_destroy_iraqs_corrupt_monarchy
-		cost = 10
+	# focus = {
+	# 	id = TUR_liberate_the_peninsula
+	# 	icon = GFX_focus_TUR_taking_over_defense_of_the_gulf
+	# 	prerequisite = { focus = TUR_destroy_iraqs_corrupt_monarchy }
+	# 	x = 0
+	# 	y = 1
+	# 	relative_position_id = TUR_destroy_iraqs_corrupt_monarchy
+	# 	cost = 10
 
-		ai_will_do = {
-			factor = 1
-		}
-		will_lead_to_war_with = SAU
-		will_lead_to_war_with = YEM
-		will_lead_to_war_with = OMA
-		available = {
-			is_subject = no
-			NOT = {
-				SAU = {
-					is_subject_of = TUR
-					is_in_faction_with = TUR
-				}
-			}
-		}
-		bypass = {
-			OR = {
-				has_war_with = SAU
-				SAU = {
-					has_government = communism
-				}
-			}
-		}
-		completion_reward = {
-			create_wargoal = {
-				target = SAU
-				type = puppet_wargoal_focus
-				expire = 0
-			}
-			if = {
-				limit = {
-					YEM = {
-						is_subject_of = ENG
-					}
-				}
-				create_wargoal = {
-					target = YEM
-					type = puppet_wargoal_focus
-					expire = 0
-				}
-			}
-			if = {
-				limit = {
-					OMA = {
-						is_subject_of = ENG
-					}
-				}
-				create_wargoal = {
-					target = OMA
-					type = puppet_wargoal_focus
-					expire = 0
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# 	will_lead_to_war_with = SAU
+	# 	will_lead_to_war_with = YEM
+	# 	will_lead_to_war_with = OMA
+	# 	available = {
+	# 		is_subject = no
+	# 		NOT = {
+	# 			SAU = {
+	# 				is_subject_of = TUR
+	# 				is_in_faction_with = TUR
+	# 			}
+	# 		}
+	# 	}
+	# 	bypass = {
+	# 		OR = {
+	# 			has_war_with = SAU
+	# 			SAU = {
+	# 				has_government = communism
+	# 			}
+	# 		}
+	# 	}
+	# 	completion_reward = {
+	# 		create_wargoal = {
+	# 			target = SAU
+	# 			type = puppet_wargoal_focus
+	# 			expire = 0
+	# 		}
+	# 		if = {
+	# 			limit = {
+	# 				YEM = {
+	# 					is_subject_of = ENG
+	# 				}
+	# 			}
+	# 			create_wargoal = {
+	# 				target = YEM
+	# 				type = puppet_wargoal_focus
+	# 				expire = 0
+	# 			}
+	# 		}
+	# 		if = {
+	# 			limit = {
+	# 				OMA = {
+	# 					is_subject_of = ENG
+	# 				}
+	# 			}
+	# 			create_wargoal = {
+	# 				target = OMA
+	# 				type = puppet_wargoal_focus
+	# 				expire = 0
+	# 			}
+	# 		}
+	# 	}
+	# 	search_filters = { FOCUS_FILTER_ANNEXATION }
+	# }
 	
-	focus = {
-		id = TUR_regional_leadership
-		icon = GFX_goal_morale_bonus
-		cost = 10
-		prerequisite = { 
-			focus = TUR_cooperation_against_moscow 
-			focus = TUR_cooperation_against_berlin
-		}
-		mutually_exclusive = { focus = TUR_join_the_international_community }
-		relative_position_id = TUR_cooperation_against_moscow
-		x = 2
-		y = 1
-		ai_will_do = {
-			factor = 10
-		}
+	# focus = {
+	# 	id = TUR_regional_leadership
+	# 	icon = GFX_goal_morale_bonus
+	# 	cost = 10
+	# 	prerequisite = { 
+	# 		focus = TUR_cooperation_against_moscow 
+	# 		focus = TUR_cooperation_against_berlin
+	# 	}
+	# 	mutually_exclusive = { focus = TUR_join_the_international_community }
+	# 	relative_position_id = TUR_cooperation_against_moscow
+	# 	x = 2
+	# 	y = 1
+	# 	ai_will_do = {
+	# 		factor = 10
+	# 	}
 
-		available = {
-			is_subject = no
-			is_in_faction = no
-		}
-		completion_reward = {
-			create_faction = TUR_ankara_pact
-			if = {
-				limit = {
-					has_idea = TUR_bicontinental_intervention_idea
-				}
-				swap_ideas = {
-					remove_idea = TUR_bicontinental_intervention_idea
-					add_idea = TUR_regional_leadership_idea
-				}
-			}
-			else = {
-				add_war_support = 0.15
-			}
-		}
-		search_filters = {
-			FOCUS_FILTER_WAR_SUPPORT
-		}
-	}
+	# 	available = {
+	# 		is_subject = no
+	# 		is_in_faction = no
+	# 	}
+	# 	completion_reward = {
+	# 		create_faction = TUR_ankara_pact
+	# 		if = {
+	# 			limit = {
+	# 				has_idea = TUR_bicontinental_intervention_idea
+	# 			}
+	# 			swap_ideas = {
+	# 				remove_idea = TUR_bicontinental_intervention_idea
+	# 				add_idea = TUR_regional_leadership_idea
+	# 			}
+	# 		}
+	# 		else = {
+	# 			add_war_support = 0.15
+	# 		}
+	# 	}
+	# 	search_filters = {
+	# 		FOCUS_FILTER_WAR_SUPPORT
+	# 	}
+	# }
 	
-	focus = {
-		id = TUR_ally_the_balkan_states
-		icon = GFX_focus_generic_balkan_diplomacy
-		cost = 5
-		prerequisite = { focus = TUR_regional_leadership }
-		relative_position_id = TUR_regional_leadership
-		x = -1
-		y = 1
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			custom_effect_tooltip = solidify_the_balkan_pact_tt
-		}
-		search_filters = {
-			FOCUS_FILTER_ALLIANCE
-		}
-	}
+	# focus = {
+	# 	id = TUR_ally_the_balkan_states
+	# 	icon = GFX_focus_generic_balkan_diplomacy
+	# 	cost = 5
+	# 	prerequisite = { focus = TUR_regional_leadership }
+	# 	relative_position_id = TUR_regional_leadership
+	# 	x = -1
+	# 	y = 1
+	# 	ai_will_do = {
+	# 		factor = 10
+	# 	}
+	# 	completion_reward = {
+	# 		custom_effect_tooltip = solidify_the_balkan_pact_tt
+	# 	}
+	# 	search_filters = {
+	# 		FOCUS_FILTER_ALLIANCE
+	# 	}
+	# }
 	
-	focus = {
-		id = TUR_militarize_the_saadabat_pact
-		icon = GFX_focus_TUR_treaty_of_saadabad
-		cost = 5
-		prerequisite = { focus = TUR_regional_leadership }
-		relative_position_id = TUR_regional_leadership
-		x = 1
-		y = 1
-		available = {
-			has_country_flag = TUR_saadabad_pact_member
-			is_subject = no
-		}
-		ai_will_do = {
-			factor = 2
-		}
-		completion_reward = {
-			custom_effect_tooltip = TUR_solidify_the_saadabad_pact_tt
-			every_other_country = {
-				limit = {
-					has_country_flag = TUR_saadabad_pact_member
-					is_in_faction = no
-					is_subject = no
-					NOT = {
-						has_government = communism
-					}
-					NOT = {
-						has_war_with = ROOT
-					}
-				}
-				country_event = { id = turkey.126 }
-			}
-		}
-		search_filters = { FOCUS_FILTER_ALLIANCE }
-	}
+	# focus = {
+	# 	id = TUR_militarize_the_saadabat_pact
+	# 	icon = GFX_focus_TUR_treaty_of_saadabad
+	# 	cost = 5
+	# 	prerequisite = { focus = TUR_regional_leadership }
+	# 	relative_position_id = TUR_regional_leadership
+	# 	x = 1
+	# 	y = 1
+	# 	available = {
+	# 		has_country_flag = TUR_saadabad_pact_member
+	# 		is_subject = no
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 2
+	# 	}
+	# 	completion_reward = {
+	# 		custom_effect_tooltip = TUR_solidify_the_saadabad_pact_tt
+	# 		every_other_country = {
+	# 			limit = {
+	# 				has_country_flag = TUR_saadabad_pact_member
+	# 				is_in_faction = no
+	# 				is_subject = no
+	# 				NOT = {
+	# 					has_government = communism
+	# 				}
+	# 				NOT = {
+	# 					has_war_with = ROOT
+	# 				}
+	# 			}
+	# 			country_event = { id = turkey.126 }
+	# 		}
+	# 	}
+	# 	search_filters = { FOCUS_FILTER_ALLIANCE }
+	# }
 	
 	focus = {
 		id = TUR_join_the_international_community
@@ -8181,9 +8173,8 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 			focus = TUR_cooperation_against_moscow 
 			focus = TUR_cooperation_against_berlin
 		}
-		mutually_exclusive = { focus = TUR_regional_leadership }
 		relative_position_id = TUR_cooperation_against_moscow
-		x = 0
+		x = 1
 		y = 1
 		ai_will_do = {
 			factor = 10
@@ -8204,4 +8195,5 @@ focus_tree = { ### ORIGINAL FILE NAME R56_TURKEY
 			FOCUS_FILTER_ALLIANCE
 		}
 	}
+
 }
