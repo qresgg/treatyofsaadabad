@@ -92,6 +92,7 @@
   IRQ_more_finance_for_toyota: "More Finance for Toyota"
   IRQ_more_finance_for_toyota_desc: "Toyota is a reliable company, but it needs more funding to expand its production. Investing in this company will ensure that your army's logistics run smoothly."
   IRQ_training_iraqi_army_1: "Mobilisation Iraqi Army"
+  
 
   #####################
   ### SHARED  FOCUS ###
@@ -694,7 +695,10 @@
   TUR_the_montreux_convention_r56:0 "The Montreux Convention"
   TUR_the_montreux_convention_r56_desc:0 "Straits area has been demilitarized since The Great War, but it cannot stay that way. We must look for international support to impose our full sovereignty."
   TUR_invite_to_faction_tooltip:0 "is invited to [Root.GetFlag]§Y[Root.GetName]§!'s faction.\n"
- 
+  TUR_avenge_the_1878_berlin_treaty:0 "Avenge the 1878 Berlin Treaty"
+  TUR_avenge_the_1878_berlin_treaty_desc:0 "The 1878 Treaty of Berlin was the beginning of the end to our hold over the Balkan peninsula. We are finally in position to seize what is rightfully ours, and it shall be done."
+
+
   ## TOOLTIPS
   PER_request_out_pact_territories_tt: "When §Y[IRQ.GetNameWithFlag]§! becomes controller or owner our historical territories, we will get them"
   PER_import_military_fabrics_tt: "Unlocks Decision: §YImport Military Fabrics§! which allow Iran to buy fabrics from abroad and instantaneous build them for political power"
@@ -711,3 +715,13 @@
   available_political_advisor: "Unlocks new political advisor"
   unlocks_drill_decisions_tt: "Unlocks oil drilling decisions"
   generic_skip_one_line_tt: " "
+  TUR_avenge_the_1878_berlin_treaty_tt: "Gains claim on all §YBosnian§! states"
+  TUR_avenge_the_1878_berlin_treaty2_tt: "Unlocks decision: §YReintegrate the Bosnian Lands§!."
+  claims_montenegrin_states_tt:0 "Gains claim on §YMontenegro§! and §YWest Sandzak§!"
+  TUR_restore_dominion_over_albania_tt:0 "Gains claim on all §YAlbanian§! states, as well as §YDebar§!, §YKosovo§!, and §YMitrovica§!"
+  TUR_restore_dominion_over_albania2_tt:0 "Unlocks decision: §YReintegrate the Albanian Lands§!."
+  TUR_unlocks_drill_decisions_tt:0 "Unlocks §YProspecting for Oil§! decisions"
+  TUR_launch_the_revolution_tt:0 "A civil war will start. The higher support the communists have, the more divisions will defect to join them. If communist support is high enough, a civil war can be avoided."
+  TUR_launch_the_revolution_soviet_support_tt:0 "If the Soviet Union has promised us support, we will receive extra arms for the revolution."
+  EFFECT_CHANGE_LAW_tosi_social_order:0 "Implement Revolutionary Social Policies"
+  tos_newline:0 "\n"
