@@ -600,7 +600,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 				uses = 1
 				category = excavation_tech
 			}
-			custom_effect_tooltip = unlocks_drill_decisions_tt
+			custom_effect_tooltip = TUR_unlocks_drill_decisions_tt
 		}
 		search_filters = { FOCUS_FILTER_OIL }
 	}
