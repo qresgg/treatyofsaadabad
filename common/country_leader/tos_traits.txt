@@ -10,4 +10,15 @@ leader_traits = {
 			factor = 2
 		}
 	}
+	TUR_byzantium_empire_emperor_trait = {
+		sprite = 5
+		political_power_factor = 0.25
+		subjects_autonomy_gain = -1
+		army_core_attack_factor = 0.1
+		stability_factor = 0.25
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
 }

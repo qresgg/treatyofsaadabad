@@ -5,6 +5,89 @@ add_namespace = turkey
 add_namespace = turkey_hatay
 add_namespace = turkey_sadabat
 
+add_namespace = turkey
+
+country_event = {
+	id = turkey.1
+	title = turkey.1.t
+	desc = turkey.1.d
+	picture = GFX_report_event_generic_funeral
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = TUR
+		date > 1938.11.1
+		OR = {
+			NOT = { has_dlc = "Battle for the Bosporus" }
+			date > 1940.2.1 
+		}
+		has_country_leader = {
+			character = TUR_mustafa_kemal_ataturk
+			ruling_only = yes
+		}
+		
+	}	
+
+	mean_time_to_happen = {
+		days = 30
+		modifier = {
+			factor = 0.5
+			date > 1938.12.1
+		}
+		modifier = {
+			factor = 0.2
+			date > 1939.1.1
+		}
+	}
+
+	option = {
+		name = turkey.1.a		#
+		hidden_effect = {
+			retire_character = TUR_mustafa_kemal_ataturk
+		}
+		add_stability = -0.1
+		promote_character = TUR_ismet_inonu
+		ai_chance = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 100
+			}
+		}
+	}
+	
+	option = {
+		name = turkey.1.b	
+		trigger = {
+			has_completed_focus = TUR_continue_the_moderate_course
+		}
+		hidden_effect = {
+			retire_character = TUR_mustafa_kemal_ataturk
+		}
+		add_stability = -0.1
+		add_country_leader_role = {
+			character = TUR_fevzi_cakmak
+			country_leader = {
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					maresal
+				}
+			}
+			promote_leader = yes
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+	}
+}
+
+
 #From vanilla - to prevent an existence of double death of Ataturk - Fant
 country_event = {
 	id = turkey.10
@@ -1407,83 +1490,83 @@ country_event = {
 	}
 }
 
-#Turkey proposes non-agression pact
-country_event = {
-	id = turkey_sadabat.1
-	title = turkey_sadabat.1.t
-	desc = turkey_sadabat.1.d
-	picture = GFX_report_event_tur_the_saadabad_pact
-	is_triggered_only = yes
-	option = { # Yes
-		name = turkey_sadabat.1.a
-		ai_chance = {
-			base = 5
-		}
-		effect_tooltip = {
-			diplomatic_relation = {
-				country = FROM
-				relation = non_aggression_pact
-			}
-		}
-		FROM = {
-			country_event = {
-				id = turkey_sadabat.2
-				days = 1
-				random_hours = 5
-			}
-		}
-		set_country_flag = TUR_saadabad_pact_member
-		if = {
-			limit = {
-				NOT = {
-					has_global_flag = TUR_saadabad_pact
-				}
-			}
-			set_global_flag = TUR_saadabad_pact
-		}
-	}
-	option = { # No
-		name = turkey_sadabat.1.b
-		ai_chance = {
-			base = 0
-		}
-		FROM = {
-			country_event = {
-				id = turkey_sadabat.3
-				days = 1
-				random_hours = 5
-			}
-		}
-	}
-}
+# #Turkey proposes non-agression pact
+# country_event = {
+# 	id = turkey_sadabat.1
+# 	title = turkey_sadabat.1.t
+# 	desc = turkey_sadabat.1.d
+# 	picture = GFX_report_event_tur_the_saadabad_pact
+# 	is_triggered_only = yes
+# 	option = { # Yes
+# 		name = turkey_sadabat.1.a
+# 		ai_chance = {
+# 			base = 5
+# 		}
+# 		effect_tooltip = {
+# 			diplomatic_relation = {
+# 				country = FROM
+# 				relation = non_aggression_pact
+# 			}
+# 		}
+# 		FROM = {
+# 			country_event = {
+# 				id = turkey_sadabat.2
+# 				days = 1
+# 				random_hours = 5
+# 			}
+# 		}
+# 		set_country_flag = TUR_saadabad_pact_member
+# 		if = {
+# 			limit = {
+# 				NOT = {
+# 					has_global_flag = TUR_saadabad_pact
+# 				}
+# 			}
+# 			set_global_flag = TUR_saadabad_pact
+# 		}
+# 	}
+# 	option = { # No
+# 		name = turkey_sadabat.1.b
+# 		ai_chance = {
+# 			base = 0
+# 		}
+# 		FROM = {
+# 			country_event = {
+# 				id = turkey_sadabat.3
+# 				days = 1
+# 				random_hours = 5
+# 			}
+# 		}
+# 	}
+# }
 
-#From agrees to non-agression pact
-country_event = {
-	id = turkey_sadabat.2
-	title = turkey_sadabat.2.t
-	desc = turkey_sadabat.2.d
-	picture = GFX_report_event_tur_the_saadabad_pact
-	is_triggered_only = yes
-	option = { # Good
-		name = turkey_sadabat.2.a
-		diplomatic_relation = {
-			country = FROM
-			relation = non_aggression_pact
-		}
-	}
-}
+# #From agrees to non-agression pact
+# country_event = {
+# 	id = turkey_sadabat.2
+# 	title = turkey_sadabat.2.t
+# 	desc = turkey_sadabat.2.d
+# 	picture = GFX_report_event_tur_the_saadabad_pact
+# 	is_triggered_only = yes
+# 	option = { # Good
+# 		name = turkey_sadabat.2.a
+# 		diplomatic_relation = {
+# 			country = FROM
+# 			relation = non_aggression_pact
+# 		}
+# 	}
+# }
 
-#From doesn't want non-agression pact
-country_event = {
-	id = turkey_sadabat.3
-	title = turkey_sadabat.3.t
-	desc = turkey_sadabat.3.d
-	picture = GFX_report_event_tur_kemalist_officers
-	is_triggered_only = yes
-	option = { # Ok
-		name = turkey_sadabat.3.a
-	}
-}
+# #From doesn't want non-agression pact
+# country_event = {
+# 	id = turkey_sadabat.3
+# 	title = turkey_sadabat.3.t
+# 	desc = turkey_sadabat.3.d
+# 	picture = GFX_report_event_tur_kemalist_officers
+# 	is_triggered_only = yes
+# 	option = { # Ok
+# 		name = turkey_sadabat.3.a
+# 	}
+# }
 
 country_event = { # Bulgarian Secret Agreement
 	id = turkey.132

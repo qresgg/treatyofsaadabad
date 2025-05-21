@@ -201,8 +201,8 @@ country = {
 			mobilization_laws_cost_factor = 0.25
 			training_time_factor = 0.1
 			command_power_gain_mult = -0.1
-			army_org_factor = 0.03
-			army_morale_factor = 0.05
+			army_org_factor = 0.05
+			army_morale_factor = 0.1
 			supply_consumption_factor = -0.05
 		}
 	}
@@ -500,7 +500,7 @@ country = {
 			
 		modifier = {
 			political_power_gain = -0.1
-			consumer_goods_factor = -0.05
+			consumer_goods_factor = -0.10
 			trade_laws_cost_factor = -0.50
 			min_export = 0.15
 		}
@@ -618,7 +618,7 @@ country = {
 	}
 
 
-	TUR_r56_expand_land_reform_idea = {
+	TUR_tos_expand_land_reform_idea = {
 		picture = HOL_reliance_on_the_gold_standard
 		removal_cost = -1
 
@@ -629,7 +629,7 @@ country = {
 		}
 	}
 
-	TUR_r56_turkish_grain_board_idea = {
+	TUR_tos_turkish_grain_board_idea = {
 		picture = NOR_printing_money
 		removal_cost = -1
 
@@ -642,7 +642,7 @@ country = {
 		}
 	}
 	
-	TUR_r56_varlik_vergisi = {
+	TUR_tos_varlik_vergisi = {
 		picture = MEX_callistas
 		removal_cost = -1
 

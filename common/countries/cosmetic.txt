@@ -514,6 +514,11 @@ OTT_SULTANATE_neutrality = {
 	color_ui = rgb { 227 10 23 }
 }
 
+TUR_GRE_confederation = {
+	color = rgb { 19 131 196 }
+	color_ui = rgb { 19 131 196 }
+}
+
 TUR_GREATER_TURKEY_communism = {
 	color = rgb { 227 10 23 }
 	color_ui = rgb { 227 10 23 }
