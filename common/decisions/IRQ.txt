@@ -686,7 +686,7 @@ IRQ_african_arab_revolt_cat = {
 	}
 
 	IRQ_integrate_puppet = {
-		cost = 150
+		cost = 75
 		days_remove = 1
 		target_root_trigger = {
 			original_tag = IRQ

@@ -1468,6 +1468,25 @@ country = {
 		}
 	}
 
+	TUR_GRE_fascists_rising = { 
+
+		allowed = {
+			original_tag = TUR
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		picture = MEX_politicised_army
+			
+		removal_cost = -1
+			
+		modifier = {
+			fascism_drift = 0.03
+		}
+	}
+
 	TUR_turkish_workers_militia = { 
 
 		allowed = {
