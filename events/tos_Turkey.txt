@@ -2003,3 +2003,230 @@ country_event = { # Clodius Agreement - Denied
 		add_political_power = -20
 	}
 }
+
+country_event = {
+	id = turkey.2077
+	title = turkey.2077.t
+	desc = turkey.2077.d
+	picture = GFX_event_turkey_alexandretta_march
+
+	is_triggered_only = yes
+
+	option = { # ACCES #####################################
+        name = turkey.2077.a
+        ai_chance = {
+            base = 60
+            modifier = {
+                factor = 2
+                is_subject_of = FROM
+            }
+            modifier = {
+                factor = 1.8
+                FROM = { military_strength = { relative_strength > 1.5 } }
+            }
+            modifier = {
+                factor = 0.7
+                any_other_country = {
+                    has_guaranteed = ROOT
+                    NOT = { tag = FROM }
+                }
+            }
+            modifier = {
+                factor = 0.7
+                is_in_faction = yes
+                NOT = { is_in_faction_with = FROM }
+            }
+		}
+        FROM = {
+            country_event = { id = Turkey.2080 days = 5 }
+        }
+        custom_effect_tooltip = GAME_OVER_TT
+
+        add_named_threat = { threat = 2 name = Turkey.2077_ultimatum }
+	}	
+    option = { # Resist ####################################
+        name = turkey.2077.b
+        ai_chance = {
+            base = 40
+            modifier = {
+                factor = 1
+                is_in_faction = yes
+                NOT = { is_in_faction_with = FROM }
+            }
+            modifier = {
+                factor = 1
+                is_subject = yes
+                NOT = { is_subject_of = FROM }
+            }
+            modifier = {
+                factor = 0.5
+                FROM = { military_strength = { relative_strength > 2.0 } }
+            }
+            }
+
+        FROM = {
+            effect_tooltip = {
+                create_wargoal = {
+                    type = annex_everything
+                    target = GRE
+                }
+            }
+            country_event = { id = turkey.2081 days = 1 }
+        }
+    }
+}
+
+
+country_event = { ## ACCEPT
+    id = turkey.2080
+    title = turkey.2080.t
+    desc = turkey.2080.d
+    picture = GFX_report_event_royal_parade
+
+    is_triggered_only = yes
+
+
+    option = {
+        name = turkey.2080.a
+        annex_country = { 
+            target = GRE
+        }
+        add_named_threat = { threat = 2 name = turkey.2077_ultimatum }
+    }
+}
+
+country_event = { ## DENY
+    id = turkey.2081
+    title = turkey.2081.t
+    desc = turkey.2081.d
+    picture = GFX_report_event_soviet_tank_parade
+
+    is_triggered_only = yes
+
+    option = {
+        name = turkey.2081.a
+
+        create_wargoal = {
+            type = annex_everything
+            target = GRE
+        }
+    }
+}
+
+
+### BULGARIA
+country_event = {
+	id = turkey.3000
+	title = turkey.3000.t
+	desc = turkey.3000.d
+	picture = GFX_event_bulgaria_parade
+
+	is_triggered_only = yes
+
+	option = { # Стати маріонеткою
+        name = turkey.3000.a
+        ai_chance = {
+            base = 50
+            modifier = {
+                factor = 2
+                is_subject_of = FROM
+            }
+            modifier = {
+                factor = 1.8
+                FROM = { military_strength = { relative_strength > 1.5 } }
+            }
+            modifier = {
+                factor = 0.7
+                any_other_country = {
+                    has_guaranteed = ROOT
+                    NOT = { tag = FROM }
+                }
+            }
+            modifier = {
+                factor = 0.7
+                is_in_faction = yes
+                NOT = { is_in_faction_with = FROM }
+            }
+		}
+        FROM = {
+            country_event = { id = turkey.3001 days = 1 }
+        }
+        add_named_threat = { threat = 2 name = turkey.3000_ultimatum_puppet }
+	}
+
+	option = { # Погодитись на анексію
+        name = turkey.3000.b
+        ai_chance = {
+            base = 25
+            modifier = {
+                factor = 1.5
+                FROM = { military_strength = { relative_strength > 2.0 } }
+            }
+        }
+        FROM = {
+            country_event = { id = turkey.3002 days = 1 }
+        }
+        add_named_threat = { threat = 3 name = turkey.3000_ultimatum_annex }
+    }
+
+	option = { # Відхилити ультиматум
+        name = turkey.3000.c
+        ai_chance = {
+            base = 25
+            modifier = {
+                factor = 0.5
+                FROM = { military_strength = { relative_strength > 2.0 } }
+            }
+        }
+        FROM = {
+            country_event = { id = turkey.3003 days = 1 }
+        }
+    }
+}
+
+country_event = { ## Стати маріонеткою
+    id = turkey.3001
+    title = turkey.3001.t
+    desc = turkey.3001.d
+    picture = GFX_report_event_royal_parade
+
+    is_triggered_only = yes
+
+    option = {
+        name = turkey.3001.a
+        puppet = { target = ROOT }
+        add_named_threat = { threat = 2 name = turkey.3000_ultimatum_puppet }
+    }
+}
+
+country_event = { ## Анексія
+    id = turkey.3002
+    title = turkey.3002.t
+    desc = turkey.3002.d
+    picture = GFX_report_event_military_parade
+
+    is_triggered_only = yes
+
+    option = {
+        name = turkey.3002.a
+        annex_country = { target = ROOT }
+        add_named_threat = { threat = 3 name = turkey.3000_ultimatum_annex }
+    }
+}
+
+country_event = { ## Відмова → війна
+    id = turkey.3003
+    title = turkey.3003.t
+    desc = turkey.3003.d
+    picture = GFX_report_event_soviet_tank_parade
+
+    is_triggered_only = yes
+
+    option = {
+        name = turkey.3003.a
+        create_wargoal = {
+            type = annex_everything
+            target = ROOT
+        }
+    }
+}

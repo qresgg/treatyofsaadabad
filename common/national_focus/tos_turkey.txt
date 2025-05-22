@@ -4689,7 +4689,24 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		}
 
 		completion_reward = {
-			## EVENT ULTIMATUM TO GREECE
+			if = {
+				limit = {
+					GRE = {
+						exists = yes
+						has_war = no
+					}
+				}
+				GRE = { country_event = { id = turkey.2077 days = 5 } }
+			}
+			else_if = {
+				limit = {
+					GRE = { exists = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = GRE
+				}
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD

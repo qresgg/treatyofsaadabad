@@ -301,13 +301,35 @@
  nor_building_ship: "Currently Converting Ships"
 
 ## FORM DECISIONS
-form_sasanian_mazun_required_states_tt: "Controlls all §YMazun§! states. It including §YMusandam§!, §YBahrain§!, §YAbu-Dhabi§!, §YQatar§!, §YOman§! and §YMuscat§! regions"
-form_sasanian_cities_change_name_tt: "Some cities will be renamed to their historical names from §Ythe Sasanian era.§!"
-form_sasanian_integrate_warzan_tt: "Controls all §YWarzan§! states"
-form_sasanian_integrate_makran_tt: "Controls all §YMakran§! states"
-form_sasanian_integrate_anartta_tt: "Controls §YAnartta§! region"
-form_sasanian_integrate_marv_region_tt: "Controls §YMarv§! region"
-form_sasanian_integrate_varena_xsaora_spahan_rud_tt: "Controls §YSpahan-rud§! territories"
-form_sasanian_integrate_varena_xsaora_abar_rudan_tt: "Controls §YAbar-Rudan§! territories"
-form_sasanian_integrate_varena_xsaora_gurgan_daz_tt: "Controls §YGurgan§! territories"
-form_sasanian_integrate_varena_xsaora_varnagird_tt: "Controls §YVarnagird§! territories"
+ form_sasanian_mazun_required_states_tt: "Controlls all §YMazun§! states. It including §YMusandam§!, §YBahrain§!, §YAbu-Dhabi§!, §YQatar§!, §YOman§! and §YMuscat§! regions"
+ form_sasanian_cities_change_name_tt: "Some cities will be renamed to their historical names from §Ythe Sasanian era.§!"
+ form_sasanian_integrate_warzan_tt: "Controls all §YWarzan§! states"
+ form_sasanian_integrate_makran_tt: "Controls all §YMakran§! states"
+ form_sasanian_integrate_anartta_tt: "Controls §YAnartta§! region"
+ form_sasanian_integrate_marv_region_tt: "Controls §YMarv§! region"
+ form_sasanian_integrate_varena_xsaora_spahan_rud_tt: "Controls §YSpahan-rud§! territories"
+ form_sasanian_integrate_varena_xsaora_abar_rudan_tt: "Controls §YAbar-Rudan§! territories"
+ form_sasanian_integrate_varena_xsaora_gurgan_daz_tt: "Controls §YGurgan§! territories"
+ form_sasanian_integrate_varena_xsaora_varnagird_tt: "Controls §YVarnagird§! territories"
+  form_country_dobrudja_required_tt: "Controls §YDobrudja§! region"                         # регіон
+  form_country_macedonia_required_tt: "Controls §YMacedonia§! region"                      # регіон
+  form_country_southern_serbia_region_required_tt: "Controls §YSouthern Serbia§! region"  # регіон
+  form_country_serbia_required_states_tt: "Controls all §YSerbia§! states"                # країна
+  form_country_croatia_required_states_tt: "Controls all §YCroatia§! states"              # країна
+  form_country_zara_required_tt: "Controls §YZara§! region"                                # регіон
+  form_country_slovenia_required_states_tt: "Controls all §YSlovenia§! states"            # країна
+  form_country_litorale_istria_required_tt: "Controls §YIstria§! region"                  # регіон
+  form_country_lombardy_venetia_required_states_tt: "Controls all §YLombard-Venetian§! states"  # історична держава
+  form_country_papal_state_required_states_tt: "Controls all §YPapal State§! states"      # історична держава
+  form_country_toscana_required_tt: "Controls §YToscana§! region"                         # регіон
+  form_country_piedmont_required_tt: "Controls §YPiedmont§! region"                       # регіон
+  form_country_piedmont_sardinia_required_tt: "Controls all §YPiedmont-Sardiniae§! states"  # історична держава
+  form_country_piedmont_sardinia_required_tt: "Controls §YPiedmont-Sardiniae§! region" # Region
+  form_country_two_sicilias_required_states_tt: "Controls all §YThe Kingdom of the Two Sicilies§! states"  # історична держава
+  form_country_occitania_required_states_tt: "Controls §YOccitania§! region"              # регіон
+  form_country_visighotic_required_states_tt: "Controls §YVisighotic§! region"            # регіон/історичний
+  form_country_visighotic_expand_required_tt: "Controls §YVisighotic§! region"            # регіон
+  form_country_suebi_required_states_tt: "Controls §YSuebi§! region"                      # регіон/історичний
+  form_country_wallachia_and_moldova_required_states_tt: "Controls all §YWallachia and Moldova§! states"  # країни
+  form_country_expand_wallachia_and_moldova_required_states_tt: "Controls all §YWallachia and Moldova§! states"  # країни
+  form_country_transylvania_required_states_tt: "Controls §YTransylvania§! region"        # регіон

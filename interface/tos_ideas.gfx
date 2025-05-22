@@ -10406,4 +10406,28 @@ spriteTypes = {
 		name = "GFX_idea_IRQ_toyota"
 		texturefile = "gfx/interface/ideas/idea_IRQ_toyota.dds"
 	}
+                                                                           
+# TTTTTT U   U RRRR 
+#   TT   U   U R   R
+#   TT   U   U RRRR 
+#   TT   U   U R R  
+#   TT    UUU  R  RR
+							
+	spriteType = {
+		name = "GFX_idea_TUR_caliph_abdulmejid_ii"
+		texturefile = "gfx/interface/ideas/tos_idea_TUR_caliph_abdulmejid_ii.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_TUR_etatism_economy_law_idea"
+		texturefile = "gfx/interface/ideas/tos_idea_TUR_etatism_economy_law_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TUR_recovering_from_the_war_of_independence_idea"
+		texturefile = "gfx/interface/ideas/tos_idea_TUR_recovering_from_the_war_of_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TUR_six_arrows"
+		texturefile = "gfx/interface/ideas/tos_idea_TUR_six_arrows.dds"
+	}
 }
