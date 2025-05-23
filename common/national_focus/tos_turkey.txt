@@ -5305,7 +5305,25 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		}
 
 		completion_reward = {
-			## bulgarian ultimatum (1. become puppet 2. become annexed 3. reject)
+		custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					BUL = {
+						exists = yes
+						has_war = no
+					}
+				}
+				BUL = { country_event = { turkey.3000 days = 2 } }
+			}
+			else_if = {
+				limit = {
+					BUL = { exists = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = BUL
+				}
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD

@@ -2230,3 +2230,355 @@ country_event = { ## Відмова → війна
         }
     }
 }
+
+
+add_namespace = YUGOSLAVIANDUX
+add_namespace = partitionofromania
+add_namespace = TUR_CYPRUS
+
+
+country_event = {
+    id = YUGOSLAVIANDUX.1
+    title = "The Division of Yugoslavia"
+    desc = "Yugoslavia has been divided between Turkey and a Serbian puppet state."
+
+    trigger = {
+        NOT = {
+            OR = {
+                YUG = { is_puppet_of = ITA }
+                YUG = { is_in_faction_with = GER }
+            }
+        }
+    }
+
+	is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = "Divide Yugoslavia"
+        ai_chance = { factor = 100 }
+
+        hidden_effect = {
+            if = {
+				limit = {
+					NOT = {
+						102 = { is_owned_by = GER }
+					}
+            }
+			YUG = { transfer_state = 102 }
+        }
+            if = {
+				limit = {
+					NOT = {
+						853 = { is_owned_by = GER }
+					}
+            }
+			YUG = { transfer_state = 853 }
+        }
+        }
+
+        hidden_effect = {
+            if = {
+				limit = {
+					NOT = {
+						103 = { is_owned_by = ITA }
+					}
+            }
+			TUR = { transfer_state = 103 }
+        }
+            }
+            if = {
+				limit = {
+					NOT = {
+						105 = { is_owned_by = ITA }
+					}
+            }
+			TUR = { transfer_state = 105 }
+        }
+		TUR = {
+				transfer_state = 104
+				transfer_state = 804
+				transfer_state = 108
+				transfer_state = 802
+				transfer_state = 970
+				transfer_state = 106
+				transfer_state = 803
+			} 
+
+			TUR = {
+				set_autonomy = {
+					target = YUG
+					autonomy_state = autonomy_integrated_puppet
+				}
+			}
+
+            YUG = {
+				transfer_state = 109
+				transfer_state = 45
+				transfer_state = 764
+				transfer_state = 107
+            }
+    }
+}
+
+
+country_event = {
+	id = partitionofromania.1
+	title = "The Division of Romania"
+    desc = "Romania has been divided among various powers after its collapse."
+
+    trigger = {
+        NOT = { exists = ROM } # Romania must be annexed/collapsed
+    }
+
+	is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = "Divide Romania"
+        ai_chance = { 
+			base = 100 
+		}
+
+        hidden_effect = {
+            # HUNGARY: 83, 76, 84
+            HUN = {
+                transfer_state = 83
+                transfer_state = 76
+                transfer_state = 84
+            }
+
+            # YUGOSLAVIA: 82
+			if = {
+				limit = {
+					YUG = { exists = yes }
+				}
+				YUG = { transfer_state = 82 }
+			}
+
+            # BULGARIA: 77, 971 (or to TURKEY if not exists)
+            if = {
+                limit = {
+					BUL = { exists = yes }
+				}
+                BUL = {
+                    transfer_state = 77
+                    transfer_state = 971
+                }
+            }
+            else = {
+                TUR = {
+                    transfer_state = 77
+                    transfer_state = 971
+                }
+            }
+
+            # POLAND: 80
+            POL = {
+                transfer_state = 80
+            }
+
+            # SOVIET UNION: 78, 766
+            SOV = {
+                transfer_state = 78
+                transfer_state = 766
+            }
+
+
+			TUR = {
+				set_autonomy = {
+					target = ROM
+					autonomy_state = autonomy_integrated_puppet
+				}
+			}
+
+            ROM = {
+                transfer_state = 79
+                transfer_state = 81
+                transfer_state = 46
+            }
+        }
+    }
+}
+## ТУРЦІЇ
+
+country_event = {
+    id = TUR_CYPRUS.1
+    title = "The Cyprus Question"
+    desc = "How should we approach acquiring Cyprus from the British?"
+
+    trigger = {
+        tag = TUR
+        ENG = { controls_state = 183 }
+    }
+
+	is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = "Offer resources in exchange"
+        ai_chance = { factor = 40 }
+        hidden_effect = {
+            ENG = { country_event = { id = TUR_CYPRUS.2 days = 1 } }
+            set_variable = { cyprus_demand_method = 1 }
+        }
+    }
+    option = {
+        name = "Offer civilian factories"
+        ai_chance = { factor = 40 }
+        hidden_effect = {
+            ENG = { country_event = { id = TUR_CYPRUS.2 days = 1 } }
+            set_variable = { cyprus_demand_method = 2 }
+        }
+    }
+    option = {
+        name = "Claim it as our rightful territory!"
+        ai_chance = { factor = 20 }
+        hidden_effect = {
+            ENG = { country_event = { id = TUR_CYPRUS.2 days = 1 } }
+            set_variable = { cyprus_demand_method = 3 }
+        }
+    }
+}
+ ## БРИТАНІЇ
+country_event = {
+    id = TUR_CYPRUS.2
+    title = "Turkey Demands Cyprus"
+    desc = "Turkey has approached us regarding Cyprus. What should we do?"
+
+    trigger = { tag = ENG }
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = "Accept the deal"
+        ai_chance = { base = 99 }
+
+        hidden_effect = {
+            if = {
+                limit = {
+                    NOT = {
+                        TUR = {
+                            check_variable = { cyprus_demand_method = 3 }
+                        }
+                    }
+                }
+			TUR = {
+                transfer_state = 183
+                country_event = { id = TUR_CYPRUS.3 days = 1 }
+            }
+            }
+
+            # Method 1: Resource compensation
+            if = {
+                limit = {
+                    TUR = { check_variable = { cyprus_demand_method = 1 } }
+                }
+                TUR = {
+                    ### НЕ ПРАЦЮЄ НІ ОДИН СПОСІБ ВІДНІМАННЯ РЕСУРСІВ
+					## ПОПРОБУЙ ТИ
+                }
+                ENG = {
+                    random_owned_controlled_state = {
+                        limit = { is_controlled_by = ENG }
+                        add_resource = { type = oil amount = 50 }
+                        add_resource = { type = steel amount = 30 }
+                    }
+                }
+            }
+
+            # Method 2: Factory compensation
+            if = {
+                limit = { TUR = { check_variable = { cyprus_demand_method = 2 } } }
+
+                TUR = {
+                    random_owned_controlled_state = {
+                        limit = { arms_factory > 0 }
+                        remove_building = {
+                            type = industrial_complex
+                            level = 2
+                        }
+                    }
+                }
+
+                ENG = {
+                    add_building_construction = {
+                        type = industrial_complex
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+            }
+
+            if = {
+                limit = { TUR = { check_variable = { cyprus_demand_method = 3 } } }
+
+                TUR = { add_state_claim = 183 }
+            }
+        }
+    }
+
+    option = {
+        name = "Refuse"
+        ai_chance = { 
+            base = 1 
+        }
+        hidden_effect = {
+            TUR = { country_event = { id = TUR_CYPRUS.4 days = 1 } }
+        }
+    }
+}
+
+
+
+
+
+country_event = { ## ПРИЙНЯТТЯ
+    id = TUR_CYPRUS.3 
+    title = "Cyprus Transferred!"
+    desc = "The British have agreed to our terms. Cyprus is now under our control."
+    trigger = { tag = TUR }
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { name = "Excellent." }
+}
+
+country_event = { ## ВІДМОВА
+    id = TUR_CYPRUS.4
+    title = "Deal Rejected"
+    desc = "The British have rejected our attempt to gain Cyprus."
+    trigger = { tag = TUR }
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+        name = "Then we must take it another way..."
+        add_state_claim = 183
+    }
+}
+
+add_namespace = turkish
+
+news_event = { 
+    id = turkish.100
+    title = turkish.100.t
+    desc = turkish.100.d
+    picture = GFX_report_event_generic_war
+    major = yes
+    show_major = yes
+	
+    fire_only_once = yes
+
+	option = {
+		name = turkish.100.a
+		add_opinion_modifier = {
+			target = ITA
+			modifier = hostile_status
+		}
+		add_threat = 2
+	}
+}

@@ -1,0 +1,15 @@
+on_actions = {
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					state = 164
+					owner = TUR
+				}
+				}
+				TUR = {
+					news_event = { turkey.4002 hours = 3 }
+				}
+			}
+		}
+	}
