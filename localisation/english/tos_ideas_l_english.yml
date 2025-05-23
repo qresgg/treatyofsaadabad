@@ -16,3 +16,8 @@
   TUR_black_sea_trade_agreement:0 "Black Sea Trade Agreement"
   TUR_liberal_economic_reforms_idea:0 "Liberal Economic Reforms Idea"
   TUR_GRE_fascists_rising:0 "Fascist Rising"
+
+  #####################
+  ###### TURKEY #######
+  #####################
+  TUR_land_forces_modifier:0 "Turkish Land Forces"

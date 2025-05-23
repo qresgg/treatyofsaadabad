@@ -16,7 +16,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 
 	default = no
 
-	continuous_focus_position = { x = 250 y = 585 }	
+	continuous_focus_position = { x = 250 y = 1200 }	
 
 	shared_focus = SSB_the_saadabad_pact
 
@@ -808,20 +808,42 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 	############################
 	####### ARMY SECTION #######
 	############################
+
+	focus = {
+		id = TUR_global_army_reorganization
+		x = 5
+
+		cost = 10
+		completion_reward = {
+			custom_effect_tooltip = TUR_modify_turkish_land_army_ns_intro
+			add_to_variable = { 
+				TUR_conscription_factor = 0.05
+				tooltip = conscription_factor_tt
+			}
+			add_to_variable = { 
+				TUR_experience_gain_army_factor = 0.03
+				tooltip = experience_gain_army_factor_tt
+			}
+		}
+	}
 	
 	focus = {
 		id = TUR_continue_the_military_reorganization
 		icon = GFX_focus_chi_army_reform
 
-		x = 12
-		y = 0
+		prerequisite = { focus = TUR_global_army_reorganization }
+
+		relative_position_id = TUR_global_army_reorganization
+
+		x = 8
+		y = 2
 		cost = 5
 
 		ai_will_do = {
 			factor = 5
 		}
 		completion_reward = {
-			army_experience = 10
+			army_experience = 25
 			custom_effect_tooltip = unlocks_bolstering_our_armed_forces_decisions_tt
 		}
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -1548,11 +1570,11 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 	focus = {
 		id = TUR_found_an_air_war_academy
 		icon = GFX_goal_generic_air_doctrine
-		prerequisite = { focus = TUR_continue_the_military_reorganization }
+		prerequisite = { focus = TUR_global_army_reorganization }
 
-		x = -15
+		x = -8
 		y = 1
-		relative_position_id = TUR_continue_the_military_reorganization
+		relative_position_id = TUR_global_army_reorganization
 		cost = 5
 
 		ai_will_do = {
@@ -1895,12 +1917,12 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		id = TUR_continue_the_naval_expansion
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { 
-			focus = TUR_continue_the_military_reorganization 
+			focus = TUR_global_army_reorganization
 		}
 
-		x = -7
+		x = 0
 		y = 1
-		relative_position_id = TUR_continue_the_military_reorganization
+		relative_position_id = TUR_global_army_reorganization
 		cost = 5
 
 		ai_will_do = {
@@ -4086,6 +4108,384 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_TUR_TRADITIONALISM }
 	}
+
+	focus = {
+		id = TUR_global_resource_expansion
+		icon = GFX_focus_generic_central_planning
+		x = 27
+		y = 6
+		cost = 10
+
+		available = { 
+			num_of_factories > 45
+		}
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			add_political_power = 120
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = TUR_crimean_resourse_reintegration
+		icon = GFX_focus_generic_offshore_oil_rig
+		relative_position_id = TUR_global_resource_expansion
+		prerequisite = { focus = TUR_global_resource_expansion }
+		x = -4
+		y = 1
+
+		cost = 6
+		available = {
+			137 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		completion_reward = {
+			add_stability = 0.01
+			137 = {
+				add_resource = {
+					type = oil
+					amount = 12
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+	}
+
+	focus = {
+		id = TUR_greece_resourse_reintegration
+		icon = GFX_goal_generic_oil_refinery
+		relative_position_id = TUR_global_resource_expansion
+		prerequisite = { focus = TUR_global_resource_expansion }
+		x = -2
+		y = 1
+		cost = 6
+		available = {
+			731 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		completion_reward = {
+			add_stability = 0.01
+			731 = {
+				add_resource = {
+					type = oil
+					amount = 11
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+	}
+
+	focus = {
+		id = TUR_form_hatai_resources
+		icon = GFX_focus_generic_resource_extraction
+		relative_position_id = TUR_global_resource_expansion
+		prerequisite = { focus = TUR_global_resource_expansion }
+
+		cost = 7
+
+		available = {
+			799 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		## 3 oil 6 steel 10 chrom
+
+		completion_reward = {
+			add_stability = 0.01
+			799 = {
+				add_resource = {
+					type = oil
+					amount = 3
+				}
+				add_resource = {
+					type = steel
+					amount = 6
+				}
+				add_resource = {
+					type = chrom
+					amount = 10
+				}
+			}
+		}
+		
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+	}
+	focus = {
+		id = TUR_form_aleppo_resources
+		icon = GFX_focus_generic_steel
+		relative_position_id = TUR_global_resource_expansion
+		prerequisite = { focus = TUR_form_hatai_resources }
+
+		cost = 5
+		
+		available = {
+			677 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		completion_reward = {
+			add_stability = 0.01
+			677 = {
+				add_resource = {
+					type = oil
+					amount = 4
+				}
+				add_resource = {
+					type = steel
+					amount = 7
+				}
+				add_resource = {
+					type = chrom
+					amount = 3
+				}
+			}
+		}
+		
+		x = -1
+		y = 2
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+	}
+
+	focus = {
+		id = TUR_form_cypryotes_resources
+		icon = GFX_focus_generic_chromium
+		relative_position_id = TUR_global_resource_expansion
+		prerequisite = { focus = TUR_form_hatai_resources }
+
+		## 4 steel 9 chrom
+
+		cost = 6
+
+		available = {
+			183 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		completion_reward = {
+			add_stability = 0.01
+			183 = {
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+				add_resource = {
+					type = chrom
+					amount = 9
+				}
+			}
+		}
+		
+		x = 1
+		y = 2
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+	}
+
+	focus = {
+		id = TUR_form_second_sicilian_fabrics
+		icon = GFX_focus_generic_industrialists
+		relative_position_id = TUR_global_resource_expansion
+		prerequisite = { focus = TUR_global_resource_expansion }
+
+		cost = 10
+
+		available = {
+			156 = {
+				is_owned_and_controlled_by = ROOT
+			}
+			849 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		## 2 fabrics
+
+		completion_reward = {
+			add_stability = 0.01
+			849 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			156 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		
+		x = 3
+		y = 1
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+	}
+
+	focus = {
+		id = TUR_form_second_sicilian_resources
+		icon = GFX_focus_generic_aluminum
+		relative_position_id = TUR_global_resource_expansion
+		prerequisite = { focus = TUR_form_second_sicilian_fabrics }
+
+		## 7 rubber 10 aluminium
+		available = {
+			156 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		cost = 7
+
+		completion_reward = {
+			add_stability = 0.01
+			156 = {
+				add_resource = {
+					type = rubber
+					amount = 7
+				}
+				add_resource = {
+					type = aluminium
+					amount = 10
+				}
+			}
+		}
+		
+		x = 3
+		y = 2
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+	}
+	focus = {
+		id = TUR_form_historical_sicilian_resources
+		icon = GFX_focus_generic_rubber_plantations
+		relative_position_id = TUR_global_resource_expansion
+		prerequisite = { focus = TUR_form_second_sicilian_fabrics }
+
+		cost = 6
+
+		available = {
+			115 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		completion_reward = {
+			add_stability = 0.01
+			115 = {
+				add_resource = {
+					type = oil
+					amount = 6
+				}
+				add_resource = {
+					type = rubber
+					amount = 4
+				}
+			}
+		}
+		
+		x = 5
+		y = 2
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+	}
+
+	focus = {
+		id = TUR_baghdad_pact
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		
+		available = {
+			has_idea = IRQ_saadabad_spheres_of_influence
+		}
+
+		cost = 5
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		x = 95
+		y = 2
+		completion_reward = {
+			add_political_power = 100
+		}
+		search_filters = {
+			FOCUS_FILTER_TREATYOFSAADABAD
+		}
+	}
+
+	focus = {
+		id = TUR_partition_of_syria
+		icon = GFX_focus_IRQ_partition_of_syria
+		cost = 10
+		prerequisite = {
+			focus = TUR_baghdad_pact
+		}
+		relative_position_id = TUR_baghdad_pact
+
+		x = 0
+		y = 1
+		completion_reward = {
+			SYR = { country_event = { id = IRQ_SYR_partition.1 }}
+		}
+		search_filters = {
+			FOCUS_FILTER_TREATYOFSAADABAD
+		}
+	}
+
+	focus = {
+		id = TUR_cyprus_crisis
+		icon = GFX_focus_generic_attack_cyprus
+		cost = 7
+		prerequisite = {
+			focus = TUR_baghdad_pact
+		}
+		relative_position_id = TUR_baghdad_pact
+		x = 2
+		y = 1
+
+		completion_reward = {
+			## зробити івент, який перше прокає для турції, і турція вибирає яким методом захопить кіпр (1. купити за ресурси, 2. купити за фабрики, 3. кинути клейм)
+			## коли прилітає івент британії то вона або приймає або відмовляється
+			## прилітає івент турції на те що вона відмовилась або согласилась
+		}
+		search_filters = {
+			FOCUS_FILTER_TREATYOFSAADABAD
+		}
+	}
+
+	focus = {
+		id = TUR_operation_dodecanes
+		icon = GFX_focus_generic_annex_country
+		cost = 5
+		prerequisite = {
+			focus = TUR_baghdad_pact
+		}
+		relative_position_id = TUR_baghdad_pact
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			## зробити нювс івент турецькі сили відхопили додеканес, reward - -opinion в італії для турції
+			## 2 світової напряжонки
+		}
+		search_filters = {
+			FOCUS_FILTER_TREATYOFSAADABAD
+		}
+	}
+
 	focus = {
 		id = TUR_stabilize_the_nation
 		icon = GFX_focus_PER_national_museum
@@ -4093,7 +4493,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 			focus = TUR_course_to_left
 			focus = TUR_course_to_right
 		}
-		x = -1
+		x = -2
 		y = 2
 		relative_position_id = TUR_overthrow_inonus_government
 		cost = 5
@@ -4164,8 +4564,9 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		icon = GFX_focus_TUR_purge_the_kemalists
 		prerequisite = { 
 			focus = TUR_course_to_left
+			focus = TUR_course_to_right
 		}
-		x = -7
+		x = 2
 		y = 1
 		relative_position_id = TUR_course_to_left
 		cost = 5
@@ -4226,17 +4627,14 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		id = TUR_restore_the_imperial_divan
 		icon = GFX_focus_generic_court
 		prerequisite = { 
-			focus = TUR_dismantle_the_republican_institutions
-		}
-		prerequisite = { 
 			focus = TUR_lift_the_caliphates_exile
 		}
 		mutually_exclusive = {
 			focus = TUR_continue_military_rule
 		}
-		x = -2
+		x = 0
 		y = 1
-		relative_position_id = TUR_dismantle_the_republican_institutions
+		relative_position_id = TUR_lift_the_caliphates_exile
 		cost = 5
 
 		ai_will_do = {
@@ -4299,17 +4697,14 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		id = TUR_continue_military_rule
 		icon = GFX_focus_generic_military_mission
 		prerequisite = { 
-			focus = TUR_dismantle_the_republican_institutions
-		}
-		prerequisite = { 
 			focus = TUR_lift_the_caliphates_exile
 		}
 		mutually_exclusive = {
 			focus = TUR_restore_the_imperial_divan
 		}
-		x = 0
+		x = 2
 		y = 1
-		relative_position_id = TUR_dismantle_the_republican_institutions
+		relative_position_id = TUR_lift_the_caliphates_exile
 		cost = 5
 
 		ai_will_do = {
@@ -4725,7 +5120,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		}
 
 		completion_reward = {
-			add_war_support = 0.08
+			add_war_support = 0.02
 			add_ideas = TUR_GRE_fascists_rising
 		}
 		search_filters = {
@@ -4740,7 +5135,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		x = 2
 		y = 1
 		relative_position_id = TUR_fascism_rising
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -4765,7 +5160,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		x = 0
 		y = 1
 		relative_position_id = TUR_fascism_rising
-		cost = 5
+		cost = 8
 		ai_will_do = {
 			base = 10
 		}
@@ -4810,7 +5205,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 
 	focus = {
 		id = TUR_restore_byzantium	
-		icon = GFX_ENG_alliance
+		icon = GFX_focus_TUR_restore_byzantium
 		prerequisite = { focus = TUR_GRE_ultimatum }
 		x = 4
 		y = 3
@@ -4862,7 +5257,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 
 		completion_reward = {
 			set_country_flag = GRE_byz_unified_flag
-			GRE_set_appropriate_cosmetic_tag = yes
+			set_cosmetic_tag = BYZ_byzantium
 			hidden_effect = {
 				news_event = { id = wtt_news.66 hours = 6 }
 				set_global_flag = form_byzantine_empire_flag
@@ -5027,6 +5422,8 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		completion_reward = {
 			custom_effect_tooltip = TUR_BUL_expansion_decisions_tt
 			## allows to expand bulgarian core states
+			add_stability = 0.04
+			add_political_power = 100
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
@@ -5035,7 +5432,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 
 	focus = {
 		id = TUR_yugoslavian_dux
-		icon = GFX_focus_GER_fate_of_yugoslavia
+		icon = GFX_focus_TUR_yugoslavian_duxes
 		prerequisite = { focus = TUR_plan_balkan }
 		mutually_exclusive = { focus = TUR_yugoslavian_war }
 		relative_position_id = TUR_plan_balkan
@@ -5046,8 +5443,10 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 			## EVENT SOUTH YUGOSLAVIA goes to TUR, NORTH YUGOSLAVIA goes as puppet to TUR
 			## 103, 104, 804, 105, 108, 802, 970, 106, 803 - STATES goes to TUR
 			## 853, 102, 109, 45, 764, 107 - goes to Serbian Puppet
-			## 102, 853 - checks to german occupation
-			## 103, 105 - checks to italy occupation
+			## 102, 853 - checks to german occupation (if they under occupation - skip them)
+			## 103, 105 - checks to italy occupation (if they under occupation - skip them)
+			## check if yugoslavia is in ger alliance
+			## check if yugoslavia is italian puppet
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
@@ -5083,7 +5482,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 
 	focus = {
 		id = TUR_plan_italy
-		icon = GFX_ENG_alliance
+		icon = GFX_focus_generic_adriatic_sea_focus
 		prerequisite = { focus = TUR_restore_byzantium }
 		x = 6
 		y = 1
@@ -5096,6 +5495,8 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		}
 
 		completion_reward = {
+			add_political_power = 85
+			add_command_power = 25
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
@@ -5104,6 +5505,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 
 	focus = {
 		id = TUR_historical_italian_boot
+		icon = GFX_focus_TUR_ita_historical_boot
 		prerequisite = { focus = TUR_plan_italy }
 		relative_position_id = TUR_plan_italy
 		available = {
@@ -5115,16 +5517,8 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		x = 0
 		y = 1
 		completion_reward = {
-			every_state = {
-				LIMIT = {
-					OR = {
-						state = 156
-						state = 117
-						state = 849
-					}
-				}
-				add_core_of = TUR
-			}
+			custom_effect_tooltip = open_decision_to_core_two_sicilias_tt
+			add_stability = 0.1
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
@@ -5262,6 +5656,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		completion_reward = {
 			add_political_power = 85
 			army_experience = 15
+			navy_experience = 15
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
@@ -5270,6 +5665,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 
 	focus = {
 		id = TUR_azovan_sea_is_our
+		icon = GFX_focus_TUR_azov_sea_our
 		prerequisite = { focus = TUR_crimean_crisis }
 		relative_position_id = TUR_crimean_crisis
 		cost = 7
@@ -5302,12 +5698,17 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 	}
 	focus = {
 		id = TUR_crimean_crisis
+		icon = GFX_focus_TUR_crimean_crysis
 		prerequisite = { focus = TUR_plan_black_sea }
 		relative_position_id = TUR_plan_black_sea
 		cost = 10
 		x = 0
 		y = 1
 		completion_reward = {
+			137 = {
+				add_claim_by = TUR
+			}
+			add_war_support = 0.02
 			## NEWS EVENT KRYM WAS OCCUPIED BY BLACKSHIRTS
 			## SOV EVENT - WAR OR DON'T WAR
 			## TUR EVENT AFTER SOV EVENT - MAKE CRIMEA OUR PUPPET, OR DON'T MAKE ANGRY SOVIETS (робити маріонеткою чи не робити)
@@ -5374,6 +5775,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 	}
 	focus = {
 		id = TUR_make_byzantian_empire_greate_again
+		icon = GFX_focus_TUR_make_byzantian_empire_great_again
 		prerequisite = { 
 			focus = TUR_partition_of_romania
 			focus = TUR_turkish_romanian_war
@@ -5418,7 +5820,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		id = TUR_liberalize_the_economy
 		icon = GFX_focus_RAJ_trickle_down_economics
 		prerequisite = { focus = TUR_course_to_left focus = TUR_course_to_right }
-		x = 1
+		x = 2
 		y = 2
 		relative_position_id = TUR_overthrow_inonus_government
 		cost = 8

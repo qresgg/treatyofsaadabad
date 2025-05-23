@@ -1,0 +1,22 @@
+#### TUR ####
+TUR_land_forces_modifier = {
+	enable = { always = yes }
+	icon = GFX_idea_TUR_recovering_from_the_war_of_independence_idea
+
+    army_org_factor = TUR_army_org_factor
+    experience_gain_army_factor = TUR_experience_gain_army_factor
+    training_time_factor = TUR_training_time_factor
+    initiative_factor = TUR_initiative_factor
+    command_power_gain_mult = TUR_command_power_gain_mult
+    max_command_power_mult = TUR_max_command_power_mult
+    breakthrough_factor = TUR_breakthrough_factor
+    planning_speed = TUR_planning_speed
+    special_forces_cap = TUR_special_forces_cap
+    special_forces_out_of_supply_factor = TUR_special_forces_out_of_supply_factor
+    army_attack_speed_factor = TUR_army_attack_speed_factor
+    army_mobilization_speed = TUR_army_mobilization_speed
+    conscription_factor = TUR_conscription_factor
+    army_defence_factor = TUR_army_defence_factor
+    army_attack_factor = TUR_army_attack_factor
+    max_planning_factor = TUR_max_planning_factor
+}

@@ -7606,9 +7606,9 @@ focus_tree = {
 		ai_will_do = {
 			base = 1
 		}
-		# bypass = {
-		# 	has_idea = IRQ_saadabad_spheres_of_influence
-		# }
+		bypass = {
+			has_idea = IRQ_saadabad_spheres_of_influence
+		}
 
 		# TREBA
 		# allow_branch = { 

@@ -57,9 +57,13 @@
  IRQ_middle_east_reichprotectorate_democratic_DEF: "the Federation of Middle West"
  IRQ_middle_east_reichprotectorate_democratic_ADJ: "Arab"
 
- TUR_byzantine: "Byzantine"
- TUR_byzantine_DEF: "the Byzantine"
- TUR_byzantine_ADJ: "Byzantines"
+ BYZ_byzantium: "Byzantium"
+ BYZ_byzantium_DEF: "the Byzantium"
+ BYZ_byzantium_ADJ: "Byzantiums"
+ 
+ BYZ_byzantine_empire: "Byzantine Empire"
+ BYZ_byzantine_empire_DEF: "the Byzantine Empire"
+ BYZ_byzantine_empire_ADJ: "Byzantines"
 
  ## BYZANTINE PUPPETS
  BUL_byzantine_dux: "Thema of Bulgarias"

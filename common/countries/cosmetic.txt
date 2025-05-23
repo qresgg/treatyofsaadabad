@@ -1552,16 +1552,6 @@ PSH = {
 	color_ui = rgb { 31 138 31 }
 }
 
-PER_second_sasanian_empire = {
-	color = rgb { 75 91 95 }
-	color_ui = rgb { 75 91 95 }
-}
-
-IRQ_middle_east_reichprotectorate = {
-	color = rgb { 115 115 115 }
-	color_ui = rgb { 122 145 93 }
-}
-
 PER_persian_empire = {
 	color = rgb { 0 165 114 }
 	color_ui = rgb { 0 165 114 }
@@ -1661,3 +1651,21 @@ united_mahgreb = {
 	color = rgb { 0 128 43 }
 	color_ui = rgb { 0 77 26 }
 }
+
+
+## MODD
+PER_second_sasanian_empire = {
+	color = rgb { 75 91 95 }
+	color_ui = rgb { 75 91 95 }
+}
+
+IRQ_middle_east_reichprotectorate = {
+	color = rgb { 115 115 115 }
+	color_ui = rgb { 122 145 93 }
+}
+
+BYZ_byzantium = {
+	color = rgb { 143 12 125 }
+	color_ui = rgb { 143 12 125 }
+}
+

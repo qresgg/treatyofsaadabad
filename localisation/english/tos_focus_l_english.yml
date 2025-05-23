@@ -763,7 +763,7 @@
   TUR_piermont_occitania_desc: "To secure our western front, we must extend our reach into southern France and northern Italy."
   TUR_warfare_complex: "Advanced Warfare Complex"
   TUR_warfare_complex_desc: "To effectively modernize our armed forces, we must invest in an integrated warfare complex that enables joint force planning, innovation, and rapid mobilization. This facility will serve as the heart of our future military doctrine."
-
+  TUR_modify_turkish_land_army_ns_intro: "Modify §Y$TUR_land_forces_modifier$§! by"
 
   ## TOOLTIPS
   PER_request_out_pact_territories_tt: "When §Y[IRQ.GetNameWithFlag]§! becomes controller or owner our historical territories, we will get them"
@@ -789,5 +789,6 @@
   TUR_unlocks_drill_decisions_tt:0 "Unlocks §YProspecting for Oil§! decisions"
   TUR_launch_the_revolution_tt:0 "A civil war will start. The higher support the communists have, the more divisions will defect to join them. If communist support is high enough, a civil war can be avoided."
   TUR_launch_the_revolution_soviet_support_tt:0 "If the Soviet Union has promised us support, we will receive extra arms for the revolution."
+  TUR_modify_turkish_army_ns_intro
   EFFECT_CHANGE_LAW_tosi_social_order:0 "Implement Revolutionary Social Policies"
   tos_newline:0 "\n"

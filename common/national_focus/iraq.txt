@@ -6664,7 +6664,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = IRQ_secret_baghdad_pact
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			base = 1
@@ -7551,7 +7551,7 @@ focus_tree = {
 		mutually_exclusive = { focus = IRQ_liberate_south_levant }
 		relative_position_id = IRQ_partition_of_syria
 	
-		cost = 5# Івент якщо соглашаються Великобританія, то ти отримуєш Ізраїль і пакт про ненапад з сусідами, а якщо ні — отримаєш wargoal на Ізраїль.
+		cost = 10 # Івент якщо соглашаються Великобританія, то ти отримуєш Ізраїль і пакт про ненапад з сусідами, а якщо ні — отримаєш wargoal на Ізраїль.
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_TREATYOFSAADABAD }
 	
 		available = {

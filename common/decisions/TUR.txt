@@ -1,4 +1,22 @@
-#####---------------------------------------------------------------------> Mod by Sig "GreatExperiment" Altre
+TUR_dis_politic_cat = {
+	TUR_operation_dodecanes = {
+		## TO ANNEX DODECANES
+		## NEWS EVENT
+	}
+	TUR_cyprus_crisis = {
+		## EVENT TO ANNEX CYPRUS
+	}
+	TUR_nationalize_cypryotes = {
+		## NATIONILIZE CYPRUS
+	}
+	TUR_nationalize_road_to_lebanon = {
+		## NATIONILIZE ALEPPO, LEBANON
+	}
+	TUR_nationalize_crimea = {
+		## NATIONILIZE CRIMEA
+	}
+}
+
 
 TUR_fascist_category = {
 	TUR_reclaim_trabzon = {
@@ -190,7 +208,7 @@ TUR_fascist_category = {
 }
 
 political_actions = {
-	r56_TUR_rally_across_the_countryside = {
+	tos_TUR_rally_across_the_countryside = {
 	
 		icon = eng_trade_unions_support
 		fire_only_once = yes
@@ -235,7 +253,7 @@ political_actions = {
 		}
 	}
 
-	r56_TUR_end_inonus_cult_of_personality = {
+	tos_TUR_end_inonus_cult_of_personality = {
 	
 		icon = GFX_decision_eng_trade_unions_demand
 		fire_only_once = yes
@@ -337,7 +355,7 @@ TUR_bolstering_our_armed_forces = {
 		
 		visible = {
 			OR = {
-				has_completed_focus = TUR_the_montreux_convention_r56
+				has_completed_focus = TUR_the_montreux_convention_tos
 				has_completed_focus = TUR_defending_our_borders
 			}
 		}
@@ -452,8 +470,8 @@ TUR_bolstering_our_armed_forces = {
 	}
 }
 
-r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey to claim and core various territories	
-	r56_TUR_claim_mosul = {		#Claims the coreable north Iraq state of Mosul, and unlocks decisions to boost compliance in/eventually integrate it.
+tos_TUR_turkish_revanchism = {		#WIP Decision category for tos Focus Tree Turkey to claim and core various territories	
+	tos_TUR_claim_mosul = {		#Claims the coreable north Iraq state of Mosul, and unlocks decisions to boost compliance in/eventually integrate it.
 	
 		icon = generic_form_nation
 		fire_only_once = yes
@@ -485,7 +503,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}	
 	}
 	
-	r56_TUR_connect_mosul = {
+	tos_TUR_connect_mosul = {
 		icon = generic_construction
 		fire_only_once = yes
 		cost = 55
@@ -552,7 +570,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}
 	}
 	
-	r56_TUR_mosul_turkish_language_schooling = {		#Unlocks decision to integrate Mosul
+	tos_TUR_mosul_turkish_language_schooling = {		#Unlocks decision to integrate Mosul
 	
 		icon = generic_nationalism
 		fire_only_once = yes
@@ -601,7 +619,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 					}
 				}
 				add_dynamic_modifier = {
-					modifier = r56_kurdish_agitation
+					modifier = tos_kurdish_agitation
 					days = 180
 				}
 			}
@@ -616,7 +634,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}	
 	}
 	
-	r56_TUR_integrate_mosul = {		#Cores the coreable north Iraq state of Mosul
+	tos_TUR_integrate_mosul = {		#Cores the coreable north Iraq state of Mosul
 	
 		icon = generic_nationalism
 		fire_only_once = yes
@@ -665,7 +683,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}
 	}
 	
-	r56_TUR_claim_azerbaijan = {		#Claims coreable Azerbaijan, and unlocks decisions to boost compliance in/eventually integrate it.
+	tos_TUR_claim_azerbaijan = {		#Claims coreable Azerbaijan, and unlocks decisions to boost compliance in/eventually integrate it.
 	
 		icon = generic_form_nation
 		fire_only_once = yes
@@ -694,7 +712,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}	
 	}
 	
-	r56_TUR_connect_baku = {
+	tos_TUR_connect_baku = {
 		icon = generic_construction
 		fire_only_once = yes
 		cost = 55
@@ -764,7 +782,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}
 	}
 	
-	r56_TUR_baku_pan_turk_propaganda = {		#Gains compliance in Azerbaijan
+	tos_TUR_baku_pan_turk_propaganda = {		#Gains compliance in Azerbaijan
 	
 		icon = generic_nationalism
 		fire_only_once = no
@@ -812,7 +830,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}	
 	}
 	
-	r56_TUR_integrate_azerbaijan = {		#Cores Azerbaijan
+	tos_TUR_integrate_azerbaijan = {		#Cores Azerbaijan
 	
 		icon = generic_nationalism
 		fire_only_once = yes
@@ -848,7 +866,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}
 	}
 	
-	r56_TUR_unshackle_tabriz = {		#Claims the coreable Azeri-majority territories of Northern Iran
+	tos_TUR_unshackle_tabriz = {		#Claims the coreable Azeri-majority territories of Northern Iran
 	
 		icon = generic_form_nation
 		fire_only_once = yes
@@ -881,7 +899,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}	
 	}
 	
-	r56_TUR_connect_tabriz = {
+	tos_TUR_connect_tabriz = {
 		icon = generic_construction
 		fire_only_once = yes
 		cost = 55
@@ -957,7 +975,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}
 	}
 	
-	r56_TUR_tabriz_pan_turk_propaganda = {		#Gains compliance in the Azerbaijan cores in Iran
+	tos_TUR_tabriz_pan_turk_propaganda = {		#Gains compliance in the Azerbaijan cores in Iran
 	
 		icon = generic_nationalism
 		fire_only_once = no
@@ -1007,13 +1025,13 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}	
 	}
 	
-	r56_TUR_integrate_tabriz = {		#Cores the Azeri-majority territories of Northwest Iran.
+	tos_TUR_integrate_tabriz = {		#Cores the Azeri-majority territories of Northwest Iran.
 	
 		icon = generic_nationalism
 		fire_only_once = yes
 		cost = 50
 		
-		visible = {		#Must control Tabriz, and have claim (gotten from r56_TUR_claim_south_azerbaijan); won't show up if you've cored it
+		visible = {		#Must control Tabriz, and have claim (gotten from tos_TUR_claim_south_azerbaijan); won't show up if you've cored it
 			has_country_flag = TUR_connect_tabriz
 			NOT = {
 				419 = { is_core_of = TUR }
@@ -1057,7 +1075,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}
 	}
 	
-	r56_TUR_claim_crimea = {		#Claims coreable Crimea. Only shows if you're controller, or at war with the USSR.
+	tos_TUR_claim_crimea = {		#Claims coreable Crimea. Only shows if you're controller, or at war with the USSR.
 	
 		icon = generic_form_nation
 		fire_only_once = yes
@@ -1083,7 +1101,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}
 	}
 	
-	r56_TUR_crimea_pan_turk_propaganda = {		#Gains compliance in Crimea
+	tos_TUR_crimea_pan_turk_propaganda = {		#Gains compliance in Crimea
 	
 		icon = generic_nationalism
 		fire_only_once = no
@@ -1125,13 +1143,13 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}	
 	}
 	
-	r56_TUR_integrate_crimea = {		#Cores Crimea
+	tos_TUR_integrate_crimea = {		#Cores Crimea
 	
 		icon = generic_nationalism
 		fire_only_once = yes
 		cost = 40
 		
-		visible = {		#Must control Crimea, and have claim (gotten from r56_TUR_claim_crimea); won't show up if you've cored it
+		visible = {		#Must control Crimea, and have claim (gotten from tos_TUR_claim_crimea); won't show up if you've cored it
 			137 = { is_claimed_by = TUR }
 			NOT = {
 				137 = { is_core_of = TUR }
@@ -1158,7 +1176,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}
 	}
 
-	r56_TUR_reclaim_thrace = {		#Claims coreable Thrace. Only shows if you're controller, or at war with that province's owner (Likely Greece or Bulgaria).
+	tos_TUR_reclaim_thrace = {		#Claims coreable Thrace. Only shows if you're controller, or at war with that province's owner (Likely Greece or Bulgaria).
 	
 		icon = generic_form_nation
 		fire_only_once = yes
@@ -1189,13 +1207,13 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}
 	}
 
-	r56_TUR_invite_thracian_resettlement = {		#Adds some compliance and population to Thrace
+	tos_TUR_invite_thracian_resettlement = {		#Adds some compliance and population to Thrace
 	
 		icon = generic_form_nation
 		fire_only_once = yes
 		cost = 20
 		
-		visible = {		#Must control Thrace, and have claim (gotten from r56_TUR_reclaim_thrace); won't show up if you've cored it
+		visible = {		#Must control Thrace, and have claim (gotten from tos_TUR_reclaim_thrace); won't show up if you've cored it
 			NOT = {
 				184 = {
 					is_core_of = TUR
@@ -1227,7 +1245,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}
 	}
 
-	r56_TUR_integrate_thrace = {		#Cores Thrace
+	tos_TUR_integrate_thrace = {		#Cores Thrace
 	
 		icon = generic_nationalism
 		fire_only_once = yes
@@ -1260,7 +1278,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}
 	}
 	
-	r56_TUR_reclaim_cyprus = {		#Claims coreable Cyprus. Only shows if you're controller, or at war with that province's owner (Likely UK or Greece).
+	tos_TUR_reclaim_cyprus = {		#Claims coreable Cyprus. Only shows if you're controller, or at war with that province's owner (Likely UK or Greece).
 	
 		icon = generic_form_nation
 		fire_only_once = yes
@@ -1291,13 +1309,13 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}
 	}
 	
-	r56_TUR_invite_settlers_to_cyprus = {		#Adds some compliance and population to Cyprus
+	tos_TUR_invite_settlers_to_cyprus = {		#Adds some compliance and population to Cyprus
 	
 		icon = generic_form_nation
 		fire_only_once = no
 		cost = 20
 		
-		visible = {		#Must control Cyprus, and have claim (gotten from r56_TUR_reclaim_cyprus); won't show up if you've cored it
+		visible = {		#Must control Cyprus, and have claim (gotten from tos_TUR_reclaim_cyprus); won't show up if you've cored it
 			NOT = {
 				183 = {
 					is_core_of = TUR
@@ -1329,7 +1347,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}
 	}
 	
-	r56_TUR_integrate_cyprus = {		#Cores Cyprus
+	tos_TUR_integrate_cyprus = {		#Cores Cyprus
 	
 		icon = generic_nationalism
 		fire_only_once = yes
@@ -1361,7 +1379,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 			}	
 		}
 	}
-	r56_TUR_integrate_sulymaniyah = {		#Cores Sulymaniyah
+	tos_TUR_integrate_sulymaniyah = {		#Cores Sulymaniyah
 	
 		icon = generic_nationalism
 		fire_only_once = yes
@@ -1395,7 +1413,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}
 	}
 
-	r56_TUR_integrate_kordestan = {		#Cores Kordestan
+	tos_TUR_integrate_kordestan = {		#Cores Kordestan
 	
 		icon = generic_nationalism
 		fire_only_once = yes
@@ -1876,7 +1894,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}
 	}
 
-	TUR_r56integrate_albania = {
+	TUR_tosintegrate_albania = {
 
 		icon = generic_form_nation
 		fire_only_once = yes
@@ -1926,7 +1944,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}
 	}
 
-	TUR_r56integrate_the_bosnian_lands = {
+	TUR_tosintegrate_the_bosnian_lands = {
 
 		icon = generic_form_nation
 		fire_only_once = yes
@@ -1984,7 +2002,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}
 	}
 
-	TUR_r56integrate_dagestan = {
+	TUR_tosintegrate_dagestan = {
 
 		icon = generic_form_nation
 		fire_only_once = yes
@@ -2020,7 +2038,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}
 	}
 
-	TUR_r56integrate_chechnya = {
+	TUR_tosintegrate_chechnya = {
 
 		icon = generic_form_nation
 		fire_only_once = yes
@@ -2057,7 +2075,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}
 	}
 
-	TUR_r56integrate_kabardinobalkaria = {
+	TUR_tosintegrate_kabardinobalkaria = {
 
 		icon = generic_form_nation
 		fire_only_once = yes
@@ -2090,7 +2108,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}
 	}
 
-	r56_TUR_integrate_turkmenistan = {		
+	tos_TUR_integrate_turkmenistan = {		
 	
 		icon = generic_form_nation
 		fire_only_once = yes
@@ -2140,7 +2158,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 			}
 		}
 	}
-	r56_TUR_integrate_uzbekistan = {		
+	tos_TUR_integrate_uzbekistan = {		
 	
 		icon = generic_form_nation
 		fire_only_once = yes
@@ -2247,7 +2265,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 			}
 		}
 	}
-	r56_TUR_integrate_kazakhstan = {		
+	tos_TUR_integrate_kazakhstan = {		
 	
 		icon = generic_form_nation
 		fire_only_once = yes
@@ -2384,7 +2402,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 			}
 		}
 	}
-	r56_TUR_integrate_kyrgyzstan = {		
+	tos_TUR_integrate_kyrgyzstan = {		
 	
 		icon = generic_form_nation
 		fire_only_once = yes
@@ -2417,7 +2435,7 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 			}
 		}
 	}
-	r56_TUR_integrate_kazan = {		
+	tos_TUR_integrate_kazan = {		
 	
 		icon = generic_form_nation
 		fire_only_once = yes
@@ -2465,8 +2483,8 @@ r56_TUR_turkish_revanchism = {		#WIP Decision category for R56 Focus Tree Turkey
 		}
 	}
 }
-r56_TUR_modernizing_the_economy = {
-	r56_TUR_connect_van = {
+tos_TUR_modernizing_the_economy = {
+	tos_TUR_connect_van = {
 		icon = generic_construction
 		fire_only_once = yes
 		cost = 25
@@ -2513,7 +2531,7 @@ r56_TUR_modernizing_the_economy = {
 		}
 	}
 	
-	r56_TUR_drill_diyakbir = {
+	tos_TUR_drill_diyakbir = {
 		icon = oil
 		fire_only_once = yes
 		cost = 40
@@ -2553,7 +2571,7 @@ r56_TUR_modernizing_the_economy = {
 			}
 		}
 	}
-	r56_TUR_drill_hakkari = {
+	tos_TUR_drill_hakkari = {
 		icon = oil
 		fire_only_once = yes
 		cost = 50
@@ -2594,8 +2612,8 @@ r56_TUR_modernizing_the_economy = {
 		}
 	}
 }
-r56_TUR_foreign_policy = {
-	r56_TUR_press_the_hatay_issue = {		#Requests the starting core northwest state of French-Syria from its owner, usually France.
+tos_TUR_foreign_policy = {
+	tos_TUR_press_the_hatay_issue = {		#Requests the starting core northwest state of French-Syria from its owner, usually France.
 	
 		icon = generic_operation
 		fire_only_once = yes
@@ -2648,7 +2666,7 @@ r56_TUR_foreign_policy = {
 			}
 		}
 	}
-	r56_TUR_syria_for_alliance = {		#Adds claim on Syria and requests to join the allies
+	tos_TUR_syria_for_alliance = {		#Adds claim on Syria and requests to join the allies
 	
 		icon = generic_operation
 		fire_only_once = yes
@@ -2692,7 +2710,7 @@ r56_TUR_foreign_policy = {
 			factor = 3000
 		}
 	}
-	r56_TUR_request_cyprus = {
+	tos_TUR_request_cyprus = {
 	
 		icon = generic_operation
 		fire_only_once = yes
@@ -2712,7 +2730,7 @@ r56_TUR_foreign_policy = {
 			factor = 30
 		}
 	}
-	r56_TUR_join_the_allies = {		
+	tos_TUR_join_the_allies = {		
 	
 		icon = eng_trade_unions_support
 		fire_only_once = yes
@@ -2755,7 +2773,7 @@ r56_TUR_foreign_policy = {
 			factor = 100
 		}
 	}
-	r56_TUR_join_the_axis = {		
+	tos_TUR_join_the_axis = {		
 	
 		icon = eng_trade_unions_support
 		fire_only_once = yes
@@ -2785,7 +2803,7 @@ r56_TUR_foreign_policy = {
 			factor = 1
 		}
 	}
-	r56_TUR_deal_for_the_oniki_islands = {
+	tos_TUR_deal_for_the_oniki_islands = {
 	
 		icon = generic_operation
 		fire_only_once = yes
@@ -2823,7 +2841,7 @@ r56_TUR_foreign_policy = {
 			factor = 1
 		}
 	}
-	r56_TUR_join_the_comintern = {		
+	tos_TUR_join_the_comintern = {		
 	
 		icon = eng_trade_unions_support
 		fire_only_once = yes
@@ -2855,7 +2873,7 @@ r56_TUR_foreign_policy = {
 			factor = 100
 		}
 	}
-	r56_TUR_alliance_with_the_germans = {	#For non-Fascist Germany	
+	tos_TUR_alliance_with_the_germans = {	#For non-Fascist Germany	
 	
 		icon = eng_trade_unions_support
 		fire_only_once = yes
@@ -2887,7 +2905,7 @@ r56_TUR_foreign_policy = {
 			factor = 1
 		}
 	}
-	r56_TUR_alliance_with_the_french = {		
+	tos_TUR_alliance_with_the_french = {		
 	
 		icon = eng_trade_unions_support
 		fire_only_once = yes
@@ -2925,7 +2943,7 @@ r56_TUR_foreign_policy = {
 			factor = 1
 		}
 	}
-	r56_TUR_alliance_with_the_russians = {		#Non-communist SOV		
+	tos_TUR_alliance_with_the_russians = {		#Non-communist SOV		
 	
 		icon = eng_trade_unions_support
 		fire_only_once = yes
@@ -2963,7 +2981,7 @@ r56_TUR_foreign_policy = {
 			factor = 200
 		}
 	}
-	r56_TUR_alliance_with_the_romanians = {		
+	tos_TUR_alliance_with_the_romanians = {		
 	
 		icon = eng_trade_unions_support
 		fire_only_once = yes
@@ -3002,7 +3020,7 @@ r56_TUR_foreign_policy = {
 			factor = 100
 		}
 	}
-	r56_TUR_join_the_anti_comintern_pact = {	
+	tos_TUR_join_the_anti_comintern_pact = {	
 	
 		icon = oppression
 		fire_only_once = yes
@@ -3028,7 +3046,7 @@ r56_TUR_foreign_policy = {
 			factor = 200
 		}
 	}
-	r56_TUR_renew_the_soviet_non_aggression_pact_decision = {	#For focus cooperation_against_berlin
+	tos_TUR_renew_the_soviet_non_aggression_pact_decision = {	#For focus cooperation_against_berlin
 	
 		icon = eng_trade_unions_support
 		fire_only_once = yes
@@ -3049,7 +3067,7 @@ r56_TUR_foreign_policy = {
 			factor = 200
 		}
 	}
-	r56_TUR_alliance_with_greece = {
+	tos_TUR_alliance_with_greece = {
 	
 		icon = infiltrate_state
 		fire_only_once = yes
@@ -3088,7 +3106,7 @@ r56_TUR_foreign_policy = {
 			factor = 200
 		}
 	}
-	r56_TUR_alliance_with_bulgaria = {
+	tos_TUR_alliance_with_bulgaria = {
 	
 		icon = infiltrate_state
 		fire_only_once = yes
@@ -3127,7 +3145,7 @@ r56_TUR_foreign_policy = {
 			factor = 200
 		}
 	}
-	r56_TUR_alliance_with_romania = {
+	tos_TUR_alliance_with_romania = {
 	
 		icon = infiltrate_state
 		fire_only_once = yes
@@ -3166,7 +3184,47 @@ r56_TUR_foreign_policy = {
 			factor = 100
 		}
 	}
-	r56_TUR_alliance_with_yugoslavia = {
+	tos_TUR_alliance_with_yugoslavia = {
+	
+		icon = infiltrate_state
+		fire_only_once = yes
+		cost = 40
+		visible = {
+			has_completed_focus = TUR_ally_the_balkan_states
+			NOT = {
+				has_war_with = YUG
+			}
+		}
+		available = {
+			if = {
+				limit = {
+					YUG = {
+						has_government = communism
+					}
+				}
+				has_government = communism
+			}
+			if = {
+				limit = {
+					YUG = {
+						has_government = fascism
+					}
+				}
+				has_government = fascism
+			}
+		}
+		
+		complete_effect = {
+			YUG = {
+				country_event = { id = turkey.123 }
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	tos_TUR_operation_dodecanes = {
 	
 		icon = infiltrate_state
 		fire_only_once = yes
@@ -3206,8 +3264,8 @@ r56_TUR_foreign_policy = {
 		}
 	}
 }
-r56_TUR_the_transition_to_socialism = {
-	r56_TUR_end_husnus_exile = {
+tos_TUR_the_transition_to_socialism = {
+	tos_TUR_end_husnus_exile = {
 	
 		icon = generic_prepare_civil_war
 		fire_only_once = yes
@@ -3231,7 +3289,7 @@ r56_TUR_the_transition_to_socialism = {
 			factor = 100
 		}
 	}
-	r56_TUR_lift_the_ban_on_the_TKP = {
+	tos_TUR_lift_the_ban_on_the_TKP = {
 	
 		icon = eng_trade_unions_support
 		fire_only_once = yes
@@ -3256,7 +3314,7 @@ r56_TUR_the_transition_to_socialism = {
 			factor = 100
 		}
 	}
-	r56_TUR_demand_legalization_of_the_TKP = {
+	tos_TUR_demand_legalization_of_the_TKP = {
 	
 		icon = eng_trade_unions_support
 		fire_only_once = yes
@@ -3280,10 +3338,10 @@ r56_TUR_the_transition_to_socialism = {
 			factor = 100
 		}
 	}
-	r56_TUR_expand_union_protections = {
+	tos_TUR_expand_union_protections = {
 	
 		icon = generic_political_discourse
-		name = r56_TUR_expand_union_protections
+		name = tos_TUR_expand_union_protections
 		fire_only_once = yes
 		cost = 65
 		visible = {
@@ -3300,10 +3358,10 @@ r56_TUR_the_transition_to_socialism = {
 			factor = 100
 		}
 	}
-	r56_TUR_public_schooling_initiative_SOC = {
+	tos_TUR_public_schooling_initiative_SOC = {
 	
 		icon = generic_research
-		name = r56_TUR_public_schooling_initiative
+		name = tos_TUR_public_schooling_initiative
 		fire_only_once = no
 		days_re_enable = 180
 		cost = 45
@@ -3354,7 +3412,7 @@ r56_TUR_the_transition_to_socialism = {
 		}
     }
 	
-	r56_TUR_support_private_collectives = {
+	tos_TUR_support_private_collectives = {
 	
 		icon = eng_trade_unions_support
 		fire_only_once = no
@@ -3414,7 +3472,7 @@ r56_TUR_the_transition_to_socialism = {
 		}
 	}
 	
-	r56_TUR_approve_limited_private_farming = {
+	tos_TUR_approve_limited_private_farming = {
 	
 		icon = generic_operation
 		fire_only_once = no
@@ -3483,7 +3541,7 @@ r56_TUR_the_transition_to_socialism = {
 		}
 	}
 	
-	r56_TUR_limited_redistribution = {
+	tos_TUR_limited_redistribution = {
 	
 		icon = hol_exchange_intelligence_data
 		fire_only_once = no
@@ -3555,7 +3613,7 @@ r56_TUR_the_transition_to_socialism = {
 		}
 	}
 	
-	r56_TUR_limited_industrial_nationalization = {
+	tos_TUR_limited_industrial_nationalization = {
 	
 		icon = generic_construction
 		fire_only_once = no
@@ -3625,7 +3683,7 @@ r56_TUR_the_transition_to_socialism = {
 			factor = 15
 		}
 	}
-	r56_TUR_relax_the_collectivist_policies = {
+	tos_TUR_relax_the_collectivist_policies = {
 	
 		icon = generic_construction
 		fire_only_once = no
@@ -3678,7 +3736,7 @@ r56_TUR_the_transition_to_socialism = {
 		}
 	}
 
-	r56_TUR_lift_the_ban_on_opposition_parties = {
+	tos_TUR_lift_the_ban_on_opposition_parties = {
 	
 		icon = generic_nationalism
 		fire_only_once = yes
@@ -3713,7 +3771,7 @@ r56_TUR_the_transition_to_socialism = {
 			factor = 200
 		}
 	}
-	r56_TUR_end_censorship_policies = {
+	tos_TUR_end_censorship_policies = {
 	
 		icon = generic_nationalism
 		fire_only_once = yes
@@ -3753,7 +3811,7 @@ r56_TUR_the_transition_to_socialism = {
 			factor = 200
 		}
 	}
-	r56_TUR_hold_free_elections = {
+	tos_TUR_hold_free_elections = {
 	
 		icon = generic_nationalism
 		fire_only_once = yes
@@ -3814,7 +3872,7 @@ r56_TUR_the_transition_to_socialism = {
 	}
 }
 
-r56_TUR_a_legacy_worth_fighting_for = {
+tos_TUR_a_legacy_worth_fighting_for = {
 
 	TUR_pacification_efforts_in_tunceli = {
 
@@ -3847,10 +3905,10 @@ r56_TUR_a_legacy_worth_fighting_for = {
 		remove_effect = {
 			353 = {
 				remove_dynamic_modifier = {
-					modifier = r56tree_kurdish_separatism
+					modifier = tostree_kurdish_separatism
 				}
 				add_dynamic_modifier = {
-					modifier = r56tree_limited_kurdish_separatism
+					modifier = tostree_limited_kurdish_separatism
 				}
 			}
 			set_country_flag = TUR_pacified_tunceli
@@ -3887,20 +3945,20 @@ r56_TUR_a_legacy_worth_fighting_for = {
 		remove_effect = {
 			800 = {
 				remove_dynamic_modifier = {
-					modifier = r56tree_kurdish_separatism
+					modifier = tostree_kurdish_separatism
 				}
 				add_dynamic_modifier = {
-					modifier = r56tree_limited_kurdish_separatism
+					modifier = tostree_limited_kurdish_separatism
 				}
 			}
 			set_country_flag = TUR_pacified_van
 		}
 	}
 
-	r56_TUR_public_schooling_initiative_kemalism = {
+	tos_TUR_public_schooling_initiative_kemalism = {
 	
 		icon = generic_research
-		name = r56_TUR_public_schooling_initiative
+		name = tos_TUR_public_schooling_initiative
 		fire_only_once = no
 		days_re_enable = 220
 		cost = 80
@@ -3925,7 +3983,7 @@ r56_TUR_a_legacy_worth_fighting_for = {
 		}
 	}
 
-	r56_TUR_emphasize_the_need_for_opposition = {
+	tos_TUR_emphasize_the_need_for_opposition = {
 	
 		icon = eng_trade_unions_support
 		fire_only_once = yes
@@ -3951,7 +4009,7 @@ r56_TUR_a_legacy_worth_fighting_for = {
 		}
 	}
 
-	r56_TUR_end_the_cult_of_personality = {
+	tos_TUR_end_the_cult_of_personality = {
 	
 		icon = GFX_decision_eng_trade_unions_demand
 		fire_only_once = yes
@@ -3977,7 +4035,7 @@ r56_TUR_a_legacy_worth_fighting_for = {
 		}
 	}
 
-	r56_TUR_teach_the_sun_language_theory = {
+	tos_TUR_teach_the_sun_language_theory = {
 	
 		icon = faction_tur_kurdish
 		fire_only_once = yes
@@ -4002,7 +4060,7 @@ r56_TUR_a_legacy_worth_fighting_for = {
 		}
 	}
 
-	r56_TUR_hail_to_the_marshal = {
+	tos_TUR_hail_to_the_marshal = {
 	
 		icon = GFX_decision_eng_trade_unions_demand
 		fire_only_once = no
@@ -4032,7 +4090,7 @@ r56_TUR_a_legacy_worth_fighting_for = {
 		}
 	}	
 
-	r56_TUR_renew_the_national_struggle_funds = {
+	tos_TUR_renew_the_national_struggle_funds = {
 	
 		icon = generic_operation
 		fire_only_once = no
@@ -4109,7 +4167,7 @@ r56_TUR_a_legacy_worth_fighting_for = {
 			353 = { 
 				add_core_of = ROOT
 				remove_dynamic_modifier = {
-					modifier = r56tree_limited_kurdish_separatism
+					modifier = tostree_limited_kurdish_separatism
 				} 
 			}
 		}
@@ -4167,7 +4225,7 @@ r56_TUR_a_legacy_worth_fighting_for = {
 			800 = { 
 				add_core_of = ROOT 
 				remove_dynamic_modifier = {
-					modifier = r56tree_limited_kurdish_separatism
+					modifier = tostree_limited_kurdish_separatism
 				}
 			}
 		}
@@ -4217,7 +4275,7 @@ r56_TUR_a_legacy_worth_fighting_for = {
 			350 = { 
 				add_core_of = ROOT 
 				remove_dynamic_modifier = {
-					modifier = r56tree_limited_kurdish_separatism
+					modifier = tostree_limited_kurdish_separatism
 				}
 			}
 		}
@@ -4267,7 +4325,7 @@ r56_TUR_a_legacy_worth_fighting_for = {
 			352 = { 
 				add_core_of = ROOT
 				remove_dynamic_modifier = {
-					modifier = r56tree_limited_kurdish_separatism
+					modifier = tostree_limited_kurdish_separatism
 				} 
 			}
 		}

@@ -12,6 +12,19 @@ TUR_kurdish_rebellion_cat = {
 	}
 }
 
+TUR_dis_politic_cat = {
+	icon = GFX_decision_category_border_conflicts
+  	priority = 2
+  
+	allowed = {
+		original_tag = TUR
+	}
+	
+	visible = {
+		# has_idea = IRQ_saadabad_spheres_of_influence
+	}
+}
+
 TUR_bolstering_our_armed_forces = {
 
   icon = GFX_decision_category_border_conflicts
