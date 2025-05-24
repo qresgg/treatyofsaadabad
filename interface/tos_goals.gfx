@@ -92,6 +92,30 @@ spriteTypes = {
 		name = "GFX_focus_TUR_yugoslavian_duxes"
 		texturefile = "gfx/interface/goals/focus_TUR_yugoslavian_duxes.dds"
 	}
+	SpriteType = {
+		name = "GFX_focus_TUR_land_forces_TUR"
+		texturefile = "gfx/interface/goals/focus_TUR_land_forces_TUR.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_TUR_air_forces_TUR"
+		texturefile = "gfx/interface/goals/focus_TUR_air_forces_TUR.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_TUR_navy_forces_TUR"
+		texturefile = "gfx/interface/goals/focus_TUR_navy_forces_TUR.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_TUR_land_forces_BYZ"
+		texturefile = "gfx/interface/goals/focus_TUR_land_forces_BYZ.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_TUR_air_forces_BYZ"
+		texturefile = "gfx/interface/goals/focus_TUR_air_forces_BYZ.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_TUR_navy_forces_BYZ"
+		texturefile = "gfx/interface/goals/focus_TUR_navy_forces_BYZ.dds"
+	}
 
 
 	################

@@ -1,0 +1,10 @@
+﻿l_english:
+MODIFIER_INTEL_FACTOR:0 "Intelligence"
+ MODIFIER_INTEL_DESC:0 "Intelligence will show information about units on the map and focus tree progression from other countries. A higher value than the enemy's encryption will give a decryption combat bonus"
+ MODIFIER_INTEL_FACTOR:0 "Intelligence"
+ navy_intel_factor_tt: " $MODIFIER_INTEL_FACTOR$: $RIGHT|+=%2$"
+
+ MODIFIER_INVASION_PREP_SPEED:0 "Invasion preparing speed"
+ MODIFIER_INVASION_PREP_SPEED_DESC:0 "Invasion preparing speed it means, your preparations to naval invasion will be decreased in days"
+ MODIFIER_INVASION_PREP_SPEED:0 "Invasion preparing speed"
+ naval_invasion_prep_speed_tt: " $MODIFIER_INVASION_PREP_SPEED$: $RIGHT|+=%2$"

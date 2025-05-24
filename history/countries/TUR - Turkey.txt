@@ -564,14 +564,60 @@ if = {
 	set_variable = { TUR_special_forces_out_of_supply_factor = 0 }
 	set_variable = { TUR_army_attack_speed_factor = 0 }
 	set_variable = { TUR_army_mobilization_speed = -0.1 }
-	set_variable = { TUR_conscription_factor = 0.2}
+	set_variable = { TUR_conscription_factor = 0.1}
 	set_variable = { TUR_army_defence_factor = 0 }
 	set_variable = { TUR_army_attack_factor = 0 }
 	set_variable = { TUR_army_max_planning_factor = 0}
+	set_variable = { TUR_max_dig_in_factor = 0 }
+	set_variable = { TUR_dig_in_speed_factor = 0 }
+
 
 	add_dynamic_modifier = {
 		modifier = TUR_land_forces_modifier
 	}
+
+	# variables for Turkish Navy 
+	set_variable = { TUR_navy_experience_gain_navy_factor = -0.15 }
+	set_variable = { TUR_navy_mines_planting_by_fleets_factor = 0 }
+	set_variable = { TUR_navy_navy_anti_air_attack_factor = 0 }
+	set_variable = { TUR_navy_navy_spirit_category_type_cost_factor = 0 }
+	set_variable = { TUR_navy_convoy_retreat_speed = 0 }
+	set_variable = { TUR_navy_refit_speed = 0 }
+	set_variable = { TUR_navy_spotting_chance = 0 }
+	set_variable = { TUR_navy_repair_speed_factor = -0.1 }
+	set_variable = { TUR_navy_production_speed_dockyard_factor = 0 }
+	set_variable = { TUR_navy_industrial_capacity_dockyard = 0 }
+	set_variable = { TUR_navy_extra_marine_supply_grace = 0 }
+	set_variable = { TUR_navy_naval_invasion_capacity = 0 }
+	set_variable = { TUR_navy_naval_mines_effect_reduction = 0 }
+	set_variable = { TUR_navy_experience_gain_navy_unit_factor = 0 }
+	set_variable = { TUR_navy_naval_coordination = -0.1 }
+	set_variable = { TUR_navy_naval_equipment_upgrade_xp_cost = 0 }
+	set_variable = { TUR_navy_naval_heavy_gun_hit_chance_factor = 0 }
+	set_variable = { TUR_navy_screening_efficiency = 0 }
+	set_variable = { TUR_navy_screening_without_screens = 0 }
+	set_variable = { TUR_navy_navy_max_range_factor = 0 }
+	set_variable = { TUR_navy_convoy_raiding_efficiency_factor = 0 }
+	set_variable = { TUR_navy_naval_light_gun_hit_chance_factor = 0 }
+	set_variable = { TUR_navy_naval_hit_chance = 0 }
+	set_variable = { TUR_navy_naval_defense_factor = 0}
+	set_variable = { TUR_navy_decryption_factor = 0 }
+	set_variable = { TUR_navy_navy_intel_factor = 0 }
+	set_variable = { TUR_navy_naval_invasion_prep_speed = 0 }
+
+	add_dynamic_modifier = {
+		modifier = TUR_navy_forces_modifier
+	}
+
+# 	set_variable = { GER_military_air_accidents_factor = 0.10 }
+# set_variable = { GER_military_air_manpower_requirement_factor = 0.10 }
+# set_variable = { GER_military_air_agility_factor = 0 }
+# set_variable = { GER_military_air_ace_generation_chance_factor = 0 }
+# set_variable = { GER_military_air_nav_efficiency = 0 }
+# set_variable = { GER_military_air_cas_efficiency = 0 }
+# set_variable = { GER_military_air_strategic_bomber_bombing_factor = 0 }
+# set_variable = { GER_military_air_range_factor = 0 }
+# set_variable = { GER_military_air_fuel_consumption_factor = 0 }
 }
 
 if = {

@@ -27,7 +27,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 	focus = {
 		id = TUR_continue_the_push_for_autarky
 		icon = GFX_goal_generic_construction
-		x = 21
+		x = 24
 		y = 0
 		cost = 5
 
@@ -810,44 +810,61 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 	############################
 
 	focus = {
-		id = TUR_global_army_reorganization
+		id = TUR_invest_army_budget
 		x = 5
-
+		icon = GFX_focus_RAJ_special_economic_zones
 		cost = 10
 		completion_reward = {
-			custom_effect_tooltip = TUR_modify_turkish_land_army_ns_intro
-			add_to_variable = { 
-				TUR_conscription_factor = 0.05
-				tooltip = conscription_factor_tt
-			}
-			add_to_variable = { 
-				TUR_experience_gain_army_factor = 0.03
-				tooltip = experience_gain_army_factor_tt
-			}
+			army_experience = 25
+			navy_experience = 25
+			air_experience = 25
 		}
 	}
 	
 	focus = {
 		id = TUR_continue_the_military_reorganization
-		icon = GFX_focus_chi_army_reform
+		icon = {
+		    trigger = { 
+		    	OR = {
+		    		has_cosmetic_tag = BYZ_byzantium
+		    		has_cosmetic_tag = BYZ_byzantine_empire
+		    	}
+		    }
+		    value = GFX_focus_TUR_land_forces_BYZ
+		}
+		icon = {
+		    value = GFX_focus_TUR_land_forces_TUR
+		}
 
-		prerequisite = { focus = TUR_global_army_reorganization }
+		prerequisite = { focus = TUR_invest_army_budget }
 
-		relative_position_id = TUR_global_army_reorganization
+		relative_position_id = TUR_invest_army_budget
 
-		x = 8
-		y = 2
-		cost = 5
+		x = 9
+		y = 1
+		cost = 6
 
 		ai_will_do = {
 			factor = 5
 		}
 		completion_reward = {
-			army_experience = 25
-			custom_effect_tooltip = unlocks_bolstering_our_armed_forces_decisions_tt
+			custom_effect_tooltip = TUR_modify_turkish_land_army_ns_intro
+			add_to_variable = { 
+				TUR_experience_gain_army_factor = 0.05
+				tooltip = experience_gain_army_factor_tt
+			}
+			add_to_variable = { 
+				TUR_planning_speed = 0.07
+				tooltip = planning_speed_factor_tt
+			}
+			add_to_variable = { 
+				TUR_max_planning_factor = 0.05
+				tooltip = max_planning_factor_tt
+			}
 		}
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 	}
+	
 	
 	focus = {
 		id = TUR_rejuvenate_the_great_war_arsenal
@@ -859,7 +876,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		x = 1
 		y = 1
 		relative_position_id = TUR_continue_the_military_reorganization
-		cost = 10
+		cost = 6
 
 		ai_will_do = {
 			factor = 10
@@ -1094,25 +1111,60 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		x = 0
 		y = 1
 		relative_position_id = TUR_rejuvenate_the_great_war_arsenal
-		cost = 2
+		cost = 3
 
 		ai_will_do = {
 			factor = 10
 		}
 		completion_reward = {
 			custom_effect_tooltip = unlocks_fortification_decisions_tt
+			custom_effect_tooltip = TUR_modify_turkish_land_army_ns_intro
+			add_to_variable = { 
+				TUR_max_dig_in_factor = 0.05
+				tooltip = max_dig_in_factor_tt
+			}
 		}
 	}
 
 	focus = {
-		id = TUR_doctrine_on_western_lines
-		icon = GFX_goal_generic_navy_doctrines_tactics
+		id = TUR_modernize_army
+		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { 
 			focus = TUR_continue_the_military_reorganization 
 		}
 
 		x = -1
 		y = 1
+		relative_position_id = TUR_continue_the_military_reorganization
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			custom_effect_tooltip = TUR_modify_turkish_land_army_ns_intro
+			add_to_variable = { 
+				TUR_experience_gain_army_factor = 0.05
+				tooltip = experience_gain_army_factor_tt
+			}
+			add_to_variable = { 
+				TUR_army_org_factor = 0.05
+				tooltip = army_org_factor_tt
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+	}
+
+	focus = {
+		id = TUR_doctrine_buffs
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { 
+			focus = TUR_rejuvenate_the_great_war_arsenal
+			focus = TUR_modernize_army
+		}
+
+		x = 0
+		y = 3
 		relative_position_id = TUR_continue_the_military_reorganization
 		cost = 10
 
@@ -1123,9 +1175,46 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 			army_experience = 30
 			add_doctrine_cost_reduction = {
 				name = TUR_doctrine_on_western_lines
-				cost_reduction = 0.4
-				uses = 1
+				cost_reduction = 0.6
+				uses = 4
 				category = land_doctrine
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+	}
+
+	focus = {
+		id = TUR_war_planning_center
+		icon = GFX_focus_generic_mass_production
+
+		prerequisite = { focus = TUR_modernize_army }
+
+		relative_position_id = TUR_modernize_army
+
+		x = -2
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			custom_effect_tooltip = TUR_modify_turkish_land_army_ns_intro
+			add_to_variable = { 
+				TUR_planning_speed = 0.10
+				tooltip = planning_speed_factor_tt
+			}
+			add_to_variable = { 
+				TUR_experience_gain_army_factor = 0.05
+				tooltip = experience_gain_army_factor_tt
+			}
+			add_to_variable = {
+				command_power_gain_mult = 0.05
+				tooltip = command_power_gain_mult_tt
+			}
+			add_to_variable = {
+				max_command_power_mult = 0.1
+				tooltip = max_command_power_mult_tt
 			}
 		}
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -1136,10 +1225,10 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		icon = GFX_focus_research
 		x = 0
 		y = 1
-		relative_position_id = TUR_doctrine_on_western_lines
+		relative_position_id = TUR_modernize_army
 		cost = 10
 		prerequisite = { 
-			focus = TUR_doctrine_on_western_lines 
+			focus = TUR_modernize_army
 		}
 		prerequisite = { 
 			focus = TUR_rejuvenate_the_great_war_arsenal			
@@ -1176,21 +1265,30 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 			focus = TUR_rejuvenate_the_great_war_arsenal 
 		}
 		prerequisite = { 
-			focus = TUR_doctrine_on_western_lines 
+			focus = TUR_modernize_army
 		}
 		
 		x = -1
 		y = 2
-		relative_position_id = TUR_doctrine_on_western_lines
+		relative_position_id = TUR_modernize_army
 		cost = 5
 
 		ai_will_do = {
 			factor = 10
 		}
 		completion_reward = {
-			swap_ideas = { 
-				remove_idea = TUR_army_of_the_grand_national_assembly_idea
-				add_idea = TUR_streamline_conscription_idea
+			custom_effect_tooltip = TUR_modify_turkish_land_army_ns_intro
+			add_to_variable = { 
+				TUR_experience_gain_army_factor = 0.05
+				tooltip = experience_gain_army_factor_tt
+			}
+			add_to_variable = { 
+				TUR_army_mobilization_speed = 0.05
+				tooltip = mobilization_speed_tt
+			}
+			add_to_variable = {
+				TUR_conscription_factor = 0.05
+				tooltip = conscription_factor_tt
 			}
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER }
@@ -1201,7 +1299,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		id = TUR_standardize_infantry_equipment
 		icon = GFX_focus_ETH_peacekeeping_forces
 		prerequisite = { focus = TUR_rejuvenate_the_great_war_arsenal }
-		prerequisite = { focus = TUR_doctrine_on_western_lines }
+		prerequisite = { focus = TUR_modernize_army }
 
 		x = 1
 		y = 2
@@ -1213,6 +1311,11 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		}
 		completion_reward = {
 			add_ideas = TUR_standardization_idea
+			custom_effect_tooltip = TUR_modify_turkish_land_army_ns_intro
+			add_to_variable = { 
+				TUR_army_attack_speed_factor = 0.05
+				tooltip = army_attack_speed_factor_tt
+			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
 	}
@@ -1239,6 +1342,11 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 				uses = 2
 				category = infantry_weapons
 				category = artillery
+			}
+			custom_effect_tooltip = TUR_modify_turkish_land_army_ns_intro
+			add_to_variable = { 
+				TUR_training_time_factor = -0.1
+				tooltip = training_time_factor_tt
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1283,7 +1391,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		x = 0
 		y = 1
 		relative_position_id = TUR_begin_mechanization_developments
-		cost = 10
+		cost = 7
 
 		ai_will_do = {
 			factor = 10
@@ -1298,9 +1406,10 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 			}
 			add_tech_bonus = {
 				name = TUR_tank_centered_force
+				#ahead_reduction = 1
 				bonus = 1
 				uses = 1
-				category = maintenance_company_tech
+				category = cat_medium_armor
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1331,6 +1440,15 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 				category = infantry_weapons
 				category = artillery
 			}
+			custom_effect_tooltip = TUR_modify_turkish_land_army_ns_intro
+			add_to_variable = { 
+				TUR_army_attack_factor = 0.1
+				tooltip = army_attack_factor_tt
+			}
+			add_to_variable = { 
+				TUR_army_defence_factor = 0.1
+				tooltip = army_defence_factor_tt
+			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -1345,7 +1463,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		relative_position_id = TUR_infantry_is_our_backbone
 		x = 1
 		y = 1
-		cost = 10
+		cost = 7
 		completion_reward = {
 			add_political_power = 100
 			random_owned_controlled_state = {
@@ -1386,9 +1504,22 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 			factor = 10
 		}
 		completion_reward = {
-			swap_ideas = { 
-				remove_idea = TUR_streamline_conscription_idea
-				add_idea = TUR_maximize_orientation_idea
+			custom_effect_tooltip = TUR_modify_turkish_land_army_ns_intro
+			add_to_variable = { 
+				TUR_experience_gain_army_factor = 0.05
+				tooltip = experience_gain_army_factor_tt
+			}
+			add_to_variable = { 
+				TUR_army_org_factor = 0.1
+				tooltip = army_org_factor_tt
+			}
+			add_to_variable = { 
+				TUR_conscription_factor = -0.12
+				tooltip = conscription_factor_tt
+			}
+			add_to_variable = {
+				TUR_training_time_factor = -0.1
+				tooltip = training_time_factor_tt
 			}
 		}
 	}
@@ -1412,9 +1543,18 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 			factor = 10
 		}
 		completion_reward = {
-			swap_ideas = { 
-				remove_idea = TUR_streamline_conscription_idea
-				add_idea = TUR_expand_recruitment_idea
+			custom_effect_tooltip = TUR_modify_turkish_land_army_ns_intro
+			add_to_variable = { 
+				TUR_experience_gain_army_factor = 0.10
+				tooltip = experience_gain_army_factor_tt
+			}
+			add_to_variable = { 
+				TUR_conscription_factor = 0.10
+				tooltip = conscription_factor_tt
+			}
+			add_to_variable = {
+				TUR_training_time_factor = 0.07
+				tooltip = training_time_factor_tt
 			}
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER }
@@ -1464,6 +1604,15 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 					amount = 5
 				}
 			}
+			custom_effect_tooltip = TUR_modify_turkish_land_army_ns_intro
+			add_to_variable = { 
+				TUR_army_attack_speed_factor = 0.05
+				tooltip = army_attack_speed_factor_tt
+			}
+			add_to_variable = { 
+				TUR_breakthrough_factor = 0.05
+				tooltip = breakthrough_factor_tt
+			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
 	}
@@ -1504,6 +1653,11 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 				}
 				add_command_power = 10
 			}
+			custom_effect_tooltip = TUR_modify_turkish_land_army_ns_intro
+			add_to_variable = { 
+				TUR_initiative_factor = 0.05
+				tooltip = initiative_factor_tt
+			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
 	}
@@ -1518,7 +1672,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		x = 1
 		y = 1
 		relative_position_id = TUR_strengthen_troop_coordination
-		cost = 5
+		cost = 6
 
 		ai_will_do = {
 			factor = 10
@@ -1529,6 +1683,15 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 				bonus = 0.75
 				uses = 2
 				category = engineers_tech
+			}
+			custom_effect_tooltip = TUR_modify_turkish_land_army_ns_intro
+			add_to_variable = { 
+				TUR_dig_in_speed_factor = 0.05
+				tooltip = dig_in_speed_factor_tt
+			}
+			add_to_variable = { 
+				TUR_max_dig_in_factor = 0.05
+				tooltip = max_dig_in_factor_tt
 			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
@@ -1558,6 +1721,15 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
                 uses = 1
                 category = mountaineers_tech
             } 
+			custom_effect_tooltip = TUR_modify_turkish_land_army_ns_intro
+			add_to_variable = { 
+				TUR_special_forces_cap = 0.2
+				tooltip = special_forces_cap_tt
+			}
+			add_to_variable = { 
+				TUR_special_forces_out_of_supply_factor = -0.1
+				tooltip = special_forces_out_of_supply_factor_tt
+			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
 	}
@@ -1569,12 +1741,23 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 
 	focus = {
 		id = TUR_found_an_air_war_academy
-		icon = GFX_goal_generic_air_doctrine
-		prerequisite = { focus = TUR_global_army_reorganization }
+		icon = {
+		    trigger = { 
+		    	OR = {
+		    		has_cosmetic_tag = BYZ_byzantium
+		    		has_cosmetic_tag = BYZ_byzantine_empire
+		    	}
+		    }
+		    value = GFX_focus_TUR_air_forces_BYZ
+		}
+		icon = {
+		    value = GFX_focus_TUR_air_forces_TUR
+		}
+		prerequisite = { focus = TUR_invest_army_budget }
 
-		x = -8
+		x = -9
 		y = 1
-		relative_position_id = TUR_global_army_reorganization
+		relative_position_id = TUR_invest_army_budget
 		cost = 5
 
 		ai_will_do = {
@@ -1588,326 +1771,446 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		}
 		search_filters = { FOCUS_FILTER_AIR_XP }
 	}
-	
-	focus = {
-		id = TUR_paratrooper_developments
-		icon = GFX_focus_generic_paratrooper
-		prerequisite = { focus = TUR_found_an_air_war_academy }
 
-		x = -2
-		y = 1
+	focus = {
+		id = TUR_destroyers
 		relative_position_id = TUR_found_an_air_war_academy
-		cost = 5
-
-		ai_will_do = {
-			factor = 10
-		}
-		
-		completion_reward = {
-			add_tech_bonus = {
-				name = special_forces_bonus
-				bonus = 1.0
-				uses = 1
-				category = para_tech
-			}
-		}
-		search_filters = { FOCUS_FILTER_AIR_XP }
-	}
-
-	focus = {
-		id = TUR_medium_bomber_focus
-		icon = GFX_goal_generic_occupy_start_war
-		prerequisite = { focus = TUR_found_an_air_war_academy }
-
-		x = 0
-		y = 1
-		relative_position_id = TUR_found_an_air_war_academy
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-		
-		completion_reward = {
-			if = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-				add_equipment_to_stockpile = {
-					type = medium_plane_airframe_0
-					amount = 65
-					producer = ITA
-				}
-				add_tech_bonus = {
-					name = air_bonus
-					bonus = 0.35
-					uses = 1
-					technology = basic_medium_airframe
-					technology = improved_medium_airframe
-					technology = advanced_medium_airframe
-				}
-			}
-			else = {
-				add_equipment_to_stockpile = {
-					type = tac_bomber_equipment_0
-					amount = 65
-					producer = ITA
-				}
-				add_tech_bonus = {
-					name = air_bonus
-					bonus = 0.35
-					uses = 1
-					technology = tactical_bomber1
-					technology = tactical_bomber2
-					technology = tactical_bomber3
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
-	}
-	
-	focus = {
-		id = TUR_naval_bombers
-		icon = GFX_goal_generic_air_naval_bomber
-		prerequisite = { 
-			focus = TUR_medium_bomber_focus 
-		}
-
-		x = 1
-		y = 1
-		relative_position_id = TUR_medium_bomber_focus
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-		
-		completion_reward = {
-			if = {
-				limit = {
-					NOT = { has_dlc = "By Blood Alone" }
-				}
-				air_experience = 35
-				add_tech_bonus = {
-					name = TUR_naval_bombers
-					bonus = 0.8
-					uses = 1
-					category = cat_strategic_bomber
-					category = tactical_bomber
-				}
-			}
-			else = {
-				add_tech_bonus = {
-					name = TUR_naval_bombers
-					bonus = 0.65
-					uses = 1
-					category = heavy_air
-				}
-				add_tech_bonus = {
-					name = fighter_command_focus
-					bonus = 0.65
-					uses = 1
-					technology = range_improvements
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
-	}
-	
-	focus = {
-		id = TUR_airland_battle
-		icon = GFX_focus_generic_air_research_boost
-		prerequisite = { 
-			focus = TUR_medium_bomber_focus 
-		}
-
-		x = -1
-		y = 1
-		relative_position_id = TUR_medium_bomber_focus
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-		
-		completion_reward = {
-			if = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-				add_tech_bonus = {
-					name = TUR_airland_battle
-					technology =  basic_medium_airframe
-					technology  = improved_medium_airframe
-					technology = advanced_medium_airframe
-					ahead_reduction = 1
-					uses = 1
-				}
-			}
-			else = {
-				add_tech_bonus = {
-					name = TUR_airland_battle
-					ahead_reduction = 1
-					uses = 1
-					category = cas_bomber
-				}
-			}
-			#1x50% research bonus to fighter models
-		}
-		search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
-	}
-	
-	focus = {
-		id = TUR_continue_importing_western_designs
-		icon = GFX_goal_generic_air_fighter
-		prerequisite = { 
+		prerequisite = {
 			focus = TUR_found_an_air_war_academy
 		}
-
-		x = -4
 		y = 1
-		relative_position_id = TUR_found_an_air_war_academy
-		cost = 10
+		x = -3
+	}
 
-		ai_will_do = {
-			factor = 10
+	focus = {
+		id = TUR_destroyers_expansion1
+		relative_position_id = TUR_destroyers
+		prerequisite = {
+			focus = TUR_destroyers
 		}
-		
-		completion_reward = {
-			if = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-				add_equipment_to_stockpile = {
-					type = small_plane_airframe_0
-					amount = 65
-					producer = FRA
-				}
-				add_tech_bonus = {
-					name = TUR_continue_importing_western_designs
-					technology =  basic_small_airframe
-					technology  = improved_small_airframe
-					technology = advanced_small_airframe
-					bonus = 0.3
-					uses = 1
-				}
-				add_tech_bonus = {
-					name = TUR_continue_importing_western_designs
-					technology = aa_cannon_1
-					technology = aa_cannon_2
-					uses = 1
-					bonus = 0.3
-				}
-			}
-			else = {
-				add_equipment_to_stockpile = {
-					type = fighter_equipment_0
-					amount = 65
-					producer = FRA
-				}
-				add_tech_bonus = {
-					name = TUR_continue_importing_western_designs
-					bonus = 0.35
-					uses = 1
-					category = light_fighter
-				}
-			}
-			#1x50% research bonus to fighter models
+		y = 2
+		x = -1
+	}
+
+	focus = {
+		id = TUR_destroyers_expansion2
+		relative_position_id = TUR_destroyers
+		prerequisite = {
+			focus = TUR_destroyers
 		}
-			search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
+		y = 2
+		x = 1
+	}
+
+	focus = {
+		id = TUR_air_base1
+		relative_position_id = TUR_found_an_air_war_academy
+		prerequisite = {
+			focus = TUR_found_an_air_war_academy
+		}
+		y = 1
+		x = 1
+	}
+
+	focus = {
+		id = TUR_air_base2
+		relative_position_id = TUR_found_an_air_war_academy
+		prerequisite = {
+			focus = TUR_found_an_air_war_academy
+		}
+		y = 1
+		x = -1
+	}
+
+	focus = {
+		id = TUR_air_base3
+		relative_position_id = TUR_air_base1
+		prerequisite = {
+			focus = TUR_air_base1
+			focus = TUR_air_base2
+		}
+		y = 1
+		x = -1
+	}
+
+	focus = {
+		id = TUR_air_base4
+		relative_position_id = TUR_air_base3
+		prerequisite = {
+			focus = TUR_air_base3
+		}
+		y = 1
+		x = 0
+	}
+
+	focus = {
+		id = TUR_bombers
+		relative_position_id = TUR_found_an_air_war_academy
+		prerequisite = {
+			focus = TUR_found_an_air_war_academy
+		}
+		y = 1
+		x = 3
+	}
+
+	focus = {
+		id = TUR_bombers_expansion
+		relative_position_id = TUR_bombers
+		prerequisite = {
+			focus = TUR_bombers
+		}
+		y = 2
+		x = -1
+	}
+
+	focus = {
+		id = TUR_air_sea_rockets
+		relative_position_id = TUR_found_an_air_war_academy
+		prerequisite = {
+			focus = TUR_bombers
+		}
+		y = 2
+		x = 3
+	}
+
+	focus = {
+		id = TUR_air_domination
+		relative_position_id = TUR_found_an_air_war_academy
+		prerequisite = {
+			focus = TUR_destroyers_expansion1
+		}
+		prerequisite = {
+			focus = TUR_destroyers_expansion2
+		}
+		prerequisite = {
+			focus = TUR_air_base4
+		}
+		prerequisite = {
+			focus = TUR_bombers_expansion
+		}
+		y = 4
+		x = 0
 	}
 	
-	focus = {
-		id = TUR_new_cannon_developments
-		icon = GFX_focus_SWE_let_fly_all_guns
-		
-		prerequisite = { 
-			focus = TUR_continue_importing_western_designs 
-		}
+	# focus = {
+	# 	id = TUR_paratrooper_developments
+	# 	icon = GFX_focus_generic_paratrooper
+	# 	prerequisite = { focus = TUR_found_an_air_war_academy }
 
-		x = -1
-		y = 1
-		relative_position_id = TUR_continue_importing_western_designs
-		cost = 10
+	# 	x = -2
+	# 	y = 1
+	# 	relative_position_id = TUR_found_an_air_war_academy
+	# 	cost = 5
 
-		ai_will_do = {
-			factor = 10
-		}
+	# 	ai_will_do = {
+	# 		factor = 10
+	# 	}
 		
-		completion_reward = {
-			if = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-				add_doctrine_cost_reduction = {
-					name = TUR_new_cannon_developments
-					cost_reduction = 0.4
-					uses = 2
-					category = air_doctrine
-				}
-				add_tech_bonus = {
-					name = TUR_new_cannon_developments
-					bonus = 1.0
-					uses = 1
-					technology = aa_hmg
-					technology = aa_cannon_1
-					technology = aa_cannon_2
-					technology = aa_cannon_3
-				}
-				else = {
-					air_experience = 50
-					add_tech_bonus = {
-						name = TUR_new_cannon_developments
-						bonus = 1
-						uses = 1
-						category = light_fighter
-					}
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
-	}
-	focus = {
-		id = TUR_defending_our_skies
-		icon = GFX_goal_generic_CAS
-		
-		prerequisite = { 
-			focus = TUR_continue_importing_western_designs 
-		}
+	# 	completion_reward = {
+	# 		add_tech_bonus = {
+	# 			name = special_forces_bonus
+	# 			bonus = 1.0
+	# 			uses = 1
+	# 			category = para_tech
+	# 		}
+	# 	}
+	# 	search_filters = { FOCUS_FILTER_AIR_XP }
+	# }
 
-		x = 1
-		y = 1
-		relative_position_id = TUR_continue_importing_western_designs
-		cost = 10
+	# focus = {
+	# 	id = TUR_medium_bomber_focus
+	# 	icon = GFX_goal_generic_occupy_start_war
+	# 	prerequisite = { focus = TUR_found_an_air_war_academy }
 
-		ai_will_do = {
-			factor = 10
-		}
+	# 	x = 0
+	# 	y = 1
+	# 	relative_position_id = TUR_found_an_air_war_academy
+	# 	cost = 10
+
+	# 	ai_will_do = {
+	# 		factor = 10
+	# 	}
 		
-		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = TUR_defending_our_skies
-				cost_reduction = 0.5
-				uses = 1
-				category = air_doctrine
-			}
-			if = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-				add_tech_bonus = {
-					name = TUR_defending_our_skies
-					bonus = 1.0
-					uses = 1
-					technology = engines_1
-					technology = engines_2
-					technology = engines_3
-					technology = engines_4
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
-	}
+	# 	completion_reward = {
+	# 		if = {
+	# 			limit = {
+	# 				has_dlc = "By Blood Alone"
+	# 			}
+	# 			add_equipment_to_stockpile = {
+	# 				type = medium_plane_airframe_0
+	# 				amount = 65
+	# 				producer = ITA
+	# 			}
+	# 			add_tech_bonus = {
+	# 				name = air_bonus
+	# 				bonus = 0.35
+	# 				uses = 1
+	# 				technology = basic_medium_airframe
+	# 				technology = improved_medium_airframe
+	# 				technology = advanced_medium_airframe
+	# 			}
+	# 		}
+	# 		else = {
+	# 			add_equipment_to_stockpile = {
+	# 				type = tac_bomber_equipment_0
+	# 				amount = 65
+	# 				producer = ITA
+	# 			}
+	# 			add_tech_bonus = {
+	# 				name = air_bonus
+	# 				bonus = 0.35
+	# 				uses = 1
+	# 				technology = tactical_bomber1
+	# 				technology = tactical_bomber2
+	# 				technology = tactical_bomber3
+	# 			}
+	# 		}
+	# 	}
+	# 	search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
+	# }
+	
+	# focus = {
+	# 	id = TUR_naval_bombers
+	# 	icon = GFX_goal_generic_air_naval_bomber
+	# 	prerequisite = { 
+	# 		focus = TUR_medium_bomber_focus 
+	# 	}
+
+	# 	x = 1
+	# 	y = 1
+	# 	relative_position_id = TUR_medium_bomber_focus
+	# 	cost = 10
+
+	# 	ai_will_do = {
+	# 		factor = 10
+	# 	}
+		
+	# 	completion_reward = {
+	# 		if = {
+	# 			limit = {
+	# 				NOT = { has_dlc = "By Blood Alone" }
+	# 			}
+	# 			air_experience = 35
+	# 			add_tech_bonus = {
+	# 				name = TUR_naval_bombers
+	# 				bonus = 0.8
+	# 				uses = 1
+	# 				category = cat_strategic_bomber
+	# 				category = tactical_bomber
+	# 			}
+	# 		}
+	# 		else = {
+	# 			add_tech_bonus = {
+	# 				name = TUR_naval_bombers
+	# 				bonus = 0.65
+	# 				uses = 1
+	# 				category = heavy_air
+	# 			}
+	# 			add_tech_bonus = {
+	# 				name = fighter_command_focus
+	# 				bonus = 0.65
+	# 				uses = 1
+	# 				technology = range_improvements
+	# 			}
+	# 		}
+	# 	}
+	# 	search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
+	# }
+	
+	# focus = {
+	# 	id = TUR_airland_battle
+	# 	icon = GFX_focus_generic_air_research_boost
+	# 	prerequisite = { 
+	# 		focus = TUR_medium_bomber_focus 
+	# 	}
+
+	# 	x = -1
+	# 	y = 1
+	# 	relative_position_id = TUR_medium_bomber_focus
+	# 	cost = 10
+
+	# 	ai_will_do = {
+	# 		factor = 10
+	# 	}
+		
+	# 	completion_reward = {
+	# 		if = {
+	# 			limit = {
+	# 				has_dlc = "By Blood Alone"
+	# 			}
+	# 			add_tech_bonus = {
+	# 				name = TUR_airland_battle
+	# 				technology =  basic_medium_airframe
+	# 				technology  = improved_medium_airframe
+	# 				technology = advanced_medium_airframe
+	# 				ahead_reduction = 1
+	# 				uses = 1
+	# 			}
+	# 		}
+	# 		else = {
+	# 			add_tech_bonus = {
+	# 				name = TUR_airland_battle
+	# 				ahead_reduction = 1
+	# 				uses = 1
+	# 				category = cas_bomber
+	# 			}
+	# 		}
+	# 		#1x50% research bonus to fighter models
+	# 	}
+	# 	search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
+	# }
+	
+	# focus = {
+	# 	id = TUR_continue_importing_western_designs
+	# 	icon = GFX_goal_generic_air_fighter
+	# 	prerequisite = { 
+	# 		focus = TUR_found_an_air_war_academy
+	# 	}
+
+	# 	x = -4
+	# 	y = 1
+	# 	relative_position_id = TUR_found_an_air_war_academy
+	# 	cost = 10
+
+	# 	ai_will_do = {
+	# 		factor = 10
+	# 	}
+		
+	# 	completion_reward = {
+	# 		if = {
+	# 			limit = {
+	# 				has_dlc = "By Blood Alone"
+	# 			}
+	# 			add_equipment_to_stockpile = {
+	# 				type = small_plane_airframe_0
+	# 				amount = 65
+	# 				producer = FRA
+	# 			}
+	# 			add_tech_bonus = {
+	# 				name = TUR_continue_importing_western_designs
+	# 				technology =  basic_small_airframe
+	# 				technology  = improved_small_airframe
+	# 				technology = advanced_small_airframe
+	# 				bonus = 0.3
+	# 				uses = 1
+	# 			}
+	# 			add_tech_bonus = {
+	# 				name = TUR_continue_importing_western_designs
+	# 				technology = aa_cannon_1
+	# 				technology = aa_cannon_2
+	# 				uses = 1
+	# 				bonus = 0.3
+	# 			}
+	# 		}
+	# 		else = {
+	# 			add_equipment_to_stockpile = {
+	# 				type = fighter_equipment_0
+	# 				amount = 65
+	# 				producer = FRA
+	# 			}
+	# 			add_tech_bonus = {
+	# 				name = TUR_continue_importing_western_designs
+	# 				bonus = 0.35
+	# 				uses = 1
+	# 				category = light_fighter
+	# 			}
+	# 		}
+	# 		#1x50% research bonus to fighter models
+	# 	}
+	# 		search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
+	# }
+	
+	# focus = {
+	# 	id = TUR_new_cannon_developments
+	# 	icon = GFX_focus_SWE_let_fly_all_guns
+		
+	# 	prerequisite = { 
+	# 		focus = TUR_continue_importing_western_designs 
+	# 	}
+
+	# 	x = -1
+	# 	y = 1
+	# 	relative_position_id = TUR_continue_importing_western_designs
+	# 	cost = 10
+
+	# 	ai_will_do = {
+	# 		factor = 10
+	# 	}
+		
+	# 	completion_reward = {
+	# 		if = {
+	# 			limit = {
+	# 				has_dlc = "By Blood Alone"
+	# 			}
+	# 			add_doctrine_cost_reduction = {
+	# 				name = TUR_new_cannon_developments
+	# 				cost_reduction = 0.4
+	# 				uses = 2
+	# 				category = air_doctrine
+	# 			}
+	# 			add_tech_bonus = {
+	# 				name = TUR_new_cannon_developments
+	# 				bonus = 1.0
+	# 				uses = 1
+	# 				technology = aa_hmg
+	# 				technology = aa_cannon_1
+	# 				technology = aa_cannon_2
+	# 				technology = aa_cannon_3
+	# 			}
+	# 			else = {
+	# 				air_experience = 50
+	# 				add_tech_bonus = {
+	# 					name = TUR_new_cannon_developments
+	# 					bonus = 1
+	# 					uses = 1
+	# 					category = light_fighter
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# 	search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
+	# }
+	# focus = {
+	# 	id = TUR_defending_our_skies
+	# 	icon = GFX_goal_generic_CAS
+		
+	# 	prerequisite = { 
+	# 		focus = TUR_continue_importing_western_designs 
+	# 	}
+
+	# 	x = 1
+	# 	y = 1
+	# 	relative_position_id = TUR_continue_importing_western_designs
+	# 	cost = 10
+
+	# 	ai_will_do = {
+	# 		factor = 10
+	# 	}
+		
+	# 	completion_reward = {
+	# 		add_doctrine_cost_reduction = {
+	# 			name = TUR_defending_our_skies
+	# 			cost_reduction = 0.5
+	# 			uses = 1
+	# 			category = air_doctrine
+	# 		}
+	# 		if = {
+	# 			limit = {
+	# 				has_dlc = "By Blood Alone"
+	# 			}
+	# 			add_tech_bonus = {
+	# 				name = TUR_defending_our_skies
+	# 				bonus = 1.0
+	# 				uses = 1
+	# 				technology = engines_1
+	# 				technology = engines_2
+	# 				technology = engines_3
+	# 				technology = engines_4
+	# 			}
+	# 		}
+	# 	}
+	# 	search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
+	# }
 
 	############################
 	####### NAVY SECTION #######
@@ -1915,14 +2218,25 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 
 	focus = {
 		id = TUR_continue_the_naval_expansion
-		icon = GFX_goal_generic_build_navy
+		icon = {
+		    trigger = { 
+		    	OR = {
+		    		has_cosmetic_tag = BYZ_byzantium
+		    		has_cosmetic_tag = BYZ_byzantine_empire
+		    	}
+		    }
+		    value = GFX_focus_TUR_navy_forces_BYZ
+		}
+		icon = {
+		    value = GFX_focus_TUR_navy_forces_TUR
+		}
 		prerequisite = { 
-			focus = TUR_global_army_reorganization
+			focus = TUR_invest_army_budget
 		}
 
 		x = 0
 		y = 1
-		relative_position_id = TUR_global_army_reorganization
+		relative_position_id = TUR_invest_army_budget
 		cost = 5
 
 		ai_will_do = {
@@ -1930,271 +2244,513 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		}
 		
 		completion_reward = {
-			navy_experience = 20
+			custom_effect_tooltip = TUR_modify_turkish_navy_army_ns_intro
+			add_to_variable = {
+				TUR_experience_gain_navy_factor = 0.05
+				tooltip = experience_gain_navy_factor_tt
+			}
+			add_to_variable = {
+				TUR_navy_repair_speed_factor = 0.05
+				tooltip = repair_speed_factor_tt
+			}
 		}
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 	}
 	
+	# focus = {
+	# 	id = TUR_expand_black_sea_presence		#Will likely make unlock more army reform decisions later
+	# 	icon = GFX_focus_generic_black_sea_focus
+	# 	prerequisite = { 
+	# 		focus = TUR_continue_the_naval_expansion
+	# 		focus = TUR_found_an_air_war_academy
+	# 	}
+
+	# 	x = -4
+	# 	y = 1
+	# 	relative_position_id = TUR_continue_the_naval_expansion
+	# 	cost = 10
+
+	# 	ai_will_do = {
+	# 		factor = 10
+	# 	}
+		
+	# 	available = {
+	# 		355 = { 
+	# 			is_fully_controlled_by = ROOT
+	# 		}
+	# 		797 = { 
+	# 			is_fully_controlled_by = ROOT 
+	# 		}
+	# 		354 = {
+	# 			is_fully_controlled_by = ROOT 
+	# 		}
+	# 	}
+		
+	# 	completion_reward = {
+	# 		navy_experience = 20
+	# 		355 = {
+	# 			add_building_construction = {
+	# 				type = anti_air_building 
+	# 				level = 1
+	# 				instant_build = yes
+	# 			}
+				
+	# 			add_building_construction = {
+	# 				type = naval_base
+	# 				level = 1
+	# 				instant_build = yes
+	# 				province = 11881
+	# 			}
+	# 			add_building_construction = {
+	# 				type = coastal_bunker 
+	# 				level = 1
+	# 				province = 11842
+	# 				instant_build = yes
+	# 			}
+	# 		}
+	# 		797 = {
+	# 			add_building_construction = {
+	# 				type = naval_base 
+	# 				level = 1
+	# 				province = 9833
+	# 				instant_build = yes
+	# 			}
+	# 			add_building_construction = {
+	# 				type = coastal_bunker
+	# 				level = 1
+	# 				province = 11829
+	# 				instant_build = yes
+	# 			}
+				
+	# 			add_building_construction = {
+	# 				type = coastal_bunker
+	# 				level = 1
+	# 				province = 9833
+	# 				instant_build = yes
+	# 			}
+	# 		}
+	# 		354 = {
+	# 			add_building_construction = {
+	# 				type = coastal_bunker  
+	# 				level = 1
+	# 				province = 9932
+	# 				instant_build = yes
+	# 			}
+	# 			add_building_construction = {
+	# 				type = naval_base 
+	# 				level = 1
+	# 				province = 11881					
+	# 				instant_build = yes
+	# 			}
+	# 		}
+	# 	}
+	# 	search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
+	# }
+	
+	# focus = {
+	# 	id = TUR_expand_mediteranean_bases
+	# 	icon = GFX_goal_generic_navy_doctrines_tactics
+
+	# 	prerequisite = { 
+	# 		focus = TUR_continue_the_naval_expansion
+	# 		focus = TUR_found_an_air_war_academy
+	# 	}
+
+	# 	x = -6
+	# 	y = 1
+	# 	relative_position_id = TUR_continue_the_naval_expansion
+		
+	# 	cost = 10
+
+	# 	ai_will_do = {
+	# 		factor = 10
+	# 	}
+		
+	# 	available = {
+	# 		339 = { is_fully_controlled_by = ROOT }
+	# 		342 = { is_fully_controlled_by = ROOT }
+	# 		344 = { is_fully_controlled_by = ROOT }
+	# 	}
+		
+	# 	completion_reward = {
+	# 		navy_experience = 10
+	# 		339 = {
+	# 			add_building_construction = {
+	# 				type = anti_air_building 
+	# 				level = 1
+	# 				instant_build = yes
+	# 			}
+	# 			add_building_construction = { 
+	# 				type = naval_base 
+	# 				province = 4112 
+	# 				level = 1 
+	# 				instant_build = yes 
+	# 			}
+	# 			add_building_construction = { 
+	# 				type = coastal_bunker 
+	# 				province = 4112 
+	# 				level = 1 
+	# 				instant_build = yes 
+	# 			}
+	# 		}
+				
+	# 		342 = {
+	# 			add_building_construction = {
+	# 				type = anti_air_building 
+	# 				level = 1
+	# 				instant_build = yes
+	# 			}
+	# 			add_building_construction = { 
+	# 				type = naval_base 
+	# 				province = 1005 
+	# 				level = 1 
+	# 				instant_build = yes 
+	# 			}
+	# 			add_building_construction = { 
+	# 				type = coastal_bunker 
+	# 				province = 1005
+	# 				level = 1 
+	# 				instant_build = yes 
+	# 			}
+	# 		}
+	# 		344 = {
+	# 			add_building_construction = { 
+	# 				type = coastal_bunker 
+	# 				province = 11746 
+	# 				level = 1 
+	# 				instant_build = yes
+	# 			}
+	# 		}
+	# 	}
+	# }
+	
+	# focus = {
+	# 	id = TUR_modern_radar
+	# 	icon = GFX_goal_generic_radar
+	# 	prerequisite = { 
+	# 		focus = TUR_expand_mediteranean_bases
+	# 	}
+
+	# 	x = 0
+	# 	y = 2
+	# 	relative_position_id = TUR_expand_mediteranean_bases
+		
+	# 	cost = 5
+
+	# 	ai_will_do = {
+	# 		factor = 10
+	# 	}
+		
+	# 	completion_reward = {
+	# 		add_tech_bonus = {
+    #             name = radar_focus
+    #             bonus = 1
+	# 			uses = 1
+	# 			category = radar_tech
+    #         }
+    #         custom_effect_tooltip = generic_skip_one_line_tt
+	# 		add_breakthrough_progress = {
+	# 			specialization = specialization_air
+	# 			value = 0.25
+	# 		}
+	# 		custom_effect_tooltip = generic_skip_one_line_tt
+	# 		797 = { #ISTANBUL
+	# 			add_building_construction = {
+	# 				type = radar_station
+	# 				level = 1
+	# 				instant_build = yes
+	# 			}
+	# 		}
+	# 	}
+	# }
 	focus = {
-		id = TUR_expand_black_sea_presence		#Will likely make unlock more army reform decisions later
-		icon = GFX_focus_generic_black_sea_focus
+		id = TUR_lincore_expansion
+		icon = GFX_goal_generic_navy_battleship
+		relative_position_id = TUR_continue_the_naval_expansion
 		prerequisite = { 
 			focus = TUR_continue_the_naval_expansion
-			focus = TUR_found_an_air_war_academy
 		}
-
-		x = -4
-		y = 1
-		relative_position_id = TUR_continue_the_naval_expansion
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-		
-		available = {
-			355 = { 
-				is_fully_controlled_by = ROOT
-			}
-			797 = { 
-				is_fully_controlled_by = ROOT 
-			}
-			354 = {
-				is_fully_controlled_by = ROOT 
-			}
-		}
-		
-		completion_reward = {
-			navy_experience = 20
-			355 = {
-				add_building_construction = {
-					type = anti_air_building 
-					level = 1
-					instant_build = yes
-				}
-				
-				add_building_construction = {
-					type = naval_base
-					level = 1
-					instant_build = yes
-					province = 11881
-				}
-				add_building_construction = {
-					type = coastal_bunker 
-					level = 1
-					province = 11842
-					instant_build = yes
-				}
-			}
-			797 = {
-				add_building_construction = {
-					type = naval_base 
-					level = 1
-					province = 9833
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					level = 1
-					province = 11829
-					instant_build = yes
-				}
-				
-				add_building_construction = {
-					type = coastal_bunker
-					level = 1
-					province = 9833
-					instant_build = yes
-				}
-			}
-			354 = {
-				add_building_construction = {
-					type = coastal_bunker  
-					level = 1
-					province = 9932
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = naval_base 
-					level = 1
-					province = 11881					
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
-	}
-	
-	focus = {
-		id = TUR_expand_mediteranean_bases
-		icon = GFX_goal_generic_navy_doctrines_tactics
-
-		prerequisite = { 
-			focus = TUR_continue_the_naval_expansion
-			focus = TUR_found_an_air_war_academy
-		}
-
-		x = -6
-		y = 1
-		relative_position_id = TUR_continue_the_naval_expansion
-		
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-		
-		available = {
-			339 = { is_fully_controlled_by = ROOT }
-			342 = { is_fully_controlled_by = ROOT }
-			344 = { is_fully_controlled_by = ROOT }
-		}
-		
-		completion_reward = {
-			navy_experience = 10
-			339 = {
-				add_building_construction = {
-					type = anti_air_building 
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = { 
-					type = naval_base 
-					province = 4112 
-					level = 1 
-					instant_build = yes 
-				}
-				add_building_construction = { 
-					type = coastal_bunker 
-					province = 4112 
-					level = 1 
-					instant_build = yes 
-				}
-			}
-				
-			342 = {
-				add_building_construction = {
-					type = anti_air_building 
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = { 
-					type = naval_base 
-					province = 1005 
-					level = 1 
-					instant_build = yes 
-				}
-				add_building_construction = { 
-					type = coastal_bunker 
-					province = 1005
-					level = 1 
-					instant_build = yes 
-				}
-			}
-			344 = {
-				add_building_construction = { 
-					type = coastal_bunker 
-					province = 11746 
-					level = 1 
-					instant_build = yes
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = TUR_modern_radar
-		icon = GFX_goal_generic_radar
-		prerequisite = { 
-			focus = TUR_expand_mediteranean_bases
-			focus = TUR_expand_black_sea_presence
-		}
-
-		x = 1
-		y = 1
-		relative_position_id = TUR_expand_mediteranean_bases
-		
 		cost = 5
-
-		ai_will_do = {
-			factor = 10
-		}
-		
-		completion_reward = {
-			add_tech_bonus = {
-                name = radar_focus
-                bonus = 1
-				uses = 1
-				category = radar_tech
-            }
-            custom_effect_tooltip = generic_skip_one_line_tt
-			add_breakthrough_progress = {
-				specialization = specialization_air
-				value = 0.25
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			797 = { #ISTANBUL
-				add_building_construction = {
-					type = radar_station
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = TUR_expand_the_golcuk_shipyard
-		icon = GFX_goal_generic_construct_naval_dockyard
-		prerequisite = { focus = TUR_continue_the_naval_expansion }
-
 		x = -2
 		y = 1
-		relative_position_id = TUR_continue_the_naval_expansion
-		cost = 5
-		
-		available = {
-			has_full_control_of_state = 340
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-		
 		completion_reward = {
-			340 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
+			custom_effect_tooltip = TUR_modify_turkish_navy_army_ns_intro
+			add_to_variable = {
+				TUR_navy_naval_defense_factor = 0.07
+				tooltip = naval_defense_factor_tt
+			}
+			add_to_variable = {
+				TUR_navy_naval_mines_effect_reduction = 0.15
+				tooltip = naval_mines_effect_reduction_tt
+			}
+			add_to_variable = {
+				TUR_navy_industrial_capacity_dockyard = 0.10
+				tooltip = industrial_capacity_dockyard_tt
+			}
+			add_tech_bonus = {
+				name = TUR_lincore_expansion
+				bonus = 1
+				uses = 1
+				category = cl_tech
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_naval_bombs
+		icon = GFX_focus_generic_torpedo_production
+		relative_position_id = TUR_lincore_expansion
+		prerequisite = { 
+			focus = TUR_lincore_expansion
+		}
+		x = -2
+		y = 1
+
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = TUR_modify_turkish_navy_army_ns_intro
+			add_to_variable = {
+				TUR_experience_gain_navy_factor = 0.05
+				tooltip = experience_gain_navy_factor_tt
+			}
+			add_to_variable = {
+				TUR_navy_naval_coordination = 0.1
+				tooltip = naval_coordination_tt
+			}
+			add_to_variable = {
+				TUR_navy_naval_hit_chance = 0.05
+				tooltip = naval_hit_chance_tt
+			}
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				add_tech_bonus = {
+					name = ITA_intensify_torpedo_manufacturing
+					bonus = 1.0
+					uses = 1
+					category = cat_torpedoes
+				}
+			}
+			else = {
+				add_doctrine_cost_reduction = {
+					name = ITA_intensify_torpedo_manufacturing
+					cost_reduction = 0.5
+					uses = 2
+					category = cat_trade_interdiction
+				}
+			}
+
+		}
+	}
+	focus = {
+		id = TUR_naval_air
+		icon = GFX_goal_generic_air_naval_bomber
+		relative_position_id = TUR_naval_bombs
+		prerequisite = { 
+			focus = TUR_naval_bombs
+			focus = TUR_air_sea_rockets
+		}
+		x = -1
+		y = 1
+		completion_reward = {
+			## AIR DYNAMIC MODIFIER
+		}
+	}
+
+	focus = {
+		id = TUR_naval_intelligence
+		icon = GFX_focus_generic_merchant_fleet
+		relative_position_id = TUR_lincore_expansion
+		prerequisite = { 
+			focus = TUR_lincore_expansion
+		}
+		x = 0
+		y = 1
+		cost = 8
+		completion_reward = {
+			custom_effect_tooltip = TUR_modify_turkish_navy_army_ns_intro
+			add_to_variable = {
+				TUR_navy_decryption_factor = 0.1
+				tooltip = decryption_factor_tt
+			}
+			add_to_variable = {
+				TUR_navy_navy_intel_factor = 0.1
+				tooltip = navy_intel_factor_tt
+			}
+			add_to_variable = {
+				TUR_navy_naval_invasion_prep_speed = 0.1
+				tooltip = naval_invasion_prep_speed_tt
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_naval_complex
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+		prerequisite = {
+			focus = TUR_naval_intelligence
+			focus = TUR_naval_bombs
+		}
+		relative_position_id = TUR_naval_intelligence
+		x = -1
+		y = 1
+		cost = 7
+		completion_reward = {
+			add_political_power = 100
+			random_owned_controlled_state = {
+				limit = {
+					land_facility < 1
+					air_facility < 1
+					nuclear_facility < 1
+					naval_facility < 1
+				}
+				prioritize = { 345 }
+				construct_building_in_random_province = {
+					naval_facility = 1
 				}
 			}
 		}
-			
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = {
+			FOCUS_FILTER_TREATYOFSAADABAD
+		}
 	}
-	
+
 	focus = {
-		id = TUR_new_shipyards
+		id = TUR_build_navy_base
 		icon = GFX_goal_generic_construct_naval_dockyard
-		prerequisite = { focus = TUR_continue_the_naval_expansion }
-
-		x = 2
-		y = 1
 		relative_position_id = TUR_continue_the_naval_expansion
-		cost = 10
-		
+		prerequisite = { 
+			focus = TUR_continue_the_naval_expansion
+		}
 		available = {
-			has_full_control_of_state = 797
+			NOT = {
+				340 = {
+					is_demilitarized_zone = yes
+				}
+			}
 		}
-
-		ai_will_do = {
-			factor = 10
-		}
-		
+		cost = 5
+		x = 0
+		y = 1
 		completion_reward = {
-			797 = {
+			add_command_power = 25
+			custom_effect_tooltip = TUR_modify_turkish_navy_army_ns_intro
+			add_to_variable = {
+				TUR_navy_repair_speed_factor = 0.05
+				tooltip = repair_speed_factor_tt
+			}
+			add_to_variable = {
+				TUR_navy_max_range_factor = 0.1
+				tooltip = navy_max_range_factor_tt
+			}
+
+			339 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+				}
+			}
+			340 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = TUR_doctrine_navy_buffs
+		icon = GFX_goal_generic_navy_cruiser
+		relative_position_id = TUR_build_navy_base
+		prerequisite = { 
+			focus = TUR_build_navy_base
+		}
+		x = 0
+		y = 1
+		cost = 6
+		completion_reward = {
+			
+			add_doctrine_cost_reduction = {
+				name = TUR_doctrine_navy_buffs2
+				cost_reduction = 0.6
+				uses = 3
+				category = naval_doctrine
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = TUR_modify_turkish_navy_army_ns_intro
+			add_to_variable = {
+				TUR_experience_gain_navy_factor = 0.05
+				tooltip = experience_gain_navy_factor_tt
+			}
+			add_to_variable = {
+				TUR_navy_refit_speed = 0.1
+				tooltip = refit_speed_tt
+			}
+			add_to_variable = {
+				TUR_navy_screening_efficiency = 0.1
+				tooltip = screening_efficiency_tt
+			}
+			add_to_variable = {
+				TUR_navy_navy_spirit_category_type_cost_factor = -0.15
+				tooltip = navy_spirit_category_type_cost_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_black_sea_fleet
+		icon = GFX_focus_generic_black_sea_focus
+		relative_position_id = TUR_continue_the_naval_expansion
+		prerequisite = { 
+			focus = TUR_build_navy_base
+		}
+		cost = 5
+		x = -1
+		y = 3
+		available = {
+			354 = {
+				OR = {
+					is_owned_by = ROOT
+					is_controlled_by = ROOT
+				}
+			}
+			355 = {
+				OR = {
+					is_owned_by = ROOT
+					is_controlled_by = ROOT
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = TUR_modify_turkish_navy_army_ns_intro
+			add_to_variable = {
+				TUR_navy_production_speed_dockyard_factor = 0.05
+				tooltip = production_speed_dockyard_factor_tt
+			}
+			add_to_variable = {
+				TUR_navy_repair_speed_factor = 0.10
+				tooltip = repair_speed_factor_tt
+			}
+			354 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			355 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
@@ -2203,186 +2759,661 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 				}
 			}
 		}
-			
-		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
-	
+
 	focus = {
-		id = TUR_doctrinal_advancement
-		icon = GFX_goal_generic_navy_doctrines_tactics
-		prerequisite = { focus = TUR_continue_the_naval_expansion }
-
-		x = 0
-		y = 1
+		id = TUR_crimean_fleet
+		icon = GFX_focus_SOV_reinforce_southern_naval_bases
 		relative_position_id = TUR_continue_the_naval_expansion
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
+		prerequisite = { 
+			focus = TUR_black_sea_fleet
 		}
-		
+		cost = 5
+		x = -2
+		y = 4
+		available = {
+			137 = {
+				OR = {
+					is_controlled_by = ROOT
+					is_owned_by = ROOT
+				}
+			}
+		}
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = POL_the_twin_threats
-				cost_reduction = 0.65
-				uses = 2
-				category = naval_doctrine
+			custom_effect_tooltip = TUR_modify_turkish_navy_army_ns_intro
+			add_to_variable = {
+				TUR_navy_repair_speed_factor = 0.05
+				tooltip = repair_speed_factor_tt
+			}
+			add_to_variable = {
+				TUR_navy_naval_heavy_gun_hit_chance_factor = 0.05
+				tooltip = naval_heavy_gun_hit_chance_factor_tt
+			}
+			hidden_effect = {
+				set_technology = {
+					basic_light_cruiser = 1
+					early_heavy_cruiser = 1
+				}
+			}
+			IF = {
+				limit = {
+					has_dlc =  "Man the Guns"
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				create_equipment_variant = {
+					name = "Chersonesus"
+					type = ship_hull_cruiser_2
+					name_group = TUR_CA_HISTORICAL
+					modules = {
+						fixed_ship_battery_slot = ship_medium_battery_2
+						fixed_ship_anti_air_slot = ship_anti_air_1
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+						fixed_ship_radar_slot = ship_radar_1
+						fixed_ship_engine_slot= cruiser_ship_engine_3
+						fixed_ship_armor_slot = ship_armor_cruiser_2
+						fixed_ship_secondaries_slot = ship_secondaries_1
+						front_1_custom_slot = ship_anti_air_1
+						mid_1_custom_slot = ship_anti_air_1
+						mid_2_custom_slot = ship_airplane_launcher_1
+						rear_1_custom_slot = ship_medium_battery_2
+					}
+					add_equipment_production = {
+						equipment = {
+							type = ship_hull_heavy_2
+							creator = "TUR"
+							version_name = "Chersonesus"
+						}
+						name = "Chersonesus"
+						requested_factories = 1
+						progress = 0.3
+						amount = 1
+					}
+					add_equipment_production = {
+						equipment = {
+							type = ship_hull_heavy_2
+							creator = "TUR"
+							version_name = "Chersonesus"
+						}
+						name = "Chersonesus"
+						requested_factories = 1
+						progress = 0.15
+						amount = 1
+					}
+				}	
+			}
+			IF = {
+				limit = {
+					has_dlc =  "Man the Guns"
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				create_equipment_variant = {
+					name = "Etalita"
+					type = ship_hull_cruiser_2
+					name_group = TUR_CA_HISTORICAL
+					modules = {
+						fixed_ship_battery_slot = ship_medium_battery_2
+						fixed_ship_anti_air_slot = ship_anti_air_1
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+						fixed_ship_radar_slot = ship_radar_1
+						fixed_ship_engine_slot= cruiser_ship_engine_3
+						fixed_ship_armor_slot = ship_armor_cruiser_2
+						fixed_ship_secondaries_slot = ship_secondaries_1
+						front_1_custom_slot = ship_anti_air_1
+						mid_1_custom_slot = ship_anti_air_1
+						mid_2_custom_slot = ship_airplane_launcher_1
+						rear_1_custom_slot = ship_medium_battery_2
+					}
+				}	
 			}
 		}
 	}
-	
-	focus = {
-		id = TUR_tos_the_path_of_the_wolf
-		icon = GFX_goal_generic_wolf_pack
-		prerequisite = { focus = TUR_doctrinal_advancement }
 
+	focus = {
+		id = TUR_mediterranean_sea_fleet
+		icon = GFX_focus_generic_mediterranean_sea_focus
+		relative_position_id = TUR_continue_the_naval_expansion
+		prerequisite = { 
+			focus = TUR_build_navy_base
+		}
+		available = {
+			345 = {
+				OR = {
+					is_controlled_by = ROOT
+					is_owned_by = ROOT
+				}
+			}
+			677 = {
+				OR = {
+					is_controlled_by = ROOT
+					is_owned_by = ROOT
+				}
+			}
+		}
+		x = 1
+		y = 3
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = TUR_modify_turkish_navy_army_ns_intro
+			add_to_variable = {
+				TUR_navy_production_speed_dockyard_factor = 0.05
+				tooltip = production_speed_dockyard_factor_tt
+			}
+			add_to_variable = {
+				TUR_navy_extra_marine_supply_grace = 52
+				tooltip = extra_marine_supply_grace_tt
+			}
+			345 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			677 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_mine_war
+		icon = GFX_focus_generic_mine_warfare
+		relative_position_id = TUR_continue_the_naval_expansion
+		prerequisite = { 
+			focus = TUR_mediterranean_sea_fleet
+			focus = TUR_black_sea_fleet
+		}
+		x = 0
+		y = 4
+		cost = 6
+		completion_reward = {
+			custom_effect_tooltip = TUR_modify_turkish_navy_army_ns_intro
+			add_to_variable = {
+				TUR_experience_gain_navy_factor = 0.05
+				tooltip = experience_gain_navy_factor_tt
+			}
+			add_to_variable = {
+				TUR_navy_naval_coordination = 0.05
+				tooltip = naval_coordination_tt
+			}
+			add_to_variable = {
+				TUR_navy_mines_planting_by_fleets_factor = 0.05
+				tooltip = mines_planting_by_fleets_factor_tt
+			}
+			add_to_variable = {
+				TUR_navy_experience_gain_navy_factor = 0.05
+				tooltip = experience_gain_navy_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_sicilian_fleet
+		icon = GFX_focus_generic_navy_battleship2
+		cost = 5
+		relative_position_id = TUR_continue_the_naval_expansion
+		prerequisite = { 
+			focus = TUR_mediterranean_sea_fleet
+		}
+		x = 2
+		y = 4
+		
+		available = {
+			117 = {
+				is_owned_and_controlled_by = ROOT
+			}
+			849 = {
+				is_owned_and_controlled_by = ROOT
+			}
+			156 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = TUR_modify_turkish_navy_army_ns_intro
+			add_to_variable = {
+				TUR_navy_naval_equipment_upgrade_xp_cost = -0.1
+				tooltip = naval_equipment_upgrade_xp_cost_tt
+			}
+			add_to_variable = {
+				TUR_navy_naval_invasion_capacity = 15
+				tooltip = naval_invasion_capacity_tt
+			}
+			add_to_variable = {
+				TUR_navy_spotting_chance = 0.1
+				tooltip = spotting_chance_tt
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_submarines_expansion
+		icon = GFX_goal_generic_navy_submarine
+		relative_position_id = TUR_continue_the_naval_expansion
+		prerequisite = { 
+			focus = TUR_continue_the_naval_expansion
+		}
+		cost = 5
 		x = 2
 		y = 1
-		relative_position_id = TUR_doctrinal_advancement
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-		
 		completion_reward = {
+			custom_effect_tooltip = TUR_modify_turkish_navy_army_ns_intro
+			add_to_variable = {
+				TUR_experience_gain_navy_factor = 0.05
+				tooltip = experience_gain_navy_factor_tt
+			}
+			custom_effect_tooltip = GER_submarine_max_speed_small_tt
+			hidden_effect = {
+				add_equipment_bonus = {
+					name = TUR_submarines_expansion
+					bonus = {
+						ship_hull_submarine = {
+							naval_speed = 0.05 #WARNING! If you change this value, you need to update GER_submarine_max_speed_small_tt
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
-				name = TUR_tos_the_path_of_the_wolf
-				bonus = 1
+				name = TUR_submarines_expansion
+				bonus = 1.0
 				uses = 1
 				category = ss_tech
-			}	
-		}
-		search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
-	}
-	
-	focus = {
-		id = TUR_amphibious_warfare
-		icon = GFX_goal_generic_amphibious_assault
-		prerequisite = { focus = TUR_doctrinal_advancement }
-
-		x = 0
-		y = 1
-		relative_position_id = TUR_doctrinal_advancement
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-		
-		completion_reward = {
-			add_tech_bonus = {
-				name = GER_plan_sealion
-				bonus = 0.75
-				uses = 1
-				category = marine_tech
 			}
-			add_tech_bonus = {
-				name = GER_landing_craft
-				bonus = 0.75
-				uses = 1
-				category = tp_tech
-			}	
-		}
-		search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
-	}
-	
-	focus = {
-		id = TUR_balanced_navy
-		icon = GFX_goal_generic_occupy_states_coastal
-		prerequisite = { focus = TUR_doctrinal_advancement }
 
-		x = -2
-		y = 1
-		relative_position_id = TUR_doctrinal_advancement
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
+			## ЗРОБИТИ MILITARY ORGANIZATION SUBMARINES (ПІДЛОДОК)
 		}
-		
-		completion_reward = {
-			add_tech_bonus = {
-				name = POL_strike_force
-				bonus = 0.75
-				uses = 1
-				category = dd_tech
-			}
-			add_tech_bonus = {
-				name = POL_strike_force
-				bonus = 0.75
-				uses = 1
-				category = cl_tech
-			}
-		}
-		search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
 	}
 
 	focus = {
-		id = TUR_control_our_seas
-		icon = GFX_goal_generic_navy_battleship
+		id = TUR_doctrine_navy_buffs2
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		relative_position_id = TUR_advanced_subs
 		prerequisite = { 
-			focus = TUR_balanced_navy  
+			focus = TUR_advanced_subs
+			focus = TUR_raid_convoys
 		}
-
-		x = 0
+		x = -1
 		y = 1
-		relative_position_id = TUR_balanced_navy
-		cost = 10
-
-		ai_will_do = {
-			factor = 8
-		}
-		
+		cost = 5
 		completion_reward = {
-			add_tech_bonus = {
-				name = TUR_control_our_seas
-				bonus = 0.65
-				uses = 2
-				category = ca_tech
+			custom_effect_tooltip = TUR_modify_turkish_navy_army_ns_intro
+			add_to_variable = {
+				TUR_navy_experience_gain_navy_unit_factor = 0.1
+				tooltip = experience_gain_navy_unit_factor_tt
 			}
-			add_tech_bonus = {
-				name = uk_carrier_focus
-				bonus = 0.65
-				uses = 2
-				category = cv_tech
+			add_to_variable = {
+				TUR_navy_convoy_raiding_efficiency_factor = 0.1
+				tooltip = convoy_raiding_efficiency_factor_tt
 			}
-			
-			#1x50% research bonus to Light Cruisers
-		}
-		search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
-	}
-	
-	focus = {
-		id = TUR_modern_sub_surface_peripherals
-		icon = GFX_goal_generic_navy_anti_submarine
-		prerequisite = { focus = TUR_tos_the_path_of_the_wolf	}
-
-		x = 0
-		y = 1
-		relative_position_id = TUR_tos_the_path_of_the_wolf
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-		
-		completion_reward = {
-			add_tech_bonus = {
-				name = TUR_modern_sub_surface_peripherals
-				ahead_reduction = 1
-				uses = 1
-				category = ss_tech
+			add_to_variable = {
+				TUR_navy_convoy_retreat_speed = 0.1
+				tooltip = convoy_retreat_speed_tt
 			}
 			add_doctrine_cost_reduction = {
-				name = TUR_modern_sub_surface_peripherals
-				cost_reduction = 0.65
-				uses = 1
+				name = TUR_doctrine_navy_buffs2
+				cost_reduction = 0.7
+				uses = 2
 				category = naval_doctrine
 			}
 		}
-		search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
-	}	
+	}
+
+	focus = {
+		id = TUR_raid_convoys
+		icon = GFX_focus_GER_panzerschiff
+		cost = 7
+		relative_position_id = TUR_submarines_expansion
+		prerequisite = { 
+			focus = TUR_submarines_expansion
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = TUR_raid_convoys
+				bonus = 0.5
+				uses = 1
+				category = ca_tech
+			}
+
+			IF = {
+				limit = {
+					has_dlc =  "Man the Guns"
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				create_equipment_variant = {
+					name = "Turk"
+					type = ship_hull_cruiser_3
+					name_group = TUR_CA_HISTORICAL
+					modules = {
+						fixed_ship_battery_slot = ship_medium_battery_2
+						fixed_ship_anti_air_slot = ship_anti_air_1
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+						fixed_ship_radar_slot = ship_radar_1
+						fixed_ship_engine_slot= cruiser_ship_engine_3
+						fixed_ship_armor_slot = ship_armor_cruiser_2
+						fixed_ship_secondaries_slot = ship_secondaries_1
+						front_1_custom_slot = ship_anti_air_1
+						mid_1_custom_slot = ship_anti_air_1
+						mid_2_custom_slot = ship_airplane_launcher_1
+						rear_1_custom_slot = ship_medium_battery_2
+					}
+				}	
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			custom_effect_tooltip = TUR_modify_turkish_navy_army_ns_intro
+			add_to_variable = { 
+				TUR_military_screening_without_screens = 0.1
+				tooltip = screening_without_screens_tt
+			}
+			add_to_variable = { 
+				TUR_military_naval_light_gun_hit_chance_factor = 0.05
+				tooltip = naval_light_gun_hit_chance_factor_tt
+			}
+			add_to_variable = { 
+				TUR_military_naval_heavy_gun_hit_chance_factor = 0.05
+				tooltip = naval_heavy_gun_hit_chance_factor_tt
+			}
+
+		}
+	}
+
+	focus = {
+		id = TUR_advanced_subs
+		icon = GFX_focus_generic_midget_submarines
+		relative_position_id = TUR_submarines_expansion
+		prerequisite = { 
+			focus = TUR_submarines_expansion
+		}
+		cost = 5
+		x = 2
+		y = 1
+		completion_reward = {
+			
+			custom_effect_tooltip = GER_submarine_max_speed_small_tt
+			hidden_effect = {
+				add_equipment_bonus = {
+					name = TUR_submarines_expansion
+					bonus = {
+						ship_hull_submarine = {
+							naval_speed = 0.05 #WARNING! If you change this value, you need to update GER_submarine_max_speed_small_tt
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_tech_bonus = {
+				name = TUR_advanced_subs
+				bonus = 1.0
+				uses = 1
+				category = ss_tech
+			}
+			custom_effect_tooltip = TUR_modify_turkish_navy_army_ns_intro
+			add_to_variable = {
+				TUR_experience_gain_navy_factor = 0.05
+				tooltip = experience_gain_navy_factor_tt
+			}
+			add_to_variable = {
+				TUR_navy_naval_hit_chance = 0.05
+				tooltip = naval_hit_chance_tt
+			}
+			add_to_variable = {
+				TUR_navy_max_range_factor = 0.1
+				tooltip = navy_max_range_factor_tt
+			}
+		}
+	}
+	
+	# focus = {
+	# 	id = TUR_expand_the_golcuk_shipyard
+	# 	icon = GFX_goal_generic_construct_naval_dockyard
+	# 	prerequisite = { focus = TUR_continue_the_naval_expansion }
+
+	# 	x = -2
+	# 	y = 1
+	# 	relative_position_id = TUR_continue_the_naval_expansion
+	# 	cost = 5
+		
+	# 	available = {
+	# 		has_full_control_of_state = 340
+	# 	}
+
+	# 	ai_will_do = {
+	# 		factor = 10
+	# 	}
+		
+	# 	completion_reward = {
+	# 		340 = {
+	# 			add_extra_state_shared_building_slots = 1
+	# 			add_building_construction = {
+	# 				type = dockyard
+	# 				level = 1
+	# 				instant_build = yes
+	# 			}
+	# 		}
+	# 	}
+			
+	# 	search_filters = { FOCUS_FILTER_INDUSTRY }
+	# }
+	
+	# focus = {
+	# 	id = TUR_new_shipyards
+	# 	icon = GFX_goal_generic_construct_naval_dockyard
+	# 	prerequisite = { focus = TUR_continue_the_naval_expansion }
+
+	# 	x = 2
+	# 	y = 1
+	# 	relative_position_id = TUR_continue_the_naval_expansion
+	# 	cost = 10
+		
+	# 	available = {
+	# 		has_full_control_of_state = 797
+	# 	}
+
+	# 	ai_will_do = {
+	# 		factor = 10
+	# 	}
+		
+	# 	completion_reward = {
+	# 		797 = {
+	# 			add_extra_state_shared_building_slots = 2
+	# 			add_building_construction = {
+	# 				type = dockyard
+	# 				level = 2
+	# 				instant_build = yes
+	# 			}
+	# 		}
+	# 	}
+			
+	# 	search_filters = { FOCUS_FILTER_INDUSTRY }
+	# }
+	
+	# focus = {
+	# 	id = TUR_doctrinal_advancement
+	# 	icon = GFX_goal_generic_navy_doctrines_tactics
+	# 	prerequisite = { focus = TUR_continue_the_naval_expansion }
+
+	# 	x = 0
+	# 	y = 1
+	# 	relative_position_id = TUR_continue_the_naval_expansion
+	# 	cost = 10
+
+	# 	ai_will_do = {
+	# 		factor = 10
+	# 	}
+		
+	# 	completion_reward = {
+	# 		add_doctrine_cost_reduction = {
+	# 			name = POL_the_twin_threats
+	# 			cost_reduction = 0.65
+	# 			uses = 2
+	# 			category = naval_doctrine
+	# 		}
+	# 	}
+	# }
+	
+	# focus = {
+	# 	id = TUR_tos_the_path_of_the_wolf
+	# 	icon = GFX_goal_generic_wolf_pack
+	# 	prerequisite = { focus = TUR_doctrinal_advancement }
+
+	# 	x = 2
+	# 	y = 1
+	# 	relative_position_id = TUR_doctrinal_advancement
+	# 	cost = 10
+
+	# 	ai_will_do = {
+	# 		factor = 10
+	# 	}
+		
+	# 	completion_reward = {
+	# 		add_tech_bonus = {
+	# 			name = TUR_tos_the_path_of_the_wolf
+	# 			bonus = 1
+	# 			uses = 1
+	# 			category = ss_tech
+	# 		}	
+	# 	}
+	# 	search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
+	# }
+	
+	# focus = {
+	# 	id = TUR_amphibious_warfare
+	# 	icon = GFX_goal_generic_amphibious_assault
+	# 	prerequisite = { focus = TUR_doctrinal_advancement }
+
+	# 	x = 0
+	# 	y = 1
+	# 	relative_position_id = TUR_doctrinal_advancement
+	# 	cost = 10
+
+	# 	ai_will_do = {
+	# 		factor = 10
+	# 	}
+		
+	# 	completion_reward = {
+	# 		add_tech_bonus = {
+	# 			name = GER_plan_sealion
+	# 			bonus = 0.75
+	# 			uses = 1
+	# 			category = marine_tech
+	# 		}
+	# 		add_tech_bonus = {
+	# 			name = GER_landing_craft
+	# 			bonus = 0.75
+	# 			uses = 1
+	# 			category = tp_tech
+	# 		}	
+	# 	}
+	# 	search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
+	# }
+	
+	# focus = {
+	# 	id = TUR_balanced_navy
+	# 	icon = GFX_goal_generic_occupy_states_coastal
+	# 	prerequisite = { focus = TUR_doctrinal_advancement }
+
+	# 	x = -2
+	# 	y = 1
+	# 	relative_position_id = TUR_doctrinal_advancement
+	# 	cost = 10
+
+	# 	ai_will_do = {
+	# 		factor = 10
+	# 	}
+		
+	# 	completion_reward = {
+	# 		add_tech_bonus = {
+	# 			name = POL_strike_force
+	# 			bonus = 0.75
+	# 			uses = 1
+	# 			category = dd_tech
+	# 		}
+	# 		add_tech_bonus = {
+	# 			name = POL_strike_force
+	# 			bonus = 0.75
+	# 			uses = 1
+	# 			category = cl_tech
+	# 		}
+	# 	}
+	# 	search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
+	# }
+
+	# focus = {
+	# 	id = TUR_control_our_seas
+	# 	icon = GFX_goal_generic_navy_battleship
+	# 	prerequisite = { 
+	# 		focus = TUR_balanced_navy  
+	# 	}
+
+	# 	x = 0
+	# 	y = 1
+	# 	relative_position_id = TUR_balanced_navy
+	# 	cost = 10
+
+	# 	ai_will_do = {
+	# 		factor = 8
+	# 	}
+		
+	# 	completion_reward = {
+	# 		add_tech_bonus = {
+	# 			name = TUR_control_our_seas
+	# 			bonus = 0.65
+	# 			uses = 2
+	# 			category = ca_tech
+	# 		}
+	# 		add_tech_bonus = {
+	# 			name = uk_carrier_focus
+	# 			bonus = 0.65
+	# 			uses = 2
+	# 			category = cv_tech
+	# 		}
+			
+	# 		#1x50% research bonus to Light Cruisers
+	# 	}
+	# 	search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
+	# }
+	
+	# focus = {
+	# 	id = TUR_modern_sub_surface_peripherals
+	# 	icon = GFX_goal_generic_navy_anti_submarine
+	# 	prerequisite = { focus = TUR_tos_the_path_of_the_wolf	}
+
+	# 	x = 0
+	# 	y = 1
+	# 	relative_position_id = TUR_tos_the_path_of_the_wolf
+	# 	cost = 10
+
+	# 	ai_will_do = {
+	# 		factor = 10
+	# 	}
+		
+	# 	completion_reward = {
+	# 		add_tech_bonus = {
+	# 			name = TUR_modern_sub_surface_peripherals
+	# 			ahead_reduction = 1
+	# 			uses = 1
+	# 			category = ss_tech
+	# 		}
+	# 		add_doctrine_cost_reduction = {
+	# 			name = TUR_modern_sub_surface_peripherals
+	# 			cost_reduction = 0.65
+	# 			uses = 1
+	# 			category = naval_doctrine
+	# 		}
+	# 	}
+	# 	search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
+	# }	
 	
 	#Kemalism
 	focus = {
@@ -2394,7 +3425,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		}
 
 		x = 54
-		y = 0
+		y = -1
 		relative_position_id = TUR_continue_the_military_reorganization
 		cost = 5
 
@@ -4460,6 +5491,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 			## зробити івент, який перше прокає для турції, і турція вибирає яким методом захопить кіпр (1. купити за ресурси, 2. купити за фабрики, 3. кинути клейм)
 			## коли прилітає івент британії то вона або приймає або відмовляється
 			## прилітає івент турції на те що вона відмовилась або согласилась
+			country_event = TUR_CYPRUS.1
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
@@ -5197,6 +6229,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 				ideology = fascism
 				popularity = 0.05
 			}
+			custom_effect_tooltip = unlock_decisions_to_become_christianity_state_tt
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
@@ -5313,7 +6346,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 						has_war = no
 					}
 				}
-				BUL = { country_event = { turkey.3000 days = 2 } }
+				BUL = { country_event = { id = turkey.3000 days = 2 } }
 			}
 			else_if = {
 				limit = {
@@ -5371,6 +6404,11 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		ai_will_do = {
 			base = 10
 		}
+		available = {
+			ROOT = {
+				is_major = yes
+			}
+		}
 
 		bypass = {
 			ROOT = {
@@ -5379,13 +6417,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		}
 
 		completion_reward = {
-			## ІВЕНТ НА РОЗДІЛ РУМУНІЇ - 
-			## 83, 76, 84 - HUNGARY
-			## 82 - YUGOSLAVIA
-			## 77, 971 - BULGARY (if buglary is not exists - goes to turkey)
-			## 80 - POL
-			## 78, 766 - SOV
-			## 79, 81, 46 - ROM PUPPET OF TURKEY
+			country_event = partitionofromania.1
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
@@ -5457,7 +6489,13 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		cost = 7
 		x = 3
 		y = 1
+		available = {
+			ROOT = {
+				is_major = yes
+			}
+		}
 		completion_reward = {
+			country_event = YUGOSLAVIANDUX.1
 			## EVENT SOUTH YUGOSLAVIA goes to TUR, NORTH YUGOSLAVIA goes as puppet to TUR
 			## 103, 104, 804, 105, 108, 802, 970, 106, 803 - STATES goes to TUR
 			## 853, 102, 109, 45, 764, 107 - goes to Serbian Puppet
@@ -5737,6 +6775,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 	}
 	focus = {
 		id = TUR_land_corridor_to_crimea
+		icon = GFX_focus_generic_annex_country_2
 		prerequisite = { focus = TUR_crimean_crisis }
 		relative_position_id = TUR_plan_black_sea
 		cost = 7
@@ -6946,7 +7985,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		}
 
 		x = 45
-		y = 0
+		y = -1
 
 		relative_position_id = TUR_continue_the_military_reorganization
 		
@@ -8091,7 +9130,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		id = TUR_the_montreux_convention_tos
 		icon = GFX_focus_TUR_the_montreux_convention
 		text = TUR_the_montreux_convention
-		x = 40
+		x = 43
 		y = 0
 		cost = 5
 		available = {

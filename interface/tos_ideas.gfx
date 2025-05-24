@@ -43,7 +43,19 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/tos_idea_TUR_recovering_from_the_war_of_independence.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_TUR_six_arrows"
+		name = "GFX_idea_TUR_six_arrows_idea"
 		texturefile = "gfx/interface/ideas/tos_idea_TUR_six_arrows.dds"
+	}
+	spriteType = {
+		name = "GFX_tos_idea_TUR_land_forces_idea"
+		texturefile = "gfx/interface/ideas/tos_idea_TUR_land_forces_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_tos_idea_TUR_navy_forces_idea"
+		texturefile = "gfx/interface/ideas/tos_idea_TUR_navy_forces_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_tos_idea_TUR_air_forces_idea"
+		texturefile = "gfx/interface/ideas/tos_idea_TUR_air_forces_idea.dds"
 	}
 }
