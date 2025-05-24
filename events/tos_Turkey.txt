@@ -2402,6 +2402,190 @@ country_event = {
 }
 ## ТУРЦІЇ
 
+# country_event = {
+#     id = TUR_CYPRUS.1
+#     title = "The Cyprus Question"
+#     desc = "How should we approach acquiring Cyprus from the British?"
+
+#     trigger = {
+#         tag = TUR
+#         ENG = { controls_state = 183 }
+#     }
+
+# 	is_triggered_only = yes
+#     fire_only_once = yes
+
+#     option = {
+#         name = "Offer resources in exchange"
+#         ai_chance = { factor = 40 }
+#         hidden_effect = {
+#             ENG = { country_event = { id = TUR_CYPRUS.2 days = 1 } }
+#             set_variable = { cyprus_demand_method = 1 }
+#         }
+#     }
+#     option = {
+#         name = "Offer civilian factories"
+#         ai_chance = { factor = 40 }
+#         hidden_effect = {
+#             ENG = { country_event = { id = TUR_CYPRUS.2 days = 1 } }
+#             set_variable = { cyprus_demand_method = 2 }
+#         }
+#     }
+#     option = {
+#         name = "Claim it as our rightful territory!"
+#         ai_chance = { factor = 20 }
+#         hidden_effect = {
+#             ENG = { country_event = { id = TUR_CYPRUS.2 days = 1 } }
+#             set_variable = { cyprus_demand_method = 3 }
+#         }
+#     }
+# }
+#  ## БРИТАНІЇ
+# country_event = {
+#     id = TUR_CYPRUS.2
+#     title = "Turkey Demands Cyprus"
+#     desc = "Turkey has approached us regarding Cyprus. What should we do?"
+
+#     trigger = { tag = ENG }
+
+#     is_triggered_only = yes
+#     fire_only_once = yes
+
+#     option = {
+#         name = "Accept the deal"
+#         ai_chance = { base = 99 }
+
+#         hidden_effect = {
+#             if = {
+#                 limit = {
+#                     NOT = {
+#                         TUR = {
+#                             check_variable = { cyprus_demand_method = 3 }
+#                         }
+#                     }
+#                 }
+# 			TUR = {
+#                 transfer_state = 183
+#                 country_event = { id = TUR_CYPRUS.3 days = 1 }
+#             }
+#             }
+
+#             # Method 1: Resource compensation
+#             if = {
+#                 limit = {
+#                     TUR = { check_variable = { cyprus_demand_method = 1 } }
+#                 }
+#                 TUR = {
+#                     ### НЕ ПРАЦЮЄ НІ ОДИН СПОСІБ ВІДНІМАННЯ РЕСУРСІВ
+# 					## ПОПРОБУЙ ТИ
+#                 }
+#                 ENG = {
+#                     random_owned_controlled_state = {
+#                         limit = { is_controlled_by = ENG }
+#                         add_resource = { type = oil amount = 50 }
+#                         add_resource = { type = steel amount = 30 }
+#                     }
+#                 }
+#             }
+
+#             # Method 2: Factory compensation
+#             if = {
+#                 limit = { TUR = { check_variable = { cyprus_demand_method = 2 } } }
+
+#                 TUR = {
+#                     random_owned_controlled_state = {
+#                         limit = { arms_factory > 0 }
+#                         remove_building = {
+#                             type = industrial_complex
+#                             level = 2
+#                         }
+#                     }
+#                 }
+
+#                 ENG = {
+#                     add_building_construction = {
+#                         type = industrial_complex
+#                         level = 2
+#                         instant_build = yes
+#                     }
+#                 }
+#             }
+
+#             if = {
+#                 limit = { TUR = { check_variable = { cyprus_demand_method = 3 } } }
+
+#                 TUR = { add_state_claim = 183 }
+#             }
+#         }
+#     }
+
+#     option = {
+#         name = "Refuse"
+#         ai_chance = { 
+#             base = 1 
+#         }
+#         hidden_effect = {
+#             TUR = { country_event = { id = TUR_CYPRUS.4 days = 1 } }
+#         }
+#     }
+# }
+
+
+
+
+
+# country_event = { ## ПРИЙНЯТТЯ
+#     id = TUR_CYPRUS.3 
+#     title = "Cyprus Transferred!"
+#     desc = "The British have agreed to our terms. Cyprus is now under our control."
+#     trigger = { tag = TUR }
+
+# 	is_triggered_only = yes
+# 	fire_only_once = yes
+
+#     option = { name = "Excellent." }
+# }
+
+# country_event = { ## ВІДМОВА
+#     id = TUR_CYPRUS.4
+#     title = "Deal Rejected"
+#     desc = "The British have rejected our attempt to gain Cyprus."
+#     trigger = { tag = TUR }
+
+# 	is_triggered_only = yes
+# 	fire_only_once = yes
+
+#     option = {
+#         name = "Then we must take it another way..."
+#         add_state_claim = 183
+#     }
+# }
+
+# add_namespace = turkish
+
+# news_event = { 
+#     id = turkish.100
+#     title = turkish.100.t
+#     desc = turkish.100.d
+#     picture = GFX_report_event_generic_war
+#     major = yes
+#     show_major = yes
+	
+#     fire_only_once = yes
+
+# 	option = {
+# 		name = turkish.100.a
+# 		add_opinion_modifier = {
+# 			target = ITA
+# 			modifier = hostile_status
+# 		}
+# 		add_threat = 2
+# 	}
+# }
+
+
+## ТУРЦІЇ
+
 country_event = {
     id = TUR_CYPRUS.1
     title = "The Cyprus Question"
@@ -2412,154 +2596,159 @@ country_event = {
         ENG = { controls_state = 183 }
     }
 
-	is_triggered_only = yes
+    is_triggered_only = yes
     fire_only_once = yes
 
     option = {
         name = "Offer resources in exchange"
-        ai_chance = { factor = 40 }
+        ai_chance = { base = 60 }
+        custom_effect_tooltip = TUR_CYPRUS_AI_CHANCE_40
         hidden_effect = {
-            ENG = { country_event = { id = TUR_CYPRUS.2 days = 1 } }
-            set_variable = { cyprus_demand_method = 1 }
+            ENG = { country_event = { id = TUR_CYPRUS.10 days = 1 } }
         }
     }
+
     option = {
         name = "Offer civilian factories"
-        ai_chance = { factor = 40 }
+        ai_chance = { base = 5 }
+        custom_effect_tooltip = TUR_CYPRUS_AI_CHANCE_40_FACTORIES
         hidden_effect = {
-            ENG = { country_event = { id = TUR_CYPRUS.2 days = 1 } }
-            set_variable = { cyprus_demand_method = 2 }
+            ENG = { country_event = { id = TUR_CYPRUS.11 days = 1 } }
         }
     }
+
     option = {
         name = "Claim it as our rightful territory!"
-        ai_chance = { factor = 20 }
+        ai_chance = { base = 35 }
+        custom_effect_tooltip = TUR_CYPRUS_AI_CHANCE_20_CLAIM
         hidden_effect = {
-            ENG = { country_event = { id = TUR_CYPRUS.2 days = 1 } }
-            set_variable = { cyprus_demand_method = 3 }
+            ENG = { country_event = { id = TUR_CYPRUS.12 days = 1 } }
         }
     }
 }
- ## БРИТАНІЇ
+
+
+
 country_event = {
-    id = TUR_CYPRUS.2
-    title = "Turkey Demands Cyprus"
-    desc = "Turkey has approached us regarding Cyprus. What should we do?"
+    id = TUR_CYPRUS.10
+    title = "Turkey Offers Resource Access"
+    desc = "Turkey offers access to resource rights in exchange for Cyprus. Should we accept?"
 
     trigger = { tag = ENG }
-
     is_triggered_only = yes
     fire_only_once = yes
 
     option = {
         name = "Accept the deal"
-        ai_chance = { base = 99 }
-
+        ai_chance = { base = 90 }
         hidden_effect = {
-            if = {
-                limit = {
-                    NOT = {
-                        TUR = {
-                            check_variable = { cyprus_demand_method = 3 }
-                        }
-                    }
-                }
-			TUR = {
+            TUR = {
                 transfer_state = 183
+                give_resource_rights = {
+                    receiver = ENG
+                    state = 347
+                    resources = { oil steel }
+                }
                 country_event = { id = TUR_CYPRUS.3 days = 1 }
-            }
-            }
-
-            # Method 1: Resource compensation
-            if = {
-                limit = {
-                    TUR = { check_variable = { cyprus_demand_method = 1 } }
-                }
-                TUR = {
-                    ### НЕ ПРАЦЮЄ НІ ОДИН СПОСІБ ВІДНІМАННЯ РЕСУРСІВ
-					## ПОПРОБУЙ ТИ
-                }
-                ENG = {
-                    random_owned_controlled_state = {
-                        limit = { is_controlled_by = ENG }
-                        add_resource = { type = oil amount = 50 }
-                        add_resource = { type = steel amount = 30 }
-                    }
-                }
-            }
-
-            # Method 2: Factory compensation
-            if = {
-                limit = { TUR = { check_variable = { cyprus_demand_method = 2 } } }
-
-                TUR = {
-                    random_owned_controlled_state = {
-                        limit = { arms_factory > 0 }
-                        remove_building = {
-                            type = industrial_complex
-                            level = 2
-                        }
-                    }
-                }
-
-                ENG = {
-                    add_building_construction = {
-                        type = industrial_complex
-                        level = 2
-                        instant_build = yes
-                    }
-                }
-            }
-
-            if = {
-                limit = { TUR = { check_variable = { cyprus_demand_method = 3 } } }
-
-                TUR = { add_state_claim = 183 }
             }
         }
     }
 
     option = {
         name = "Refuse"
-        ai_chance = { 
-            base = 1 
-        }
+        ai_chance = { base = 10 }
         hidden_effect = {
             TUR = { country_event = { id = TUR_CYPRUS.4 days = 1 } }
         }
     }
 }
 
+country_event = {
+    id = TUR_CYPRUS.11
+    title = "Turkey Offers Factories"
+    desc = "Turkey offers to provide factories in exchange for Cyprus. Should we accept?"
+
+    trigger = {
+        tag = ENG
+    }
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = "Accept the deal"
+    }
+
+    option = {
+        name = "Refuse"
+		ai_chance = { base = 100 }
+        hidden_effect = {
+            TUR = {
+                country_event = {
+                    id = TUR_CYPRUS.4
+                    days = 1
+                }
+            }
+        }
+    }
+}
 
 
+country_event = {
+    id = TUR_CYPRUS.12
+    title = "Turkey Claims Cyprus"
+    desc = "Turkey demands Cyprus as rightful territory. Do we give in?"
 
+    trigger = { tag = ENG }
+    is_triggered_only = yes
+    fire_only_once = yes
 
-country_event = { ## ПРИЙНЯТТЯ
-    id = TUR_CYPRUS.3 
+    option = {
+        name = "Accept the claim"
+        ai_chance = { base = 20 }
+        hidden_effect = {
+            TUR = {
+                add_state_claim = 183
+                transfer_state = 183
+                country_event = { id = TUR_CYPRUS.3 days = 1 }
+            }
+        }
+    }
+
+    option = {
+        name = "Refuse"
+        ai_chance = { base = 90 }
+        hidden_effect = {
+            TUR = { country_event = { id = TUR_CYPRUS.4 days = 1 } }
+        }
+    }
+}
+
+country_event = {
+    id = TUR_CYPRUS.3
     title = "Cyprus Transferred!"
     desc = "The British have agreed to our terms. Cyprus is now under our control."
     trigger = { tag = TUR }
-
-	is_triggered_only = yes
-	fire_only_once = yes
-
+    is_triggered_only = yes
+    fire_only_once = yes
     option = { name = "Excellent." }
 }
 
-country_event = { ## ВІДМОВА
+
+country_event = {
     id = TUR_CYPRUS.4
     title = "Deal Rejected"
     desc = "The British have rejected our attempt to gain Cyprus."
     trigger = { tag = TUR }
-
-	is_triggered_only = yes
-	fire_only_once = yes
+    is_triggered_only = yes
+    fire_only_once = yes
 
     option = {
         name = "Then we must take it another way..."
         add_state_claim = 183
     }
 }
+
+
 
 add_namespace = turkish
 
