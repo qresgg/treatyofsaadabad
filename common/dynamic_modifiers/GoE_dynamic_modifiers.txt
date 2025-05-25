@@ -947,7 +947,6 @@ SSB_saadabad_pact = {
 	research_speed_factor = SSB_research_speed_factor
 	consumer_goods_factor = SSB_consumer_goods_factor
 	production_speed_buildings_factor = SSB_production_speed_buildings_factor
-	
 }
 idea_RAJ_rural_development = {
 	icon = GFX_modifiers_SOV_civilian_labor_in_defense

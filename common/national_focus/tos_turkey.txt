@@ -818,6 +818,15 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 			army_experience = 25
 			navy_experience = 25
 			air_experience = 25
+			random_owned_controlled_state = {
+				prioritize = { 343 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -1774,122 +1783,481 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 
 	focus = {
 		id = TUR_destroyers
+		icon = GFX_goal_generic_air_fighter
 		relative_position_id = TUR_found_an_air_war_academy
 		prerequisite = {
 			focus = TUR_found_an_air_war_academy
 		}
+		cost = 6
 		y = 1
 		x = -3
+		completion_reward = {
+			add_tech_bonus = {
+				name = TUR_destroyers
+				bonus = 0.8
+				uses = 1
+				category = light_fighter
+			}
+			
+			custom_effect_tooltip = TUR_modify_turkish_air_army_ns_intro
+			add_to_variable = {
+				TUR_air_experience_gain_air_factor = 0.05
+				tooltip = experience_gain_air_factor_tt
+			}
+			add_to_variable = {
+				TUR_air_agility_factor = 0.1
+				tooltip = air_agility_factor_tt
+			}
+			add_to_variable = {
+				TUR_air_fuel_consumption_factor = -0.10
+				tooltip = air_fuel_consumption_factor_tt
+			}
+		}
 	}
 
 	focus = {
-		id = TUR_destroyers_expansion1
+		id = TUR_air_doctrine_buffs
+		icon = GFX_goal_generic_air_doctrine
 		relative_position_id = TUR_destroyers
 		prerequisite = {
 			focus = TUR_destroyers
-		}
-		y = 2
-		x = -1
-	}
-
-	focus = {
-		id = TUR_destroyers_expansion2
-		relative_position_id = TUR_destroyers
-		prerequisite = {
-			focus = TUR_destroyers
-		}
-		y = 2
-		x = 1
-	}
-
-	focus = {
-		id = TUR_air_base1
-		relative_position_id = TUR_found_an_air_war_academy
-		prerequisite = {
-			focus = TUR_found_an_air_war_academy
-		}
-		y = 1
-		x = 1
-	}
-
-	focus = {
-		id = TUR_air_base2
-		relative_position_id = TUR_found_an_air_war_academy
-		prerequisite = {
-			focus = TUR_found_an_air_war_academy
-		}
-		y = 1
-		x = -1
-	}
-
-	focus = {
-		id = TUR_air_base3
-		relative_position_id = TUR_air_base1
-		prerequisite = {
-			focus = TUR_air_base1
-			focus = TUR_air_base2
-		}
-		y = 1
-		x = -1
-	}
-
-	focus = {
-		id = TUR_air_base4
-		relative_position_id = TUR_air_base3
-		prerequisite = {
-			focus = TUR_air_base3
 		}
 		y = 1
 		x = 0
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				name = TUR_air_doctrine_buffs
+				bonus = 0.6
+				uses = 2
+				category = cat_air_engine
+			}
+			add_tech_bonus = {
+				name = TUR_air_doctrine_buffs
+				bonus = 0.4
+				uses = 3
+				category = cat_air_guns
+			}
+			custom_effect_tooltip = TUR_modify_turkish_navy_army_ns_intro
+			add_to_variable = {
+				TUR_air_experience_gain_air_factor = 0.05
+				tooltip = experience_gain_air_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_proffecional_destroyers
+		icon = GFX_focus_generic_military_mission
+		relative_position_id = TUR_destroyers
+		prerequisite = {
+			focus = TUR_destroyers
+		}
+		mutually_exclusive = {
+			focus = TUR_more_destroyers
+		}
+		cost = 10
+		available = {
+			ROOT = {
+				is_major = yes
+			}
+		}
+		y = 2
+		x = -1
+		completion_reward = {
+			custom_effect_tooltip = TUR_modify_turkish_air_army_ns_intro
+			add_to_variable = {
+				TUR_air_experience_gain_air_factor = 0.05
+				tooltip = experience_gain_air_factor_tt
+			}
+			add_to_variable = {
+				TUR_air_weather_penalty = -0.07
+				tooltip = air_weather_penalty_tt
+			}
+			add_to_variable = {
+				TUR_air_agility_factor = 0.1
+				tooltip = air_agility_factor_tt
+			}
+			add_to_variable = {
+				TUR_air_ace_generation_chance_factor = 0.08
+				tooltip = air_ace_generation_chance_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_more_destroyers
+		icon = GFX_goal_continuous_air_production
+		relative_position_id = TUR_destroyers
+		prerequisite = {
+			focus = TUR_destroyers
+		}
+		mutually_exclusive = {
+			focus = TUR_proffecional_destroyers
+		}
+		cost = 5
+		available = {
+			ROOT = {
+				is_major = yes
+			}
+		}
+		y = 2
+		x = 1
+		completion_reward = {
+			custom_effect_tooltip = TUR_modify_turkish_air_army_ns_intro
+			add_to_variable = {
+				TUR_air_untrained_pilots_penalty_factor = -0.1
+				tooltip = air_untrained_pilots_penalty_factor_tt
+			}
+			add_to_variable = {
+				TUR_air_experience_gain_air_factor = 0.1
+				tooltip = experience_gain_air_factor_tt
+			}
+			add_to_variable = {
+				TUR_air_manpower_requirement_factor = -0.1
+				tooltip = air_manpower_requirement_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_edirne_air_base
+		icon = GFX_goal_generic_build_airforce
+		relative_position_id = TUR_found_an_air_war_academy
+		prerequisite = {
+			focus = TUR_found_an_air_war_academy
+		}
+		y = 1
+		x = 1
+		cost = 5
+		available = {
+			341 = {
+				OR = {
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+				}
+			}
+			340 = {
+				OR = {
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+				}
+			}
+		}
+		completion_reward = {
+			341 = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+				}
+			}
+			340 = {
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+				}
+			}
+			custom_effect_tooltip = TUR_modify_turkish_air_army_ns_intro
+			add_to_variable = {
+				TUR_air_range_factor = 0.05
+				tooltip = air_range_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_crit_and_peloponnese
+		icon = GFX_focus_generic_air_bases
+		relative_position_id = TUR_found_an_air_war_academy
+		prerequisite = {
+			focus = TUR_found_an_air_war_academy
+		}
+		y = 1
+		x = -1
+		cost = 5
+		available = {
+			182 = {
+				OR = {
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+				}
+			}
+			186 = {
+				OR = {
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+				}
+			}
+		}
+		completion_reward = {
+			186 = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+				}
+			}
+			182 = {
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+				}
+			}
+			custom_effect_tooltip = TUR_modify_turkish_air_army_ns_intro
+			add_to_variable = {
+				TUR_air_range_factor = 0.05
+				tooltip = air_range_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_sicilian_airbase
+		relative_position_id = TUR_edirne_air_base
+		icon = GFX_goal_generic_air_production
+		prerequisite = {
+			focus = TUR_edirne_air_base
+			focus = TUR_crit_and_peloponnese
+		}
+		y = 1
+		x = -1
+		available = {
+			ROOT = {
+				is_major = yes
+			}
+		}
+		available = {
+			117 = {
+				OR = {
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+				}
+			}
+			115 = {
+				OR = {
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+				}
+			}
+		}
+		cost = 7
+		completion_reward = {
+			117 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			115 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = TUR_modify_turkish_air_army_ns_intro
+			add_to_variable = {
+				TUR_air_range_factor = 0.05
+				tooltip = air_range_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_crimean_strategic_air
+		icon = GFX_goal_generic_air_bomber
+		relative_position_id = TUR_sicilian_airbase
+		prerequisite = {
+			focus = TUR_sicilian_airbase
+		}
+		y = 1
+		x = 0
+		cost = 7
+		available = {
+			137 = {
+				is_fully_controlled_by = ROOT
+			}
+			ROOT = {
+				is_major = yes
+			}
+		}
+		completion_reward = {
+			137 = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+				}
+			}
+			custom_effect_tooltip = TUR_modify_turkish_air_army_ns_intro
+			add_to_variable = {
+				TUR_air_experience_gain_air_factor = 0.05
+				tooltip = experience_gain_air_factor_tt
+			}
+			add_to_variable = {
+				TUR_air_strategic_bomber_bombing_factor = 0.1
+				tooltip = air_strategic_bomber_bombing_factor_tt
+			}
+			add_to_variable = {
+				TUR_air_accidents_factor = -0.1
+				tooltip = air_accidents_factor_tt
+			}
+		}
 	}
 
 	focus = {
 		id = TUR_bombers
+		icon = GFX_focus_generic_tank_air_support
 		relative_position_id = TUR_found_an_air_war_academy
 		prerequisite = {
 			focus = TUR_found_an_air_war_academy
 		}
 		y = 1
 		x = 3
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				name = TUR_bombers
+				bonus = 0.4
+				uses = 2
+				category = cat_air_bombs
+			}
+			custom_effect_tooltip = TUR_modify_turkish_air_army_ns_intro
+			add_to_variable = {
+				TUR_air_experience_gain_air_factor = 0.05
+				tooltip = experience_gain_air_factor_tt
+			}
+			add_to_variable = {
+				TUR_air_cas_efficiency = 0.05
+				tooltip = air_cas_efficiency_tt
+			}
+			add_to_variable = {
+				TUR_air_manpower_requirement_factor = -0.05
+				tooltip = air_manpower_requirement_factor_tt
+			}
+		}
 	}
 
 	focus = {
 		id = TUR_bombers_expansion
+		icon = GFX_focus_generic_armored_air_support
 		relative_position_id = TUR_bombers
 		prerequisite = {
 			focus = TUR_bombers
 		}
 		y = 2
 		x = -1
+		cost = 5
+
+		available = {
+			ROOT = {
+				is_major = yes
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = TUR_modify_turkish_air_army_ns_intro
+			add_to_variable = {
+				TUR_air_experience_gain_air_factor = 0.05
+				tooltip = experience_gain_air_factor_tt
+			}
+			add_to_variable = {
+				TUR_air_cas_efficiency = 0.05
+				tooltip = air_cas_efficiency_tt
+			}
+			add_to_variable = {
+				TUR_air_manpower_requirement_factor = -0.05
+				tooltip = air_manpower_requirement_factor_tt
+			}
+		}
 	}
 
 	focus = {
 		id = TUR_air_sea_rockets
+		icon = GFX_focus_generic_multi_role_aircraft
 		relative_position_id = TUR_found_an_air_war_academy
 		prerequisite = {
 			focus = TUR_bombers
 		}
+
+		available = {
+			ROOT = {
+				is_major = yes
+			}
+		}
+		
 		y = 2
 		x = 3
-	}
-
-	focus = {
-		id = TUR_air_domination
-		relative_position_id = TUR_found_an_air_war_academy
-		prerequisite = {
-			focus = TUR_destroyers_expansion1
+		cost = 6
+		completion_reward = {
+			add_tech_bonus = {
+				name = TUR_destroyers
+				bonus = 0.4
+				uses = 1
+				category = naval_bomber
+			}
+			add_tech_bonus = {
+				name = TUR_air_sea_rockets
+				bonus = 0.4
+				uses = 2
+				category = cat_air_bombs
+			}
+			custom_effect_tooltip = TUR_modify_turkish_air_army_ns_intro
+			add_to_variable = {
+				TUR_air_experience_gain_air_factor = 0.05
+				tooltip = experience_gain_air_factor_tt
+			}
+			add_to_variable = {
+				TUR_air_accidents_factor = -0.05
+				tooltip = air_accidents_factor_tt
+			}
+			add_to_variable = {
+				TUR_air_nav_efficiency = 0.05
+				tooltip = air_nav_efficiency_tt
+			}
 		}
-		prerequisite = {
-			focus = TUR_destroyers_expansion2
-		}
-		prerequisite = {
-			focus = TUR_air_base4
-		}
-		prerequisite = {
-			focus = TUR_bombers_expansion
-		}
-		y = 4
-		x = 0
 	}
 	
 	# focus = {
@@ -2553,8 +2921,18 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		}
 		x = -1
 		y = 1
+		cost = 5
 		completion_reward = {
-			## AIR DYNAMIC MODIFIER
+			custom_effect_tooltip = TUR_modify_turkish_navy_army_ns_intro
+			add_to_variable = {
+				TUR_navy_navy_anti_air_attack_factor = 0.1
+				tooltip = navy_anti_air_attack_factor_tt
+			}
+			custom_effect_tooltip = TUR_modify_turkish_air_army_ns_intro
+			add_to_variable = {
+				TUR_air_nav_efficiency = 0.07
+				tooltip = air_nav_efficiency_tt
+			}
 		}
 	}
 
@@ -2590,6 +2968,8 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		icon = GFX_focus_POL_develop_polish_shipbuilding
 		prerequisite = {
 			focus = TUR_naval_intelligence
+		}
+		prerequisite = {
 			focus = TUR_naval_bombs
 		}
 		relative_position_id = TUR_naval_intelligence
@@ -5447,10 +5827,10 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		continue_if_invalid = no
 		available_if_capitulated = no
 		
-		x = 95
+		x = 97
 		y = 2
 		completion_reward = {
-			add_political_power = 100
+			add_political_power = 120
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
@@ -5479,7 +5859,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 	focus = {
 		id = TUR_cyprus_crisis
 		icon = GFX_focus_generic_attack_cyprus
-		cost = 7
+		cost = 5
 		prerequisite = {
 			focus = TUR_baghdad_pact
 		}
@@ -5488,10 +5868,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		y = 1
 
 		completion_reward = {
-			## зробити івент, який перше прокає для турції, і турція вибирає яким методом захопить кіпр (1. купити за ресурси, 2. купити за фабрики, 3. кинути клейм)
-			## коли прилітає івент британії то вона або приймає або відмовляється
-			## прилітає івент турції на те що вона відмовилась або согласилась
-			country_event = TUR_CYPRUS.1
+			custom_effect_tooltip = TUR_cyprus_crisis_decision_tt
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
@@ -5512,6 +5889,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		completion_reward = {
 			## зробити нювс івент турецькі сили відхопили додеканес, reward - -opinion в італії для турції
 			## 2 світової напряжонки
+			custom_effect_tooltip = TUR_operation_dodecanes_tt
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
@@ -5569,7 +5947,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		y = 1
 		x = -2
 		completion_reward = {
-			custom_effect_tooltip = TUR_ottaman_path_tt
+			custom_effect_tooltip = TUR_ottoman_path_tt
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
@@ -5687,7 +6065,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 			focus = TUR_liberalize_the_economy
 		}
 
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = TUR_stabilize_the_nation
 		cost = 10

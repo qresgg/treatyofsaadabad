@@ -609,15 +609,23 @@ if = {
 		modifier = TUR_navy_forces_modifier
 	}
 
-# 	set_variable = { GER_military_air_accidents_factor = 0.10 }
-# set_variable = { GER_military_air_manpower_requirement_factor = 0.10 }
-# set_variable = { GER_military_air_agility_factor = 0 }
-# set_variable = { GER_military_air_ace_generation_chance_factor = 0 }
-# set_variable = { GER_military_air_nav_efficiency = 0 }
-# set_variable = { GER_military_air_cas_efficiency = 0 }
-# set_variable = { GER_military_air_strategic_bomber_bombing_factor = 0 }
-# set_variable = { GER_military_air_range_factor = 0 }
-# set_variable = { GER_military_air_fuel_consumption_factor = 0 }
+	set_variable = { TUR_air_accidents_factor = 0.10 }
+	set_variable = { TUR_air_manpower_requirement_factor = 0.10 }
+	set_variable = { TUR_air_agility_factor = -0.1 }
+	set_variable = { TUR_air_ace_generation_chance_factor = 0 }
+	set_variable = { TUR_air_nav_efficiency = 0 }
+	set_variable = { TUR_air_cas_efficiency = 0 }
+	set_variable = { TUR_air_strategic_bomber_bombing_factor = 0 }
+	set_variable = { TUR_air_range_factor = 0 }
+	set_variable = { TUR_air_fuel_consumption_factor = 0.1 }
+	set_variable = { TUR_air_experience_gain_air_factor = -0.15}
+	set_variable = { TUR_air_air_weather_penalty = 0}
+	set_variable = { TUR_air_air_spirit_category_type_cost_factor = 0}
+	set_variable = { TUR_air_air_untrained_pilots_penalty_factor = 0}
+
+	add_dynamic_modifier = {
+		modifier = TUR_air_forces_modifier
+	}
 }
 
 if = {

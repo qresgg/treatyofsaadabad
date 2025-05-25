@@ -8115,7 +8115,7 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 75
+		cost = 25
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_bulgaria_required_states_tt
@@ -8160,8 +8160,11 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 75
+		cost = 25
 		available = {
+			BUL = {
+				is_subject_of = TUR
+			}
 			custom_trigger_tooltip = {
 				tooltip = form_country_bulgaria_required_states_tt
 				BUL = {
@@ -8191,6 +8194,11 @@ form_neo_byzantine_empire_category = {
 				}
 			}
 		}
+		# visible = {
+		# 	BUL = {
+		# 		is_subject_of = ROOT
+		# 	}
+		# }
 		highlight_states = {
 			highlight_state_targets = {
 				## BULGARIA
@@ -8211,7 +8219,7 @@ form_neo_byzantine_empire_category = {
 			}
 		}
 		complete_effect = {
-			custom_effect_tooltip = neo_byz_form_bulgarian_dux_tt
+			custom_effect_tooltip = neo_byz_expand_bulgarian_dux_tt
 			hidden_effect = {
 				every_state = {
 					limit = {
@@ -8238,7 +8246,7 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 75
+		cost = 25
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_serbia_required_states_tt
@@ -8288,7 +8296,7 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 75
+		cost = 25
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_croatia_required_states_tt
@@ -8307,6 +8315,7 @@ form_neo_byzantine_empire_category = {
 				state = 103
 			}
 		}
+		
 		complete_effect = {
 			custom_effect_tooltip = neo_byz_form_croatia_dux_tt
 			hidden_effect = {
@@ -8342,7 +8351,7 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 75
+		cost = 25
 		available = {
 			CRO = {
 				is_subject_of = TUR
@@ -8378,6 +8387,11 @@ form_neo_byzantine_empire_category = {
 				}
 			}
 		}
+		# visible = {
+		# 	CRO = {
+		# 		is_subject_of = ROOT
+		# 	}
+		# }
 		highlight_states = {
 			highlight_state_targets = {
 				## CROATIA
@@ -8416,7 +8430,7 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 75
+		cost = 25
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_lombardy_venetia_required_states_tt
@@ -8457,7 +8471,7 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 75
+		cost = 25
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_papal_state_required_states_tt
@@ -8496,7 +8510,7 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 75
+		cost = 25
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_toscana_required_tt
@@ -8530,7 +8544,7 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 75
+		cost = 25
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_piedmont_required_tt
@@ -8562,8 +8576,11 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 75
+		cost = 25
 		available = {
+			SPM = {
+				is_subject_of = TUR
+			}
 			custom_trigger_tooltip = {
 				tooltip = form_country_piedmont_sardinia_required_tt
 				158 = {
@@ -8581,6 +8598,12 @@ form_neo_byzantine_empire_category = {
 				state = 1
 			}
 		}
+		# visible = {
+		# 	SPM = {
+		# 		is_subject_of = ROOT
+		# 	}
+		# }
+		
 		complete_effect = {
 			custom_effect_tooltip = neo_byz_expand_piedmont_sardinia_dux_tt
 			hidden_effect = {
@@ -8599,7 +8622,7 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 75
+		cost = 25
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_two_sicilias_required_states_tt
@@ -8617,6 +8640,11 @@ form_neo_byzantine_empire_category = {
 				state = 115
 			}
 		}
+		# visible = {
+		# 	117 = {
+		# 		is_owned_and_controlled_by = ROOT
+		# 	}
+		# }
 		complete_effect = {
 			custom_effect_tooltip = neo_byz_nationalize_two_sicilias_tt
 			hidden_effect = {
@@ -8639,7 +8667,7 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 75
+		cost = 25
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_occitania_required_states_tt
@@ -8692,7 +8720,7 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 75
+		cost = 25
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_visighotic_required_states_tt
@@ -8778,8 +8806,11 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 75
+		cost = 25
 		available = {
+			SPR = {
+				is_subject_of = ROOT
+			}
 			custom_trigger_tooltip = {
 				tooltip = form_country_visighotic_expand_required_tt
 				158 = {
@@ -8810,6 +8841,11 @@ form_neo_byzantine_empire_category = {
 				state = 178
 			}
 		}
+		# visible = {
+		# 	SPR = {
+		# 		is_subject_of = ROOT
+		# 	}
+		# }
 		complete_effect = {
 			custom_effect_tooltip = neo_byz_expand_visighotic_dux_tt
 			hidden_effect = {
@@ -8832,7 +8868,7 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 75
+		cost = 25
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_suebi_required_states_tt
@@ -8915,7 +8951,7 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 75
+		cost = 25
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_wallachia_and_moldova_required_states_tt
@@ -8964,6 +9000,9 @@ form_neo_byzantine_empire_category = {
 		}
 		cost = 25
 		available = {
+			MOL = {
+				is_subject_of = ROOT
+			}
 			custom_trigger_tooltip = {
 				tooltip = form_country_expand_wallachia_and_moldova_required_states_tt
 				81 = { is_controlled_by_ROOT_or_subject = yes}
@@ -8984,8 +9023,13 @@ form_neo_byzantine_empire_category = {
 				state = 80
 			}
 		}
+		# visible = {
+		# 	MOL = {
+		# 		is_subject_of = ROOT
+		# 	}
+		# }
 		complete_effect = {
-			custom_effect_tooltip = neo_byz_form_wallachia_and_moldova_dux_tt
+			custom_effect_tooltip = neo_byz_expand_wallachia_and_moldova_dux_tt
 			hidden_effect = {
 				every_state	= {
 					limit = {

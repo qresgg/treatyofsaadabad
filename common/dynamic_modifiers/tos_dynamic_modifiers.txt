@@ -55,3 +55,22 @@ TUR_navy_forces_modifier = {
 	navy_intel_factor = TUR_navy_navy_intel_factor #0.1
 	naval_invasion_prep_speed = TUR_navy_naval_invasion_prep_speed #0.15
 }
+
+TUR_air_forces_modifier = {
+    enable = { always = yes }
+	icon = GFX_tos_idea_TUR_air_forces_idea
+
+	air_accidents_factor = TUR_air_accidents_factor # -0.1
+	air_manpower_requirement_factor =TUR_air_manpower_requirement_factor # 0.1
+	air_agility_factor = TUR_air_agility_factor # 0.07
+	air_ace_generation_chance_factor = TUR_air_ace_generation_chance_factor # 0.08
+	air_nav_efficiency = TUR_air_nav_efficiency # 0.12
+	air_cas_efficiency = TUR_air_cas_efficiency # 0.1
+	air_strategic_bomber_bombing_factor = TUR_air_strategic_bomber_bombing_factor # 0.05
+	air_range_factor = TUR_air_range_factor # 0.15
+	air_fuel_consumption_factor = TUR_air_fuel_consumption_factor # -0.12
+    experience_gain_air_factor = TUR_air_experience_gain_air_factor # 0.15
+    air_weather_penalty = TUR_air_air_weather_penalty # -0.07
+    air_spirit_category_type_cost_factor = TUR_air_air_spirit_category_type_cost_factor # 0.1
+    air_untrained_pilots_penalty_factor = TUR_air_air_spirit_category_type_cost_factor # 0.12
+}

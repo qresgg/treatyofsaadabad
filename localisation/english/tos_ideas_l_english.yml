@@ -12,13 +12,15 @@
   PER_war_plan_musleew_idea_desc:0 "Preparations have been made for an eastern campaign against British India. This plan focuses on military advantages in the region, at the cost of some domestic stability."
   PER_war_plan_horoborrow_idea:0 "War Plan Horoborow"
   PER_war_plan_horoborrow_idea_desc:0 "Our generals are drawing up plans for a direct confrontation with the Soviet Union. Aggression comes with a price, but our military gains an edge."
-  TUR_traumatized_nation:0 "Traumatized Nation"
-  TUR_black_sea_trade_agreement:0 "Black Sea Trade Agreement"
-  TUR_liberal_economic_reforms_idea:0 "Liberal Economic Reforms Idea"
-  TUR_GRE_fascists_rising:0 "Fascist Rising"
 
   #####################
   ###### TURKEY #######
   #####################
+  TUR_traumatized_nation:0 "Traumatized Nation"
+  TUR_black_sea_trade_agreement:0 "Black Sea Trade Agreement"
+  TUR_liberal_economic_reforms_idea:0 "Liberal Economic Reforms Idea"
+  TUR_GRE_fascists_rising:0 "Fascist Rising"
+  
   TUR_land_forces_modifier:0 "Turkish Land Forces"
   TUR_navy_forces_modifier:0 "Turkish Naval Forces"
+  TUR_air_forces_modifier:0 "Turkish Air Forces"

@@ -4,16 +4,63 @@ TUR_dis_politic_cat = {
 		## NEWS EVENT
 	}
 	TUR_cyprus_crisis = {
-		## EVENT TO ANNEX CYPRUS
+		days_remove = 1 # 15 days
+		remove_effect = {
+			country_event = TUR_CYPRUS.1
+		}
 	}
 	TUR_nationalize_cypryotes = {
-		## NATIONILIZE CYPRUS
+		days_remove = 1 # 15 days
+		available = {
+			183 = {
+				OR = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+		}
+		remove_effect = {
+			183 = {
+				add_core_of = ROOT
+			}
+		}
 	}
 	TUR_nationalize_road_to_lebanon = {
-		## NATIONILIZE ALEPPO, LEBANON
+		days_remove = 1 # 15 days
+		available = {
+			677 = {
+				OR = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+			553 = {
+				OR = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+		}
+		remove_effect = {
+			677 = {
+				add_core_of = ROOT
+			}
+			553 = {
+				add_core_of = ROOT
+			}
+		}
 	}
 	TUR_nationalize_crimea = {
-		## NATIONILIZE CRIMEA
+		days_remove = 1 # 15 days
+		available = {
+			137 = {
+				OR = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+		}
+		remove_effect = {
+			137 = {
+				add_core_of = ROOT
+			}
+		}
 	}
 }
 
