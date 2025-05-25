@@ -1,15 +1,21 @@
 on_actions = {
-	on_state_control_changed = {
-		effect = {
-			if = {
-				limit = {
-					state = 164
-					owner = TUR
-				}
-				}
-				TUR = {
-					news_event = { turkey.4002 hours = 3 }
-				}
-			}
-		}
-	}
+    on_state_control_changed = {
+        effect = {
+            if = {
+                limit = {
+                    FROM.FROM = {
+                        state = 164
+                    }
+                    controller = {
+                        tag = TUR
+                    }
+                    NOT = {
+                        has_global_flag = turkish_fall_italy
+                    }
+                }
+                set_global_flag = turkish_fall_italy
+                news_event = { id = turkish.1 hours = 6 random_hours = 3 }
+            }
+        }
+    }
+}

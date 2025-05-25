@@ -92,7 +92,7 @@ country_event = {
 country_event = {
 	id = turkey.2001
 	title = turkey.2001.t
-	desc = turkey.2001.d
+	desc = turkey.2001.desc
 	picture = GFX_report_event_political_turmoil
 
 	fire_only_once = yes
@@ -2231,16 +2231,14 @@ country_event = { ## Відмова → війна
     }
 }
 
-
-add_namespace = YUGOSLAVIANDUX
-add_namespace = partitionofromania
+add_namespace = turkey_yugoslavia
+add_namespace = turkey_romania
 add_namespace = TUR_CYPRUS
 
-
 country_event = {
-    id = YUGOSLAVIANDUX.1
-    title = "The Division of Yugoslavia"
-    desc = "Yugoslavia has been divided between Turkey and a Serbian puppet state."
+    id = turkey_yugoslavia.1
+    title = turkey_yugoslavia.1.t
+    desc = turkey_yugoslavia.1.d
 
     trigger = {
         NOT = {
@@ -2255,47 +2253,39 @@ country_event = {
     fire_only_once = yes
 
     option = {
-        name = "Divide Yugoslavia"
+        name = turkey_yugoslavia.1.a
         ai_chance = { factor = 100 }
 
         hidden_effect = {
             if = {
 				limit = {
-					NOT = {
-						102 = { is_owned_by = GER }
-					}
+					NOT = { 102 = { is_owned_by = GER } }
+				}
+			    YUG = { transfer_state = 102 }
             }
-			YUG = { transfer_state = 102 }
-        }
             if = {
 				limit = {
-					NOT = {
-						853 = { is_owned_by = GER }
-					}
+					NOT = { 853 = { is_owned_by = GER } }
+				}
+			    YUG = { transfer_state = 853 }
             }
-			YUG = { transfer_state = 853 }
-        }
         }
 
         hidden_effect = {
             if = {
 				limit = {
-					NOT = {
-						103 = { is_owned_by = ITA }
-					}
-            }
-			TUR = { transfer_state = 103 }
-        }
+					NOT = { 103 = { is_owned_by = ITA } }
+				}
+			    TUR = { transfer_state = 103 }
             }
             if = {
 				limit = {
-					NOT = {
-						105 = { is_owned_by = ITA }
-					}
+					NOT = { 105 = { is_owned_by = ITA } }
+				}
+			    TUR = { transfer_state = 105 }
             }
-			TUR = { transfer_state = 105 }
-        }
-		TUR = {
+
+			TUR = {
 				transfer_state = 104
 				transfer_state = 804
 				transfer_state = 108
@@ -2318,49 +2308,41 @@ country_event = {
 				transfer_state = 764
 				transfer_state = 107
             }
+        }
     }
 }
 
 
 country_event = {
-	id = partitionofromania.1
-	title = "The Division of Romania"
-    desc = "Romania has been divided among various powers after its collapse."
+	id = turkey_romania.1
+	title = turkey_romania.1.t
+    desc = turkey_romania.1.d
 
     trigger = {
-        NOT = { exists = ROM } # Romania must be annexed/collapsed
+        NOT = { exists = ROM }
     }
 
 	is_triggered_only = yes
     fire_only_once = yes
 
     option = {
-        name = "Divide Romania"
-        ai_chance = { 
-			base = 100 
-		}
+        name = turkey_romania.1.a
+        ai_chance = { base = 100 }
 
         hidden_effect = {
-            # HUNGARY: 83, 76, 84
             HUN = {
                 transfer_state = 83
                 transfer_state = 76
                 transfer_state = 84
             }
 
-            # YUGOSLAVIA: 82
 			if = {
-				limit = {
-					YUG = { exists = yes }
-				}
+				limit = { YUG = { exists = yes } }
 				YUG = { transfer_state = 82 }
 			}
 
-            # BULGARIA: 77, 971 (or to TURKEY if not exists)
             if = {
-                limit = {
-					BUL = { exists = yes }
-				}
+                limit = { BUL = { exists = yes } }
                 BUL = {
                     transfer_state = 77
                     transfer_state = 971
@@ -2373,17 +2355,14 @@ country_event = {
                 }
             }
 
-            # POLAND: 80
             POL = {
                 transfer_state = 80
             }
 
-            # SOVIET UNION: 78, 766
             SOV = {
                 transfer_state = 78
                 transfer_state = 766
             }
-
 
 			TUR = {
 				set_autonomy = {
@@ -2400,6 +2379,7 @@ country_event = {
         }
     }
 }
+
 ## ТУРЦІЇ
 
 # country_event = {
@@ -2588,8 +2568,8 @@ country_event = {
 
 country_event = {
     id = TUR_CYPRUS.1
-    title = "The Cyprus Question"
-    desc = "How should we approach acquiring Cyprus from the British?"
+    title = TUR_CYPRUS.1.t
+    desc = TUR_CYPRUS.1.d
 
     trigger = {
         tag = TUR
@@ -2600,7 +2580,7 @@ country_event = {
     fire_only_once = yes
 
     option = {
-        name = "Offer resources in exchange"
+        name = TUR_CYPRUS.1.a
         ai_chance = { base = 60 }
         custom_effect_tooltip = TUR_CYPRUS_AI_CHANCE_40
         hidden_effect = {
@@ -2609,7 +2589,7 @@ country_event = {
     }
 
     option = {
-        name = "Offer civilian factories"
+        name = TUR_CYPRUS.1.b
         ai_chance = { base = 5 }
         custom_effect_tooltip = TUR_CYPRUS_AI_CHANCE_40_FACTORIES
         hidden_effect = {
@@ -2618,7 +2598,7 @@ country_event = {
     }
 
     option = {
-        name = "Claim it as our rightful territory!"
+        name = TUR_CYPRUS.1.c
         ai_chance = { base = 35 }
         custom_effect_tooltip = TUR_CYPRUS_AI_CHANCE_20_CLAIM
         hidden_effect = {
@@ -2627,19 +2607,17 @@ country_event = {
     }
 }
 
-
-
 country_event = {
     id = TUR_CYPRUS.10
-    title = "Turkey Offers Resource Access"
-    desc = "Turkey offers access to resource rights in exchange for Cyprus. Should we accept?"
+    title = TUR_CYPRUS.10.t
+    desc = TUR_CYPRUS.10.d
 
     trigger = { tag = ENG }
     is_triggered_only = yes
     fire_only_once = yes
 
     option = {
-        name = "Accept the deal"
+        name = TUR_CYPRUS.10.a
         ai_chance = { base = 90 }
         hidden_effect = {
             TUR = {
@@ -2655,7 +2633,7 @@ country_event = {
     }
 
     option = {
-        name = "Refuse"
+        name = TUR_CYPRUS.10.b
         ai_chance = { base = 10 }
         hidden_effect = {
             TUR = { country_event = { id = TUR_CYPRUS.4 days = 1 } }
@@ -2665,22 +2643,20 @@ country_event = {
 
 country_event = {
     id = TUR_CYPRUS.11
-    title = "Turkey Offers Factories"
-    desc = "Turkey offers to provide factories in exchange for Cyprus. Should we accept?"
+    title = TUR_CYPRUS.11.t
+    desc = TUR_CYPRUS.11.d
 
-    trigger = {
-        tag = ENG
-    }
+    trigger = { tag = ENG }
     is_triggered_only = yes
     fire_only_once = yes
 
     option = {
-        name = "Accept the deal"
+        name = TUR_CYPRUS.11.a
     }
 
     option = {
-        name = "Refuse"
-		ai_chance = { base = 100 }
+        name = TUR_CYPRUS.11.b
+        ai_chance = { base = 100 }
         hidden_effect = {
             TUR = {
                 country_event = {
@@ -2692,18 +2668,17 @@ country_event = {
     }
 }
 
-
 country_event = {
     id = TUR_CYPRUS.12
-    title = "Turkey Claims Cyprus"
-    desc = "Turkey demands Cyprus as rightful territory. Do we give in?"
+    title = TUR_CYPRUS.12.t
+    desc = TUR_CYPRUS.12.d
 
     trigger = { tag = ENG }
     is_triggered_only = yes
     fire_only_once = yes
 
     option = {
-        name = "Accept the claim"
+        name = TUR_CYPRUS.12.a
         ai_chance = { base = 20 }
         hidden_effect = {
             TUR = {
@@ -2715,7 +2690,7 @@ country_event = {
     }
 
     option = {
-        name = "Refuse"
+        name = TUR_CYPRUS.12.b
         ai_chance = { base = 90 }
         hidden_effect = {
             TUR = { country_event = { id = TUR_CYPRUS.4 days = 1 } }
@@ -2725,49 +2700,171 @@ country_event = {
 
 country_event = {
     id = TUR_CYPRUS.3
-    title = "Cyprus Transferred!"
-    desc = "The British have agreed to our terms. Cyprus is now under our control."
-    trigger = { tag = TUR }
-    is_triggered_only = yes
-    fire_only_once = yes
-    option = { name = "Excellent." }
-}
+    title = TUR_CYPRUS.3.t
+    desc = TUR_CYPRUS.3.d
 
-
-country_event = {
-    id = TUR_CYPRUS.4
-    title = "Deal Rejected"
-    desc = "The British have rejected our attempt to gain Cyprus."
     trigger = { tag = TUR }
     is_triggered_only = yes
     fire_only_once = yes
 
     option = {
-        name = "Then we must take it another way..."
+        name = TUR_CYPRUS.3.a
+    }
+}
+
+country_event = {
+    id = TUR_CYPRUS.4
+    title = TUR_CYPRUS.4.t
+    desc = TUR_CYPRUS.4.d
+
+    trigger = { tag = TUR }
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = TUR_CYPRUS.4.a
         add_state_claim = 183
     }
 }
 
-
-
 add_namespace = turkish
 
-news_event = { 
-    id = turkish.100
-    title = turkish.100.t
-    desc = turkish.100.d
-    picture = GFX_report_event_generic_war
-    major = yes
-    show_major = yes
-	
-    fire_only_once = yes
+news_event = {
+    id = turkish.1
+    title = turkish.1.t         # Пример: "Турция захватывает Италию!"
+    desc = turkish.1.desc       # Пример описания события
+	picture = GFX_news_event_generic_rotterdam_destroyed
 
-	option = {
-		name = turkish.100.a
+    major = yes
+    is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+        ITA = { country_event = { id = turkish.11 days = 2 } } # Італія вимагає острів
+		}
+    }
+
+    option = {
+        trigger = {
+            OR = {
+                tag = TUR
+                is_in_faction_with = TUR
+                is_subject_of = TUR
+            }
+        }
+        name = turkish.1.a
+    }
+
+    option = {
+        trigger = {
+            NOT = {
+                tag = TUR
+                is_in_faction_with = TUR
+                is_subject_of = TUR
+            }
+        }
+        name = turkish.1.b
+    }
+}
+
+country_event = {
+    id = turkish.11
+    title = turkish.11.t
+    desc = turkish.11.d
+    picture = GFX_report_event_diplomatic
+    is_triggered_only = yes
+
+    option = {
+        name = turkish.11.a # Домовитись про компенсацію
+        ai_chance = { base = 60 }
+
+        TUR = {
+            country_event = {
+                id = turkish.12
+                days = 1
+            }
+        }
+    }
+
+    option = {
+        name = turkish.11.b # Повернемо силою
+        ai_chance = { base = 40 }
+
+		add_opinion_modifier = {
+			target = TUR
+			modifier = holds_our_cores
+		}
+
+        set_country_flag = italy_prepare_for_revenge
+
+        add_war_support = 0.05
+
+        custom_effect_tooltip = turkish.11.b.tt
+    }
+}
+
+
+# Івент 3 – Туреччина вирішує, як відповісти
+country_event = {
+    id = turkish.12
+    title = turkish.12.t
+    desc = turkish.12.d
+    picture = GFX_report_event_diplomatic
+    is_triggered_only = yes
+
+    option = {
+        name = turkish.12.a # Компенсувати
+        ai_chance = { base = 60 }
+
 		add_opinion_modifier = {
 			target = ITA
-			modifier = hostile_status
+			modifier = offered_support
 		}
-		add_threat = 2
-	}
+
+        add_stability = -0.02
+
+        ITA = { add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = 1000
+        	}
+		}
+		TUR = { add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = -1000
+        	}
+		}
+
+        	ITA = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                    }
+                }
+            TUR = {
+                random_owned_controlled_state = {
+                    limit = { industrial_complex > 1 }
+                    remove_building = {
+                        type = industrial_complex
+                        level = 2
+                    }
+                }
+            }
+        custom_effect_tooltip = turkish.12.a.tt
+    }
+
+    option = {
+        name = turkish.12.b # Ігнорувати
+        ai_chance = { factor = 40 }
+
+		add_opinion_modifier = {
+			target = ITA
+			modifier = faction_traitor
+		}
+
+        add_political_power = -50
+        set_country_flag = turkey_ignored_dodecanese
+
+        custom_effect_tooltip = turkish.12.b.tt
+    }
 }
