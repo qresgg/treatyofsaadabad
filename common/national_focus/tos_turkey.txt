@@ -6577,7 +6577,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 
 		completion_reward = {
 			add_war_support = 0.05
-			add_command_power = 25
+			add_command_power = 10
 			add_manpower = 10000
 			add_popularity = {
 				ideology = fascism
@@ -6607,7 +6607,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 				ideology = fascism
 				popularity = 0.05
 			}
-			custom_effect_tooltip = unlock_decisions_to_become_christianity_state_tt
+			custom_effect_tooltip = TUR_unlock_decisions_to_become_christianity_state_tt
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
@@ -6951,7 +6951,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		x = 0
 		y = 1
 		completion_reward = {
-			custom_effect_tooltip = open_decision_to_core_two_sicilias_tt
+			custom_effect_tooltip = TUR_open_decision_to_core_two_sicilias_tt
 			add_stability = 0.1
 		}
 		search_filters = {
@@ -7008,7 +7008,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 					}
 				}
     		}
-			custom_effect_tooltip = TUR_neobyz_make_kingdom_piermont_occitania_tt
+			custom_effect_tooltip = TUR_neobyz_make_kingdoms_of_occitania_and_piedmont_tt
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
@@ -7020,7 +7020,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		icon = GFX_focus_spa_unify_the_nationalist_front
 		prerequisite = { focus = TUR_plan_iberia }
 		relative_position_id = TUR_plan_iberia
-		cost = 7
+		cost = 5
 		x = -1
 		y = 1
 		completion_reward = {
@@ -7051,7 +7051,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		icon = GFX_focus_por_the_kingdom_reunited
 		prerequisite = { focus = TUR_plan_iberia }
 		relative_position_id = TUR_plan_iberia
-		cost = 7
+		cost = 5
 		x = 1
 		y = 1
 		completion_reward = {

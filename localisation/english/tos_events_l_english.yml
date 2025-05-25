@@ -1,14 +1,103 @@
 ﻿l_english:
-  #####################
-  ####### IRAQ ########
-  #####################
+#####################
+####### IRAQ ########
+#####################
 
-  #####################
-  ####### IRAN ########
-  #####################
+#####################
+####### IRAN ########
+#####################
+iran_musandam_annexed.1.t:0 "Iran Annexes Musandam"
+iran_musandam_annexed.1.d:0 "Iran has declared sovereignty over the Musandam Peninsula, citing strategic necessity and historical claims."
+iran_musandam_annexed.1.a:0 "The strait is ours now."
+
+# IRAN-SOVIET CRISIS
+iran_soviet_crisis.1.t:0 "Iranian Demands on the Soviet Union"
+iran_soviet_crisis.1.d:0 "Iran has issued diplomatic demands regarding disputed border regions."
+iran_soviet_crisis.1.a:0 "Send the demands."
+
+iran_soviet_crisis.sov_response.t:0 "Responding to Iran's Demands"
+iran_soviet_crisis.sov_response.d:0 "Tehran has sent an ultimatum regarding territories in the Caucasus and Central Asia."
+iran_soviet_crisis.sov_response.a:0 "Grant full concessions"
+iran_soviet_crisis.sov_response.b:0 "Partial concessions"
+iran_soviet_crisis.sov_response.c:0 "Deny everything"
+
+iran_soviet_crisis.3.t:0 "Ashkhabad Transferred"
+iran_soviet_crisis.3.d:0 "The Soviet Union has transferred Ashkhabad to Iranian control."
+iran_soviet_crisis.3.a:0 "A modest victory."
+
+iran_soviet_crisis.4.t:0 "Ashkhabad and Azerbaijan Transferred"
+iran_soviet_crisis.4.d:0 "Both disputed territories are now under Iranian rule."
+iran_soviet_crisis.4.a:0 "A major diplomatic triumph."
+
+iran_soviet_crisis.5.t:0 "Demands Rejected"
+iran_soviet_crisis.5.d:0 "The Soviet Union has refused all Iranian territorial demands."
+iran_soviet_crisis.5.a:0 "This insult will not be forgotten."
+
+# BAGHDAD PACT
+SAAD_baghdad_pact_signed.t:0 "Baghdad Pact Signed"
+SAAD_baghdad_pact_signed.d:0 "A strategic alliance has been formalized among regional powers."
+SAAD_baghdad_pact_signed.a:0 "A new order begins."
+
+SAAD_baghdad_pact_signed.member.t:0 "We Join the Baghdad Pact"
+SAAD_baghdad_pact_signed.member.d:0 "Our nation has joined a defensive agreement centered around regional stability."
+SAAD_baghdad_pact_signed.member.a:0 "We stand united."
+
+# IRAN-SULTANATE (OMAN) CRISIS
+iran_sultanate_crisis.1.t:0 "Iran Demands Musandam"
+iran_sultanate_crisis.1.d:0 "Iran has made a formal demand for the strategic Musandam region from Oman."
+iran_sultanate_crisis.1.a:0 "Deliver the ultimatum."
+
+iran_sultanate_crisis.2.t:0 "Iran Demands Musandam"
+iran_sultanate_crisis.2.d:0 "Tehran is demanding the handover of Musandam. Will we comply or resist?"
+iran_sultanate_crisis.2.a:0 "Accept the demand"
+iran_sultanate_crisis.2.b:0 "Refuse"
+
+iran_sultanate_crisis.3.t:0 "Oman Refuses"
+iran_sultanate_crisis.3.d:0 "Oman has rejected our territorial claims over Musandam."
+iran_sultanate_crisis.3.a:0 "Prepare further steps."
+
+iran_sultanate_crisis.4.t:0 "Iran Victorious"
+iran_sultanate_crisis.4.d:0 "Iran's pressure has succeeded. Musandam is now under Iranian control."
+iran_sultanate_crisis.4.a:0 "Glory to Iran."
+
+# BAGHDAD PACT CONDITIONS
+baghdad_pact_conditions.1.t:0 "Baghdad Pact Conditions Met"
+baghdad_pact_conditions.1.d:0 "The strategic regions have come under control of pact members. It’s time to act."
+baghdad_pact_conditions.1.a:0 "Notify allies."
+
+baghdad_pact_conditions.2.t:0 "Territory Transfer Proposal"
+baghdad_pact_conditions.2.d:0 "The conditions of the pact are fulfilled. We can now propose integration of the disputed territories."
+baghdad_pact_conditions.2.a:0 "Proceed with the plan."
+
+baghdad_pact_conditions.3.t:0 "Territories Transferred"
+baghdad_pact_conditions.3.d:0 "Following agreement among pact members, the relevant territories are now under control."
+baghdad_pact_conditions.3.a:0 "Excellent."
+
+# AFGHAN PAYMENTS (TERRITORY)
+SAAD_afg_payments.t:0 "Afghanistan Agrees to Transfer Territory"
+SAAD_afg_payments.d:0 "Afghanistan has agreed to transfer several territories to Iran in exchange for compensation."
+SAAD_afg_payments.a:0 "The land returns to us."
+SAAD_afg_payments.a_tt:0 "Iran gains full control over multiple eastern provinces."
+
+# SAUDI FASCIST ALIGNMENT
+sau_fascism.1.t:0 "Fascist Shift in Saudi Arabia"
+sau_fascism.1.desc:0 "A nationalist faction within Saudi Arabia, inspired by Iraq's regime, has seized power."
+sau_fascism:0 "Iran's influence grows."
+
+# YEMEN REUNIFICATION
+ask_reunification_of_yemen.1.t:0 "Request for Yemeni Reunification"
+ask_reunification_of_yemen.1.desc:0 "A proposal has been made to unify the divided Yemeni territories."
+ask_reunification_of_yemen.1.a:0 "Approve reunification"
+ask_reunification_of_yemen.1.b:0 "Reject and prepare for war"
+
+YEM_reunification.2t:0 "Referendum on Reunification"
+YEM_reunification.2d:0 "A national referendum is being held to determine whether Yemen should join Saudi Arabia."
+YEM_reunification.2a:0 "Unify with Arabia"
+YEM_reunification.2b:0 "Remain independent"
   
-  ###### TURKEY #######
-  #####################
-  TUR_CYPRUS_AI_CHANCE_40: "§GAI acceptance chance: 90%§!"
-  TUR_CYPRUS_AI_CHANCE_40_FACTORIES: "§RAI acceptance chance: 0%§!. \nBecause The British government believes this offer is not beneficial at this time."
-  TUR_CYPRUS_AI_CHANCE_20_CLAIM: "§YAI acceptance chance: 20%§!"
+#####################
+###### TURKEY #######
+#####################
+TUR_CYPRUS_AI_CHANCE_40: "§GAI acceptance chance: 90%§!"
+TUR_CYPRUS_AI_CHANCE_40_FACTORIES: "§RAI acceptance chance: 0%§!. \nBecause The British government believes this offer is not beneficial at this time."
+TUR_CYPRUS_AI_CHANCE_20_CLAIM: "§YAI acceptance chance: 20%§!"

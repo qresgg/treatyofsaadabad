@@ -86,152 +86,40 @@ country = {
 		}
 	}
 
-	TUR_disorganized_armed_forces_idea_dud = { 
+	TUR_fabrics_for_territories = {
+		picture = generic_goods_red_bonus
 
-		name = TUR_disorganized_armed_forces_dynamic_modifier
-
-		allowed = {
-			original_tag = TUR
-		}
-
-		allowed_civil_war = {
-			always = yes
-		}
-
-		picture = tur_disorganised_armed_forces
-			
-		removal_cost = -1
-			
-		modifier = {
-			naval_coordination = -0.15
-			army_speed_factor = -0.1
-			army_org_factor = -0.1
-			air_accidents_factor = 0.15
-			war_support_factor = -0.15
-			training_time_factor = 0.25
-			minimum_training_level = -0.1
-		}
-	}
-	
-	TUR_army_of_the_grand_national_assembly_idea = { 
-		name = TUR_army_of_the_grand_national_assembly_idea
-
-		allowed = {
-			original_tag = TUR
-		}
-
-		allowed_civil_war = {
-			always = yes
-		}
-
-		picture = TUR_recovering_from_the_war_of_independence_idea
-			
-		removal_cost = -1
-			
-		modifier = {
-			conscription_factor = 0.15
-			mobilization_laws_cost_factor = 0.5
-			training_time_factor = 0.2
-			command_power_gain_mult = -0.2
-		}
-	}
-	
-	TUR_streamline_conscription_idea = { 
-		name = TUR_streamline_conscription_idea
-
-		allowed = {
-			original_tag = TUR
-		}
-
-		allowed_civil_war = {
-			always = yes
-		}
-
-		picture = TUR_recovering_from_the_war_of_independence_idea
-			
-		removal_cost = -1
-			
-		modifier = {
-			conscription_factor = 0.2
-			mobilization_laws_cost_factor = 0.25
-			training_time_factor = 0.1
-			command_power_gain_mult = -0.1
-		}
-	}
-	
-	TUR_expand_recruitment_idea = { 
-		name = TUR_expand_recruitment_idea
-
-		allowed = {
-			original_tag = TUR
-		}
-
-		allowed_civil_war = {
-			always = yes
-		}
-
-		picture = TUR_recovering_from_the_war_of_independence_idea
-			
-		removal_cost = -1
-			
-		modifier = {
-			conscription_factor = 0.3
-			training_time_factor = 0.15
-			command_power_gain_mult = -0.1
-		}
-	}
-	
-	TUR_maximize_orientation_idea = { 
-		name = TUR_maximize_orientation_idea
-
-		allowed = {
-			original_tag = TUR
-		}
-
-		allowed_civil_war = {
-			always = yes
-		}
-
-		picture = TUR_recovering_from_the_war_of_independence_idea
-			
-		removal_cost = -1
-			
-		modifier = {
-			conscription_factor = 0.1
-			mobilization_laws_cost_factor = 0.25
-			training_time_factor = 0.1
-			command_power_gain_mult = -0.1
-			army_org_factor = 0.05
-			army_morale_factor = 0.1
-			supply_consumption_factor = -0.05
-		}
-	}
-	
-	TUR_standardization_idea = { 
-		name = TUR_standardization_idea
-
-		allowed_civil_war = {
-			always = yes
-		}
-			
-		removal_cost = -1
-			
-		picture = FRA_factory_strikes
-		equipment_bonus = {
-			infantry_equipment = {
-					build_cost_ic = -0.05
+		available = {
+			ROOT = {
+				NOT = {
+					has_war_with = ITA
 				}
-			artillery_equipment = {
-				build_cost_ic = -0.05
-			}
-			fighter = {
-				build_cost_ic = -0.05
-			}
-			motorized_equipment = {
-				build_cost_ic = -0.05
 			}
 		}
+		removal_cost = -1
+		
+		modifier = {
+			consumer_goods_factor = 0.15
+		}
 	}
+
+	TUR_territories_for_fabrics = {
+		picture = generic_goods_red_bonus
+
+		available = {
+			ROOT = {
+				NOT = {
+					has_war_with = ITA
+				}
+			}
+		}
+		removal_cost = -1
+		
+		modifier = {
+			consumer_goods_factor = -0.15
+		}
+	}
+
 
 	TUR_caliph_abdulmejid_ii = { 
 

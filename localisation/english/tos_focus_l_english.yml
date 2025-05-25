@@ -707,7 +707,7 @@
   TUR_liberalize_the_economy_desc: "Opening up our markets and encouraging entrepreneurship will bring prosperity and modernize our economic system."
   TUR_bureaucratic_modernization: "Bureaucratic Modernization"
   TUR_bureaucratic_modernization_desc: "To govern effectively, we must reform our outdated institutions and adopt efficient bureaucratic practices."
-  TUR_GRE_in_government: "Greks in Government"
+  TUR_GRE_in_government: "Greeks in Government"
   TUR_GRE_in_government_desc: "In a surprising shift, we invite representatives of the Greek population into our political system, promoting cooperation and inclusion."
   TUR_GRE_ultimatum: "Ultimatum to Greece"
   TUR_GRE_ultimatum_desc: "We are ready to issue an ultimatum to Greece. They must accept our demands or face the consequences."
@@ -715,7 +715,7 @@
   TUR_restore_byzantium_desc: "Our dream is clear: a new Byzantine Empire will rise from the ashes, uniting lands once under its glory."
   TUR_fascism_rising: "Fascism Rising"
   TUR_fascism_rising_desc: "A new ideology takes root in our land. The appeal of strength, unity, and nationalism is rising rapidly."
-  TUR_greeks_in_army: "Greks in the Army"
+  TUR_greeks_in_army: "Greeks in the Army"
   TUR_greeks_in_army_desc: "The inclusion of Greek nationals in our military forces strengthens our unity and signals a shared destiny."
   TUR_erasing_turkish_history: "Erase Turkish History"
   TUR_erasing_turkish_history_desc: "To complete our ideological transformation, we must distance ourselves from the Turkish past and forge a new identity."
@@ -909,6 +909,15 @@
   TUR_unlocks_drill_decisions_tt:0 "Unlocks §YProspecting for Oil§! decisions"
   TUR_launch_the_revolution_tt:0 "A civil war will start. The higher support the communists have, the more divisions will defect to join them. If communist support is high enough, a civil war can be avoided."
   TUR_launch_the_revolution_soviet_support_tt:0 "If the Soviet Union has promised us support, we will receive extra arms for the revolution."
+  TUR_cyprus_crisis_decision_tt:0 "Unlocks decision to demand §YCyprus§!"
+  TUR_operation_dodecanes_tt:0 "Unlocks decision to annex §YDodecanese§!"
+  TUR_BUL_expansion_decisions_tt:0 "Unlocks decision to expand historical §YBulgarian regions§!"
+  TUR_neobyz_make_kingdoms_of_italia_tt:0 "Unlocks decision to participate §YItaly§! and form italian kingdoms"
+  TUR_open_decision_to_core_two_sicilias_tt:0 "Unlocks decision to nationalize §YTwo Sicilias§!"
+  TUR_neobyz_make_kingdoms_of_occitania_and_piedmont_tt:0 "Unlocks decision to form §YOccitanian§! and §YPiedmont§! kingdoms "
+  TUR_neobyz_make_kingdom_visighotic_tt:0 "Unlocks decision to form right §YVisighotics§!"
+  TUR_neobyz_make_kingdom_suebi_tt:0 "Unlocks decision to form §YSuebi Kingdom§! as our §YDux§!"
+  TUR_unlock_decisions_to_become_christianity_state_tt:0 "Unlocks decisions to §Yaccept Christianity§!"
 
   #####################
   #####  UNKNOWN ######

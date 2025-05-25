@@ -215,7 +215,6 @@ form_neo_byzantine_empire_category = {
 	allowed = {
 		OR = {
 			original_tag = TUR
-			original_tag = BUL
 		}
 	}
 }
