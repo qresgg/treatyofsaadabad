@@ -7466,8 +7466,9 @@ form_sasanian_empire_category = {
 	integrate_varena_xsaora = {
 		icon = generic_form_nation
 		visible = {
-			OR = {
-				original_tag = PER
+			has_completed_focus = PER_red_danger
+			229 = {
+				is_core_of = PER
 			}
 		}
 		allowed = {
@@ -7476,7 +7477,7 @@ form_sasanian_empire_category = {
 			}
 		}
 		visible = {
-			has_cosmetic_tag = PER_second_sasanian_empire
+			has_completed_focus = PER_red_danger
 		}
 		available = {
 			is_subject = no
@@ -7577,8 +7578,9 @@ form_sasanian_empire_category = {
 	integrate_ma_wara_an-nahr = {
 		icon = generic_form_nation
 		visible = {
-			OR = {
-				original_tag = PER
+			has_completed_focus = PER_red_danger
+			584 = {
+				is_core_of = PER
 			}
 		}
 		allowed = {
@@ -7587,7 +7589,6 @@ form_sasanian_empire_category = {
 			}
 		}
 		visible = {
-			has_cosmetic_tag = PER_second_sasanian_empire
 		}
 		highlight_states = {
 			highlight_state_targets = {
@@ -7595,19 +7596,29 @@ form_sasanian_empire_category = {
 				state = 831
 				state = 823
 				state = 832
-				state = 831
 				state = 585
 				state = 404
 				state = 830
 				state = 405
 			}
 		}
+		complete_effect = {
+			587 = { add_core_of = ROOT }
+			831 = { add_core_of = ROOT }
+			823 = { add_core_of = ROOT }
+			832 = { add_core_of = ROOT }
+			585 = { add_core_of = ROOT }
+			404 = { add_core_of = ROOT }
+			830 = { add_core_of = ROOT }
+			405 = { add_core_of = ROOT }
+		}
 	}
 	integrate_at_turk_al_shimalia = {
 		icon = generic_form_nation
 		visible = {
-			OR = {
-				original_tag = PER
+			has_completed_focus = PER_red_danger
+			217 = {
+				is_core_of = PER
 			}
 		}
 		allowed = {
@@ -7634,12 +7645,27 @@ form_sasanian_empire_category = {
 				state = 258
 			}
 		}
+		complete_effect = {
+			257 = { add_core_of = ROOT }
+			239 = { add_core_of = ROOT }
+			401 = { add_core_of = ROOT }
+			407 = { add_core_of = ROOT }
+			406 = { add_core_of = ROOT }
+			255 = { add_core_of = ROOT }
+			250 = { add_core_of = ROOT }
+			251 = { add_core_of = ROOT }
+			249 = { add_core_of = ROOT }
+			652 = { add_core_of = ROOT }
+			651 = { add_core_of = ROOT }
+			258 = { add_core_of = ROOT }
+		}
 	}
 	integrate_desht_i_kypchak = {
 		icon = generic_form_nation
 		visible = {
-			OR = {
-				original_tag = PER
+			has_completed_focus = PER_red_danger
+			249 = {
+				is_core_of = PER
 			}
 		}
 		allowed = {
@@ -7659,12 +7685,20 @@ form_sasanian_empire_category = {
 				state = 590
 			}
 		}
+		complete_effect = {
+			402 = { add_core_of = ROOT }
+			881 = { add_core_of = ROOT }
+			582 = { add_core_of = ROOT }
+			583 = { add_core_of = ROOT }
+			590 = { add_core_of = ROOT }
+		}
 	}
 	integrate_shark_turkistani = {
 		icon = generic_form_nation
 		visible = {
-			OR = {
-				original_tag = PER
+			has_completed_focus = PER_red_danger
+			881 = {
+				is_core_of = PER
 			}
 		}
 		allowed = {
@@ -7684,6 +7718,14 @@ form_sasanian_empire_category = {
 				state = 40
 				state = 654
 			}
+		}
+		complete_effect = {
+			586 = { add_core_of = ROOT }
+			589 = { add_core_of = ROOT }
+			588 = { add_core_of = ROOT }
+			882 = { add_core_of = ROOT }
+			40 = { add_core_of = ROOT }
+			654 = { add_core_of = ROOT }
 		}
 	}
 	integrate_makran = {
@@ -7751,16 +7793,8 @@ form_kashuan_empire_category = {
 	form_kashuan_empire = {
 		icon = generic_form_nation
 		visible = {
-			OR = {
-				original_tag = AFG
-				original_tag = PAK
-			}
 		}
 		allowed = {
-			OR = {
-				original_tag = AFG
-				original_tag = PAK
-			}
 		}
 		highlight_states = {
 			highlight_state_targets = {
@@ -7782,16 +7816,8 @@ form_kashuan_empire_category = {
 	integrate_bilad_aljibal = {
 		icon = generic_form_nation
 		visible = {
-			OR = {
-				original_tag = AFG
-				original_tag = PAK
-			}
 		}
 		allowed = {
-			OR = {
-				original_tag = AFG
-				original_tag = PAK
-			}
 		}
 		highlight_states = {
 			highlight_state_targets = {
@@ -7804,16 +7830,8 @@ form_kashuan_empire_category = {
 	integrate_pakistan = {
 		icon = generic_form_nation
 		visible = {
-			OR = {
-				original_tag = AFG
-				original_tag = PAK
-			}
 		}
 		allowed = {
-			OR = {
-				original_tag = AFG
-				original_tag = PAK
-			}
 		}
 		highlight_states = {
 			highlight_state_targets = {
@@ -7827,16 +7845,8 @@ form_kashuan_empire_category = {
 	integrate_khalistan = {
 		icon = generic_form_nation
 		visible = {
-			OR = {
-				original_tag = AFG
-				original_tag = PAK
-			}
 		}
 		allowed = {
-			OR = {
-				original_tag = AFG
-				original_tag = PAK
-			}
 		}
 		highlight_states = {
 			highlight_state_targets = {
@@ -7844,66 +7854,29 @@ form_kashuan_empire_category = {
 				state = 438
 				state = 429
 				state = 433
+				state = 439
 			}
 		}
 	}
 	integrate_central_india = {
 		icon = generic_form_nation
 		visible = {
-			OR = {
-				original_tag = AFG
-				original_tag = PAK
-			}
 		}
 		allowed = {
-			OR = {
-				original_tag = AFG
-				original_tag = PAK
-			}
 		}
 		highlight_states = {
 			highlight_state_targets = {
-				state = 439
 				state = 437
 				state = 436
-			}
-		}
-	}
-	integrate_central_india = {
-		icon = generic_form_nation
-		visible = {
-			OR = {
-				original_tag = AFG
-				original_tag = PAK
-			}
-		}
-		allowed = {
-			OR = {
-				original_tag = AFG
-				original_tag = PAK
-			}
-		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 439
-				state = 437
-				state = 436
+				state = 991
 			}
 		}
 	}
 	integrate_east_muslims = {
 		icon = generic_form_nation
 		visible = {
-			OR = {
-				original_tag = AFG
-				original_tag = PAK
-			}
 		}
 		allowed = {
-			OR = {
-				original_tag = AFG
-				original_tag = PAK
-			}
 		}
 		highlight_states = {
 			highlight_state_targets = {
@@ -7920,18 +7893,8 @@ form_neo_byzantine_empire_category = {
 	neobyz_restore_byzantium = {
 		icon = generic_form_nation
 		visible = {
-			OR = {
-				original_tag = TUR
-				original_tag = BUL
-				original_tag = GRE
-			}
 		}
 		allowed = {
-			OR = {
-				original_tag = TUR
-				original_tag = BUL
-				original_tag = GRE
-			}
 		}
 		available = {
 			is_subject = no
@@ -9098,10 +9061,260 @@ form_neo_byzantine_empire_category = {
 		}
 	}
 
+	neobyz_form_rhos_dux = {
+		icon = generic_form_nation
+		visible = {
+		}
+		cost = 25
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = form_country_rhos_south_required_states_tt
+				controls_state = 834
+				controls_state = 192
+				controls_state = 197
+				controls_state = 196
+				controls_state = 200
+				controls_state = 227
+				controls_state = 218
+				controls_state = 234
+				controls_state = 233
+				controls_state = 826
+				controls_state = 226
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 834
+				state = 192
+				state = 197
+				state = 196
+				state = 200
+				state = 227
+				state = 218
+				state = 234
+				state = 233
+				state = 826
+				state = 226
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = neo_byz_form_rhos_dux_tt
+			hidden_effect = {
+				every_state	= {
+					limit = {
+						OR = {
+							state = 834
+							state = 192
+							state = 197
+							state = 196
+							state = 200
+							state = 227
+							state = 218
+							state = 234
+							state = 233
+							state = 826
+							state = 226
+						}
+					}
+					UKR = { transfer_state = PREV }
+					add_core_of = UKR
+				}
+				set_autonomy = {
+					target = UKR
+					autonomy_state = autonomy_dux
+					freedom_level = 0.5
+				}
+				UKR = {
+					add_ideas = extensive_conscription
+					set_cosmetic_tag = UKR_byzantine_dux
+				}
+			}
+		}
+	}
+
+	neobyz_expand_rhos_dux = {
+		icon = generic_form_nation
+		visible = {
+		}
+		cost = 25
+		available = {
+			UKR = {
+				is_subject_of = ROOT
+			}
+			custom_trigger_tooltip = {
+				tooltip = form_country_rhos_north_required_states_tt
+				### NORTH UKR
+				controls_state = 228
+				controls_state = 221
+				controls_state = 259
+				controls_state = 203
+				controls_state = 198
+				controls_state = 199
+				controls_state = 201
+				controls_state = 202
+				controls_state = 193
+				controls_state = 194
+				controls_state = 220
+				controls_state = 240
+				controls_state = 225
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 834
+				state = 192
+				state = 197
+				state = 196
+				state = 200
+				state = 227
+				state = 218
+				state = 234
+				state = 233
+				state = 826
+				state = 226
+
+				### NORTH UKR
+				state = 228
+				state = 221
+				state = 259
+				state = 203
+				state = 198
+				state = 199
+				state = 201
+				state = 202
+				state = 193
+				state = 194
+				state = 220
+				state = 240
+				state = 225
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = neo_byz_expand_rhos_dux_tt
+			hidden_effect = {
+				every_state	= {
+					limit = {
+						OR = {
+							state = 228
+							state = 221
+							state = 259
+							state = 203
+							state = 198
+							state = 199
+							state = 201
+							state = 202
+							state = 193
+							state = 194
+							state = 220
+							state = 240
+							state = 225
+						}
+					}
+					UKR = { transfer_state = PREV }
+					add_core_of = UKR
+				}
+				set_autonomy = {
+					target = UKR
+					autonomy_state = autonomy_dux
+					freedom_level = 0.5
+				}
+				UKR = {
+					add_ideas = extensive_conscription
+					set_cosmetic_tag = UKR_byzantine_dux
+				}
+			}
+		}
+	}
+
+	neobyz_expand_second_rhos_dux = {
+		icon = generic_form_nation
+		visible = {
+		}
+		cost = 25
+		available = {
+			UKR = {
+				is_subject_of = ROOT
+			}
+			custom_trigger_tooltip = {
+				tooltip = form_country_rhos_west_required_states_tt
+				### WEST UKR
+				controls_state = 73
+				controls_state = 89
+				controls_state = 91
+				controls_state = 93
+				controls_state = 94
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 834
+				state = 192
+				state = 197
+				state = 196
+				state = 200
+				state = 227
+				state = 218
+				state = 234
+				state = 233
+				state = 826
+				state = 226
+
+				### NORTH UKR
+				state = 228
+				state = 221
+				state = 259
+				state = 203
+				state = 198
+				state = 199
+				state = 201
+				state = 202
+				state = 193
+				state = 194
+				state = 220
+				state = 240
+				state = 225
+
+				### WEST UKR
+				state = 73
+				state = 89
+				state = 91
+				state = 93
+				state = 94
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = neo_byz_expand_second_rhos_dux_tt
+			hidden_effect = {
+				every_state	= {
+					limit = {
+						OR = {
+							state = 73
+							state = 89
+							state = 91
+							state = 93
+							state = 94
+						}
+					}
+					UKR = { transfer_state = PREV }
+					add_core_of = UKR
+				}
+				set_autonomy = {
+					target = UKR
+					autonomy_state = autonomy_dux
+					freedom_level = 0.5
+				}
+				UKR = {
+					add_ideas = extensive_conscription
+					set_cosmetic_tag = UKR_byzantine_dux
+				}
+			}
+		}
+	}
+
 	neobyz_nationalize_dux = {
 		cost = 50
 		days_remove = 1
-		targets = { BUL SER CRO LBV PAP TOS SPM OCC SPR POR TRA MOL}
+		targets = { BUL SER CRO LBV PAP TOS SPM OCC SPR POR TRA MOL UKR}
 		target_root_trigger = {
 			original_tag = TUR
 		}

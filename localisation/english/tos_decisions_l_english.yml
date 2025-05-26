@@ -104,6 +104,9 @@
  decision_cost_ie_500_MP_500_CP_25_blocked:0 "£infantry_equipment_text_icon  §R500§! £manpower_texticon  §R500§! £command_power  §R25§!"
  decision_cost_ie_500_MP_500_CP_25_tooltip:1 "It costs £infantry_equipment_text_icon  §Y500§! £manpower_texticon  §Y500§! £command_power  §Y25§! to take the decision"
 
+#####################
+###   SASANIAN    ###
+#####################
 ## FORM DECISIONS
  form_sasanian_mazun_required_states_tt: "Controlls all §YMazun§! states. It including §YMusandam§!, §YBahrain§!, §YAbu-Dhabi§!, §YQatar§!, §YOman§! and §YMuscat§! regions"
  form_sasanian_cities_change_name_tt: "Some cities will be renamed to their historical names from §Ythe Sasanian era.§!"
@@ -116,31 +119,43 @@
  form_sasanian_integrate_varena_xsaora_gurgan_daz_tt: "Controls §YGurgan§! territories"
  form_sasanian_integrate_varena_xsaora_varnagird_tt: "Controls §YVarnagird§! territories"
 
- ## REQUIRES FORM KINGDOMS
-  form_country_dobrudja_required_tt: "Controls §YDobrudja§! region"                         # регіон
-  form_country_macedonia_required_tt: "Controls §YMacedonia§! region"                      # регіон
-  form_country_southern_serbia_region_required_tt: "Controls §YSouthern Serbia§! region"  # регіон
-  form_country_serbia_required_states_tt: "Controls all §YSerbia§! states"                # країна
-  form_country_croatia_required_states_tt: "Controls all §YCroatia§! states"              # країна
-  form_country_zara_required_tt: "Controls §YZara§! region"                                # регіон
-  form_country_slovenia_required_states_tt: "Controls all §YSlovenia§! states"            # країна
-  form_country_litorale_istria_required_tt: "Controls §YIstria§! region"                  # регіон
-  form_country_lombardy_venetia_required_states_tt: "Controls all §YLombard-Venetian§! states"  # історична держава
-  form_country_papal_state_required_states_tt: "Controls all §YPapal State§! states"      # історична держава
-  form_country_toscana_required_tt: "Controls §YToscana§! region"                         # регіон
-  form_country_piedmont_required_tt: "Controls §YPiedmont§! region"                       # регіон
-  form_country_piedmont_sardinia_required_tt: "Controls all §YPiedmont-Sardiniae§! states"  # історична держава
-  form_country_piedmont_sardinia_required_tt: "Controls §YPiedmont-Sardiniae§! region" # Region
-  form_country_two_sicilias_required_states_tt: "Controls all §YThe Kingdom of the Two Sicilies§! states"  # історична держава
-  form_country_occitania_required_states_tt: "Controls §YOccitania§! region"              # регіон
-  form_country_visighotic_required_states_tt: "Controls §YVisighotic§! region"            # регіон/історичний
-  form_country_visighotic_expand_required_tt: "Controls §YVisighotic§! region"            # регіон
-  form_country_suebi_required_states_tt: "Controls §YSuebi§! region"                      # регіон/історичний
-  form_country_wallachia_and_moldova_required_states_tt: "Controls all §YWallachia and Moldova§! states"  # країни
-  form_country_expand_wallachia_and_moldova_required_states_tt: "Controls all §YWallachia and Moldova§! states"  # країни
-  form_country_transylvania_required_states_tt: "Controls §YTransylvania§! region"        # регіон
 
-## Byzantine decisions tooltips
+#####################
+###   BYZANTINE   ###
+#####################
+
+## requires states
+form_country_dobrudja_required_tt: "Controls §YDobrudja§! region"                         # регіон
+form_country_macedonia_required_tt: "Controls §YMacedonia§! region"                      # регіон
+form_country_southern_serbia_region_required_tt: "Controls §YSouthern Serbia§! region"  # регіон
+form_country_serbia_required_states_tt: "Controls all §YSerbia§! states"                # країна
+form_country_croatia_required_states_tt: "Controls all §YCroatia§! states"              # країна
+form_country_zara_required_tt: "Controls §YZara§! region"                                # регіон
+form_country_slovenia_required_states_tt: "Controls all §YSlovenia§! states"            # країна
+form_country_litorale_istria_required_tt: "Controls §YIstria§! region"                  # регіон
+form_country_lombardy_venetia_required_states_tt: "Controls all §YLombard-Venetian§! states"  # історична держава
+form_country_papal_state_required_states_tt: "Controls all §YPapal State§! states"      # історична держава
+form_country_toscana_required_tt: "Controls §YToscana§! region"                         # регіон
+form_country_piedmont_required_tt: "Controls §YPiedmont§! region"                       # регіон
+form_country_piedmont_sardinia_required_tt: "Controls all §YPiedmont-Sardiniae§! states"  # історична держава
+form_country_piedmont_sardinia_required_tt: "Controls §YPiedmont-Sardiniae§! region" # Region
+form_country_two_sicilias_required_states_tt: "Controls all §YThe Kingdom of the Two Sicilies§! states"  # історична держава
+form_country_occitania_required_states_tt: "Controls §YOccitania§! region"              # регіон
+form_country_visighotic_required_states_tt: "Controls §YVisighotic§! region"            # регіон/історичний
+form_country_visighotic_expand_required_tt: "Controls §YVisighotic§! region"            # регіон
+form_country_suebi_required_states_tt: "Controls §YSuebi§! region"                      # регіон/історичний
+form_country_wallachia_and_moldova_required_states_tt: "Controls all §YWallachia and Moldova§! states"  # країни
+form_country_expand_wallachia_and_moldova_required_states_tt: "Controls all §YWallachia and Moldova§! states"  # країни
+form_country_transylvania_required_states_tt: "Controls §YTransylvania§! region"        # регіон
+form_country_rhos_north_required_states_tt: "Controls §YNorth Rhutenia§! regions"
+form_country_rhos_south_required_states_tt: "Controls §YSouth Rhutenia§! regions"
+form_country_rhos_west_required_states_tt: "Controls §YWest Rhutenia§! regions"
+
+## category
+form_neo_byzantine_empire_category: "Byzantine Ambitions"
+form_neo_byzantine_empire_category_desc: "Reignite the flame of the Eastern Roman Empire by restoring and expanding its former dominions."
+
+## tooltips
 neo_byz_form_bulgarian_dux_tt:0 "Form §YThema of Bulgarias§!"
 neo_byz_expand_bulgarian_dux_tt:0 "Expand historical §YBulgarian§! regions for our §YThema of Bulgarias§!"
 neo_byz_form_serbian_dux_tt:0 "Form historical §YRascia§! kingdom"
@@ -159,6 +174,34 @@ neo_byz_form_suebi_dux_tt:0 "Form §YSuebi Dux§!"
 neo_byz_form_wallachia_and_moldova_dux_tt:0 "Form §YWallachia and Moldova dux§!"
 neo_byz_expand_wallachia_and_moldova_dux_tt:0 "Expand §YWallachia and Moldova§! national regions. Return Moldova to Moldovia Kingdom"
 neo_byz_form_transylvania_dux_tt:0 "Form §YTransylvania Dux§!"
+neo_byz_form_rhos_dux_tt:0 "Form §YRhos Dux§!"
+neo_byz_expand_rhos_dux_tt:0 "Expand §YRhos Dux§!"
+neo_byz_expand_second_rhos_dux_tt:0 "Expansion to West for §YRhos Dux§!"
+
+
+## option names
+neobyz_restore_byzantium: "Restore Byzantium"
+neobyz_form_bulgarian_dux: "Form Bulgarian Duchy"
+neobyz_expand_bulgarian_states: "Expand into Bulgarian Lands"
+neobyz_form_serbian_dux: "Form Serbian Duchy"
+neobyz_form_croatia_dux: "Form Croatian Duchy"
+neobyz_expand_croatian_states: "Expand into Croatian Lands"
+neobyz_form_lombardy_venetia: "Form Lombardy-Venetia"
+neobyz_form_papal_state: "Form Papal State"
+neobyz_form_toscana: "Form Tuscany"
+neobyz_form_piedmont: "Form Piedmont"
+neobyz_expand_piedmont_sardinia: "Expand Piedmont-Sardinia"
+neobyz_nationalize_two_sicilias: "Nationalize the Two Sicilies"
+neobyz_form_occitania: "Form Occitania"
+neobyz_form_visighotic: "Form Visigothicia"
+neobyz_expand_visighotic: "Expand Visigothicia"
+neobyz_form_suebi_kingdom: "Form Suebi Kingdom"
+neobyz_form_wallachia_and_moldova: "Form Wallachia and Moldova"
+neobyz_expand_wallachia_and_moldova: "Expand Wallachia and Moldova"
+neobyz_form_transylvania: "Form Transylvania"
+neobyz_form_rhos_dux: "Form Rhos dux"
+neobyz_expand_rhos_dux: "Expand Rhos dux national territories"
+neobyz_expand_second_rhos_dux: "Expand Rhos dux to West"
 
 #####################
 #####   IRAN   ######
@@ -198,29 +241,12 @@ integrate_shark_turkistani_desc:0 "We will bring Shark Turkestan into the fold, 
 integrate_makran:0 "Integrate Makran"
 integrate_makran_desc:0 "The eastern territories near Makran hold economic and strategic value. They must be integrated into our domain."
 
-form_neo_byzantine_empire_category: "Byzantine Ambitions"
-form_neo_byzantine_empire_category_desc: "Reignite the flame of the Eastern Roman Empire by restoring and expanding its former dominions."
-neobyz_restore_byzantium: "Restore Byzantium"
-neobyz_form_bulgarian_dux: "Form Bulgarian Duchy"
-neobyz_expand_bulgarian_states: "Expand into Bulgarian Lands"
-neobyz_form_serbian_dux: "Form Serbian Duchy"
-neobyz_form_croatia_dux: "Form Croatian Duchy"
-neobyz_expand_croatian_states: "Expand into Croatian Lands"
-neobyz_form_lombardy_venetia: "Form Lombardy-Venetia"
-neobyz_form_papal_state: "Form Papal State"
-neobyz_form_toscana: "Form Tuscany"
-neobyz_form_piedmont: "Form Piedmont"
-neobyz_expand_piedmont_sardinia: "Expand Piedmont-Sardinia"
-neobyz_nationalize_two_sicilias: "Nationalize the Two Sicilies"
-neobyz_form_occitania: "Form Occitania"
-neobyz_form_visighotic: "Form Visigothic Realm"
-neobyz_expand_visighotic: "Expand Visigothic Realm"
-neobyz_form_suebi_kingdom: "Form Suebi Kingdom"
-neobyz_form_wallachia_and_moldova: "Form Wallachia and Moldova"
-neobyz_expand_wallachia_and_moldova: "Expand Wallachia and Moldova"
-neobyz_form_transylvania: "Form Transylvania"
+
+#####################
+#####  TURKEY  ######
+#####################
 TUR_nationalize_cypryotes: "Nationalize the Cypriots"
-TUR_dis_politic_cat: "Disputed Territories and Political Claims"
+TUR_dis_politic_cat: "Dış Politika"
 TUR_nationalize_cypryotes_desc: "The people of Cyprus share deep historical and cultural ties with our nation. We shall move to integrate them fully into our state structure."
 TUR_nationalize_road_to_lebanon: "The Road to Lebanon"
 TUR_nationalize_road_to_lebanon_desc: "By extending our presence and support across the Levant, we pave the way for broader regional influence—one that may eventually include Lebanon."

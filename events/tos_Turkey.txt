@@ -2069,7 +2069,15 @@ country_event = {
                 create_wargoal = {
                     type = annex_everything
                     target = GRE
+					expire = 0
                 }
+				ROM = {
+					diplomatic_relation = {
+						country = GRE 
+						relation = guarantee
+						active = no
+					}
+				}
             }
             country_event = { id = turkey.2081 days = 1 }
         }
@@ -2731,18 +2739,12 @@ add_namespace = turkish
 
 news_event = {
     id = turkish.1
-    title = turkish.1.t         # Пример: "Турция захватывает Италию!"
-    desc = turkish.1.desc       # Пример описания события
+    title = turkish.1.t       
+    desc = turkish.1.desc       
 	picture = GFX_news_event_generic_rotterdam_destroyed
 
     major = yes
     is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-        ITA = { country_event = { id = turkish.11 days = 2 } } # Італія вимагає острів
-		}
-    }
 
     option = {
         trigger = {
@@ -2753,6 +2755,9 @@ news_event = {
             }
         }
         name = turkish.1.a
+		hidden_effect = {
+        	ITA = { country_event = { id = turkish.11 days = 2 } } # Італія вимагає острів
+		}
     }
 
     option = {

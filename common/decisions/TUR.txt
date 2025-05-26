@@ -1,10 +1,18 @@
 TUR_dis_politic_cat = {
 	TUR_operation_dodecanes = {
-		## TO ANNEX DODECANES
-		## NEWS EVENT
+		days_remove = 1 # 15 days
+		available = {
+			has_completed_focus = TUR_operation_dodecanes
+		}
+		remove_effect = {
+			TUR = { transfer_state = 164 }
+		}
 	}
 	TUR_cyprus_crisis = {
 		days_remove = 1 # 15 days
+		available = {
+			has_completed_focus = TUR_cyprus_crisis
+		}
 		remove_effect = {
 			country_event = TUR_CYPRUS.1
 		}
@@ -59,6 +67,87 @@ TUR_dis_politic_cat = {
 		remove_effect = {
 			137 = {
 				add_core_of = ROOT
+			}
+		}
+	}
+	TUR_demand_lebanon_and_aleppo = {
+		days_remove = 1 # 15 days
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = alliance_teammate_control_lebanon_aleppo_required_tt
+				677 = {
+					OR = {
+						OR = {
+							is_controlled_by = IRQ
+							is_owned_by = IRQ
+						}
+						OR = {
+							is_controlled_by = PER
+							is_owned_by = PER
+						}
+						OR = {
+							is_controlled_by = AFG
+							is_owned_by = AFG
+						}
+					}
+				}
+				553 = {
+					OR = {
+						OR = {
+							is_controlled_by = IRQ
+							is_owned_by = IRQ
+						}
+						OR = {
+							is_controlled_by = PER
+							is_owned_by = PER
+						}
+						OR = {
+							is_controlled_by = AFG
+							is_owned_by = AFG
+						}
+					}
+				}
+			}
+		}
+		visible = {
+			677 = {
+					OR = {
+						OR = {
+							is_controlled_by = IRQ
+							is_owned_by = IRQ
+						}
+						OR = {
+							is_controlled_by = PER
+							is_owned_by = PER
+						}
+						OR = {
+							is_controlled_by = AFG
+							is_owned_by = AFG
+						}
+					}
+				}
+				553 = {
+					OR = {
+						OR = {
+							is_controlled_by = IRQ
+							is_owned_by = IRQ
+						}
+						OR = {
+							is_controlled_by = PER
+							is_owned_by = PER
+						}
+						OR = {
+							is_controlled_by = AFG
+							is_owned_by = AFG
+						}
+					}
+				}
+		}
+		remove_effect = {
+			ROOT = { transfer_state = 553 }
+			ROOT = { transfer_state = 677 }
+			hidden_effect = {
+				ROOT = { transfer_state = 799 }
 			}
 		}
 	}

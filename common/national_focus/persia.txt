@@ -7897,13 +7897,23 @@ focus_tree = {
 		y = 3
 		cost = 10
 		completion_reward = {
-			create_wargoal = {
-				target = OMA
-				type = annex_everything
-			}
-			create_wargoal = {
-				target = ENG
-				type = annex_everything
+			every_state = {
+				limit = {
+					OR = {
+						state = 1014
+						state = 765
+						state = 658
+						state = 1013
+						state = 294
+						state = 1014
+					}
+				}
+				ROOT = {
+					create_wargoal = {
+						type = take_claimed_state
+						target = PREV
+					}
+				}
 			}
 		}
 	}
@@ -7954,10 +7964,71 @@ focus_tree = {
 		y = 2
 		cost = 10
 		completion_reward = {
-			create_wargoal = {
-				target = SOV
-				type = annex_everything
+			every_state = {
+				limit = {
+					OR = {
+						state = 229
+						state = 230
+						state = 231
+						state = 584
+						state = 232
+						state = 237
+						state = 245
+						state = 265
+						state = 217
+						state = 236
+						state = 829
+						state = 260
+						state = 238
+						state = 235
+						state = 827
+						state = 828
+						state = 821
+						state = 587
+						state = 831
+						state = 823
+						state = 832
+						state = 831
+						state = 585
+						state = 404
+						state = 830
+						state = 405
+						state = 257
+						state = 239
+						state = 401
+						state = 407
+						state = 406
+						state = 255
+						state = 250
+						state = 251
+						state = 249
+						state = 652
+						state = 651
+						state = 258
+						state = 402
+						state = 881
+						state = 582
+						state = 583
+						state = 590
+						state = 586
+						state = 589
+						state = 588
+						state = 882
+						state = 40
+						state = 654
+						state = 444
+						state = 1012
+						state = 443
+						state = 428
+					}
+				}
+				add_claim_by = ROOT
+					create_wargoal = {
+					target = SOV
+					type = take_claimed_state
+				}
 			}
+			custom_effect_tooltip = PER_open_new_decisions_to_form_sasanian_tt
 		}
 	}
 	focus = {
@@ -8088,11 +8159,9 @@ focus_tree = {
 				add_war_support = 0.05
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			ROOT = {
-				create_wargoal = {
-					type = annex_everything
-					target = RAJ
-				}
+			declare_war_on = {
+				target = RAJ
+				type = take_state_focus
 			}
 		}
 	}

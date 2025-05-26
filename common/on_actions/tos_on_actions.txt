@@ -6,8 +6,8 @@ on_actions = {
                     FROM.FROM = {
                         state = 164
                     }
-                    controller = {
-                        tag = TUR
+                    owner = {
+                        original_tag = TUR
                     }
                     NOT = {
                         has_global_flag = turkish_fall_italy

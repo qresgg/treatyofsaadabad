@@ -5866,6 +5866,13 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		relative_position_id = TUR_baghdad_pact
 		x = 2
 		y = 1
+		available = {
+			ENG = {
+				NOT = {
+					has_war_with = TUR
+				}
+			}
+		}
 
 		completion_reward = {
 			custom_effect_tooltip = TUR_cyprus_crisis_decision_tt
@@ -5885,6 +5892,13 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		relative_position_id = TUR_baghdad_pact
 		x = -2
 		y = 1
+		available = {
+			ITA = {
+				NOT = {
+					has_war_with = TUR
+				}
+			}
+		}
 		
 		completion_reward = {
 			## зробити нювс івент турецькі сили відхопили додеканес, reward - -opinion в італії для турції
@@ -6795,7 +6809,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		}
 
 		completion_reward = {
-			country_event = partitionofromania.1
+			country_event = turkey_romania.1
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
@@ -6873,7 +6887,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 			}
 		}
 		completion_reward = {
-			country_event = YUGOSLAVIANDUX.1
+			country_event = turkey_yugoslavia.1
 			## EVENT SOUTH YUGOSLAVIA goes to TUR, NORTH YUGOSLAVIA goes as puppet to TUR
 			## 103, 104, 804, 105, 108, 802, 970, 106, 803 - STATES goes to TUR
 			## 853, 102, 109, 45, 764, 107 - goes to Serbian Puppet
@@ -6951,8 +6965,18 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		x = 0
 		y = 1
 		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = ITA
+				}
+				add_claim_by = TUR
+				create_wargoal = {
+					type = take_claimed_state
+					taget = ITA
+				}
+			}
 			custom_effect_tooltip = TUR_open_decision_to_core_two_sicilias_tt
-			add_stability = 0.1
+			add_stability = 0.05
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
