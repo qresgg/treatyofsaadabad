@@ -2613,6 +2613,18 @@ country_event = {
             ENG = { country_event = { id = TUR_CYPRUS.12 days = 1 } }
         }
     }
+    option = {
+        name = TUR_CYPRUS.1.g
+        ai_chance = { base = 0 }
+        custom_effect_tooltip = TUR_CYPRUS_AI_CHANCE_0
+        hidden_effect = {
+            ENG = { country_event = { id = TUR_CYPRUS.15 days = 3 } }
+			news_event = { id = TUR_CYPRUS.16 hours = 12 }
+			TUR = {
+				transfer_state = 183
+			}
+        }
+    }
 }
 
 country_event = {
@@ -2691,8 +2703,9 @@ country_event = {
         hidden_effect = {
             TUR = {
                 add_state_claim = 183
-                transfer_state = 183
+				transfer_state = 183
                 country_event = { id = TUR_CYPRUS.3 days = 1 }
+				news_event = { id = turkish.102 hours = 3 }
             }
         }
     }
@@ -2707,6 +2720,52 @@ country_event = {
 }
 
 country_event = {
+    id = TUR_CYPRUS.15
+    title = TUR_CYPRUS.15.t
+    desc = TUR_CYPRUS.15.d
+    picture = GFX_report_event_generic_angry_crowd
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = TUR_CYPRUS.15.a
+		ai_chance = { base = 60 }
+
+		news_event = { id = TUR_CYPRUS.17 days = 3 }
+		TUR = {
+			add_opinion_modifier = { target = ENG modifier = embargo }
+		}
+
+		ENG = {
+			add_opinion_modifier = { target = TUR modifier = embargoed_us }
+			add_political_power = -50
+			send_embargo = TUR
+		}
+	}
+
+    option = {
+        name = TUR_CYPRUS.15.b
+        ai_chance = { base = 40 }
+			news_event = { id = TUR_CYPRUS.18 hours = 3 }
+            TUR = { add_opinion_modifier = { target = ENG modifier = puppet_war_goal } }
+            ENG = {
+                add_war_support = -0.05
+                add_named_threat = {
+                    threat = 5
+                    name = TUR_CYPRUS.15.b_threat
+                }
+				create_wargoal = {
+					type = take_state_focus
+					target = TUR
+					generator = { 183 }
+					expire = 90
+				}
+            }
+    }
+}
+
+
+country_event = {
     id = TUR_CYPRUS.3
     title = TUR_CYPRUS.3.t
     desc = TUR_CYPRUS.3.d
@@ -2717,6 +2776,7 @@ country_event = {
 
     option = {
         name = TUR_CYPRUS.3.a
+		news_event = { id = turkish.100 hours = 3 }
     }
 }
 
@@ -2732,6 +2792,7 @@ country_event = {
     option = {
         name = TUR_CYPRUS.4.a
         add_state_claim = 183
+		news_event = { id = turkish.101 hours = 3 }
     }
 }
 
@@ -2871,5 +2932,235 @@ country_event = {
         set_country_flag = turkey_ignored_dodecanese
 
         custom_effect_tooltip = turkish.12.b.tt
+    }
+}
+
+
+news_event = {
+    id = turkish.100
+    title = turkish.100.t       
+    desc = turkish.100.desc       
+    picture = GFX_report_event_generic_peace
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        trigger = {
+            tag = TUR
+        }
+        name = turkish.100.a
+    }
+
+    option = {
+        trigger = {
+            tag = ENG
+        }
+        name = turkish.100.b
+    }
+
+    option = {
+        trigger = {
+            NOT = {
+                tag = TUR
+                is_in_faction_with = TUR
+                is_subject_of = TUR
+                tag = ENG
+            }
+        }
+        name = turkish.100.c
+    }
+}
+
+news_event = {
+    id = turkish.101
+    title = turkish.101.t       
+    desc = turkish.101.desc       
+    picture = GFX_report_event_generic_diplomacy
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        trigger = {
+            tag = TUR
+        }
+        name = turkish.101.a
+    }
+
+    option = {
+        trigger = {
+            tag = ENG
+        }
+        name = turkish.101.b
+    }
+
+    option = {
+        trigger = {
+            NOT = {
+                tag = TUR
+                tag = ENG
+                is_in_faction_with = TUR
+                is_subject_of = TUR
+            }
+        }
+        name = turkish.101.c
+    }
+}
+
+news_event = {
+    id = turkish.102
+    title = turkish.102.t       
+    desc = turkish.102.desc       
+    picture = GFX_report_event_generic_war
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        trigger = {
+            tag = TUR
+        }
+        name = turkish.102.a
+    }
+
+    option = {
+        trigger = {
+            tag = ENG
+        }
+        name = turkish.102.b
+    }
+
+    option = {
+        trigger = {
+            NOT = {
+                tag = TUR
+                tag = ENG
+                is_in_faction_with = TUR
+                is_subject_of = TUR
+            }
+        }
+        name = turkish.102.c
+    }
+}
+
+news_event = {
+    id = TUR_CYPRUS.16
+    title = TUR_CYPRUS.16.t       
+    desc = TUR_CYPRUS.16.d       
+    picture = GFX_report_event_generic_battlefield
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        trigger = {
+            OR = {
+                tag = TUR
+                is_in_faction_with = TUR
+                is_subject_of = TUR
+            }
+        }
+        name = TUR_CYPRUS.16.a
+    }
+
+    option = {
+        trigger = {
+            tag = ENG
+        }
+        name = TUR_CYPRUS.16.b
+    }
+
+    option = {
+        trigger = {
+            NOT = {
+                OR = {
+                    tag = TUR
+                    is_in_faction_with = TUR
+                    is_subject_of = TUR
+                    tag = ENG
+                }
+            }
+        }
+        name = TUR_CYPRUS.16.c
+    }
+}
+
+
+news_event = {
+    id = TUR_CYPRUS.17
+    title = TUR_CYPRUS.17.t
+    desc = TUR_CYPRUS.17.d
+    picture = GFX_report_event_generic_parade
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        trigger = {
+            tag = ENG
+        }
+        name = TUR_CYPRUS.17.a
+    }
+
+    option = {
+        trigger = {
+            OR = {
+                tag = TUR
+                is_in_faction_with = TUR
+                is_subject_of = TUR
+            }
+        }
+        name = TUR_CYPRUS.17.b
+    }
+
+    option = {
+        trigger = {
+            NOT = {
+                OR = {
+                    tag = ENG
+                    tag = TUR
+                    is_in_faction_with = TUR
+                    is_subject_of = TUR
+                }
+            }
+        }
+        name = TUR_CYPRUS.17.c
+    }
+}
+
+news_event = {
+    id = TUR_CYPRUS.18
+    title = TUR_CYPRUS.18.t
+    desc = TUR_CYPRUS.18.d
+    picture = GFX_report_event_generic_tanks
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        trigger = {
+            tag = ENG
+        }
+        name = TUR_CYPRUS.18.a
+    }
+
+    option = {
+        trigger = {
+            OR = {
+                tag = TUR
+                is_in_faction_with = TUR
+                is_subject_of = TUR
+            }
+        }
+        name = TUR_CYPRUS.18.b
+    }
+
+    option = {
+        trigger = {
+            NOT = {
+                OR = {
+                    tag = ENG
+                    tag = TUR
+                    is_in_faction_with = TUR
+                    is_subject_of = TUR
+                }
+            }
+        }
+        name = TUR_CYPRUS.18.c
     }
 }
