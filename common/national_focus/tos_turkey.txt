@@ -871,7 +871,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 				tooltip = max_planning_factor_tt
 			}
 		}
-		search_filters = { FOCUS_FILTER_ARMY_XP }
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_TREATYOFSAADABAD }
 	}
 	
 	
@@ -1777,7 +1777,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = TUR_sabiha_gokcen
 		}
-		search_filters = { FOCUS_FILTER_AIR_XP }
+		search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_TREATYOFSAADABAD }
 	}
 
 	focus = {
@@ -2619,7 +2619,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 				tooltip = repair_speed_factor_tt
 			}
 		}
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_TREATYOFSAADABAD }
 	}
 	
 	# focus = {
@@ -2709,7 +2709,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 	# 			}
 	# 		}
 	# 	}
-	# 	search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
+	# 	search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT FOCUS_FILTER_TREATYOFSAADABAD }
 	# }
 	
 	# focus = {
