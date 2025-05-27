@@ -86,39 +86,7 @@ country = {
 		}
 	}
 
-	TUR_fabrics_for_territories = {
-		picture = generic_goods_red_bonus
-
-		available = {
-			ROOT = {
-				NOT = {
-					has_war_with = ITA
-				}
-			}
-		}
-		removal_cost = -1
-		
-		modifier = {
-			consumer_goods_factor = 0.15
-		}
-	}
-
-	TUR_territories_for_fabrics = {
-		picture = generic_goods_red_bonus
-
-		available = {
-			ROOT = {
-				NOT = {
-					has_war_with = ITA
-				}
-			}
-		}
-		removal_cost = -1
-		
-		modifier = {
-			consumer_goods_factor = -0.15
-		}
-	}
+	
 
 
 	TUR_caliph_abdulmejid_ii = { 
@@ -1371,7 +1339,7 @@ country = {
 		removal_cost = -1
 			
 		modifier = {
-			fascism_drift = 0.03
+			fascism_drift = 0.25
 		}
 	}
 
@@ -3354,3 +3322,43 @@ industrial_concern = {
 		}		
 	}
 }
+
+
+#### MODDING
+	TUR_fabrics_for_territories = {
+		picture = generic_goods_red_bonus
+
+		available = {
+			ROOT = {
+				NOT = {
+					has_war_with = ITA
+				}
+			}
+		}
+		removal_cost = -1
+		
+		modifier = {
+			consumer_goods_factor = 0.15
+		}
+	}
+
+	TUR_territories_for_fabrics = {
+		picture = generic_goods_red_bonus
+
+		available = {
+			ROOT = {
+				NOT = {
+					has_war_with = ITA
+				}
+			}
+		}
+		removal_cost = -1
+		
+		modifier = {
+			consumer_goods_factor = -0.15
+		}
+	}
+
+	TUR_chistianity_state = {
+		picture = 
+	}

@@ -198,7 +198,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		available = {
 			OR = {
 				num_of_factories > 99
-				has_tech = construction_a	#1948 Tech
+				has_tech = construction4	#1948 Tech
 			}
 				
 		}
@@ -1253,7 +1253,6 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 				}
 				has_tech = grand_battle_plan
 				has_tech = pocket_defence
-				has_tech = tos_double_envelopment
 			}
 		}
 
@@ -1951,7 +1950,6 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 					level = 3
 					instant_build = yes
 					province = {
-						all_provinces = yes
 						limit_to_coastal = yes
 					}
 				}
@@ -1962,7 +1960,6 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 					level = 3
 					instant_build = yes
 					province = {
-						all_provinces = yes
 						limit_to_coastal = yes
 					}
 				}
@@ -3062,7 +3059,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		completion_reward = {
 			
 			add_doctrine_cost_reduction = {
-				name = TUR_doctrine_navy_buffs2
+				name = TUR_doctrine_navy_buffs
 				cost_reduction = 0.6
 				uses = 3
 				category = naval_doctrine
@@ -5321,6 +5318,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_TUR_TRADITIONALISM }
 	}
+
 	focus = {
 		id = TUR_overthrow_inonus_government
 		icon = GFX_focus_BRA_utilize_security_law
@@ -5523,7 +5521,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 	focus = {
 		id = TUR_global_resource_expansion
 		icon = GFX_focus_generic_central_planning
-		x = 27
+		x = 29
 		y = 6
 		cost = 10
 
@@ -5621,7 +5619,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 					amount = 6
 				}
 				add_resource = {
-					type = chrom
+					type = chromium
 					amount = 10
 				}
 			}
@@ -5657,7 +5655,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 					amount = 7
 				}
 				add_resource = {
-					type = chrom
+					type = chromium
 					amount = 3
 				}
 			}
@@ -5692,7 +5690,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 					amount = 4
 				}
 				add_resource = {
-					type = chrom
+					type = chromium
 					amount = 9
 				}
 			}
@@ -5814,7 +5812,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 	}
 
 	focus = {
-		id = TUR_baghdad_pact
+		id = TUR_secret_baghdad_pact
 		icon = GFX_focus_renounce_the_treaty_of_trianon
 		
 		available = {
@@ -5842,9 +5840,9 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		icon = GFX_focus_IRQ_partition_of_syria
 		cost = 10
 		prerequisite = {
-			focus = TUR_baghdad_pact
+			focus = TUR_secret_baghdad_pact
 		}
-		relative_position_id = TUR_baghdad_pact
+		relative_position_id = TUR_secret_baghdad_pact
 
 		x = 0
 		y = 1
@@ -5861,9 +5859,9 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		icon = GFX_focus_generic_attack_cyprus
 		cost = 5
 		prerequisite = {
-			focus = TUR_baghdad_pact
+			focus = TUR_secret_baghdad_pact
 		}
-		relative_position_id = TUR_baghdad_pact
+		relative_position_id = TUR_secret_baghdad_pact
 		x = 2
 		y = 1
 		available = {
@@ -5887,9 +5885,9 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		icon = GFX_focus_generic_annex_country
 		cost = 5
 		prerequisite = {
-			focus = TUR_baghdad_pact
+			focus = TUR_secret_baghdad_pact
 		}
-		relative_position_id = TUR_baghdad_pact
+		relative_position_id = TUR_secret_baghdad_pact
 		x = -2
 		y = 1
 		available = {
@@ -6307,19 +6305,6 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 					}
 				}
 				custom_trigger_tooltip = { tooltip = TUR_one_persian_ottoman_war_to_end_them_all_requirement_tt }
-				PER = {
-					if = {
-						limit = { has_focus_tree = tos_persian_focus }
-						OR = {
-							has_completed_focus = PER_strategic_nationalizations
-							has_completed_focus = PER_nationalize_aioc
-							has_completed_focus = PER_nationalize_the_means_of_production
-						}
-					}
-					else = {
-						# To-do, find DLC focus's that could suitably go here
-					}
-				}
 			}
 		}
 
@@ -6489,12 +6474,55 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		completion_reward = {
 			add_stability = -0.07
 			add_political_power = 75
+
 			## EVENT GREEKS IN GOVERNMENT
+			
 		}
+		
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
 		}
 	}
+
+	focus = {
+    id = TUR_change_ideology
+    x = -2
+    y = 1
+    icon = GFX_focus_generic_strike_at_democracy1
+	prerequisite = { focus = TUR_GRE_in_government}
+
+    cost = 5
+    search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_TREATYOFSAADABAD }  #CHANGEIT
+	relative_position_id = TUR_GRE_in_government
+
+	available = {
+		fascism > 0.50
+	}
+
+    completion_reward = {
+		retire_country_leader = yes
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		TUR_theodoros_pangalos = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology = fascism_ideology
+					traits={ TUR_unrecognized_genius_trait }
+					expire = "1965.1.1"
+				}
+				promote_leader = yes
+			} 
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+
+    } 
+}
 	focus = {
 		id = TUR_GRE_ultimatum
 		icon = GFX_focus_generic_befriend_greece
@@ -6505,6 +6533,9 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		cost = 5
 		ai_will_do = {
 			base = 10
+		}
+		available = {
+			has_government = fascism
 		}
 
 		completion_reward = {
@@ -6542,7 +6573,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		ai_will_do = {
 			base = 10
 		}
-
+		
 		completion_reward = {
 			add_war_support = 0.02
 			add_ideas = TUR_GRE_fascists_rising
@@ -6605,7 +6636,8 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 
 	focus = {
 		id = TUR_accept_christianity
-		icon = GFX_focus_BUL_restore_the_bulgarian_patriarchate
+		#icon = GFX_focus_BUL_restore_the_bulgarian_patriarchate НЕ ВКЛЮЧАТИ, ТРЕБА ПРОСТО ПРОВЕСТИ ШЛЯХ НОВИЙ ДО ФОТКИ TUR_accept_christianity.dds
+		icon = GFX_focus_TUR_accept_christianity
 		prerequisite = { focus = TUR_greeks_in_army focus = TUR_erasing_turkish_history }
 		x = 1
 		y = 2
@@ -6635,13 +6667,12 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		x = 4
 		y = 3
 		relative_position_id = TUR_course_to_right
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
 		available = {
 			is_subject = no
-			fascism > 0.65
 			## TUR
 			custom_trigger_tooltip = {
 				tooltip = form_country_turkey_required_states_tt
@@ -6985,7 +7016,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 
 	focus = {
 		id = TUR_italian_puppet_kingdoms
-		icon = GFX_focus_ITA_king_vittorio
+		icon = GFX_focus_ETH_the_patriots
 		prerequisite = { focus = TUR_historical_italian_boot }
 		relative_position_id = TUR_historical_italian_boot
 		cost = 7

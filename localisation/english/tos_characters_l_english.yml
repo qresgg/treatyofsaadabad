@@ -1,4 +1,9 @@
 ﻿l_english:
  IRQ_iraqi_fascist_wing: "Fascist Wing"
+ TUR_theodoros_pangalos: "Theodoros Pangalos"
+
+ ### TRAITS
  PER_eranshahr_emperor_trait: "Emperor of Eranshahr"
  TUR_byzantium_empire_emperor_trait: "Emperor of Byzantium Empire"
+ TUR_unrecognized_genius_trait: "Unrecognized Genius"
+ TUR_recognized_genius_trait: "Recognized Genius"

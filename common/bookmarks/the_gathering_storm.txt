@@ -555,23 +555,6 @@ bookmarks = {
 				GRE_stage_an_incident_in_the_bosporus
 			}
 		}
-
-		"TUR"={
-			minor = yes
-			history = "TUR_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				TUR_sectarian_woes
-				TUR_disorganised_armed_forces
-				TUR_debt_council
-			}
-			focuses = {
-				TUR_ratify_the_six_arrows
-				TUR_reaffirm_the_balkan_pact
-				TUR_pivot_to_the_past
-			}
-		}
-		
 		
 		"LIT"={
 			minor = yes
@@ -865,6 +848,24 @@ bookmarks = {
 				COG_the_kingdom_of_kongo_focus
 			}
 		}
+
+		TUR = {
+			minor = yes
+			history = TUR_GATHERING_STORM_DESC
+			ideology = neutrality
+			ideas = {
+				TUR_sectarian_woes
+				TUR_debt_council
+				IRQ_saadabad_spheres_of_influence
+				TUR_traumatized_nation
+			}
+			focuses = {
+				TUR_ratify_the_six_arrows
+				TUR_restore_byzantium
+				TUR_pivot_to_the_past
+			}
+		}
+		
 		PER = {
 			minor = yes
 			history = PER_GATHERING_STORM_DESC
@@ -878,12 +879,12 @@ bookmarks = {
 			focuses = {
 				PER_fight_for_iran
 				PER_glory_of_cyrus
-				PER_strengthen_iranian_parliament
+				PER_second_sasanian_empire
 			}
 		}
 		AFG = {
 			minor = yes
-			history = "AFG_GATHERING_STORM_DESC" #might need an edit because it is not very good at the moment.
+			history = AFG_GATHERING_STORM_DESC #might need an edit because it is not very good at the moment.
 			ideology = neutrality
 			available = { has_dlc = "Graveyard of Empires" }
 			ideas = {
@@ -899,7 +900,7 @@ bookmarks = {
 		}
 		IRQ = {
 			minor = yes
-			history = "IRQ_GATHERING_STORM_DESC"
+			history = IRQ_GATHERING_STORM_DESC
 			ideology = neutrality
 			available = { has_dlc = "Graveyard of Empires" }
 			ideas = {
@@ -911,7 +912,7 @@ bookmarks = {
 				IRQ_rally_behind_the_hashemite_dynasty
 				IRQ_bakr_sidqi_coup
 				#Replace this with KUR focus
-				IRQ_decouple_from_the_pound
+				IRQ_secret_baghdad_pact
 			}
 		}
 		effect = {

@@ -511,6 +511,7 @@ if = {
 	recruit_character = TUR_nihal_atsiz
 	recruit_character = TUR_zeki_velidi_togan
 	recruit_character = TUR_nazim_hikmet
+	recruit_character = TUR_theodoros_pangalos
 
 	recruit_character = TUR_ahmet_fevzi_pasha # Ottoman Sultanate general. Not available at game start
 	recruit_character = TUR_refet_pasha # Ottoman Sultanate general. Not available at game start
@@ -548,6 +549,7 @@ if = {
 	recruit_character = TUR_kazim_ozalp
 	recruit_character = TUR_mumtaz_okmen
 	recruit_character = TUR_kazim_orbay
+	recruit_character = TUR_theodoros_pangalos
 }
 
 if = {

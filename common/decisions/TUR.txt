@@ -152,7 +152,30 @@ TUR_dis_politic_cat = {
 		}
 	}
 }
+TUR_accept_christianity_cat = {
+	TUR_accept_christianity_in_big_city = {
+		icon = GFX_decision_christianity_campaign
+		fire_only_once = yes
+		cost = 15
+		
+		state_target = yes
+		targets = { 49 797 339 344 354 356 355 }
 
+		visible = {
+			has_completed_focus = TUR_accept_christianity
+		}
+
+		available = {
+			has_completed_focus = TUR_accept_christianity
+		}
+		
+		days_remove = 25
+		
+		remove_effect = {
+			add_stability = 0.02
+		}
+	}
+}
 
 TUR_fascist_category = {
 	TUR_reclaim_trabzon = {

@@ -7692,7 +7692,7 @@ focus_tree = {
 
 	focus = {
 		id = IRQ_integrate_arabian_puppet_states
-		icon = GFX_goal_generic_territory_or_war
+		icon = GFX_focus_generic_subjugation
 		prerequisite = { focus = IRQ_rally_the_arab_world }
 		x = -1
 		y = 2

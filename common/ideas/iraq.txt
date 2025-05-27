@@ -80,7 +80,7 @@ ideas = {
 			}
 			picture = generic_fascism_drift_bonus
 			modifier = {
-				fascism_drift = 0.05
+				fascism_drift = 0.2
 			}
 		}
 	

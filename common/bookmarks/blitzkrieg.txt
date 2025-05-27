@@ -1,6 +1,6 @@
 #####-----> Blitzkrieg (Bookmark) <><> <><> <><> <><> <><>
 
-### This scenario is not supported in The Road to 56, so please don't edit this file.
+### This scenario is not supported in TOS , so please don't edit this file.
 ### Additionally, DO NOT delete or 'clear' this file either, as otherwise some elements of the main menu UI will break.
 
 bookmarks = {

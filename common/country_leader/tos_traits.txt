@@ -21,4 +21,19 @@ leader_traits = {
 			factor = 2
 		}
 	}
+	TUR_unrecognized_genius_trait = {
+		sprite = 5
+		political_power_factor = -0.1
+		stability_factor = -0.10
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	TUR_recognized_genius_trait = {
+		political_power_factor = 0.1
+		ai_will_do = {
+			factor = 2
+		}
+	}
 }

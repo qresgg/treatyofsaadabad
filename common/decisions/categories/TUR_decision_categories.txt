@@ -12,6 +12,19 @@ TUR_kurdish_rebellion_cat = {
 	}
 }
 
+TUR_accept_christianity_cat = {
+	icon = GFX_decision_category_christianity
+	priority = 2
+
+	allowed = {
+		original_tag = TUR
+	}
+	visible = {
+		############### NEED TO CHANGE BEFORE RELEASE ##################
+		# has_completed_focus = TUR_accept_christianity 
+	}
+}
+
 TUR_dis_politic_cat = {
 	icon = GFX_decision_category_border_conflicts
   	priority = 2
@@ -21,6 +34,7 @@ TUR_dis_politic_cat = {
 	}
 	
 	visible = {
+		############### NEED TO CHANGE BEFORE RELEASE ##################
 		# has_idea = IRQ_saadabad_spheres_of_influence
 	}
 }

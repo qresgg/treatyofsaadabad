@@ -1,4 +1,17 @@
 ﻿l_english:
+
+  #####################
+  ###### GLOBAL #######
+  #####################
+  IRQ_secret_baghdad_pact: "Secret Baghdad pact"
+  IRQ_secret_baghdad_pact_desc: "A secret pact with .... that could shift the balance of power in the region."
+  PER_secret_baghdad_pact: "Secret Baghdad Pact"
+  PER_secret_baghdad_pact_desc: "A clandestine agreement will be forged in Baghdad to secure Iran's strategic interests."
+  TUR_secret_baghdad_pact: "Ratify the Baghdad Pact"
+  TUR_secret_baghdad_pact_desc: "Aligning with regional powers through the Baghdad Pact can secure our position and provide mutual defense benefits."
+  AFG_secret_baghdad_pact: "Baghdad Pact"
+  AFG_secret_baghdad_pact_desc: "Joining the Baghdad Pact will strengthen Afghanistan's ties with regional powers and enhance our security."
+
   #####################
   ####### IRAQ ########
   #####################
@@ -16,8 +29,6 @@
   IRQ_clear_in_the_desert_desc: "With neutrality leaning in our favor, it's time to handle our interests in Kuwait. A diplomatic ultimatum or war—either way, we will gain what is rightfully ours."
   IRQ_course_to_south: "Course to the South"
   IRQ_course_to_south_desc: "A strategic move to claim southern territories. If negotiations fail, we will assert our claim by force."
-  IRQ_secret_baghdad_pact: "Secret Baghdad pact"
-  IRQ_secret_baghdad_pact_desc: "A secret pact with .... that could shift the balance of power in the region."
   IRQ_strengthen_relations_with_afghanistan: "Strengthen Relations With Afghanistan"
   IRQ_dissolve_golden_square: "Dissolve Golden Square"
   IRQ_course_to_north_africa: "Course to North Africa"
@@ -164,8 +175,6 @@
   PER_regional_reconstruction_fabrics_desc:0 "We will rebuild textile industries across our regions to serve both civilian and military needs."
   PER_regional_reconstruction_military:0 "Reconstruct Regional Military Industry"
   PER_regional_reconstruction_military_desc:0 "Strengthening regional military factories will boost local development and national security."
-  PER_secret_baghdad_pact:0 "Secret Baghdad Pact"
-  PER_secret_baghdad_pact_desc:0 "A clandestine agreement will be forged in Baghdad to secure Iran's strategic interests."
   PER_international_legion:0 "Form International Legion"
   PER_international_legion_desc:0 "Volunteers from across the world will join the Iranian cause in a unified fighting force."
   PER_lowkey_expansionism:0 "Low-Key Expansionism"
@@ -810,8 +819,6 @@
   TUR_naval_air_desc: "Develop and deploy aircraft specifically designed for naval operations, including reconnaissance and bombing."
   TUR_naval_bombs: "Naval Bombing Program"
   TUR_naval_bombs_desc: "Focus on aerial attacks against enemy fleets and ports to dominate the seas from the air."
-  TUR_baghdad_pact: "Ratify the Baghdad Pact"
-  TUR_baghdad_pact_desc: "Aligning with regional powers through the Baghdad Pact can secure our position and provide mutual defense benefits."
   TUR_operation_dodecanes: "Operation Dodecanese"
   TUR_operation_dodecanes_desc: "Initiate a campaign to seize control of the Dodecanese Islands from foreign powers."
   TUR_partition_of_syria: "Partition of Syria"
@@ -910,9 +917,12 @@
   TUR_bombers_desc: "To achieve strategic dominance, we must invest in a capable bomber fleet. With advanced bombers, we can strike deep into enemy territory and disrupt their supply lines and infrastructure."
   TUR_sicilian_airbase: "Develop the Sicilian Airbase"
   TUR_sicilian_airbase_desc: "Sicily's strategic location in the Mediterranean offers a key operational advantage. Establishing a dedicated airbase on the island will bolster our air capabilities and secure vital air routes."
-
-
-
+  TUR_change_ideology:0 "Change Ideology"
+  TUR_change_ideology_desc:0 "Iraq must abandon the weakness of the old system. With rising fascist sentiment, a strong leadership is required to direct the nation forward with a firm ideology."
+  TUR_make_hard_decision:0 "Hard decision..."
+  TUR_make_hard_decision_desc:0 "The time has come to make a difficult choice. We must decide whether to embrace the path of fascism or to seek a different course for our nation."
+  TUR_blood_consequence:0 "Blood Consequences"
+  TUR_blood_consequence_desc:0 "The path we choose will have profound consequences for our people. We must be prepared to face the challenges and sacrifices that lie ahead."
 
   ## TOOLTIPS
 
@@ -959,6 +969,8 @@
   TUR_neobyz_make_kingdom_visighotic_tt:0 "Unlocks decision to form right §YVisighotics§!"
   TUR_neobyz_make_kingdom_suebi_tt:0 "Unlocks decision to form §YSuebi Kingdom§! as our §YDux§!"
   TUR_unlock_decisions_to_become_christianity_state_tt:0 "Unlocks decisions to §Yaccept Christianity§!"
+  TUR_make_hard_decision_tt:0 "Unlocks decision to make a §Yhard decision§! about the future of §Ythe country§!"
+  TUR_assasination_of_mustafa_kemal_tt:0 "Unlocks decision to assassinate §YMustafa Kemal Atatürk§!. This will lead to a civil war. Or no?"
 
   #####################
   #####  UNKNOWN ######
