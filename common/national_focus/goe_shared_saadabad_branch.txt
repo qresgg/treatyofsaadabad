@@ -34,7 +34,7 @@ joint_focus = {
 	}
 
 	offset = {
-		x = 12
+		x = 18
 		y = 6
 		trigger = {
 			tag = AFG

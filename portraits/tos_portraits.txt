@@ -65,7 +65,6 @@ continent = {
 		fascism = {
 				male = { 
 					"GFX_Portrait_Europe_Generic_3"
-					"gfx/leaders/IRQ/Portrait_IRAQ_Fascist_Wing.dds"
 			}
 		}
 		neutrality = {

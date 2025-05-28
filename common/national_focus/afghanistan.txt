@@ -1097,7 +1097,7 @@ focus_tree = {
 		id = AFG_maintain_quami
 		icon = GFX_focus_AFG_quami 
 		
-		x = 4
+		x = 15
 		y = 0
 		#relative_position_id = AFG_expand_telegraph_network
 		mutually_exclusive = { focus = AFG_adopt_nufus }
@@ -2433,10 +2433,689 @@ focus_tree = {
 	}
 
 	focus = {
+		id = AFG_knights_of_faith
+		icon = GFX_focus_AFG_secure_dynasty 
+		mutually_exclusive = { focus = AFG_contact_amanullah_loyalists }
+		cost = 10
+		prerequisite = { focus = AFG_against_kabul }
+		x = 8
+		y = 1
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		completion_reward = {
+			add_ideas = AFG_knights_of_faith_1
+		}
+	}
+	focus = {
+		id = AFG_persian_supplies
+		icon = GFX_focus_generic_reinforcing_the_supply_network
+		relative_position_id = AFG_knights_of_faith
+		prerequisite = { focus = AFG_knights_of_faith }
+		cost = 5
+		y = 1
+		x = -1
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		completion_reward = {
+			## EVENT FOR PERSIA
+			## PERSIA POV:
+			## 1. OPTION - give 5000 weapons when civil war started (gives 150 pp -5000)
+			## 2. OPTION - give 2500 weapons when civil war started (gives 75 pp -2500)
+			## 3. OPTION - give 1000 weapons when civil war started (gives 35 pp -1000)
+			### SIMILAR AFG_request_german_support
+		}
+	}
+	focus = {
+		id = AFG_tajiks_mujaheddins
+		icon = GFX_focus_AFG_adopt_nufus
+		relative_position_id = AFG_knights_of_faith
+		prerequisite = { focus = AFG_knights_of_faith }
+		cost = 5
+		y = 1
+		x = 1
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		completion_reward = {
+			custom_effect_tooltip = AFG_tajiks_mujaheddins_tt
+		}
+	}
+	focus = {
+		id = AFG_war_of_faith
+		cost = 10
+		icon = GFX_focus_generic_total_war
+		relative_position_id = AFG_knights_of_faith
+		prerequisite = { focus = AFG_tajiks_mujaheddins focus = AFG_persian_supplies }
+		y = 2
+		x = 0
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		completion_reward = {
+			set_variable = {
+				var = AFG_total_anti_emir_size #used to calculate how big portion of the army that is NOT supporting the communists
+				value = party_popularity@democratic #democratic support
+			}
+			
+			add_to_variable = {
+				var = AFG_total_anti_emir_size
+				value = party_popularity@communism #adds fascist support to variable
+			}
+			
+			add_to_variable = {
+				var = AFG_total_anti_emir_size
+				value = party_popularity@neutrality #adds non-aligned support to variable
+			}
+
+			IF = {
+				limit = { has_completed_focus = AFG_secure_army_support }
+				add_to_variable = {
+					var = AFG_total_anti_emir_size
+					value = -0.3
+				}
+			}
+
+			start_civil_war = {
+				ruling_party = fascism
+				ideology = neutrality #SPLITTING TAG
+				size = AFG.AFG_total_anti_emir_size
+				states = { 267 1007 415 1006 1005 }
+			}
+			division_template = {
+				name = "Pashtun Militia"		
+				#division_names_group = SWE_BS_01
+				is_locked = no
+				#template_counter = 69
+				regiments = {
+					militia = { x = 0 y = 0 }
+					militia = { x = 0 y = 1 }
+					militia = { x = 1 y = 0 }
+					militia = { x = 1 y = 1 }
+				}
+				#division_cap = 0
+				#override_model = BRA_militia_alt_0_entity
+			}
+			hidden_effect = {
+				set_popularities = {
+					neutrality = 0
+					communism = 0
+					democratic = 0
+					fascism = 100
+				}
+			}
+
+			random_country = {
+				limit = {
+					original_tag = AFG
+					has_civil_war = yes
+					NOT = { has_government = fascism }
+				}
+				division_template = {
+					name = "Loyalist Militia"		
+					#division_names_group = SWE_BS_01
+					is_locked = no
+					#template_counter = 69
+					regiments = {
+						militia = { x = 0 y = 0 }
+						militia = { x = 0 y = 1 }
+						militia = { x = 1 y = 0 }
+						militia = { x = 1 y = 1 }
+					}
+					#division_cap = 0
+					#override_model = BRA_militia_alt_0_entity
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "division_template =\"Loyalist Militia\" start_experience_factor = 0.2 start_equipment_factor = 1.0"
+						owner = PREV
+						count = 25
+					} 
+				}
+				hidden_effect = {
+					IF = {
+						limit = {
+							ENG = {
+								NOT = {
+									OR = {
+										has_government = fascism
+										is_in_faction_with = AFG
+										is_in_faction_with = GER
+									}
+								}
+							}
+						}
+						ENG = {
+							country_event = {
+								id = AFG_political_events.95
+								days = 7
+								random_days = 3
+							}
+						}
+					}
+				}
+			}
+
+			## Focus bonuses ##
+			IF = {
+				limit = {
+					has_country_flag = AFG_germany_will_aid_amanullah
+				}
+				country_event = {
+					id = AFG_political_events.54
+					days = 1
+				}
+			}
+
+			IF = {
+				limit = {
+					has_completed_focus = AFG_tajiks_mujaheddins
+					has_government = fascism
+				}
+				AFG_faqir_of_ipi = {
+					set_character_flag = AFG_rural_cw_started
+				}
+				AFG_mazrak_zadran = {
+					set_character_flag = AFG_rural_cw_started
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "division_template =\"Pashtun Militia\" start_experience_factor = 0.2 start_equipment_factor	= 1.0"
+						owner = ROOT
+						count = 15
+					} 
+				}
+			}
+
+			##### NOT LEARNED FOCUSES
+			IF = {
+				limit = {
+					NOT = { has_completed_focus = AFG_tajiks_mujaheddins}
+					has_government = fascism
+				}
+				AFG_faqir_of_ipi = {
+					set_character_flag = AFG_rural_cw_started
+				}
+				AFG_mazrak_zadran = {
+					set_character_flag = AFG_rural_cw_started
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "division_template =\"Pashtun Militia\" start_experience_factor = 0.2 start_equipment_factor	= 1.0"
+						owner = ROOT
+						count = 6
+					} 
+				}
+			}
+			remove_ideas = AFG_mohammad_zahir_shah_ns_negative
+			remove_ideas = AFG_turkish_military_mission
+			set_cosmetic_tag = AFG_faith
+		}
+	}
+	focus = {
+		id = AFG_burn_condoms ## two years plan no condoms
+		icon = GFX_focus_RAJ_enrollment_of_dali_children
+		relative_position_id = AFG_war_of_faith
+		prerequisite = { focus = AFG_war_of_faith }
+		y = 1
+		x = -3
+		cost = 6
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		### manpopulation in month
+		completion_reward = {
+			add_timed_idea = {
+				idea = AFG_no_condoms_in_country
+				days = 729
+			}
+		}
+	}
+	focus = {
+		id = AFG_make_official_faith
+		cost = 6
+		icon = GFX_focus_PER_islamic_solidarity
+		relative_position_id = AFG_war_of_faith
+		prerequisite = { focus = AFG_war_of_faith }
+		y = 1
+		x = -1
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		### faith
+		completion_reward = {
+			add_ideas = AFG_islamian_state
+		}	
+	}
+	focus = {
+		id = AFG_research_in_mind
+		cost = 6
+		icon = GFX_focus_research2
+		relative_position_id = AFG_war_of_faith
+		prerequisite = { focus = AFG_war_of_faith }
+		y = 1
+		x = 1
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		### 5 research slots -25% research speed
+		completion_reward = {
+			add_research_slot = 5
+			add_ideas = AFG_research_in_mind
+		}
+	}
+	focus = {
+		id = AFG_expand_factories
+		cost = 6
+		icon = GFX_focus_generic_reorient_production
+		relative_position_id = AFG_war_of_faith
+		prerequisite = { focus = AFG_war_of_faith }
+		y = 1
+		x = 3
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = ues
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = AFG_rethinking_reintegration
+		icon = GFX_focus_generic_industrialists
+		relative_position_id = AFG_war_of_faith
+		cost = 10
+		prerequisite = { focus = AFG_expand_factories focus = AFG_research_in_mind}
+		prerequisite = { focus = AFG_make_official_faith focus = AFG_burn_condoms}
+		y = 2
+		x = 0
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		#### -debufs 50% pushtunvalli
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = AFG_pashtunwali
+				add_idea = AFG_pashtunwali_domination_fascism
+			}
+		}
+	}
+	focus = {
+		id = AFG_holy_government
+		icon = GFX_focus_generic_improve_the_administration
+		relative_position_id = AFG_war_of_faith
+		prerequisite = { focus = AFG_rethinking_reintegration }
+		y = 3
+		x = -2
+		cost = 5
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		#### government buffs
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 120
+		}
+	}
+
+	focus = {
+		id = AFG_sinkiang_war
+		icon = GFX_focus_AFG_sinkang_intervention
+		relative_position_id = AFG_holy_government
+		prerequisite = { focus = AFG_holy_government }
+		y = 1
+		x = -2
+		cost = 5
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		#### sikkian war or request territories (15%)
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = SIK
+				}
+				add_claim_by = ROOT
+				create_wargoal = {
+					target = SIK
+					type = take_claimed_state
+					expire = 0
+				}
+			}
+		}
+	}
+	focus = {
+		id = AFG_tibetian_friend_pact
+		icon = GFX_focus_GRE_a_land_of_mountains
+		relative_position_id = AFG_sinkiang_war
+		prerequisite = { focus = AFG_sinkiang_war }
+		y = 1
+		x = 0
+		cost = 6
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		completion_reward = {
+			#### EVENT - tibet become puppet of afg
+		}
+	}
+
+	focus = {
+		id = AFG_faith_revolt
+		icon = GFX_focus_RAJ_seek_allies_with_the_muslim_league
+		relative_position_id = AFG_holy_moly
+		prerequisite = { focus = AFG_holy_moly }
+		y = 1
+		x = 2
+		cost = 5
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		#### send islams to india
+		completion_reward = {
+			custom_effect_tooltip = AFG_faith_revolt_decision_unlock_tt
+		}
+	}
+	focus = {
+		id = AFG_islam_revolt_in_india
+		icon = GFX_focus_RAJ_indian_gurkhas
+		relative_position_id = AFG_faith_revolt
+		prerequisite = { focus = AFG_faith_revolt }
+		y = 1
+		x = 0
+		cost = 10
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		#### make islam revolution in india
+		completion_reward = {
+			custom_effect_tooltip = AFG_make_revolt_decision_unlock_tt
+		}
+	}
+	focus = {
+		id = AFG_holy_moly
+		icon = GFX_focus_RAJ_institutional_money_laundering
+		relative_position_id = AFG_war_of_faith
+		prerequisite = { focus = AFG_rethinking_reintegration }
+		y = 3
+		x = 2
+		cost = 5
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		#### holy path
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.15
+		}
+	}
+	focus = {
+		id = AFG_baghdad_pact
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		relative_position_id = AFG_war_of_faith
+		prerequisite = { focus = AFG_holy_government focus = AFG_holy_moly }
+		y = 4
+		x = 0
+		cost = 0
+		bypass = {
+			has_idea = IRQ_saadabad_spheres_of_influence
+		}
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		# allow_branch = {
+		# 	has_idea = IRQ_saadabad_spheres_of_influence
+		# }
+		#### baghdad pact
+	}
+	focus = {
+		id = AFG_border_lands
+		icon = GFX_focus_generic_mountain_fortification
+		relative_position_id = AFG_baghdad_pact
+		prerequisite = { focus = AFG_baghdad_pact }
+		cost = 5
+		y = 1
+		x = 0
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		#### add border protection to all borders
+		completion_reward = {
+			custom_effect_tooltip = AFG_border_lands_tt ## adds border fortification level 2 to soviet and india borders
+			RAJ = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = FRA_extend_the_maginot_line_focus_neg
+				}
+			}
+			SOV = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = FRA_extend_the_maginot_line_focus_neg
+				}
+			}
+			hidden_effect = {
+				415 = {
+					add_building_construction = {
+						type = bunker
+						province = 4893
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 10476
+						level = 2
+						instant_build = yes
+					}
+				}
+				1007 = {
+					add_building_construction = {
+						type = bunker
+						province = 7448
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 7584
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 12248
+						level = 2
+						instant_build = yes
+					}
+				}
+				1005 = {
+					add_building_construction = {
+						type = bunker
+						province = 12314
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 12653
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 7519
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 10826
+						level = 2
+						instant_build = yes
+					}
+				}
+				1006 = {
+					add_building_construction = {
+						type = bunker
+						province = 12831
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 5082
+						level = 2
+						instant_build = yes
+					}
+				}
+				1008 = {
+					add_building_construction = {
+						type = bunker
+						province = 8090
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 5064
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 5020
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 4949
+						level = 2
+						instant_build = yes
+					}
+				}
+				1009 = {
+					add_building_construction = {
+						type = bunker
+						province = 2101
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = AFG_request_tajikistan
+		cost = 5
+		icon = GFX_focus_AFG_develop_tajikistan
+		relative_position_id = AFG_baghdad_pact
+		prerequisite = { focus = AFG_baghdad_pact }
+		y = 1
+		x = 2
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		#### tajikistan and claims to 732 405
+	}
+	focus = {
+		id = AFG_request_india
+		cost = 6
+		icon = GFX_focus_generic_annex_country
+		relative_position_id = AFG_baghdad_pact
+		prerequisite = { focus = AFG_baghdad_pact }
+		y = 1
+		x = -2
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		completion_reward = {
+			#### EVENT request 442 987 988
+			#### MORE CHANCE TO RECEIVE territories - not in war, has good opinion, in alliance, has powerful army	
+		}
+	}
+	focus = {
+		id = AFG_sell_children
+		cost = 6
+		icon = GFX_focus_RAJ_special_economic_zones
+		relative_position_id = AFG_baghdad_pact
+		prerequisite = { focus = AFG_request_india }
+		y = 2
+		x = -2
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		#### decisions to sell kids
+		completion_reward = {
+			custom_effect_tooltip = AFG_sell_children_decisions_unlock_tt
+		}
+	}
+
+	focus = {
+		id = AFG_afghan_indian_war
+		icon = GFX_focus_attack_india
+		cost = 10
+		prerequisite = { focus = AFG_request_tajikistan }
+		prerequisite = { focus = AFG_request_india}
+		relative_position_id = AFG_baghdad_pact
+		mutually_exclusive = { focus = AFG_afghan_international_legion_to_help_indian_islams }
+		y = 2
+		x = 0
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		completion_reward = {
+			declare_war_on = {
+				target = RAJ
+				type = take_state_focus
+			}
+		}
+	}
+	focus = {
+		id = AFG_afghan_international_legion_to_help_indian_islams
+		icon = GFX_focus_RAJ_military_into_the_workforce
+		prerequisite = { focus = AFG_islam_revolt_in_india }
+		relative_position_id = AFG_islam_revolt_in_india
+		mutually_exclusive = { focus = AFG_afghan_indian_war}
+		y = 1
+		x = 0
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		#### legion to help islams in india
+		completion_reward = {
+			custom_effect_tooltip = AFG_send_peacemakers_to_india_tt
+		}
+	}
+	focus = {
+		id = AFG_main_manufacturers_opium
+		icon = GFX_focus_RAJ_legalize_the_opium_trade
+		relative_position_id = AFG_rethinking_industrialization
+		prerequisite = {
+			focus = AFG_rethinking_industrialization
+		}
+		cost = 5
+		y = 1
+		x = 0
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		#### opium
+		completion_reward = {
+			custom_effect_tooltip = AFG_sell_opium_tt
+		}
+	}
+	focus = {
+		id = AFG_integrate_muslim_buddi
+		icon = GFX_focus_RAJ_hindutava
+		relative_position_id = AFG_afghan_indian_war
+		prerequisite = {
+			focus = AFG_afghan_international_legion_to_help_indian_islams
+			focus = AFG_afghan_indian_war
+		}
+		cost = 10
+		y = 1
+		x = 0
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		#### buddist muslims is our historical 
+		completion_reward = {
+			custom_effect_tooltip = AFG_integrate_muslim_buddi_tt
+		}
+	}
+
+	focus = {
+		id = AFG_afghans_and_indian_state
+		icon = GFX_focus_RAJ_the_other_solution
+		relative_position_id = AFG_integrate_muslim_buddi
+		prerequisite = {
+			focus = AFG_integrate_muslim_buddi
+		}
+		cost = 10
+		y = 1
+		x = 0
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		#### buddist muslims is our historical 
+		completion_reward = {
+			custom_effect_tooltip = AFG_integrate_india_tt
+		}
+	}
+
+
+	focus = {
 		id = AFG_against_kabul
 		icon = GFX_focus_AFG_against_kabul 
 		#prerequisite = { focus = }
-		x = -2
+		x = 3
 		y = 0
 		#relative_position_id = AFG_expand_telegraph_network
 		mutually_exclusive = { focus = AFG_support_king_zahir  }
@@ -2470,13 +3149,11 @@ focus_tree = {
 		id = AFG_contact_amanullah_loyalists
 		icon = GFX_focus_AFG_contact_amanullah_loyalists_alt  
 		prerequisite = { focus = AFG_against_kabul }
-		x = 0
+		x = -2
 		y = 1
-		relative_position_id = AFG_against_kabul
-		#mutually_exclusive = { 
-			#focus = AFG_rally_the_pashtuns 
-			#focus = AFG_rally_the_tajiks 
-		#}
+		mutually_exclusive = {
+			focus = AFG_knights_of_faith
+		}
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -2802,7 +3479,6 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = AFG_return_of_the_emir
-		#mutually_exclusive = { focus = AFG_towards_an_amanullah_caliphate }
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -5326,9 +6002,8 @@ focus_tree = {
 		id = AFG_support_king_zahir
 		icon = GFX_focus_AFG_support_king_zahir 
 		#prerequisite = { focus = AFG_join_axis }
-		x = -10
+		x = -12
 		y = 0
-		relative_position_id = AFG_against_kabul
 		mutually_exclusive = { focus = AFG_against_kabul }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		cost = 5
@@ -5736,7 +6411,7 @@ focus_tree = {
 
 	focus = {
 		id = AFG_secure_dynasty
-		icon = GFX_focus_AFG_secure_dynasty 
+		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = AFG_reform_2 }
 		x = 0
 		y = 1
@@ -5911,6 +6586,62 @@ focus_tree = {
 				#custom_effect_tooltip = AFG_ideology_on_the_rise_tt
 			}
 		}
+	}
+
+	### GLOBAL RESOURCE EXPANSION
+
+	focus = {
+		id = AFG_global_resource_expansion
+		x = 32
+		y = 8
+	}
+	focus = {
+		id = AFG_expansion_to_north
+		relative_position_id = AFG_global_resource_expansion
+		x = 3
+		y = 1
+	}
+	focus = {
+		id = AFG_resources_tajikistan
+		relative_position_id = AFG_expansion_to_north
+		x = 2
+		y = 1
+	}
+	focus = {
+		id = AFG_kyrkystan_resources 
+		relative_position_id = AFG_expansion_to_north
+		x = 0
+		y = 1
+	}
+	focus = {
+		id = AFG_expansion_to_east
+		relative_position_id = AFG_global_resource_expansion
+		x = 0
+		y = 1
+	}
+	focus = {
+		id = AFG_kashmir_resources
+		relative_position_id = AFG_expansion_to_east
+		x = -1
+		y = 1
+	}
+	focus = {
+		id = AFG_penjab_resources
+		relative_position_id = AFG_expansion_to_east
+		x = 1
+		y = 1
+	}
+	focus = {
+		id = AFG_expansion_to_south
+		relative_position_id = AFG_global_resource_expansion
+		x = -3
+		y = 1
+	}
+	focus = {
+		id = AFG_border_regions
+		relative_position_id = AFG_expansion_to_south
+		x = 0
+		y = 1
 	}
 
 	focus = {

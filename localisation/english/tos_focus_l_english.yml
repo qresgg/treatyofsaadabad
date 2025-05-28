@@ -923,6 +923,10 @@
   TUR_make_hard_decision_desc:0 "The time has come to make a difficult choice. We must decide whether to embrace the path of fascism or to seek a different course for our nation."
   TUR_blood_consequence:0 "Blood Consequences"
   TUR_blood_consequence_desc:0 "The path we choose will have profound consequences for our people. We must be prepared to face the challenges and sacrifices that lie ahead."
+  TUR_renew_the_soviet_non_aggression_pact_focus_days_tt:0 "Has been 105 or more days since focus §YRenew the Soviet Non-Agressive Pact§! has been completed"
+  TUR_renew_the_soviet_non_aggression_pact_current_days_tt:0 "Current days are: [?TUR_renew_the_soviet_non_aggression_pact_flag:days|Y0]"
+  TUR_anglo_turkish_friendship_agreement_focus_days_tt:0 "Has been 105 or more days since focus §YAnglo-Turkish Friendship Agreement§! has been completed"
+  TUR_anglo_turkish_friendship_agreement_current_days_tt:0 "Current days are: [?TUR_anglo_turkish_friendship_agreement_flag:days|Y0]"
 
   ## TOOLTIPS
 

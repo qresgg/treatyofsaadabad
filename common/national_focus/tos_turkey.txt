@@ -6636,7 +6636,6 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 
 	focus = {
 		id = TUR_accept_christianity
-		#icon = GFX_focus_BUL_restore_the_bulgarian_patriarchate НЕ ВКЛЮЧАТИ, ТРЕБА ПРОСТО ПРОВЕСТИ ШЛЯХ НОВИЙ ДО ФОТКИ TUR_accept_christianity.dds
 		icon = GFX_focus_TUR_accept_christianity
 		prerequisite = { focus = TUR_greeks_in_army focus = TUR_erasing_turkish_history }
 		x = 1
@@ -7605,7 +7604,6 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		available = {
 			EGY = { 
 				OR = {
-					has_completed_focus = EGY_reestablish_the_ottoman_alliance
 					AND = {
 						is_subject_of = TUR 
 						NOT = {

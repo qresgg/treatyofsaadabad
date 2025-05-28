@@ -7711,7 +7711,6 @@ form_sasanian_empire_category = {
 		}
 		highlight_states = {
 			highlight_state_targets = {
-				state = 586
 				state = 589
 				state = 588
 				state = 882
@@ -7720,7 +7719,6 @@ form_sasanian_empire_category = {
 			}
 		}
 		complete_effect = {
-			586 = { add_core_of = ROOT }
 			589 = { add_core_of = ROOT }
 			588 = { add_core_of = ROOT }
 			882 = { add_core_of = ROOT }
@@ -7824,6 +7822,7 @@ form_kashuan_empire_category = {
 				state = 742
 				state = 732
 				state = 619
+				state = 586
 			}
 		}
 	}

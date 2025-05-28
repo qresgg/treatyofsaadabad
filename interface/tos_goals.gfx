@@ -69,6 +69,10 @@ spriteTypes = {
 	################
 
 	SpriteType = {
+		name = "GFX_focus_TUR_accept_christianity"
+		texturefile = "gfx/interface/goals/focus_TUR_accept_christianity.dds"
+	}
+	SpriteType = {
 		name = "GFX_focus_TUR_ita_historical_boot"
 		texturefile = "gfx/interface/goals/focus_TUR_ita_historical_boot.dds"
 	}
