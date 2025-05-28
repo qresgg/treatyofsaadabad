@@ -949,6 +949,61 @@ TUR_upgrade_fundamentalist_defiance_effect_tt:1 "The £faction_tur_traditionalis
 TUR_placate_fundamentalist_state_effect_tt:1 "The £faction_tur_traditionalist §YTraditionalists§! shall cease all rhetoric against the government in §Y[TUR_fundamentalist_state.GetName]§! and now urge active cooperation."
 TUR_placate_fundamentalist_state_all_targets_effect_tt:0 "The £faction_tur_traditionalist §YTraditionalists§! shall collectively cease their opposition to the government."
 
+### AFGHANISTAN
+
+tos_afghanistan.1.t: "Iran Considers Supplying Weapons"
+tos_afghanistan.1.d: "The Afghan civil war grows more intense. Our neighbors in Afghanistan are requesting military support. Should we send them arms and equipment?"
+tos_afghanistan.1.a: "Send 5000 Infantry Equipment"
+tos_afghanistan.1.b: "Send 2500 Infantry Equipment"
+tos_afghanistan.1.c: "Send 1000 Infantry Equipment"
+tos_afghanistan.1.d: "Refuse to Send Anything"
+tos_afghanistan.2.t: "Iranian Military Support Arrives"
+tos_afghanistan.2.d: "Our allies in Iran have sent us a large shipment of 5000 infantry equipment. This generous support will greatly assist our war effort."
+tos_afghanistan.2.a: "Excellent."
+tos_afghanistan.3.t: "Iran Sends Weapons"
+tos_afghanistan.3.d: "Iran has sent 2500 infantry equipment to help our war effort. While not massive, it’s still a meaningful gesture."
+tos_afghanistan.3.a: "We appreciate it."
+tos_afghanistan.4.t: "Iran Sends Minimal Support"
+tos_afghanistan.4.d: "Iran has sent us only 1000 infantry equipment. It’s a modest contribution, but we’ll put it to use."
+tos_afghanistan.4.a: "Better than nothing."
+tos_afghanistan.5.t: "Iran Refuses Support"
+tos_afghanistan.5.d: "Iran has declined our request for military assistance. We will have to manage on our own."
+tos_afghanistan.5.a: "Disappointing."
+tos_afghanistan.10.t: "Afghan Demands for Territory"
+tos_afghanistan.10.d: "The Afghan government has formally demanded the transfer of several territories which they claim rightfully belong to them. They assert historical and strategic arguments for this request, and are pressuring us to cede control of the specified regions. Our response could significantly alter our relations."
+tos_afghanistan.10.a: "We will cede the territories"
+tos_afghanistan.10.b: "We refuse their demands"
+tos_afghanistan.11.t: "Territories Ceded to Afghanistan"
+tos_afghanistan.11.d: "The targeted nation has accepted our demands and transferred the territories to our control. This is a major diplomatic success and a significant gain for our nation."
+tos_afghanistan.11.a: "Excellent"
+tos_afghanistan.12.t: "Refusal of Our Demands"
+tos_afghanistan.12.d: "The targeted nation has rejected our territorial demands. This defiance could lead to severe consequences and escalate tensions. We must prepare for potential conflict."
+tos_afghanistan.12.a: "They will regret this"
+AFG_received_territories_positive: "Territories Granted"
+AFG_denied_territories_negative: "Territorial Demands Refused"
+tos_afghanistan_territory_request: "Afghanistan demanded territorial concessions"
+
+tos_afghanistan.20.t: "Afghanistan Demands Tajik Territories"
+tos_afghanistan.20.d: "The Afghan government has sent a formal demand..."
+tos_afghanistan.20.a: "We will cede the territories"
+tos_afghanistan.20.b: "We will not yield to their threats"
+tos_afghanistan.21.t: "Tajik Territories Transferred"
+tos_afghanistan.21.d: "Our diplomatic pressure has succeeded..."
+tos_afghanistan.21.a: "Excellent"
+tos_afghanistan.22.t: "Tajikistan Refuses Demands"
+tos_afghanistan.22.d: "Our demands have been rejected..."
+tos_afghanistan.22.a: "Then we will take them by force"
+tos_afghanistan_territory_request_tajikistan: "Afghanistan Demanded Tajik Territories"
+
+tos_afghanistan.30.t: "Tibet Becomes Our Puppet"
+tos_afghanistan.30.d: "Following recent negotiations and regional pressure, the Tibetan government has agreed to become a puppet of Afghanistan."
+tos_afghanistan.30.a: "Excellent. Our influence grows."
+
+
+
+
+
+
 #TT
 
 TUR_CYPRUS_AI_CHANCE_0:0 "§RThis could lead to war, sanctions and other negative consequences. We can't afford that.§!"

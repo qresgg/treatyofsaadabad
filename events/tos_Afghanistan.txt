@@ -1,8 +1,362 @@
-###########################
-# Afghanistan Events
-###########################
+add_namespace = tos_afghanistan
+
+## SUPPLY EVENT (Персія -> Афганістан)
+country_event = {
+    id = tos_afghanistan.1
+    title = tos_afghanistan.1.t
+    desc = tos_afghanistan.1.d
+    picture = GFX_report_event_generic_weapons
+    fire_only_once = yes
+
+    trigger = {
+        tag = PER
+    }
+
+    option = {
+        name = tos_afghanistan.1.a  # Send 5000
+        ai_chance = { base = 15 }
+        add_political_power = 150
+
+        add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = -5000
+        }
+
+        AFG = {
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = 5000
+            }
+            country_event = { id = tos_afghanistan.2 days = 2 }
+        }
+    }
+
+    option = {
+        name = tos_afghanistan.1.b  # Send 2500
+        ai_chance = { base = 35 }
+        add_political_power = 75
+
+        add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = -2500
+        }
+
+        AFG = {
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = 2500
+            }
+            country_event = { id = tos_afghanistan.3 days = 2 }
+        }
+    }
+
+    option = {
+        name = tos_afghanistan.1.c  # Send 1000
+        ai_chance = { base = 40 }
+        add_political_power = 35
+
+        add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = -1000
+        }
+
+        AFG = {
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = 1000
+            }
+            country_event = { id = tos_afghanistan.4 days = 2 }
+        }
+    }
+
+    option = {
+        name = tos_afghanistan.1.d  # Refuse
+        ai_chance = { base = 10 }
+
+        AFG = {
+            country_event = { id = tos_afghanistan.5 days = 1 }
+        }
+    }
+}
+
+## RAJ CEDES LAND TO AFGHANISTAN
+country_event = {
+    id = tos_afghanistan.10
+    title = tos_afghanistan.10.t
+    desc = tos_afghanistan.10.d
+    picture = GFX_report_event_generic_sign_treaty1
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    trigger = {
+        tag = RAJ
+        NOT = { tag = FROM }  # Не дозволяє RAJ самому собі оголосити війну
+    }
+
+    option = {
+        name = tos_afghanistan.10.a  # Agree
+        ai_chance = {
+            base = 40
+            modifier = {
+                factor = 2
+                is_subject_of = FROM
+            }
+            modifier = {
+                factor = 1.5
+                FROM = { military_strength = { relative_strength > 1.5 } }
+            }
+            modifier = {
+                factor = 1
+                any_other_country = {
+                    has_guaranteed = ROOT
+                    NOT = { tag = FROM }
+                }
+            }
+            modifier = {
+                factor = 1
+                is_in_faction = yes
+                NOT = { is_in_faction_with = FROM }
+            }
+            modifier = {
+                factor = 1.4
+                has_war = yes
+            }
+        }
+
+        FROM = {
+            country_event = { id = tos_afghanistan.11 days = 1 }
+            442 = { transfer_state_to = AFG }
+            987 = { transfer_state_to = AFG }
+            988 = { transfer_state_to = AFG }
+        }
+
+        add_named_threat = { threat = 3 name = tos_afghanistan_territory_request }
+    }
+
+    option = {
+        name = tos_afghanistan.10.b  # Refuse
+        ai_chance = {
+            base = 60
+            modifier = {
+                factor = 0.9
+                is_in_faction = yes
+                NOT = { is_in_faction_with = FROM }
+            }
+            modifier = {
+                factor = 1.2
+                is_subject = yes
+                NOT = { is_subject_of = FROM }
+            }
+            modifier = {
+                factor = 1.1
+                FROM = { military_strength = { relative_strength > 2.0 } }
+            }
+        }
+
+        FROM = {
+            if = {
+                limit = { NOT = { tag = ROOT } }
+                create_wargoal = {
+                    type = take_state_focus
+                    target = ROOT
+                    generator = { 442 987 998 }
+                }
+            }
+            country_event = { id = tos_afghanistan.12 days = 1 }
+        }
+    }
+}
+
+country_event = {
+    id = tos_afghanistan.11
+    title = tos_afghanistan.11.t
+    desc = tos_afghanistan.11.d
+    picture = GFX_report_event_generic_parade
+
+    is_triggered_only = yes
+
+    option = {
+        name = tos_afghanistan.11.a
+        add_opinion_modifier = {
+            target = FROM
+            modifier = AFG_received_territories_positive
+        }
+    }
+}
 
 
 country_event = {
+    id = tos_afghanistan.12
+    title = tos_afghanistan.12.t
+    desc = tos_afghanistan.12.d
+    picture = GFX_report_event_generic_army
 
+    is_triggered_only = yes
+
+    option = {
+        name = tos_afghanistan.12.a
+        add_opinion_modifier = {
+            target = FROM
+            modifier = AFG_denied_territories_negative
+        }
+    }
+}
+
+
+## SOVIET UNION CEDES LAND TO AFGHANISTAN
+country_event = {
+    id = tos_afghanistan.20
+    title = tos_afghanistan.20.t
+    desc = tos_afghanistan.20.d
+    picture = GFX_report_event_generic_sign_treaty1
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    trigger = {
+        tag = SOV
+        NOT = { tag = FROM }
+    }
+
+    option = {
+        name = tos_afghanistan.20.a  # Agree
+        ai_chance = {
+            base = 40
+            modifier = {
+                factor = 2
+                is_subject_of = FROM
+            }
+            modifier = {
+                factor = 1.5
+                FROM = { military_strength = { relative_strength > 1.5 } }
+            }
+            modifier = {
+                factor = 1
+                any_other_country = {
+                    has_guaranteed = ROOT
+                    NOT = { tag = FROM }
+                }
+            }
+            modifier = {
+                factor = 1
+                is_in_faction = yes
+                NOT = { is_in_faction_with = FROM }
+            }
+            modifier = {
+                factor = 1.4
+                has_war = yes
+            }
+        }
+
+        FROM = {
+            country_event = { id = tos_afghanistan.21 days = 1 }
+            742 = { transfer_state_to = AFG }
+            add_state_claim = 586
+            add_state_claim = 732
+            add_opinion_modifier = {
+                target = ROOT
+                modifier = AFG_demanded_tajik_territories_accepted
+            }
+        }
+
+        add_named_threat = { threat = 3 name = tos_afghanistan_territory_request_tjk }
+    }
+
+    option = {
+        name = tos_afghanistan.20.b  # Refuse
+        ai_chance = {
+            base = 60
+            modifier = {
+                factor = 0.9
+                is_in_faction = yes
+                NOT = { is_in_faction_with = FROM }
+            }
+            modifier = {
+                factor = 1.2
+                is_subject = yes
+                NOT = { is_subject_of = FROM }
+            }
+            modifier = {
+                factor = 1.1
+                FROM = { military_strength = { relative_strength > 2.0 } }
+            }
+        }
+
+		FROM = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state_focus
+					target = SOV
+					generator = { 742 586 732 }
+				}
+			}
+            country_event = { id = tos_afghanistan.22 days = 1 }
+            add_opinion_modifier = {
+                target = ROOT
+                modifier = AFG_demanded_tajik_territories_refused
+            }
+        }
+        
+    }
+}
+
+## REACTIONS
+country_event = {
+    id = tos_afghanistan.21
+    title = tos_afghanistan.21.t
+    desc = tos_afghanistan.21.d
+    picture = GFX_report_event_generic_parade
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option = {
+        name = tos_afghanistan.21.a
+    }
+}
+ ### maybe opinion modifier
+country_event = {
+    id = tos_afghanistan.22
+    title = tos_afghanistan.22.t
+    desc = tos_afghanistan.22.d
+    picture = GFX_report_event_generic_army
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option = {
+        name = tos_afghanistan.22.a
+    }
+}
+
+## tibet puppet 
+country_event = { #### to-do for myself: зробити перевірку на те, що Тібет існує / і інше
+    id = tos_afghanistan.30
+    title = tos_afghanistan.30.t
+    desc = tos_afghanistan.30.d
+    picture = GFX_report_event_generic_diplomacy
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    trigger = {
+        tag = TIB
+    }
+
+    option = {
+        name = tos_afghanistan.30.a
+        IF = {
+			limit = {
+				TIB = {
+					exists = yes
+				}
+			}
+			AFG = {
+				puppet = TIB
+			}
+			
+		}
+		# ELSE = {
+		# }
+        add_opinion_modifier = {
+            target = AFG
+            modifier = AFG_made_our_puppet
+        }
+    }
 }

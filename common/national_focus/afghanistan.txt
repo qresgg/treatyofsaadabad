@@ -2455,6 +2455,16 @@ focus_tree = {
 		x = -1
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 		completion_reward = {
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					PER = {
+						exists = yes
+						has_war = no
+					}
+				}
+				PER = { country_event = { id = tos_afghanistan.1 days = 2 } }
+			}
 			## EVENT FOR PERSIA
 			## PERSIA POV:
 			## 1. OPTION - give 5000 weapons when civil war started (gives 150 pp -5000)
@@ -2788,6 +2798,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 		completion_reward = {
 			#### EVENT - tibet become puppet of afg
+			
+			AFG = { country_event = { id = tos_afghanistan.30 days = 2 } }
 		}
 	}
 
@@ -2997,6 +3009,9 @@ focus_tree = {
 		x = 2
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 		#### tajikistan and claims to 732 405
+		completion_reward = {
+			SOV = { country_event = { id = tos_afghanistan.20 days = 2 } } ### test ne zabyti limits if exits  
+		}
 	}
 	focus = {
 		id = AFG_request_india
@@ -3008,6 +3023,26 @@ focus_tree = {
 		x = -2
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 		completion_reward = {
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					RAJ = {
+						exists = yes
+						has_war = no
+					}
+				}
+				RAJ = { country_event = { id = tos_afghanistan.10 days = 2 } }
+			}
+			else_if = {
+				limit = {
+					RAJ = { exists = yes }
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = RAJ
+					generator = { 442 987 988 }
+				}
+			}
 			#### EVENT request 442 987 988
 			#### MORE CHANCE TO RECEIVE territories - not in war, has good opinion, in alliance, has powerful army	
 		}
