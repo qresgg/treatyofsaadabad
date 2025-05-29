@@ -956,7 +956,7 @@ tos_afghanistan.1.d: "The Afghan civil war grows more intense. Our neighbors in 
 tos_afghanistan.1.a: "Send big batch of weapons"
 tos_afghanistan.1.b: "Send medium batch of weapons"
 tos_afghanistan.1.c: "Send small batch of weapons"
-tos_afghanistan.1.d: "Refuse to Send Anything"
+tos_afghanistan.1e.d: "Refuse to Send Anything"
 tos_afghanistan.2.t: "Iranian Military Support Arrives"
 tos_afghanistan.2.d: "Our allies in Iran have sent us a large shipment of 5000 infantry equipment. This generous support will greatly assist our war effort."
 tos_afghanistan.2.a: "Excellent."

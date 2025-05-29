@@ -2022,7 +2022,12 @@ country_event = {
             }
             modifier = {
                 factor = 1.8
-                FROM = { military_strength = { relative_strength > 1.5 } }
+                FROM = {
+					fighting_army_strength_ratio = {
+						tag = ROOT
+						ratio > 1.5
+					}
+				}
             }
             modifier = {
                 factor = 0.7
@@ -2060,7 +2065,12 @@ country_event = {
             }
             modifier = {
                 factor = 0.5
-                FROM = { military_strength = { relative_strength > 2.0 } }
+                FROM = {
+					fighting_army_strength_ratio = {
+						tag = ROOT
+						ratio > 2
+					}
+				}
             }
             }
 
@@ -2141,7 +2151,12 @@ country_event = {
             }
             modifier = {
                 factor = 1.8
-                FROM = { military_strength = { relative_strength > 1.5 } }
+                FROM = {
+					fighting_army_strength_ratio = {
+						tag = ROOT
+						ratio > 1.5
+					}
+				}
             }
             modifier = {
                 factor = 0.7
@@ -2168,7 +2183,12 @@ country_event = {
             base = 25
             modifier = {
                 factor = 1.5
-                FROM = { military_strength = { relative_strength > 2.0 } }
+                FROM = {
+					fighting_army_strength_ratio = {
+						tag = ROOT
+						ratio > 2
+					}
+				}
             }
         }
         FROM = {
@@ -2183,7 +2203,12 @@ country_event = {
             base = 25
             modifier = {
                 factor = 0.5
-                FROM = { military_strength = { relative_strength > 2.0 } }
+                FROM = {
+					fighting_army_strength_ratio = {
+						tag = ROOT
+						ratio > 2
+					}
+				}
             }
         }
         FROM = {
@@ -2665,6 +2690,8 @@ country_event = {
     id = TUR_CYPRUS.11
     title = TUR_CYPRUS.11.t
     desc = TUR_CYPRUS.11.d
+	is_triggered_only = yes
+	fire_only_once = yes
 
     trigger = { tag = ENG }
 

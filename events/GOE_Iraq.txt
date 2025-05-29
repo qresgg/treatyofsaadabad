@@ -2139,10 +2139,15 @@ country_event = {
 				factor = 2
 				is_subject_of = FROM
 			}
-			modifier = {
-				factor = 1.5
-				FROM = { military_strength = { relative_strength > 1.5 } }
-			}
+            modifier = {
+                factor = 1.5
+                FROM = {
+                    fighting_army_strength_ratio = {
+                        tag = ROOT
+                        ratio > 1.5
+                    }
+                }
+            }
 			modifier = {
 				factor = 1
 				any_other_country = {
@@ -2183,10 +2188,15 @@ country_event = {
 				is_subject = yes
 				NOT = { is_subject_of = FROM }
 			}
-			modifier = {
-				factor = 1.1
-				FROM = { military_strength = { relative_strength > 2.0 } }
-			}
+            modifier = {
+                factor = 1.1
+                FROM = {
+                    fighting_army_strength_ratio = {
+                        tag = ROOT
+                        ratio > 2
+                    }
+                }
+            }
 		}
 
 	
@@ -2265,7 +2275,12 @@ country_event = {
             }
             modifier = {
                 factor = 1.8
-                FROM = { military_strength = { relative_strength > 1.5 } }
+                FROM = {
+                    fighting_army_strength_ratio = {
+                        tag = ROOT
+                        ratio > 1.5
+                    }
+                }
             }
             modifier = {
                 factor = 0.7
@@ -2310,7 +2325,12 @@ country_event = {
             }
             modifier = {
                 factor = 0.5
-                FROM = { military_strength = { relative_strength > 2.0 } }
+                FROM = {
+                    fighting_army_strength_ratio = {
+                        tag = ROOT
+                        ratio > 2
+                    }
+                }
             }
             }
 

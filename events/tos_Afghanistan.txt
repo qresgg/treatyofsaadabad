@@ -9,6 +9,11 @@ country_event = {
     fire_only_once = yes
     is_triggered_only = yes
 
+    trigger = {
+        tag = PER
+        AFG = { has_completed_focus = AFG_persian_supplies }
+    }
+
     option = {
         name = tos_afghanistan.1000.a
         ai_chance = { base = 60 }
@@ -49,16 +54,22 @@ country_event = { ## UNLUCKY, THEY DON'T WANT TO HELP US
         name = tos_afghanistan.1002.a
     }
 }
-
 country_event = {
     id = tos_afghanistan.1
     title = tos_afghanistan.1.t
     desc = tos_afghanistan.1.d
     picture = GFX_report_event_generic_weapons
-    fire_only_once = yes
+    fire_only_once = 
+    is_triggered_only = yes
 
     trigger = {
         tag = PER
+        any_other_country = {
+            tag = AFG
+            has_country_flag = AFG_PER_will_help_us
+            has_civil_war = yes
+            has_cosmetic_tag = AFG_faith
+        }
     }
 
     option = {
@@ -75,7 +86,12 @@ country_event = {
             amount = -1250
         }
 
-        AFG = {
+        every_other_country = {
+            limit = {
+                has_country_flag = AFG_PER_will_help_us
+                has_civil_war = yes
+                has_cosmetic_tag = AFG_faith
+            }
             add_equipment_to_stockpile = {
                 type = infantry_equipment
                 amount = 5000
@@ -102,7 +118,12 @@ country_event = {
             amount = -1000
         }
 
-        AFG = {
+        every_other_country = {
+            limit = {
+                has_country_flag = AFG_PER_will_help_us
+                has_civil_war = yes
+                has_cosmetic_tag = AFG_faith
+            }
             add_equipment_to_stockpile = {
                 type = infantry_equipment
                 amount = 2500
@@ -129,7 +150,12 @@ country_event = {
             amount = -500
         }
 
-        AFG = {
+        every_other_country = {
+            limit = {
+                has_country_flag = AFG_PER_will_help_us
+                has_civil_war = yes
+                has_cosmetic_tag = AFG_faith
+            }
             add_equipment_to_stockpile = {
                 type = infantry_equipment
                 amount = 1000
@@ -143,14 +169,74 @@ country_event = {
     }
 
     option = {
-        name = tos_afghanistan.1.d  # Refuse
+        name = tos_afghanistan.1e.d  # Refuse
         ai_chance = { base = 10 }
 
-        AFG = {
+        every_other_country = {
+            limit = {
+                tag = AFG
+                has_country_flag = AFG_PER_will_help_us
+                has_civil_war = yes
+                has_cosmetic_tag = AFG_faith
+            }
             country_event = { id = tos_afghanistan.5 days = 1 }
         }
     }
 }
+
+
+country_event = {
+    id = tos_afghanistan.2
+    title = tos_afghanistan.2.t
+    desc = tos_afghanistan.2.d
+    picture = GFX_report_event_generic_supplies
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = OK
+    }
+}
+
+country_event = {
+    id = tos_afghanistan.3
+    title = tos_afghanistan.3.t
+    desc = tos_afghanistan.3.d
+    picture = GFX_report_event_generic_supplies
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = OK
+    }
+}
+
+country_event = {
+    id = tos_afghanistan.4
+    title = tos_afghanistan.4.t
+    desc = tos_afghanistan.4.d
+    picture = GFX_report_event_generic_supplies
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = OK
+    }
+}
+
+country_event = {
+    id = tos_afghanistan.5
+    title = tos_afghanistan.5.t
+    desc = tos_afghanistan.5.d
+    picture = GFX_report_event_generic_diplomacy
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = OK
+    }
+}
+
 
 ## RAJ CEDES LAND TO AFGHANISTAN
 country_event = {
@@ -176,7 +262,12 @@ country_event = {
             }
             modifier = {
                 factor = 1.5
-                FROM = { military_strength = { relative_strength > 1.5 } }
+                FROM = {
+                    fighting_army_strength_ratio = {
+                        tag = ROOT
+                        ratio > 1.5
+                    }
+                }
             }
             modifier = {
                 factor = 1
@@ -222,7 +313,12 @@ country_event = {
             }
             modifier = {
                 factor = 1.1
-                FROM = { military_strength = { relative_strength > 2.0 } }
+                FROM = {
+                    fighting_army_strength_ratio = {
+                        tag = ROOT
+                        ratio > 2
+                    }
+                }
             }
         }
 
@@ -300,7 +396,12 @@ country_event = {
             }
             modifier = {
                 factor = 1.5
-                FROM = { military_strength = { relative_strength > 1.5 } }
+                FROM = {
+                    fighting_army_strength_ratio = {
+                        tag = ROOT
+                        ratio > 1.5
+                    }
+                }
             }
             modifier = {
                 factor = 1
@@ -350,7 +451,12 @@ country_event = {
             }
             modifier = {
                 factor = 1.1
-                FROM = { military_strength = { relative_strength > 2.0 } }
+                FROM = {
+                    fighting_army_strength_ratio = {
+                        tag = ROOT
+                        ratio > 2
+                    }
+                }
             }
         }
 
@@ -400,7 +506,7 @@ country_event = {
 }
 
 ## tibet puppet 
-country_event = { #### to-do for myself: зробити перевірку на те, що Тібет існує / і інше
+country_event = {
     id = tos_afghanistan.30
     title = tos_afghanistan.30.t
     desc = tos_afghanistan.30.d
@@ -409,27 +515,35 @@ country_event = { #### to-do for myself: зробити перевірку на 
     is_triggered_only = yes
 
     trigger = {
-        tag = TIB
+        tag = AFG
     }
 
     option = {
         name = tos_afghanistan.30.a
+
         IF = {
-			limit = {
-				TIB = {
-					exists = yes
-				}
-			}
-			AFG = {
-				puppet = TIB
-			}
-			
-		}
-		# ELSE = {
-		# }
-        add_opinion_modifier = {
-            target = AFG
-            modifier = AFG_made_our_puppet
+            limit = {
+                TIB = { exists = yes }
+            }
+            TIB = {
+                set_autonomy = {
+                    target = AFG
+                    autonomy_state = puppet
+                }
+            }
+            AFG = {
+                add_opinion_modifier = {
+                    target = TIB
+                    modifier = AFG_made_our_puppet
+                }
+            }
+        }
+
+        ELSE = {
+            AFG = {
+                add_political_power = 50
+            }
         }
     }
 }
+
