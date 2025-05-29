@@ -2453,6 +2453,9 @@ focus_tree = {
 		cost = 5
 		y = 1
 		x = -1
+		bypass = {
+			has_war_with = AFG
+		}
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 		completion_reward = {
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -2460,11 +2463,14 @@ focus_tree = {
 				limit = {
 					PER = {
 						exists = yes
-						has_war = no
+						NOT = { has_war_with = AFG } 
 					}
 				}
-				PER = { country_event = { id = tos_afghanistan.1 days = 2 } }
+				PER = { 
+					country_event = tos_afghanistan.1000 
+				}
 			}
+			custom_effect_tooltip = AFG_persian_supplies_tt
 			## EVENT FOR PERSIA
 			## PERSIA POV:
 			## 1. OPTION - give 5000 weapons when civil war started (gives 150 pp -5000)
@@ -2484,6 +2490,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 		completion_reward = {
 			custom_effect_tooltip = AFG_tajiks_mujaheddins_tt
+			army_experience = 25
 		}
 	}
 	focus = {
@@ -2602,11 +2609,13 @@ focus_tree = {
 			## Focus bonuses ##
 			IF = {
 				limit = {
-					has_country_flag = AFG_germany_will_aid_amanullah
+					has_country_flag = AFG_PER_will_help_us
 				}
-				country_event = {
-					id = AFG_political_events.54
-					days = 1
+				PER = {
+					country_event = {
+						id = tos_afghanistan.1
+						days = 1
+					}
 				}
 			}
 
@@ -3001,7 +3010,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_request_tajikistan
-		cost = 5
+		cost = 6
 		icon = GFX_focus_AFG_develop_tajikistan
 		relative_position_id = AFG_baghdad_pact
 		prerequisite = { focus = AFG_baghdad_pact }
@@ -3088,6 +3097,7 @@ focus_tree = {
 		mutually_exclusive = { focus = AFG_afghan_indian_war}
 		y = 1
 		x = 0
+		cost = 10
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 		#### legion to help islams in india
 		completion_reward = {
@@ -3097,9 +3107,9 @@ focus_tree = {
 	focus = {
 		id = AFG_main_manufacturers_opium
 		icon = GFX_focus_RAJ_legalize_the_opium_trade
-		relative_position_id = AFG_rethinking_industrialization
+		relative_position_id = AFG_rethinking_reintegration
 		prerequisite = {
-			focus = AFG_rethinking_industrialization
+			focus = AFG_rethinking_reintegration
 		}
 		cost = 5
 		y = 1

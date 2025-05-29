@@ -76,6 +76,10 @@ OCC_byzantine_dux: "Thema of Occitania"
 PAP_byzantine_dux: "Papal Centrum"
 UKR_byzantine_dux: "Rhos Dux"
 
+
+### AFGHANISTAN
 AFG_faith: "Afghanistanatal"
 AFG_faith_DEF: "the Afghanistanatal"
 AFG_faith_AFJ: "Afghans"
+
+PAK_AFGHAN_islamian_state: "Islams of Rajastan"

@@ -928,15 +928,20 @@
   TUR_anglo_turkish_friendship_agreement_focus_days_tt:0 "Has been 105 or more days since focus §YAnglo-Turkish Friendship Agreement§! has been completed"
   TUR_anglo_turkish_friendship_agreement_current_days_tt:0 "Current days are: [?TUR_anglo_turkish_friendship_agreement_flag:days|Y0]"
 
+  #####################
+  ###  AFGHANISTAN  ###
+  #####################
+
+
   ## TOOLTIPS
 
   #####################
   #####   IRAN   ######
   #####################
-  PER_request_out_pact_territories_tt: "When §Y[IRQ.GetNameWithFlag]§! becomes controller or owner our historical territories, we will get them"
+  PER_request_out_pact_territories_tt: "When §Y[IRQ.GetNameWithFlag]§! becomes controller or owner our historical territories in Arabian Peninsula, we will get them"
   PER_import_military_fabrics_tt: "Unlocks Decision: §YImport Military Fabrics§! which allow Iran to buy fabrics from abroad and instantaneous build them for political power"
   PER_export_arms_tt: "Unlocks Decision: §YExport Arms§! which allow Iran to export weapons for political power"
-  PER_open_new_decisions_to_form_sasanian_tt: "Unlocks Decision which allow §YSasanian Empire§! to expand their territories"
+  PER_open_new_decisions_to_form_sasanian_tt: "Unlocks Decision which allow §YSasanian Empire§! to expand our national territories"
   
   #####################
   #####   IRAQ   ######
@@ -946,6 +951,14 @@
   #####################
   ###  AFGHANISTAN  ###
   #####################
+  AFG_faith_revolt_decision_unlock_tt: "Unlocks §Ydecisions§! to send §YIslamic peoples§! to border §Y[RAJ.GetNameWithFlag]§! regions to make in future militia"
+  AFG_make_revolt_decision_unlock_tt: "Unlocks §Ydecisions§! to make §YIslam revolution§! in §Y[RAJ.GetNameWithFlag]§! with further intervention"
+  AFG_send_peacemakers_to_india_tt: "Adds posibility to send §YAfgans§! peacemakers to §Y[RAJ.GetNameWithFlag]§!"
+  AFG_sell_opium_tt: "Unlocks §Ydecisions§! to sell §YOpium§! for temporary reforms"
+  AFG_sell_children_decisions_unlock_tt: "Unlocks §Ydecisions§! to sell §Ychildren§! for weapons"
+  AFG_border_lands_tt: "Construct fortifications along borders with §Y[RAJ.GetNameWithFlag]§! and §Y[SOV.GetNameWithFlag]§!"
+  AFG_tajiks_mujaheddins_tt: "§YTajiks mujaheddins will join our side in the coming civil war§!"
+  AFG_persian_supplies_tt: "§YIf Iran accepts our proposal, they will supply us with weapons and they will be able to send volunteers to aid us when the civil war begins.§!"
 
   #####################
   #####  TURKEY  ######

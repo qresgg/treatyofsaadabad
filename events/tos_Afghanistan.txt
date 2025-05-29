@@ -2,6 +2,55 @@ add_namespace = tos_afghanistan
 
 ## SUPPLY EVENT (Персія -> Афганістан)
 country_event = {
+    id = tos_afghanistan.1000
+    title = tos_afghanistan.1000.t
+    desc = tos_afghanistan.1000.d
+    picture = GFX_report_event_generic_weapons
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option = {
+        name = tos_afghanistan.1000.a
+        ai_chance = { base = 60 }
+        AFG = {
+            country_event = tos_afghanistan.1001
+        }
+    }
+    option = {
+        name = tos_afghanistan.1000.b
+        ai_chance = { base = 40 }
+    }
+}
+
+country_event = { ## THANKS FOR EQUIPMENTS
+    id = tos_afghanistan.1001
+    title = tos_afghanistan.1001.t
+    desc = tos_afghanistan.1001.d
+    picture = GFX_report_event_generic_weapons
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option = {
+        name = tos_afghanistan.1001.a
+        AFG = {
+            set_country_flag = AFG_PER_will_help_us
+        }
+    }
+}
+country_event = { ## UNLUCKY, THEY DON'T WANT TO HELP US
+    id = tos_afghanistan.1002
+    title = tos_afghanistan.1002.t
+    desc = tos_afghanistan.1002.d
+    picture = GFX_report_event_generic_weapons
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option = {
+        name = tos_afghanistan.1002.a
+    }
+}
+
+country_event = {
     id = tos_afghanistan.1
     title = tos_afghanistan.1.t
     desc = tos_afghanistan.1.d
@@ -15,17 +64,25 @@ country_event = {
     option = {
         name = tos_afghanistan.1.a  # Send 5000
         ai_chance = { base = 15 }
-        add_political_power = 150
+        add_political_power = 75
 
         add_equipment_to_stockpile = {
             type = infantry_equipment
-            amount = -5000
+            amount = 5000
+        }
+        add_equipment_to_stockpile = {
+            type = support_equipment
+            amount = -1250
         }
 
         AFG = {
             add_equipment_to_stockpile = {
                 type = infantry_equipment
                 amount = 5000
+            }
+            add_equipment_to_stockpile = {
+                type = support_equipment
+                amount = 1250
             }
             country_event = { id = tos_afghanistan.2 days = 2 }
         }
@@ -34,17 +91,25 @@ country_event = {
     option = {
         name = tos_afghanistan.1.b  # Send 2500
         ai_chance = { base = 35 }
-        add_political_power = 75
+        add_political_power = 50
 
         add_equipment_to_stockpile = {
             type = infantry_equipment
             amount = -2500
+        }
+        add_equipment_to_stockpile = {
+            type = support_equipment
+            amount = -1000
         }
 
         AFG = {
             add_equipment_to_stockpile = {
                 type = infantry_equipment
                 amount = 2500
+            }
+            add_equipment_to_stockpile = {
+                type = support_equipment
+                amount = 1000
             }
             country_event = { id = tos_afghanistan.3 days = 2 }
         }
@@ -53,17 +118,25 @@ country_event = {
     option = {
         name = tos_afghanistan.1.c  # Send 1000
         ai_chance = { base = 40 }
-        add_political_power = 35
+        add_political_power = 25
 
         add_equipment_to_stockpile = {
             type = infantry_equipment
             amount = -1000
+        }
+        add_equipment_to_stockpile = {
+            type = support_equipment
+            amount = -500
         }
 
         AFG = {
             add_equipment_to_stockpile = {
                 type = infantry_equipment
                 amount = 1000
+            }
+            add_equipment_to_stockpile = {
+                type = support_equipment
+                amount = 500
             }
             country_event = { id = tos_afghanistan.4 days = 2 }
         }

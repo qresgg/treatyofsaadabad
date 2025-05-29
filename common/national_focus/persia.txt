@@ -6436,7 +6436,7 @@ focus_tree = {
 		id = PER_choose_a_shahbanu
 		icon = GFX_focus_PER_choose_a_shahbanu
 		prerequisite = { focus = PER_third_persian_empire focus = PER_second_sasanian_empire }
-		x = -3
+		x = -2
 		y = 1
 		relative_position_id = PER_third_persian_empire
 		cost = 5
@@ -7676,7 +7676,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = PER_lowkey_expansionism
-		cost = 10
+		cost = 5
 		
 		available = {
 			is_subject = no

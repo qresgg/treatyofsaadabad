@@ -252,3 +252,9 @@ TUR_nationalize_road_to_lebanon: "The Road to Lebanon"
 TUR_nationalize_road_to_lebanon_desc: "By extending our presence and support across the Levant, we pave the way for broader regional influence—one that may eventually include Lebanon."
 TUR_nationalize_crimea: "Claim Crimea"
 TUR_nationalize_crimea_desc: "Crimea’s geopolitical importance and historic connection to our empire make it a natural target for reintegration. We shall lay the groundwork for reclaiming it."
+
+#####################
+#### AFGHANISTAN ####
+#####################
+
+AFG_make_revolution_tt: "([AFG.GetFlag]§YIslamian Raj State§!) Becomes owner and controller of §YIslam Raj territories§!"

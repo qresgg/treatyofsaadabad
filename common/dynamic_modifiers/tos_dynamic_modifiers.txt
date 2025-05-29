@@ -74,3 +74,17 @@ TUR_air_forces_modifier = {
     air_spirit_category_type_cost_factor = TUR_air_air_spirit_category_type_cost_factor # 0.1
     air_untrained_pilots_penalty_factor = TUR_air_air_spirit_category_type_cost_factor # 0.12
 }
+
+
+#### AFG ####
+AFG_islamists_in_state_modifier = {
+    enable = { always = yes}
+    icon = GFX_modifiers_tur_traditionalist_placated
+    remove_trigger = {
+        NOT = {
+            OWNER = {
+                original_tag = RAJ
+            }
+        }
+    }
+}

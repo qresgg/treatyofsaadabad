@@ -953,9 +953,9 @@ TUR_placate_fundamentalist_state_all_targets_effect_tt:0 "The £faction_tur_trad
 
 tos_afghanistan.1.t: "Iran Considers Supplying Weapons"
 tos_afghanistan.1.d: "The Afghan civil war grows more intense. Our neighbors in Afghanistan are requesting military support. Should we send them arms and equipment?"
-tos_afghanistan.1.a: "Send 5000 Infantry Equipment"
-tos_afghanistan.1.b: "Send 2500 Infantry Equipment"
-tos_afghanistan.1.c: "Send 1000 Infantry Equipment"
+tos_afghanistan.1.a: "Send big batch of weapons"
+tos_afghanistan.1.b: "Send medium batch of weapons"
+tos_afghanistan.1.c: "Send small batch of weapons"
 tos_afghanistan.1.d: "Refuse to Send Anything"
 tos_afghanistan.2.t: "Iranian Military Support Arrives"
 tos_afghanistan.2.d: "Our allies in Iran have sent us a large shipment of 5000 infantry equipment. This generous support will greatly assist our war effort."
