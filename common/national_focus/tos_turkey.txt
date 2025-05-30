@@ -7002,7 +7002,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 				add_claim_by = TUR
 				create_wargoal = {
 					type = take_claimed_state
-					taget = ITA
+					target = ITA
 				}
 			}
 			custom_effect_tooltip = TUR_open_decision_to_core_two_sicilias_tt

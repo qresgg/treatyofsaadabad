@@ -17,6 +17,23 @@ ideas = {
 				fascism_drift = 0.2
 			}
 		}
+		
+		AFG_legion_afghan_peacemakers = {
+			allowed = {
+				original_tag = AFG
+			}
+			picture = ETH_conservative_high_command
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				experience_gain_army_factor = 0.15
+				send_volunteer_size = 8
+				send_volunteer_divisions_required = -1
+				lend_lease_tension = -0.5
+			}
+		}
 
 		AFG_no_condoms_in_country = {
 			allowed = {

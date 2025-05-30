@@ -210,7 +210,7 @@ form_neo_byzantine_empire_category = {
 
 	picture = GFX_decision_cat_generic_byzantine_empire
 
-	priority = 20
+	priority = 1
 
 	allowed = {
 		OR = {
@@ -219,7 +219,7 @@ form_neo_byzantine_empire_category = {
 	}
 }
 
-form_kashuan_empire_category = {
+form_kushan_empire_category = {
 
 	icon = generic_formable_nations
 

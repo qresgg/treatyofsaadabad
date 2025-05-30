@@ -5,10 +5,25 @@ AFG_islam_revolution_category = {
 		allowed = {
 			original_tag = AFG
 		}
+		days_remove = 1 # 25
+		cost = 35
 		state_target = yes
 		targets = { 440 441 443 444 1012 445 989 787}
 		on_map_mode = map_and_decisions_view
 		fire_only_once = yes
+		visible = {
+			has_completed_focus = AFG_faith_revolt
+			FROM = {
+				NOT = {
+					has_dynamic_modifier = AFG_islamists_in_state_modifier
+				}
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = AFG_sending_islamists_to_india_flag
+			}
+		}
 		cancel_effect = {
 			clr_country_flag = AFG_sending_islamists_to_india_flag
 		}
@@ -26,13 +41,16 @@ AFG_islam_revolution_category = {
 		}
 	}
 	AFG_make_revolution = {
-		icon = GFX_decision_generic_disband_irregulars
+		icon = GFX_decision_generic_civil_support
 		allowed = {
 			original_tag = AFG
 		}
 
 		on_map_mode = map_and_decisions_view
 
+		visible = {
+			has_completed_focus = AFG_islam_revolt_in_india
+		}
 		cancel_effect = {
 			clr_country_flag = AFG_sending_islamists_to_india_flag
 		}
@@ -40,6 +58,7 @@ AFG_islam_revolution_category = {
 		complete_effect = {
 			set_country_flag = AFG_sending_islamists_to_india_flag
 		}
+		fire_only_once = yes
 
 		remove_effect = {
 			every_state = {
@@ -52,26 +71,183 @@ AFG_islam_revolution_category = {
 					PAK = { transfer_state = PREV }
 				}
 			}
+			if = {
+				limit = {
+					988 = {
+						is_not_controlled_by_ROOT_or_ally = yes
+					}
+					987 = {
+						is_not_controlled_by_ROOT_or_ally = yes
+					}
+					442 = {
+						is_not_controlled_by_ROOT_or_ally = yes
+					}
+				}
+				PAK = { transfer_state = 988}
+				PAK = { transfer_state = 987}
+				PAK = { transfer_state = 442}
+			}
 			hidden_effect = {
 				PAK = {
+					set_country_flag = PAK_released_by_AFG_flag
 					set_cosmetic_tag = PAK_AFGHAN_islamian_state
+					declare_war_on = {
+						target = RAJ
+						type = annex_everything
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_1
+						amount = 15000
+					}
+					division_template = {
+						name = "PAKAS"		
+						is_locked = no
+						template_counter = 2
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+							infantry = { x = 2 y = 2 }
+							infantry = { x = 3 y = 0 }
+							infantry = { x = 3 y = 1 }
+							infantry = { x = 3 y = 2 }
+						}
+					
+						support = {
+							engineer = { x = 0 y = 0 }
+						}
+						#division_cap = 0
+						override_model = PER_militia_alt_1_entity
+					}
+					random_owned_state = {
+						create_unit = {
+							division = "name = \"1st PAKAS Army\" division_template = \"PAKAS\" start_experience_factor = 1.0 start_equipment_factor = 1"
+							owner = PAK
+						}
+						create_unit = {
+							division = "name = \"2nd PAKAS Army\" division_template = \"PAKAS\" start_experience_factor = 1.0 start_equipment_factor = 1"
+							owner = PAK
+						}
+						create_unit = {
+							division = "name = \"2nd PAKAS Army\" division_template = \"PAKAS\" start_experience_factor = 1.0 start_equipment_factor = 1"
+							owner = PAK
+						}
+						create_unit = {
+							division = "name = \"2nd PAKAS Army\" division_template = \"PAKAS\" start_experience_factor = 1.0 start_equipment_factor = 1"
+							owner = PAK
+						}
+						create_unit = {
+							division = "name = \"2nd PAKAS Army\" division_template = \"PAKAS\" start_experience_factor = 1.0 start_equipment_factor = 1"
+							owner = PAK
+						}
+					}
 				}
 			}
 			custom_effect_tooltip = AFG_make_revolution_tt
 			clr_country_flag = AFG_sending_islamists_to_india_flag
 		}
 	}
+	AFG_peace_conferention = {
+		icon = GFX_decision_generic_civil_support
+		days_mission_timeout = 120 # 5 dlya testa
+		allowed = {
+			original_tag = AFG
+		}
+		
+		activation = {
+			original_tag = AFG
+			PAK = {
+				has_country_flag = PAK_released_by_AFG_flag
+				has_war_with = RAJ
+				exists = yes
+			}
+		}
 
+		on_map_mode = map_and_decisions_view
+		selectable_mission = no
+		is_good = no
+		cancel_if_not_visible = yes
+		remove_effect = {
+			RAJ = {
+				white_peace = PAK
+			}
+			PAK = {
+				white_peace = ENG
+			}
+		}
+	}
 }
 AFG_foreign_politic_category = {
-	AFG_request_tajikistan = {
+	AFG_request_territory = {
+		icon = GFX_decision_generic_disband_irregulars
+		allowed = {
+			original_tag = AFG
+		}
+		
+		state_target = yes
+		targets = { 742 732 586 }
+		on_map_mode = map_and_decisions_view
 
+		visible = {
+			FROM = {
+				is_controlled_by_ROOT_or_ally = yes
+				NOT = {
+					is_controlled_by = ROOT
+				}
+			}
+		}
+
+		remove_effect = {
+			AFG = { transfer_state = FROM }
+		}
 	}
-	AFG_request_kyrgyzstan = {
+}
+AFG_barons_category = {
+	AFG_sell_bio_product = {
+		icon = GFX_decision_afg_sell_children		
+		on_map_mode = map_and_decisions_view
+		targets = { TUR PER IRQ }
+		days_remove = 45
+		available = {
+			ROOT = {
+				has_manpower > 50000
+			}
+		}
+		visible = {
+			has_completed_focus = AFG_sell_bio
+		}
 
+		remove_effect = {
+			custom_effect_tooltip = AFG_for_us_bioproduct_tt
+			ROOT = {
+				add_manpower = -50000
+				add_political_power = 75
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = AFG_for_them_bioproduct_tt
+			FROM = {
+				### EVENT
+				add_manpower = 50000
+			}
+		}
 	}
-	AFG_request_alma-ata = {
-
+	AFG_sell_opium = {
+		icon = GFX_decision_generic_welfare
+		days_remove = 60
+		visible = {
+			has_completed_focus = AFG_main_manufacturers_opium
+		}
+		on_map_mode = decisions_view
+		remove_effect = {
+			add_political_power = 120
+			add_war_support = 0.05
+			add_stability = 0.05
+		}
 	}
 }
 

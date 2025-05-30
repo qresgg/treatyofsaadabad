@@ -2862,14 +2862,17 @@ focus_tree = {
 		prerequisite = { focus = AFG_holy_government focus = AFG_holy_moly }
 		y = 4
 		x = 0
-		cost = 0
+		cost = 1
 		bypass = {
 			has_idea = IRQ_saadabad_spheres_of_influence
 		}
+		available = {
+			has_idea = IRQ_saadabad_spheres_of_influence
+		}
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
-		# allow_branch = {
-		# 	has_idea = IRQ_saadabad_spheres_of_influence
-		# }
+		allow_branch = {
+			has_idea = IRQ_saadabad_spheres_of_influence
+		}
 		#### baghdad pact
 	}
 	focus = {
@@ -3032,6 +3035,7 @@ focus_tree = {
 		x = -2
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 		completion_reward = {
+			custom_effect_tooltip = AFG_request_border_indian_territories_tt
 			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
@@ -3057,7 +3061,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AFG_sell_children
+		id = AFG_sell_bio
 		cost = 6
 		icon = GFX_focus_RAJ_special_economic_zones
 		relative_position_id = AFG_baghdad_pact
@@ -3097,11 +3101,18 @@ focus_tree = {
 		mutually_exclusive = { focus = AFG_afghan_indian_war}
 		y = 1
 		x = 0
-		cost = 10
+		cost = 5
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 		#### legion to help islams in india
 		completion_reward = {
 			custom_effect_tooltip = AFG_send_peacemakers_to_india_tt
+			hidden_effect = {
+				set_rule = { can_send_volunteers = yes }
+			}
+			add_timed_idea = {
+				idea = AFG_legion_afghan_peacemakers
+				days = 365
+			}
 		}
 	}
 	focus = {
@@ -3121,7 +3132,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AFG_integrate_muslim_buddi
+		id = AFG_recreate_second_kashuan_empire ## KUSHAN A NE KASHUAN
 		icon = GFX_focus_RAJ_hindutava
 		relative_position_id = AFG_afghan_indian_war
 		prerequisite = {
@@ -3131,27 +3142,182 @@ focus_tree = {
 		cost = 10
 		y = 1
 		x = 0
+		allow_branch = {
+			has_idea = IRQ_saadabad_spheres_of_influence
+		}
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 		#### buddist muslims is our historical 
 		completion_reward = {
-			custom_effect_tooltip = AFG_integrate_muslim_buddi_tt
+			custom_effect_tooltip = AFG_recreate_second_kashuan_empire_tt
 		}
 	}
 
 	focus = {
-		id = AFG_afghans_and_indian_state
-		icon = GFX_focus_RAJ_the_other_solution
-		relative_position_id = AFG_integrate_muslim_buddi
+		id = AFG_south_indians_integrate
+		icon = GFX_focus_RAJ_thunder_elephants
+		relative_position_id = AFG_recreate_second_kashuan_empire
 		prerequisite = {
-			focus = AFG_integrate_muslim_buddi
+			focus = AFG_recreate_second_kashuan_empire
+		}
+		cost = 6
+		y = 1
+		x = -2
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		#### buddist muslims is our historical 
+		completion_reward = {
+			custom_effect_tooltip = AFG_integrate_india_tt
+		}
+	}
+	focus = {
+		id = AFG_east_muslims_integrate
+		icon = GFX_focus_RAJ_tryst_with_destiny_BAN
+		relative_position_id = AFG_recreate_second_kashuan_empire
+		prerequisite = {
+			focus = AFG_recreate_second_kashuan_empire
+		}
+		cost =6
+		y = 1
+		x = -4
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		#### buddist muslims is our historical 
+		completion_reward = {
+			custom_effect_tooltip = AFG_integrate_east_muslims_tt
+		}
+	}
+	focus = {
+		id = AFG_birmian_kakao
+		icon = GFX_focus_generic_coffee
+		relative_position_id = AFG_recreate_second_kashuan_empire
+		prerequisite = {
+			focus = AFG_recreate_second_kashuan_empire
+		}
+		cost = 6
+		y = 1
+		x = 0
+		bypass = {
+			has_war_with = BRM
+		}
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		#### buddist muslims is our historical 
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = BRM
+				}
+				add_claim_by = AFG
+			}
+			create_wargoal = {
+				type = take_claimed_state
+				target = BRM
+			}
+		}
+	
+	}
+	focus = {
+		id = AFG_afghan_china_war
+		icon = GFX_focus_chi_one_china_policy
+		relative_position_id = AFG_birmian_kakao
+		prerequisite = {
+			focus = AFG_birmian_kakao
 		}
 		cost = 10
 		y = 1
 		x = 0
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		bypass = {
+			has_war_with = CHI
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = CHI
+					NOT = {
+						is_controlled_by = ROOT
+						is_owned_by = ROOT
+					}
+				}
+				add_claim_by = AFG
+				owner = {
+					save_event_target_as = target_country
+				}
+			}
+			create_wargoal = {
+				type = take_claimed_state
+				target = event_target:target_country
+			}
+		}
+	
+	}
+	focus = {
+		id = AFG_himalayas_states
+		icon = GFX_focus_generic_attack_nepal
+		relative_position_id = AFG_recreate_second_kashuan_empire
+		prerequisite = {
+			focus = AFG_recreate_second_kashuan_empire
+		}
+		cost = 6
+		y = 1
+		x = 2
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 		#### buddist muslims is our historical 
 		completion_reward = {
-			custom_effect_tooltip = AFG_integrate_india_tt
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = NEP
+						is_core_of = BHU
+					}
+					NOT = {
+						is_controlled_by = ROOT
+						is_owned_by = ROOT
+					}
+				}
+				add_claim_by = ROOT
+				owner = {
+					save_event_target_as = target_country
+				}
+			}
+			create_wargoal = {
+				type = take_claimed_state
+				target = event_target:target_country
+			}
+		}
+	}
+	focus = {
+		id = AFG_indochina_peninsla
+		icon = GFX_focus_generic_military_dictatorship
+		relative_position_id = AFG_recreate_second_kashuan_empire
+		prerequisite = {
+			focus = AFG_recreate_second_kashuan_empire
+		}
+		cost = 6
+		y = 1
+		x = 4
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
+		#### buddist muslims is our historical 
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = CAM
+						is_core_of = SIA
+						is_core_of = VIN
+					}
+					
+					NOT = {
+						is_controlled_by = ROOT
+						is_owned_by = ROOT
+					}
+				}
+				add_claim_by = AFG
+				owner = {
+					save_event_target_as = target_country
+				}
+			}
+			create_wargoal = {
+				type = take_claimed_state
+				target = event_target:target_country
+			}
 		}
 	}
 

@@ -955,10 +955,14 @@
   AFG_make_revolt_decision_unlock_tt: "Unlocks §Ydecisions§! to make §YIslam revolution§! in §Y[RAJ.GetNameWithFlag]§! with further intervention"
   AFG_send_peacemakers_to_india_tt: "Adds posibility to send §YAfgans§! peacemakers to §Y[RAJ.GetNameWithFlag]§!"
   AFG_sell_opium_tt: "Unlocks §Ydecisions§! to sell §YOpium§! for temporary reforms"
-  AFG_sell_children_decisions_unlock_tt: "Unlocks §Ydecisions§! to sell §Ychildren§! for weapons"
+  AFG_sell_children_decisions_unlock_tt: "Unlocks §Ydecisions§! to sell §Ysome bio products§! for weapons"
   AFG_border_lands_tt: "Construct fortifications along borders with §Y[RAJ.GetNameWithFlag]§! and §Y[SOV.GetNameWithFlag]§!"
   AFG_tajiks_mujaheddins_tt: "§YTajiks mujaheddins will join our side in the coming civil war§!"
   AFG_persian_supplies_tt: "§YIf Iran accepts our proposal, they will supply us with weapons and they will be able to send volunteers to aid us when the civil war begins.§!"
+
+  AFG_request_border_indian_territories_tt: "They will be more likely to sumbit if: \n - Their §Ymilitary§! is weaker than our\n - We are in §Yfaction§!\n - They have a §Yhigh opinion§! of us"
+  AFG_recreate_second_kashuan_empire_tt: "Unlocks decisions to recreate §YSecond Kashuan Empire§! with islamist religion"
+  AFG_integrate_india_tt: "Unlocks decisions to integrate §YSouth Rajs§!"
 
   #####################
   #####  TURKEY  ######

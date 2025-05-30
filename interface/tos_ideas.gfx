@@ -33,7 +33,6 @@ spriteTypes = {
 		name = "GFX_idea_TUR_caliph_abdulmejid_ii"
 		texturefile = "gfx/interface/ideas/tos_idea_TUR_caliph_abdulmejid_ii.dds"
 	}
-
 	spriteType = {
 		name = "GFX_idea_TUR_etatism_economy_law_idea"
 		texturefile = "gfx/interface/ideas/tos_idea_TUR_etatism_economy_law_idea.dds"
@@ -58,4 +57,14 @@ spriteTypes = {
 		name = "GFX_tos_idea_TUR_air_forces_idea"
 		texturefile = "gfx/interface/ideas/tos_idea_TUR_air_forces_idea.dds"
 	}
-}
+
+	# IIIIII  RRRR    QQQQ
+	#   II    R   R  Q    Q
+	#   II    RRRR   Q    Q
+	#   II    R R    Q   QQ  Q
+	# IIIIII  R  RR   QQQQQQQ
+	spriteType = {
+		name = "GFX_idea_IRQ_baghdad_pact_idea"
+		texturefile = "gfx/interface/ideas/tos_IRQ_baghdad_pact_idea.dds"
+	}
+}						

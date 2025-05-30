@@ -105,6 +105,13 @@
  decision_cost_ie_500_MP_500_CP_25_tooltip:1 "It costs £infantry_equipment_text_icon  §Y500§! £manpower_texticon  §Y500§! £command_power  §Y25§! to take the decision"
 
 #####################
+###    KUSHAN     ###
+#####################
+form_country_afghanistan_and_border_states_coring_tt: "All §YAfghan§! and §YSouth Border§! states become integrated"
+AFG_integrate_east_muslims_tt: "Integrate all §YEastern Muslim§! regions"
+controls_all_eastern_muslims_regions_tt: "Controls all §YEastern Muslim§! regions"
+
+#####################
 ###   SASANIAN    ###
 #####################
 ## FORM DECISIONS
@@ -258,3 +265,5 @@ TUR_nationalize_crimea_desc: "Crimea’s geopolitical importance and historic co
 #####################
 
 AFG_make_revolution_tt: "([AFG.GetFlag]§YIslamian Raj State§!) Becomes owner and controller of §YIslam Raj territories§!"
+AFG_for_us_bioproduct_tt: "- For us: "
+AFG_for_them_bioproduct_tt: "- For them: "

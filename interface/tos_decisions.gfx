@@ -11,4 +11,8 @@ spriteTypes = {
 		name = "GFX_decision_christianity_campaign"
 		texturefile = "gfx/interface/decisions/decision_tur_christianity_campaign.dds"
 	}
+	spriteType = {
+		name = "GFX_decision_afg_sell_bioproduct"
+		texturefile = "gfx/interface/decisions/decision_afg_sell_bioproduct.dds"
+	}
 }

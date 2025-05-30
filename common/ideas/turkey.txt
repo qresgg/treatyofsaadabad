@@ -1,4 +1,45 @@
 ideas = {
+
+	#### MODDING
+	TUR_fabrics_for_territories = {
+		picture = generic_goods_red_bonus
+
+		available = {
+			ROOT = {
+				NOT = {
+					has_war_with = ITA
+				}
+			}
+		}
+		removal_cost = -1
+		
+		modifier = {
+			consumer_goods_factor = 0.15
+		}
+	}
+
+	TUR_territories_for_fabrics = {
+		picture = generic_goods_red_bonus
+
+		available = {
+			ROOT = {
+				NOT = {
+					has_war_with = ITA
+				}
+			}
+		}
+		removal_cost = -1
+		
+		modifier = {
+			consumer_goods_factor = -0.15
+		}
+	}
+
+	TUR_chistianity_state = {
+		picture = 
+	}
+
+	### DEFAULT
 	economy = {
 		law = yes
 		
@@ -3324,41 +3365,3 @@ industrial_concern = {
 }
 
 
-#### MODDING
-	TUR_fabrics_for_territories = {
-		picture = generic_goods_red_bonus
-
-		available = {
-			ROOT = {
-				NOT = {
-					has_war_with = ITA
-				}
-			}
-		}
-		removal_cost = -1
-		
-		modifier = {
-			consumer_goods_factor = 0.15
-		}
-	}
-
-	TUR_territories_for_fabrics = {
-		picture = generic_goods_red_bonus
-
-		available = {
-			ROOT = {
-				NOT = {
-					has_war_with = ITA
-				}
-			}
-		}
-		removal_cost = -1
-		
-		modifier = {
-			consumer_goods_factor = -0.15
-		}
-	}
-
-	TUR_chistianity_state = {
-		picture = 
-	}

@@ -7787,7 +7787,7 @@ form_sasanian_empire_category = {
 	}
 }
 
-form_kashuan_empire_category = {
+form_kushan_empire_category = {
 	form_kashuan_empire = {
 		icon = generic_form_nation
 		visible = {
@@ -7807,16 +7807,50 @@ form_kashuan_empire_category = {
 				state = 1005
 				state = 987
 				state = 442
-				state = 787
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = AFG_kushan_empire_restored_flag
+			set_cosmetic_tag = AFG_kushan_empire
+
+			custom_effect_tooltip = form_country_afghanistan_and_border_states_coring_tt
+			hidden_effect = {
+				1008 = { add_core_of = ROOT}
+				1009 = { add_core_of = ROOT}
+				415 = { add_core_of = ROOT}
+				1007 = { add_core_of = ROOT}
+				267 = { add_core_of = ROOT}
+				1006 = { add_core_of = ROOT}
+				1005 = { add_core_of = ROOT}
+				987 = { add_core_of = ROOT}
+				442 = { add_core_of = ROOT}
+				998 = { add_core_of = ROOT}
 			}
 		}
 	}
 	integrate_bilad_aljibal = {
 		icon = generic_form_nation
 		visible = {
+			has_country_flag = AFG_kushan_empire_restored_flag
 		}
 		allowed = {
 		}
+		available = {
+			742 = {
+				is_fully_controlled_by = ROOT
+			}
+			732 = {
+				is_fully_controlled_by = ROOT
+			}
+			619 = {
+				is_fully_controlled_by = ROOT
+			}
+			586 = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+		fire_only_once = yes
 		highlight_states = {
 			highlight_state_targets = {
 				state = 742
@@ -7825,13 +7859,33 @@ form_kashuan_empire_category = {
 				state = 586
 			}
 		}
+		complete_effect = {
+			742 = { add_core_of = ROOT}
+			732 = { add_core_of = ROOT}
+			619 = { add_core_of = ROOT}
+			586 = { add_core_of = ROOT}
+		}
 	}
 	integrate_pakistan = {
 		icon = generic_form_nation
 		visible = {
+			has_country_flag = AFG_kushan_empire_restored_flag
 		}
-		allowed = {
+		available = {
+			445 = {
+				is_fully_controlled_by = ROOT
+			}
+			440 = {
+				is_fully_controlled_by = ROOT
+			}
+			989 = {
+				is_fully_controlled_by = ROOT
+			}
+			441 = {
+				is_fully_controlled_by = ROOT
+			}
 		}
+		fire_only_once = yes
 		highlight_states = {
 			highlight_state_targets = {
 				state = 445
@@ -7840,13 +7894,36 @@ form_kashuan_empire_category = {
 				state = 441
 			}
 		}
+		complete_effect = {
+			445 = { add_core_of = ROOT}
+			440 = { add_core_of = ROOT}
+			989 = { add_core_of = ROOT}
+			441 = { add_core_of = ROOT}
+		}
 	}
 	integrate_khalistan = {
 		icon = generic_form_nation
 		visible = {
+			has_country_flag = AFG_kushan_empire_restored_flag
 		}
-		allowed = {
+		available = {
+			986 = {
+				is_fully_controlled_by = ROOT
+			}
+			438 = {
+				is_fully_controlled_by = ROOT
+			}
+			429 = {
+				is_fully_controlled_by = ROOT
+			}
+			433 = {
+				is_fully_controlled_by = ROOT
+			}
+			439 = {
+				is_fully_controlled_by = ROOT
+			}
 		}
+		fire_only_once = yes
 		highlight_states = {
 			highlight_state_targets = {
 				state = 986
@@ -7856,13 +7933,31 @@ form_kashuan_empire_category = {
 				state = 439
 			}
 		}
+		complete_effect = {
+			986 = { add_core_of = ROOT}
+			438 = { add_core_of = ROOT}
+			429 = { add_core_of = ROOT}
+			433 = { add_core_of = ROOT}
+			439 = { add_core_of = ROOT}
+		}
 	}
 	integrate_central_india = {
 		icon = generic_form_nation
 		visible = {
+			has_cosmetic_tag = AFG_kushan_empire_restored_flag
 		}
-		allowed = {
+		available = {
+			437 = {
+				is_fully_controlled_by = ROOT
+			}
+			436 = {
+				is_fully_controlled_by = ROOT
+			}
+			991 = {
+				is_fully_controlled_by = ROOT
+			}
 		}
+		fire_only_once = yes
 		highlight_states = {
 			highlight_state_targets = {
 				state = 437
@@ -7870,12 +7965,38 @@ form_kashuan_empire_category = {
 				state = 991
 			}
 		}
+		complete_effect = {
+			437 = { add_core_of = ROOT}
+			436 = { add_core_of = ROOT}
+			991 = { add_core_of = ROOT}
+		}
 	}
 	integrate_east_muslims = {
 		icon = generic_form_nation
 		visible = {
+			has_completed_focus = AFG_east_muslims_integrate
 		}
-		allowed = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = controls_all_eastern_muslims_regions_tt
+				431 = { is_fully_controlled_by = ROOT}
+				430 = { is_fully_controlled_by = ROOT}
+				432 = { is_fully_controlled_by = ROOT}
+				435 = { is_fully_controlled_by = ROOT}
+				323 = { is_fully_controlled_by = ROOT}
+				324 = { is_fully_controlled_by = ROOT}
+				985 = { is_fully_controlled_by = ROOT}
+				434 = { is_fully_controlled_by = ROOT}
+				990 = { is_fully_controlled_by = ROOT}
+				997 = { is_fully_controlled_by = ROOT}
+				288 = { is_fully_controlled_by = ROOT}
+				998 = { is_fully_controlled_by = ROOT}
+				996 = { is_fully_controlled_by = ROOT}
+				995 = { is_fully_controlled_by = ROOT}
+				994 = { is_fully_controlled_by = ROOT}
+				640 = { is_fully_controlled_by = ROOT}
+				999 = { is_fully_controlled_by = ROOT}
+			}
 		}
 		highlight_states = {
 			highlight_state_targets = {
@@ -7883,7 +8004,103 @@ form_kashuan_empire_category = {
 				state = 430
 				state = 432
 				state = 435
+				state = 323
+				state = 324
+				state = 985
+				state = 434
+				state = 990
+				state = 997
+				state = 288
+				state = 998
+				state = 996
+				state = 995
+				state = 994
+				state = 640
+				state = 999
 			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = AFG_integrate_east_muslims_tt
+			hidden_effect = {
+				431 = { add_core_of = ROOT}
+				430 = { add_core_of = ROOT}
+				432 = { add_core_of = ROOT}
+				435 = { add_core_of = ROOT}
+				323 = { add_core_of = ROOT}
+				324 = { add_core_of = ROOT}
+				985 = { add_core_of = ROOT}
+				434 = { add_core_of = ROOT}
+				990 = { add_core_of = ROOT}
+				997 = { add_core_of = ROOT}
+				288 = { add_core_of = ROOT}
+				998 = { add_core_of = ROOT}
+				996 = { add_core_of = ROOT}
+				995 = { add_core_of = ROOT}
+				994 = { add_core_of = ROOT}
+				640 = { add_core_of = ROOT}
+				999 = { add_core_of = ROOT}
+			}
+		}
+	}
+	integrate_south_indians = {
+		icon = generic_form_nation
+		visible = {
+			has_completed_focus = AFG_south_indians_integrate
+		}
+		available = {
+			427 = { is_fully_controlled_by = ROOT}
+			984 = { is_fully_controlled_by = ROOT}
+			426 = { is_fully_controlled_by = ROOT}
+			983 = { is_fully_controlled_by = ROOT}
+			424 = { is_fully_controlled_by = ROOT}
+			425 = { is_fully_controlled_by = ROOT}
+			423 = { is_fully_controlled_by = ROOT}
+			982 = { is_fully_controlled_by = ROOT}
+		}
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 427
+				state = 984
+				state = 426
+				state = 983
+				state = 424
+				state = 425
+				state = 423
+				state = 982
+			}
+		}
+		complete_effect = {
+			427 = { add_core_of = ROOT}
+			984 = { add_core_of = ROOT}
+			426 = { add_core_of = ROOT}
+			983 = { add_core_of = ROOT}
+			424 = { add_core_of = ROOT}
+			425 = { add_core_of = ROOT}
+			423 = { add_core_of = ROOT}
+			982 = { add_core_of = ROOT}
+		}
+	}
+	expand_south_indians = {
+		icon = generic_form_nation
+		allowed = {
+		}
+		state_target = yes
+		targets = { 422 320 321 }
+		visible = {
+			has_completed_focus = AFG_east_muslims_integrate
+			FROM = {
+				is_controlled_by = ROOT
+			}
+		}
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = FROM
+			}
+		}
+		complete_effect = {
+			FROM = { add_core_of = ROOT }
 		}
 	}
 }
