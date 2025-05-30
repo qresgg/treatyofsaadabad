@@ -982,7 +982,6 @@ tos_afghanistan.12.a: "They will regret this"
 AFG_received_territories_positive: "Territories Granted"
 AFG_denied_territories_negative: "Territorial Demands Refused"
 tos_afghanistan_territory_request: "Afghanistan demanded territorial concessions"
-
 tos_afghanistan.20.t: "Afghanistan Demands Tajik Territories"
 tos_afghanistan.20.d: "The Afghan government has sent a formal demand..."
 tos_afghanistan.20.a: "We will cede the territories"
@@ -994,11 +993,19 @@ tos_afghanistan.22.t: "Tajikistan Refuses Demands"
 tos_afghanistan.22.d: "Our demands have been rejected..."
 tos_afghanistan.22.a: "Then we will take them by force"
 tos_afghanistan_territory_request_tajikistan: "Afghanistan Demanded Tajik Territories"
-
 tos_afghanistan.30.t: "Tibet Becomes Our Puppet"
 tos_afghanistan.30.d: "Following recent negotiations and regional pressure, the Tibetan government has agreed to become a puppet of Afghanistan."
 tos_afghanistan.30.a: "Excellent. Our influence grows."
-
+tos_afghanistan.1000.t: "Afghanistan Requests Pre-War Support"
+tos_afghanistan.1000.d: "Afghan officials have reached out to us, warning of a looming internal conflict. Though civil war has not yet broken out, tensions are escalating rapidly. They ask for military aid in advance to prepare for the inevitable. Providing help now could ensure a future ally is ready when the time comes."
+tos_afghanistan.1000.a: "Arm them before the conflict ignites"
+tos_afghanistan.1000.b: "We will not interfere in their internal affairs"
+tos_afghanistan.1001.t: "Persia Agrees to Support"
+tos_afghanistan.1001.d: "Persia has accepted our request and is sending weapons and equipment. Their early support will greatly improve our position when the conflict begins."
+tos_afghanistan.1001.a: "Let us prepare — the war is coming"
+tos_afghanistan.1002.t: "Persia Refuses to Help"
+tos_afghanistan.1002.d: "Our warning of the coming civil war has been ignored. Persia has declined to send aid, leaving us to face the storm alone."
+tos_afghanistan.1002.a: "They will regret their inaction"
 
 
 

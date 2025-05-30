@@ -24,6 +24,9 @@ country_event = {
     option = {
         name = tos_afghanistan.1000.b
         ai_chance = { base = 40 }
+        AFG = {
+            country_event = tos_afghanistan.1002
+        }
     }
 }
 
@@ -222,8 +225,6 @@ country_event = {
     }
 }
 
-
-## RAJ CEDES LAND TO AFGHANISTAN
 country_event = {
     id = tos_afghanistan.10
     title = tos_afghanistan.10.t
@@ -233,42 +234,74 @@ country_event = {
     is_triggered_only = yes
 
     trigger = {
-        tag = RAJ
-        NOT = { tag = FROM }  # Не дозволяє RAJ самому собі оголосити війну
+        RAJ = { exists = yes}
+        RAJ = { 
+        owns_state = 442
+        owns_state = 987
+        owns_state = 988
+        }
     }
 
     option = {
         name = tos_afghanistan.10.a  # Agree
         ai_chance = {
-            base = 40
-            modifier = {
-                factor = 2
-                is_subject_of = FROM
-            }
+            base = 50
             modifier = {
                 factor = 1.5
                 FROM = {
                     fighting_army_strength_ratio = {
-                        tag = ROOT
+                        tag = RAJ
                         ratio > 1.5
                     }
                 }
             }
             modifier = {
-                factor = 1
-                any_other_country = {
-                    has_guaranteed = ROOT
-                    NOT = { tag = FROM }
+                factor = 0.5
+                FROM = {
+                    fighting_army_strength_ratio = {
+                        tag = RAJ
+                        ratio < 1.5
+                    }
+                }
+            }
+
+            modifier = {
+                factor = 1.5
+                FROM = {
+                    is_in_faction = yes
                 }
             }
             modifier = {
-                factor = 1
-                is_in_faction = yes
-                NOT = { is_in_faction_with = FROM }
+                factor = 0.8
+                FROM = {
+                    is_in_faction = no
+                }
             }
             modifier = {
                 factor = 1.4
-                has_war = yes
+                FROM = {
+                    has_opinion = {
+                        target = RAJ
+                        value > 50
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.7
+                FROM = {
+                    has_opinion = {
+                        target = RAJ
+                        value < 50
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                is_subject_of = FROM
+            }
+            modifier = {
+                factor = 0
+                has_war_with = FROM
             }
         }
 
@@ -281,40 +314,17 @@ country_event = {
 
         add_named_threat = { threat = 3 name = tos_afghanistan_territory_request }
     }
-
     option = {
         name = tos_afghanistan.10.b  # Refuse
         ai_chance = {
-            base = 60
-            modifier = {
-                factor = 0.9
-                is_in_faction = yes
-                NOT = { is_in_faction_with = FROM }
-            }
-            modifier = {
-                factor = 1.2
-                is_subject = yes
-                NOT = { is_subject_of = FROM }
-            }
-            modifier = {
-                factor = 1.1
-                FROM = {
-                    fighting_army_strength_ratio = {
-                        tag = ROOT
-                        ratio > 2
-                    }
-                }
-            }
+            base = 50
         }
 
         FROM = {
-            if = {
-                limit = { NOT = { tag = ROOT } }
-                create_wargoal = {
-                    type = take_state_focus
-                    target = ROOT
-                    generator = { 442 987 998 }
-                }
+            create_wargoal = {
+                type = take_state_focus
+                target = RAJ
+                generator = { 442 987 988 }
             }
             country_event = { id = tos_afghanistan.12 days = 1 }
         }
@@ -396,13 +406,13 @@ country_event = {
                 }
             }
             modifier = {
-                factor = 1
+                factor = 0.7
                 is_in_faction = yes
                 NOT = { is_in_faction_with = FROM }
             }
             modifier = {
-                factor = 1.4
-                has_war = yes
+                factor = 0
+                has_war_with = FROM
             }
         }
 

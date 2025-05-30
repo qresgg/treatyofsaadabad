@@ -104,7 +104,7 @@ ideas = {
 					tag = AFG
 				}
 			}
-			picture = IRQ_baghdad_pact
+			picture = IRQ_baghdad_pact_idea
 			custom_effect_tooltip = IRQ_saadabad_spheres_of_influence_tt
 			modifier = {
 				stability_factor = 0.1

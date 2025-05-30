@@ -63,8 +63,9 @@ spriteTypes = {
 	#   II    RRRR   Q    Q
 	#   II    R R    Q   QQ  Q
 	# IIIIII  R  RR   QQQQQQQ
+	
 	spriteType = {
 		name = "GFX_idea_IRQ_baghdad_pact_idea"
-		texturefile = "gfx/interface/ideas/tos_IRQ_baghdad_pact_idea.dds"
+		texturefile = "gfx/interface/ideas/tos_idea_IRQ_baghdad_pact.dds"
 	}
 }						

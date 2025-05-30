@@ -947,6 +947,9 @@
   #####   IRAQ   ######
   #####################
 
+  IRQ_saadabad_alliance_per_tt: "Invite §YIran§! to join our alliance."
+  IRQ_saadabad_alliance_tur_tt: "Invite §YTurkey§! to join our alliance."
+  IRQ_saadabad_alliance_afg_tt: "Invite §YAfghanistan§! to join our alliance."
 
   #####################
   ###  AFGHANISTAN  ###
@@ -959,10 +962,91 @@
   AFG_border_lands_tt: "Construct fortifications along borders with §Y[RAJ.GetNameWithFlag]§! and §Y[SOV.GetNameWithFlag]§!"
   AFG_tajiks_mujaheddins_tt: "§YTajiks mujaheddins will join our side in the coming civil war§!"
   AFG_persian_supplies_tt: "§YIf Iran accepts our proposal, they will supply us with weapons and they will be able to send volunteers to aid us when the civil war begins.§!"
-
   AFG_request_border_indian_territories_tt: "They will be more likely to sumbit if: \n - Their §Ymilitary§! is weaker than our\n - We are in §Yfaction§!\n - They have a §Yhigh opinion§! of us"
   AFG_recreate_second_kashuan_empire_tt: "Unlocks decisions to recreate §YSecond Kashuan Empire§! with islamist religion"
   AFG_integrate_india_tt: "Unlocks decisions to integrate §YSouth Rajs§!"
+  AFG_knights_of_faith:0 "Knights of Faith"
+  AFG_knights_of_faith_desc:0 "We shall form an elite vanguard to carry the banner of our faith into battle and serve as an example for all true believers."
+  AFG_persian_supplies:0 "Persian Supplies"
+  AFG_persian_supplies_desc:0 "By securing trade routes with Persia, we can obtain much-needed supplies to support our cause and keep our forces equipped."
+  AFG_tajiks_mujaheddins:0 "Tajik Mujaheddins"
+  AFG_tajiks_mujaheddins_desc:0 "We will rally the Tajik fighters to our side, uniting under a shared vision of faith and resistance."
+  AFG_war_of_faith:0 "War of Faith"
+  AFG_war_of_faith_desc:0 "This is more than a political struggle — it's a holy war to defend and spread the true faith, no matter the cost."
+  AFG_burn_condoms:0 "Burn Condoms"
+  AFG_burn_condoms_desc:0 "We reject foreign immorality. A public campaign will rid our society of these corruptive influences."
+  AFG_make_official_faith:0 "Make Faith Official"
+  AFG_make_official_faith_desc:0 "Faith must be the foundation of our state. We will declare our beliefs as the official guiding principle of governance."
+  AFG_research_in_mind:0 "Research in Mind"
+  AFG_research_in_mind_desc:0 "Intellectual advancement should not be neglected. We will support research efforts aligned with our values."
+  AFG_expand_factories:0 "Expand Factories"
+  AFG_expand_factories_desc:0 "Industrial growth is vital. We will invest in new factories to fuel our war machine and economic independence."
+  AFG_rethinking_reintegration:0 "Rethinking Reintegration"
+  AFG_rethinking_reintegration_desc:0 "The return of exiled or marginalized groups must be reconsidered through the lens of loyalty and faith."
+  AFG_holy_government:0 "Holy Government"
+  AFG_holy_government_desc:0 "Our state shall be led by divine principles, enshrining religious guidance at the core of national administration."
+  AFG_main_manufacturers_opium:0 "Main Manufacturers: Opium"
+  AFG_main_manufacturers_opium_desc:0 "We can leverage our position in the opium trade to fund our operations and build influence abroad."
+  AFG_holy_moly:0 "Holy Moly"
+  AFG_holy_moly_desc:0 "A spiritual awakening sweeps through the nation. Whether a miracle or mass fervor, it will be harnessed for unity and strength."
+  AFG_sinkiang_war: "War with Sinkiang"
+  AFG_sinkiang_war_desc: "It is time to expand our influence to the east. Sinkiang stands in our way, and we shall bring them to their knees."
+  AFG_baghdad_pact: "Join the Baghdad Pact"
+  AFG_baghdad_pact_desc: "By joining the Baghdad Pact, we can ensure regional cooperation and secure our western flank."
+  AFG_faith_revolt: "Faithful Revolt"
+  AFG_faith_revolt_desc: "We shall encourage revolts among the faithful across the border, using religion as a weapon to undermine our enemies."
+  AFG_tibetian_friend_pact: "Tibetan Friendship Pact"
+  AFG_tibetian_friend_pact_desc: "An agreement with Tibet will provide mutual benefits and help us stabilize the region."
+  AFG_request_india: "Request Indian Territories"
+  AFG_request_india_desc: "We will request that India return lands historically belonging to us. Should they refuse, we will have our justification for war."
+  AFG_border_lands: "Claim Border Lands"
+  AFG_border_lands_desc: "The border regions are inhabited by our kin. We must bring these lands back under Afghan protection."
+  AFG_request_tajikistan: "Request Tajikistan"
+  AFG_request_tajikistan_desc: "We shall make a claim for Tajikistan and push our northern boundary into former Soviet territory."
+  AFG_islam_revolt_in_india: "Support Islamic Revolts in India"
+  AFG_islam_revolt_in_india_desc: "By supporting Islamic uprisings in India, we can weaken the enemy from within and inspire loyalty to our cause."
+  AFG_sell_bio: "Sell Bio-Resources"
+  AFG_sell_bio_desc: "Our biological and medicinal resources are in demand. Selling them can greatly fund our war efforts."
+  AFG_afghan_indian_war: "Afghan-Indian War"
+  AFG_afghan_indian_war_desc: "Enough diplomacy. It is time to strike India and take what is rightfully ours by force."
+  AFG_afghan_international_legion_to_help_indian_islams: "Form Afghan International Legion"
+  AFG_afghan_international_legion_to_help_indian_islams_desc: "Volunteers from across the Muslim world shall join our cause to liberate oppressed Muslims in India."
+  AFG_recreate_second_kashuan_empire: "Recreate the Second Kashuan Empire"
+  AFG_recreate_second_kashuan_empire_desc: "Our conquests give us the chance to restore the ancient glory of the Kashuan Empire, uniting the region under our banner."
+  AFG_east_muslims_integrate: "Integrate Eastern Muslims"
+  AFG_east_muslims_integrate_desc: "The eastern Muslim populations must be integrated into our state structure to ensure stability and loyalty."
+  AFG_south_indians_integrate: "Integrate South Indians"
+  AFG_south_indians_integrate_desc: "Our rule over the south must be solidified by integrating its people into our administrative system."
+  AFG_birmian_kakao: "Seize Burman Kakao"
+  AFG_birmian_kakao_desc: "Burma's fertile lands produce precious commodities, including cocoa and coffee, coveted by the world. Historically linked to us through faith and migration, it is time to reclaim these lands and their riches under Afghan stewardship. Let the world know — the fruits of the East shall serve Kabul."
+  AFG_himalayas_states: "Subjugate Himalayan States"
+  AFG_himalayas_states_desc: "The states nestled in the Himalayas are fragmented and weak. We must bring them into our fold."
+  AFG_indochina_peninsla: "Influence Indochina Peninsula"
+  AFG_indochina_peninsla_desc: "Our sphere of influence should stretch to the Indochinese Peninsula, expanding our geopolitical reach."
+  AFG_afghan_china_war: "War with China"
+  AFG_afghan_china_war_desc: "Now is the time to confront China and push our borders even further eastward."
+  AFG_global_resource_expansion: "Global Resource Expansion"
+  AFG_global_resource_expansion_desc: "Expand Afghanistan’s control over resource-rich regions worldwide to strengthen our economy and military capabilities."
+  AFG_expansion_to_south: "Expansion to the South"
+  AFG_expansion_to_south_desc: "Push our borders southwards to secure strategic territories and valuable resources."
+  AFG_expansion_to_north: "Expansion to the North"
+  AFG_expansion_to_north_desc: "Extend our influence northwards, gaining access to key resource areas and new opportunities."
+  AFG_expansion_to_east: "Expansion to the East"
+  AFG_expansion_to_east_desc: "Advance eastward to capture important border regions and resource deposits."
+  AFG_kyrkystan_resources: "Kyrgyzstan Resource Acquisition"
+  AFG_kyrkystan_resources_desc: "Seize resource-rich areas in Kyrgyzstan to fuel our national industry and military efforts."
+  AFG_resources_tajikistan: "Tajikistan Resource Acquisition"
+  AFG_resources_tajikistan_desc: "Secure critical resources in Tajikistan to support Afghanistan’s growth and power."
+  AFG_border_regions: "Consolidation of Border Regions"
+  AFG_border_regions_desc: "Fortify and develop our border regions to ensure security and resource extraction."
+  AFG_kashmir_resources: "Kashmir Resource Control"
+  AFG_kashmir_resources_desc: "Gain control over Kashmir’s abundant resources to strengthen our strategic position."
+  AFG_penjab_resources: "Punjab Resource Control"
+  AFG_penjab_resources_desc: "Expand into Punjab’s fertile lands and resource deposits to boost our economy."
+
+
+
+
 
   #####################
   #####  TURKEY  ######
@@ -992,6 +1076,8 @@
   TUR_unlock_decisions_to_become_christianity_state_tt:0 "Unlocks decisions to §Yaccept Christianity§!"
   TUR_make_hard_decision_tt:0 "Unlocks decision to make a §Yhard decision§! about the future of §Ythe country§!"
   TUR_assasination_of_mustafa_kemal_tt:0 "Unlocks decision to assassinate §YMustafa Kemal Atatürk§!. This will lead to a civil war. Or no?"
+
+
 
   #####################
   #####  UNKNOWN ######
