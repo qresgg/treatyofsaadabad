@@ -55,7 +55,7 @@ country_event = {
         add_political_power = 50
         # It's good practice to put the custom tooltip right before the effect it describes
         custom_effect_tooltip = IRQ_saadabad_spheres_of_influence_tt
-        add_ideas = IRQ_saadabad_spheres_of_influence
+        add_ideas = tos_secret_baghdad_pact
     }
 }
 

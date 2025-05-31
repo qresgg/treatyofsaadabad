@@ -306,13 +306,13 @@ PER_buying_fabrics_category = {
 		cost = 250
 		complete_effect = {
 			limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-	
-					is_owned_and_controlled_by = ROOT
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+
+				is_owned_and_controlled_by = ROOT
 			}
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1

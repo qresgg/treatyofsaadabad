@@ -205,6 +205,865 @@ TUR_dis_politic_cat = {
 		}
 	}
 }
+TUR_the_constitutional_arrows_category = { 
+
+	TUR_republicanism_decision = {
+	
+		icon = tur_the_constitutional_arrows
+
+		allowed = { 
+			original_tag = TUR
+		}
+		
+		fire_only_once = no
+		fixed_random_seed = yes
+		
+		visible = {
+			has_completed_focus = TUR_ratify_the_six_arrows
+			NOT = { 
+				OR = {
+					AND = { 
+						has_country_leader = {
+							character = TUR_adnan_menderes
+							ruling_only = yes
+						}
+						NOT = { has_completed_focus = TUR_reconfigure_our_foreign_policy } 
+					}
+					has_country_leader = {
+						character = TUR_refet_pasha
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = TUR_abdulmejid_ii
+						ruling_only = yes
+					}
+				}
+			}
+		}
+		
+		available = {
+			has_completed_focus = TUR_ratify_the_six_arrows
+			NOT = { has_country_flag = TUR_stoked_republicanism_flag }
+		}
+
+		days_remove = 14
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		complete_effect = {
+			add_ideas = TUR_republicanism
+		}
+
+		remove_effect = {
+			remove_ideas = TUR_republicanism
+			hidden_effect = {
+				set_country_flag = { flag = TUR_stoked_republicanism_flag value = 1 days = 60 }
+			}
+		}
+	}
+
+	TUR_secularism_decision = {
+	
+		icon = tur_the_constitutional_arrows
+
+		allowed = { 
+			original_tag = TUR
+		}
+		
+		fire_only_once = no
+		
+		visible = {
+			has_completed_focus = TUR_ratify_the_six_arrows
+			any_owned_state = {
+				has_state_flag = TUR_ideological_battleground_state
+			}
+			NOT = { 
+				OR = {
+					has_country_leader = {
+						character = TUR_adnan_menderes
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = TUR_refet_pasha
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = TUR_abdulmejid_ii
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = TUR_durrushehvar_i
+						ruling_only = yes
+					}
+					AND = { 
+						has_country_leader = {
+							character = TUR_fevzi_cakmak
+							ruling_only = yes
+						}
+						NOT = { has_completed_focus = TUR_loosen_the_laws_on_secularism } 
+					}
+				}
+			}
+		}
+		
+		available = {
+			has_completed_focus = TUR_ratify_the_six_arrows
+			NOT = { has_country_flag = TUR_stoked_secularism_flag }
+		}
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		complete_effect = {
+			random_list = {
+				50 = {
+					modifier = {
+						factor = 0
+						NOT = { 
+							any_owned_state = {
+								has_state_flag = TUR_ideological_battleground_state
+							}
+						}
+					}
+					random_owned_state = {
+						limit = {
+							AND = { 
+								has_state_flag = TUR_ideological_battleground_state
+								NOT = {
+									OR = { 
+										has_dynamic_modifier = { modifier = kemalist_loyalties }
+										has_dynamic_modifier = { modifier = kemalist_schemers }
+										has_dynamic_modifier = { modifier = islamist_opposition }
+										has_dynamic_modifier = { modifier = islamist_sedition }
+										has_dynamic_modifier = { modifier = islamist_insurgency }
+										has_dynamic_modifier = { modifier = islamists_placated }
+									}
+								}
+							}
+						}
+						save_event_target_as = TUR_kemalist_state_event_target
+						event_target:TUR_kemalist_state_event_target = { TUR_kemalist_influenced_state_effect = yes }
+					}
+				}
+				50 = {
+					random_owned_controlled_state = {
+						limit = { 
+							OR = {
+								has_dynamic_modifier = { modifier = islamist_opposition }
+								has_dynamic_modifier = { modifier = islamist_sedition }
+								has_dynamic_modifier = { modifier = islamist_insurgency }
+							}
+						}
+						save_global_event_target_as = TUR_fundamentalist_state
+						event_target:TUR_fundamentalist_state = { TUR_downgrade_fundamentalist_defiance_effect = yes }
+					}
+				}
+			}
+			hidden_effect = {
+				set_country_flag = { flag = TUR_stoked_secularism_flag value = 1 days = 60 }
+			}
+		}
+	}
+
+	TUR_populism_decision = {
+	
+		icon = tur_the_constitutional_arrows
+
+		allowed = { 
+			original_tag = TUR
+		}
+		
+		fire_only_once = no
+		
+		visible = {
+			has_completed_focus = TUR_ratify_the_six_arrows
+		}
+		
+		available = {
+			NOT = { has_country_flag = TUR_stoked_populism_flag }
+		}
+
+		days_remove = 60
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		complete_effect = {
+			add_ideas = TUR_populism
+		}
+
+		remove_effect = {
+			remove_ideas = TUR_populism
+			hidden_effect = {
+				set_country_flag = { flag = TUR_stoked_populism_flag value = 1 days = 80 }
+			}
+		}
+	}
+
+	TUR_nationalism_decision = {
+	
+		icon = tur_the_constitutional_arrows
+
+		allowed = { 
+			original_tag = TUR
+		}
+		
+		fire_only_once = no
+		
+		visible = {
+			has_completed_focus = TUR_ratify_the_six_arrows
+			NOT = { 
+				OR = {
+					AND = { 
+						has_country_leader = {
+							character = TUR_adnan_menderes
+							ruling_only = yes
+						}
+						NOT = { has_completed_focus = TUR_reconfigure_our_foreign_policy } 
+					}
+					has_country_leader = {
+						character = TUR_abdulmejid_ii
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = TUR_durrushehvar_i
+						ruling_only = yes
+					}
+				}
+			}
+		}
+		
+		available = {
+			NOT = { has_country_flag = TUR_stoked_nationalism_flag }
+		}
+
+		days_remove = 30
+
+		cost = 75
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		complete_effect = {
+			add_ideas = TUR_nationalism
+		}
+
+		remove_effect = {
+			remove_ideas = TUR_nationalism
+			hidden_effect = {
+				set_country_flag = { flag = TUR_stoked_nationalism_flag value = 1 days = 120 }
+			}
+		}
+	}
+
+	TUR_etatism_decision = {
+	
+		icon = tur_the_constitutional_arrows
+
+		allowed = { 
+			original_tag = TUR
+		}
+		
+		fire_only_once = no
+		
+		visible = {
+			AND = {
+				has_completed_focus = TUR_continue_the_policy_of_etatism
+				has_completed_focus = TUR_ratify_the_six_arrows
+			}
+			NOT = { has_country_flag = TUR_etatism_abolished }
+		}
+		
+		available = {
+			OR = {
+				has_active_mission = TUR_etatism_crisis_1
+				has_active_mission = TUR_etatism_crisis_2
+				has_active_mission = TUR_etatism_crisis_3
+				has_active_mission = TUR_etatism_crisis_4
+			}
+		}
+
+		cancel_trigger = {
+			custom_trigger_tooltip = {
+				tooltip = TUR_no_longer_has_etatism_tt
+				OR = {
+					NOT = {
+						has_idea = TUR_etatism
+						has_idea = TUR_etatism_2
+						has_idea = TUR_etatism_3
+						has_idea = TUR_etatism_4
+					}
+				}
+			}
+		}
+
+		days_remove = 14
+
+		cost = 75
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		complete_effect = {
+			add_ideas = TUR_etatism_stabilisation
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					has_active_mission = TUR_etatism_crisis_1
+				}
+				add_days_mission_timeout = {
+					mission = TUR_etatism_crisis_1
+					days = 120
+				}
+			}
+			else_if = {
+				limit = {
+					has_active_mission = TUR_etatism_crisis_2
+				}
+				add_days_mission_timeout = {
+					mission = TUR_etatism_crisis_2
+					days = 100
+				}
+			}
+			else_if = {
+				limit = {
+					has_active_mission = TUR_etatism_crisis_3
+				}
+				add_days_mission_timeout = {
+					mission = TUR_etatism_crisis_3
+					days = 80
+				}
+			}
+			else_if = {
+				limit = {
+					has_active_mission = TUR_etatism_crisis_4
+				}
+				add_days_mission_timeout = {
+					mission = TUR_etatism_crisis_4
+					days = 60
+				}
+			}
+			hidden_effect = {
+				remove_ideas = TUR_etatism_stabilisation
+			}
+		}
+
+		cancel_effect = {
+			if = {
+				limit = {
+					has_idea = TUR_etatism_stabilisation
+				}
+				remove_ideas = TUR_etatism_stabilisation
+			}
+		}
+	}
+
+	TUR_reformism_decision = {
+	
+		icon = tur_the_constitutional_arrows
+
+		allowed = { 
+			original_tag = TUR
+		}
+		
+		fire_only_once = no
+		
+		visible = {
+			has_completed_focus = TUR_ratify_the_six_arrows
+			NOT = { 
+				OR = {
+					has_country_leader = {
+						character = TUR_adnan_menderes
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = TUR_abdulmejid_ii
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = TUR_refet_pasha
+						ruling_only = yes
+					}
+					AND = { 
+						has_country_leader = {
+							character = TUR_fevzi_cakmak
+							ruling_only = yes
+						}
+						NOT = { has_completed_focus = TUR_fatherland_first } 
+					}
+				}
+			}
+		}
+		
+		available = {
+			NOT = { has_country_flag = TUR_stoked_reformism_flag }
+		}
+
+		days_remove = 60
+
+		cost = 75
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		complete_effect = {
+			add_ideas = TUR_reformism
+		}
+
+		remove_effect = {
+			remove_ideas = TUR_reformism
+			hidden_effect = {
+				set_country_flag = { flag = TUR_stoked_reformism_flag value = 1 days = 60 }
+			}
+		}
+	}
+
+	TUR_revolutionism_decision = {
+	
+		icon = tur_the_constitutional_arrows
+
+		allowed = { 
+			original_tag = TUR
+		}
+		
+		fire_only_once = no
+		
+		visible = {
+			has_completed_focus = TUR_ratify_the_six_arrows
+			has_completed_focus = TUR_revive_turkish_revolutionism
+		}
+		
+		available = {
+			NOT = { has_country_flag = TUR_stoked_revolutionism_flag }
+		}
+
+		days_remove = 60
+
+		cost = 75
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		complete_effect = {
+			add_ideas = TUR_revolutionism
+		}
+
+		remove_effect = {
+			remove_ideas = TUR_revolutionism
+			hidden_effect = {
+				set_country_flag = { flag = TUR_stoked_revolutionism_flag value = 1 days = 60 }
+			}
+		}
+	}
+
+	TUR_liberalism_decision = {
+	
+		icon = tur_the_constitutional_arrows
+
+		allowed = { 
+			original_tag = TUR
+		}
+		
+		fire_only_once = no
+		
+		visible = {
+			has_completed_focus = TUR_ratify_the_six_arrows
+			has_completed_focus = TUR_fully_integrate_the_is_bank
+		}
+		
+		available = {
+			OR = {
+				has_country_leader = {
+					character = TUR_adnan_menderes
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = TUR_celal_bayar
+					ruling_only = yes
+				}
+				AND = { 
+					has_country_leader = {
+						character = TUR_mustafa_kemal_ataturk
+						ruling_only = yes
+					}
+					has_completed_focus = TUR_fully_integrate_the_is_bank
+				}
+			}
+			has_idea = free_trade
+			NOT = { has_country_flag = TUR_stoked_liberalism_flag }
+		}
+
+		days_remove = 90
+
+		cost = 75
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		complete_effect = {
+			add_ideas = TUR_liberalism
+		}
+
+		remove_effect = {
+			remove_ideas = TUR_liberalism
+			hidden_effect = {
+				set_country_flag = { flag = TUR_stoked_liberalism_flag value = 1 days = 120 }
+			}
+		}
+	}
+
+	TUR_jihad_decision = {
+	
+		icon = tur_the_constitutional_arrows
+
+		allowed = { 
+			original_tag = TUR
+		}
+		
+		fire_only_once = no
+		
+		visible = {
+			has_completed_focus = TUR_ratify_the_six_arrows
+			OR = {
+				has_country_leader = {
+					character = TUR_adnan_menderes
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = TUR_refet_pasha
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = TUR_abdulmejid_ii
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = TUR_durrushehvar_i
+					ruling_only = yes
+				}
+				AND = { 
+					has_country_leader = {
+						character = TUR_fevzi_cakmak
+						ruling_only = yes
+					}
+					has_completed_focus = TUR_loosen_the_laws_on_secularism
+				}
+			}
+		}
+		
+		available = {
+			NOT = { has_country_flag = TUR_stoked_jihad_flag }
+		}
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		complete_effect = {
+			add_war_support = 0.05
+			random_owned_controlled_state = {
+				limit = { 
+					has_dynamic_modifier = { modifier = islamists_placated }
+				}
+				add_dynamic_modifier = { modifier = devout_islamists } 
+				hidden_effect = {
+					remove_dynamic_modifier = { modifier = islamists_placated }
+				}
+			}
+			hidden_effect = {
+				set_country_flag = { flag = TUR_stoked_jihad_flag value = 1 days = 100 }
+			}
+		}
+	}
+
+	TUR_fidelity_decision = {
+	
+		icon = tur_the_constitutional_arrows
+
+		allowed = { 
+			original_tag = TUR
+		}
+		
+		fire_only_once = no
+		
+		visible = {
+			has_completed_focus = TUR_ratify_the_six_arrows
+			OR = {
+				AND = { 
+					has_country_leader = {
+						character = TUR_adnan_menderes
+						ruling_only = yes
+					}
+					NOT = { has_completed_focus = TUR_reconfigure_our_foreign_policy } 
+				}
+				has_country_leader = {
+					character = TUR_refet_pasha
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = TUR_abdulmejid_ii
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = TUR_durrushehvar_i
+					ruling_only = yes
+				}
+			}
+		}
+		
+		available = {
+			NOT = { has_country_flag = TUR_stoked_fidelity_flag }
+		}
+
+		days_remove = 30
+
+		cost = 75
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		complete_effect = {
+			add_ideas = TUR_fundamentalism
+		}
+
+		remove_effect = {
+			remove_ideas = TUR_fundamentalism
+			hidden_effect = {
+				set_country_flag = { flag = TUR_stoked_fidelity_flag value = 1 days = 160 }
+			}
+		}
+	}
+
+	TUR_absolutism_decision = {
+	
+		icon = tur_the_constitutional_arrows
+
+		allowed = { 
+			original_tag = TUR
+		}
+		
+		fire_only_once = no
+		
+		visible = {
+			has_completed_focus = TUR_ratify_the_six_arrows
+			OR = { 
+				has_country_leader = {
+					character = TUR_abdulmejid_ii
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = TUR_durrushehvar_i
+					ruling_only = yes
+				}
+			}
+		}
+		
+		available = {
+			NOT = { has_country_flag = TUR_stoked_absolutism_flag }
+		}
+
+		days_remove = 30
+
+		cost = 120
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		complete_effect = {
+			add_ideas = TUR_absolutism
+		}
+
+		remove_effect = {
+			add_war_support = 0.1
+			remove_ideas = TUR_absolutism
+			hidden_effect = {
+				set_country_flag = { flag = TUR_stoked_absolutism_flag value = 1 days = 120 }
+			}
+		}
+	}
+
+	TUR_ultranationalism_decision = {
+	
+		icon = tur_the_constitutional_arrows
+
+		allowed = { 
+			original_tag = TUR
+		}
+		
+		fire_only_once = no
+		
+		visible = {
+			has_completed_focus = TUR_ratify_the_six_arrows
+			OR = {
+				has_country_leader = {
+					character = TUR_mehmet_recep_peker
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = TUR_fevzi_cakmak
+					ruling_only = yes
+				}
+			}
+			has_idea = TUR_halide_edib_adivar
+			has_idea = TUR_nihal_atsiz
+		}
+		
+		available = {
+			NOT = { has_country_flag = TUR_stoked_ultranationalism_flag }
+		}
+
+		days_remove = 80
+
+		cost = 100
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		complete_effect = {
+			add_ideas = TUR_ultranationalism
+		}
+
+		remove_effect = {
+			remove_ideas = TUR_ultranationalism
+			hidden_effect = {
+				set_country_flag = { flag = TUR_stoked_ultranationalism_flag value = 1 days = 120 }
+			}
+		}
+	}
+
+	TUR_socialism_decision = {
+	
+		icon = tur_the_constitutional_arrows
+
+		allowed = { 
+			original_tag = TUR
+		}
+		
+		fire_only_once = no
+		
+		visible = {
+			has_completed_focus = TUR_ratify_the_six_arrows
+			OR = {
+				has_country_leader = {
+					character = TUR_sevket_sureyya_aydemir
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = TUR_sefik_husnu
+					ruling_only = yes
+				}
+				AND = { 
+					has_country_leader = {
+						character = TUR_ismet_inonu
+						ruling_only = yes
+					}
+					has_completed_focus = TUR_kemalist_socialist_theory
+				}
+				has_country_flag = TUR_etatism_abolished
+			}
+		}
+		
+		available = {
+			NOT = { has_country_flag = TUR_stoked_socialism_flag }
+		}
+
+		days_remove = 90
+
+		cost = 75
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		complete_effect = {
+			add_ideas = TUR_socialism
+		}
+
+		remove_effect = {
+			add_stability = -0.1
+			remove_ideas = TUR_socialism
+			hidden_effect = {
+				set_country_flag = { flag = TUR_stoked_socialism_flag value = 1 days = 120 }
+			}
+		}
+	}
+
+	}
+	
 TUR_accept_christianity_cat = {
 	TUR_accept_christianity_in_big_city = {
 		icon = GFX_decision_christianity_campaign

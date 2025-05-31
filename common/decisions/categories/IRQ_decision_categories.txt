@@ -17,14 +17,15 @@ IRQ_arab_free_legion_cat = {
 	}
 }
 
-greater_mesopotamia_cat = {
+IRQ_request_baghdad_pact_territories_cat = {
 	icon = GFX_decision_category_generic_political_actions
-	priority = 20
+	picture = GFX_decision_cat_picture_baghdad_pact
+	priority = 1
     allowed = {
         original_tag = IRQ
     }
 	visible = {
-		always = yes
+		has_completed_focus = IRQ_secret_baghdad_pact
 	}
 }
 

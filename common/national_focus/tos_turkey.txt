@@ -16,7 +16,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 
 	default = no
 
-	continuous_focus_position = { x = 250 y = 1200 }	
+	continuous_focus_position = { x = 250 y = 800 }	
 
 	shared_focus = SSB_the_saadabad_pact
 
@@ -5531,8 +5531,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			add_political_power = 120
-			add_stability = 0.05
+			add_ideas = tos_global_resource_expansion
 		}
 	}
 
@@ -5816,7 +5815,10 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		icon = GFX_focus_renounce_the_treaty_of_trianon
 		
 		available = {
-			has_idea = IRQ_saadabad_spheres_of_influence
+			has_idea = tos_secret_baghdad_pact
+		}
+		allow_branch  = { 
+			has_idea = tos_secret_baghdad_pact
 		}
 
 		cost = 5
@@ -5830,9 +5832,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		completion_reward = {
 			add_political_power = 120
 		}
-		search_filters = {
-			FOCUS_FILTER_TREATYOFSAADABAD
-		}
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 	}
 
 	focus = {
@@ -9612,7 +9612,22 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		}
 		search_filters = { FOCUS_FILTER_TUR_KEMALISM }
 	}
-	
+	focus = {
+        id = TUR_ratify_the_six_arrows
+        icon = GFX_focus_TUR_ratify_the_six_arrows
+        prerequisite = { focus = TUR_the_montreux_convention_tos }
+        x = 0
+        y = 1
+        relative_position_id = TUR_the_montreux_convention_tos
+        cost = 10
+        ai_will_do = {
+            base = 10
+        }
+
+        completion_reward = {
+            unlock_decision_category_tooltip = TUR_the_constitutional_arrows_category
+        }
+    }
 	focus = {
 		id = TUR_neutrality_through_deterrence
 		icon = GFX_goal_generic_military_sphere
@@ -9621,7 +9636,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		mutually_exclusive = { focus = TUR_bicontinental_intervention }
 		relative_position_id = TUR_the_montreux_convention_tos
 		x = -3
-		y = 1
+		y = 2
 		allow_branch = {
 			if = {
 				limit = {
@@ -9631,14 +9646,6 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 				}
 			}
 		}
-		offset = {
-			x = 3
-			y = 0
-			trigger = {
-				has_completed_focus = TUR_neutrality_through_deterrence
-			}
-		}
-		
 		ai_will_do = {
 			factor = 10
 		}
@@ -9855,7 +9862,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		prerequisite = { focus = TUR_neutrality_through_deterrence }
 		relative_position_id = TUR_the_montreux_convention_tos
 		x = -7
-		y = 2
+		y = 3
 		offset = {
 			x = 3
 			y = 0
@@ -9972,14 +9979,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		prerequisite = { focus = TUR_neutrality_through_deterrence }
 		relative_position_id = TUR_the_montreux_convention_tos
 		x = -4
-		y = 2
-		offset = {
-			x = 3
-			y = 0
-			trigger = {
-				has_completed_focus = TUR_neutrality_through_deterrence
-			}
-		}
+		y = 3
 		
 		ai_will_do = {
 			factor = 10
@@ -10062,7 +10062,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		mutually_exclusive = { focus = TUR_neutrality_through_deterrence }
 		relative_position_id = TUR_the_montreux_convention_tos
 		x = 3
-		y = 1
+		y = 2
 		offset = {
 			x = -3
 			y = 0

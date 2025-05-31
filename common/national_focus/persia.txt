@@ -4582,8 +4582,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			add_political_power = 120
-			add_stability = 0.05
+			add_ideas = tos_global_resource_expansion
 		}
 	}
 	focus = {
@@ -7607,7 +7606,7 @@ focus_tree = {
 			base = 1
 		}
 		bypass = {
-			has_idea = IRQ_saadabad_spheres_of_influence
+			has_idea = tos_secret_baghdad_pact
 		}
 
 		# TREBA

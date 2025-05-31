@@ -102,8 +102,12 @@
   IRQ_open_toyota_organization_desc: "Your country needs a strong automobile brand. A reliable marque ensures quality, affordability, and longevity. With Toyota's proven track record, your army’s logistics will operate more smoothly. Investing in such a company means investing in the backbone of your mobility."
   IRQ_more_finance_for_toyota: "More Finance for Toyota"
   IRQ_more_finance_for_toyota_desc: "Toyota is a reliable company, but it needs more funding to expand its production. Investing in this company will ensure that your army's logistics run smoothly."
-  IRQ_training_iraqi_army_1: "Mobilisation Iraqi Army"
-  
+  IRQ_lybian_chromium: "Lybian Chromium"
+  IRQ_lybian_chromium_desc: "Chromium deposits in central Libya remain largely undeveloped but hold significant potential. Found in ultramafic rock formations, these reserves are currently overshadowed by the country’s oil sector. With rising global demand for chromium in stainless steel and alloys, Libya’s central deposits could become strategically important if properly explored and developed."
+  IRQ_sudan_resources: "Sudan Res-Ex"
+  IRQ_sudan_resources_desc: "Sudan is rich in mineral resources, with notable deposits of chromium and tungsten. Chromium mining is concentrated in the Ingessana Hills in the Blue Nile region, known for high-grade chromite. Tungsten, although less developed, has been identified in several geological zones, offering potential for future extraction. With proper investment and stability, Sudan's chrome and tungsten sectors could play a key role in regional and global supply chains."
+  IRQ_ethiopian_rubber: "Ethiopian Rubber"
+  IRQ_ethiopian_rubber_desc: "Ethiopia cultivates natural rubber mainly in its southwestern regions, where the climate supports rubber tree plantations. Though still in early development, the sector shows promise for import substitution and export growth. With increased investment and modern farming practices, Ethiopia’s rubber industry could become a valuable contributor to its economy."
 
   #####################
   ### SHARED  FOCUS ###
@@ -950,7 +954,19 @@
   IRQ_saadabad_alliance_per_tt: "Invite §YIran§! to join our alliance."
   IRQ_saadabad_alliance_tur_tt: "Invite §YTurkey§! to join our alliance."
   IRQ_saadabad_alliance_afg_tt: "Invite §YAfghanistan§! to join our alliance."
-
+  IRQ_kuwait_war_goal: "Annexation of Kuwait"
+  IRQ_arabia_tt: "Unlock §YArabia§! decisions. To gain all cores on every arabian state in §YThe Mediterranean Sea§!"
+  IRQ_african_arab_revolt_tt: "Unlock decisions to make revolution in §YNorth Africa§! regions"
+  IRQ_toyota_finance_organization_tt: "Your nation is allocating more funds to "§YToyota Motor Corporation§!", allowing the company to import foreign parts. As a result, your vehicles will become tougher, more reliable, and faster."
+  IRQ_ask_eng_for_unite_yemen_tt: "Unlock decision to ask §Y[ENG.GetNameWithFlag]§! for the unification of §Y[YEM.GetNameWithFlag]§!"
+  IRQ_integrate_arabian_puppet_states_tt: "Unlock decisions to integrate all §YArabian Puppet States.§!"
+  IRQ_digrifle: "You will receive §Y10,000§! units of "§YRifle No. 4 Mkl§!" in your stockpile."
+  IRQ_kuw_ultimatum_tt: "If Kuwait reject our ultimatum, we can declare war"
+  IRQ_saadabad_spheres_of_influence_tt: "§Y[IRQ.GetNameWithFlag]§! and §Y[TUR.GetNameWithFlag]§!, §Y[AFG.GetFlag] Afghanistan§!, §Y[PER.GetNameWithFlag]§! will set up our Spheres of Influence in §YMiddle Asia§!, modifying the cost of taking states within and without each others respective spheres.\n\n §Y[IRQ.GetNameWithFlag]§! §YSphere of Influence§! will include:\n§Y[SAU.GetNameWithFlag]§! \n§Y[SYR.GetFlag]§! §YEast Syria (Part)§!\n§Y[JOR.GetNameWithFlag]§!\n§Y[PAL.GetNameWithFlag]§!\n§Y[EGY.GetNameWithFlag]§! §YSynai§!\nAll §Y North Africa Regions§!\n\n §Y[PER.GetNameWithFlag]§! §YSphere of Influence§! will include:\n§Y[SAU.GetNameWithFlag]§!\n§Y[BHR.GetNameWithFlag]§!\n§Y[QAT.GetNameWithFlag]§!\n§Y[UAE.GetNameWithFlag]§!\n§Y[OMA.GetNameWithFlag]§!\n§Y[SOV.GetFlag] South of Soviet Union (Part)§! \n\n §Y[TUR.GetNameWithFlag]§! §YSphere of Influence§! will include:\n§Y[GRE.GetNameWithFlag]§!\n§Y[ROM.GetNameWithFlag]§!\n§Y[YUG.GetNameWithFlag]§!\n§Y[ITA.GetNameWithFlag]§!\n§Y[SPR.GetNameWithFlag]§!\n§Y[FRA.GetNameWithFlag]§!\n§Y[POR.GetNameWithFlag]§!\nAll §Y Black Sea Regions§!\n\n §Y[AFG.GetFlag] Afghanistan§! §YSphere of Influence§! will include:\n§Y[KYR.GetNameWithFlag]§!\n§Y[BUK.GetNameWithFlag]§!\n§Y[SIK.GetFlag] Left Sinkiang (Part)§!\n§Y[RAJ.GetNameWithFlag]§!\n§Y[PAK.GetNameWithFlag]§!\n§Y[SOV.GetFlag] South of Soviet Union (Part)§!"
+  IRQ_mesopotamia_tt: "Unlock §YMesopotamian§! decisions."
+  IRQ_establish_reichprotectorate_tt: "Unlock §YProclaim Reichsprotectorate§! decisions to gain cores on All Middle East states we own. In Hitler we trust!"
+  IRQ_ask_tur_for_kurs_tt: "Unlock decision to ask §Y[TUR.GetNameWithFlag]§! for the southern region of Kurds"
+  
   #####################
   ###  AFGHANISTAN  ###
   #####################
@@ -1037,13 +1053,12 @@
   AFG_kyrkystan_resources_desc: "Seize resource-rich areas in Kyrgyzstan to fuel our national industry and military efforts."
   AFG_resources_tajikistan: "Tajikistan Resource Acquisition"
   AFG_resources_tajikistan_desc: "Secure critical resources in Tajikistan to support Afghanistan’s growth and power."
-  AFG_border_regions: "Consolidation of Border Regions"
-  AFG_border_regions_desc: "Fortify and develop our border regions to ensure security and resource extraction."
+  AFG_exctract_border_regions: "Consolidation of Border Regions"
+  AFG_exctract_border_regions_desc: "Fortify and develop our border regions to ensure security and resource extraction."
   AFG_kashmir_resources: "Kashmir Resource Control"
   AFG_kashmir_resources_desc: "Gain control over Kashmir’s abundant resources to strengthen our strategic position."
   AFG_penjab_resources: "Punjab Resource Control"
   AFG_penjab_resources_desc: "Expand into Punjab’s fertile lands and resource deposits to boost our economy."
-
 
 
 
@@ -1084,6 +1099,7 @@
   #####    OR    ######
   ####  DECISIONS #####
   #####################
+  SAAD_members_receive_tt: "All members of the §YSaadabad Alliance§! will receive a event related with pact."
   generic_skip_one_line_tt: " \n"
   unlocks_fortification_decisions_tt: "Unlocks fortification decisions"
   has_researched_delay_tt: "Requires having researched either Delay or Superior Firepower's Delay doctrine"
@@ -1093,3 +1109,4 @@
   claims_montenegrin_states_tt:0 "Gains claim on §YMontenegro§! and §YWest Sandzak§!"
   EFFECT_CHANGE_LAW_tosi_social_order:0 "Implement Revolutionary Social Policies"
   tos_newline:0 "\n"
+  if_they_accept_tt: "If they accept, we will annex Kuwait peacefully."

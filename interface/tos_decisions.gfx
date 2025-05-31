@@ -15,4 +15,12 @@ spriteTypes = {
 		name = "GFX_decision_afg_sell_bioproduct"
 		texturefile = "gfx/interface/decisions/decision_afg_sell_bioproduct.dds"
 	}
+	spriteType = {
+		name = "GFX_decision_cat_picture_neo_mesopotamia"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_neo_mesopotamia.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_picture_baghdad_pact"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_baghdad_pact.dds"
+	}
 }

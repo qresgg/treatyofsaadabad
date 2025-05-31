@@ -796,27 +796,26 @@ focus_tree = {
 		id = IRQ_global_resource_expansion
 		icon = GFX_focus_generic_central_planning
 		x = 8
-		y = 7
+		y = 8
 		cost = 10
 
 		available = { 
 			OR = {
 				656 = {
-					is_owned_and_controlled_by = ROOT
+					is_controlled_by = ROOT
 				}
 				854 = {
-					is_owned_and_controlled_by = ROOT
+					is_controlled_by = ROOT
 				}
 				455 = {
-					is_owned_and_controlled_by = ROOT
+					is_controlled_by = ROOT
 				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			add_political_power = 120
-			add_stability = 0.05
+			add_ideas = tos_global_resource_expansion
 		}
 	}
 	focus = {
@@ -829,11 +828,11 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		cost = 7
+		cost = 6
 
 		available = {
 			656 = {
-				is_owned_and_controlled_by = ROOT
+				is_controlled_by = ROOT
 			}
 		}
 
@@ -866,13 +865,13 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 7
+		cost = 6
 
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD FOCUS_FILTER_INDUSTRY }
 
 		available = {
 			854 = {
-				is_owned_and_controlled_by = ROOT
+				is_controlled_by = ROOT
 			}
 		}
 		completion_reward = {
@@ -902,11 +901,11 @@ focus_tree = {
 
 		x = 2
 		y = 1
-		cost = 7
+		cost = 6
 
 		available = {
 			455 = {
-				is_owned_and_controlled_by = ROOT
+				is_controlled_by = ROOT
 			}
 		}
 		completion_reward = {
@@ -936,11 +935,11 @@ focus_tree = {
 
 		x = 1
 		y = 1
-		cost = 7
+		cost = 6
 
 		available = {
 			859 = {
-				is_owned_and_controlled_by = ROOT
+				is_controlled_by = ROOT
 			}
 		}
 		completion_reward = {
@@ -957,6 +956,100 @@ focus_tree = {
 				}	
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
+		}
+	}	
+	focus = {
+		id = IRQ_sudan_resources
+		prerequisite = { focus = IRQ_global_resource_expansion }
+		relative_position_id = IRQ_global_resource_expansion
+		icon = GFX_focus_generic_resource_extraction
+		
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD FOCUS_FILTER_INDUSTRY }
+
+		x = 4
+		y = 1
+		cost = 5
+
+		available = {
+			551 = { is_controlled_by = ROOT }
+			883 = { is_controlled_by = ROOT }
+		}
+		completion_reward = {
+			551 = {
+				add_resource = {
+					type = tungsten
+					amount = 15
+				}
+			}
+			883 = {
+				add_resource = {
+					type = chrom
+					amount = 11
+				}
+			}
+		}
+	}	
+	focus = {
+		id = IRQ_lybian_chromium
+		prerequisite = { focus = IRQ_global_resource_expansion }
+		relative_position_id = IRQ_global_resource_expansion
+		icon = GFX_focus_generic_chromium
+		
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD FOCUS_FILTER_INDUSTRY }
+
+		x = -4
+		y = 1
+		cost = 5
+
+		available = {
+			449 = { is_controlled_by = ROOT }
+			662 = { is_controlled_by = ROOT }
+		}
+		completion_reward = {
+			449 = {
+				add_resource = {
+					type = chrom
+					amount = 19
+				}
+			}
+			662 = {
+				add_resource = {
+					type = chrom
+					amount = 13
+				}
+			}
+		}
+	}	
+
+	focus = {
+		id = IRQ_ethiopian_rubber
+		prerequisite = { focus = IRQ_sudan_resources }
+		relative_position_id = IRQ_sudan_resources
+		icon = GFX_focus_BRA_rubber_war
+		
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD FOCUS_FILTER_INDUSTRY }
+
+		x = 0
+		y = 1
+		cost = 6
+
+		available = {
+			838 = { is_controlled_by = ROOT }
+			837 = { is_controlled_by = ROOT }
+		}
+		completion_reward = {
+			838 = {
+				add_resource = {
+					type = rubber
+					amount = 14
+				}
+			}
+			837 = {
+				add_resource = {
+					type = rubber
+					amount = 19
+				}
+			}
 		}
 	}	
 

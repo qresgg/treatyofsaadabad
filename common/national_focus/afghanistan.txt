@@ -6803,56 +6803,191 @@ focus_tree = {
 
 	focus = {
 		id = AFG_global_resource_expansion
-		x = 32
-		y = 8
+		icon = GFX_focus_generic_central_planning
+		x = 29
+		y = 6
+		cost = 10
+
+		available = { 
+			is_major = yes
+		}
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			add_ideas = tos_global_resource_expansion
+		}
 	}
 	focus = {
 		id = AFG_expansion_to_north
+		icon = GFX_focus_AFG_a_modern_economy
 		relative_position_id = AFG_global_resource_expansion
+		prerequisite = { focus = AFG_global_resource_expansion }
 		x = 3
 		y = 1
+		cost = 6
+		available = {
+			742 = { is_controlled_by = ROOT }
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			742 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex 
+					level = 2
+				}
+			}
+		}
 	}
 	focus = {
 		id = AFG_resources_tajikistan
+		icon = GFX_focus_generic_steel
 		relative_position_id = AFG_expansion_to_north
+		prerequisite = { focus = AFG_expansion_to_north }
 		x = 2
 		y = 1
+		cost = 5
+		available = {
+			742 = { is_controlled_by = ROOT }
+		}
+		completion_reward = {
+			742 = {
+				add_resource = {
+					type = steel
+					amount = 16
+				}
+			}
+		}
 	}
 	focus = {
 		id = AFG_kyrkystan_resources 
+		icon = GFX_focus_generic_chromium
 		relative_position_id = AFG_expansion_to_north
+		prerequisite = { focus = AFG_expansion_to_north }
 		x = 0
 		y = 1
+		cost = 5
+		available = {
+			732 = { is_controlled_by = ROOT }
+		}
+		completion_reward = {
+			732 = {
+				add_resource = {
+					type = tungsten
+					amount = 12
+				}
+			}
+		}
 	}
 	focus = {
 		id = AFG_expansion_to_east
+		icon = GFX_focus_generic_military_industry
 		relative_position_id = AFG_global_resource_expansion
+		prerequisite = { focus = AFG_global_resource_expansion }
 		x = 0
 		y = 1
+		cost = 6
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = {
+			440 = { is_controlled_by = ROOT }
+		}
+		completion_reward = {
+			440 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex 
+					level = 2
+				}
+			}
+		}
 	}
 	focus = {
 		id = AFG_kashmir_resources
+		icon = GFX_focus_generic_mining_industry
 		relative_position_id = AFG_expansion_to_east
+		prerequisite = { focus = AFG_expansion_to_east }
 		x = -1
 		y = 1
+		available = {
+			787 = { is_controlled_by = ROOT }
+			441 = { is_controlled_by = ROOT }
+		}
+		cost = 5
+		completion_reward = {
+			787 = {
+				add_resource = {
+					type = steel
+					amount = 20
+				}
+			}
+			441 = {
+				add_resource = {
+					type = steel
+					amount = 14
+				}
+			}
+		}
 	}
 	focus = {
 		id = AFG_penjab_resources
+		icon = GFX_focus_generic_resource_extraction
 		relative_position_id = AFG_expansion_to_east
+		prerequisite = { focus = AFG_expansion_to_east }
 		x = 1
 		y = 1
+		cost = 5
+		available = {
+			440 = { is_controlled_by = ROOT }
+		}
+		completion_reward = {
+			440 = {
+				add_resource = {
+					type = oil
+					amount = 16
+				}
+			}
+		}
 	}
 	focus = {
 		id = AFG_expansion_to_south
+		icon = GFX_focus_generic_modernize_industry
 		relative_position_id = AFG_global_resource_expansion
+		prerequisite = { focus = AFG_global_resource_expansion }
 		x = -3
 		y = 1
+		cost = 5
+		available = {
+			988 = { is_controlled_by = ROOT }
+		}
+		completion_reward = {
+			988 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex 
+					level = 1
+				}
+			}
+		}
 	}
 	focus = {
-		id = AFG_border_regions
+		id = AFG_exctract_border_regions
+		icon = GFX_focus_generic_aluminum
 		relative_position_id = AFG_expansion_to_south
+		prerequisite = { focus = AFG_expansion_to_south }
 		x = 0
 		y = 1
+		cost = 5
+		available = {
+			988 = { is_controlled_by = ROOT }
+		}
+		completion_reward = {
+			988 = {
+				add_resource = {
+					type = aluminium
+					amount = 12
+				}
+			}
+		}
 	}
 
 	focus = {

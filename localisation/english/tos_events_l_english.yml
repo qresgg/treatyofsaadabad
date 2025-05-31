@@ -2,6 +2,72 @@
 #####################
 ####### IRAQ ########
 #####################
+IRQ_kuw_ultimatum.2.t: "Kuwait Receives an Ultimatum"
+IRQ_kuw_ultimatum.2.desc: "Iraq has issued us an ultimatum: submit peacefully to their authority or face war. The decision will define our future."
+IRQ_kuw_ultimatum.2.a: "We have no choice but to yield"
+IRQ_kuw_ultimatum.2.b: "We will resist their threats!"
+
+IRQ_kuw_ultimatum.3t: "Kuwait Accepts the Ultimatum"
+IRQ_kuw_ultimatum.3d: "Kuwait has yielded to our demands without bloodshed. The desert sands are now ours."
+IRQ_kuw_ultimatum.3.a: "Excellent. The land is ours."
+
+IRQ_kuw_ultimatum.4t: "Kuwait Rejects the Ultimatum"
+IRQ_kuw_ultimatum.4d: "Kuwait has rejected our demands. There is only one course left—war."
+IRQ_kuw_ultimatum.4.a: "Then we will take it by force."
+# Additional
+GAME_OVER_TT: "§RThis may result in the game ending if you're annexed.§"
+
+# IRQ_PAL_ultimatum.2
+IRQ_PAL_ultimatum.2.t: "Palestinian Ultimatum"
+IRQ_PAL_ultimatum.2.desc: "Palestine must choose whether to accept our ultimatum or resist our demands."
+IRQ_PAL_ultimatum.2.a: "Accept the Ultimatum"
+IRQ_PAL_ultimatum.2.b: "Reject the Ultimatum"
+
+# IRQ_PAL_ultimatum.3
+IRQ_PAL_ultimatum.3t: "Annexation of Palestine"
+IRQ_PAL_ultimatum.3d: "Palestine will be annexed and become part of our nation."
+
+# IRQ_PAL_ultimatum.4
+IRQ_PAL_ultimatum.4t: "Palestinian Resistance"
+IRQ_PAL_ultimatum.4d: "Palestine has rejected the ultimatum. It's time to act. We can create a war goal for their territory."
+
+# For war goal generation:
+IRQ_PAL_war_goal: "War Goal Against Palestine"
+
+IRQ_deal_for_israel: "Deal for Israel"
+IRQ_deal_for_israel.desc: "If Britain accepts, you will gain Israel and a non-aggression pact with your neighbors. If they refuse, you will gain a war goal on Israel."
+IRQ_deal_for_israel.completion_reward: "Completion Reward: Gain a war goal on Palestine or negotiate for Israel."
+
+IRQ_kuwait_war_goal: "Claiming Kuwait"
+IRQ_PALESTINE_war_goal: "Claiming Palestine"
+
+IRQ_JOR_ultimatum.2.t: "Ultimatum to Jordan"
+IRQ_JOR_ultimatum.2.desc: "Our diplomats have delivered an ultimatum to the Jordanian government: submit peacefully to our demands or face the consequences of defiance."
+IRQ_JOR_ultimatum.2.a: "They yield"
+IRQ_JOR_ultimatum.2.b: "They resist"
+
+IRQ_JOR_ultimatum.3t: "Jordan Accepts"
+IRQ_JOR_ultimatum.3d: "Faced with overwhelming pressure, the Jordanian leadership has agreed to our demands. They have handed over control without resistance."
+IRQ_JOR_ultimatum.3.b: "Excellent"
+
+IRQ_JOR_ultimatum.4t: "Jordan Resists"
+IRQ_JOR_ultimatum.4d: "Jordan has refused our ultimatum. Their government has mobilized the armed forces, and tensions have erupted into open hostility."
+IRQ_JOR_ultimatum.4.b: "Then we go to war"
+
+IRQ_saadabad.1.t: "Black Discovery"
+IRQ_saadabad.1.d: "The Black Army has uncovered a major find in the sands — over 10,000 weapons."
+IRQ_saadabad.1.a: "Wonderful!"
+
+IRQ_kuwrej1.t: "Kuwait Rejects"
+IRQ_kuwrej1.d: "Kuwait has rejected our ultimatum. We must now prepare for war."
+
+IRQ_SYR_partition.1.t: "We received no choice ultimatum"
+IRQ_SYR_partition.1.d: "Following years of internal conflict and foreign intervention, Syria stands divided. Turkey controls stretches of the north, establishing buffer zones and backing local forces to curb Kurdish influence. To the east, Iraqi-linked militias and tribal networks assert influence along the Euphrates, aiming to secure borders and suppress extremist threats. The once-unified Syrian state is now a patchwork of zones shaped by regional ambitions."
+IRQ_SYR_partition.1.a: "So sad"
+
+IRQ_SYR_partition.2.t: "Partition of Syria"
+IRQ_SYR_partition.2.d: "Following years of internal conflict and foreign intervention, Syria stands divided. Turkey controls stretches of the north, establishing buffer zones and backing local forces to curb Kurdish influence. To the east, Iraqi-linked militias and tribal networks assert influence along the Euphrates, aiming to secure borders and suppress extremist threats. The once-unified Syrian state is now a patchwork of zones shaped by regional ambitions."
+IRQ_SYR_partition.2.a: "Hell yeah"
 
 #####################
 ####### IRAN ########

@@ -105,6 +105,11 @@
  decision_cost_ie_500_MP_500_CP_25_tooltip:1 "It costs £infantry_equipment_text_icon  §Y500§! £manpower_texticon  §Y500§! £command_power  §Y25§! to take the decision"
 
 #####################
+###  MESOPOTAMIA  ###
+#####################
+form_neo_mesopotamia_category_desc:0 "123123"
+
+#####################
 ###    KUSHAN     ###
 #####################
 form_country_afghanistan_and_border_states_coring_tt: "All §YAfghan§! and §YSouth Border§! states become integrated"
@@ -287,3 +292,15 @@ integrate_east_muslims: "Integrate Eastern Muslims"
 integrate_east_muslims_desc: "Work to unify and incorporate the Muslim populations from the eastern regions into our state."
 integrate_south_indians: "Integrate South Indians"
 integrate_south_indians_desc: "Bring the diverse communities of South India under our political and cultural umbrella."
+
+#####################
+####    IRAQ     ####
+#####################
+IRQ_request_baghdad_pact_territories_cat: "Request for territories according to the pact"
+IRQ_request_baghdad_pact_territories_cat_desc: "The Baghdad Pact established a framework for mutual cooperation and regional stability. All signatories recognized that North Africa lies within our rightful sphere of influence. Now, with the balance of power shifting, it is time to remind our partners of their commitments and press our legitimate claims."
+IRQ_request_region: "Request our region"
+IRQ_proclaim_arab_fed_mor_tt: "Controlls all §YMorroco§! regions"
+IRQ_proclaim_arab_fed_alg_tt: "Controlls all §YAlgeria§! regions"
+IRQ_proclaim_arab_fed_tun_tt: "Controlls all §YTunisia§! regions"
+IRQ_proclaim_arab_fed_lba_tt: "Controlls all §YLybia§! regions"
+IRQ_proclaim_arab_fed_egy_tt: "Controlls all §YEgypt§! regions"

@@ -10,7 +10,7 @@ ideas = {
 				always = yes
 			}
 
-			picture = generic_agrarian_society
+			picture = generic_mountain_warfare
 			
 			removal_cost = -1
 			
@@ -38,30 +38,11 @@ ideas = {
 				production_speed_infrastructure_factor = 0.2
 			}
 		}
-		IRQ_ideas_against_israel = {
-			allowed = {
-				original_tag = IRQ
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			picture = generic_agrarian_society
-			
-			removal_cost = -1
-			
-			targeted_modifier = {
-				target = ENG
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.15
-			}
-		}
-
 		IRQ_ideas_against_north_africa = {
 			allowed = {
 				original_tag = IRQ
 			}
+			picture = SWE_wargames
 
 			removal_cost = -1
 			targeted_modifier = {
@@ -92,24 +73,6 @@ ideas = {
 			modifier = {
 				political_power_gain = -0.5
 				stability_weekly = -0.005
-			}
-		}
-
-		IRQ_saadabad_spheres_of_influence = {
-			allowed = {
-				OR = {
-					tag = PER
-					tag = TUR
-					tag = IRQ
-					tag = AFG
-				}
-			}
-			picture = IRQ_baghdad_pact_idea
-			custom_effect_tooltip = IRQ_saadabad_spheres_of_influence_tt
-			modifier = {
-				stability_factor = 0.1
-				war_support_factor = 0.1
-				political_power_factor = 0.1
 			}
 		}
 

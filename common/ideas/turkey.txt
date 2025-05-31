@@ -1,42 +1,429 @@
 ideas = {
 
-	#### MODDING
-	TUR_fabrics_for_territories = {
-		picture = generic_goods_red_bonus
+	country = {
+		#### MODDING
+		TUR_fabrics_for_territories = {
+			picture = generic_goods_red_bonus
 
-		available = {
-			ROOT = {
-				NOT = {
-					has_war_with = ITA
+			available = {
+				ROOT = {
+					NOT = {
+						has_war_with = ITA
+					}
 				}
 			}
-		}
-		removal_cost = -1
-		
-		modifier = {
-			consumer_goods_factor = 0.15
-		}
-	}
-
-	TUR_territories_for_fabrics = {
-		picture = generic_goods_red_bonus
-
-		available = {
-			ROOT = {
-				NOT = {
-					has_war_with = ITA
-				}
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.15
 			}
 		}
-		removal_cost = -1
-		
-		modifier = {
-			consumer_goods_factor = -0.15
-		}
-	}
 
-	TUR_chistianity_state = {
-		picture = 
+		TUR_territories_for_fabrics = {
+			picture = generic_goods_red_bonus
+
+			available = {
+				ROOT = {
+					NOT = {
+						has_war_with = ITA
+					}
+				}
+			}
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+
+		TUR_chistianity_state = {
+			picture = 
+		}
+
+		#### ARROWS
+
+		TUR_republicanism = { 
+
+			allowed = {
+				original_tag = TUR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_constitutional_guarantees
+				
+			removal_cost = -1
+				
+			modifier = {
+				neutrality_drift = 0.03
+				stability_weekly = 0.025
+			}
+		}
+
+		TUR_nationalism = { 
+
+			allowed = {
+				original_tag = TUR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_constitutional_guarantees
+				
+			removal_cost = -1
+				
+			modifier = {
+				war_support_weekly = 0.025
+			}
+		}
+
+		TUR_populism = { 
+
+			allowed = {
+				original_tag = TUR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_constitutional_guarantees
+				
+			removal_cost = -1
+				
+			modifier = {
+				weekly_manpower = 250
+				mobilization_speed = 0.25
+				political_power_factor = 0.1
+			}
+		}
+
+		TUR_reformism = { 
+
+			allowed = {
+				original_tag = TUR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_constitutional_guarantees
+				
+			removal_cost = -1
+				
+			modifier = {
+				democratic_drift = 0.04
+				political_power_factor = 0.15
+			}
+		}
+
+		TUR_revolutionism = { 
+
+			allowed = {
+				original_tag = TUR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_constitutional_guarantees
+				
+			removal_cost = -1
+				
+			modifier = {
+				fascism_drift = 0.05
+				communism_drift = 0.05
+				stability_weekly = 0.01
+				political_power_factor = -0.05
+			}
+		}
+
+		TUR_etatism = { 
+
+			allowed = {
+				original_tag = TUR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				OR = {
+					has_idea = TUR_etatism_2
+					has_idea = TUR_etatism_3
+					has_idea = TUR_etatism_4
+				}
+			}
+
+			picture = tur_etatism
+				
+			removal_cost = -1
+				
+			modifier = {
+				consumer_goods_factor = -0.20
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_infrastructure_factor = 0.1
+				production_speed_arms_factory_factor = 0.05
+				production_speed_dockyard_factor = 0.05
+			}
+		}
+
+		TUR_etatism_2 = { 
+
+			allowed = {
+				original_tag = TUR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = tur_etatism
+
+			cancel = {
+				OR = {
+					has_idea = TUR_etatism_3
+					has_idea = TUR_etatism_4
+				}
+			}
+				
+			removal_cost = -1
+				
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.05
+				consumer_goods_factor = -0.20
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_infrastructure_factor = 0.1
+				production_speed_arms_factory_factor = 0.05
+				production_speed_dockyard_factor = 0.05
+			}
+		}
+
+		TUR_etatism_3 = { 
+
+			allowed = {
+				original_tag = TUR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = tur_etatism
+
+			cancel = {
+				has_idea = TUR_etatism_4
+			}
+				
+			removal_cost = -1
+				
+			modifier = {
+				stability_factor = -0.15
+				political_power_gain = -0.15
+				consumer_goods_factor = -0.15
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_infrastructure_factor = 0.1
+				production_speed_arms_factory_factor = 0.05
+				production_speed_dockyard_factor = 0.05
+			}
+		}
+
+		TUR_etatism_4 = { 
+
+			allowed = {
+				original_tag = TUR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = tur_etatism
+
+			cancel = {
+				has_idea = TUR_economic_collapse
+			}
+				
+			removal_cost = -1
+				
+			modifier = {
+				stability_factor = -0.25
+				political_power_gain = -0.3
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_infrastructure_factor = 0.1
+				production_speed_arms_factory_factor = 0.05
+				production_speed_dockyard_factor = 0.05
+			}
+		}
+
+		TUR_economic_collapse = { 
+
+			allowed = {
+				original_tag = TUR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = tur_etatism_bonus
+				
+			removal_cost = -1
+				
+			modifier = {
+				stability_factor = -0.4
+				war_support_factor = -0.3
+				political_power_gain = -0.5
+				production_speed_buildings_factor = -0.3
+				production_factory_max_efficiency_factor = -0.4
+
+			}
+		}
+
+		TUR_etatism_stabilisation = { 
+
+			allowed = {
+				original_tag = TUR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_scientist_defect
+				
+			removal_cost = -1
+				
+			modifier = {
+				political_power_gain = -0.5
+			}
+		}
+
+		TUR_liberalism = { 
+
+			allowed = {
+				original_tag = TUR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_constitutional_guarantees
+				
+			removal_cost = -1
+				
+			modifier = {
+				consumer_goods_factor = 0.06
+				production_speed_buildings_factor = 0.15
+			}
+		}
+
+		TUR_fundamentalism = { 
+
+			allowed = {
+				original_tag = TUR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_constitutional_guarantees
+				
+			removal_cost = -1
+				
+			modifier = {
+				weekly_manpower = 2500
+			}
+		}
+
+		TUR_absolutism = { 
+
+			allowed = {
+				original_tag = TUR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_constitutional_guarantees
+				
+			removal_cost = -1
+				
+			modifier = {
+				neutrality_drift = 0.03
+			}
+		}
+
+		TUR_ultranationalism = { 
+
+			allowed = {
+				original_tag = TUR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_constitutional_guarantees
+				
+			removal_cost = -1
+				
+			modifier = {
+				justify_war_goal_time = -0.75
+				generate_wargoal_tension = -1.00
+				fascism_drift = 0.02
+			}
+		}
+
+		TUR_socialism = { 
+
+			allowed = {
+				original_tag = TUR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_constitutional_guarantees
+				
+			removal_cost = -1
+				
+			modifier = {
+				industrial_capacity_factory = 0.1
+				communism_drift = 0.03
+			}
+		}
+
+		TUR_financing_private_enterprise = { 
+
+			allowed = {
+				original_tag = TUR
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = generic_foreign_capital
+				
+			removal_cost = -1
+				
+			modifier = {
+				political_power_factor = -0.15
+			}
+		}
 	}
 
 	### DEFAULT

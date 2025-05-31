@@ -71,6 +71,31 @@ political_actions = {
 	}
 }
 
+### MODDING
+IRQ_request_baghdad_pact_territories_cat = {
+	IRQ_request_region = {
+		state_target = yes
+		targets = { 699 557 786 783 462 461 290 514 513 459 460 458 665 661 448 449 662 663 451 450 452 447 273 907 446 453 454 455 457 456 551 552 883 767 883 886 884 550 842 841 843 840 839 271 838 837 836 835 908 268 269 559 844 903 904 547 905}
+		visible = {
+			FROM = {
+				OR = {
+					is_controlled_by_ROOT_or_ally = yes
+					is_controlled_by_ROOT_or_subject = yes
+					owner = {
+						has_idea = IRQ_saadabad_spheres_of_influence
+					}
+				}
+				NOT = {
+					is_controlled_by = ROOT
+				}
+			}
+		}
+		complete_effect = {
+			ROOT = { transfer_state = FROM }
+		}
+	}
+}
+
 IRQ_middle_east_reichprotectorate_cat = {
 	IRQ_integrate_middle_east_states = {
 		allowed = {
@@ -176,7 +201,7 @@ IRQ_african_arab_revolt_cat = {
 			NOT = { 
 				FROM = { has_state_flag = IRQ_militarization_of_militias_here }
 				FROM = {
-					resistance = 70
+					resistance > 70
 				}
 			}
 		}
@@ -253,7 +278,7 @@ IRQ_african_arab_revolt_cat = {
 		visible = {
 			original_tag = IRQ
 			FROM = {
-				resistance = 70
+				resistance > 70
 				NOT = { is_owned_by = ROOT }
 				OR = {
 					AND = { state = 907 owner = { original_tag = ENG } }
@@ -662,7 +687,7 @@ IRQ_african_arab_revolt_cat = {
 			is_subject = no
 			FROM = {
 				OR = {
-					fascism = 0.7
+					fascism > 0.7
 					has_government = fascism
 				}
 			}
@@ -790,14 +815,12 @@ IRQ_african_arab_revolt_cat = {
 						is_controlled_by = ROOT
 						is_owned_by = ROOT
 					}
-					any_province = { 
-						OR = { 
-							has_core = EGY
-							has_core = ALG
-							has_core = LBA
-							has_core = TUN
-							has_core = MOR
-						}
+					OR = {
+						has_core = EGY
+						has_core = ALG
+						has_core = LBA
+						has_core = TUN
+						has_core = MOR
 					}
 				}
 				add_core_of = ROOT
@@ -806,73 +829,9 @@ IRQ_african_arab_revolt_cat = {
 	}
 }
 
-greater_mesopotamia_cat = {
-	IRQ_greater_mesopotamia_integrate = {
-		icon = GFX_decision_infiltrate_state
-	
-		allowed = {
-			original_tag = IRQ
-		}
-		
-		visible = {
-            has_completed_focus = IRQ_proclaim_greater_mesopotamia
-		}
-		available = {
-			NOT = { has_country_flag = IRQ_coring_state_in_progress }
-		}
 
-		target_root_trigger = { original_tag = IRQ }
 
-		state_target = any_owned_state
-	    
-	    target_trigger = {
-	        FROM = {
-	        	NOT = { is_core_of = ROOT }
-	        	is_fully_controlled_by = ROOT
-	        	OR = {
-	        		is_core_of = KUW
-	        		state = 680
-                    state = 554
-	        		is_core_of = PAL
-	        		is_core_of = JOR
-					state = 453
-					state = 854
-					state = 446
-	        	}
-	        }
-	    }
-	    on_map_mode = map_and_decisions_view 
-	    cost = 50		
-		fire_only_once = yes
-		days_remove = 15
-		complete_effect = {
-			hidden_effect = {
-				set_country_flag = { flag = IRQ_coring_state_in_progress value = 10 days = 31 }
-			}
-		}
-		remove_effect = {
-			hidden_effect = {
-				clr_country_flag = IRQ_coring_state_in_progress
-			}
-			FROM = {
-				add_core_of = ROOT
-			}
-		}
-
-		cancel_trigger = {
-			FROM = {
-				NOT = { is_fully_controlled_by = ROOT }
-			}
-		}
-
-		cancel_effect = {
-			hidden_effect = {
-				clr_country_flag = IRQ_coring_state_in_progress
-			}
-		}
-	}
-}
-
+### DEFAULT
 IRQ_arab_free_legion_cat = {
 	IRQ_recruit_arab_free_legion = {
 		icon = GFX_decision_generic_prepare_civil_war

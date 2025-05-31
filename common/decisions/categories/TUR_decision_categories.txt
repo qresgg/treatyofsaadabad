@@ -1,14 +1,11 @@
-TUR_kurdish_rebellion_cat = {
+TUR_the_constitutional_arrows_category = {
+	priority = 8
+	icon = tur_the_constitutional_arrows_category
 
-  icon = GFX_decision_category_border_conflicts
-  priority = 100
+	picture = GFX_decision_cat_picture_constitutional_arrows
+
 	allowed = {
 		original_tag = TUR
-	}
-	visible = {
-		NOT = {
-			has_global_flag = tur_bftb_focus_tree
-		}
 	}
 }
 
@@ -36,6 +33,21 @@ TUR_dis_politic_cat = {
 	visible = {
 		############### NEED TO CHANGE BEFORE RELEASE ##################
 		# has_idea = IRQ_saadabad_spheres_of_influence
+	}
+}
+
+########### DEFAULT
+TUR_kurdish_rebellion_cat = {
+
+  icon = GFX_decision_category_border_conflicts
+  priority = 100
+	allowed = {
+		original_tag = TUR
+	}
+	visible = {
+		NOT = {
+			has_global_flag = tur_bftb_focus_tree
+		}
 	}
 }
 
@@ -101,16 +113,6 @@ tos_TUR_a_legacy_worth_fighting_for = {
 	allowed = { original_tag = TUR }
 }
 
-TUR_the_constitutional_arrows_category = {
-	priority = 8
-	icon = tur_the_constitutional_arrows_category
-
-	picture = GFX_decision_cat_picture_constitutional_arrows
-
-	allowed = {
-		original_tag = TUR
-	}
-}
 
 TUR_kurdish_state_management_category  = {
 	priority = 4
