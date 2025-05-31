@@ -154,25 +154,30 @@ AFG_islam_revolution_category = {
 	}
 	AFG_peace_conferention = {
 		icon = GFX_decision_generic_civil_support
-		days_mission_timeout = 120 # 5 dlya testa
+		days_mission_timeout = 120
+
+		# Доступно тільки Афганістану
 		allowed = {
 			original_tag = AFG
 		}
-		
+
+		available = {
+			PAK = {
+				has_capitulated = yes
+			}
+		}
 		activation = {
-			original_tag = AFG
 			PAK = {
 				has_country_flag = PAK_released_by_AFG_flag
 				has_war_with = RAJ
-				exists = yes
 			}
 		}
 
 		on_map_mode = map_and_decisions_view
 		selectable_mission = no
 		is_good = no
-		cancel_if_not_visible = yes
-		remove_effect = {
+
+		timeout_effect = {
 			RAJ = {
 				white_peace = PAK
 			}

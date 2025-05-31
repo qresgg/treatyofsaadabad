@@ -177,7 +177,7 @@ PER_selling_guns_category = {
 		fire_only_once = no
 
 		custom_cost_trigger = {
-			has_equipment = { infantry_equipment > 9999 }
+			has_equipment = { artillery_equipment > 999 }
 		}
 
 		custom_cost_text = decision_cost_ae_1000
@@ -271,7 +271,7 @@ PER_selling_guns_category = {
 
 		fire_only_once = no
 		custom_cost_trigger = {
-			has_equipment = { infantry_equipment > 9999 }
+			has_equipment = { support_equipment > 2999 }
 		}
 		custom_cost_text = decision_cost_se_3000
 

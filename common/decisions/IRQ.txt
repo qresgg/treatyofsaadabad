@@ -226,15 +226,15 @@ IRQ_african_arab_revolt_cat = {
 	    }
 	    on_map_mode = map_and_decisions_view 
 		custom_cost_trigger = {
-			command_power > 24.9
+			has_equipment = { infantry_equipment > 2000 }
 		}
-		custom_cost_text = BRA_decision_cost_cangaceiro
+		custom_cost_text = decision_cost_ie_2000
 		
 		fire_only_once = no
-		days_remove = 1
+		days_remove = 15
 		cancel_if_not_visible = yes
 		complete_effect = {
-			add_command_power = -25
+			add_command_power = -5
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = -2000
@@ -269,12 +269,12 @@ IRQ_african_arab_revolt_cat = {
 		cost = 75
 		icon = GFX_decision_generic_nationalism
 
-		days_remove = 1
+		days_remove = 25
 		state_target = yes
 		target_root_trigger = {
 			original_tag = IRQ
 		}
-		targets = { 907 448 458 461 459}
+		targets = { 907 448 458 461 459 }
 		visible = {
 			original_tag = IRQ
 			FROM = {
@@ -308,7 +308,7 @@ IRQ_african_arab_revolt_cat = {
 		}
 		fire_only_once = no
 
-		complete_effect = {
+		remove_effect = {
 			if = {
 				limit = { FROM = { state = 907 } } 
 				hidden_effect = {
@@ -666,7 +666,7 @@ IRQ_african_arab_revolt_cat = {
 	}
 	IRQ_set_puppet_government = {
 		cost = 75
-		days_remove = 1
+		days_remove = 35
 		target_root_trigger = {
 			original_tag = IRQ
 		}
@@ -674,7 +674,7 @@ IRQ_african_arab_revolt_cat = {
 		visible = {
 			original_tag = IRQ
 			FROM = {
-				has_war = no
+				has_war = yes
 				NOT = {
 					is_subject_of = ROOT
 				}
@@ -704,6 +704,20 @@ IRQ_african_arab_revolt_cat = {
 				target = FROM
 				autonomy_state = autonomy_sheikhdom
 				freedom_level = 0.5
+			}
+			FROM = {
+				if = {
+					limit = { is_in_any_war = yes }
+					every_war = {
+						limit = {
+							has_war_participant = FROM
+						}
+						transfer_war = {
+							from = FROM
+							to = ROOT
+						}
+					}
+				}
 			}
 		}
 		fire_only_once = no

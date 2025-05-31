@@ -304,3 +304,8 @@ IRQ_proclaim_arab_fed_alg_tt: "Controlls all §YAlgeria§! regions"
 IRQ_proclaim_arab_fed_tun_tt: "Controlls all §YTunisia§! regions"
 IRQ_proclaim_arab_fed_lba_tt: "Controlls all §YLybia§! regions"
 IRQ_proclaim_arab_fed_egy_tt: "Controlls all §YEgypt§! regions"
+
+IRQ_african_arab_revolt_cat: "African Arabian Revolution"
+IRQ_develop_separatist_movement: "Develop separatist movements in [FROM.GetName]"
+IRQ_provoke_independent_war_consolidated: "Provoke [FROM.GetName] Independent War"
+IRQ_set_puppet_government: "Capture the [FROM.GetAdjective] Administration"
