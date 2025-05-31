@@ -60,6 +60,44 @@ focus_tree = {
 
 	continuous_focus_position = { x = 200 y = 2000 }
 
+		#Focus Path shortcuts	
+	shortcut = {
+		name = PER_tos_military
+		target = PER_expand_unique_unit
+		scroll_wheel_factor = 0.540
+	}
+
+	shortcut = {
+		name = PER_tos_economy
+		target = PER_modernizing_iran
+		scroll_wheel_factor = 1
+	}
+
+	shortcut = {
+		name = PER_tos_saadabad_pact
+		target = SSB_the_saadabad_pact
+		scroll_wheel_factor = 1
+	}
+
+	shortcut = {
+		name = PER_tos_domestic_policy
+		target = PER_the_montreux_convention_tos
+		scroll_wheel_factor = 1
+	}
+### MAIN
+
+shortcut = {
+	name = PER_tos_opposition_branch
+	target = PER_rally_the_reformers
+	scroll_wheel_factor = 0.6
+	}
+
+	shortcut = {
+	name = PER_tos_historical_branch
+	target = PER_the_pahlavi_imperium
+	scroll_wheel_factor = 0.6
+	}
+
 	initial_show_position = {
 		x = 25
 		y = 0

@@ -14,9 +14,58 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 		}
 	}
 
+	initial_show_position = {
+		x = 76
+		y = 0
+	}
+	
+	#Focus Path shortcuts	
+	shortcut = {
+		name = TUR_tos_military
+		target = TUR_invest_army_budget
+		scroll_wheel_factor = 0.769
+	}
+
+	shortcut = {
+		name = TUR_tos_economy
+		target = TUR_continue_the_push_for_autarky
+		scroll_wheel_factor = 1
+	}
+
+	shortcut = {
+		name = TUR_tos_saadabad_pact
+		target = SSB_the_saadabad_pact
+		scroll_wheel_factor = 0.769
+	}
+
+	shortcut = {
+		name = TUR_tos_domestic_policy
+		target = TUR_the_montreux_convention_tos
+		scroll_wheel_factor = 1
+	}
+### MAIN
+
+shortcut = {
+	name = TUR_tos_communism_branch
+	target = TUR_revolution_not_reform
+	scroll_wheel_factor = 1
+	}
+
+	shortcut = {
+	name = TUR_tos_historical_branch
+	target = TUR_continue_the_moderate_course
+	scroll_wheel_factor = 0.7
+	}
+
+	shortcut = {
+	name = TUR_tos_imperial_branch
+	target = TUR_overthrow_inonus_government
+	scroll_wheel_factor = 0.5
+	}
+
 	default = no
 
-	continuous_focus_position = { x = 250 y = 800 }	
+	continuous_focus_position = { x = 250 y = 1500 }	
 
 	shared_focus = SSB_the_saadabad_pact
 
