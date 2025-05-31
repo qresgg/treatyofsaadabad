@@ -64,19 +64,19 @@ focus_tree = {
 	shortcut = {
 		name = PER_tos_military
 		target = PER_expand_unique_unit
-		scroll_wheel_factor = 0.540
+		scroll_wheel_factor = 0.41
 	}
 
 	shortcut = {
 		name = PER_tos_economy
 		target = PER_modernizing_iran
-		scroll_wheel_factor = 1
+		scroll_wheel_factor = 0.7
 	}
 
 	shortcut = {
 		name = PER_tos_saadabad_pact
 		target = SSB_the_saadabad_pact
-		scroll_wheel_factor = 1
+		scroll_wheel_factor = 0.7
 	}
 
 	shortcut = {
@@ -89,7 +89,7 @@ focus_tree = {
 shortcut = {
 	name = PER_tos_opposition_branch
 	target = PER_rally_the_reformers
-	scroll_wheel_factor = 0.6
+	scroll_wheel_factor = 0.45
 	}
 
 	shortcut = {
@@ -15259,3 +15259,4 @@ shortcut = {
 		}
 	}
 }
+

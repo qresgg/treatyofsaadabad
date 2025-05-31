@@ -43,6 +43,10 @@ country_event = { ## THANKS FOR EQUIPMENTS
         AFG = {
             set_country_flag = AFG_PER_will_help_us
         }
+        add_opinion_modifier = {
+            target = FROM
+            modifier = small_increase
+        }
     }
 }
 country_event = { ## UNLUCKY, THEY DON'T WANT TO HELP US
@@ -55,6 +59,10 @@ country_event = { ## UNLUCKY, THEY DON'T WANT TO HELP US
 
     option = {
         name = tos_afghanistan.1002.a
+        add_opinion_modifier = {
+            target = FROM
+            modifier = large_decrease
+        }
     }
 }
 country_event = {
@@ -89,6 +97,11 @@ country_event = {
             amount = -1250
         }
 
+        add_opinion_modifier = {
+            target = ROOT
+            modifier = huge_increase
+        }
+
         every_country = {
             limit = {
                 has_country_flag = AFG_PER_will_help_us
@@ -120,6 +133,12 @@ country_event = {
             type = support_equipment
             amount = -1000
         }
+
+
+            add_opinion_modifier = {
+                target = ROOT
+                modifier = large_increase
+            }
 
         every_country = {
             limit = {
@@ -153,6 +172,11 @@ country_event = {
             amount = -500
         }
 
+        add_opinion_modifier = {
+            target = ROOT
+            modifier = medium_increase
+        }
+        
         every_country = {
             limit = {
                 has_country_flag = AFG_PER_will_help_us

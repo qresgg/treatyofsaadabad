@@ -29,7 +29,7 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 	shortcut = {
 		name = TUR_tos_economy
 		target = TUR_continue_the_push_for_autarky
-		scroll_wheel_factor = 1
+		scroll_wheel_factor = 0.9
 	}
 
 	shortcut = {
@@ -41,14 +41,14 @@ focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
 	shortcut = {
 		name = TUR_tos_domestic_policy
 		target = TUR_the_montreux_convention_tos
-		scroll_wheel_factor = 1
+		scroll_wheel_factor = 0.9
 	}
 ### MAIN
 
 shortcut = {
 	name = TUR_tos_communism_branch
 	target = TUR_revolution_not_reform
-	scroll_wheel_factor = 1
+	scroll_wheel_factor = 0.8
 	}
 
 	shortcut = {
@@ -10613,5 +10613,26 @@ shortcut = {
 			}
 		}
 	}
+	focus = {
+		id = TUR_silent_assassinate
+		icon = GFX_focus_TUR_silent_assassinate
+		prerequisite = { focus = TUR_lead_the_rural_masses }
+		x = 0
+		y = 1
+		relative_position_id = TUR_lead_the_rural_masses
+		cost = 5
+		available = {
+			has_country_leader = {
+				character = TUR_mustafa_kemal_ataturk
+				ruling_only = yes
+			}
+		}
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			TUR = { country_event = { id = turkey.1943 random_hours = 12} }
+		}
+	}
+
 
 }

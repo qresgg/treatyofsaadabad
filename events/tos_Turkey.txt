@@ -3219,3 +3219,60 @@ news_event = {
         name = TUR_CYPRUS.18.c
     }
 }
+
+country_event = {
+	id = turkey.1943
+	title = turkey.1943.t
+	desc = turkey.1943.d_poisoned_illness_fake
+	picture = GFX_report_event_generic_funeral
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			retire_character = TUR_mustafa_kemal_ataturk
+			set_global_flag = ataturk_is_dead
+			promote_character = TUR_ismet_inonu
+		}
+	}
+
+	option = {
+		name = turkey.1943.a  # "Ісмет Іненю очолює республіку"
+		ai_chance = {
+			base = 100
+		}
+		custom_effect_tooltip = ismetnowpresident_tt
+		add_stability = -0.1
+	}
+	
+	# option = {
+	# 	name = turkey.1943.b  # "Февзі Чакмак бере владу в свої руки"
+	# 	trigger = {
+	# 		has_completed_focus = TUR_continue_the_moderate_course
+	# 	}
+	# 	hidden_effect = {
+	# 		retire_character = TUR_mustafa_kemal_ataturk
+	# 		set_global_flag = ataturk_is_dead
+	# 	}
+	# 	add_stability = -0.1
+	# 	add_country_leader_role = {
+	# 		character = TUR_fevzi_cakmak
+	# 		country_leader = {
+	# 			expire = "1965.1.1"
+	# 			ideology = despotism
+	# 			traits = {
+	# 				maresal
+	# 			}
+	# 		}
+	# 		promote_leader = yes
+	# 	}
+	# 	ai_chance = {
+	# 		base = 10
+	# 		modifier = {
+	# 			is_historical_focus_on = yes
+	# 			factor = 0
+	# 		}
+	# 	}
+	# }
+}

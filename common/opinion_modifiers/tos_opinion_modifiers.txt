@@ -8,36 +8,4 @@
 # months/years/days = timer
 # trade = yes/no
 
-opinion_modifiers = {
-	PER_sent_weapons_large = {
-		opinion = 30
-	}
-	PER_sent_weapons_medium = {
-		opinion = 20
-	}
-	PER_sent_weapons_small = {
-		opinion = 10
-	}
-	PER_refused_support = {
-		opinion = -25
-	}
 
-	AFG_received_territories_positive = {
-		opinion = 30
-		days = 720
-	}
-
-	AFG_denied_territories_negative = {
-		opinion = -40
-		days = 720
-	}
-
-AFG_demanded_tajik_territories_accepted = {
-    opinion = 25
-}
-
-AFG_demanded_tajik_territories_refused = {
-    opinion = -30
-}
-
-}

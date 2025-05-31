@@ -37,3 +37,13 @@ TUR_GRE_fascists_rising:0 "Fascist Rising"
 TUR_land_forces_modifier:0 "Turkish Land Forces"
 TUR_navy_forces_modifier:0 "Turkish Naval Forces"
 TUR_air_forces_modifier:0 "Turkish Air Forces"
+
+###########################
+####### AFGHANISTAN #######
+###########################
+
+AFG_knights_of_faith_1: "Knights of Faith"
+AFG_no_condoms_in_country: "No Condoms in Country"
+AFG_islamian_state: "Islamian State"
+AFG_pashtunwali_domination_fascism: "Pashtunwali Domination (Fascism)"
+AFG_legion_afghan_peacemakers: "Legion of Afghan Peacemakers"

@@ -2864,14 +2864,14 @@ focus_tree = {
 		x = 0
 		cost = 1
 		bypass = {
-			has_idea = IRQ_saadabad_spheres_of_influence
+			has_idea = tos_secret_baghdad_pact
 		}
 		available = {
-			has_idea = IRQ_saadabad_spheres_of_influence
+			has_idea = tos_secret_baghdad_pact
 		}
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 		allow_branch = {
-			has_idea = IRQ_saadabad_spheres_of_influence
+			has_idea = tos_secret_baghdad_pact
 		}
 		#### baghdad pact
 	}
@@ -3143,7 +3143,7 @@ focus_tree = {
 		y = 1
 		x = 0
 		allow_branch = {
-			has_idea = IRQ_saadabad_spheres_of_influence
+			has_idea = tos_secret_baghdad_pact
 		}
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 		#### buddist muslims is our historical 

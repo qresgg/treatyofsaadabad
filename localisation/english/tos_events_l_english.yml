@@ -2,37 +2,48 @@
 #####################
 ####### IRAQ ########
 #####################
-IRQ_kuw_ultimatum.2.t: "Kuwait Receives an Ultimatum"
-IRQ_kuw_ultimatum.2.desc: "Iraq has issued us an ultimatum: submit peacefully to their authority or face war. The decision will define our future."
+IRQ_kurd_demands.1.t: "Kurdish Demands"
+IRQ_kurd_demands.1.d: "The Kurds have long sought greater autonomy and control over Southern Kurdistan, a region rich in history and resources. Their demands now challenge the government's authority and threaten to reshape the political landscape. Conceding could ease tensions but may weaken central control, while refusal risks unrest and destabilization."
+IRQ_kurd_demands.1.a: "Transfer Southern Kurdistan"
+IRQ_kurd_demands.1.b: "Refuse and Transfer Factories"
+IRQ_SYR_partition.5t: "Kuwait Annexation"
+IRQ_SYR_partition.5d: "In a bold move to expand its regional influence, Iraq has formally decided to annex Kuwait. This action is expected to shift the balance of power and may provoke reactions from neighboring countries and global powers. The future of Kuwait’s sovereignty now hangs in the balance as Iraq asserts control over its territories."
+IRQ_SYR_partition.5.a: "Annex Kuwait"
+IRQ_SYR_partition.1.t: "Partition Agreement Proposed"
+IRQ_SYR_partition.1.desc: "A delicate proposal has been put forward to partition contested territories between Iraq and Turkey. This agreement aims to avoid open conflict but carries risks of deepening divisions and unrest among the local populations. The decision will have lasting effects on regional stability and geopolitical alliances."
+IRQ_SYR_partition.1.a: "Accept the Partition Proposal"
+# IRQ_SYR_partition.2.t: "Partition Enacted"
+# IRQ_SYR_partition.2.desc: "The partition agreement has been formally enacted, resulting in the transfer of key strategic states between Iraq and Turkey. This territorial rearrangement aims to solidify control and ease tensions but may sow seeds of future conflict. Both nations now face the challenge of integrating new lands and populations under their rule."
+# IRQ_SYR_partition.2.a: "Acknowledge the Partition"
+IRQ_kuw_ultimatum.2.t: "Kuwait Receives an Ultimatum" ## LOST MEDIA
+IRQ_kuw_ultimatum.2.desc: "Iraq has delivered a stark ultimatum to Kuwait: submit peacefully to Iraqi authority or prepare for the devastation of war. This moment marks a pivotal crossroads for Kuwait's fate, where diplomacy may yet prevail or give way to the harsh realities of military confrontation. The world watches with bated breath."
 IRQ_kuw_ultimatum.2.a: "We have no choice but to yield"
 IRQ_kuw_ultimatum.2.b: "We will resist their threats!"
-
 IRQ_kuw_ultimatum.3t: "Kuwait Accepts the Ultimatum"
-IRQ_kuw_ultimatum.3d: "Kuwait has yielded to our demands without bloodshed. The desert sands are now ours."
+IRQ_kuw_ultimatum.3d: "In a surprising turn of events, Kuwait has acquiesced to our demands without bloodshed, sparing the region from the ravages of war. Our flag now flies over the desert sands, symbolizing the expansion of our realm and the shifting tides of power in the Middle East."
 IRQ_kuw_ultimatum.3.a: "Excellent. The land is ours."
-
 IRQ_kuw_ultimatum.4t: "Kuwait Rejects the Ultimatum"
-IRQ_kuw_ultimatum.4d: "Kuwait has rejected our demands. There is only one course left—war."
+IRQ_kuw_ultimatum.4d: "Kuwait's outright rejection of our ultimatum leaves us no choice but to respond with force. The drums of war sound across the desert, and the coming conflict will determine the fate of the region. Our resolve is tested, and only victory will secure our rightful claims."
 IRQ_kuw_ultimatum.4.a: "Then we will take it by force."
 # Additional
 GAME_OVER_TT: "§RThis may result in the game ending if you're annexed.§"
-
-# IRQ_PAL_ultimatum.2
-IRQ_PAL_ultimatum.2.t: "Palestinian Ultimatum"
-IRQ_PAL_ultimatum.2.desc: "Palestine must choose whether to accept our ultimatum or resist our demands."
+IRQ_PAL_ultimatum.2.t: "Palestinian Ultimatum" 
+IRQ_PAL_ultimatum.2.desc: "Our government has issued a final ultimatum to Palestine, demanding full compliance with our territorial claims and political demands. Palestine now faces a critical choice: accept our terms peacefully or resist and face the consequences."
 IRQ_PAL_ultimatum.2.a: "Accept the Ultimatum"
 IRQ_PAL_ultimatum.2.b: "Reject the Ultimatum"
-
-# IRQ_PAL_ultimatum.3
 IRQ_PAL_ultimatum.3t: "Annexation of Palestine"
-IRQ_PAL_ultimatum.3d: "Palestine will be annexed and become part of our nation."
-
-# IRQ_PAL_ultimatum.4
+IRQ_PAL_ultimatum.3d: "Following Palestine's acceptance of our ultimatum, the annexation process is underway. This region will soon be fully integrated into our nation, expanding our borders and strengthening our position in the region. The world watches closely as this shift in control marks a new chapter in our national history."
+IRQ_PAL_ultimatum.3.a: "Proceed with Annexation"
 IRQ_PAL_ultimatum.4t: "Palestinian Resistance"
-IRQ_PAL_ultimatum.4d: "Palestine has rejected the ultimatum. It's time to act. We can create a war goal for their territory."
+IRQ_PAL_ultimatum.4d: "Palestine has outright rejected our ultimatum, refusing to cede control of their territory. This defiance threatens regional stability and leaves us with little choice but to prepare for military action. A war goal will be created to reclaim what is rightfully ours."
+IRQ_PAL_ultimatum.4.a: "Prepare for War"
 
-# For war goal generation:
 IRQ_PAL_war_goal: "War Goal Against Palestine"
+Turkey.2077_ultimatum: "Turkish Ultimatum"
+turkey.3000_ultimatum_puppet: "Puppet Ultimatum"
+turkey.3000_ultimatum_annex: "Annexation Ultimatum"
+tos_afghanistan_territory_request_tjk: "Afghan Territorial Claim"
+
 
 IRQ_deal_for_israel: "Deal for Israel"
 IRQ_deal_for_israel.desc: "If Britain accepts, you will gain Israel and a non-aggression pact with your neighbors. If they refuse, you will gain a war goal on Israel."
@@ -41,40 +52,40 @@ IRQ_deal_for_israel.completion_reward: "Completion Reward: Gain a war goal on Pa
 IRQ_kuwait_war_goal: "Claiming Kuwait"
 IRQ_PALESTINE_war_goal: "Claiming Palestine"
 
-IRQ_JOR_ultimatum.2.t: "Ultimatum to Jordan"
+IRQ_JOR_ultimatum.2.t: "Ultimatum to Jordan" ##LOST MEDIA
 IRQ_JOR_ultimatum.2.desc: "Our diplomats have delivered an ultimatum to the Jordanian government: submit peacefully to our demands or face the consequences of defiance."
 IRQ_JOR_ultimatum.2.a: "They yield"
 IRQ_JOR_ultimatum.2.b: "They resist"
 
-IRQ_JOR_ultimatum.3t: "Jordan Accepts"
+IRQ_JOR_ultimatum.3t: "Jordan Accepts" ## LOST MEDIA
 IRQ_JOR_ultimatum.3d: "Faced with overwhelming pressure, the Jordanian leadership has agreed to our demands. They have handed over control without resistance."
 IRQ_JOR_ultimatum.3.b: "Excellent"
 
-IRQ_JOR_ultimatum.4t: "Jordan Resists"
+IRQ_JOR_ultimatum.4t: "Jordan Resists" ##LOST MEDIA
 IRQ_JOR_ultimatum.4d: "Jordan has refused our ultimatum. Their government has mobilized the armed forces, and tensions have erupted into open hostility."
 IRQ_JOR_ultimatum.4.b: "Then we go to war"
 
-IRQ_saadabad.1.t: "Black Discovery"
+IRQ_saadabad.1.t: "Black Discovery" ## LOST MEDIA
 IRQ_saadabad.1.d: "The Black Army has uncovered a major find in the sands — over 10,000 weapons."
 IRQ_saadabad.1.a: "Wonderful!"
 
-IRQ_kuwrej1.t: "Kuwait Rejects"
-IRQ_kuwrej1.d: "Kuwait has rejected our ultimatum. We must now prepare for war."
-
-IRQ_SYR_partition.1.t: "We received no choice ultimatum"
-IRQ_SYR_partition.1.d: "Following years of internal conflict and foreign intervention, Syria stands divided. Turkey controls stretches of the north, establishing buffer zones and backing local forces to curb Kurdish influence. To the east, Iraqi-linked militias and tribal networks assert influence along the Euphrates, aiming to secure borders and suppress extremist threats. The once-unified Syrian state is now a patchwork of zones shaped by regional ambitions."
-IRQ_SYR_partition.1.a: "So sad"
+IRQ_kuwrej1.t: "Kuwait Rejects" ### LOST MEDIA
+IRQ_kuwrej1.d: "Kuwait has rejected our ultimatum. We must now prepare for war." ### LOST MEDIA
 
 IRQ_SYR_partition.2.t: "Partition of Syria"
-IRQ_SYR_partition.2.d: "Following years of internal conflict and foreign intervention, Syria stands divided. Turkey controls stretches of the north, establishing buffer zones and backing local forces to curb Kurdish influence. To the east, Iraqi-linked militias and tribal networks assert influence along the Euphrates, aiming to secure borders and suppress extremist threats. The once-unified Syrian state is now a patchwork of zones shaped by regional ambitions."
+IRQ_SYR_partition.2.desc: "Following years of internal conflict and foreign intervention, Syria stands divided. Turkey controls stretches of the north, establishing buffer zones and backing local forces to curb Kurdish influence. To the east, Iraqi-linked militias and tribal networks assert influence along the Euphrates, aiming to secure borders and suppress extremist threats. The once-unified Syrian state is now a patchwork of zones shaped by regional ambitions."
 IRQ_SYR_partition.2.a: "Hell yeah"
 
 #####################
 ####### IRAN ########
 #####################
-iran_musandam_annexed.1.t:0 "Iran Annexes Musandam"
-iran_musandam_annexed.1.d:0 "Iran has declared sovereignty over the Musandam Peninsula, citing strategic necessity and historical claims."
-iran_musandam_annexed.1.a:0 "The strait is ours now."
+iran_musandam_annexed.1.t: "Annexation of Musandam Peninsula"
+iran_musandam_annexed.1.d: "In a strategic move to secure its southern maritime borders, Iran has annexed the Musandam Peninsula, a vital region controlling access to the Strait of Hormuz. This territory has long been contested due to its immense geopolitical importance, serving as a gateway for a significant portion of the world’s oil shipments. The annexation marks a turning point in regional power dynamics, heightening tensions with neighboring Gulf states and drawing the attention of global powers wary of disruptions to this critical chokepoint."
+iran_musandam_annexed.1.a: "Acknowledge the Annexation"
+iran_soviet_crisis.2.t: "Border Crisis with the Soviet Union"
+iran_soviet_crisis.2.d: "Tensions have escalated along Iran's northern border as disputes with the Soviet Union intensify. The contested territories have long been a source of friction, and recent military movements have raised fears of a larger conflict. Both nations are positioning themselves strategically, aware that this crisis could redefine regional alliances and the balance of power during these uncertain times."
+iran_soviet_crisis.2.a: "Stay Informed"
+
 
 # IRAN-SOVIET CRISIS
 iran_soviet_crisis.1.t:0 "Iranian Demands on the Soviet Union"
@@ -997,6 +1008,10 @@ bftb_turkey.109.t: "Radical Kurds Occupy Rural Towns"
 bftb_turkey.109.desc: "Radicalized Kurdish groups have taken control of several rural centers in our eastern provinces. The central authority is eroding rapidly in these areas, and we must decide how to respond to this insurrection."
 bftb_turkey.109.a: "We will not yield an inch — launch stabilization operations."
 bftb_turkey.109.b: "Stand down and try to reach a negotiated settlement."
+turkey.1943.t:0 "Death of Atatürk"
+turkey.1943.d_poisoned_illness_fake:0 "Mustafa Kemal Atatürk, founder and first president of the Republic of Turkey, has passed away after a short but severe illness. The official statement attributes his death to natural causes related to liver failure. However, some close witnesses claim he fell ill shortly after drinking from a glass given to him the previous evening. No formal investigation has been announced, and the nation mourns in silence."
+turkey.1943.a:0 "İsmet İnönü takes over the Republic"
+ismetnowpresident_tt:0 "§Yİsmet İnönü§! becomes the new President of the Republic."
 
 
 # TUR_amend_the_montreux_convention:0 "Amend the Montreux Convention"
@@ -1016,7 +1031,16 @@ TUR_placate_fundamentalist_state_effect_tt:1 "The £faction_tur_traditionalist �
 TUR_placate_fundamentalist_state_all_targets_effect_tt:0 "The £faction_tur_traditionalist §YTraditionalists§! shall collectively cease their opposition to the government."
 
 ### AFGHANISTAN
-
+AFG_political_events.04.t: "Request Control of British States"
+AFG_political_events.04.desc: "Afghanistan has formally requested control over certain British states. The British government must decide whether to agree or reject this request."
+AFG_political_events.04.a: "Agree to Transfer Control"
+AFG_political_events.04.b: "Refuse the Request"
+AFG_political_events.05.t: "British Agree to Transfer"
+AFG_political_events.05.desc: "The British government has agreed to transfer control of the requested states to Afghanistan."
+AFG_political_events.05.a: "Celebrate the Transfer"
+AFG_political_events.06.t: "British Refuse the Request"
+AFG_political_events.06.desc: "The British government has refused Afghanistan’s request and will maintain control over the states. Afghanistan now lays claims on them."
+AFG_political_events.06.a: "Express Disappointment"
 tos_afghanistan.1.t: "Iran Considers Supplying Weapons"
 tos_afghanistan.1.d: "The Afghan civil war grows more intense. Our neighbors in Afghanistan are requesting military support. Should we send them arms and equipment?"
 tos_afghanistan.1.a: "Send big batch of weapons"

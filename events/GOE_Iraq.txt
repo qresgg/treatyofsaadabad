@@ -2395,20 +2395,18 @@ country_event = { ## DENY
 
 country_event = {
 	id = IRQ_SYR_partition.5
-	title = IRQ_SYR_partition.5
-	desc = IRQ_SYR_partition.5
+	title = IRQ_SYR_partition.5t
+	desc = IRQ_SYR_partition.5d
 
 	is_triggered_only = yes
 
 	option = { 
 		name = IRQ_SYR_partition.5.a
-		effect = {
 			IRQ = {
 				annex_country = { 
 					target = KUW
 				}
 			}
-		}
 	}
 }
 

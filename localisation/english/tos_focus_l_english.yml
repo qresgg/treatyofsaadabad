@@ -1091,6 +1091,8 @@
   TUR_unlock_decisions_to_become_christianity_state_tt:0 "Unlocks decisions to §Yaccept Christianity§!"
   TUR_make_hard_decision_tt:0 "Unlocks decision to make a §Yhard decision§! about the future of §Ythe country§!"
   TUR_assasination_of_mustafa_kemal_tt:0 "Unlocks decision to assassinate §YMustafa Kemal Atatürk§!. This will lead to a civil war. Or no?"
+  TUR_silent_assassinate:0 "Silent Elimination"
+  TUR_silent_assassinate_desc:0 "The old man has served his purpose. His vision, once necessary, now holds us back. Through discreet means and trusted hands, we will remove Atatürk from power—quietly, permanently, and without a trace. The people will mourn an illness... but the Republic will move on."
 
 
 
