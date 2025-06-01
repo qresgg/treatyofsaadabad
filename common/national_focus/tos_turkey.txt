@@ -1992,10 +1992,6 @@ shortcut = {
 					type = air_base
 					level = 3
 					instant_build = yes
-					province = {
-						all_provinces = yes
-						limit_to_naval_base = yes
-					}
 				}
 			}
 			340 = {
@@ -2047,10 +2043,6 @@ shortcut = {
 					type = air_base
 					level = 3
 					instant_build = yes
-					province = {
-						all_provinces = yes
-						limit_to_naval_base = yes
-					}
 				}
 			}
 			182 = {
@@ -2058,10 +2050,6 @@ shortcut = {
 					type = naval_base
 					level = 3
 					instant_build = yes
-					province = {
-						all_provinces = yes
-						limit_to_naval_base = yes
-					}
 				}
 			}
 			custom_effect_tooltip = TUR_modify_turkish_air_army_ns_intro
@@ -6574,7 +6562,7 @@ shortcut = {
 			add_political_power = 75
 
 			## EVENT GREEKS IN GOVERNMENT
-			
+			every_country = { news_event = { id = tos_turkish.20 days = 1 } }
 		}
 		
 		search_filters = {

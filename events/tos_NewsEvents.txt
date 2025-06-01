@@ -32,3 +32,291 @@ news_event = { #NEWS EVENT
          }
 	}
 }
+
+add_namespace = tos_turkish
+add_namespace = turkish
+
+news_event = {
+	id = tos_turkish.20
+	title = tos_turkish.20.t
+	desc = tos_turkish.20.d
+	picture = GFX_report_event_greek_turkish_politics
+
+	is_triggered_only = yes
+
+	# Турецька відповідь
+	option = {
+		name = tos_turkish.20.a
+		trigger = { tag = TUR }
+	}
+
+	# Реакція решти світу
+	option = {
+		name = tos_turkish.20.b
+		trigger = { NOT = { tag = TUR } }
+	}
+}
+
+news_event = {
+    id = turkish.1
+    title = turkish.1.t       
+    desc = turkish.1.desc       
+	picture = GFX_news_event_generic_rotterdam_destroyed
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        trigger = {
+            OR = {
+                tag = TUR
+                is_in_faction_with = TUR
+                is_subject_of = TUR
+            }
+        }
+        name = turkish.1.a
+		hidden_effect = {
+        	ITA = { country_event = { id = turkish.11 days = 2 } } # Італія вимагає острів
+		}
+    }
+
+    option = {
+        trigger = {
+            NOT = {
+                tag = TUR
+                is_in_faction_with = TUR
+                is_subject_of = TUR
+            }
+        }
+        name = turkish.1.b
+    }
+}
+
+news_event = {
+    id = turkish.100
+    title = turkish.100.t       
+    desc = turkish.100.desc       
+    picture = GFX_report_event_generic_peace
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        trigger = {
+            tag = TUR
+        }
+        name = turkish.100.a
+    }
+
+    option = {
+        trigger = {
+            tag = ENG
+        }
+        name = turkish.100.b
+    }
+
+    option = {
+        trigger = {
+            NOT = {
+                tag = TUR
+                is_in_faction_with = TUR
+                is_subject_of = TUR
+                tag = ENG
+            }
+        }
+        name = turkish.100.c
+    }
+}
+
+news_event = {
+    id = turkish.101
+    title = turkish.101.t       
+    desc = turkish.101.desc       
+    picture = GFX_report_event_generic_diplomacy
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        trigger = {
+            tag = TUR
+        }
+        name = turkish.101.a
+    }
+
+    option = {
+        trigger = {
+            tag = ENG
+        }
+        name = turkish.101.b
+    }
+
+    option = {
+        trigger = {
+            NOT = {
+                tag = TUR
+                tag = ENG
+                is_in_faction_with = TUR
+                is_subject_of = TUR
+            }
+        }
+        name = turkish.101.c
+    }
+}
+
+news_event = {
+    id = turkish.102
+    title = turkish.102.t       
+    desc = turkish.102.desc       
+    picture = GFX_report_event_generic_war
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        trigger = {
+            tag = TUR
+        }
+        name = turkish.102.a
+    }
+
+    option = {
+        trigger = {
+            tag = ENG
+        }
+        name = turkish.102.b
+    }
+
+    option = {
+        trigger = {
+            NOT = {
+                tag = TUR
+                tag = ENG
+                is_in_faction_with = TUR
+                is_subject_of = TUR
+            }
+        }
+        name = turkish.102.c
+    }
+}
+
+news_event = {
+    id = TUR_CYPRUS.16
+    title = TUR_CYPRUS.16.t       
+    desc = TUR_CYPRUS.16.d       
+    picture = GFX_report_event_generic_battlefield
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        trigger = {
+            OR = {
+                tag = TUR
+                is_in_faction_with = TUR
+                is_subject_of = TUR
+            }
+        }
+        name = TUR_CYPRUS.16.a
+    }
+
+    option = {
+        trigger = {
+            tag = ENG
+        }
+        name = TUR_CYPRUS.16.b
+    }
+
+    option = {
+        trigger = {
+            NOT = {
+                OR = {
+                    tag = TUR
+                    is_in_faction_with = TUR
+                    is_subject_of = TUR
+                    tag = ENG
+                }
+            }
+        }
+        name = TUR_CYPRUS.16.c
+    }
+}
+
+
+news_event = {
+    id = TUR_CYPRUS.17
+    title = TUR_CYPRUS.17.t
+    desc = TUR_CYPRUS.17.d
+    picture = GFX_report_event_generic_parade
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        trigger = {
+            tag = ENG
+        }
+        name = TUR_CYPRUS.17.a
+    }
+
+    option = {
+        trigger = {
+            OR = {
+                tag = TUR
+                is_in_faction_with = TUR
+                is_subject_of = TUR
+            }
+        }
+        name = TUR_CYPRUS.17.b
+    }
+
+    option = {
+        trigger = {
+            NOT = {
+                OR = {
+                    tag = ENG
+                    tag = TUR
+                    is_in_faction_with = TUR
+                    is_subject_of = TUR
+                }
+            }
+        }
+        name = TUR_CYPRUS.17.c
+    }
+}
+
+news_event = {
+    id = TUR_CYPRUS.18
+    title = TUR_CYPRUS.18.t
+    desc = TUR_CYPRUS.18.d
+    picture = GFX_report_event_generic_tanks
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        trigger = {
+            tag = ENG
+        }
+        name = TUR_CYPRUS.18.a
+    }
+
+    option = {
+        trigger = {
+            OR = {
+                tag = TUR
+                is_in_faction_with = TUR
+                is_subject_of = TUR
+            }
+        }
+        name = TUR_CYPRUS.18.b
+    }
+
+    option = {
+        trigger = {
+            NOT = {
+                OR = {
+                    tag = ENG
+                    tag = TUR
+                    is_in_faction_with = TUR
+                    is_subject_of = TUR
+                }
+            }
+        }
+        name = TUR_CYPRUS.18.c
+    }
+}

@@ -38,53 +38,56 @@ country_event = {
     desc = sau_fascism.1.desc
     picture = GFX_report_event_generic_sign_treaty1
 
-	trigger = { ##### бля я забув добавити перевірку на 0.7 фашизму але я вже гру закрив (fascism > 0.7 вроді не працює перевірь)
-		tag = SAU
-		IRQ = {
-			is_subject = no
-			has_government = fascism
-		}
-		SAU = {
-			is_subject = no
-			fascism > 0.5
-			has_idea = IRQ_raising_iraqi_fascists
-		}
-	}
-	
-    mean_time_to_happen = { #### ПЕРЕВІРИТИ ЧИ НЕМА ПОВТОРІВ
-		days = 1 
-	}
+    trigger = {
+        tag = SAU
+        is_subject = no
+        has_government = fascism
+        fascism > 0.5
+        has_idea = IRQ_raising_iraqi_fascists
+        exists = IRQ
+        NOT = { IRQ = { is_subject = yes } }
+        IRQ = { has_government = fascism }
+    }
 
-    immediate = {}
+    mean_time_to_happen = {
+        days = 1
+    }
 
-	option = {
-		name = sau_fascism
-	 
-		set_politics = {			
-			ruling_party = fascism
-			elections_allowed = no
-		}
-	 
-		IRQ = {
-			original_tag = IRQ
-			has_government = fascism
+    fire_only_once = yes
+
+    option = {
+        name = sau_fascism
+
+        set_politics = {
+            ruling_party = fascism
+            elections_allowed = no
+        }
+		IRQ = { 
 			if = {
 				limit = { has_dlc = "Together for Victory" }
+
 				set_autonomy = {
 					target = SAU
 					autonomous_state = autonomy_dominion
 					freedom_level = 0.5
 				}
-				IRQ = {
-					add_state_core = 854
-					854 = {
-						owner = IRQ
+
+				add_state_core = 854
+				transfer_state = 854
+
+				# Ефекти для IRQ через target
+				custom_effect_tooltip = {
+					target = IRQ
+					effect = {
+						puppet = SAU
 					}
 				}
 			}
-			else = { puppet = SAU }
+			else = {
+				puppet = SAU
+			}
 		}
-	}
+    }
 }
 
 country_event = {
@@ -168,7 +171,7 @@ country_event = { ## REFERENDUM ЄМЕНА ЗА ПРИЄДНАННЯ ДО АРА
 		992 = { transfer_state_to = SAU }
 		659 = { transfer_state_to = SAU }
 		1016 = { transfer_state_to = SAU }
-		remove_global_flag = yem_reunification
+		clr_country_flag = yem_reunification
     # } 293 992 659  1016
 }
 }
@@ -181,7 +184,7 @@ country_event = { ## REFERENDUM ЄМЕНА ЗА ПРИЄДНАННЯ ДО АРА
 		992 = { transfer_state_to = SAU }
 		659 = { transfer_state_to = SAU }
 		1016 = { transfer_state_to = SAU }
-		remove_global_flag = yem_reunification
+		clr_country_flag = yem_reunification
     # } 293 992 659  1016
 
 }

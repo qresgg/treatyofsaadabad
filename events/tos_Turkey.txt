@@ -2802,7 +2802,7 @@ country_event = {
         name = TUR_CYPRUS.15.b
         ai_chance = { base = 40 }
 			news_event = { id = TUR_CYPRUS.18 hours = 3 }
-            TUR = { add_opinion_modifier = { target = ENG modifier = puppet_war_goal } }
+            TUR = { add_opinion_modifier = { target = ENG modifier = large_decrease } }
             ENG = {
                 add_war_support = -0.05
                 add_named_threat = {
@@ -2848,43 +2848,6 @@ country_event = {
         name = TUR_CYPRUS.4.a
         add_state_claim = 183
 		news_event = { id = turkish.101 hours = 3 }
-    }
-}
-
-add_namespace = turkish
-
-news_event = {
-    id = turkish.1
-    title = turkish.1.t       
-    desc = turkish.1.desc       
-	picture = GFX_news_event_generic_rotterdam_destroyed
-
-    major = yes
-    is_triggered_only = yes
-
-    option = {
-        trigger = {
-            OR = {
-                tag = TUR
-                is_in_faction_with = TUR
-                is_subject_of = TUR
-            }
-        }
-        name = turkish.1.a
-		hidden_effect = {
-        	ITA = { country_event = { id = turkish.11 days = 2 } } # Італія вимагає острів
-		}
-    }
-
-    option = {
-        trigger = {
-            NOT = {
-                tag = TUR
-                is_in_faction_with = TUR
-                is_subject_of = TUR
-            }
-        }
-        name = turkish.1.b
     }
 }
 
@@ -2954,14 +2917,15 @@ country_event = {
             amount = -1000
         	}
 		}
-
-        	ITA = {
-                add_building_construction = {
-                    type = industrial_complex
-                    level = 2
-                    instant_build = yes
-                    }
-                }
+		ITA = {
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
             TUR = {
                 random_owned_controlled_state = {
                     limit = { industrial_complex > 1 }
@@ -2987,236 +2951,6 @@ country_event = {
         set_country_flag = turkey_ignored_dodecanese
 
         custom_effect_tooltip = turkish.12.b.tt
-    }
-}
-
-
-news_event = {
-    id = turkish.100
-    title = turkish.100.t       
-    desc = turkish.100.desc       
-    picture = GFX_report_event_generic_peace
-    major = yes
-    is_triggered_only = yes
-
-    option = {
-        trigger = {
-            tag = TUR
-        }
-        name = turkish.100.a
-    }
-
-    option = {
-        trigger = {
-            tag = ENG
-        }
-        name = turkish.100.b
-    }
-
-    option = {
-        trigger = {
-            NOT = {
-                tag = TUR
-                is_in_faction_with = TUR
-                is_subject_of = TUR
-                tag = ENG
-            }
-        }
-        name = turkish.100.c
-    }
-}
-
-news_event = {
-    id = turkish.101
-    title = turkish.101.t       
-    desc = turkish.101.desc       
-    picture = GFX_report_event_generic_diplomacy
-    major = yes
-    is_triggered_only = yes
-
-    option = {
-        trigger = {
-            tag = TUR
-        }
-        name = turkish.101.a
-    }
-
-    option = {
-        trigger = {
-            tag = ENG
-        }
-        name = turkish.101.b
-    }
-
-    option = {
-        trigger = {
-            NOT = {
-                tag = TUR
-                tag = ENG
-                is_in_faction_with = TUR
-                is_subject_of = TUR
-            }
-        }
-        name = turkish.101.c
-    }
-}
-
-news_event = {
-    id = turkish.102
-    title = turkish.102.t       
-    desc = turkish.102.desc       
-    picture = GFX_report_event_generic_war
-    major = yes
-    is_triggered_only = yes
-
-    option = {
-        trigger = {
-            tag = TUR
-        }
-        name = turkish.102.a
-    }
-
-    option = {
-        trigger = {
-            tag = ENG
-        }
-        name = turkish.102.b
-    }
-
-    option = {
-        trigger = {
-            NOT = {
-                tag = TUR
-                tag = ENG
-                is_in_faction_with = TUR
-                is_subject_of = TUR
-            }
-        }
-        name = turkish.102.c
-    }
-}
-
-news_event = {
-    id = TUR_CYPRUS.16
-    title = TUR_CYPRUS.16.t       
-    desc = TUR_CYPRUS.16.d       
-    picture = GFX_report_event_generic_battlefield
-    major = yes
-    is_triggered_only = yes
-
-    option = {
-        trigger = {
-            OR = {
-                tag = TUR
-                is_in_faction_with = TUR
-                is_subject_of = TUR
-            }
-        }
-        name = TUR_CYPRUS.16.a
-    }
-
-    option = {
-        trigger = {
-            tag = ENG
-        }
-        name = TUR_CYPRUS.16.b
-    }
-
-    option = {
-        trigger = {
-            NOT = {
-                OR = {
-                    tag = TUR
-                    is_in_faction_with = TUR
-                    is_subject_of = TUR
-                    tag = ENG
-                }
-            }
-        }
-        name = TUR_CYPRUS.16.c
-    }
-}
-
-
-news_event = {
-    id = TUR_CYPRUS.17
-    title = TUR_CYPRUS.17.t
-    desc = TUR_CYPRUS.17.d
-    picture = GFX_report_event_generic_parade
-    major = yes
-    is_triggered_only = yes
-
-    option = {
-        trigger = {
-            tag = ENG
-        }
-        name = TUR_CYPRUS.17.a
-    }
-
-    option = {
-        trigger = {
-            OR = {
-                tag = TUR
-                is_in_faction_with = TUR
-                is_subject_of = TUR
-            }
-        }
-        name = TUR_CYPRUS.17.b
-    }
-
-    option = {
-        trigger = {
-            NOT = {
-                OR = {
-                    tag = ENG
-                    tag = TUR
-                    is_in_faction_with = TUR
-                    is_subject_of = TUR
-                }
-            }
-        }
-        name = TUR_CYPRUS.17.c
-    }
-}
-
-news_event = {
-    id = TUR_CYPRUS.18
-    title = TUR_CYPRUS.18.t
-    desc = TUR_CYPRUS.18.d
-    picture = GFX_report_event_generic_tanks
-    major = yes
-    is_triggered_only = yes
-
-    option = {
-        trigger = {
-            tag = ENG
-        }
-        name = TUR_CYPRUS.18.a
-    }
-
-    option = {
-        trigger = {
-            OR = {
-                tag = TUR
-                is_in_faction_with = TUR
-                is_subject_of = TUR
-            }
-        }
-        name = TUR_CYPRUS.18.b
-    }
-
-    option = {
-        trigger = {
-            NOT = {
-                OR = {
-                    tag = ENG
-                    tag = TUR
-                    is_in_faction_with = TUR
-                    is_subject_of = TUR
-                }
-            }
-        }
-        name = TUR_CYPRUS.18.c
     }
 }
 
@@ -3275,4 +3009,120 @@ country_event = {
 	# 		}
 	# 	}
 	# }
+}
+
+add_namespace = TUR_crimea
+country_event = {
+    id = TUR_crimea.1
+    title = TUR_crimea.1.t
+    desc = TUR_crimea.1.d
+    picture = GFX_event_turkey_flag
+
+    is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { # Прийняти ультиматум — віддати Крим
+        name = TUR_crimea.1.a
+        ai_chance = {
+            base = 65
+            modifier = {
+                factor = 2
+                is_subject_of = FROM
+            }
+            modifier = {
+                factor = 1.5
+                FROM = {
+                    fighting_army_strength_ratio = {
+                        tag = ROOT
+                        ratio > 1.2
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                any_other_country = {
+                    has_guaranteed = ROOT
+                    NOT = { tag = FROM }
+                }
+            }
+            modifier = {
+                factor = 0.7
+                is_in_faction = yes
+                NOT = { is_in_faction_with = FROM }
+            }
+        }
+        FROM = {
+            country_event = { id = TUR_crimea.3 days = 5 }
+        }
+        add_named_threat = { threat = 3 name = TUR_crimea.1_ultimatum }
+    }
+
+    option = { # Відмовитись — створити ціль війни на Крим у СРСР
+        name = TUR_crimea.1.b
+        ai_chance = {
+            base = 35
+            modifier = {
+                factor = 1.2
+                is_in_faction = yes
+                NOT = { is_in_faction_with = FROM }
+            }
+            modifier = {
+                factor = 1.2
+                is_subject = yes
+                NOT = { is_subject_of = FROM }
+            }
+            modifier = {
+                factor = 0.6
+                FROM = {
+                    fighting_army_strength_ratio = {
+                        tag = ROOT
+                        ratio > 2
+                    }
+                }
+            }
+        }
+            FROM = { country_event = { id = TUR_crimea.2 days = 1 } }
+    }
+}
+
+country_event = {
+    id = TUR_crimea.2 
+    title = TUR_crimea.2.t
+    desc = TUR_crimea.2.d
+    picture = GFX_event_war_preparation
+
+    is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+        name = TUR_crimea.2.a
+        ai_chance = { base = 100 }
+
+        TUR = {
+            create_wargoal = {
+                type = take_state
+                target = SOV
+                expire = 90
+				generator = { 137 }
+            }
+    	}
+	}	
+}
+
+country_event = {
+    id = TUR_crimea.3
+    title = TUR_crimea.3.t
+    desc = TUR_crimea.3.d
+    picture = GFX_event_turkey_flag
+
+    is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+        name = TUR_crimea.3.a
+        ai_chance = { base = 100 }
+        ROOT = {
+            transfer_state = 137
+        }
+    }
 }

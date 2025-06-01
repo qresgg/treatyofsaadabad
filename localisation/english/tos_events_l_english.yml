@@ -1013,6 +1013,26 @@ turkey.1943.d_poisoned_illness_fake:0 "Mustafa Kemal Atatürk, founder and first
 turkey.1943.a:0 "İsmet İnönü takes over the Republic"
 ismetnowpresident_tt:0 "§Yİsmet İnönü§! becomes the new President of the Republic."
 
+tos_turkish.20.t:0 "Greeks Enter Turkish Government"
+tos_turkish.20.d:0 "In a bold political shift, the Turkish administration has appointed ethnic Greeks to high-ranking government positions. Framed as a step toward reconciliation and unity, the policy aims to ease tensions with minorities and signal a more inclusive era.\n\nAmid regional instability and historical mistrust, reactions are mixed. Reformists praise the move as healing old wounds, while nationalists see it as betrayal. Some abroad welcome the gesture; others warn of backlash or internal division.\n\nThis may signal a redefinition of Turkish identity—or the start of a new political crisis."
+tos_turkish.20.a:0 "A necessary compromise for unity."        # Для Туреччини
+tos_turkish.20.b:0 "A surprising move from Ankara."           # Для інших країн
+TUR_crimea.1.t: "Turkey Issues an Ultimatum over Crimea"
+TUR_crimea.1.d: "Turkey has delivered a stern ultimatum to the Soviet Union: relinquish Crimea peacefully or face the full might of Turkish military force. This ultimatum marks a crucial turning point, where diplomacy may yet prevail or give way to the harsh realities of war."
+TUR_crimea.1.a: "We have no choice but to surrender Crimea"
+TUR_crimea.1.b: "We will resist the Turkish demands!"
+TUR_crimea.2.t: "Preparations for War"
+TUR_crimea.2.d: "After rejecting Turkey’s ultimatum, the Soviet Union prepares for the looming conflict over Crimea. The fate of the region hangs in the balance as mobilization accelerates."
+TUR_crimea.2.a: "Continue mobilization"
+TUR_crimea.3.t: "Crimea Transferred to Turkey"
+TUR_crimea.3.d: "In a dramatic resolution, Crimea has been peacefully transferred to Turkey, expanding its influence and shifting the regional balance of power."
+TUR_crimea.3.a: "The land is now ours"
+TUR_crimea.4.t: "Crimea Rejected Turkey’s Ultimatum"
+TUR_crimea.4.d: "The Soviet Union's outright refusal of Turkey’s ultimatum has left war inevitable. The drums of conflict sound loud across Crimea as both sides prepare for battle to decide the region’s future."
+TUR_crimea.4.a: "Then we shall fight for Crimea"
+
+
+
 
 # TUR_amend_the_montreux_convention:0 "Amend the Montreux Convention"
 # TUR_amend_the_montreux_convention_desc:0 "The Montreux Convention grants us control over the Turkish Straits, but its limitations hinder our full sovereignty. It is time to renegotiate its terms in our favor."
