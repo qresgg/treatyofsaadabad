@@ -46,7 +46,7 @@ country_event = {
 		}
 		SAU = {
 			is_subject = no
-			fascism = 0.5
+			fascism > 0.5
 			has_idea = IRQ_raising_iraqi_fascists
 		}
 	}
@@ -66,10 +66,8 @@ country_event = {
 		}
 	 
 		IRQ = {
-			limit = {
-				original_tag = IRQ
-				has_government = fascism
-			}
+			original_tag = IRQ
+			has_government = fascism
 			if = {
 				limit = { has_dlc = "Together for Victory" }
 				set_autonomy = {
@@ -83,8 +81,8 @@ country_event = {
 						owner = IRQ
 					}
 				}
-				else = { puppet = SAU }
 			}
+			else = { puppet = SAU }
 		}
 	}
 }

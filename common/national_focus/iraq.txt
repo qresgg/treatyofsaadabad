@@ -983,7 +983,7 @@ focus_tree = {
 			}
 			883 = {
 				add_resource = {
-					type = chrom
+					type = chromium
 					amount = 11
 				}
 			}
@@ -1008,13 +1008,13 @@ focus_tree = {
 		completion_reward = {
 			449 = {
 				add_resource = {
-					type = chrom
+					type = chromium
 					amount = 19
 				}
 			}
 			662 = {
 				add_resource = {
-					type = chrom
+					type = chromium
 					amount = 13
 				}
 			}
@@ -7333,8 +7333,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			# add_ideas = IRQ_saadabad_spheres_of_influence
-			# custom_effect_tooltip = IRQ_saadabad_spheres_of_influence_tt
 			custom_effect_tooltip = SAAD_members_receive_tt
 			IRQ = { country_event = SAAD_baghdad_pact_signed.1 }
 

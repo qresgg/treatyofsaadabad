@@ -78,24 +78,18 @@ focus_tree = {
 		target = SSB_the_saadabad_pact
 		scroll_wheel_factor = 0.7
 	}
-
-	shortcut = {
-		name = PER_tos_domestic_policy
-		target = PER_the_montreux_convention_tos
-		scroll_wheel_factor = 1
-	}
 ### MAIN
 
-shortcut = {
-	name = PER_tos_opposition_branch
-	target = PER_rally_the_reformers
-	scroll_wheel_factor = 0.45
+	shortcut = {
+		name = PER_tos_opposition_branch
+		target = PER_rally_the_reformers
+		scroll_wheel_factor = 0.45
 	}
 
 	shortcut = {
-	name = PER_tos_historical_branch
-	target = PER_the_pahlavi_imperium
-	scroll_wheel_factor = 0.6
+		name = PER_tos_historical_branch
+		target = PER_the_pahlavi_imperium
+		scroll_wheel_factor = 0.6
 	}
 
 	initial_show_position = {

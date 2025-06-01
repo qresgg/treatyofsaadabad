@@ -120,6 +120,10 @@ spriteTypes = {
 		name = "GFX_focus_TUR_navy_forces_BYZ"
 		texturefile = "gfx/interface/goals/focus_TUR_navy_forces_BYZ.dds"
 	}
+	SpriteType = {
+		name = "GFX_focus_TUR_silent_assassination"
+		texturefile = "gfx/interface/goals/focus_TUR_silent_assassination.dds"
+	}
 
 
 	################

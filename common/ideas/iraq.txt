@@ -1,6 +1,5 @@
 ideas = {
 	country = {
-		
 		IRQ_ideas_against_israel = {
 			allowed = {
 				original_tag = IRQ

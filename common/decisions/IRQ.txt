@@ -705,20 +705,6 @@ IRQ_african_arab_revolt_cat = {
 				autonomy_state = autonomy_sheikhdom
 				freedom_level = 0.5
 			}
-			FROM = {
-				if = {
-					limit = { is_in_any_war = yes }
-					every_war = {
-						limit = {
-							has_war_participant = FROM
-						}
-						transfer_war = {
-							from = FROM
-							to = ROOT
-						}
-					}
-				}
-			}
 		}
 		fire_only_once = no
 		on_map_mode = map_and_decisions_view 
@@ -830,11 +816,11 @@ IRQ_african_arab_revolt_cat = {
 						is_owned_by = ROOT
 					}
 					OR = {
-						has_core = EGY
-						has_core = ALG
-						has_core = LBA
-						has_core = TUN
-						has_core = MOR
+						is_core_of = EGY
+						is_core_of = ALG
+						is_core_of = LBA
+						is_core_of = TUN
+						is_core_of = MOR
 					}
 				}
 				add_core_of = ROOT

@@ -37,19 +37,62 @@ TUR_dis_politic_cat = {
 }
 
 ########### DEFAULT
-TUR_kurdish_rebellion_cat = {
 
-  icon = GFX_decision_category_border_conflicts
-  priority = 100
+TUR_kurdish_state_management_category  = {
+	priority = 4
+	icon = tur_unifying_the_country
+
+	on_map_area = {
+		targets = { 350 352 353 800 }
+		name = TUR_kurdish_state_management_map_category_name
+		zoom = 150
+	}
+
 	allowed = {
 		original_tag = TUR
 	}
-	visible = {
-		NOT = {
-			has_global_flag = tur_bftb_focus_tree
+}
+
+TUR_fundamentalist_state_management_category  = {
+	priority = 5
+	icon = tur_unifying_the_country
+
+	on_map_area = {
+		target_array = owned_states
+		target_trigger = {
+			FROM = {
+				TUR_is_fundamentalist_state = yes
+			}
 		}
+		name = TUR_fundamentalist_state_management_map_category_name
+		zoom = 150
+	}
+
+	allowed = {
+		original_tag = TUR
 	}
 }
+
+TUR_kemalist_state_management_category = {
+	priority = 5
+	icon = tur_unifying_the_country
+
+	on_map_area = {
+		target_array = owned_states
+		target_trigger = {
+			FROM = {
+				TUR_is_kemalist_state = yes
+			}
+		}
+		name = TUR_kemalist_state_management_map_category_name
+		zoom = 150
+	}
+
+	allowed = {
+		original_tag = TUR
+	}
+}
+
 
 TUR_bolstering_our_armed_forces = {
 
@@ -111,63 +154,6 @@ tos_TUR_a_legacy_worth_fighting_for = {
 	picture = GFX_decision_cat_picture_constitutional_arrows
 	priority = 1000
 	allowed = { original_tag = TUR }
-}
-
-
-TUR_kurdish_state_management_category  = {
-	priority = 4
-	icon = tur_unifying_the_country
-
-	on_map_area = {
-		targets = { 350 352 353 800 }
-		name = TUR_kurdish_state_management_map_category_name
-		zoom = 150
-	}
-
-	allowed = {
-		original_tag = TUR
-		has_global_flag = tur_bftb_focus_tree
-	}
-}
-
-TUR_fundamentalist_state_management_category  = {
-	priority = 5
-	icon = tur_unifying_the_country
-
-	on_map_area = {
-		target_array = owned_states
-		target_trigger = {
-			FROM = {
-				TUR_is_fundamentalist_state = yes
-			}
-		}
-		name = TUR_fundamentalist_state_management_map_category_name
-		zoom = 150
-	}
-
-	allowed = {
-		original_tag = TUR
-	}
-}
-
-TUR_kemalist_state_management_category = {
-	priority = 5
-	icon = tur_unifying_the_country
-
-	on_map_area = {
-		target_array = owned_states
-		target_trigger = {
-			FROM = {
-				TUR_is_kemalist_state = yes
-			}
-		}
-		name = TUR_kemalist_state_management_map_category_name
-		zoom = 150
-	}
-
-	allowed = {
-		original_tag = TUR
-	}
 }
 
 TUR_the_fading_father_category  = {

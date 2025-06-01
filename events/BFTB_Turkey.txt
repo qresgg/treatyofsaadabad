@@ -863,7 +863,7 @@ country_event = {
 			}
 			promote_character = {
 				character = TUR_ismet_inonu
-				ideology = social_nationalism
+				ideology = socialism
 			}
 			set_country_flag = TUR_held_democratic_election
 			if = {
@@ -900,7 +900,7 @@ country_event = {
 					character = TUR_kazim_orbay
 					country_leader = {
 						expire = "1965.1.1"
-						ideology = military_junta
+						ideology = centrism
 						traits = {
 							celebrity_junta_leader
 						}
@@ -925,7 +925,7 @@ country_event = {
 					character = TUR_kazim_orbay
 					country_leader = {
 						expire = "1965.1.1"
-						ideology = military_junta
+						ideology = centrism
 						traits = {
 							celebrity_junta_leader
 						}
@@ -950,7 +950,7 @@ country_event = {
 					character = TUR_kazim_orbay
 					country_leader = {
 						expire = "1965.1.1"
-						ideology = military_junta
+						ideology = centrism
 						traits = {
 							celebrity_junta_leader
 						}
@@ -975,7 +975,7 @@ country_event = {
 					character = TUR_kazim_orbay
 					country_leader = {
 						expire = "1965.1.1"
-						ideology = military_junta
+						ideology = centrism
 						traits = {
 							celebrity_junta_leader
 						}
@@ -1000,7 +1000,7 @@ country_event = {
 					character = TUR_kazim_orbay
 					country_leader = {
 						expire = "1965.1.1"
-						ideology = military_junta
+						ideology = centrism
 						traits = {
 							celebrity_junta_leader
 						}
@@ -1237,14 +1237,14 @@ country_event = {
 		hidden_effect = {
 			remove_country_leader_role = {
 				character = TUR_ismet_inonu
-				ideology = social_nationalism
+				ideology = socialism
 			}
 		}
 		add_country_leader_role = {
 			character = TUR_ismet_inonu
 			country_leader = {
 				expire = "1965.1.1"
-				ideology = social_nationalism
+				ideology = socialism
 				traits = {
 					milli_sef
 				}
@@ -1285,7 +1285,7 @@ country_event = {
 			character = TUR_fevzi_cakmak
 			country_leader = {
 				expire = "1965.1.1"
-				ideology = ultranationalism
+				ideology = fascism_ideology
 				traits = {
 					maresal
 				}
@@ -1330,7 +1330,7 @@ country_event = {
 			character = TUR_ismet_inonu
 			country_leader = {
 				expire = "1965.1.1"
-				ideology = democratic_socialism
+				ideology = socialism
 				traits = {
 					milli_sef
 				}
@@ -1355,7 +1355,7 @@ country_event = {
 			character = TUR_kazim_orbay
 			country_leader = {
 				expire = "1965.1.1"
-				ideology = military_junta
+				ideology = centrism
 				traits = {
 					celebrity_junta_leader
 				}
@@ -1375,7 +1375,7 @@ country_event = {
 			character = TUR_halife_abdulmecid_efendi
 			country_leader = {
 				expire = "1965.1.1"
-				ideology = constitutional_monarchy
+				ideology = despotism
 				traits = {
 					gentle_scholar
 				}
@@ -3987,7 +3987,7 @@ country_event = {
 			character = BUL_ferdinand_i
 			country_leader = {
 				expire = "1965.1.1"
-				ideology = absolute_monarchism
+				ideology = oligarchism
 				traits = {
 					the_humbled_knyaz
 				}
@@ -5401,14 +5401,14 @@ country_event = {
 		hidden_effect = {
 			remove_country_leader_role = {
 				character = TUR_ismet_inonu
-				ideology = social_nationalism
+				ideology = socialism
 			}
 		}
 		add_country_leader_role = {
 			character = TUR_ismet_inonu
 			country_leader = {
 				expire = "1965.1.1"
-				ideology = social_nationalism
+				ideology = socialism
 				traits = {
 					milli_sef
 				}
@@ -5443,7 +5443,7 @@ country_event = {
 		add_country_leader_role = {
 			character = TUR_fevzi_cakmak
 			country_leader = {
-			  ideology = ultranationalism
+			  ideology = fascism_ideology
 			  traits = { maresal }
 			  expire="1965.1.1"
 			}
@@ -5475,7 +5475,7 @@ country_event = {
 		add_country_leader_role = {
 			character = TUR_ismet_inonu
 			country_leader = {
-			  ideology= democratic_socialism
+			  ideology= socialism
 			  traits = { milli_sef }
 			  expire="1965.1.1"
 			}
@@ -5505,7 +5505,7 @@ country_event = {
 		add_country_leader_role = {
 			character = TUR_kazim_orbay
 			country_leader = {
-			  ideology=military_junta
+			  ideology=centrism
 			  traits = { celebrity_junta_leader }
 			  expire="1965.1.1"
 			}
@@ -5535,7 +5535,7 @@ country_event = {
 		add_country_leader_role = {
 			character = TUR_fevzi_cakmak
 			country_leader = {
-			  ideology=conservatism_n
+			  ideology=conservatism
 			  traits = { maresal }
 			  expire="1965.1.1"
 			}
@@ -5604,7 +5604,7 @@ country_event = {
 					character = TUR_durrushehvar_i
 					country_leader = {
 						expire = "1965.1.1"
-						ideology = absolute_monarchism
+						ideology = oligarchism
 						traits = {
 							sultana
 							calipha
@@ -5619,7 +5619,7 @@ country_event = {
 					character = TUR_durrushehvar_i
 					country_leader = {
 						expire = "1965.1.1"
-						ideology = absolute_monarchism
+						ideology = oligarchism
 						traits = {
 							sultana
 						}
@@ -5645,7 +5645,7 @@ country_event = {
 					character = TUR_durrushehvar_i
 					country_leader = {
 						expire = "1965.1.1"
-						ideology = absolute_monarchism
+						ideology = oligarchism
 						traits = {
 							sultana
 							calipha
@@ -5659,7 +5659,7 @@ country_event = {
 					character = TUR_durrushehvar_i
 					country_leader = {
 						expire = "1965.1.1"
-						ideology = absolute_monarchism
+						ideology = oligarchism
 						traits = {
 							sultana
 						}

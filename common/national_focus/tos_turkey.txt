@@ -955,7 +955,6 @@ shortcut = {
 			custom_effect_tooltip = available_mio_tt
 			show_mio_tooltip = TUR_killigil_endustrileri_organization
 		}
-		search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
 	}
 	
 	focus = {
@@ -1374,7 +1373,6 @@ shortcut = {
 				tooltip = army_attack_speed_factor_tt
 			}
 		}
-		search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
 	}
 	
 	focus = {
@@ -1671,7 +1669,6 @@ shortcut = {
 				tooltip = breakthrough_factor_tt
 			}
 		}
-		search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
 	}
 	
 	focus = {
@@ -1716,7 +1713,6 @@ shortcut = {
 				tooltip = initiative_factor_tt
 			}
 		}
-		search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
 	}
 	focus = {
 		id = TUR_combat_engineers
@@ -1751,7 +1747,6 @@ shortcut = {
 				tooltip = max_dig_in_factor_tt
 			}
 		}
-		search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
 	}
 	
 	focus = {
@@ -1788,7 +1783,6 @@ shortcut = {
 				tooltip = special_forces_out_of_supply_factor_tt
 			}
 		}
-		search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
 	}
 
 
@@ -1999,7 +1993,8 @@ shortcut = {
 					level = 3
 					instant_build = yes
 					province = {
-						limit_to_coastal = yes
+						all_provinces = yes
+						limit_to_naval_base = yes
 					}
 				}
 			}
@@ -2009,7 +2004,8 @@ shortcut = {
 					level = 3
 					instant_build = yes
 					province = {
-						limit_to_coastal = yes
+						all_provinces = yes
+						limit_to_naval_base = yes
 					}
 				}
 			}
@@ -2053,7 +2049,7 @@ shortcut = {
 					instant_build = yes
 					province = {
 						all_provinces = yes
-						limit_to_coastal = yes
+						limit_to_naval_base = yes
 					}
 				}
 			}
@@ -2064,7 +2060,7 @@ shortcut = {
 					instant_build = yes
 					province = {
 						all_provinces = yes
-						limit_to_coastal = yes
+						limit_to_naval_base = yes
 					}
 				}
 			}
@@ -2131,7 +2127,7 @@ shortcut = {
 					instant_build = yes
 					province = {
 						all_provinces = yes
-						limit_to_coastal = yes
+						limit_to_naval_base = yes
 					}
 				}
 				add_building_construction = {
@@ -3078,7 +3074,7 @@ shortcut = {
 					instant_build = yes
 					province = {
 						all_provinces = yes
-						limit_to_coastal = yes
+						limit_to_naval_base = yes
 					}
 				}
 			}
@@ -3089,7 +3085,7 @@ shortcut = {
 					instant_build = yes
 					province = {
 						all_provinces = yes
-						limit_to_coastal = yes
+						limit_to_naval_base = yes
 					}
 				}
 			}
@@ -6126,10 +6122,10 @@ shortcut = {
 			focus = TUR_liberalize_the_economy
 		}
 
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = TUR_stabilize_the_nation
-		cost = 10
+		cost = 6
 
 		ai_will_do = {
 			factor = 10
@@ -6163,6 +6159,59 @@ shortcut = {
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
 		}
+	}
+	focus = {
+		id = TUR_peace_between_turks_and_kurds
+		icon = GFX_focus_generic_befriend_kurdistan
+		prerequisite = { focus = TUR_liberalize_the_economy focus = TUR_stabilize_the_nation }
+
+		x = -1
+		y = 1
+		relative_position_id = TUR_liberalize_the_economy
+		cost = 6
+
+		ai_will_do = {
+			factor = 7
+		}
+		completion_reward = {
+			add_political_power = 100
+			if = {
+				limit = {
+					has_idea = TUR_traumatized_nation
+				}
+				swap_ideas = {
+					remove_idea = TUR_traumatized_nation
+					add_idea = TUR_traumatized_nation_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = TUR_traumatized_nation_2
+				}
+				swap_ideas = {
+					remove_idea = TUR_traumatized_nation_2
+					add_idea = TUR_traumatized_nation_3
+				}
+			}
+			else = {
+				remove_ideas = TUR_traumatized_nation_3
+			}
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 353
+						state = 800
+						state = 350
+						state = 352
+					}
+				}
+				add_core_of = ROOT
+				remove_dynamic_modifier = {
+					modifier = tostree_limited_kurdish_separatism
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_TUR_TRADITIONALISM }
 	}
 	focus = {
 		id = TUR_continue_military_rule
@@ -6530,6 +6579,8 @@ shortcut = {
 		
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_STABILITY
 		}
 	}
 
@@ -6609,6 +6660,7 @@ shortcut = {
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
+			FOCUS_FILTER_ANNEXATION
 		}
 	}
 	focus = {
@@ -6680,6 +6732,8 @@ shortcut = {
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
+			FOCUS_FILTER_MANPOWER
+			FOCUS_FILTER_WAR_SUPPORT
 		}
 	}
 
@@ -6772,6 +6826,8 @@ shortcut = {
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_STABILITY
 		}
 	}
 
@@ -6793,6 +6849,8 @@ shortcut = {
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
+			FOCUS_FILTER_WAR_SUPPORT
+			FOCUS_FILTER_POLITICAL
 		}
 	}
 	focus = {
@@ -6831,6 +6889,7 @@ shortcut = {
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
+			FOCUS_FILTER_ANNEXATION
 		}
 	}
 	focus = {
@@ -6861,6 +6920,7 @@ shortcut = {
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
+			FOCUS_FILTER_ANNEXATION
 		}
 	}
 	focus = {
@@ -6892,6 +6952,7 @@ shortcut = {
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
+			FOCUS_FILTER_ANNEXATION
 		}
 	}
 	focus = {
@@ -6926,6 +6987,7 @@ shortcut = {
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
+			FOCUS_FILTER_ANNEXATION
 		}
 	}
 
@@ -6948,6 +7010,7 @@ shortcut = {
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
+			FOCUS_FILTER_ANNEXATION
 		}
 	}
 
@@ -6967,16 +7030,10 @@ shortcut = {
 		}
 		completion_reward = {
 			country_event = turkey_yugoslavia.1
-			## EVENT SOUTH YUGOSLAVIA goes to TUR, NORTH YUGOSLAVIA goes as puppet to TUR
-			## 103, 104, 804, 105, 108, 802, 970, 106, 803 - STATES goes to TUR
-			## 853, 102, 109, 45, 764, 107 - goes to Serbian Puppet
-			## 102, 853 - checks to german occupation (if they under occupation - skip them)
-			## 103, 105 - checks to italy occupation (if they under occupation - skip them)
-			## check if yugoslavia is in ger alliance
-			## check if yugoslavia is italian puppet
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
+			FOCUS_FILTER_ANNEXATION
 		}
 	}
 	
@@ -7004,6 +7061,7 @@ shortcut = {
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
+			FOCUS_FILTER_ANNEXATION
 		}
 	}
 
@@ -7027,6 +7085,7 @@ shortcut = {
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
+			FOCUS_FILTER_POLITICAL
 		}
 	}
 
@@ -7059,6 +7118,7 @@ shortcut = {
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
+			FOCUS_FILTER_ANNEXATION
 		}
 	}
 
@@ -7082,6 +7142,7 @@ shortcut = {
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
+			FOCUS_FILTER_ANNEXATION
 		}
 	}
 
@@ -7115,6 +7176,7 @@ shortcut = {
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
+			FOCUS_FILTER_ANNEXATION
 		}
 	}
 
@@ -7147,6 +7209,7 @@ shortcut = {
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
+			FOCUS_FILTER_ANNEXATION
 		}
 	}
 	focus = {
@@ -7175,6 +7238,7 @@ shortcut = {
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
+			FOCUS_FILTER_ANNEXATION
 		}
 	}
 
@@ -7197,6 +7261,9 @@ shortcut = {
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
+			FOCUS_FILTER_ARMY_XP
+			FOCUS_FILTER_NAVY_XP
+			FOCUS_FILTER_POLITICAL
 		}
 	}
 
@@ -7231,6 +7298,8 @@ shortcut = {
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
+			FOCUS_FILTER_WAR_SUPPORT
+			FOCUS_FILTER_ANNEXATION
 		}
 	}
 	focus = {
@@ -7242,6 +7311,7 @@ shortcut = {
 		x = 0
 		y = 1
 		completion_reward = {
+			custom_effect_tooltip = TUR_crimean_crisis_tt
 			137 = {
 				add_claim_by = TUR
 			}
@@ -7252,6 +7322,8 @@ shortcut = {
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
+			FOCUS_FILTER_WAR_SUPPORT
+			FOCUS_FILTER_ANNEXATION
 		}
 	}
 	focus = {
@@ -7274,7 +7346,11 @@ shortcut = {
 						state = 197
 						state = 196
 					}
-					NOT = { is_subject_of = ROOT }
+					NOT = { 
+						OWNER = {
+							is_subject_of = ROOT
+						}	
+					}
 				}
 				add_claim_by = ROOT
 				ROOT = {
@@ -7288,6 +7364,7 @@ shortcut = {
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
+			FOCUS_FILTER_ANNEXATION
 		}
 	}
 
@@ -7309,6 +7386,8 @@ shortcut = {
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_WAR_SUPPORT
 		}
 	}
 	focus = {
@@ -7333,6 +7412,7 @@ shortcut = {
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
+			FOCUS_FILTER_ANNEXATION
 		}
 	}
 
@@ -8381,59 +8461,6 @@ shortcut = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_TUR_TRADITIONALISM }
 	}
 
-	focus = {
-		id = TUR_peace_between_turks_and_kurds
-		icon = GFX_focus_generic_befriend_kurdistan
-		prerequisite = { focus = TUR_amend_the_secular_policies }
-
-		x = 0
-		y = 1
-		relative_position_id = TUR_amend_the_secular_policies
-		cost = 10
-
-		ai_will_do = {
-			factor = 7
-		}
-		completion_reward = {
-			add_political_power = 100
-			if = {
-				limit = {
-					has_idea = TUR_traumatized_nation
-				}
-				swap_ideas = {
-					remove_idea = TUR_traumatized_nation
-					add_idea = TUR_traumatized_nation_2
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = TUR_traumatized_nation_2
-				}
-				swap_ideas = {
-					remove_idea = TUR_traumatized_nation_2
-					add_idea = TUR_traumatized_nation_3
-				}
-			}
-			else = {
-				remove_ideas = TUR_traumatized_nation_3
-			}
-			every_owned_state = {
-				limit = {
-					OR = {
-						state = 353
-						state = 800
-						state = 350
-						state = 352
-					}
-				}
-				add_core_of = ROOT
-				remove_dynamic_modifier = {
-					modifier = tostree_limited_kurdish_separatism
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_TUR_TRADITIONALISM }
-	}
 
 	focus = {
 		id = TUR_end_the_ban_on_the_arabic_adhan
@@ -8596,6 +8623,24 @@ shortcut = {
 				}
 			}
 			custom_effect_tooltip = TUR_request_soviet_support_tt
+		}
+	}
+	focus = {
+		id = TUR_ally_the_balkan_states
+		icon = GFX_focus_generic_balkan_diplomacy
+		cost = 5
+		prerequisite = { focus = TUR_new_state_enterprise }
+		relative_position_id = TUR_new_state_enterprise
+		x = -1
+		y = 1
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			custom_effect_tooltip = solidify_the_balkan_pact_tt
+		}
+		search_filters = {
+			FOCUS_FILTER_ALLIANCE
 		}
 	}
 	
@@ -9510,12 +9555,6 @@ shortcut = {
 			}
 			if = {
 				limit = {
-					NOT = {
-						has_idea = tosi_laws_social_hierarchy
-						has_idea = tosi_laws_social_revolutionary
-						has_idea = tosi_laws_social_diversity
-						has_idea = tosi_laws_social_unity
-					}
 					NOT = {
 						has_global_flag = NATIONAL_CHARACTERS_BLOCKED
 					}
@@ -10615,24 +10654,23 @@ shortcut = {
 	}
 	focus = {
 		id = TUR_silent_assassinate
-		icon = GFX_focus_TUR_silent_assassinate
+		icon = GFX_focus_TUR_silent_assassination
 		prerequisite = { focus = TUR_lead_the_rural_masses }
 		x = 0
 		y = 1
 		relative_position_id = TUR_lead_the_rural_masses
-		cost = 5
+		cost = 10
 		available = {
 			has_country_leader = {
 				character = TUR_mustafa_kemal_ataturk
 				ruling_only = yes
 			}
 		}
-		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD FOCUS_FILTER_POLITICAL_CHARACTER }
 
 		completion_reward = {
 			TUR = { country_event = { id = turkey.1943 random_hours = 12} }
+			remove_ideas = TUR_sectarian_woes
 		}
 	}
-
-
 }

@@ -15,10 +15,6 @@ form_neo_mesopotamia_category = {
 				original_tag = KUW
 				original_tag = LEB
 			}
-			OR = {
-                NOT = { original_tag = IRQ }
-                has_completed_focus = IRQ_unlock_form_mesopotamia
-            }
 		}
 
 		visible = {
@@ -10658,10 +10654,6 @@ form_arabia_category = {
 
 		allowed = {
 			has_dlc = "Waking the Tiger"
-            OR = {
-                NOT = { original_tag = IRQ }
-                has_completed_focus = IRQ_open_form_arabia
-            }
 		}
 
 		visible = {

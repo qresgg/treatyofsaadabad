@@ -88,3 +88,57 @@ AFG_islamists_in_state_modifier = {
         }
     }
 }
+
+
+### TUR
+
+TUR_lingering_unrest = {
+	enable = { always = no }
+
+	icon = GFX_looting_resistance_icon
+	
+	recruitable_population_factor = -0.35
+	state_resources_factor = -0.2
+	state_production_speed_buildings_factor = -0.25
+}
+pan_turkic_propaganda = {
+	enable = { always = no }
+
+	icon = GFX_modifiers_tur_pan_turkic_propaganda
+	
+	compliance_growth = 0.05
+	resistance_decay = 0.1
+}
+
+tos_kurdish_agitation = {
+	enable = { always = no }
+
+	icon = GFX_modifiers_tur_kurdish_agitation
+	
+	compliance_growth = -0.1
+	resistance_growth = 0.1
+	resistance_decay = -0.1
+}
+tostree_kurdish_separatism = {
+	enable = { always = no }
+
+	icon = GFX_modifiers_tur_kurdish_rebellion
+	
+	compliance_growth = -0.75
+	resistance_growth = 0.1
+	resistance_target = 0.2
+	resistance_decay = -0.75
+	state_resources_factor = -0.25
+	state_production_speed_buildings_factor = -0.3
+}
+tostree_limited_kurdish_separatism = {
+	enable = { always = no }
+
+	icon = GFX_modifiers_tur_kurdish_fatigue
+	
+	compliance_growth = -0.3
+	resistance_target = 0.1
+	resistance_decay = -0.5
+	state_resources_factor = -0.25
+	state_production_speed_buildings_factor = -0.1
+}

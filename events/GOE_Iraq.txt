@@ -2114,12 +2114,9 @@ country_event = {
 		has_completed_focus = IRQ_dig_up_a_rifles  # Потрібно завершити фокус
 	}
 
-	days = 3
-
 	option = {
-			name = IRQ_saadabad.1.a  # Кнопка "Чудово!"
-			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 10000 }
-			
+		name = IRQ_saadabad.1.a  # Кнопка "Чудово!"
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 10000 }
 	}
 }
 
@@ -2296,9 +2293,7 @@ country_event = {
             }
 			modifier = {
 				factor = 2
-				trigger = {
-					FROM = { owns_state = 455 }
-				}
+				FROM = { owns_state = 455 }
 			}
 		}
         FROM = {
@@ -2339,7 +2334,7 @@ country_event = {
                 create_wargoal = {
                     type = take_state_focus
                     target = ROOT
-                    generator = { 454, 455, 453 }
+                    generator = { 454 455 453 }
                 }
             }
             country_event = { id = IRQ_PAL_ultimatum.4 days = 1 }

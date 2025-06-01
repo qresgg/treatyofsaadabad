@@ -35,9 +35,12 @@ form_neo_byzantine_empire_category = {
 	priority = 1
 
 	allowed = {
-		OR = {
+		AND = {
 			original_tag = TUR
 		}
+	}
+	visible = {
+		has_completed_focus = TUR_restore_byzantium
 	}
 }
 
