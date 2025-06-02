@@ -6802,8 +6802,7 @@ shortcut = {
 		}
 
 		completion_reward = {
-			set_country_flag = GRE_byz_unified_flag
-			set_cosmetic_tag = BYZ_byzantium
+			set_cosmetic_tag = BYZ_byzantium_UNIFIED_tos
 			hidden_effect = {
 				news_event = { id = wtt_news.66 hours = 6 }
 				set_global_flag = form_byzantine_empire_flag
@@ -7394,6 +7393,7 @@ shortcut = {
 		x = -1
 		y = 4
 		completion_reward = {
+			set_cosmetic_tag = BYZ_empire_UNIFIED_tos
 			add_country_leader_trait = {
 				trait = TUR_byzantium_empire_emperor_trait
 			}

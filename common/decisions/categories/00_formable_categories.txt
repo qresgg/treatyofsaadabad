@@ -48,7 +48,7 @@ form_kushan_empire_category = {
 
 	icon = generic_formable_nations
 
-	picture = GFX_decision_cat_generic_persian_empire
+	picture = GFX_decision_category_kushan_empire
 
 	priority = 20
 

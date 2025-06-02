@@ -4,6 +4,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/decision_cat_form_sasanian_empire.dds"
 	}
 	spriteType = {
+		name = "GFX_decision_category_kushan_empire"
+		texturefile = "gfx/interface/decisions/decision_cat_form_kushan_empire.dds"
+	}
+	spriteType = {
 		name = "GFX_decision_category_christianity"
 		texturefile = "gfx/interface/decisions/decision_cat_tur_christianity.dds"
 	}

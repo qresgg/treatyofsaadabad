@@ -70,13 +70,13 @@ AFG_kushan_empire_democratic: "Kushanian Confederation"
 AFG_kushan_empire_democratic_DEF: "the Kushanian Confederation"
 AFG_kushan_empire_democratic_ADJ: "Kushan"
 
-BYZ_byzantium: "Byzantium"
-BYZ_byzantium_DEF: "the Byzantium"
-BYZ_byzantium_ADJ: "Byzantiums"
+BYZ_byzantium_UNIFIED_tos: "Byzantium"
+BYZ_byzantium_UNIFIED_tos_DEF: "the Byzantium"
+BYZ_byzantium_UNIFIED_tos_ADJ: "Byzantiums"
 
-BYZ_byzantine_empire: "Second Byzantine Empire"
-BYZ_byzantine_empire_DEF: "the Byzantine Empire"
-BYZ_byzantine_empire_ADJ: "Byzantines"
+BYZ_empire_UNIFIED_tos: "Second Byzantine Empire"
+BYZ_empire_UNIFIED_tos_DEF: "the Byzantine Empire"
+BYZ_empire_UNIFIED_tos_ADJ: "Byzantines"
 
 ## BYZANTINE PUPPETS
 BUL_byzantine_dux: "Thema of Bulgarias"

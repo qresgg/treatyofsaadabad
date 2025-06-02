@@ -13,3 +13,8 @@
  MODIFIER_EXPERIENCE_AIR_GAIN_DESC:0 "Air experience gain will show information about units on the map and focus tree progression from other countries. A higher value than the enemy's encryption will give a decryption combat bonus"
  MODIFIER_EXPERIENCE_AIR_GAIN_FACTOR:0 "Air Experience Gain"
  experience_gain_air_factor_tt: " $MODIFIER_EXPERIENCE_AIR_GAIN_FACTOR$: $RIGHT|+=%2$"
+
+
+
+ #### DYNAMIC MODIFIERS STATES:
+AFG_islamists_in_state_modifier:0 "Islamists in State"

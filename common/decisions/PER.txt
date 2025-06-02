@@ -300,17 +300,18 @@ PER_selling_guns_category = {
 }
 
 PER_buying_fabrics_category = {
+
 	PER_buying_mil_fabric = {
 	icon = GFX_decision_generic_factory
 	days_remove = 70
-	cost = 250
+	cost = 200
 
 	available = {
 		any_owned_state = {
 			is_owned_and_controlled_by = ROOT
 			free_building_slots = {
 				building = arms_factory
-				size > 0
+				size > 1
 				include_locked = yes
 			}
 		}
@@ -321,7 +322,7 @@ PER_buying_fabrics_category = {
 			limit = {
 				free_building_slots = {
 					building = arms_factory
-					size > 0
+					size > 1
 					include_locked = yes
 				}
 			}
@@ -338,14 +339,14 @@ PER_buying_fabrics_category = {
 	PER_buying_civ_fabric = {
 		icon = GFX_decision_generic_factory
 		days_remove = 70
-		cost = 250
+		cost = 200
 
 		available = {
 			any_owned_state = {
 				is_owned_and_controlled_by = ROOT
 				free_building_slots = {
 					building = industrial_complex
-					size > 0
+					size > 1
 					include_locked = yes
 				}
 			}
@@ -357,7 +358,7 @@ PER_buying_fabrics_category = {
 					is_owned_and_controlled_by = ROOT
 					free_building_slots = {
 						building = industrial_complex
-						size > 0
+						size > 1
 						include_locked = yes
 					}
 				}

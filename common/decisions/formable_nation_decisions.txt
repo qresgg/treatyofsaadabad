@@ -712,6 +712,25 @@ form_kushan_empire_category = {
 		visible = {
 		}
 		allowed = {
+			original_tag = AFG
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = form_country_afghanistan_required_states_tt
+				controls_state = 415
+				controls_state = 1009
+				controls_state = 1008
+				controls_state = 1007
+				controls_state = 267
+				controls_state = 1006
+				controls_state = 1005
+			}
+			custom_trigger_tooltip = {
+				tooltip = form_country_afghan_indian_border_required_states_tt
+				controls_state = 988
+				controls_state = 987
+				controls_state = 442
+			}
 		}
 		highlight_states = {
 			highlight_state_targets = {
@@ -1104,7 +1123,7 @@ form_neo_byzantine_empire_category = {
 		}
 		complete_effect = {
 			set_country_flag = GRE_byz_unified_flag
-			GRE_set_appropriate_cosmetic_tag = yes
+			set_cosmetic_tag = BYZ_byzantium_UNIFIED_tos
 			set_capital = { state = 797 }
 			797 = { add_core_of = ROOT }
 			hidden_effect = { 797 = { set_state_name = "Constantinople" } }
@@ -2671,6 +2690,672 @@ form_neo_byzantine_empire_category = {
 	# 		}
 	# 	}
 	# }
+}
+
+form_arabia_category = {
+
+	form_arabia = {
+
+		icon = generic_form_nation
+
+		on_map_mode = decision_view_only
+
+		allowed = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		visible = {
+			OR = {
+				# Iraq
+				original_tag = IRQ
+				# Saudi Arabia
+				original_tag = SAU
+				# Yemen
+				original_tag = YEM
+				# Oman
+				original_tag = OMA
+				# Egypt
+				original_tag = EGY
+				# Libya
+				original_tag = LBA
+				# Jordan
+				original_tag = JOR
+				# Palestine
+				original_tag = PAL
+				# Lebanon
+				original_tag = LEB
+				# Syria
+				original_tag = SYR
+				# Kuwait
+				original_tag = KUW
+				# United Arab Emirates
+				original_tag = UAE
+				# Qatar
+				original_tag = QAT
+				# Tunisia
+				original_tag = TUN
+				# Algeria
+				original_tag = ALG
+				# Morocco
+				original_tag = MOR
+				# Sahrawi Arab Republic
+				original_tag = WES
+				# Mauretania
+				original_tag = MRT
+				# Sudan
+				original_tag = SUD
+				# Bahrain
+				original_tag = BHR
+				# South Arabia
+				original_tag = FSA
+				# Imamate of Oman
+				original_tag = IMO
+				# TEST SUBJECT
+			}
+			NOT = { has_global_flag = form_arabia_flag }
+            OR = {
+                NOT = { original_tag = IRQ }
+                has_completed_focus = IRQ_open_form_arabia
+            }
+			OR = {
+				NOT = { original_tag = SAU }
+				is_subject = no
+			}
+		}
+
+		highlight_states = { 
+			highlight_state_targets = {
+				state = 293 
+				state = 992 
+				state = 659 
+				state = 906 
+				state = 1016
+				state = 292
+				state = 679
+				state = 678
+				state = 857
+				state = 858
+				state = 854
+				state = 855
+				state = 856
+				state = 859
+				state = 293
+			}
+		}
+
+		available = {
+			
+			# Saudi Arabia + Yemen
+			controls_state = 292
+			controls_state = 679
+			controls_state = 678
+			controls_state = 857
+			controls_state = 858
+			controls_state = 854
+			controls_state = 855
+			controls_state = 856
+			controls_state = 859
+			controls_state = 293
+
+			# Omani States
+			controls_state = 1016 # Dhofar
+		}
+
+		complete_effect = {
+
+			set_cosmetic_tag = ARA_UNIFIED
+			
+			# Saudi Arabia
+			custom_effect_tooltip = form_country_saudi_coring_states_tt
+			hidden_effect = {
+				292 = { add_core_of = ROOT }
+				679 = { add_core_of = ROOT }
+				678 = { add_core_of = ROOT }
+				857 = { add_core_of = ROOT }
+				858 = { add_core_of = ROOT }
+				854 = { add_core_of = ROOT }
+				855 = { add_core_of = ROOT }
+				856 = { add_core_of = ROOT }
+				859 = { add_core_of = ROOT }
+			}
+
+			293 = { add_core_of = ROOT } # Yemen
+			992 = { add_core_of = ROOT } # Aden Province
+			659 = { add_core_of = ROOT } # South Yemen
+			906 = { add_core_of = ROOT } # Socotra	
+            1016 = { add_core_of = ROOT } # Dhofar	
+
+			hidden_effect = {
+				news_event = { id = wtt_news.67 hours = 6 }
+				set_global_flag = form_arabia_flag
+				set_country_flag = is_arabia_flag
+			}
+
+		}
+
+		ai_will_do = {
+			base = 200
+		}
+
+	}
+
+	# Iraq + Kuwait
+	integrate_the_fertile_crescent = {
+
+		icon = GFX_decision_generic_nationalism
+
+		fire_only_once = yes
+
+		on_map_mode = decision_view_only
+
+		highlight_states = { 
+			highlight_state_targets = {
+				state = 676 
+				state = 675 
+				state = 291 
+				state = 1011
+				state = 1010
+				state = 656
+			}
+		}
+
+		allowed = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		visible = { 
+			has_global_flag = form_arabia_flag
+			has_country_flag = is_arabia_flag
+		}
+
+		available = {
+			controls_state = 656 
+			controls_state = 675 
+			controls_state = 291 
+			controls_state = 1011
+			controls_state = 1010
+		}
+
+		complete_effect = {
+			676 = { add_core_of = ROOT }
+			675 = { add_core_of = ROOT }
+			291 = { add_core_of = ROOT }
+			656 = { add_core_of = ROOT }
+			1011 = { add_core_of = ROOT }
+			1010 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 200
+		}
+	}
+
+	# Syria + Lebanon + Jordan + Palestine
+	integrate_the_levantine_states = {
+
+		icon = GFX_decision_generic_nationalism
+
+		fire_only_once = yes
+
+		on_map_mode = decision_view_only
+
+		highlight_states = { 
+			highlight_state_targets = {
+				state = 680
+				state = 554
+				state = 455
+				state = 454
+			}
+		}
+
+		allowed = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		visible = { 
+			has_global_flag = form_arabia_flag
+			has_country_flag = is_arabia_flag
+		}
+
+		available = {
+			controls_state = 680
+			controls_state = 554
+			controls_state = 455
+			controls_state = 454
+		}
+
+		complete_effect = {
+			
+			680 = { add_core_of = ROOT } # Deir az zur
+			554 = { add_core_of = ROOT } # Damascus
+
+			455 = { add_core_of = ROOT } # Jordan
+			454 = { add_core_of = ROOT } # Palestine
+			
+		}
+
+		ai_will_do = {
+			base = 200
+		}
+	}
+
+	# Egypt
+	integrate_the_western_mashriq = {
+
+		icon = GFX_decision_generic_nationalism
+
+		fire_only_once = yes
+
+		on_map_mode = decision_view_only
+
+		highlight_states = { 
+			highlight_state_targets = {
+				state = 907
+				state = 552
+				state = 452
+				state = 447
+				state = 446
+				state = 456
+				state = 457
+				state = 453
+			}
+		}
+
+		allowed = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		visible = { 
+			has_global_flag = form_arabia_flag
+			has_country_flag = is_arabia_flag
+		}
+
+		available = {
+			
+			controls_state = 907
+			controls_state = 452
+			controls_state = 447
+			controls_state = 446
+			controls_state = 456
+			controls_state = 457
+			controls_state = 453
+
+		}
+
+		complete_effect = {
+			
+			907 = { add_core_of = ROOT } # Cairo
+			552 = { add_core_of = ROOT } # Western Desert
+			452 = { add_core_of = ROOT } # Matrouh
+			447 = { add_core_of = ROOT } # Alexandria
+			446 = { add_core_of = ROOT } # Suez
+			456 = { add_core_of = ROOT } # Aswan
+			457 = { add_core_of = ROOT } # Eastern Desert
+			453 = { add_core_of = ROOT } # Sinai
+		}
+
+		ai_will_do = {
+			base = 200
+		}
+	}
+
+	# Libya + Tunisia
+	integrate_the_eastern_maghreb = {
+
+		icon = GFX_decision_generic_nationalism
+
+		fire_only_once = yes
+
+		on_map_mode = decision_view_only
+
+		highlight_states = { 
+			highlight_state_targets = {
+				state = 448
+				state = 661
+				state = 449
+				state = 662
+				state = 450
+				state = 451
+				state = 663
+				state = 273
+				state = 458
+				state = 665
+			}
+		}
+
+		allowed = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		visible = { 
+			has_global_flag = form_arabia_flag
+			has_country_flag = is_arabia_flag
+		}
+
+		available = {
+			
+			controls_state = 448
+			controls_state = 661
+			controls_state = 449
+			controls_state = 662
+			controls_state = 450
+			controls_state = 451
+			controls_state = 663
+			controls_state = 458
+			controls_state = 665
+
+		}
+
+		complete_effect = {
+
+			# Tunisia
+			458 = { add_core_of = ROOT }
+			665 = { add_core_of = ROOT }
+			
+			# Libya
+			448 = { add_core_of = ROOT }
+			661 = { add_core_of = ROOT }
+			449 = { add_core_of = ROOT }
+			662 = { add_core_of = ROOT }
+			450 = { add_core_of = ROOT }
+			451 = { add_core_of = ROOT }
+			663 = { add_core_of = ROOT }
+			273 = { add_core_of = ROOT }
+			
+		}
+
+		ai_will_do = {
+			base = 200
+		}
+	}
+
+	# Algeria + Morocco
+	integrate_the_al_maghribiyah_and_al_jazair = {
+
+		icon = GFX_decision_generic_nationalism
+
+		fire_only_once = yes
+
+		on_map_mode = decision_view_only
+
+		highlight_states = { 
+			highlight_state_targets = {
+				state = 290
+				state = 783
+				state = 460
+				state = 513
+				state = 459
+				state = 461
+				state = 462
+				state = 514
+			}
+		}
+
+		allowed = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		visible = { 
+			has_global_flag = form_arabia_flag
+			has_country_flag = is_arabia_flag
+		}
+
+		available = {
+			
+			controls_state = 290
+			controls_state = 783
+			controls_state = 460
+			controls_state = 513
+			controls_state = 459
+			controls_state = 461
+			controls_state = 462
+
+		}
+
+		complete_effect = {
+			
+			# Spanish Africa
+			290 = { add_core_of = ROOT }
+			783 = { add_core_of = ROOT }
+
+			# French Africa
+			460 = { add_core_of = ROOT }
+			513 = { add_core_of = ROOT }
+			459 = { add_core_of = ROOT }
+			461 = { add_core_of = ROOT }
+			462 = { add_core_of = ROOT }
+			514 = { add_core_of = ROOT }
+
+		}
+
+		ai_will_do = {
+			base = 200
+		}
+	}
+
+	# West Sahara + Mauretania
+	integrate_the_west_sahara = {
+
+		icon = GFX_decision_generic_nationalism
+
+		fire_only_once = yes
+
+		on_map_mode = decision_view_only
+
+		highlight_states = { 
+			highlight_state_targets = {
+				state = 699
+				state = 786
+				state = 557
+			}
+		}
+
+		allowed = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		visible = { 
+			has_global_flag = form_arabia_flag
+			has_country_flag = is_arabia_flag
+		}
+
+		available = {
+			
+			controls_state = 699
+			controls_state = 557
+
+		}
+
+		complete_effect = {
+			
+			699 = { add_core_of = ROOT }
+			786 = { add_core_of = ROOT }
+			557 = { add_core_of = ROOT }
+			
+		}
+
+		ai_will_do = {
+			base = 200
+		}
+	}
+    # East Sudan
+	integrate_bilad_as_sudan = {
+
+		icon = GFX_decision_generic_nationalism
+
+		fire_only_once = yes
+
+		on_map_mode = decision_view_only
+
+		highlight_states = { 
+			highlight_state_targets = {
+				state = 551
+				state = 767
+                state = 883
+                state = 886
+                state = 884
+                state = 550
+			}
+		}
+
+		allowed = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		visible = { 
+			has_global_flag = form_arabia_flag
+			has_country_flag = is_arabia_flag
+		}
+
+		available = {
+			controls_state = 551
+			controls_state = 767
+			controls_state = 883
+			controls_state = 886
+            controls_state = 884
+            controls_state = 550
+		}
+
+		complete_effect = {
+			
+			551 = { add_core_of = ROOT }
+			767 = { add_core_of = ROOT }
+			883 = { add_core_of = ROOT }
+			886 = { add_core_of = ROOT }
+            884 = { add_core_of = ROOT }
+            550 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 200
+		}
+	}
+    # ETHIOPIA
+	integrate_bilad_al_habasha = {
+
+		icon = GFX_decision_generic_nationalism
+
+		fire_only_once = yes
+
+		on_map_mode = decision_view_only
+
+		highlight_states = { 
+			highlight_state_targets = {
+				state = 842
+				state = 841
+                state = 843
+                state = 840
+                state = 839
+                state = 271
+                state = 838
+                state = 837
+                state = 836
+                state = 835
+                state = 908
+                state = 268
+                state = 269
+                state = 559
+                state = 844
+                state = 904
+                state = 547
+                state = 905
+                state = 903
+			}
+		}
+
+		allowed = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		visible = { 
+			has_global_flag = form_arabia_flag
+			has_country_flag = is_arabia_flag
+		}
+
+		available = {
+			controls_state = 842
+            controls_state = 841
+            controls_state = 843
+            controls_state = 840
+            controls_state = 839
+            controls_state = 271
+            controls_state = 838
+            controls_state = 837
+            controls_state = 836
+            controls_state = 835
+            controls_state = 908
+            controls_state = 268
+            controls_state = 269
+            controls_state = 559
+            controls_state = 844
+            controls_state = 904
+            controls_state = 547
+            controls_state = 905
+            controls_state = 903
+
+		}
+
+		complete_effect = {
+			
+			842 = { add_core_of = ROOT }
+            841 = { add_core_of = ROOT }
+            843 = { add_core_of = ROOT }
+            840 = { add_core_of = ROOT }
+            839 = { add_core_of = ROOT }
+            271 = { add_core_of = ROOT }
+            838 = { add_core_of = ROOT }
+            837 = { add_core_of = ROOT }
+            836 = { add_core_of = ROOT }
+            835 = { add_core_of = ROOT }
+            908 = { add_core_of = ROOT }
+            268 = { add_core_of = ROOT }
+            269 = { add_core_of = ROOT }
+            559 = { add_core_of = ROOT }
+            844 = { add_core_of = ROOT }
+            904 = { add_core_of = ROOT }
+            547 = { add_core_of = ROOT }
+            905 = { add_core_of = ROOT }
+            903 = { add_core_of = ROOT }
+
+		}
+
+		ai_will_do = {
+			base = 200
+		}
+	}
+	integrate_bilad_al_sahra = {
+		icon = GFX_decision_generic_nationalism
+
+		fire_only_once = yes
+
+		on_map_mode = decision_view_only
+
+		highlight_states = { 
+			highlight_state_targets = {
+				state = 786
+				state = 782
+				state = 515
+				state = 775
+			}
+		}
+		visible = {
+			has_global_flag = form_arabia_flag
+			has_country_flag = is_arabia_flag
+		}
+		available = {
+			controls_state = 786
+			controls_state = 782
+			controls_state = 515
+			controls_state = 775
+		}
+		complete_effect = {
+			786 = { add_core_of = ROOT }
+			782 = { add_core_of = ROOT }
+			515 = { add_core_of = ROOT }
+			775 = { add_core_of = ROOT }
+		}
+
+	}
 }
 
 
@@ -10641,672 +11326,6 @@ form_byzantine_empire_category = {
 				is_historical_focus_on = yes
 			}
 		}
-	}
-}
-
-form_arabia_category = {
-
-	form_arabia = {
-
-		icon = generic_form_nation
-
-		on_map_mode = decision_view_only
-
-		allowed = {
-			has_dlc = "Waking the Tiger"
-		}
-
-		visible = {
-			OR = {
-				# Iraq
-				original_tag = IRQ
-				# Saudi Arabia
-				original_tag = SAU
-				# Yemen
-				original_tag = YEM
-				# Oman
-				original_tag = OMA
-				# Egypt
-				original_tag = EGY
-				# Libya
-				original_tag = LBA
-				# Jordan
-				original_tag = JOR
-				# Palestine
-				original_tag = PAL
-				# Lebanon
-				original_tag = LEB
-				# Syria
-				original_tag = SYR
-				# Kuwait
-				original_tag = KUW
-				# United Arab Emirates
-				original_tag = UAE
-				# Qatar
-				original_tag = QAT
-				# Tunisia
-				original_tag = TUN
-				# Algeria
-				original_tag = ALG
-				# Morocco
-				original_tag = MOR
-				# Sahrawi Arab Republic
-				original_tag = WES
-				# Mauretania
-				original_tag = MRT
-				# Sudan
-				original_tag = SUD
-				# Bahrain
-				original_tag = BHR
-				# South Arabia
-				original_tag = FSA
-				# Imamate of Oman
-				original_tag = IMO
-				# TEST SUBJECT
-			}
-			NOT = { has_global_flag = form_arabia_flag }
-            OR = {
-                NOT = { original_tag = IRQ }
-                has_completed_focus = IRQ_open_form_arabia
-            }
-			OR = {
-				NOT = { original_tag = SAU }
-				is_subject = no
-			}
-		}
-
-		highlight_states = { 
-			highlight_state_targets = {
-				state = 293 
-				state = 992 
-				state = 659 
-				state = 906 
-				state = 1016
-				state = 292
-				state = 679
-				state = 678
-				state = 857
-				state = 858
-				state = 854
-				state = 855
-				state = 856
-				state = 859
-				state = 293
-			}
-		}
-
-		available = {
-			
-			# Saudi Arabia + Yemen
-			controls_state = 292
-			controls_state = 679
-			controls_state = 678
-			controls_state = 857
-			controls_state = 858
-			controls_state = 854
-			controls_state = 855
-			controls_state = 856
-			controls_state = 859
-			controls_state = 293
-
-			# Omani States
-			controls_state = 1016 # Dhofar
-		}
-
-		complete_effect = {
-
-			set_cosmetic_tag = ARA_UNIFIED
-			
-			# Saudi Arabia
-			custom_effect_tooltip = form_country_saudi_coring_states_tt
-			hidden_effect = {
-				292 = { add_core_of = ROOT }
-				679 = { add_core_of = ROOT }
-				678 = { add_core_of = ROOT }
-				857 = { add_core_of = ROOT }
-				858 = { add_core_of = ROOT }
-				854 = { add_core_of = ROOT }
-				855 = { add_core_of = ROOT }
-				856 = { add_core_of = ROOT }
-				859 = { add_core_of = ROOT }
-			}
-
-			293 = { add_core_of = ROOT } # Yemen
-			992 = { add_core_of = ROOT } # Aden Province
-			659 = { add_core_of = ROOT } # South Yemen
-			906 = { add_core_of = ROOT } # Socotra	
-            1016 = { add_core_of = ROOT } # Dhofar	
-
-			hidden_effect = {
-				news_event = { id = wtt_news.67 hours = 6 }
-				set_global_flag = form_arabia_flag
-				set_country_flag = is_arabia_flag
-			}
-
-		}
-
-		ai_will_do = {
-			base = 200
-		}
-
-	}
-
-	# Iraq + Kuwait
-	integrate_the_fertile_crescent = {
-
-		icon = GFX_decision_generic_nationalism
-
-		fire_only_once = yes
-
-		on_map_mode = decision_view_only
-
-		highlight_states = { 
-			highlight_state_targets = {
-				state = 676 
-				state = 675 
-				state = 291 
-				state = 1011
-				state = 1010
-				state = 656
-			}
-		}
-
-		allowed = {
-			has_dlc = "Waking the Tiger"
-		}
-
-		visible = { 
-			has_global_flag = form_arabia_flag
-			has_country_flag = is_arabia_flag
-		}
-
-		available = {
-			controls_state = 656 
-			controls_state = 675 
-			controls_state = 291 
-			controls_state = 1011
-			controls_state = 1010
-		}
-
-		complete_effect = {
-			676 = { add_core_of = ROOT }
-			675 = { add_core_of = ROOT }
-			291 = { add_core_of = ROOT }
-			656 = { add_core_of = ROOT }
-			1011 = { add_core_of = ROOT }
-			1010 = { add_core_of = ROOT }
-		}
-
-		ai_will_do = {
-			base = 200
-		}
-	}
-
-	# Syria + Lebanon + Jordan + Palestine
-	integrate_the_levantine_states = {
-
-		icon = GFX_decision_generic_nationalism
-
-		fire_only_once = yes
-
-		on_map_mode = decision_view_only
-
-		highlight_states = { 
-			highlight_state_targets = {
-				state = 680
-				state = 554
-				state = 455
-				state = 454
-			}
-		}
-
-		allowed = {
-			has_dlc = "Waking the Tiger"
-		}
-
-		visible = { 
-			has_global_flag = form_arabia_flag
-			has_country_flag = is_arabia_flag
-		}
-
-		available = {
-			controls_state = 680
-			controls_state = 554
-			controls_state = 455
-			controls_state = 454
-		}
-
-		complete_effect = {
-			
-			680 = { add_core_of = ROOT } # Deir az zur
-			554 = { add_core_of = ROOT } # Damascus
-
-			455 = { add_core_of = ROOT } # Jordan
-			454 = { add_core_of = ROOT } # Palestine
-			
-		}
-
-		ai_will_do = {
-			base = 200
-		}
-	}
-
-	# Egypt
-	integrate_the_western_mashriq = {
-
-		icon = GFX_decision_generic_nationalism
-
-		fire_only_once = yes
-
-		on_map_mode = decision_view_only
-
-		highlight_states = { 
-			highlight_state_targets = {
-				state = 907
-				state = 552
-				state = 452
-				state = 447
-				state = 446
-				state = 456
-				state = 457
-				state = 453
-			}
-		}
-
-		allowed = {
-			has_dlc = "Waking the Tiger"
-		}
-
-		visible = { 
-			has_global_flag = form_arabia_flag
-			has_country_flag = is_arabia_flag
-		}
-
-		available = {
-			
-			controls_state = 907
-			controls_state = 452
-			controls_state = 447
-			controls_state = 446
-			controls_state = 456
-			controls_state = 457
-			controls_state = 453
-
-		}
-
-		complete_effect = {
-			
-			907 = { add_core_of = ROOT } # Cairo
-			552 = { add_core_of = ROOT } # Western Desert
-			452 = { add_core_of = ROOT } # Matrouh
-			447 = { add_core_of = ROOT } # Alexandria
-			446 = { add_core_of = ROOT } # Suez
-			456 = { add_core_of = ROOT } # Aswan
-			457 = { add_core_of = ROOT } # Eastern Desert
-			453 = { add_core_of = ROOT } # Sinai
-		}
-
-		ai_will_do = {
-			base = 200
-		}
-	}
-
-	# Libya + Tunisia
-	integrate_the_eastern_maghreb = {
-
-		icon = GFX_decision_generic_nationalism
-
-		fire_only_once = yes
-
-		on_map_mode = decision_view_only
-
-		highlight_states = { 
-			highlight_state_targets = {
-				state = 448
-				state = 661
-				state = 449
-				state = 662
-				state = 450
-				state = 451
-				state = 663
-				state = 273
-				state = 458
-				state = 665
-			}
-		}
-
-		allowed = {
-			has_dlc = "Waking the Tiger"
-		}
-
-		visible = { 
-			has_global_flag = form_arabia_flag
-			has_country_flag = is_arabia_flag
-		}
-
-		available = {
-			
-			controls_state = 448
-			controls_state = 661
-			controls_state = 449
-			controls_state = 662
-			controls_state = 450
-			controls_state = 451
-			controls_state = 663
-			controls_state = 458
-			controls_state = 665
-
-		}
-
-		complete_effect = {
-
-			# Tunisia
-			458 = { add_core_of = ROOT }
-			665 = { add_core_of = ROOT }
-			
-			# Libya
-			448 = { add_core_of = ROOT }
-			661 = { add_core_of = ROOT }
-			449 = { add_core_of = ROOT }
-			662 = { add_core_of = ROOT }
-			450 = { add_core_of = ROOT }
-			451 = { add_core_of = ROOT }
-			663 = { add_core_of = ROOT }
-			273 = { add_core_of = ROOT }
-			
-		}
-
-		ai_will_do = {
-			base = 200
-		}
-	}
-
-	# Algeria + Morocco
-	integrate_the_al_maghribiyah_and_al_jazair = {
-
-		icon = GFX_decision_generic_nationalism
-
-		fire_only_once = yes
-
-		on_map_mode = decision_view_only
-
-		highlight_states = { 
-			highlight_state_targets = {
-				state = 290
-				state = 783
-				state = 460
-				state = 513
-				state = 459
-				state = 461
-				state = 462
-				state = 514
-			}
-		}
-
-		allowed = {
-			has_dlc = "Waking the Tiger"
-		}
-
-		visible = { 
-			has_global_flag = form_arabia_flag
-			has_country_flag = is_arabia_flag
-		}
-
-		available = {
-			
-			controls_state = 290
-			controls_state = 783
-			controls_state = 460
-			controls_state = 513
-			controls_state = 459
-			controls_state = 461
-			controls_state = 462
-
-		}
-
-		complete_effect = {
-			
-			# Spanish Africa
-			290 = { add_core_of = ROOT }
-			783 = { add_core_of = ROOT }
-
-			# French Africa
-			460 = { add_core_of = ROOT }
-			513 = { add_core_of = ROOT }
-			459 = { add_core_of = ROOT }
-			461 = { add_core_of = ROOT }
-			462 = { add_core_of = ROOT }
-			514 = { add_core_of = ROOT }
-
-		}
-
-		ai_will_do = {
-			base = 200
-		}
-	}
-
-	# West Sahara + Mauretania
-	integrate_the_west_sahara = {
-
-		icon = GFX_decision_generic_nationalism
-
-		fire_only_once = yes
-
-		on_map_mode = decision_view_only
-
-		highlight_states = { 
-			highlight_state_targets = {
-				state = 699
-				state = 786
-				state = 557
-			}
-		}
-
-		allowed = {
-			has_dlc = "Waking the Tiger"
-		}
-
-		visible = { 
-			has_global_flag = form_arabia_flag
-			has_country_flag = is_arabia_flag
-		}
-
-		available = {
-			
-			controls_state = 699
-			controls_state = 557
-
-		}
-
-		complete_effect = {
-			
-			699 = { add_core_of = ROOT }
-			786 = { add_core_of = ROOT }
-			557 = { add_core_of = ROOT }
-			
-		}
-
-		ai_will_do = {
-			base = 200
-		}
-	}
-    # East Sudan
-	integrate_bilad_as_sudan = {
-
-		icon = GFX_decision_generic_nationalism
-
-		fire_only_once = yes
-
-		on_map_mode = decision_view_only
-
-		highlight_states = { 
-			highlight_state_targets = {
-				state = 551
-				state = 767
-                state = 883
-                state = 886
-                state = 884
-                state = 550
-			}
-		}
-
-		allowed = {
-			has_dlc = "Waking the Tiger"
-		}
-
-		visible = { 
-			has_global_flag = form_arabia_flag
-			has_country_flag = is_arabia_flag
-		}
-
-		available = {
-			controls_state = 551
-			controls_state = 767
-			controls_state = 883
-			controls_state = 886
-            controls_state = 884
-            controls_state = 550
-		}
-
-		complete_effect = {
-			
-			551 = { add_core_of = ROOT }
-			767 = { add_core_of = ROOT }
-			883 = { add_core_of = ROOT }
-			886 = { add_core_of = ROOT }
-            884 = { add_core_of = ROOT }
-            550 = { add_core_of = ROOT }
-		}
-
-		ai_will_do = {
-			base = 200
-		}
-	}
-    # ETHIOPIA
-	integrate_bilad_al_habasha = {
-
-		icon = GFX_decision_generic_nationalism
-
-		fire_only_once = yes
-
-		on_map_mode = decision_view_only
-
-		highlight_states = { 
-			highlight_state_targets = {
-				state = 842
-				state = 841
-                state = 843
-                state = 840
-                state = 839
-                state = 271
-                state = 838
-                state = 837
-                state = 836
-                state = 835
-                state = 908
-                state = 268
-                state = 269
-                state = 559
-                state = 844
-                state = 904
-                state = 547
-                state = 905
-                state = 903
-			}
-		}
-
-		allowed = {
-			has_dlc = "Waking the Tiger"
-		}
-
-		visible = { 
-			has_global_flag = form_arabia_flag
-			has_country_flag = is_arabia_flag
-		}
-
-		available = {
-			controls_state = 842
-            controls_state = 841
-            controls_state = 843
-            controls_state = 840
-            controls_state = 839
-            controls_state = 271
-            controls_state = 838
-            controls_state = 837
-            controls_state = 836
-            controls_state = 835
-            controls_state = 908
-            controls_state = 268
-            controls_state = 269
-            controls_state = 559
-            controls_state = 844
-            controls_state = 904
-            controls_state = 547
-            controls_state = 905
-            controls_state = 903
-
-		}
-
-		complete_effect = {
-			
-			842 = { add_core_of = ROOT }
-            841 = { add_core_of = ROOT }
-            843 = { add_core_of = ROOT }
-            840 = { add_core_of = ROOT }
-            839 = { add_core_of = ROOT }
-            271 = { add_core_of = ROOT }
-            838 = { add_core_of = ROOT }
-            837 = { add_core_of = ROOT }
-            836 = { add_core_of = ROOT }
-            835 = { add_core_of = ROOT }
-            908 = { add_core_of = ROOT }
-            268 = { add_core_of = ROOT }
-            269 = { add_core_of = ROOT }
-            559 = { add_core_of = ROOT }
-            844 = { add_core_of = ROOT }
-            904 = { add_core_of = ROOT }
-            547 = { add_core_of = ROOT }
-            905 = { add_core_of = ROOT }
-            903 = { add_core_of = ROOT }
-
-		}
-
-		ai_will_do = {
-			base = 200
-		}
-	}
-	integrate_bilad_al_sahra = {
-		icon = GFX_decision_generic_nationalism
-
-		fire_only_once = yes
-
-		on_map_mode = decision_view_only
-
-		highlight_states = { 
-			highlight_state_targets = {
-				state = 786
-				state = 782
-				state = 515
-				state = 775
-			}
-		}
-		visible = {
-			has_global_flag = form_arabia_flag
-			has_country_flag = is_arabia_flag
-		}
-		available = {
-			controls_state = 786
-			controls_state = 782
-			controls_state = 515
-			controls_state = 775
-		}
-		complete_effect = {
-			786 = { add_core_of = ROOT }
-			782 = { add_core_of = ROOT }
-			515 = { add_core_of = ROOT }
-			775 = { add_core_of = ROOT }
-		}
-
 	}
 }
 
