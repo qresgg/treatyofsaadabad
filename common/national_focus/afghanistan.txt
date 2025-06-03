@@ -2863,17 +2863,14 @@ focus_tree = {
 		y = 4
 		x = 0
 		cost = 1
-		bypass = {
-			has_idea = tos_secret_baghdad_pact
-		}
 		available = {
 			has_idea = tos_secret_baghdad_pact
 		}
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
-		allow_branch = {
-			has_idea = tos_secret_baghdad_pact
+		completion_reward = {
+			custom_effect_tooltip = SAAD_members_receive_tt
+			custom_effect_tooltip = tos_secret_baghdad_pact_tt
 		}
-		#### baghdad pact
 	}
 	focus = {
 		id = AFG_border_lands

@@ -183,6 +183,7 @@
   PER_international_legion_desc:0 "Volunteers from across the world will join the Iranian cause in a unified fighting force."
   PER_lowkey_expansionism:0 "Low-Key Expansionism"
   PER_lowkey_expansionism_desc:0 "Through subtle influence and soft power, we will quietly extend Iran's borders."
+  PER_our_faith_is_similar_to_yours:0 "Our Faith is similar to Yours"
 
   #####################
   #####  TURKEY  ######
@@ -776,9 +777,6 @@
   TUR_piermont_occitania_desc: "To secure our western front, we must extend our reach into southern France and northern Italy."
   TUR_warfare_complex: "Advanced Warfare Complex"
   TUR_warfare_complex_desc: "To effectively modernize our armed forces, we must invest in an integrated warfare complex that enables joint force planning, innovation, and rapid mobilization. This facility will serve as the heart of our future military doctrine."
-  TUR_modify_turkish_land_army_ns_intro: "Modify §Y$TUR_land_forces_modifier$§! by"
-  TUR_modify_turkish_navy_army_ns_intro: "Modify §Y$TUR_navy_forces_modifier$§! by"
-  TUR_modify_turkish_air_army_ns_intro: "Modify §Y$TUR_air_forces_modifier$§! by"
   TUR_global_resource_expansion: "Global Resource Expansion"
   TUR_global_resource_expansion_desc: "To fuel our growing ambitions, we must expand our access to global resources through strategic planning and integration."
   TUR_crimean_resourse_reintegration: "Crimean Resource Reintegration"
@@ -938,16 +936,6 @@
   tos_TUR_alliance_with_bulgaria:0 "Alliance with Bulgaria"
   tos_TUR_alliance_with_romania:0 "Alliance with Romania"
   tos_TUR_alliance_with_yugoslavia:0 "Alliance with Yugoslavia"
-  turkey.123.t:0 "Alliance with Turkey?"
-  turkey.123.d:0 "The Turkish Foreign Minister has approached us with an offer of alliance between our nations, as part of their initiative moving towards pan-balkan cooperation. What should our responce be?"
-  turkey.123.a:0 "Of course. Further ties would be for the best"
-  turkey.123.b:0 "No, the Turks are not to be trusted."
-  turkey.124.t:0 "The [FROM.GetAdjective]'s Have Accepted"
-  turkey.124.d:0 "The [FROM.GetAdjective] Foreign Minister has issued an official responce, stating their pleasing acceptance of an alliance."
-  turkey.124.a:0 "We stand together."
-  turkey.125.t:0 "The [FROM.GetAdjective]'s Have Declined"
-  turkey.125.d:0 "The [FROM.GetAdjective] Foreign Minister has issued an official responce, stating their rejection to the idea of an alliance at this time."
-  turkey.125.a:0 "Disappointing."
   #####################
   ###  AFGHANISTAN  ###
   #####################
@@ -1104,7 +1092,8 @@
   TUR_neobyz_make_kingdoms_of_occitania_and_piedmont_tt:0 "Unlocks decision to form §YOccitanian§! and §YPiedmont§! kingdoms "
   TUR_neobyz_make_kingdom_visighotic_tt:0 "Unlocks decision to form right §YVisighotics§!"
   TUR_neobyz_make_kingdom_suebi_tt:0 "Unlocks decision to form §YSuebi Kingdom§! as our §YDux§!"
-  TUR_unlock_decisions_to_become_christianity_state_tt:0 "Unlocks decisions to §Yaccept Christianity§!"
+  TUR_christianity:0 "£faction_tur_christianity Accept Christianity"
+  TUR_unlock_decisions_to_become_christianity_state_tt:0 "Unlocks:§Y$TUR_christianity$§! decisions."
   TUR_make_hard_decision_tt:0 "Unlocks decision to make a §Yhard decision§! about the future of §Ythe country§!"
   TUR_assasination_of_mustafa_kemal_tt:0 "Unlocks decision to assassinate §YMustafa Kemal Atatürk§!. This will lead to a civil war. Or no?"
   TUR_silent_assassinate:0 "Silent Elimination"

@@ -1627,11 +1627,6 @@ IRQ_kurdistan_tag = {
 	color_ui = rgb { 153 122 0 }	
 }
 
-neo_mesopotamia = {
-	color = rgb { 222 102 42 }
-	color_ui = rgb { 222 102 42 }
-}
-
 greater_kurdistan = {
 	color = rgb { 230 184 0 }
 	color_ui = rgb { 153 122 0 }	
@@ -1659,13 +1654,26 @@ PER_second_sasanian_empire = {
 	color_ui = rgb { 75 91 95 }
 }
 
+neo_mesopotamia = {
+	color = rgb { 222 102 42 }
+	color_ui = rgb { 222 102 42 }
+}
+
 IRQ_middle_east_reichprotectorate = {
 	color = rgb { 115 115 115 }
 	color_ui = rgb { 122 145 93 }
 }
 
-BYZ_byzantium = {
+BYZ_byzantium_UNIFIED_tos = {
+	color = rgb { 143 12 125 }
+	color_ui = rgb { 143 12 125 }
+}
+BYZ_empire_UNIFIED_tos = {
 	color = rgb { 143 12 125 }
 	color_ui = rgb { 143 12 125 }
 }
 
+AFG_kushan_empire = {
+	color = rgb { 0 102 0 }
+	color_ui = rgb { 0 102 0 }
+}

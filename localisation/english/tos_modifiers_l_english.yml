@@ -18,3 +18,11 @@
 
  #### DYNAMIC MODIFIERS STATES:
 AFG_islamists_in_state_modifier:0 "Islamists in State"
+tos_christianities:0 "Christianities"
+
+
+### dynamic modifiers intros
+TUR_modify_turkish_land_army_ns_intro: "Modify §Y$TUR_land_forces_modifier$§! by"
+TUR_modify_turkish_navy_army_ns_intro: "Modify §Y$TUR_navy_forces_modifier$§! by"
+TUR_modify_turkish_air_army_ns_intro: "Modify §Y$TUR_air_forces_modifier$§! by"
+TUR_modify_industrial_miracle_ns_intro: "Modify §Y$TUR_industrial_miracle_modifier$§! by"

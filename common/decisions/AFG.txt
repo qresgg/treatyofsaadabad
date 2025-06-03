@@ -5,7 +5,7 @@ AFG_islam_revolution_category = {
 		allowed = {
 			original_tag = AFG
 		}
-		days_remove = 1 # 25
+		days_remove = 25 # 1 for test
 		cost = 35
 		state_target = yes
 		targets = { 440 441 443 444 1012 445 989 787}
@@ -145,6 +145,18 @@ AFG_islam_revolution_category = {
 							division = "name = \"2nd PAKAS Army\" division_template = \"PAKAS\" start_experience_factor = 1.0 start_equipment_factor = 1"
 							owner = PAK
 						}
+						create_unit = {
+							division = "name = \"2nd PAKAS Army\" division_template = \"PAKAS\" start_experience_factor = 1.0 start_equipment_factor = 1"
+							owner = PAK
+						}
+						create_unit = {
+							division = "name = \"2nd PAKAS Army\" division_template = \"PAKAS\" start_experience_factor = 1.0 start_equipment_factor = 1"
+							owner = PAK
+						}
+						create_unit = {
+							division = "name = \"2nd PAKAS Army\" division_template = \"PAKAS\" start_experience_factor = 1.0 start_equipment_factor = 1"
+							owner = PAK
+						}
 					}
 				}
 			}
@@ -156,7 +168,6 @@ AFG_islam_revolution_category = {
 		icon = GFX_decision_generic_civil_support
 		days_mission_timeout = 120
 
-		# Доступно тільки Афганістану
 		allowed = {
 			original_tag = AFG
 		}

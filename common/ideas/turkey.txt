@@ -425,7 +425,122 @@ ideas = {
 			}
 		}
 	}
+	country = {
+		TUR_christianity_1 = {
+			picture = TUR_christianity_state_idea
 
+			available = {
+				ROOT = {
+					NOT = {
+						has_war_with = ITA
+					}
+				}
+			}
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.02
+			}
+		}
+		TUR_christianity_2 = {
+			picture = TUR_christianity_state_idea
+
+			available = {
+				ROOT = {
+					NOT = {
+						has_war_with = ITA
+					}
+				}
+			}
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.04
+			}
+		}
+		TUR_christianity_3 = {
+			picture = TUR_christianity_state_idea
+
+			available = {
+				ROOT = {
+					NOT = {
+						has_war_with = ITA
+					}
+				}
+			}
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.06
+			}
+		}
+		TUR_christianity_4 = {
+			picture = TUR_christianity_state_idea
+
+			available = {
+				ROOT = {
+					NOT = {
+						has_war_with = ITA
+					}
+				}
+			}
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.08
+			}
+		}
+		TUR_christianity_5 = {
+			picture = TUR_christianity_state_idea
+
+			available = {
+				ROOT = {
+					NOT = {
+						has_war_with = ITA
+					}
+				}
+			}
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.10
+			}
+		}
+		TUR_christianity_6 = {
+			picture = TUR_christianity_state_idea
+
+			available = {
+				ROOT = {
+					NOT = {
+						has_war_with = ITA
+					}
+				}
+			}
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.12
+				political_power_factor = 0.10
+			}
+		}
+		TUR_christianity_7 = {
+			picture = TUR_christianity_state_idea
+
+			available = {
+				ROOT = {
+					NOT = {
+						has_war_with = ITA
+					}
+				}
+			}
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.15
+				political_power_factor = 0.10
+			}
+		}
+	}
 	### DEFAULT
 	economy = {
 		law = yes

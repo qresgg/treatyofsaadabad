@@ -75,6 +75,32 @@ TUR_air_forces_modifier = {
     air_untrained_pilots_penalty_factor = TUR_air_air_spirit_category_type_cost_factor # 0.12
 }
 
+tos_christianities = {
+    enable = { always = yes }
+
+	icon = GFX_modifiers_tur_christianities
+	
+	recruitable_population_factor = 0.15
+	state_production_speed_buildings_factor = 0.1
+    state_resources_factor = 0.1
+}
+
+TUR_industrial_miracle_modifier = { 
+	enable = { always = yes }
+	icon = GFX_idea_generic_improved_industries
+	consumer_goods_factor = TUR_industrial_consumer_goods_factor
+	production_speed_arms_factory_factor = TUR_industrial_production_speed_arms_factory_factor
+	industrial_capacity_factory = TUR_industrial_industrial_capacity_factory
+	research_speed_factor = TUR_industrial_research_speed_factor
+	industrial_concern_cost_factor = TUR_industrial_industrial_concern_cost_factor
+	military_industrial_organization_funds_gain = TUR_industrial_capacity_military_industrial_organization_funds_gain
+	military_industrial_organization_research_bonus = TUR_industrial_capacity_military_industrial_organization_research_bonus
+	production_factory_max_efficiency_factor = TUR_industrial_production_factory_max_efficiency_factor
+	production_factory_efficiency_gain_factor = TUR_industrial_production_factory_efficiency_gain_factor
+	production_factory_start_efficiency_factor = TUR_industrial_production_factory_start_efficiency_factor
+	line_change_production_efficiency_factor = TUR_industrial_line_change_production_efficiency_factor
+}
+
 
 #### AFG ####
 AFG_islamists_in_state_modifier = {

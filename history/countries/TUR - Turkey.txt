@@ -614,6 +614,7 @@ if = {
 		modifier = TUR_navy_forces_modifier
 	}
 
+	# variables for Turkish Air 
 	set_variable = { TUR_air_accidents_factor = 0.10 }
 	set_variable = { TUR_air_manpower_requirement_factor = 0.10 }
 	set_variable = { TUR_air_agility_factor = -0.1 }
@@ -630,6 +631,23 @@ if = {
 
 	add_dynamic_modifier = {
 		modifier = TUR_air_forces_modifier
+	}
+
+	# variables for Industrial
+	set_variable = { TUR_industrial_consumer_goods_factor = 0.15 }
+	set_variable = { TUR_industrial_production_speed_arms_factory_factor = -0.1}
+	set_variable = { TUR_industrial_industrial_capacity_factory = 0}
+	set_variable = { TUR_industrial_research_speed_factor = 0}
+	set_variable = { TUR_industrial_industrial_concern_cost_factor = 0.05}
+	set_variable = { TUR_industrial_capacity_military_industrial_organization_funds_gain = 0}
+	set_variable = { TUR_industrial_capacity_military_industrial_organization_research_bonus = 0}
+	set_variable = { TUR_industrial_production_factory_max_efficiency_factor = 0}
+	set_variable = { TUR_industrial_production_factory_efficiency_gain_factor = 0}
+	set_variable = { TUR_industrial_production_factory_start_efficiency_factor = 0}
+	set_variable = { TUR_industrial_line_change_production_efficiency_factor = 0}
+
+	add_dynamic_modifier = {
+		modifier = TUR_industrial_miracle_modifier
 	}
 }
 

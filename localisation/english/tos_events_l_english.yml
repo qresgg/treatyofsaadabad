@@ -1030,7 +1030,16 @@ TUR_crimea.3.a: "The land is now ours"
 TUR_crimea.4.t: "Crimea Rejected Turkey’s Ultimatum"
 TUR_crimea.4.d: "The Soviet Union's outright refusal of Turkey’s ultimatum has left war inevitable. The drums of conflict sound loud across Crimea as both sides prepare for battle to decide the region’s future."
 TUR_crimea.4.a: "Then we shall fight for Crimea"
-
+turkey.123.t:0 "Alliance with Turkey?"
+turkey.123.d:0 "The Turkish Foreign Minister has approached us with an offer of alliance between our nations, as part of their initiative moving towards pan-balkan cooperation. What should our responce be?"
+turkey.123.a:0 "Of course. Further ties would be for the best"
+turkey.123.b:0 "No, the Turks are not to be trusted."
+turkey.124.t:0 "The [FROM.GetAdjective]'s Have Accepted"
+turkey.124.d:0 "The [FROM.GetAdjective] Foreign Minister has issued an official responce, stating their pleasing acceptance of an alliance."
+turkey.124.a:0 "We stand together."
+turkey.125.t:0 "The [FROM.GetAdjective]'s Have Declined"
+turkey.125.d:0 "The [FROM.GetAdjective] Foreign Minister has issued an official responce, stating their rejection to the idea of an alliance at this time."
+turkey.125.a:0 "Disappointing."
 
 
 

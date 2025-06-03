@@ -7336,7 +7336,7 @@ focus_tree = {
 			custom_effect_tooltip = SAAD_members_receive_tt
 			IRQ = { country_event = SAAD_baghdad_pact_signed.1 }
 
-			custom_effect_tooltip = IRQ_saadabad_spheres_of_influence_tt
+			custom_effect_tooltip = tos_secret_baghdad_pact_tt
 		}
 	}
 

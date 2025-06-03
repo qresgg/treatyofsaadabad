@@ -57,6 +57,10 @@ spriteTypes = {
 		name = "GFX_tos_idea_TUR_air_forces_idea"
 		texturefile = "gfx/interface/ideas/tos_idea_TUR_air_forces_idea.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_TUR_christianity_state_idea"
+		texturefile = "gfx/interface/ideas/tos_idea_TUR_christianity_state_idea.dds"
+	}
 
 	# IIIIII  RRRR    QQQQ
 	#   II    R   R  Q    Q

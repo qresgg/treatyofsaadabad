@@ -124,6 +124,13 @@ form_kashuan_empire: "Form the Kushan Empire"
 form_kashuan_empire_desc: "Unite the various Central Asian and Indian territories under the banner of the Kushan Empire, reviving its ancient glory and power."
 form_kushan_empire_category_desc: "The Kushan Empire was a beacon of trade, faith, and culture — a crossroads of Buddhism, Zoroastrianism, and Greco-Indian traditions. Unite these lands once more and usher in a new golden age."
 form_country_afghan_indian_border_required_states_tt: "Controls all §YIndian states§! on Afghan-Indian borderline"
+integrate_bilad_aljibal: "Integrate Bilad Aijabal"
+integrate_pakistan: "Integrate Ganghara"
+integrate_khalistan: "Integrate Khalistan"
+integrate_central_india: "Integrate Central Indian States"
+integrate_bengalis: "Integrate Bengalis"
+integrate_south_indians: "Integrate South Indian States"
+expand_south_indians: "Expand territories to South"
 
 #####################
 ###   SASANIAN    ###
@@ -261,6 +268,7 @@ integrate_shark_turkistani:0 "Integrate Shark Turkestan"
 integrate_shark_turkistani_desc:0 "We will bring Shark Turkestan into the fold, strengthening our strategic position in Central Asia."
 integrate_makran:0 "Integrate Makran"
 integrate_makran_desc:0 "The eastern territories near Makran hold economic and strategic value. They must be integrated into our domain."
+PER_integrate_all_soviet_tt: "Unlocks §Ydecisions§! which allows to integrate all core states of §Y[SOV.GetNameWithFlag]§! "
 
 
 #####################
@@ -274,6 +282,9 @@ TUR_nationalize_road_to_lebanon_desc: "By extending our presence and support acr
 TUR_nationalize_crimea: "Claim Crimea"
 TUR_nationalize_crimea_desc: "Crimea’s geopolitical importance and historic connection to our empire make it a natural target for reintegration. We shall lay the groundwork for reclaiming it."
 tos_TUR_press_the_hatay_issue: "Demand Hatai"
+TUR_accept_christianity_cat: "Accept Christianity"
+TUR_accept_christianity_in_big_city: "Christianize [FROM.GetName]"
+TUR_accepting_christianity_in_big_city_flag: "Not involved in Christianization at this time"
 
 #####################
 #### AFGHANISTAN ####

@@ -14,4 +14,9 @@ spriteTypes = {
         texturefile = "gfx/texticons/support_equipment_text_icon.dds"
 		legacy_lazy_load = no
     }
+    spriteType = {
+		name = "GFX_faction_tur_christianity"
+		texturefile = "gfx/texticons/faction_tur_christianity.dds"
+		legacy_lazy_load = no
+	}
 }

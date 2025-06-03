@@ -7632,21 +7632,16 @@ focus_tree = {
 		y = 1
 		relative_position_id = PER_lowkey_expansionism
 
-		cost = 7
+		cost = 10
 
 		ai_will_do = {
 			base = 1
 		}
-		bypass = {
+		available = {
 			has_idea = tos_secret_baghdad_pact
 		}
 
-		# TREBA
-		# allow_branch = { 
-		# 	has_idea = IRQ_rally_the_arab_world_idea
-		# }
-
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_TREATYOFSAADABAD }
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -7655,7 +7650,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = SAAD_members_receive_tt
 			PER = { country_event = SAAD_baghdad_pact_signed.1 }
-			custom_effect_tooltip = IRQ_saadabad_spheres_of_influence_tt
+			custom_effect_tooltip = tos_secret_baghdad_pact_tt
 		}
 	}
 	focus = { #IMPERIAL
@@ -7674,7 +7669,10 @@ focus_tree = {
 		}
 
 		available = {
-			has_government = neutrality
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
 			NOT = {
 				has_completed_focus = PER_forced_secularization
 			}
@@ -7686,17 +7684,8 @@ focus_tree = {
 
 		completion_reward = {
 			swap_ideas = {
-			remove_idea = PER_islamic_traditions_ns
-  			add_idea = PER_old_ways_idea 
-			}
-			
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			custom_effect_tooltip = PER_clergy_revolt_tt
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			
-			country_event = {
-				id = PER_revolution_events.1
-				hours = 1
+				remove_idea = PER_islamic_traditions_ns
+				add_idea = PER_old_ways_idea 
 			}
 		}
 	}
@@ -8061,6 +8050,24 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = PER_open_new_decisions_to_form_sasanian_tt
+		}
+	}
+	focus = {
+		id = PER_our_faith_is_similar_to_yours
+		icon = GFX_focus_RAJ_provincial_autonomy
+		relative_position_id = PER_war_plan_horoborrow
+		prerequisite = { focus = PER_red_danger }
+		search_filters = {
+			FOCUS_FILTER_TREATYOFSAADABAD
+		}
+		x = 0
+		y = 3
+		cost = 10
+		available = {
+			has_completed_focus = PER_revive_old_ways
+		}
+		completion_reward = {
+			custom_effect_tooltip = PER_integrate_all_soviet_tt
 		}
 	}
 	focus = {

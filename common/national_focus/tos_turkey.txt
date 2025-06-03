@@ -1,4 +1,4 @@
-focus_tree = { ### ORIGINAL FILE NAME tos_TURKEY
+focus_tree = { 
 	id = turkish_focus_tos
 
 	country = {
@@ -91,6 +91,11 @@ shortcut = {
 				uses = 1
 				category = construction_tech
 			}
+			custom_effect_tooltip = TUR_modify_industrial_miracle_ns_intro
+			add_to_variable = {
+				TUR_industrial_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -104,7 +109,7 @@ shortcut = {
 		x = 0
 		y = 1
 		relative_position_id = TUR_continue_the_push_for_autarky
-		cost = 10
+		cost = 6
 		
 		available = {
 			has_tech = construction1
@@ -174,14 +179,13 @@ shortcut = {
 		x = -1
 		y = 1
 		relative_position_id = TUR_expand_the_aegean_economic_heartland
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
 		}
 		
 		available = {
-			has_tech = construction3
 			has_full_control_of_state = 340
 		}
 
@@ -193,6 +197,11 @@ shortcut = {
 					level = 2
 					instant_build = yes
 				}
+			}
+			custom_effect_tooltip = TUR_modify_industrial_miracle_ns_intro
+			add_to_variable = {
+				TUR_industrial_consumer_goods_factor = -0.10
+				tooltip = consumer_goods_factor_tt
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -207,14 +216,13 @@ shortcut = {
 		x = 1
 		y = 1
 		relative_position_id = TUR_expand_the_aegean_economic_heartland
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
 		}
 		
 		available = {
-			has_tech = construction3
 			has_full_control_of_state = 339
 		}
 
@@ -231,6 +239,11 @@ shortcut = {
 				idea = POR_improved_production
 				days = 120
 			}
+			custom_effect_tooltip = TUR_modify_industrial_miracle_ns_intro
+			add_to_variable = {
+				TUR_industrial_consumer_goods_factor = -0.10
+				tooltip = consumer_goods_factor_tt
+			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -246,15 +259,14 @@ shortcut = {
 		}
 		available = {
 			OR = {
-				num_of_factories > 99
-				has_tech = construction4	#1948 Tech
+				num_of_factories > 60
 			}
 				
 		}
 		x = 0
 		y = 2
 		relative_position_id = TUR_expand_the_aegean_economic_heartland
-		cost = 10
+		cost = 7
 
 		ai_will_do = {
 			factor = 10
@@ -262,6 +274,11 @@ shortcut = {
 
 		completion_reward = {
 			add_research_slot = 1
+			custom_effect_tooltip = TUR_modify_industrial_miracle_ns_intro
+			add_to_variable = {
+				TUR_industrial_research_speed_factor = 0.05
+				tooltip = research_speed_factor_tt
+			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -282,12 +299,12 @@ shortcut = {
 		}
 		
 		available = {
-			has_tech = construction1
 			has_full_control_of_state = 49
 		}
 
 		completion_reward = {
-			add_war_support = 0.03
+			add_war_support = 0.05
+			add_stability = 0.10
 			49 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -330,7 +347,6 @@ shortcut = {
 		}
 		
 		available = {
-			has_tech = construction1
 			has_full_control_of_state = 349
 			has_full_control_of_state = 353
 			has_full_control_of_state = 354
@@ -390,14 +406,14 @@ shortcut = {
 				add_compliance = 5
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
 			349 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -487,15 +503,37 @@ shortcut = {
 		}
 		
 		available = {
-			has_tech = construction2
+			798 = { is_controlled_by = ROOT }
+			346 = { is_controlled_by = ROOT }
+			49 = { is_controlled_by = ROOT }
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TUR_the_industrialization_of_central_anatolia
-				bonus = 1
-				uses = 2
-				category = industry
+			798 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			346 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			49 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			custom_effect_tooltip = TUR_modify_industrial_miracle_ns_intro
+			add_to_variable = {
+				TUR_industrial_industrial_concern_cost_factor = -0.10
+				tooltip = industrial_concern_cost_factor_tt
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -513,7 +551,7 @@ shortcut = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 10
+			factor = 5
 		}
 		
 		available = {
@@ -532,6 +570,11 @@ shortcut = {
 			add_offsite_building = {
 				type = industrial_complex
 				level = 2
+			}
+			custom_effect_tooltip = TUR_modify_industrial_miracle_ns_intro
+			add_to_variable = {
+				TUR_industrial_production_speed_arms_factory_factor = 0.10
+				tooltip = production_speed_arms_factory_factor_tt
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -553,7 +596,6 @@ shortcut = {
 		}
 		
 		available = {
-			has_tech = construction3
 			has_full_control_of_state = 355
 		}
 
@@ -570,6 +612,19 @@ shortcut = {
 				type = steel
 				amount = 5
 				state = 349
+			}
+			custom_effect_tooltip = TUR_modify_industrial_miracle_ns_intro
+			add_to_variable = {
+				TUR_industrial_production_factory_efficiency_gain_factor = 0.05
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+			add_to_variable = {
+				TUR_industrial_production_factory_max_efficiency_factor = 0.05
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+			add_to_variable = {
+				TUR_industrial_production_factory_start_efficiency_factor = 0.05
+				tooltip = production_factory_start_efficiency_factor_tt
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -591,7 +646,7 @@ shortcut = {
 		}
 		
 		available = {
-			has_tech = construction3
+			has_tech = construction2
 			has_full_control_of_state = 355
 		}
 
@@ -623,6 +678,11 @@ shortcut = {
 					instant_build = yes
 				}	
 			}
+			custom_effect_tooltip = TUR_modify_industrial_miracle_ns_intro
+			add_to_variable = {
+				TUR_industrial_production_speed_arms_factory_factor = 0.10
+				tooltip = production_speed_arms_factory_factor_tt
+			}
 		}
 	}
 	
@@ -635,7 +695,7 @@ shortcut = {
 		x = -2
 		y = 0
 		relative_position_id = TUR_the_industrialization_of_central_anatolia
-		cost = 5
+		cost = 7
 
 		available = {
 			has_full_control_of_state = 350
@@ -646,7 +706,7 @@ shortcut = {
 			add_tech_bonus = {
 				name = excavation_tech_bonus_name
 				bonus = 1
-				uses = 1
+				uses = 2
 				category = excavation_tech
 			}
 			custom_effect_tooltip = TUR_unlocks_drill_decisions_tt
@@ -654,7 +714,7 @@ shortcut = {
 	}
 	
 	focus = {
-		id = TUR_expand_the_ergani_copper_industry
+		id = TUR_cooperation_with_military_org
 		icon = GFX_focus_SOV_merge_plants
 		prerequisite = {
 			focus = TUR_exploit_the_sivas_iron_mines
@@ -665,25 +725,25 @@ shortcut = {
 		x = 1
 		y = 1
 		relative_position_id = TUR_exploit_the_sivas_iron_mines
-		cost = 5
+		cost = 6
 
 		ai_will_do = {
 			factor = 10
 		}
 		
 		available = {
-			has_tech = construction3
 			has_full_control_of_state = 350
 		}
 
 		completion_reward = {
-			350 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}	
+			custom_effect_tooltip = TUR_modify_industrial_miracle_ns_intro
+			add_to_variable = {
+				TUR_industrial_capacity_military_industrial_organization_funds_gain = 0.1
+				tooltip = military_industrial_organization_funds_gain_tt
+			}
+			add_to_variable = {
+				TUR_industrial_capacity_military_industrial_organization_research_bonus = 0.1
+				tooltip = military_industrial_organization_research_bonus_tt
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -701,14 +761,13 @@ shortcut = {
 		x = -1
 		y = 1
 		relative_position_id = TUR_exploit_the_sivas_iron_mines
-		cost = 10
+		cost = 7
 
 		ai_will_do = {
 			factor = 10
 		}
 		
 		available = {
-			has_tech = construction3
 			has_full_control_of_state = 49
 			has_full_control_of_state = 355
 			has_full_control_of_state = 349
@@ -730,6 +789,15 @@ shortcut = {
 					level = 2
 					instant_build = yes
 				}	
+			}
+			custom_effect_tooltip = TUR_modify_industrial_miracle_ns_intro
+			add_to_variable = {
+				TUR_industrial_production_factory_efficiency_gain_factor = 0.05
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+			add_to_variable = {
+				TUR_industrial_production_factory_max_efficiency_factor = 0.05
+				tooltip = production_factory_max_efficiency_factor_tt
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -754,7 +822,6 @@ shortcut = {
 		}
 		
 		available = {
-			has_tech = construction3
 			has_full_control_of_state = 344
 		}
 
@@ -780,6 +847,11 @@ shortcut = {
 			build_railway = { 
 				path = { 11746 806 3889 9893 9912 7620 }
 			}
+			custom_effect_tooltip = TUR_modify_industrial_miracle_ns_intro
+			add_to_variable = {
+				TUR_industrial_line_change_production_efficiency_factor = 0.07
+				tooltip = line_change_production_efficiency_factor_tt
+			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -803,8 +875,13 @@ shortcut = {
 			add_tech_bonus = {
 				name = TUR_implement_western_electronics
 				bonus = 0.75
-				uses = 1
+				uses = 2
 				category = electronics
+			}
+			custom_effect_tooltip = TUR_modify_industrial_miracle_ns_intro
+			add_to_variable = {
+				TUR_industrial_research_speed_factor = 0.05
+				tooltip = research_speed_factor_tt
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -819,10 +896,13 @@ shortcut = {
 		x = 0
 		y = 1
 		relative_position_id = TUR_implement_western_electronics
-		cost = 10
+		cost = 6
 
 		ai_will_do = {
 			factor = 10
+		}
+		available = {
+			is_major = yes
 		}
 
 		completion_reward = {
@@ -849,6 +929,15 @@ shortcut = {
 					specialization = specialization_nuclear
 					value = 0.8
 				}
+			}
+			custom_effect_tooltip = TUR_modify_industrial_miracle_ns_intro
+			add_to_variable = {
+				TUR_industrial_line_change_production_efficiency_factor = 0.10
+				tooltip = line_change_production_efficiency_factor_tt
+			}
+			add_to_variable = {
+				TUR_industrial_research_speed_factor = 0.05
+				tooltip = research_speed_factor_tt
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -5850,11 +5939,8 @@ shortcut = {
 		available = {
 			has_idea = tos_secret_baghdad_pact
 		}
-		allow_branch  = { 
-			has_idea = tos_secret_baghdad_pact
-		}
 
-		cost = 5
+		cost = 4
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -5863,7 +5949,9 @@ shortcut = {
 		x = 97
 		y = 2
 		completion_reward = {
-			add_political_power = 120
+			add_political_power = 100
+			custom_effect_tooltip = SAAD_members_receive_tt
+			custom_effect_tooltip = tos_secret_baghdad_pact_tt
 		}
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 	}
@@ -6061,7 +6149,7 @@ shortcut = {
 		prerequisite = { 
 			focus = TUR_course_to_left
 		}
-		x = -9
+		x = -10
 		y = 1
 		relative_position_id = TUR_course_to_left
 		cost = 5
@@ -6149,7 +6237,7 @@ shortcut = {
 		}
 	}
 	focus = {
-		id = TUR_peace_between_turks_and_kurds
+		id = TUR_permit_regional_elections
 		icon = GFX_focus_generic_befriend_kurdistan
 		prerequisite = { focus = TUR_liberalize_the_economy focus = TUR_stabilize_the_nation }
 
@@ -6162,7 +6250,8 @@ shortcut = {
 			factor = 7
 		}
 		completion_reward = {
-			add_political_power = 100
+			add_political_power = 75
+			custom_effect_tooltip = TUR_unlock_kurdish_integration_decisions_tt
 			if = {
 				limit = {
 					has_idea = TUR_traumatized_nation
@@ -6184,22 +6273,27 @@ shortcut = {
 			else = {
 				remove_ideas = TUR_traumatized_nation_3
 			}
-			every_owned_state = {
-				limit = {
-					OR = {
-						state = 353
-						state = 800
-						state = 350
-						state = 352
-					}
-				}
-				add_core_of = ROOT
-				remove_dynamic_modifier = {
-					modifier = tostree_limited_kurdish_separatism
-				}
-			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_TUR_TRADITIONALISM }
+	}
+	focus = {
+		id = TUR_hunt_down_fifth_columnist_islamists
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = TUR_permit_regional_elections focus = TUR_bureaucratic_modernization }
+
+		x = 1
+		y = 1
+		relative_position_id = TUR_bureaucratic_modernization
+		cost = 6
+
+		ai_will_do = {
+			factor = 7
+		}
+		completion_reward = {
+			unlock_decision_tooltip = TUR_entrench_kemalism_in_state
+			unlock_decision_tooltip = TUR_hold_a_march_in_state
+		}
+		search_filters = { FOCUS_FILTER_TUR_TRADITIONALISM FOCUS_FILTER_TUR_KEMALISM }
 	}
 	focus = {
 		id = TUR_continue_military_rule
@@ -6350,7 +6444,7 @@ shortcut = {
 		id = TUR_restore_ottaman_empire
 		icon = GFX_focus_TUR_the_sun_language_theory
 		prerequisite = { focus = TUR_course_to_left }
-		x = -4
+		x = -5
 		y = 3
 		relative_position_id = TUR_course_to_left
 		cost = 5
@@ -6561,8 +6655,18 @@ shortcut = {
 			add_stability = -0.07
 			add_political_power = 75
 
-			## EVENT GREEKS IN GOVERNMENT
-			every_country = { news_event = { id = tos_turkish.20 days = 1 } }
+			hidden_effect = {
+				## EVENT GREEKS IN GOVERNMENT
+				every_country = { news_event = { id = tos_turkish.20 days = 1 } }
+
+				every_state = {
+					limit = {
+						has_dynamic_modifier = { modifier = kemalist_loyalties }
+					}
+					remove_dynamic_modifier = { modifier = kemalist_loyalties }
+					add_dynamic_modifier = { modifier = kemalist_schemers}
+				}
+			}
 		}
 		
 		search_filters = {
@@ -6739,6 +6843,7 @@ shortcut = {
 
 		completion_reward = {
 			## DECISIONS TO MAKE TURKISH MORE CHRISTIANITY
+			set_variable = { which = TUR_christianity_level value = 0 }
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.05
@@ -6829,6 +6934,9 @@ shortcut = {
 		ai_will_do = {
 			base = 10
 		}
+		available = {
+			has_government = fascism
+		}
 
 		completion_reward = {
 			add_war_support = 0.05
@@ -6853,8 +6961,11 @@ shortcut = {
 			base = 10
 		}
 
+		available = {
+			is_major = yes
+		}
+
 		completion_reward = {
-		custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
 					BUL = {
@@ -6890,6 +7001,10 @@ shortcut = {
 		cost = 10
 		ai_will_do = {
 			base = 10
+		}
+
+		bypass = {
+			has_war_with = BUL
 		}
 
 		completion_reward = {
@@ -6955,9 +7070,7 @@ shortcut = {
 			base = 10
 		}
 		bypass = {
-			ROOT = {
-				has_war_with = ROM
-			}
+			has_war_with = ROM
 		}
 		completion_reward = {
 			every_state = {
@@ -7032,7 +7145,10 @@ shortcut = {
 		relative_position_id = TUR_plan_balkan
 		cost = 10
 		x = 5
-		y = 1
+		y = 1	
+		bypass = {
+			has_war_with = YUG
+		}
 		completion_reward = {
 			every_state = {
         		limit = {
@@ -7064,6 +7180,7 @@ shortcut = {
 			base = 10
 		}
 		available = {
+			has_government = fascism
 		}
 
 		completion_reward = {
@@ -7141,6 +7258,12 @@ shortcut = {
 		cost = 7
 		x = 2
 		y = 1
+		available = {
+			NOT = { has_war_with = FRA }
+		}
+		bypass = {
+			has_war_with = FRA
+		}
 		completion_reward = {
 			every_state = {
         		limit = {
@@ -7175,6 +7298,32 @@ shortcut = {
 		cost = 5
 		x = -1
 		y = 1
+		available = {
+			if = {
+				limit = {
+					SPR = {
+						exists = yes
+					}
+				}
+				NOT = { has_war_with = SPR}
+			}
+			if = {
+				limit = {
+					SPA = {
+						exists = yes
+					}
+				}
+				NOT = { has_war_with = SPA}
+			}
+		}
+		bypass = {
+			OR = {
+				has_war_with = SPR
+				has_war_with = SPA
+				has_war_with = SPB
+				has_war_with = SPC
+			}
+		}
 		completion_reward = {
 			every_state = {
         		limit = {
@@ -7207,6 +7356,12 @@ shortcut = {
 		cost = 5
 		x = 1
 		y = 1
+		available = {
+			NOT = { has_war_with = POR}
+		}
+		bypass = {
+			has_war_with = POR
+		}
 		completion_reward = {
 			every_state = {
         		limit = {
@@ -7239,6 +7394,9 @@ shortcut = {
 		cost = 5
 		ai_will_do = {
 			base = 10
+		}
+		available = {
+			has_government = fascism
 		}
 
 		completion_reward = {
@@ -7297,6 +7455,12 @@ shortcut = {
 		cost = 10
 		x = 0
 		y = 1
+		available = {
+			NOT = { has_war_with = SOV }
+		}
+		bypass = {
+			has_war_with = SOV
+		}
 		completion_reward = {
 			custom_effect_tooltip = TUR_crimean_crisis_tt
 			137 = {
@@ -7366,6 +7530,9 @@ shortcut = {
 		ai_will_do = {
 			base = 10
 		}
+		available = {
+			has_government = fascism
+		}
 
 		completion_reward = {
 			add_war_support = 0.05
@@ -7390,7 +7557,7 @@ shortcut = {
 		}
 		relative_position_id = TUR_restore_byzantium
 		cost = 10
-		x = -1
+		x = 0
 		y = 4
 		completion_reward = {
 			set_cosmetic_tag = BYZ_empire_UNIFIED_tos

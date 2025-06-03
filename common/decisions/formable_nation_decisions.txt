@@ -763,7 +763,7 @@ form_kushan_empire_category = {
 				1005 = { add_core_of = ROOT}
 				987 = { add_core_of = ROOT}
 				442 = { add_core_of = ROOT}
-				998 = { add_core_of = ROOT}
+				988 = { add_core_of = ROOT}
 			}
 		}
 	}
@@ -909,7 +909,7 @@ form_kushan_empire_category = {
 			991 = { add_core_of = ROOT}
 		}
 	}
-	integrate_east_muslims = {
+	integrate_bengalis = {
 		icon = generic_form_nation
 		visible = {
 			has_completed_focus = AFG_east_muslims_integrate
@@ -1026,10 +1026,11 @@ form_kushan_empire_category = {
 		state_target = yes
 		targets = { 422 320 321 }
 		visible = {
-			has_completed_focus = AFG_east_muslims_integrate
+			has_completed_focus = AFG_south_indians_integrate
 			FROM = {
 				is_controlled_by = ROOT
 			}
+			427 = { is_core_of = ROOT }
 		}
 		fire_only_once = yes
 		highlight_states = {
