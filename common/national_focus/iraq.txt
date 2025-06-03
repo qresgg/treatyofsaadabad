@@ -5865,7 +5865,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			base = 1
+			factor = 10
 		}
 
 		available = {
@@ -6039,7 +6039,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			base = 1
+			factor = 10
 		}
 
 		available = {
@@ -6097,7 +6097,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			base = 1
+			factor = 20
 		}
 
 		available = {
@@ -6165,7 +6165,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			base = 1
+			factor = 10
 		}
 
 		available = {
@@ -6210,7 +6210,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			base = 1
+			factor = 10
 		}
 
 		available = {
@@ -6267,7 +6267,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			base = 1
+			factor = 10
 		}
 
 		available = {
@@ -6318,7 +6318,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			base = 1
+			factor = 5
 		}
 
 		available = {
@@ -6372,7 +6372,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			base = 1
+			factor = 3
 		}
 
 		available = {
@@ -6518,7 +6518,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			base = 1
+			factor = 10
 		}
 
 		available = {
@@ -6827,7 +6827,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			base = 1
+			factor = 10
 		}
 
 		available = {
@@ -6872,7 +6872,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			base = 1
+			factor = 10
 		}
 
 		available = {
@@ -7285,7 +7285,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			base = 1
+			factor = 10
 		}
 
 		available = {
@@ -7318,7 +7318,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			base = 1
+			factor = 10
 		}
 
 		# TREBA
@@ -7504,7 +7504,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			base = 1
+			factor = 10
 		}
 
 		available = {
@@ -7549,6 +7549,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL FOCUS_FILTER_TREATYOFSAADABAD }
+
+		ai_will_do = {
+			factor = 10
+		}
 		completion_reward = {
 			custom_effect_tooltip = IRQ_ask_eng_for_unite_yemen_tt
 		}	
@@ -7566,7 +7570,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			base = 1
+			factor = 10
 		}
 
 		available = {
@@ -7649,6 +7653,10 @@ focus_tree = {
 				size > 100000
 			}
 		}
+		
+		ai_will_do = {
+			factor = 10
+		}
 	
 		bypass = {
 			554 = {
@@ -7716,6 +7724,10 @@ focus_tree = {
 		x = 0
 		y = 4
 		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
 
 		available = {
 			is_subject = no
@@ -7808,7 +7820,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			base = 1
+			factor = 10
 		}
 
 		available = {
@@ -9697,7 +9709,7 @@ focus = {
 	cost = 10
 
 	ai_will_do = {
-		base = 1
+		factor = 100
 	}
 
 	available = {
@@ -9748,6 +9760,10 @@ focus = {
     search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_TREATYOFSAADABAD }  #CHANGEIT
 	relative_position_id = IRQ_rebirth_babylon
 
+	ai_will_do = {
+		factor = 10
+	}
+
     completion_reward = {
 		add_stability = -0.05
 		add_timed_idea = {
@@ -9770,6 +9786,10 @@ focus = {
 
 	available = {
 		fascism > 0.50
+	}
+
+	ai_will_do = {
+		factor = 10
 	}
 
     completion_reward = {

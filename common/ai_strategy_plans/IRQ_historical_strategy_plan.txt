@@ -1,0 +1,79 @@
+IRQ_historical_plan = {
+	name = "Iraq Historical Plan"
+	desc = ""
+
+	allowed = {
+		original_tag = IRQ
+	}
+
+	enable = {
+		always = yes
+	}
+
+	# enable = {
+	# 	OR = {	
+	# 		AND = {
+	# 			is_historical_focus_on = yes 
+	# 			has_game_rule = {
+	# 				rule = IRQ_AI_BEHAVIOR
+	# 				option = DEFAULT
+	# 			}
+	# 		}
+	# 		# has_country_flag = IRQ_AI_RANDOM_HISTORICAL
+	# 		has_game_rule = {
+	# 			rule = IRQ_ai_behavior
+	# 			option = HISTORICAL
+	# 		}
+	# 	}	
+	# }
+
+
+	abort = {
+		is_subject = yes 
+	}
+
+	ai_national_focuses = {	
+		# 1936-37
+		IRQ_rebirth_the_babylon # 70 days
+		IRQ_rise_of_fascism # 70 days
+		IRQ_change_ideology # 35 days
+		IRQ_bakr_sidqi_coup # 70 days
+		IRQ_al_muthanna_club # 70 days
+		IRQ_increase_italian_business_relations # 35 days
+		IRQ_attempted_assasination_of_sidqi # 70 days
+
+		# 1938
+		IRQ_curtail_arabism  # 70 days
+		IRQ_strengthen_relations_with_afghanistan # 35 days
+		IRQ_strengthen_relations_with_iran # 35 days
+		IRQ_strengthen_relations_with_turkey # 35 days
+		IRQ_saadabad_alliance # 70 days
+		IRQ_take_advantage_of_british_weakness # 35 days
+		IRQ_rally_the_arab_world # 70 days
+
+		# 193
+		IRQ_secret_baghdad_pact # 70 days
+		IRQ_partition_of_syria # 70 days
+		IRQ_ask_tur_for_the_southern_kurds # 35 days
+		IRQ_deal_for_south_levant # 70 days
+		IRQ_unlock_form_mesopotamia # 56 days
+		IRQ_raising_arabian_peninsula # 70 days
+		IRQ_ask_for_the_reunification_of_yemen # 35 days
+
+		# 193
+		IRQ_course_to_north_africa # 70 days
+		# IRQ_liberate_north_africa
+		# IRQ_african_arab_revolt
+	}
+
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
