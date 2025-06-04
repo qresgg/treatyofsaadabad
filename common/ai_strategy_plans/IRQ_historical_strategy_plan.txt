@@ -1,14 +1,26 @@
-IRQ_historical_plan = {
-	name = "Iraq Historical Plan"
+IRQ_tos_historical_plan = {
+	name = "Treaty of Saadabad: Iraq Plan"
 	desc = ""
 
 	allowed = {
 		original_tag = IRQ
 	}
 
-	enable = {
-		always = yes
+enable = {
+	AND = {
+		is_historical_focus_on = yes
+		NOT = { has_country_flag = LALALA} # заглушка
+		# NOT = {
+		# 	OR = {
+		# 		AND = { country = TUR is_ai = yes }
+		# 		AND = { country = PER is_ai = yes }
+		# 		AND = { country = IRQ is_ai = yes }
+		# 		AND = { country = AFG is_ai = yes }
+		# 		AND = { country = COG is_ai = yes }
+		# 	}
+		# }
 	}
+}
 
 	# enable = {
 	# 	OR = {	
@@ -70,10 +82,7 @@ IRQ_historical_plan = {
 	# Keep small, as it is used as a factor for some things (such as research needs)
 	# Recommended around 1.0. Useful for relation between plans
 	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
+		base = 1
 	}
 
 }

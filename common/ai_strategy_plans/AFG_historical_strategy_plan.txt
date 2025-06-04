@@ -1,30 +1,28 @@
-AFG_historical_plan = {
-	name = "Afghanistan Historical Plan"
+AFG_tos_historical_plan = {
+	name = "Treaty of Saadabad: Afghanistan Plan"
 	desc = ""
 
 	allowed = {
 		original_tag = AFG
-		has_dlc = "Graveyard of Empires"
 	}
+
 	enable = {
-		OR = {
-			AND = {
-				is_historical_focus_on = yes 
-				has_game_rule = {
-					rule = AFG_AI_BEHAVIOR
-					option = DEFAULT
-				}
-			}
-			has_country_flag = AFG_AI_RANDOM_HISTORICAL
-			has_game_rule = {
-				rule = AFG_ai_behavior
-				option = HISTORICAL
-			}
-		}	
+		AND = {
+			is_historical_focus_on = yes
+			NOT = { has_country_flag = LALALA} # заглушка
+			# NOT = {
+			# 	OR = {
+			# 		AND = { country = TUR is_ai = yes }
+			# 		AND = { country = PER is_ai = yes }
+			# 		AND = { country = IRQ is_ai = yes }
+			# 		AND = { country = AFG is_ai = yes }
+			# 		AND = { country = COG is_ai = yes }
+			# 	}
+			# }
+		}
 	}
 	abort = {
 		is_subject = yes 
-		has_war = no 
 	}
 
 	ai_national_focuses = {
@@ -33,78 +31,37 @@ AFG_historical_plan = {
 		SSB_expand_afghanistans_military_infrastructure
 		
 		#1936
-		AFG_support_king_zahir
-		AFG_expand_telegraph_network
-		AFG_biding_our_time
-		AFG_placeholder_1 #Secure German Investment
-		AFG_fruit_packing
-		AFG_implement_currency_controls
-		AFG_sugar_processing
-		AFG_clear_malarial_swamps
-
-		#1937
-		AFG_infrastructure_construction
-		AFG_electrification
-		AFG_establish_radio_networks
-		AFG_expand_karakul_lambskin_industry
-		AFG_reform_2 #Construct the Chak Dam
-		AFG_secure_dynasty
-		AFG_maintain_neutrality
-		SSB_joint_military_exercises
-
-		#1938
-		SSB_baghlan_sugar_factory_branches
-		#1939
-		AFG_qargha_dam
-
-		SSB_expand_road_and_rail_connections
-		SSB_coordinate_military_production
-		
-		#1940
-		AFG_adopt_nufus
-		AFG_introduce_national_service
-		AFG_new_army
-		AFG_expand_border_guards
-		AFG_expel_axis_nationals
-		#1941
-		AFG_expand_academy
-		AFG_purchase_tanks
-		AFG_purchase_aircraft
-		AFG_expand_royal_guard
-		#1942
-		AFG_pursue_our_own_agenda
-
-		SSB_combined_arms
-		SSB_saadabad_research_cooperation
-		#1943
-
-		
-		#1944
-		AFG_kajaki_dam
-		AFG_afghan_pakistan_cold_War
-		AFG_anti_soviet_cooperation
-		AFG_graveyard_of_empires
-	}
-
-	focus_factors = {
-		
-	}
-
-	research = {
-
-	}
-
-	ideas = {
-
+		AFG_against_kabul
+		AFG_knights_of_faith
+		AFG_tajiks_mujaheddins
+		AFG_persian_supplies
+		AFG_war_of_faith
+		AFG_research_in_mind
+		AFG_expand_factories
+		AFG_rethinking_reintegration
+		AFG_holy_government
+		AFG_sinkiang_war
+		AFG_tibetian_friend_pact
+		AFG_main_manufacturers_opium
+		AFG_baghdad_pact
+		AFG_request_tajikistan
+		AFG_request_india
+		AFG_sell_bio
+		AFG_border_lands
+		AFG_afghan_indian_war
+		AFG_recreate_second_kashuan_empire
+		AFG_east_muslims_integrate
+		AFG_birmian_kakao
+		AFG_south_indians_integrate
+		AFG_himalayas_states
+		AFG_indochina_peninsla
+		AFG_afghan_china_war
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
 	# Recommended around 1.0. Useful for relation between plans
 	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
+		base = 1
 	}
 
 }

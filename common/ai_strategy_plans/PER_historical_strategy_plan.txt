@@ -1,27 +1,43 @@
-PER_historical_plan = {
-	name = "Iran Historical Plan"
+PER_tos_historical_plan = {
+	name = "Treaty of Saadabad: Persia Plan"
 	desc = ""
 
 	allowed = {
 		original_tag = PER
-		has_dlc = "Graveyard of Empires"
 	}
-	enable = {
-		OR = {
-			AND = {
-				is_historical_focus_on = yes 
-				has_game_rule = {
-					rule = PER_AI_BEHAVIOR
-					option = DEFAULT
-				}
-			}
-			has_country_flag = PER_AI_RANDOM_HISTORICAL
-			has_game_rule = {
-				rule = PER_AI_BEHAVIOR
-				option = HISTORICAL
-			}
-		}	
+	# enable = {
+	# 	OR = {
+	# 		AND = {
+	# 			is_historical_focus_on = yes 
+	# 			has_game_rule = {
+	# 				rule = PER_AI_BEHAVIOR
+	# 				option = DEFAULT
+	# 			}
+	# 		}
+	# 		has_country_flag = PER_AI_RANDOM_HISTORICAL
+	# 		has_game_rule = {
+	# 			rule = PER_AI_BEHAVIOR
+	# 			option = HISTORICAL
+	# 		}
+	# 	}	
+	# }
+
+enable = {
+	AND = {
+		is_historical_focus_on = yes
+		NOT = { has_country_flag = LALALA} # заглушка
+		# NOT = {
+		# 	OR = {
+		# 		AND = { country = TUR is_ai = yes }
+		# 		AND = { country = PER is_ai = yes }
+		# 		AND = { country = IRQ is_ai = yes }
+		# 		AND = { country = AFG is_ai = yes }
+		# 		AND = { country = COG is_ai = yes }
+		# 	}
+		# }
 	}
+}
+
 	abort = {
 		is_subject = yes 
 	}
@@ -34,87 +50,21 @@ PER_historical_plan = {
 
 		#1936
 		PER_the_pahlavi_imperium
-		PER_stand_with_giants
-		PER_forced_secularization
-		PER_modernizing_iran
-		PER_restructure_army
-		PER_expand_imperial_guard
-
-		#1937
-		PER_persian_german_trade
-		PER_increase_military_funding
-		SSB_the_saadabad_pact
-		PER_rapid_industrialization
-		PER_tehran_power_plant
-		PER_increase_education_funding
-		PER_develop_cities
-		PER_metropolitan_iran
-		PER_special_units
-		SSB_joint_military_exercises
-
-		#1938
-		PER_adult_literacy
-		PER_expand_military_facilities
-		PER_foreign_retraining
-		PER_trial_fifty_three
-		PER_open_abadan
-
-		#1939
-		PER_military_high_schools
-		PER_wether_the_storm
-		PER_stand_our_ground
-		PER_bolster_civilian_industry
-		PER_upscale_military_production
-		PER_preparatory_mobilization
-
-		#1940
-		PER_national_museum
-		PER_shiraz_university
-		PER_educational_reforms
-		PER_develop_oil_fields
-		PER_trans_iranian_railway
-		PER_expand_tabriz_masshad
-		PER_expand_tehran_emam
-		PER_expand_tehran_abbas
-		PER_trains_from_germany
-
-		SSB_expand_road_and_rail_connections
-
-		#1941
-		PER_feat_of_engineering
-		PER_bolster_infantry
-		PER_fight_for_iran
-		PER_dig_and_defend
-		PER_capital_protect
-		PER_secure_coastline # Do this if you can't protect Teheran
-		PER_swear_fealty
-
-
-		SSB_coordinate_military_production
-		SSB_combined_arms
-		SSB_saadabad_research_cooperation
-
-	}
-
-	focus_factors = {
-		
-	}
-
-	research = {
-
-	}
-
-	ideas = {
-
+		PER_legacy_of_greatness
+		PER_assessing_the_opposition
+		PER_lowkey_expansionism
+		PER_secret_baghdad_pact
+		PER_demand_musandam
+		PER_demand_sov_territory
+		PER_war_plan_musleew
+		PER_help_islam_friends
+		PER_request_invasion_payments
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
 	# Recommended around 1.0. Useful for relation between plans
 	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
+		base = 1
 	}
 
 }
