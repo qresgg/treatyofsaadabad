@@ -68,7 +68,7 @@ country_event = {
 
 				set_autonomy = {
 					target = SAU
-					autonomous_state = autonomy_dominion
+					autonomous_state = autonomy_sheikhdom
 					freedom_level = 0.5
 				}
 

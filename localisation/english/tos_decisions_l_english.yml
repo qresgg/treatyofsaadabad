@@ -107,7 +107,7 @@
 #####################
 ###  MESOPOTAMIA  ###
 #####################
-form_neo_mesopotamia_category_desc:0 "123123"
+# form_neo_mesopotamia_category_desc:0 "123123"
 
 #####################
 ###    KUSHAN     ###
@@ -146,6 +146,7 @@ form_sasanian_integrate_varena_xsaora_spahan_rud_tt: "Controls §YSpahan-rud§! 
 form_sasanian_integrate_varena_xsaora_abar_rudan_tt: "Controls §YAbar-Rudan§! territories"
 form_sasanian_integrate_varena_xsaora_gurgan_daz_tt: "Controls §YGurgan§! territories"
 form_sasanian_integrate_varena_xsaora_varnagird_tt: "Controls §YVarnagird§! territories"
+integrate_varena_xsaora:0 "Integrate Varena-Xsaora"
 
 
 #####################
@@ -269,7 +270,11 @@ integrate_shark_turkistani_desc:0 "We will bring Shark Turkestan into the fold, 
 integrate_makran:0 "Integrate Makran"
 integrate_makran_desc:0 "The eastern territories near Makran hold economic and strategic value. They must be integrated into our domain."
 PER_integrate_all_soviet_tt: "Unlocks §Ydecisions§! which allows to integrate all core states of §Y[SOV.GetNameWithFlag]§! "
-
+PER_integrate_soviet_union_cat: "Integration of Former Soviet Territories"
+PER_integrate_sov_territory: "Integrate Soviet Territory"
+PER_integrate_soviet_union_cat_desc: "With the collapse of the Soviet Union, new opportunities have arisen to consolidate control over its former lands."
+PER_integrate_sov_territory_desc: "We will begin the process of integrating this former Soviet territory into our nation."
+PER_our_faith_is_similar_to_yours_desc: "Despite the many divisions of politics and borders, our peoples share a deep spiritual and cultural affinity. By emphasizing these commonalities, we can forge stronger ties with our neighbors and lay the groundwork for greater regional unity."
 
 #####################
 #####  TURKEY  ######
@@ -307,6 +312,8 @@ AFG_sell_bio_product: "Sell Biological Products"
 AFG_sell_bio_product_desc: "Because sometimes, people are just another product on the market. Let’s make some 'special' deals!"
 AFG_peace_conferention: "ISLAM-RAJ peace conferetion"
 AFG_sending_islamists_to_india_flag: "Not sending Islamists in moment"
+AFG_integrate_our_islam_friends_rajapakistana:0 "Take government our border-friends"
+AFG_integrate_rajak:0 "Integrate Rajapakastan"
 
 
 #####################
@@ -325,8 +332,3 @@ IRQ_african_arab_revolt_cat: "African Arabian Revolution"
 IRQ_develop_separatist_movement: "Develop separatist movements in [FROM.GetName]"
 IRQ_provoke_independent_war_consolidated: "Provoke [FROM.GetName] Independent War"
 IRQ_set_puppet_government: "Capture the [FROM.GetAdjective] Administration"
-PER_integrate_soviet_union_cat: "Integration of Former Soviet Territories"
-PER_integrate_sov_territory: "Integrate Soviet Territory"
-PER_integrate_soviet_union_cat_desc: "With the collapse of the Soviet Union, new opportunities have arisen to consolidate control over its former lands."
-PER_integrate_sov_territory_desc: "We will begin the process of integrating this former Soviet territory into our nation."
-PER_our_faith_is_similar_to_yours_desc: "Despite the many divisions of politics and borders, our peoples share a deep spiritual and cultural affinity. By emphasizing these commonalities, we can forge stronger ties with our neighbors and lay the groundwork for greater regional unity."

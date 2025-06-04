@@ -372,13 +372,6 @@ PER_buying_fabrics_category = {
 		}
 	}
 }
-PER_integrate_soviet_union_cat = {
-	PER_integrate_sov_territory = {
-		on_map_mode = map_only
-		target = { SOV }
-		
-	}
-}
 PER_profit_from_war_category = {
 	PER_sell_oil = {
 

@@ -507,7 +507,15 @@ form_sasanian_empire_category = {
 				original_tag = PER
 			}
 		}
-		visible = {
+		available = {
+			587 = {is_controlled_by = ROOT}
+			831 = {is_controlled_by = ROOT}
+			823 = {is_controlled_by = ROOT}
+			832 = {is_controlled_by = ROOT}
+			585 = {is_controlled_by = ROOT}
+			404 = {is_controlled_by = ROOT}
+			830 = {is_controlled_by = ROOT}
+			405 = {is_controlled_by = ROOT}
 		}
 		highlight_states = {
 			highlight_state_targets = {
@@ -521,6 +529,7 @@ form_sasanian_empire_category = {
 				state = 405
 			}
 		}
+		fire_only_once = yes
 		complete_effect = {
 			587 = { add_core_of = ROOT }
 			831 = { add_core_of = ROOT }
@@ -535,6 +544,7 @@ form_sasanian_empire_category = {
 	integrate_at_turk_al_shimalia = {
 		icon = generic_form_nation
 		visible = {
+			has_cosmetic_tag = PER_second_sasanian_empire
 			has_completed_focus = PER_red_danger
 			217 = {
 				is_core_of = PER
@@ -545,9 +555,21 @@ form_sasanian_empire_category = {
 				original_tag = PER
 			}
 		}
-		visible = {
-			has_cosmetic_tag = PER_second_sasanian_empire
+		available = {
+			257 = {is_controlled_by = ROOT}
+			239 = {is_controlled_by = ROOT}
+			401 = {is_controlled_by = ROOT}
+			407 = {is_controlled_by = ROOT}
+			406 = {is_controlled_by = ROOT}
+			255 = {is_controlled_by = ROOT}
+			250 = {is_controlled_by = ROOT}
+			251 = {is_controlled_by = ROOT}
+			249 = {is_controlled_by = ROOT}
+			652 = {is_controlled_by = ROOT}
+			651 = {is_controlled_by = ROOT}
+			258 = {is_controlled_by = ROOT}
 		}
+		fire_only_once = yes
 		highlight_states = {
 			highlight_state_targets = {
 				state = 257
@@ -582,6 +604,7 @@ form_sasanian_empire_category = {
 	integrate_desht_i_kypchak = {
 		icon = generic_form_nation
 		visible = {
+			has_cosmetic_tag = PER_second_sasanian_empire
 			has_completed_focus = PER_red_danger
 			249 = {
 				is_core_of = PER
@@ -592,9 +615,14 @@ form_sasanian_empire_category = {
 				original_tag = PER
 			}
 		}
-		visible = {
-			has_cosmetic_tag = PER_second_sasanian_empire
+		available = {
+			402 = {is_controlled_by = ROOT}
+			881 = {is_controlled_by = ROOT}
+			582 = {is_controlled_by = ROOT}
+			583 = {is_controlled_by = ROOT}
+			590 = {is_controlled_by = ROOT}
 		}
+		fire_only_once = yes
 		highlight_states = {
 			highlight_state_targets = {
 				state = 402
@@ -615,6 +643,7 @@ form_sasanian_empire_category = {
 	integrate_shark_turkistani = {
 		icon = generic_form_nation
 		visible = {
+			has_cosmetic_tag = PER_second_sasanian_empire
 			has_completed_focus = PER_red_danger
 			881 = {
 				is_core_of = PER
@@ -625,9 +654,14 @@ form_sasanian_empire_category = {
 				original_tag = PER
 			}
 		}
-		visible = {
-			has_cosmetic_tag = PER_second_sasanian_empire
+		available = {
+			589 = {is_controlled_by = ROOT}
+			588 = {is_controlled_by = ROOT}
+			882 = {is_controlled_by = ROOT}
+			40 = {is_controlled_by = ROOT}
+			654 = {is_controlled_by = ROOT}
 		}
+		fire_only_once = yes
 		highlight_states = {
 			highlight_state_targets = {
 				state = 589
@@ -647,11 +681,6 @@ form_sasanian_empire_category = {
 	}
 	integrate_makran = {
 		icon = generic_form_nation
-		visible = {
-			OR = {
-				original_tag = PER
-			}
-		}
 		allowed = {
 			OR = {
 				original_tag = PER
@@ -676,6 +705,7 @@ form_sasanian_empire_category = {
 				controls_state = 428
 			}
 		}
+		fire_only_once = yes
 		highlight_states = {
 			highlight_state_targets = {
 				state = 444
@@ -1233,7 +1263,6 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 25
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_bulgaria_required_states_tt
@@ -1278,7 +1307,6 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 25
 		available = {
 			BUL = {
 				is_subject_of = TUR
@@ -1364,7 +1392,6 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 25
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_serbia_required_states_tt
@@ -1414,7 +1441,6 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 25
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_croatia_required_states_tt
@@ -1469,7 +1495,6 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 25
 		available = {
 			CRO = {
 				is_subject_of = TUR
@@ -1548,7 +1573,6 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 25
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_lombardy_venetia_required_states_tt
@@ -1589,7 +1613,6 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 25
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_papal_state_required_states_tt
@@ -1628,7 +1651,6 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 25
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_toscana_required_tt
@@ -1662,7 +1684,6 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 25
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_piedmont_required_tt
@@ -1694,7 +1715,6 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 25
 		available = {
 			SPM = {
 				is_subject_of = TUR
@@ -1740,7 +1760,6 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 25
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_two_sicilias_required_states_tt
@@ -1785,7 +1804,6 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 25
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_occitania_required_states_tt
@@ -1838,7 +1856,6 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 25
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_visighotic_required_states_tt
@@ -1924,7 +1941,6 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 25
 		available = {
 			SPR = {
 				is_subject_of = ROOT
@@ -1986,7 +2002,6 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 25
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_suebi_required_states_tt
@@ -2069,7 +2084,6 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 25
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_wallachia_and_moldova_required_states_tt
@@ -2116,7 +2130,6 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 25
 		available = {
 			MOL = {
 				is_subject_of = ROOT
@@ -2172,7 +2185,6 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 25
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_transylvania_required_states_tt
@@ -2291,7 +2303,6 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 25
 		available = {
 			UKR = {
 				is_subject_of = ROOT
@@ -2385,7 +2396,6 @@ form_neo_byzantine_empire_category = {
 		icon = generic_form_nation
 		visible = {
 		}
-		cost = 25
 		available = {
 			UKR = {
 				is_subject_of = ROOT
@@ -2468,7 +2478,7 @@ form_neo_byzantine_empire_category = {
 
 	neobyz_nationalize_dux = {
 		cost = 50
-		days_remove = 1
+		days_remove = 20
 		targets = { BUL SER CRO LBV PAP TOS SPM OCC SPR POR TRA MOL UKR}
 		target_root_trigger = {
 			original_tag = TUR

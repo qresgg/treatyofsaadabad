@@ -5,7 +5,7 @@ AFG_islam_revolution_category = {
 		allowed = {
 			original_tag = AFG
 		}
-		days_remove = 25 # 1 for test
+		days_remove = 15 # 1 for test
 		cost = 35
 		state_target = yes
 		targets = { 440 441 443 444 1012 445 989 787}
@@ -45,6 +45,8 @@ AFG_islam_revolution_category = {
 		allowed = {
 			original_tag = AFG
 		}
+
+		days_remove = 15
 
 		on_map_mode = map_and_decisions_view
 
@@ -104,18 +106,15 @@ AFG_islam_revolution_category = {
 						is_locked = no
 						template_counter = 2
 						regiments = {
-							infantry = { x = 0 y = 0 }
-							infantry = { x = 0 y = 1 }
-							infantry = { x = 0 y = 2 }
-							infantry = { x = 1 y = 0 }
-							infantry = { x = 1 y = 1 }
-							infantry = { x = 1 y = 2 }
-							infantry = { x = 2 y = 0 }
-							infantry = { x = 2 y = 1 }
-							infantry = { x = 2 y = 2 }
-							infantry = { x = 3 y = 0 }
-							infantry = { x = 3 y = 1 }
-							infantry = { x = 3 y = 2 }
+							militia = { x = 0 y = 0 }
+							militia = { x = 0 y = 1 }
+							militia = { x = 0 y = 2 }
+							militia = { x = 1 y = 0 }
+							militia = { x = 1 y = 1 }
+							militia = { x = 1 y = 2 }
+							militia = { x = 2 y = 0 }
+							militia = { x = 2 y = 1 }
+							militia = { x = 2 y = 2 }
 						}
 					
 						support = {
@@ -124,39 +123,12 @@ AFG_islam_revolution_category = {
 						#division_cap = 0
 						override_model = PER_militia_alt_1_entity
 					}
-					random_owned_state = {
+					random_owned_controlled_state = {
 						create_unit = {
-							division = "name = \"1st PAKAS Army\" division_template = \"PAKAS\" start_experience_factor = 1.0 start_equipment_factor = 1"
+							division = "division_template =\"PAKAS\" start_experience_factor = 0.2 start_equipment_factor = 1.0"
 							owner = PAK
-						}
-						create_unit = {
-							division = "name = \"2nd PAKAS Army\" division_template = \"PAKAS\" start_experience_factor = 1.0 start_equipment_factor = 1"
-							owner = PAK
-						}
-						create_unit = {
-							division = "name = \"2nd PAKAS Army\" division_template = \"PAKAS\" start_experience_factor = 1.0 start_equipment_factor = 1"
-							owner = PAK
-						}
-						create_unit = {
-							division = "name = \"2nd PAKAS Army\" division_template = \"PAKAS\" start_experience_factor = 1.0 start_equipment_factor = 1"
-							owner = PAK
-						}
-						create_unit = {
-							division = "name = \"2nd PAKAS Army\" division_template = \"PAKAS\" start_experience_factor = 1.0 start_equipment_factor = 1"
-							owner = PAK
-						}
-						create_unit = {
-							division = "name = \"2nd PAKAS Army\" division_template = \"PAKAS\" start_experience_factor = 1.0 start_equipment_factor = 1"
-							owner = PAK
-						}
-						create_unit = {
-							division = "name = \"2nd PAKAS Army\" division_template = \"PAKAS\" start_experience_factor = 1.0 start_equipment_factor = 1"
-							owner = PAK
-						}
-						create_unit = {
-							division = "name = \"2nd PAKAS Army\" division_template = \"PAKAS\" start_experience_factor = 1.0 start_equipment_factor = 1"
-							owner = PAK
-						}
+							count = 7
+						} 
 					}
 				}
 			}
@@ -166,7 +138,7 @@ AFG_islam_revolution_category = {
 	}
 	AFG_peace_conferention = {
 		icon = GFX_decision_generic_civil_support
-		days_mission_timeout = 120
+		days_mission_timeout = 60
 
 		allowed = {
 			original_tag = AFG
@@ -186,15 +158,97 @@ AFG_islam_revolution_category = {
 
 		on_map_mode = map_and_decisions_view
 		selectable_mission = no
-		is_good = no
+		is_good = yes
 
 		timeout_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = PAK
+				}
+				set_state_flag = AFG_PAK_occupied_terrs
+			}
 			RAJ = {
 				white_peace = PAK
 			}
 			PAK = {
 				white_peace = ENG
 			}
+			every_state = {
+				limit = {
+					has_state_flag = AFG_PAK_occupied_terrs
+				}
+				PAK = { transfer_state = PREV }
+			}
+		}
+	}
+	AFG_integrate_our_islam_friends_rajapakistana = {
+		icon = GFX_decision_generic_civil_support
+		days_remove = 35
+		cost = 75
+		allowed = {
+			original_tag = AFG
+		}
+		targets = { PAK }
+		visible = {
+			PAK = {
+				exists = yes
+				NOT = {
+					has_war = yes
+				}
+			}
+		}
+
+		available = {
+			PAK = {
+				exists = yes
+				NOT = {
+					has_war = yes
+				}
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		selectable_mission = no
+		is_good = yes
+
+		remove_effect = {
+			set_autonomy = {
+				target = FROM
+				autonomy_state = autonomy_puppet
+				freedom_level = 0.5
+			}
+		}
+	}
+	AFG_integrate_rajak = {
+		cost = 100
+		icon = GFX_decision_generic_civil_support
+		days_remove = 45
+
+		allowed = {
+			original_tag = AFG
+		}
+		targets = { PAK }
+		visible = {
+			PAK = {
+				exists = yes
+				NOT = {
+					has_war = yes
+				}
+			}
+		}
+
+		available = {
+			PAK = {
+				exists = yes
+				NOT = {
+					has_war = yes
+				}
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		selectable_mission = no
+
+		remove_effect = {
+			annex_country = { target = FROM transfer_troops = yes}
 		}
 	}
 }

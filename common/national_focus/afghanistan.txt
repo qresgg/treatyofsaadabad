@@ -3139,9 +3139,6 @@ focus_tree = {
 		cost = 10
 		y = 1
 		x = 0
-		allow_branch = {
-			has_idea = tos_secret_baghdad_pact
-		}
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 		#### buddist muslims is our historical 
 		completion_reward = {
