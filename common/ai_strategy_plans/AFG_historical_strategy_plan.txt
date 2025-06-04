@@ -5,21 +5,29 @@ AFG_tos_historical_plan = {
 	allowed = {
 		original_tag = AFG
 	}
-
 	enable = {
 		AND = {
 			is_historical_focus_on = yes
-			NOT = { has_country_flag = LALALA} # заглушка
-			# NOT = {
-			# 	OR = {
-			# 		AND = { country = TUR is_ai = yes }
-			# 		AND = { country = PER is_ai = yes }
-			# 		AND = { country = IRQ is_ai = yes }
-			# 		AND = { country = AFG is_ai = yes }
-			# 		AND = { country = COG is_ai = yes }
-			# 	}
-			# }
+			NOT = { has_country_flag = LALALA } # заглушка
+			OR = {
+				NOT = {
+					TUR = { is_ai = yes }
+				}
+				NOT = {
+					COG = { is_ai = yes }
+				}
+				NOT = {
+					PER = { is_ai = yes }
+				}
+				NOT = {
+					AFG = { is_ai = yes }
+				}
+				NOT = {
+					IRQ = { is_ai = yes }
+				}
+			}
 		}
+		
 	}
 	abort = {
 		is_subject = yes 
@@ -36,7 +44,7 @@ AFG_tos_historical_plan = {
 		AFG_tajiks_mujaheddins
 		AFG_persian_supplies
 		AFG_war_of_faith
-		AFG_research_in_mind
+		AFG_burn_condoms
 		AFG_expand_factories
 		AFG_rethinking_reintegration
 		AFG_holy_government

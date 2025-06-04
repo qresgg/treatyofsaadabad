@@ -22,21 +22,29 @@ PER_tos_historical_plan = {
 	# 	}	
 	# }
 
-enable = {
-	AND = {
-		is_historical_focus_on = yes
-		NOT = { has_country_flag = LALALA} # заглушка
-		# NOT = {
-		# 	OR = {
-		# 		AND = { country = TUR is_ai = yes }
-		# 		AND = { country = PER is_ai = yes }
-		# 		AND = { country = IRQ is_ai = yes }
-		# 		AND = { country = AFG is_ai = yes }
-		# 		AND = { country = COG is_ai = yes }
-		# 	}
-		# }
+	enable = {
+		AND = {
+			is_historical_focus_on = yes
+			NOT = { has_country_flag = LALALA } # заглушка
+			OR = {
+				NOT = {
+					TUR = { is_ai = yes }
+				}
+				NOT = {
+					COG = { is_ai = yes }
+				}
+				NOT = {
+					PER = { is_ai = yes }
+				}
+				NOT = {
+					AFG = { is_ai = yes }
+				}
+				NOT = {
+					IRQ = { is_ai = yes }
+				}
+			}
+		}
 	}
-}
 
 	abort = {
 		is_subject = yes 

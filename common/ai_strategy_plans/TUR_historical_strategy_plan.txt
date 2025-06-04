@@ -9,16 +9,24 @@ TUR_tos_historical_plan = {
 	enable = {
 		AND = {
 			is_historical_focus_on = yes
-			NOT = { has_country_flag = LALALA} # заглушка
-			# NOT = {
-			# 	OR = {
-			# 		AND = { country = TUR is_ai = yes }
-			# 		AND = { country = PER is_ai = yes }
-			# 		AND = { country = IRQ is_ai = yes }
-			# 		AND = { country = AFG is_ai = yes }
-			# 		AND = { country = COG is_ai = yes }
-			# 	}
-			# }
+			NOT = { has_country_flag = LALALA } # заглушка
+			OR = {
+				NOT = {
+					TUR = { is_ai = yes }
+				}
+				NOT = {
+					COG = { is_ai = yes }
+				}
+				NOT = {
+					PER = { is_ai = yes }
+				}
+				NOT = {
+					AFG = { is_ai = yes }
+				}
+				NOT = {
+					IRQ = { is_ai = yes }
+				}
+			}
 		}
 	}
 	# enable = {
@@ -58,6 +66,7 @@ TUR_tos_historical_plan = {
 		TUR_call_for_protests_in_the_capital
 		TUR_overthrow_inonus_government
 		TUR_course_to_right
+		TUR_fascism_rising
 		TUR_GRE_in_government
 		TUR_GRE_ultimatum
 		TUR_change_ideology

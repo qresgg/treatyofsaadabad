@@ -4535,7 +4535,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 10
+			base = 1
 		}
 
 		available = {
@@ -5865,7 +5865,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 10
+			base = 1
 		}
 
 		available = {
@@ -6039,7 +6039,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 10
+			base = 1
 		}
 
 		available = {
@@ -6165,7 +6165,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 10
+			base = 1
 		}
 
 		available = {
@@ -6210,7 +6210,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 10
+			base = 1
 		}
 
 		available = {
@@ -6267,7 +6267,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 10
+			base = 1
 		}
 
 		available = {
@@ -6518,7 +6518,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 10
+			base = 1
 		}
 
 		available = {
@@ -6827,7 +6827,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 10
+			base = 1
 		}
 
 		available = {
@@ -6872,7 +6872,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 10
+			base = 1
 		}
 
 		available = {
@@ -7285,7 +7285,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 10
+			base = 1
 		}
 
 		available = {
@@ -7318,7 +7318,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 10
+			base = 1
 		}
 
 		# TREBA
@@ -7504,7 +7504,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 10
+			base = 1
 		}
 
 		available = {
@@ -7551,7 +7551,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL FOCUS_FILTER_TREATYOFSAADABAD }
 
 		ai_will_do = {
-			factor = 10
+			base = 1
 		}
 		completion_reward = {
 			custom_effect_tooltip = IRQ_ask_eng_for_unite_yemen_tt
@@ -7570,7 +7570,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 10
+			base = 1
 		}
 
 		available = {
@@ -7655,7 +7655,7 @@ focus_tree = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			base = 1
 		}
 	
 		bypass = {
@@ -7726,7 +7726,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 10
+			base = 1
 		}
 
 		available = {
@@ -7820,7 +7820,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 10
+			base = 1
 		}
 
 		available = {
@@ -9703,13 +9703,21 @@ focus = {
 					option = HIDE
 				}
 			}
+			OR = {
+				NOT = { TUR = { is_ai = yes } }
+				NOT = { COG = { is_ai = yes } }
+				NOT = { PER = { is_ai = yes } }
+				NOT = { AFG = { is_ai = yes } }
+				NOT = { IRQ = { is_ai = yes } }
+			}
 		}
 	}
+
 
 	cost = 10
 
 	ai_will_do = {
-		factor = 100
+		base = 10
 	}
 
 	available = {
@@ -9761,7 +9769,7 @@ focus = {
 	relative_position_id = IRQ_rebirth_babylon
 
 	ai_will_do = {
-		factor = 10
+		base = 1
 	}
 
     completion_reward = {
@@ -9789,7 +9797,7 @@ focus = {
 	}
 
 	ai_will_do = {
-		factor = 10
+		base = 1
 	}
 
     completion_reward = {
