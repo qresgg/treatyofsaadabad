@@ -2,9 +2,10 @@
 #####################
 ###  SAUDI ARABI  ###
 #####################
-sau_fascism.1.t: "Fascism Rises in Saudi Arabia"
-sau_fascism.1.desc: "Fascist ideology has taken hold in Saudi Arabia. With the old regime ousted, the new government seeks regional alignment—and Iraq emerges as the chosen patron. A new Middle Eastern fascist bloc may be forming."
-sau_fascism.1.a: "Iraq will lead us forward"
+sau_fascism.1.t: "Фашизм поднимается в Саудовской Аравии"
+sau_fascism.1.desc: "В Саудовской Аравии утвердилась фашистская идеология. После свержения старого режима новое правительство стремится к региональному объединению, и его покровителем становится Ирак. Возможно, формируется новый ближневосточный фашистский блок."
+sau_fascism.1.a: "Ирак поведет нас вперед"
+
 
 #####################
 ####### IRAQ ########

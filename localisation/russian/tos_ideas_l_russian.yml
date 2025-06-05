@@ -1,0 +1,60 @@
+﻿l_english:
+####################
+##### SHARED #######
+####################
+tos_secret_baghdad_pact:0 "Багдадский пакт"
+tos_global_resource_expansion:0 "Глобальная Ресурсная Экспансия"
+tos_secret_baghdad_pact_desc:0 "§Y[IRQ.GetNameWithFlag]§! и §Y[TUR.GetNameWithFlag]§!, §Y[AFG.GetNameWithFlag]§!, §Y[PER.GetNameWithFlag]§! создадим наши сферы влияния на §YБлижнем Востоке§! и §в Мире§!.\n\n §Y[IRQ.GetNameWithFlag]§! §YСфера Влияния§!включает себя:\n§Y[SAU.GetNameWithFlag]§!\n§Y[YEM.GetNameWithFlag]§! \n§Y[SYR.GetFlag]§! §YВосточная Сирия§!\n§Y[JOR.GetNameWithFlag]§!\n§Y[PAL.GetNameWithFlag]§!\n§Y[EGY.GetNameWithFlag]§! §YСинай§!\nВсе §Y Северные Африканские регионы§!\n\n §Y[PER.GetNameWithFlag]§! §YСфера Влияния§!включает себя:\n§Y[SAU.GetNameWithFlag]§!\n§Y[BHR.GetNameWithFlag]§!\n§Y[QAT.GetNameWithFlag]§!\n§Y[UAE.GetNameWithFlag]§!\n§Y[OMA.GetNameWithFlag]§!\n§Y[SOV.GetNameWithFlag]§! \n\n §Y[TUR.GetNameWithFlag]§! §YСфера Влияния§!включает себя:\n§Y[GRE.GetNameWithFlag]§!\n§Y[ROM.GetNameWithFlag]§!\n§Y[YUG.GetNameWithFlag]§!\n§Y[ITA.GetNameWithFlag]§!\n§Y[SPR.GetNameWithFlag]§!\n§Y[FRA.GetNameWithFlag]§!\n§Y[POR.GetNameWithFlag]§!\nВсе §Y Черно морские регионы§!\n\n §Y[AFG.GetFlag] Афганистан§! §YСфера Влияния§!включает себя:\n§Y[KYR.GetNameWithFlag]§!\n§Y[BUK.GetNameWithFlag]§!\n§Y[SIK.GetNameWithFlag]§!\n§Y[RAJ.GetNameWithFlag]§!\n§Y[PAK.GetNameWithFlag]§!\n§Y[SOV.GetFlag] Южные Совесткие территории§!"
+IRQ_raising_iraqi_fascists:0 "Фашизм на подьёме"
+tos_secret_baghdad_pact_tt:0 "§Y[IRQ.GetNameWithFlag]§! и §Y[TUR.GetNameWithFlag]§!, §Y[AFG.GetNameWithFlag]§!, §Y[PER.GetNameWithFlag]§! создадим наши сферы влияния на §YБлижнем Востоке§! и §в Мире§!.\n\n §Y[IRQ.GetNameWithFlag]§! §YСфера Влияния§!включает себя:\n§Y[SAU.GetNameWithFlag]§!\n§Y[YEM.GetNameWithFlag]§! \n§Y[SYR.GetFlag]§! §YВосточная Сирия§!\n§Y[JOR.GetNameWithFlag]§!\n§Y[PAL.GetNameWithFlag]§!\n§Y[EGY.GetNameWithFlag]§! §YСинай§!\nВсе §Y Северные Африканские регионы§!\n\n §Y[PER.GetNameWithFlag]§! §YСфера Влияния§!включает себя:\n§Y[SAU.GetNameWithFlag]§!\n§Y[BHR.GetNameWithFlag]§!\n§Y[QAT.GetNameWithFlag]§!\n§Y[UAE.GetNameWithFlag]§!\n§Y[OMA.GetNameWithFlag]§!\n§Y[SOV.GetNameWithFlag]§! \n\n §Y[TUR.GetNameWithFlag]§! §YСфера Влияния§!включает себя:\n§Y[GRE.GetNameWithFlag]§!\n§Y[ROM.GetNameWithFlag]§!\n§Y[YUG.GetNameWithFlag]§!\n§Y[ITA.GetNameWithFlag]§!\n§Y[SPR.GetNameWithFlag]§!\n§Y[FRA.GetNameWithFlag]§!\n§Y[POR.GetNameWithFlag]§!\nВсе §Y Черно морские регионы§!\n\n §Y[AFG.GetFlag] Афганистан§! §YСфера Влияния§!включает себя:\n§Y[KYR.GetNameWithFlag]§!\n§Y[BUK.GetNameWithFlag]§!\n§Y[SIK.GetNameWithFlag]§!\n§Y[RAJ.GetNameWithFlag]§!\n§Y[PAK.GetNameWithFlag]§!\n§Y[SOV.GetFlag] Южные Совесткие территории§!"
+
+#####################
+####### IRAQ ########
+#####################
+IRQ_ideas_rebirth_babylon: "Возрождение Вавилона"
+IRQ_ideas_rebirth_babylon_desc: "Возрождение древней цивилизации Вавилона. Время восстановления славы и могущества прошлого."
+IRQ_ideas_rise_of_fascism: "Фашизм на подьёме"
+IRQ_ideas_rise_of_fascism_desc: "Возникновение фашизма в Ираке - это реакция на политические и социальные потрясения того времени. Он представляет собой сдвиг в сторону авторитаризма и национализма с упором на сильное руководство и военную мощь."
+
+
+#####################
+####### IRAN ########
+#####################
+PER_war_plan_satrapies_idea:0 "Военный план «Сатрапис»"
+PER_war_plan_satrapies_idea_desc:0 "Мы возродили древнюю систему сатрапий для управления будущими завоеваниями. Этот план укрепляет нашу решимость в борьбе с Англией и Оманом, хотя и может вызвать волнения на родине."
+PER_war_plan_musleew_idea:0 "Военный план «Мюсли»"
+PER_war_plan_musleew_idea_desc:0 "Началась подготовка к восточной кампании против Британской Индии. Этот план нацелен на получение военных преимуществ в регионе ценой некоторой внутренней стабильности."
+PER_war_plan_horoborrow_idea:0 "Военный план «Гороборроу»"
+PER_war_plan_horoborrow_idea_desc:0 "Наши генералы разрабатывают планы прямой конфронтации с Советским Союзом. За агрессию приходится платить, но наши военные получают преимущество."
+
+#####################
+###### TURKEY #######
+#####################
+TUR_traumatized_nation:0 "Травмированная нация"
+TUR_black_sea_trade_agreement:0 "Черноморское торговое соглашение"
+TUR_liberal_economic_reforms_idea:0 "Идея либеральных экономических реформ"
+TUR_GRE_fascists_rising:0 "Восстание фашистов"
+
+TUR_land_forces_modifier:0 "Сухопутные силы Турции"
+TUR_navy_forces_modifier:0 "Военно-морские силы Турции"
+TUR_air_forces_modifier:0 "Военно-воздушные силы Турции"
+TUR_industrial_miracle_modifier:0 "Индустриальное чудо"
+
+TUR_christianity_1:0 "Рассвет христианского государства"
+TUR_christianity_2:0 "Признание христианства"
+TUR_christianity_3:0 "Христианское возрождение"
+TUR_christianity_4:0 "Расширение христианского влияния"
+TUR_christianity_5:0 "Укрепление христианского правления"
+TUR_christianity_6:0 "Христианская Республика"
+TUR_christianity_7:0 "Христианское Государство"
+
+
+###########################
+####### AFGHANISTAN #######
+###########################
+
+AFG_knights_of_faith_1: "Рыцари веры"
+AFG_no_condoms_in_country: "Презервативов в стране нет"
+AFG_islamian_state: "Исламское государство"
+AFG_pashtunwali_domination_fascism: "Господство пуштунвали"
+AFG_legion_afghan_peacemakers: "Легион Афганских Миротворцев"

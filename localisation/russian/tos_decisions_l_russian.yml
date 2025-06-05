@@ -1,0 +1,265 @@
+﻿l_english:
+ decision_cost_ae_1000:0 "£artillery_equipment_text_icon  §Y1000§!"
+ decision_cost_ae_1000_blocked:0 "£artillery_equipment_text_icon  §R1000§!"
+ decision_cost_ae_1000_tooltip:0 "Стоимость принятия решения: £artillery_equipment_text_icon  §Y1000§!"
+
+ decision_cost_se_3000:0 "£support_equipment_text_icon  §Y3000§!"
+ decision_cost_se_3000_blocked:0 "£support_equipment_text_icon  §R3000§!"
+ decision_cost_se_3000_tooltip:0 "Стоимость принятия решения: £support_equipment_text_icon  §Y3000§!"
+ 
+ decision_cost_ie_10000:0 "£infantry_equipment_text_icon  §Y10000§!"
+ decision_cost_ie_10000_blocked:0 "£infantry_equipment_text_icon  §R10000§!"
+ decision_cost_ie_10000_tooltip:0 "Стоимость принятия решения: £infantry_equipment_text_icon  §Y10000§!"
+ 
+ decision_cost_ie_1000:0 "£infantry_equipment_text_icon  §Y1000§!"
+ decision_cost_ie_1000_blocked:0 "£infantry_equipment_text_icon  §R1000§!"
+ decision_cost_ie_1000_tooltip:0 "Стоимость принятия решения: £infantry_equipment_text_icon  §Y1000§!"
+
+ decision_cost_ie_2000:0 "£infantry_equipment_text_icon  §Y2000§!"
+ decision_cost_ie_2000_blocked:0 "£infantry_equipment_text_icon  §R2000§!"
+ decision_cost_ie_2000_tooltip:0 "Стоимость принятия решения: £infantry_equipment_text_icon  §Y2000§!"
+
+ decision_cost_ie_500:0 "£infantry_equipment_text_icon  §Y500§!"
+ decision_cost_ie_500_blocked:0 "£infantry_equipment_text_icon  §R500§!"
+ decision_cost_ie_500_tooltip:0 "Стоимость принятия решения: £infantry_equipment_text_icon  §Y500§!"
+
+ decision_cost_civ_factory_1:0 "£civ_factory  §Y1§!"
+ decision_cost_civ_factory_1_blocked:0 "£civ_factory  §R1§!"
+ decision_cost_civ_factory_1_tooltip:1 "Стоимость решения: £civ_factory  §Y1§! когда решение активно"
+
+ decision_cost_civ_factory_2:0 "£civ_factory  §Y2§!"
+ decision_cost_civ_factory_2_blocked:0 "£civ_factory  §R2§!"
+ decision_cost_civ_factory_2_tooltip:1 "Стоимость решения: £civ_factory  §Y2§! когда решение активно"
+
+ decision_cost_civ_factory_3:1 "£civ_factory  §Y3§!"
+ decision_cost_civ_factory_3_blocked:1 "£civ_factory  §R3§!"
+ decision_cost_civ_factory_3_tooltip:1 "Стоимость решения: £civ_factory  §Y3§! когда решение активно"
+
+ decision_cost_civ_factory_5:1 "£civ_factory  §Y5§!"
+ decision_cost_civ_factory_5_blocked:1 "£civ_factory  §R5§!"
+ decision_cost_civ_factory_5_tooltip:1 "Стоимость решения: £civ_factory  §Y5§! когда решение активно"
+#####################
+###  MESOPOTAMIA  ###
+#####################
+# form_neo_mesopotamia_category_desc:0 "123123"
+
+#####################
+###    KUSHAN     ###
+#####################
+form_country_afghanistan_and_border_states_coring_tt: "Все §YАфганские§! и §YЮжные прикордонные§! регионы становятся нашими национальными"
+AFG_integrate_east_muslims_tt: "Интегрировать все §YИсламские Восточные§! регионы"
+controls_all_eastern_muslims_regions_tt: "Контролировать все §YИсламские Восточные§! регионы"
+integrate_east_muslims: "Интегрировать Восточных Мусульман"
+integrate_east_muslims_desc: "Объединить и включить индийские мусульманские популяции с восточных регионов в нашу державу."
+integrate_south_indians: "Интегрировать Южных Индуистов"
+integrate_south_indians_desc: "Взять различные сообщества Южной Индии под нашу политическую и культурную парасольку."
+form_kushan_empire_category: "Кушанское Царство"
+form_kashuan_empire: "Формировать Кушанское Царство"
+form_kashuan_empire_desc: "Объединить различные территории Центральной Азии и Индии под баннером Кушанского Царства, восстанавливая древнюю славу и силу."
+form_kushan_empire_category_desc: "Кушанское Царство было центром торговли, вероисповидания и культуры - перекрестье между Буддистами, Зороастрианистами и Греко-Индийскими традициями. Объедините эти земли еще раз и откройте новый золотой век."
+form_country_afghan_indian_border_required_states_tt: "Контролировать все §YИндийские регионы§! возле Афгано-Индийской границы"
+integrate_bilad_aljibal: "Интегрировать Биляд-Айджабаль"
+integrate_pakistan: "Интегрировать Гангару"
+integrate_khalistan: "Интегрировать Кхалистан"
+integrate_central_india: "Интегрировать Центральные Индийские Регионы"
+integrate_bengalis: "Интегрировать Бенгалис"
+integrate_south_indians: "Интегрировать Южные Индийские Регионы"
+expand_south_indians: "Расширение на Юг"
+
+#####################
+###   SASANIAN    ###
+#####################
+## FORM DECISIONS
+form_sasanian_mazun_required_states_tt: "Контролировать все §YМазунские§! регионы. Это включительно с §YМусандамом§!, §YБахрейном§!, §YАбу-Даби§!, §YКатаром§!, §YОманом§! и §YМускатом§!"
+form_sasanian_cities_change_name_tt: "Несколько городов будут переименованы в их старые исторические имена из §YСасанидской Эры§!"
+form_sasanian_integrate_warzan_tt: "Контролировать все §YВарзанские§! регионы"
+form_sasanian_integrate_makran_tt: "Контролировать все §YМакранские§! регионы"
+form_sasanian_integrate_anartta_tt: "Контролировать §YАнаррту§!"
+form_sasanian_integrate_marv_region_tt: "Контролировать §YМарв§!"
+form_sasanian_integrate_varena_xsaora_spahan_rud_tt: "Контролировать §YСпрахан-Руд§!"
+form_sasanian_integrate_varena_xsaora_abar_rudan_tt: "Контролировать §YАбар-Рудан§!"
+form_sasanian_integrate_varena_xsaora_gurgan_daz_tt: "Контролировать §YГурган§!"
+form_sasanian_integrate_varena_xsaora_varnagird_tt: "Контролировать §YВарнагрид§!"
+integrate_varena_xsaora:0 "Контролировать Варена-Ксароуса"
+
+
+#####################
+###   BYZANTINE   ###
+#####################
+
+## requires states
+form_country_dobrudja_required_tt: "Контролировать §YДобруджу§!"                         # регіон
+form_country_macedonia_required_tt: "Контролировать §YМакедонию§!"                      # регіон
+form_country_southern_serbia_region_required_tt: "Контролировать §YЮжную Сербию§!"  # регіон
+form_country_serbia_required_states_tt: "Контролировать все §YСербские§! регионы"                # країна
+form_country_croatia_required_states_tt: "Контролировать все §YХорватские§! регионы"              # країна
+form_country_zara_required_tt: "Контролировать §YЗара§!"                                # регіон
+form_country_slovenia_required_states_tt: "Контролировать все §YСловенские§! регионы"            # країна
+form_country_litorale_istria_required_tt: "Контролировать §YИстрия§!"                  # регіон
+form_country_lombardy_venetia_required_states_tt: "Контролировать все §YЛомбардо-Венецианские§! регионы"  # історична держава
+form_country_papal_state_required_states_tt: "Контролировать все регионы §YПапской Державы§!"      # історична держава
+form_country_toscana_required_tt: "Контролировать §YТоскану§!"                         # регіон
+form_country_piedmont_required_tt: "Контролировать §YПьедмонт§!"                       # регіон
+form_country_piedmont_sardinia_required_tt: "Контролировать все §YПьедмонт-Сардинские§! регионы"  # історична держава
+form_country_piedmont_sardinia_required_tt: "Контролировать §YПьедмонт-Сардинию§!" # Region
+form_country_two_sicilias_required_states_tt: "Контролировать §YКоролевство Двух Сицилий§!"  # історична держава
+form_country_occitania_required_states_tt: "Контролировать §YОкситанию§!"              # регіон
+form_country_visighotic_required_states_tt: "Контролировать §YВестготов§! регион"            # регіон/історичний
+form_country_visighotic_expand_required_tt: "Контролировать §YВестготов§! регион"            # регіон
+form_country_suebi_required_states_tt: "Контролировать §YСвевские§! территории"                      # регіон/історичний
+form_country_wallachia_and_moldova_required_states_tt: "Контролировать все §YВаллажские и Молдовские§! регионы"  # країни
+form_country_expand_wallachia_and_moldova_required_states_tt: "Контролировать все §YВаллажские и Молдовские§! регионы"  # країни
+form_country_transylvania_required_states_tt: "Контролировать §YТрансильванию§!"        # регіон
+form_country_rhos_north_required_states_tt: "Контролировать §YСеверную Рутению§!"
+form_country_rhos_south_required_states_tt: "Контролировать §YЮжную Рутению§!"
+form_country_rhos_west_required_states_tt: "Контролировать §YЗападные Рутенские§! регионы"
+
+## category
+form_neo_byzantine_empire_category: "Византийские Амбиции"
+form_neo_byzantine_empire_category_desc: "Разожгите пламя Восточной Римской империи, восстановив и расширив ее былые владения."
+
+## tooltips
+neo_byz_form_bulgarian_dux_tt:0 "Сформировать §YБолгариаскую Фему§!"
+neo_byz_expand_bulgarian_dux_tt:0 "Расширить исторические §YБолгарские§! регионы для нашей §YФемы Болгариасов§!"
+neo_byz_form_serbian_dux_tt:0 "Сформировать Королевство §YРашка§!"
+neo_byz_form_croatia_dux_tt:0 "Сформировать §YДалматийскую Фему§!"
+neo_byz_expand_croatia_dux_tt:0 "Расширить исторические §YДалматийские Регионы§! регионы для нашей §YФемы Далматийцев§!"
+neo_byz_form_lombardy_venetia_dux_tt:0 "Сформировать §Y[LBV.GetName] Королевство§!"
+neo_byz_form_papal_state_dux_tt:0 "Сформировать §YПапский Центрум§!"
+neo_byz_form_toscana_dux_tt:0 "Основать §YТоскану§!"
+neo_byz_form_piedmont_dux_tt:0 "Основать §YПъедмонт§!"
+neo_byz_expand_piedmont_sardinia_dux_tt:0 "Расширить §YПъедмонтские регионы§! для формирования §YПъедмонт-Сардинии§!"
+neo_byz_nationalize_two_sicilias_tt:0 "Национализировать §YДве Сицилии§! и сделать нашими заморскими территориями"
+neo_byz_form_occitania_dux_tt:0 "Сформировать §YОкситанскую Фему§!"
+neo_byz_form_visighotic_dux_tt:0 "Основать правильных §YВестготов§!"
+neo_byz_expand_visighotic_dux_tt:0 "Расширить §YВестготские§! территории"
+neo_byz_form_suebi_dux_tt:0 "Основать §YСвевское Королевство§!"
+neo_byz_form_wallachia_and_moldova_dux_tt:0 "Сформировать §YВаллажско-Молдовское княжество§!"
+neo_byz_expand_wallachia_and_moldova_dux_tt:0 "Расширить §YВаллажско-Молдовские§! национальные регионы. Вернуть Молдову в Молдовское княжество"
+neo_byz_form_transylvania_dux_tt:0 "Сформировать §YТрансильванский Дюкс§!"
+neo_byz_form_rhos_dux_tt:0 "Сформировать §YРосский Дюкс§!"
+neo_byz_expand_rhos_dux_tt:0 "Расширить §YРосский Дюкс§!"
+neo_byz_expand_second_rhos_dux_tt:0 "Расширение на запад для §YРосского Дюкса§!"
+
+
+## option names
+neobyz_restore_byzantium: "Восстановить Византиум"
+neobyz_form_bulgarian_dux: "Формировать Болгариаскую Фему"
+neobyz_expand_bulgarian_states: "Расширение для Болгарианцев"
+neobyz_form_serbian_dux: "Сформировать Сербскую Рашку"
+neobyz_form_croatia_dux: "Сформировать Далмацийскую Фему"
+neobyz_expand_croatian_states: "Расширение для далмацийских земель"
+neobyz_form_lombardy_venetia: "Засновать Ломбардию-Венецию"
+neobyz_form_papal_state: "Засновать Папский Центрум"
+neobyz_form_toscana: "Засновать Тоскану"
+neobyz_form_piedmont: "Засновать Пъедмонт"
+neobyz_expand_piedmont_sardinia: "Расширить Пъедмонт-Сардинские земли"
+neobyz_nationalize_two_sicilias: "Национализировать Две Сицилии"
+neobyz_form_occitania: "Сформировать Окситанскую Фему"
+neobyz_form_visighotic: "Засновать Вестготов"
+neobyz_expand_visighotic: "Расширить Вестготские наши владения"
+neobyz_form_suebi_kingdom: "Засновать Свевское Королевство"
+neobyz_form_wallachia_and_moldova: "Засновать Валлажско-Молдовское Королевство"
+neobyz_expand_wallachia_and_moldova: "Расширить Ввллажско-Молдовские владения"
+neobyz_form_transylvania: "Засновать Трансильванию"
+neobyz_form_rhos_dux: "Формировать Дуче Россцев"
+neobyz_expand_rhos_dux: "Расширить Росское земельное влияние"
+neobyz_expand_second_rhos_dux: "Расширение Россцев на запад"
+
+#####################
+#####   IRAN   ######
+#####################
+PER_buying_fabrics_category:0 "Импорт фабрик"
+PER_buying_fabrics_category_desc:0 "Чтобы обеспечить растущие военные и гражданские потребности, мы должны импортировать ткани из-за рубежа."
+PER_buying_mil_fabric:0 "Импорт военных заводов"
+PER_buying_mil_fabric_desc:0 "Мы будем поставлять прочные ткани, подходящие для униформы, снаряжения и военного использования."
+PER_buying_civ_fabric:0 "Импорт индустриальных комплексов"
+PER_buying_civ_fabric_desc:0 "Для поддержания производства нашей гражданской текстильной промышленности требуются иностранные материалы."
+PER_selling_guns_category:0 "Экспорт оружия"
+PER_selling_guns_category_desc:0 "Иран будет получать прибыль от экспорта оружия и оборудования иностранным государствам, вовлеченным в конфликты."
+PER_sell_weapon:0 "Продать оружие пехоты"
+PER_sell_weapon_desc:0 "Основные виды стрелкового оружия будут продаваться за границу для укрепления союзников или получения прибыли."
+PER_sell_artillery:0 "Продать артиллерию"
+PER_sell_artillery_desc:0 "Излишки артиллерии могут быть проданы заинтересованным странам для поддержки их военных усилий."
+PER_sell_support_equipment:0 "Продам вспомогательное оборудование"
+PER_sell_support_equipment_desc:0 "Мы будем экспортировать средства связи, логистические инструменты и инженерные комплекты иностранным покупателям."
+
+form_sasanian_empire_category:0 "Сасанидская Империя"
+form_sasanian_empire_category_desc:0 "Укрепив свою власть и отвоевав свое наследие, пришло время восстановить славу Сасанидской империи."
+form_sasanian_empire:0 "Провозгласить Сасанидскую Империю"
+form_sasanian_empire_desc:0 "Укрепив свою власть и отвоевав свое наследие, пришло время восстановить славу Сасанидской империи."
+integrate_warzan:0 "Интегрировать Варзань"
+integrate_warzan_desc:0 "Мы реинтегрируем Варзан, основную провинцию древней Персии, в наше современное владение."
+integrate_merv_region:0 "Интегрировать Марвские регионы"
+integrate_merv_region_desc:0 "Мервская область находится на границе нашей цивилизации. Он должен быть возвращен под управление Ирана."
+integrate_ma_wara_bab_al_abwab:0 "Интегрировать Ма Вара Баб аль-Абваб"
+integrate_ma_wara_bab_al_abwab_desc:0 "Этот исторический регион за воротами Кавказа имеет стратегическое и символическое значение."
+integrate_ma_wara_an-nahr:0 "Интегрировать Ма Вара ан-Нахр"
+integrate_ma_wara_an-nahr_desc:0 "Мы вернем себе землю за рекой - Ма Вара ан-Нахр - колыбель персидского культурного влияния."
+integrate_at_turk_al_shimalia:0 "Интегрировать Северный Туркестан"
+integrate_at_turk_al_shimalia_desc:0 "Северный Туркестан должен быть реинтегрирован в иранскую сферу, чтобы восстановить нашу восточную границу."
+integrate_desht_i_kypchak:0 "Интегрировать Дешт-и-Кипчак"
+integrate_desht_i_kypchak_desc:0 "Когда-то эта огромная степь была подвластна нам. Мы вернем Дешт-и-Кипчак в состав нашей империи."
+integrate_shark_turkistani:0 "Интегрировать Шарк Туркестан"
+integrate_shark_turkistani_desc:0 "Мы присоединим к себе Шарк Туркестан, укрепив наши стратегические позиции в Центральной Азии."
+integrate_makran:0 "Интегрировать Макран"
+integrate_makran_desc:0 "Восточные территории вблизи Макрана имеют экономическую и стратегическую ценность. Они должны быть интегрированы в наши владения."
+PER_integrate_all_soviet_tt: "Открываются §Yрешения§! которые дают возможность значительно повысить подничение на территориях §Y[SOV.GetNameWithFlag]§! "
+PER_our_faith_is_similar_to_yours_desc: "Несмотря на многочисленные политические разногласия и границы, наши народы объединяет глубокая духовная и культурная близость. Подчеркивая эти общие черты, мы сможем укрепить связи с нашими соседями и заложить основу для большего регионального единства."
+
+#####################
+#####  TURKEY  ######
+#####################
+TUR_nationalize_cypryotes: "Национализировать Киприотов"
+TUR_dis_politic_cat: "Внешняя политика"
+TUR_nationalize_cypryotes_desc: "Народ Кипра имеет глубокие исторические и культурные связи с нашей страной. Мы будем стремиться к их полной интеграции в нашу государственную структуру."
+TUR_nationalize_road_to_lebanon: "Дорога к Ливану"
+TUR_nationalize_road_to_lebanon_desc: "Расширяя свое присутствие и поддержку по всему Леванту, мы прокладываем путь к более широкому региональному влиянию - которое в конечном итоге может распространиться и на Ливан."
+TUR_nationalize_crimea: "Претензии к Крыму"
+TUR_nationalize_crimea_desc: "Геополитическое значение Крыма и его историческая связь с нашей империей делают его естественной целью для реинтеграции. Мы заложим основу для его возвращения."
+tos_TUR_press_the_hatay_issue: "Запросить Хатай"
+TUR_accept_christianity_cat: "Принять христианство"
+TUR_accept_christianity_in_big_city: "Христианизировать [FROM.GetName]"
+TUR_accepting_christianity_in_big_city_flag: "Не участвовали в христианизации в это время"
+
+#####################
+#### AFGHANISTAN ####
+#####################
+
+AFG_make_revolution_tt: "([AFG.GetFlag]§YИсламский-Радж регион§!) становится владельцем §YИсламских Индийских территорий§!"
+AFG_for_us_bioproduct_tt: "- Для нас: "
+AFG_for_them_bioproduct_tt: "- Для них: "
+AFG_islam_revolution_category: "Исламская Революция"
+AFG_islam_revolution_category_desc: "Решения и задачи, связанные с инициированием и распространением Исламской Революции."
+AFG_make_revolution: "Начать исламскую революцию"
+AFG_make_revolution_desc: "Начать общенациональную исламскую революцию, чтобы перестроить политический и социальный строй Афганистана."
+AFG_send_islam_people_to_india: "Отправьте исламских беженцев в [FROM.GetName]"
+AFG_send_islam_people_to_india_desc: "Отправьте религиозных эмиссаров в Индию, чтобы распространить исламское влияние и заручиться поддержкой нашего дела."
+AFG_barons_category: "Бароны и Торговля"
+AFG_barons_category_desc: "В центре внимания - власть местных баронов и торговля прибыльными товарами."
+AFG_sell_opium: "Продать Опиум"
+AFG_sell_opium_desc: "Занимайтесь торговлей опиумом, чтобы увеличить прибыль и укрепить влияние баронов."
+AFG_sell_bio_product: "Продажа биологических продуктов"
+AFG_sell_bio_product_desc: "Ведь иногда люди - это просто еще один товар на рынке. Давайте заключим несколько «особых» сделок!"
+AFG_peace_conferention: "Конференция по вопросам мира ИСЛАМ-РАДЖ"
+AFG_sending_islamists_to_india_flag: "Не посылает исламистов в момент"
+AFG_integrate_our_islam_friends_rajapakistana:0 "Захватить правительство наших соседей"
+AFG_integrate_rajak:0 "Интегрировать Раджапакастан"
+
+
+#####################
+####    IRAQ     ####
+#####################
+IRQ_request_baghdad_pact_territories_cat: "Запрос на территории в соответствии с пактом"
+IRQ_request_baghdad_pact_territories_cat_desc: "Багдадский пакт заложил основу для взаимного сотрудничества и региональной стабильности. Все подписавшие его стороны признали, что Северная Африка находится в сфере нашего законного влияния. Теперь, когда баланс сил изменился, настало время напомнить нашим партнерам об их обязательствах и заявить о своих законных претензиях."
+IRQ_request_region: "Запросить наш регоин"
+IRQ_proclaim_arab_fed_mor_tt: "Контролировать все §YМарроканские§! регионы"
+IRQ_proclaim_arab_fed_alg_tt: "Контролировать все §YАлжирские§! регионы"
+IRQ_proclaim_arab_fed_tun_tt: "Контролировать все §YТунискские§! регионы"
+IRQ_proclaim_arab_fed_lba_tt: "Контролировать все §YЛивийские§! регионы"
+IRQ_proclaim_arab_fed_egy_tt: "Контролировать все §YЕгипетские§! регионы"
+
+IRQ_african_arab_revolt_cat: "Африканская Арабская Революция"
+IRQ_develop_separatist_movement: "Развитие сепаратистских движений в [FROM.GetName]"
+IRQ_provoke_independent_war_consolidated: "Спровоцировать Войну за Независимость [FROM.GetName]"
+IRQ_set_puppet_government: "Захватить [FROM.GetAdjective] Администрацию"
