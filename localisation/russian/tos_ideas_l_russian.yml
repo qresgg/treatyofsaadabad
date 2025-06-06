@@ -1,10 +1,10 @@
-﻿l_english:
+﻿l_russian:
 ####################
 ##### SHARED #######
 ####################
 tos_secret_baghdad_pact:0 "Багдадский пакт"
 tos_global_resource_expansion:0 "Глобальная Ресурсная Экспансия"
-tos_secret_baghdad_pact_desc:0 "§Y[IRQ.GetNameWithFlag]§! и §Y[TUR.GetNameWithFlag]§!, §Y[AFG.GetNameWithFlag]§!, §Y[PER.GetNameWithFlag]§! создадим наши сферы влияния на §YБлижнем Востоке§! и §в Мире§!.\n\n §Y[IRQ.GetNameWithFlag]§! §YСфера Влияния§!включает себя:\n§Y[SAU.GetNameWithFlag]§!\n§Y[YEM.GetNameWithFlag]§! \n§Y[SYR.GetFlag]§! §YВосточная Сирия§!\n§Y[JOR.GetNameWithFlag]§!\n§Y[PAL.GetNameWithFlag]§!\n§Y[EGY.GetNameWithFlag]§! §YСинай§!\nВсе §Y Северные Африканские регионы§!\n\n §Y[PER.GetNameWithFlag]§! §YСфера Влияния§!включает себя:\n§Y[SAU.GetNameWithFlag]§!\n§Y[BHR.GetNameWithFlag]§!\n§Y[QAT.GetNameWithFlag]§!\n§Y[UAE.GetNameWithFlag]§!\n§Y[OMA.GetNameWithFlag]§!\n§Y[SOV.GetNameWithFlag]§! \n\n §Y[TUR.GetNameWithFlag]§! §YСфера Влияния§!включает себя:\n§Y[GRE.GetNameWithFlag]§!\n§Y[ROM.GetNameWithFlag]§!\n§Y[YUG.GetNameWithFlag]§!\n§Y[ITA.GetNameWithFlag]§!\n§Y[SPR.GetNameWithFlag]§!\n§Y[FRA.GetNameWithFlag]§!\n§Y[POR.GetNameWithFlag]§!\nВсе §Y Черно морские регионы§!\n\n §Y[AFG.GetFlag] Афганистан§! §YСфера Влияния§!включает себя:\n§Y[KYR.GetNameWithFlag]§!\n§Y[BUK.GetNameWithFlag]§!\n§Y[SIK.GetNameWithFlag]§!\n§Y[RAJ.GetNameWithFlag]§!\n§Y[PAK.GetNameWithFlag]§!\n§Y[SOV.GetFlag] Южные Совесткие территории§!"
+tos_secret_baghdad_pact_desc:0 "§Y[IRQ.GetNameWithFlag]§! и §Y[TUR.GetNameWithFlag]§!, §Y[AFG.GetNameWithFlag]§!, §Y[PER.GetNameWithFlag]§! создадим наши сферы влияния на §YБлижнем Востоке§! и §в Мире§!.\n\n §Y[IRQ.GetNameWithFlag]§!:\n§Y[SAU.GetNameWithFlag]§!\n§Y[YEM.GetNameWithFlag]§! \n§Y[SYR.GetFlag]§! §YВосточная Сирия§!\n§Y[JOR.GetNameWithFlag]§!\n§Y[PAL.GetNameWithFlag]§!\n§Y[EGY.GetNameWithFlag]§! §YСинай§!\nВсе §Y Северные Африканские регионы§!\n\n §Y[PER.GetNameWithFlag]§!:\n§Y[SAU.GetNameWithFlag]§!\n§Y[BHR.GetNameWithFlag]§!\n§Y[QAT.GetNameWithFlag]§!\n§Y[UAE.GetNameWithFlag]§!\n§Y[OMA.GetNameWithFlag]§!\n§Y[SOV.GetNameWithFlag]§! \n\n §Y[TUR.GetNameWithFlag]§! \n§Y[GRE.GetNameWithFlag]§!\n§Y[ROM.GetNameWithFlag]§!\n§Y[YUG.GetNameWithFlag]§!\n§Y[ITA.GetNameWithFlag]§!\n§Y[SPR.GetNameWithFlag]§!\n§Y[FRA.GetNameWithFlag]§!\n§Y[POR.GetNameWithFlag]§!\nВсе §Y Черно морские регионы§!\n\n §Y[AFG.GetFlag] Афганистан§!\n§Y[KYR.GetNameWithFlag]§!\n§Y[BUK.GetNameWithFlag]§!\n§Y[SIK.GetNameWithFlag]§!\n§Y[RAJ.GetNameWithFlag]§!\n§Y[PAK.GetNameWithFlag]§!\n§Y[SOV.GetFlag] Южные Совесткие территории§!"
 IRQ_raising_iraqi_fascists:0 "Фашизм на подьёме"
 tos_secret_baghdad_pact_tt:0 "§Y[IRQ.GetNameWithFlag]§! и §Y[TUR.GetNameWithFlag]§!, §Y[AFG.GetNameWithFlag]§!, §Y[PER.GetNameWithFlag]§! создадим наши сферы влияния на §YБлижнем Востоке§! и §в Мире§!.\n\n §Y[IRQ.GetNameWithFlag]§! §YСфера Влияния§!включает себя:\n§Y[SAU.GetNameWithFlag]§!\n§Y[YEM.GetNameWithFlag]§! \n§Y[SYR.GetFlag]§! §YВосточная Сирия§!\n§Y[JOR.GetNameWithFlag]§!\n§Y[PAL.GetNameWithFlag]§!\n§Y[EGY.GetNameWithFlag]§! §YСинай§!\nВсе §Y Северные Африканские регионы§!\n\n §Y[PER.GetNameWithFlag]§! §YСфера Влияния§!включает себя:\n§Y[SAU.GetNameWithFlag]§!\n§Y[BHR.GetNameWithFlag]§!\n§Y[QAT.GetNameWithFlag]§!\n§Y[UAE.GetNameWithFlag]§!\n§Y[OMA.GetNameWithFlag]§!\n§Y[SOV.GetNameWithFlag]§! \n\n §Y[TUR.GetNameWithFlag]§! §YСфера Влияния§!включает себя:\n§Y[GRE.GetNameWithFlag]§!\n§Y[ROM.GetNameWithFlag]§!\n§Y[YUG.GetNameWithFlag]§!\n§Y[ITA.GetNameWithFlag]§!\n§Y[SPR.GetNameWithFlag]§!\n§Y[FRA.GetNameWithFlag]§!\n§Y[POR.GetNameWithFlag]§!\nВсе §Y Черно морские регионы§!\n\n §Y[AFG.GetFlag] Афганистан§! §YСфера Влияния§!включает себя:\n§Y[KYR.GetNameWithFlag]§!\n§Y[BUK.GetNameWithFlag]§!\n§Y[SIK.GetNameWithFlag]§!\n§Y[RAJ.GetNameWithFlag]§!\n§Y[PAK.GetNameWithFlag]§!\n§Y[SOV.GetFlag] Южные Совесткие территории§!"
 
@@ -34,11 +34,6 @@ TUR_traumatized_nation:0 "Травмированная нация"
 TUR_black_sea_trade_agreement:0 "Черноморское торговое соглашение"
 TUR_liberal_economic_reforms_idea:0 "Идея либеральных экономических реформ"
 TUR_GRE_fascists_rising:0 "Восстание фашистов"
-
-TUR_land_forces_modifier:0 "Сухопутные силы Турции"
-TUR_navy_forces_modifier:0 "Военно-морские силы Турции"
-TUR_air_forces_modifier:0 "Военно-воздушные силы Турции"
-TUR_industrial_miracle_modifier:0 "Индустриальное чудо"
 
 TUR_christianity_1:0 "Рассвет христианского государства"
 TUR_christianity_2:0 "Признание христианства"

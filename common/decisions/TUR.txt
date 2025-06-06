@@ -1090,7 +1090,7 @@ TUR_accept_christianity_cat = {
 
 		remove_effect = {
 			clr_country_flag = TUR_accepting_christianity_in_big_city_flag
-			change_variable = { which = TUR_christianity_level value = 1 }
+			add_to_variable = { var = TUR_christianity_level value = 1 }
 
 			limit = {
 				check_variable = { which = TUR_christianity_level value > 7 }
@@ -2503,7 +2503,7 @@ TUR_kurdish_state_management_category = {
 			}
 			else = { 
 				800 = { save_event_target_as = TUR_kurdish_state_event_target }
-				event_target:TUR_	h_state_event_target = { TUR_integrate_kurdish_state_effect = yes }
+				event_target:TUR_kurdish_state_event_target = { TUR_integrate_kurdish_state_effect = yes }
 			}
 		}
 	}

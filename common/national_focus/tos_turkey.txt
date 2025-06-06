@@ -45,12 +45,6 @@ focus_tree = {
 	}
 ### MAIN
 
-shortcut = {
-	name = TUR_tos_communism_branch
-	target = TUR_revolution_not_reform
-	scroll_wheel_factor = 0.8
-	}
-
 	shortcut = {
 	name = TUR_tos_historical_branch
 	target = TUR_continue_the_moderate_course
@@ -65,7 +59,7 @@ shortcut = {
 
 	default = no
 
-	continuous_focus_position = { x = 250 y = 1500 }	
+	continuous_focus_position = { x = 120 y = 750 }	
 
 	shared_focus = SSB_the_saadabad_pact
 
@@ -852,6 +846,7 @@ shortcut = {
 				TUR_industrial_line_change_production_efficiency_factor = 0.07
 				tooltip = line_change_production_efficiency_factor_tt
 			}
+			remove_ideas = TUR_sectarianism
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -973,8 +968,8 @@ shortcut = {
 		icon = {
 		    trigger = { 
 		    	OR = {
-		    		has_cosmetic_tag = BYZ_byzantium
-		    		has_cosmetic_tag = BYZ_byzantine_empire
+		    		has_cosmetic_tag = BYZ_byzantium_UNIFIED_tos
+		    		has_cosmetic_tag = BYZ_empire_UNIFIED_tos
 		    	}
 		    }
 		    value = GFX_focus_TUR_land_forces_BYZ
@@ -1884,8 +1879,8 @@ shortcut = {
 		icon = {
 		    trigger = { 
 		    	OR = {
-		    		has_cosmetic_tag = BYZ_byzantium
-		    		has_cosmetic_tag = BYZ_byzantine_empire
+		    		has_cosmetic_tag = BYZ_byzantium_UNIFIED_tos
+		    		has_cosmetic_tag = BYZ_empire_UNIFIED_tos
 		    	}
 		    }
 		    value = GFX_focus_TUR_air_forces_BYZ
@@ -2708,8 +2703,8 @@ shortcut = {
 		icon = {
 		    trigger = { 
 		    	OR = {
-		    		has_cosmetic_tag = BYZ_byzantium
-		    		has_cosmetic_tag = BYZ_byzantine_empire
+		    		has_cosmetic_tag = BYZ_byzantium_UNIFIED_tos
+		    		has_cosmetic_tag = BYZ_empire_UNIFIED_tos
 		    	}
 		    }
 		    value = GFX_focus_TUR_navy_forces_BYZ
@@ -2957,6 +2952,9 @@ shortcut = {
 		prerequisite = { 
 			focus = TUR_continue_the_naval_expansion
 		}
+		available = {
+			is_major = yes
+		}
 		cost = 5
 		x = -2
 		y = 1
@@ -3123,6 +3121,7 @@ shortcut = {
 			focus = TUR_continue_the_naval_expansion
 		}
 		available = {
+			is_major = yes
 			NOT = {
 				340 = {
 					is_demilitarized_zone = yes
@@ -5577,6 +5576,7 @@ shortcut = {
 			show_ideas_tooltip = TUR_nuri_killigil
 			show_ideas_tooltip = TUR_riza_nur
 			hidden_effect = {
+				retire_country_leader = yes
 				set_party_name = { 
 					ideology = neutrality
 					long_name = TUR_sultanate_party_long
@@ -10338,7 +10338,6 @@ shortcut = {
 			}
 			set_rule = { can_send_volunteers = yes }
 			custom_effect_tooltip = TUR_unlocks_hatay_decision_tt
-			custom_effect_tooltip = TUR_unlocks_saadabad_decision_tt
 			mark_focus_tree_layout_dirty = yes
 		}
 		search_filters = {

@@ -7638,6 +7638,15 @@ focus_tree = {
 			base = 1
 		}
 		available = {
+			ROOT = {
+				AND = {
+					is_in_faction_with = IRQ
+					is_in_faction_with = AFG
+					is_in_faction_with = TUR
+				}
+			}
+		}
+		bypass = {
 			has_idea = tos_secret_baghdad_pact
 		}
 

@@ -7321,10 +7321,19 @@ focus_tree = {
 			base = 1
 		}
 
-		# TREBA
-		# allow_branch = { 
-		# 	has_idea = IRQ_rally_the_arab_world_idea
-		# }
+		available = {
+			ROOT = {
+				AND = {
+					is_in_faction_with = PER
+					is_in_faction_with = AFG
+					is_in_faction_with = TUR
+				}
+			}
+		}
+
+		bypass = {
+			has_idea = tos_secret_baghdad_pact
+		}
 
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_TREATYOFSAADABAD }
 
@@ -7470,21 +7479,45 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			every_state = {
-				limit = {
-					OR = {
-						state = 292
-						state = 1016
-						state = 659
-						state = 992
-						state = 293
+			ROOT = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 292
+							state = 1016
+							state = 659
+							state = 992
+							state = 293
+						}
 					}
-				}
-				OWNER = {
+					add_claim_by = ROOT
 					ROOT = {
 						create_wargoal = {
 							target = PREV
-							type = annex_everything
+							type = take_claimed_state
+							expire = 0
+						}
+					}
+				}
+			}
+			PER = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 1014
+							state = 765
+							state = 658
+							state = 1015
+							state = 294
+							state = 1013
+						}
+					}
+					add_claim_by = PREV
+					PER = {
+						create_wargoal = {
+							target = PREV
+							type = take_claimed_state
+							expire = 0
 						}
 					}
 				}

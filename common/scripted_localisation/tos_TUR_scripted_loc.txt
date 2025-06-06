@@ -1,0 +1,136 @@
+defined_text = { ## INDUSTRIAL MIRACLE
+	name = TUR_industrial_miracle_key
+	text = {
+		trigger = {
+			NOT = {
+                OR = {
+                    has_completed_focus = TUR_expand_the_bursa_textile_industry
+                    has_completed_focus = TUR_the_industrialization_of_central_anatolia
+                }
+            }
+		}
+		localization_key = TUR_industrial_miracle_low
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_completed_focus = TUR_expand_the_bursa_textile_industry
+                has_completed_focus = TUR_the_industrialization_of_central_anatolia
+			}
+		}
+		localization_key = TUR_industrial_miracle_medium
+	}
+    text = {
+		trigger = {
+			OR = {
+				has_completed_focus = TUR_central_anatolian_heavy_industry
+                has_completed_focus = TUR_cooperation_with_military_org
+                has_completed_focus = TUR_support_malatya_raw_exports
+			}
+		}
+		localization_key = TUR_industrial_miracle_high
+	}
+}
+
+defined_text = { ## TUR LAND FORCES
+	name = TUR_land_forces_loc_key
+	text = {
+		trigger = {
+			NOT = {
+                OR = {
+                    has_cosmetic_tag = OTT_UNIFIED_neutrality
+                    has_cosmetic_tag = BYZ_byzantium_UNIFIED_tos
+                    has_completed_focus = TUR_restore_byzantium
+                    has_completed_focus = TUR_restore_ottaman_empire
+                }
+            }
+		}
+		localization_key = TUR_land_forces_modifier_TUR
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_completed_focus = TUR_restore_byzantium
+                has_cosmetic_tag = BYZ_byzantium_UNIFIED_tos
+			}
+		}
+		localization_key = TUR_land_forces_modifier_BYZ
+	}
+    text = {
+		trigger = {
+			OR = {
+				has_cosmetic_tag = OTT_UNIFIED_neutrality
+                has_completed_focus = TUR_restore_ottaman_empire
+			}
+		}
+		localization_key = TUR_land_forces_modifier_OTT
+	}
+}
+defined_text = { ## TUR AIR FORCES
+	name = TUR_air_forces_loc_key
+	text = {
+		trigger = {
+			NOT = {
+                OR = {
+                    has_cosmetic_tag = OTT_UNIFIED_neutrality
+                    has_cosmetic_tag = BYZ_byzantium_UNIFIED_tos
+                    has_completed_focus = TUR_restore_byzantium
+                    has_completed_focus = TUR_restore_ottaman_empire
+                }
+            }
+		}
+		localization_key = TUR_air_forces_modifier_TUR
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_completed_focus = TUR_restore_byzantium
+                has_cosmetic_tag = BYZ_byzantium_UNIFIED_tos
+			}
+		}
+		localization_key = TUR_air_forces_modifier_BYZ
+	}
+    text = {
+		trigger = {
+			OR = {
+				has_cosmetic_tag = OTT_UNIFIED_neutrality
+                has_completed_focus = TUR_restore_ottaman_empire
+			}
+		}
+		localization_key = TUR_air_forces_modifier_OTT
+	}
+}
+defined_text = { ## TUR NAVAL FORCES
+	name = TUR_navy_forces_loc_key
+	text = {
+		trigger = {
+			NOT = {
+                OR = {
+                    has_cosmetic_tag = OTT_UNIFIED_neutrality
+                    has_cosmetic_tag = BYZ_byzantium_UNIFIED_tos
+                    has_completed_focus = TUR_restore_byzantium
+                    has_completed_focus = TUR_restore_ottaman_empire
+                }
+            }
+		}
+		localization_key = TUR_navy_forces_modifier_TUR
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_completed_focus = TUR_restore_byzantium
+                has_cosmetic_tag = BYZ_byzantium_UNIFIED_tos
+			}
+		}
+		localization_key = TUR_navy_forces_modifier_BYZ
+	}
+    text = {
+		trigger = {
+			OR = {
+				has_cosmetic_tag = OTT_UNIFIED_neutrality
+                has_completed_focus = TUR_restore_ottaman_empire
+			}
+		}
+		localization_key = TUR_navy_forces_modifier_OTT
+	}
+}

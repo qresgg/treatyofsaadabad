@@ -1,4 +1,4 @@
-﻿l_english:
+﻿l_russian:
   MODIFIER_INTEL_FACTOR:0 "Intelligence"
  MODIFIER_INTEL_DESC:0 "Intelligence will show information about units on the map and focus tree progression from other countries. A higher value than the enemy's encryption will give a decryption combat bonus"
  MODIFIER_INTEL_FACTOR:0 "Intelligence"
@@ -22,27 +22,27 @@ tos_christianities:0 "Christianities"
 
 
 ### dynamic modifiers intros
-TUR_modify_turkish_land_army_ns_intro: "Modify §Y$TUR_land_forces_modifier$§! by"
-TUR_modify_turkish_navy_army_ns_intro: "Modify §Y$TUR_navy_forces_modifier$§! by"
-TUR_modify_turkish_air_army_ns_intro: "Modify §Y$TUR_air_forces_modifier$§! by"
-TUR_modify_industrial_miracle_ns_intro: "Modify §Y$TUR_industrial_miracle_modifier$§! by"
+TUR_modify_turkish_land_army_ns_intro: "Изменить §Y$TUR_land_forces_modifier$§! на:"
+TUR_modify_turkish_navy_army_ns_intro: "Изменить §Y$TUR_navy_forces_modifier$§! на:"
+TUR_modify_turkish_air_army_ns_intro: "Изменить §Y$TUR_air_forces_modifier$§! на:"
+TUR_modify_industrial_miracle_ns_intro: "Изменить §Y$TUR_industrial_miracle_modifier$§! на:"
 
 TUR_land_forces_modifier:0 "[TUR_land_forces_loc_key]"
-TUR_land_forces_modifier_TUR:0 "Turkish Land Forces"
-TUR_land_forces_modifier_BYZ:0 "Byzantine Land Forces"
-TUR_land_forces_modifier_OTT:0 "Ottoman Land Forces"
+TUR_land_forces_modifier_TUR:0 "Сухопутные силы Турции"
+TUR_land_forces_modifier_BYZ:0 "Сухопутные силы Византии"
+TUR_land_forces_modifier_OTT:0 "Сухопутные силы Оттоманов"
 
 TUR_navy_forces_modifier:0 "[TUR_navy_forces_loc_key]"
-TUR_navy_forces_modifier_TUR:0 "Turkish Naval Forces"
-TUR_navy_forces_modifier_BYZ:0 "Byzantine Naval Forces"
-TUR_navy_forces_modifier_OTT:0 "Ottoman Naval Forces"
+TUR_navy_forces_modifier_TUR:0 "Военно-морские силы Турции"
+TUR_navy_forces_modifier_BYZ:0 "Военно-морские силы Византии"
+TUR_navy_forces_modifier_OTT:0 "Военно-морские силы Оттоманов"
 
 TUR_air_forces_modifier:0 "[TUR_air_forces_loc_key]"
-TUR_air_forces_modifier_TUR:0 "Turkish Air Forces"
-TUR_air_forces_modifier_BYZ:0 "Byzantine Air Forces"
-TUR_air_forces_modifier_OTT:0 "Ottoman Air Forces"
+TUR_air_forces_modifier_TUR:0 "Военно-воздушные силы Турции"
+TUR_air_forces_modifier_BYZ:0 "Военно-воздушные силы Византии"
+TUR_air_forces_modifier_OTT:0 "Военно-воздушные силы Оттоманов"
 
 TUR_industrial_miracle_modifier:0 "[TUR_industrial_miracle_key]"
-TUR_industrial_miracle_low:0 "Industrial Abyss"
-TUR_industrial_miracle_medium:0 "Industrial Moderation"
-TUR_industrial_miracle_high:0 "Industrial Miracle"
+TUR_industrial_miracle_low:0 "Индустриальная Пропасть"
+TUR_industrial_miracle_medium:0 "Индустриальная Умеренность"
+TUR_industrial_miracle_high:0 "Индустриальное Чудо"

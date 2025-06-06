@@ -184,11 +184,15 @@
   PER_lowkey_expansionism:0 "Low-Key Expansionism"
   PER_lowkey_expansionism_desc:0 "Through subtle influence and soft power, we will quietly extend Iran's borders."
   PER_our_faith_is_similar_to_yours:0 "Our Faith is similar to Yours"
+  PER_our_faith_is_similar_to_yours_desc: "Despite differences in doctrine and ritual, the peoples of the northern lands are not so far from us in spirit. Centuries ago, these regions too revered fire, the sun, and their ancestors. We shall use this spiritual kinship to strengthen our authority and gently integrate these lands into the Empire."
   PER_integrate_soviets_tt: "§RWe need to control Soviet core states to receive the reward from this focus.§!"
+  
 
   #####################
   #####  TURKEY  ######
   #####################
+  TUR_cooperation_with_military_org:0 "Cooperation with MIO"
+  TUR_cooperation_with_military_org_desc:0 "In times of uncertainty, collaboration with independent and paramilitary groups can greatly enhance our capabilities. By aligning with experienced military organizations, we gain access to valuable manpower, tactical knowledge, and regional influence—resources that will serve us well in future conflicts."
   TUR_support_the_conservative_opposition:0 "Support the Conservative Opposition"
   TUR_support_the_conservative_opposition_desc:0 "Atatürk's policies are going too far, and they're not the will of the people. We must uplift the Turkish people, and end the CHP's undemocratic secularism. Islam's place in our lives is an easy finding, and if we're the only ones to believe this fact, we shall live free or die!"
   TUR_the_fight_for_popular_mandate:0 "The Fight for Popular Mandate"
