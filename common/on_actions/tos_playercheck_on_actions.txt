@@ -1,0 +1,18 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						NOT = { TUR = { is_ai = yes } }
+						NOT = { COG = { is_ai = yes } }
+						NOT = { PER = { is_ai = yes } }
+						NOT = { AFG = { is_ai = yes } }
+						NOT = { IRQ = { is_ai = yes } }
+					}
+				}
+				set_global_flag = player_favorite_country_active
+			}
+		}
+	}
+}

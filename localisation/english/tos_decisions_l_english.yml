@@ -267,3 +267,8 @@ IRQ_african_arab_revolt_cat: "African Arabian Revolution"
 IRQ_develop_separatist_movement: "Develop separatist movements in [FROM.GetName]"
 IRQ_provoke_independent_war_consolidated: "Provoke [FROM.GetName] Independent War"
 IRQ_set_puppet_government: "Capture the [FROM.GetAdjective] Administration"
+
+TUR_bolstering_our_armed_forces:0 "Bolstering our Armed Forces"
+TUR_allow_women_in_the_airforce:0 "Permit Women in the Airforce"
+cakmak_line:0 "Çakmak Line"
+expand_the_soviet_turkish_borderdefenses:0 "Strengthen the Kars Line"

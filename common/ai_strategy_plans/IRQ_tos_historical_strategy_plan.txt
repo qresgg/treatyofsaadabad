@@ -9,24 +9,24 @@ IRQ_tos_historical_plan = {
 	enable = {
 		AND = {
 			is_historical_focus_on = yes
-			NOT = { has_country_flag = LALALA } # заглушка
-			OR = {
-				NOT = {
-					TUR = { is_ai = yes }
-				}
-				NOT = {
-					COG = { is_ai = yes }
-				}
-				NOT = {
-					PER = { is_ai = yes }
-				}
-				NOT = {
-					AFG = { is_ai = yes }
-				}
-				NOT = {
-					IRQ = { is_ai = yes }
-				}
-			}
+			has_global_flag = player_favorite_country_active
+			# OR = {
+			# 	NOT = {
+			# 		TUR = { is_ai = yes }
+			# 	}
+			# 	NOT = {
+			# 		COG = { is_ai = yes }
+			# 	}
+			# 	NOT = {
+			# 		PER = { is_ai = yes }
+			# 	}
+			# 	NOT = {
+			# 		AFG = { is_ai = yes }
+			# 	}
+			# 	NOT = {
+			# 		IRQ = { is_ai = yes }
+			# 	}
+			# }
 		}
 	}
 	# enable = {
