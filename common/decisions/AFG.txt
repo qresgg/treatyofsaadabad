@@ -1,4 +1,158 @@
 ### MODDING
+AFG_opium_reforms_category =  {
+	AFG_opium_military_temporary_reform_decision = {
+		icon = GFX_decision_generic_industry
+		days_remove = 120
+		cost = 35
+		available = {
+			has_completed_focus = AFG_main_manufacturers_opium
+			NOT = {
+				has_country_flag = AFG_temporary_reform_is_working
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+		cancel_effect = {
+			clr_country_flag = AFG_temporary_reform_is_working
+		}
+		remove_effect = {
+			clr_country_flag = AFG_temporary_reform_is_working
+		}
+		complete_effect = {
+			set_country_flag = AFG_temporary_reform_is_working
+			add_timed_idea = {
+				idea = AFG_opium_military_temporary_reform
+				days = 120
+			}
+		}
+	}
+	AFG_opium_consumer_temporary_reform_decision = {
+		icon = GFX_decision_generic_consumer_goods
+		days_remove = 120
+		cost = 35
+		available = {
+			has_completed_focus = AFG_main_manufacturers_opium
+			NOT = {
+				has_country_flag = AFG_temporary_reform_is_working
+			}
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 2
+				num_of_factories > 60
+			}
+		}
+		cancel_effect = {
+			clr_country_flag = AFG_temporary_reform_is_working
+		}
+		remove_effect = {
+			clr_country_flag = AFG_temporary_reform_is_working
+		}
+		complete_effect = {
+			set_country_flag = AFG_temporary_reform_is_working
+			add_timed_idea = {
+				idea = AFG_opium_consumer_temporary_reform
+				days = 120
+			}
+		}
+	}
+	AFG_opium_building_temporary_reform_decision = {
+		icon = GFX_decision_generic_factory
+		days_remove = 120
+		cost = 35
+		available = {
+			has_completed_focus = AFG_main_manufacturers_opium
+			NOT = {
+				has_country_flag = AFG_temporary_reform_is_working
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+		cancel_effect = {
+			clr_country_flag = AFG_temporary_reform_is_working
+		}
+		remove_effect = {
+			clr_country_flag = AFG_temporary_reform_is_working
+		}
+		complete_effect = {
+			set_country_flag = AFG_temporary_reform_is_working
+			add_timed_idea = {
+				idea = AFG_opium_building_temporary_reform
+				days = 120
+			}
+		}
+	}
+	AFG_opium_political_temporary_reform_decision = {
+		icon = GFX_decision_eng_trade_unions_support
+		days_remove = 120
+		available = {
+			has_completed_focus = AFG_main_manufacturers_opium
+			NOT = {
+				has_country_flag = AFG_temporary_reform_is_working
+			}
+		}
+		ai_will_do = {
+			base = 1
+			
+			modifier = {
+				factor = 15
+				has_political_power < 120
+			}
+		}
+		cancel_effect = {
+			clr_country_flag = AFG_temporary_reform_is_working
+		}
+		remove_effect = {
+			clr_country_flag = AFG_temporary_reform_is_working
+		}
+		complete_effect = {
+			set_country_flag = AFG_temporary_reform_is_working
+			add_timed_idea = {
+				idea = AFG_opium_political_temporary_reform
+				days = 120
+			}
+		}
+	}
+	AFG_opium_propaganda_temporary_reform_decision = {
+		icon = GFX_decision_eng_propaganda_campaigns
+		days_remove = 120
+		cost = 35
+		available = {
+			has_completed_focus = AFG_main_manufacturers_opium
+			NOT = {
+				has_country_flag = AFG_temporary_reform_is_working
+			}
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 2
+				has_stability < 20
+			}
+			modifier = {
+				factor = 2
+				has_war_support < 20
+			}
+		}
+		cancel_effect = {
+			clr_country_flag = AFG_temporary_reform_is_working
+		}
+		remove_effect = {
+			clr_country_flag = AFG_temporary_reform_is_working
+		}
+		complete_effect = {
+			set_country_flag = AFG_temporary_reform_is_working
+			add_timed_idea = {
+				idea = AFG_opium_propaganda_temporary_reform
+				days = 120
+			}
+		}
+	}
+}
+
 AFG_islam_revolution_category = {
 	AFG_send_islam_people_to_india = {
 		icon = GFX_decision_generic_disband_irregulars
@@ -306,7 +460,7 @@ AFG_barons_category = {
 			}
 		}
 	}
-	AFG_sell_opium = {
+	AFG_sell_opium1 = {
 		icon = GFX_decision_generic_welfare
 		days_remove = 60
 		visible = {
@@ -314,7 +468,18 @@ AFG_barons_category = {
 		}
 		on_map_mode = map_and_decisions_view 
 		remove_effect = {
-			add_political_power = 120
+			add_war_support = 0.05
+			add_stability = 0.05
+		}
+	}
+	AFG_sell_opium2 = {
+		icon = GFX_decision_generic_welfare
+		days_remove = 120
+		visible = {
+			has_completed_focus = AFG_main_manufacturers_opium
+		}
+		on_map_mode = map_and_decisions_view 
+		remove_effect = {
 			add_war_support = 0.05
 			add_stability = 0.05
 		}

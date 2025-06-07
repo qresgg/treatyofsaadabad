@@ -8223,6 +8223,11 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 5
+		available = {
+			AFG = {
+				has_war_with = RAJ
+			}
+		}
 		completion_reward = {
 			AFG = {
 				add_stability = 0.05

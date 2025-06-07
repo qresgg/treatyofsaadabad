@@ -2227,7 +2227,19 @@ country_event = { ## Стати маріонеткою
 
     option = {
         name = turkey.3001.a
-        puppet = { target = ROOT }
+		TUR = {
+			set_autonomy = {
+				target = BUL
+				autonomy_state = autonomy_dux
+				freedom_level = 0.5
+			}
+		}
+		BUL = {
+			add_ideas = extensive_conscription
+			remove_ideas = BUL_army_restrictions_aat
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = BUL_byzantine_dux
+		}
         add_named_threat = { threat = 2 name = turkey.3000_ultimatum_puppet }
     }
 }

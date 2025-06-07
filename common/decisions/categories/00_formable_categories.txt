@@ -53,10 +53,10 @@ form_kushan_empire_category = {
 	priority = 20
 
 	allowed = {
-		OR = {
-			original_tag = AFG
-			original_tag = PAK
-		}
+		original_tag = AFG
+	}
+	visible = {
+		has_completed_focus = AFG_recreate_second_kashuan_empire
 	}
 }
 

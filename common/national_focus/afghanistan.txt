@@ -3142,6 +3142,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 		#### buddist muslims is our historical 
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = AFG_knights_of_faith_1
+				add_idea = AFG_knights_of_faith_2
+			}
 			custom_effect_tooltip = AFG_recreate_second_kashuan_empire_tt
 		}
 	}
@@ -6822,7 +6826,7 @@ focus_tree = {
 		available = {
 			742 = { is_controlled_by = ROOT }
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_TREATYOFSAADABAD }
 		completion_reward = {
 			742 = {
 				add_extra_state_shared_building_slots = 2
@@ -6844,6 +6848,7 @@ focus_tree = {
 		available = {
 			742 = { is_controlled_by = ROOT }
 		}
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 		completion_reward = {
 			742 = {
 				add_resource = {
@@ -6864,6 +6869,7 @@ focus_tree = {
 		available = {
 			732 = { is_controlled_by = ROOT }
 		}
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 		completion_reward = {
 			732 = {
 				add_resource = {
@@ -6885,6 +6891,7 @@ focus_tree = {
 		available = {
 			440 = { is_controlled_by = ROOT }
 		}
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			440 = {
 				add_extra_state_shared_building_slots = 2
@@ -6907,6 +6914,7 @@ focus_tree = {
 			441 = { is_controlled_by = ROOT }
 		}
 		cost = 5
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 		completion_reward = {
 			787 = {
 				add_resource = {
@@ -6933,6 +6941,7 @@ focus_tree = {
 		available = {
 			440 = { is_controlled_by = ROOT }
 		}
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 		completion_reward = {
 			440 = {
 				add_resource = {
@@ -6953,6 +6962,7 @@ focus_tree = {
 		available = {
 			988 = { is_controlled_by = ROOT }
 		}
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD FOCUS_FILTER_INDUSTRY} 
 		completion_reward = {
 			988 = {
 				add_extra_state_shared_building_slots = 1
@@ -6974,6 +6984,7 @@ focus_tree = {
 		available = {
 			988 = { is_controlled_by = ROOT }
 		}
+		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 		completion_reward = {
 			988 = {
 				add_resource = {

@@ -1,5 +1,73 @@
 ideas = {
 	country = {
+		#### TEMP REFORMS OPIUM ##
+		AFG_opium_military_temporary_reform = {
+			allowed = {
+				original_tag = AFG
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_improved_industries
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		AFG_opium_consumer_temporary_reform = {
+			allowed = {
+				original_tag = AFG
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = ARG_civilian_economy_boost
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.25
+			}
+		}
+		AFG_opium_building_temporary_reform = {
+			allowed = {
+				original_tag = AFG
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = ARG_rapid_militarization
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		AFG_opium_political_temporary_reform = {
+			allowed = {
+				original_tag = AFG
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_political_support
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.2
+			}
+		}
+		AFG_opium_propaganda_temporary_reform = {
+			allowed = {
+				original_tag = AFG
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_army_war_college
+			removal_cost = -1
+			modifier = {
+				war_support_weekly = 0.005
+				stability_weekly = 0.005
+			}
+		}
 		####### MODDING ##########
 		AFG_knights_of_faith_1 = {
 			allowed = {
@@ -13,6 +81,23 @@ ideas = {
 			modifier = {
 				political_power_factor = -0.15
 				stability_factor = -0.1
+				war_support_factor = 0.15
+				fascism_drift = 0.2
+			}
+		}
+
+		AFG_knights_of_faith_2 = {
+			allowed = {
+				original_tag = AFG
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = citizen_militia_2
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.2
+				stability_factor = 0.15
 				war_support_factor = 0.15
 				fascism_drift = 0.2
 			}

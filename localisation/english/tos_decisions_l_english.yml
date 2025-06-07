@@ -114,6 +114,8 @@ form_country_transylvania_required_states_tt: "Controls §YTransylvania§! regio
 form_country_rhos_north_required_states_tt: "Controls §YNorth Rhutenia§! regions"
 form_country_rhos_south_required_states_tt: "Controls §YSouth Rhutenia§! regions"
 form_country_rhos_west_required_states_tt: "Controls §YWest Rhutenia§! regions"
+neobyz_nationalize_dux: "Nationalize [FROM.GetName]"
+neobyz_byzantine_empire: "Proclaim Byzantine Empire"
 
 ## category
 form_neo_byzantine_empire_category: "Byzantine Ambitions"
@@ -249,6 +251,14 @@ AFG_peace_conferention: "ISLAM-RAJ peace conferetion"
 AFG_sending_islamists_to_india_flag: "Is not sending Islamists in this moment"
 AFG_integrate_our_islam_friends_rajapakistana:0 "Capture the government of our neighbors"
 AFG_integrate_rajak:0 "Integrate Rajapakastan"
+
+AFG_opium_reforms_category: "Opium reforms"
+AFG_opium_military_temporary_reform_decision:0 "To reform military fabrics"
+AFG_opium_consumer_temporary_reform_decision:0 "To raise industrial complexes"
+AFG_opium_building_temporary_reform_decision:0 "To reform the builders"
+AFG_opium_political_temporary_reform_decision:0 "Reforms in the government"
+AFG_opium_propaganda_temporary_reform_decision:0 "Propaganda of the Good Life"
+AFG_temporary_reform_is_working:0 "Is not reforming in this moment"
 
 
 #####################

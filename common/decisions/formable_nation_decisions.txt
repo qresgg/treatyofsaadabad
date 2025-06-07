@@ -191,6 +191,9 @@ form_sasanian_empire_category = {
 				controls_state = 1015 ## OMAN
 			}
 		}
+		ai_will_do = {
+			base = 2000
+		}
 		highlight_states = {
 			highlight_state_targets = {
 				state = 419
@@ -762,6 +765,9 @@ form_kushan_empire_category = {
 				controls_state = 442
 			}
 		}
+		ai_will_do = {
+			base = 2000
+		}
 		highlight_states = {
 			highlight_state_targets = {
 				state = 988 ## INDIA
@@ -1078,6 +1084,13 @@ form_neo_byzantine_empire_category = {
 	neobyz_restore_byzantium = {
 		icon = generic_form_nation
 		visible = {
+			NOT = { has_global_flag = form_byzantium_flag }
+			OR = {
+				NOT = {
+					has_cosmetic_tag = BYZ_byzantium_UNIFIED_tos
+					has_cosmetic_tag = BYZ_empire_UNIFIED_tos
+				}
+			}
 		}
 		allowed = {
 		}
@@ -1118,6 +1131,9 @@ form_neo_byzantine_empire_category = {
 				controls_state = 182
 				controls_state = 187
 			}
+		}
+		ai_will_do = {
+			base = 2000
 		}
 		highlight_states = { 
 			highlight_state_targets = {
@@ -1250,7 +1266,7 @@ form_neo_byzantine_empire_category = {
 			}
 			hidden_effect = {
 				news_event = { id = wtt_news.66 hours = 6 }
-				set_global_flag = form_byzantine_empire_flag
+				set_global_flag = form_byzantium_flag
 				swap_ruler_traits = { remove = archon_basileus add = autokrator }
 			}
 			set_country_flag = achivement_i_swear_im_not_a_byzantophile
@@ -1262,6 +1278,12 @@ form_neo_byzantine_empire_category = {
 	neobyz_form_bulgarian_dux = {
 		icon = generic_form_nation
 		visible = {
+			has_completed_focus = TUR_bulgaria_war
+			OR = {
+				BUL = {
+					exists = no
+				}
+			}
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -1279,6 +1301,9 @@ form_neo_byzantine_empire_category = {
 				state = 801
 				state = 211
 			}
+		}
+		ai_will_do = {
+			base = 10
 		}
 		complete_effect = {
 			custom_effect_tooltip = neo_byz_form_bulgarian_dux_tt
@@ -1306,6 +1331,10 @@ form_neo_byzantine_empire_category = {
 	neobyz_expand_bulgarian_states = {
 		icon = generic_form_nation
 		visible = {
+			BUL = {
+				exists = yes
+				is_subject_of = TUR
+			}
 		}
 		available = {
 			BUL = {
@@ -1340,11 +1369,14 @@ form_neo_byzantine_empire_category = {
 				}
 			}
 		}
-		# visible = {
-		# 	BUL = {
-		# 		is_subject_of = ROOT
-		# 	}
-		# }
+		ai_will_do = {
+			base = 10
+		}
+		visible = {
+			BUL = {
+				is_subject_of = ROOT
+			}
+		}
 		highlight_states = {
 			highlight_state_targets = {
 				## BULGARIA
@@ -1391,6 +1423,10 @@ form_neo_byzantine_empire_category = {
 	neobyz_form_serbian_dux = {
 		icon = generic_form_nation
 		visible = {
+			OR = {
+				has_completed_focus = TUR_yugoslavian_dux
+				has_completed_focus = TUR_yugoslavian_war
+			}
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -1413,6 +1449,9 @@ form_neo_byzantine_empire_category = {
 				state = 45
 				state = 764
 			}
+		}
+		ai_will_do = {
+			base = 10
 		}
 		complete_effect = {
 			custom_effect_tooltip = neo_byz_form_serbian_dux_tt
@@ -1440,6 +1479,10 @@ form_neo_byzantine_empire_category = {
 	neobyz_form_croatia_dux = {
 		icon = generic_form_nation
 		visible = {
+			OR = {
+				has_completed_focus = TUR_yugoslavian_dux
+				has_completed_focus = TUR_yugoslavian_war
+			}
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -1494,6 +1537,14 @@ form_neo_byzantine_empire_category = {
 	neobyz_expand_croatian_states = {
 		icon = generic_form_nation
 		visible = {
+			OR = {
+				has_completed_focus = TUR_yugoslavian_dux
+				has_completed_focus = TUR_yugoslavian_war
+			}
+			CRO = {
+				exists = yes
+				is_subject_of = ROOT
+			}
 		}
 		available = {
 			CRO = {
@@ -1572,6 +1623,7 @@ form_neo_byzantine_empire_category = {
 	neobyz_form_lombardy_venetia = {
 		icon = generic_form_nation
 		visible = {
+			has_completed_focus = TUR_italian_puppet_kingdoms
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -1612,6 +1664,7 @@ form_neo_byzantine_empire_category = {
 	neobyz_form_papal_state = {
 		icon = generic_form_nation
 		visible = {
+			has_completed_focus = TUR_italian_puppet_kingdoms
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -1650,6 +1703,7 @@ form_neo_byzantine_empire_category = {
 	neobyz_form_toscana = {
 		icon = generic_form_nation
 		visible = {
+			has_completed_focus = TUR_italian_puppet_kingdoms
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -1683,6 +1737,10 @@ form_neo_byzantine_empire_category = {
 	neobyz_form_piedmont = {
 		icon = generic_form_nation
 		visible = {
+			OR = {
+				has_completed_focus = TUR_italian_puppet_kingdoms
+				has_completed_focus = TUR_piermont_occitania
+			}
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -1714,6 +1772,14 @@ form_neo_byzantine_empire_category = {
 	neobyz_expand_piedmont_sardinia = {
 		icon = generic_form_nation
 		visible = {
+			OR = {
+				has_completed_focus = TUR_italian_puppet_kingdoms
+				has_completed_focus = TUR_piermont_occitania
+			}
+			SPM = {
+				exists = yes
+				is_subject_of = ROOT
+			}
 		}
 		available = {
 			SPM = {
@@ -1759,6 +1825,7 @@ form_neo_byzantine_empire_category = {
 	neobyz_nationalize_two_sicilias = {
 		icon = generic_form_nation
 		visible = {
+			has_completed_focus = TUR_historical_italian_boot
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -1803,6 +1870,7 @@ form_neo_byzantine_empire_category = {
 	neobyz_form_occitania = {
 		icon = generic_form_nation
 		visible = {
+			has_completed_focus = TUR_piermont_occitania
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -1855,6 +1923,7 @@ form_neo_byzantine_empire_category = {
 	neobyz_form_visighotic = {
 		icon = generic_form_nation
 		visible = {
+			has_completed_focus = TUR_visighotic
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -1940,6 +2009,11 @@ form_neo_byzantine_empire_category = {
 	neobyz_expand_visighotic = {
 		icon = generic_form_nation
 		visible = {
+			has_completed_focus = TUR_visighotic
+			SPR = {
+				exists = yes
+				is_subject_of = ROOT
+			}
 		}
 		available = {
 			SPR = {
@@ -2001,6 +2075,7 @@ form_neo_byzantine_empire_category = {
 	neobyz_form_suebi_kingdom = {
 		icon = generic_form_nation
 		visible = {
+			has_completed_focus = TUR_suebi_kingdom
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -2083,6 +2158,10 @@ form_neo_byzantine_empire_category = {
 	neobyz_form_wallachia_and_moldova = {
 		icon = generic_form_nation
 		visible = {
+			OR = {
+				has_completed_focus = TUR_turkish_romanian_war
+				has_completed_focus = TUR_partition_of_romania
+			}
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -2129,6 +2208,14 @@ form_neo_byzantine_empire_category = {
 	neobyz_expand_wallachia_and_moldova = {
 		icon = generic_form_nation
 		visible = {
+			OR = {
+				has_completed_focus = TUR_turkish_romanian_war
+				has_completed_focus = TUR_partition_of_romania
+			}
+			MOL = {
+				exists = yes
+				is_subject_of = TUR
+			}
 		}
 		available = {
 			MOL = {
@@ -2184,6 +2271,10 @@ form_neo_byzantine_empire_category = {
 	neobyz_form_transylvania = {
 		icon = generic_form_nation
 		visible = {
+			OR = {
+				has_completed_focus = TUR_turkish_romanian_war
+				has_completed_focus = TUR_partition_of_romania
+			}
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -2231,6 +2322,9 @@ form_neo_byzantine_empire_category = {
 	neobyz_form_rhos_dux = {
 		icon = generic_form_nation
 		visible = {
+			OR = {
+				has_completed_focus = TUR_land_corridor_to_crimea
+			}
 		}
 		cost = 25
 		available = {
@@ -2302,9 +2396,18 @@ form_neo_byzantine_empire_category = {
 	neobyz_expand_rhos_dux = {
 		icon = generic_form_nation
 		visible = {
+			OR = {
+				has_completed_focus = TUR_land_corridor_to_crimea
+				has_completed_focus = TUR_azovan_sea_is_our
+			}
+			UKR = {
+				exists = yes
+				is_subject_of = ROOT
+			}
 		}
 		available = {
 			UKR = {
+				exists = yes
 				is_subject_of = ROOT
 			}
 			custom_trigger_tooltip = {
@@ -2395,6 +2498,14 @@ form_neo_byzantine_empire_category = {
 	neobyz_expand_second_rhos_dux = {
 		icon = generic_form_nation
 		visible = {
+			OR = {
+				has_completed_focus = TUR_land_corridor_to_crimea
+				has_completed_focus = TUR_azovan_sea_is_our
+			}
+			UKR = {
+				exists = yes
+				is_subject_of = ROOT
+			}
 		}
 		available = {
 			UKR = {
@@ -2511,196 +2622,243 @@ form_neo_byzantine_empire_category = {
 		on_map_mode = map_and_decisions_view 
 	}
 
+	neobyz_byzantine_empire = {
 
+		icon = generic_form_nation
 
-	
+		allowed = {
+			original_tag = TUR
+		}
 
-	# neobyz_byzantine_empire = {
+		available = {
+			is_subject = no
+			controls_state = 82
+			controls_state = 81
+			controls_state = 46
+			controls_state = 971
+			controls_state = 77
+			#Albania
+			controls_state = 44
+			controls_state = 805
+			controls_state = 934
+			# Greece
+			custom_trigger_tooltip = {
+				tooltip = form_country_greece_required_states_tt
+				controls_state = 185
+				controls_state = 731
+				controls_state = 47
+				controls_state = 186
+				controls_state = 184
+				controls_state = 187
+				controls_state = 182
+			}
+			# Turkey
+			custom_trigger_tooltip = {
+				tooltip = form_country_turkey_required_states_tt
+				controls_state = 797
+				controls_state = 341
+				controls_state = 340
+				controls_state = 339
+				controls_state = 342
+				controls_state = 343
+				controls_state = 347
+				controls_state = 49
+				controls_state = 798
+				controls_state = 346
+				controls_state = 345
+				controls_state = 356
+				controls_state = 348
+				controls_state = 344
+				controls_state = 355
+				controls_state = 349
+				controls_state = 354
+				controls_state = 353
+				controls_state = 800
+				controls_state = 799 #HATAY, REMOVE FROM AVAILABLE AND ADD CORE IN EFFECT
+			}
+			# Bulgaria
+			custom_trigger_tooltip = {
+				tooltip = form_country_bulgaria_required_states_tt
+				controls_state = 48
+				controls_state = 212
+				controls_state = 211
+				controls_state = 801
+			}
+			# Yugoslavia
+			custom_trigger_tooltip = {
+				tooltip = form_country_yugoslavia_required_states_tt
+				controls_state = 106
+				controls_state = 803
+				controls_state = 802
+				controls_state = 108
+				controls_state = 105
+				controls_state = 804
+				controls_state = 104
+				controls_state = 103
+			}
+		}
 
-	# 	icon = generic_form_nation
-
-	# 	allowed = {
-	# 		OR = {
-	# 			original_tag = GRE
-	# 			original_tag = TUR
-	# 		}
-	# 	}
-
-	# 	available = {
-	# 		is_subject = no
-	# 		controls_state = 82
-	# 		controls_state = 81
-	# 		controls_state = 46
-	# 		controls_state = 971
-	# 		controls_state = 77
-	# 		#Albania
-	# 		controls_state = 44
-	# 		controls_state = 805
-	# 		controls_state = 934
-	# 		# Greece
-	# 		custom_trigger_tooltip = {
-	# 			tooltip = form_country_greece_required_states_tt
-	# 			controls_state = 185
-	# 			controls_state = 731
-	# 			controls_state = 47
-	# 			controls_state = 186
-	# 			controls_state = 184
-	# 			controls_state = 187
-	# 			controls_state = 182
-	# 		}
-	# 		# Turkey
-	# 		custom_trigger_tooltip = {
-	# 			tooltip = form_country_turkey_required_states_tt
-	# 			controls_state = 797
-	# 			controls_state = 341
-	# 			controls_state = 340
-	# 			controls_state = 339
-	# 			controls_state = 342
-	# 			controls_state = 343
-	# 			controls_state = 347
-	# 			controls_state = 49
-	# 			controls_state = 798
-	# 			controls_state = 346
-	# 			controls_state = 345
-	# 			controls_state = 356
-	# 			controls_state = 348
-	# 			controls_state = 344
-	# 			controls_state = 355
-	# 			controls_state = 349
-	# 			controls_state = 354
-	# 			controls_state = 353
-	# 			controls_state = 800
-	# 			controls_state = 799 #HATAY, REMOVE FROM AVAILABLE AND ADD CORE IN EFFECT
-	# 		}
-	# 		# Bulgaria
-	# 		custom_trigger_tooltip = {
-	# 			tooltip = form_country_bulgaria_required_states_tt
-	# 			controls_state = 48
-	# 			controls_state = 212
-	# 			controls_state = 211
-	# 			controls_state = 801
-	# 		}
-	# 		# Yugoslavia
-	# 		custom_trigger_tooltip = {
-	# 			tooltip = form_country_yugoslavia_required_states_tt
-	# 			controls_state = 102
-	# 			controls_state = 853
-	# 			controls_state = 103
-	# 			controls_state = 109
-	# 			controls_state = 104
-	# 			controls_state = 45
-	# 			controls_state = 107
-	# 			controls_state = 105
-	# 			controls_state = 108
-	# 			controls_state = 106
-	# 			controls_state = 970
-	# 			controls_state = 764
-	# 			controls_state = 802
-	# 			controls_state = 803
-	# 			controls_state = 804
-	# 		}
-	# 	}
-
-	# 	visible = {
-	# 		# NOT = { has_global_flag = form_byzantine_empire_flag }
-	# 	}
-
-	# 	complete_effect = {
-	# 		set_cosmetic_tag = BYZ_UNIFIED
-	# 		set_capital = { state = 341 }
-	# 		341 = { add_core_of = ROOT }
-	# 		hidden_effect = { 341 = { set_state_name = "Constantinople" } }
-	# 		set_province_name = { id = 9833 name = "Constantinople" }
-	# 		82 = { add_core_of = ROOT }
-	# 		81 = { add_core_of = ROOT }
-	# 		46 = { add_core_of = ROOT }
-	# 		971 = { add_core_of = ROOT }
-	# 		77 = { add_core_of = ROOT }
-	# 		#Albania
-	# 		44 = { add_core_of = ROOT }
-	# 		805 = { add_core_of = ROOT }
-	# 		934 = { add_core_of = ROOT }
-	# 		# Greece
-	# 		custom_effect_tooltip = form_country_greece_coring_states_tt
-	# 		hidden_effect = {
-	# 			185 = { add_core_of = ROOT }
-	# 			731 = { add_core_of = ROOT }
-	# 			47 = { add_core_of = ROOT }
-	# 			186 = { add_core_of = ROOT }
-	# 			184 = { add_core_of = ROOT }
-	# 			187 = { add_core_of = ROOT }
-	# 			182 = { add_core_of = ROOT }
-	# 		}
-	# 		# Turkey
-	# 		custom_effect_tooltip = form_country_turkey_coring_states_tt
-	# 		hidden_effect = {
-	# 			341 = { add_core_of = ROOT }
-	# 			340 = { add_core_of = ROOT }
-	# 			339 = { add_core_of = ROOT }
-	# 			342 = { add_core_of = ROOT }
-	# 			343 = { add_core_of = ROOT }
-	# 			347 = { add_core_of = ROOT }
-	# 			49 = { add_core_of = ROOT }
-	# 			346 = { add_core_of = ROOT }
-	# 			345 = { add_core_of = ROOT }
-	# 			356 = { add_core_of = ROOT }
-	# 			348 = { add_core_of = ROOT }
-	# 			344 = { add_core_of = ROOT }
-	# 			355 = { add_core_of = ROOT }
-	# 			349 = { add_core_of = ROOT }
-	# 			350 = { add_core_of = ROOT }
-	# 			354 = { add_core_of = ROOT }
-	# 			353 = { add_core_of = ROOT }
-	# 			352 = { add_core_of = ROOT }
-	# 			799 = { add_core_of = ROOT }
-	# 			797 = { add_core_of = ROOT }
-	# 			798 = { add_core_of = ROOT }
-	# 			800 = { add_core_of = ROOT }
-	# 		}
-	# 		# Bulgaria
-	# 		custom_effect_tooltip = form_country_bulgaria_coring_states_tt
-	# 		hidden_effect = {
-	# 			48 = { add_core_of = ROOT }
-	# 			212 = { add_core_of = ROOT }
-	# 			211 = { add_core_of = ROOT }
-	# 			801 = { add_core_of = ROOT }
-	# 		}
-	# 		# Yugoslavia
-	# 		custom_effect_tooltip = form_country_yugoslavia_coring_states_tt
-	# 		hidden_effect = {
-	# 			102 = { add_core_of = ROOT }
-	# 			853 = { add_core_of = ROOT }
-	# 			103 = { add_core_of = ROOT }
-	# 			109 = { add_core_of = ROOT }
-	# 			104 = { add_core_of = ROOT }
-	# 			45 = { add_core_of = ROOT }
-	# 			107 = { add_core_of = ROOT }
-	# 			105 = { add_core_of = ROOT }
-	# 			108 = { add_core_of = ROOT }
-	# 			106 = { add_core_of = ROOT }
-	# 			970 = { add_core_of = ROOT }
-	# 			764 = { add_core_of = ROOT }
-	# 			802 = { add_core_of = ROOT }
-	# 			803 = { add_core_of = ROOT }
-	# 			804 = { add_core_of = ROOT }
+		highlight_states = {
+			highlight_state_targets = {
+				state = 185
+				state = 731
+				state = 47
+				state = 186
+				state = 184
+				state = 187
+				state = 182
 				
-	# 		}
-	# 		hidden_effect = {
-	# 			news_event = { id = wtt_news.66 hours = 6 }
-	# 			set_global_flag = form_byzantine_empire_flag
-	# 		}
-	# 		set_country_flag = achivement_i_swear_im_not_a_byzantophile
-	# 		set_country_flag = achivement_istanbul_is_constantinople_again
-	# 	}
+				state = 48
+				state = 212
+				state = 211
+				state = 801
 
-	# 	ai_will_do = {
-	# 		factor = 200
-	# 		modifier = {
-	# 			factor = 0
-	# 			is_historical_focus_on = yes
-	# 		}
-	# 	}
-	# }
+				state = 934
+				state = 44
+				state = 805
+
+				state = 849
+				state = 117
+				state = 156
+
+				state = 183
+				state = 677
+				state = 799
+				state = 553
+
+				state = 106
+				state = 803
+				state = 802
+				state = 108
+				state = 105
+				state = 804
+				state = 104
+				state = 103
+				state = 970
+
+				state = 794
+				state = 341
+				state = 340
+				state = 339
+				state = 342
+				state = 343
+				state = 347
+				state = 49
+				state = 798
+				state = 346
+				state = 345
+				state = 356
+				state = 348
+				state = 344
+				state = 355
+				state = 349
+				state = 354
+				state = 353
+				state = 800
+			}
+		}
+
+		visible = {
+			NOT = { has_global_flag = form_byzantine_empire_flag }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = BYZ_empire_UNIFIED_tos
+			set_capital = { state = 341 }
+			341 = { add_core_of = ROOT }
+			hidden_effect = { 341 = { set_state_name = "Constantinople" } }
+			set_province_name = { id = 9833 name = "Constantinople" }
+			82 = { add_core_of = ROOT }
+			81 = { add_core_of = ROOT }
+			46 = { add_core_of = ROOT }
+			971 = { add_core_of = ROOT }
+			77 = { add_core_of = ROOT }
+			#Albania
+			44 = { add_core_of = ROOT }
+			805 = { add_core_of = ROOT }
+			934 = { add_core_of = ROOT }
+
+			# italian boot
+			849 = { add_core_of = ROOT }
+			117 = { add_core_of = ROOT }
+			156 = { add_core_of = ROOT }
+
+			# road to lebanon
+			183 = { add_core_of = ROOT }
+			677 = { add_core_of = ROOT }
+			799 = { add_core_of = ROOT }
+			553 = { add_core_of = ROOT }
+			# Greece
+			custom_effect_tooltip = form_country_greece_coring_states_tt
+			hidden_effect = {
+				185 = { add_core_of = ROOT }
+				731 = { add_core_of = ROOT }
+				47 = { add_core_of = ROOT }
+				186 = { add_core_of = ROOT }
+				184 = { add_core_of = ROOT }
+				187 = { add_core_of = ROOT }
+				182 = { add_core_of = ROOT }
+			}
+			# Turkey
+			custom_effect_tooltip = form_country_turkey_coring_states_tt
+			hidden_effect = {
+				341 = { add_core_of = ROOT }
+				340 = { add_core_of = ROOT }
+				339 = { add_core_of = ROOT }
+				342 = { add_core_of = ROOT }
+				343 = { add_core_of = ROOT }
+				347 = { add_core_of = ROOT }
+				49 = { add_core_of = ROOT }
+				346 = { add_core_of = ROOT }
+				345 = { add_core_of = ROOT }
+				356 = { add_core_of = ROOT }
+				348 = { add_core_of = ROOT }
+				344 = { add_core_of = ROOT }
+				355 = { add_core_of = ROOT }
+				349 = { add_core_of = ROOT }
+				350 = { add_core_of = ROOT }
+				354 = { add_core_of = ROOT }
+				353 = { add_core_of = ROOT }
+				352 = { add_core_of = ROOT }
+				799 = { add_core_of = ROOT }
+				797 = { add_core_of = ROOT }
+				798 = { add_core_of = ROOT }
+				800 = { add_core_of = ROOT }
+			}
+			# Bulgaria
+			custom_effect_tooltip = form_country_bulgaria_coring_states_tt
+			hidden_effect = {
+				48 = { add_core_of = ROOT }
+				212 = { add_core_of = ROOT }
+				211 = { add_core_of = ROOT }
+				801 = { add_core_of = ROOT }
+			}
+			# Yugoslavia
+			custom_effect_tooltip = form_country_yugoslavia_coring_states_tt
+			hidden_effect = {
+				102 = { add_core_of = ROOT }
+				103 = { add_core_of = ROOT }
+				104 = { add_core_of = ROOT }
+				105 = { add_core_of = ROOT }
+				108 = { add_core_of = ROOT }
+				106 = { add_core_of = ROOT }
+				970 = { add_core_of = ROOT }
+				802 = { add_core_of = ROOT }
+				803 = { add_core_of = ROOT }
+				804 = { add_core_of = ROOT }
+			}
+			hidden_effect = {
+				news_event = { id = wtt_news.66 hours = 6 }
+				set_global_flag = form_byzantine_empire_flag
+			}
+			set_country_flag = achivement_i_swear_im_not_a_byzantophile
+			set_country_flag = achivement_istanbul_is_constantinople_again
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
 }
 
 form_arabia_category = {
@@ -2845,7 +3003,7 @@ form_arabia_category = {
 		}
 
 		ai_will_do = {
-			base = 200
+			base = 2000
 		}
 
 	}

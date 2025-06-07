@@ -6082,9 +6082,6 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = TUR_ottoman_path_tt
 		}
-		search_filters = {
-			FOCUS_FILTER_TREATYOFSAADABAD
-		}
 	}
 	focus = {
 		id = TUR_course_to_right
@@ -6722,7 +6719,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = TUR_GRE_in_government
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -6930,7 +6927,7 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = TUR_restore_byzantium
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -7130,6 +7127,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = turkey_yugoslavia.1
+			every_state = {
+				limit = {
+					is_core_of = ALB
+				}
+				add_claim_by = ROOT
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD
@@ -7295,7 +7298,7 @@ focus_tree = {
 		icon = GFX_focus_spa_unify_the_nationalist_front
 		prerequisite = { focus = TUR_plan_iberia }
 		relative_position_id = TUR_plan_iberia
-		cost = 5
+		cost = 7
 		x = -1
 		y = 1
 		available = {
@@ -7353,7 +7356,7 @@ focus_tree = {
 		icon = GFX_focus_por_the_kingdom_reunited
 		prerequisite = { focus = TUR_plan_iberia }
 		relative_position_id = TUR_plan_iberia
-		cost = 5
+		cost = 7
 		x = 1
 		y = 1
 		available = {
@@ -7526,7 +7529,7 @@ focus_tree = {
 		x = 9
 		y = 1
 		relative_position_id = TUR_restore_byzantium
-		cost = 5
+		cost = 7
 		ai_will_do = {
 			base = 10
 		}
@@ -7560,7 +7563,6 @@ focus_tree = {
 		x = 0
 		y = 4
 		completion_reward = {
-			set_cosmetic_tag = BYZ_empire_UNIFIED_tos
 			add_country_leader_trait = {
 				trait = TUR_byzantium_empire_emperor_trait
 			}
@@ -8793,9 +8795,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = solidify_the_balkan_pact_tt
-		}
-		search_filters = {
-			FOCUS_FILTER_ALLIANCE
 		}
 	}
 	
