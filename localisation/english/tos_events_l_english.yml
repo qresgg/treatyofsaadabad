@@ -1067,6 +1067,9 @@ TUR_placate_fundamentalist_state_effect_tt:1 "The £faction_tur_traditionalist �
 TUR_placate_fundamentalist_state_all_targets_effect_tt:0 "The £faction_tur_traditionalist §YTraditionalists§! shall collectively cease their opposition to the government."
 
 ### AFGHANISTAN
+tos_afghanistan.555.t: "A Bitter Refusal"
+tos_afghanistan.555.d: "Despite our calls for assistance, [FROM.GetName] has refused to help us directly. However, some individuals have expressed willingness to volunteer unofficially."
+tos_afghanistan.555.a: "Any help is better than none"
 AFG_political_events.04.t: "Request Control of British States"
 AFG_political_events.04.desc: "Afghanistan has formally requested control over certain British states. The British government must decide whether to agree or reject this request."
 AFG_political_events.04.a: "Agree to Transfer Control"

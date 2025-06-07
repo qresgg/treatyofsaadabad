@@ -1177,6 +1177,9 @@ TUR_placate_fundamentalist_state_effect_tt:1 "Фракция £faction_tur_tradi
 TUR_placate_fundamentalist_state_all_targets_effect_tt:0 "Фракция £faction_tur_traditionalist §YТрадиционалисты§! коллективно прекратят оппозицию правительству."
 
 ### AFGHANISTAN
+tos_afghanistan.555.t: "Горький отказ"
+tos_afghanistan.555.d: "Несмотря на наши призывы о помощи, государство [FROM.GetName] отказалось напрямую нас поддерживать. Однако некоторые добровольцы выразили желание помочь неофициально."
+tos_afghanistan.555.a: "Любая помощь лучше, чем никакой"
 AFG_political_events.04.t: "Запрос контроля над британскими территориями"
 AFG_political_events.04.desc: "Афганистан официально запросил контроль над некоторыми британскими территориями. Британское правительство должно решить — согласиться или отказать."
 AFG_political_events.04.a: "Согласиться на передачу контроля"

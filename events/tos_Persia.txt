@@ -101,7 +101,10 @@ country_event = {
 			add_political_power = -50
 			add_stability = -0.05
 
-			change_relation = { target = IRN value = 50 }
+            add_opinion_modifier = {
+                target = PER
+                modifier = huge_increase
+            }
 		}
         PER = { country_event = { id = iran_soviet_crisis.4 hours = 6} }
 	}
@@ -115,7 +118,10 @@ country_event = {
 
 		SOV = {
 			add_political_power = -25
-			change_relation = { target = IRN value = 20 }
+            add_opinion_modifier = {
+                target = PER
+                modifier = large_increase
+            }
 		}
         PER = { country_event = { id = iran_soviet_crisis.3 hours = 6} }
 	}
@@ -131,7 +137,10 @@ country_event = {
 			add_political_power = 100
 			add_stability = 0.05
 
-			change_relation = { target = IRN value = -30 }
+            add_opinion_modifier = {
+                target = PER
+                modifier = medium_decrease
+            }
 		}
         PER = { country_event = { id = iran_soviet_crisis.5 hours = 6} }
 	}
@@ -149,7 +158,10 @@ country_event = { ## WE RECEIVED NOTHING
 			add_political_power = -50
 			add_stability = -0.05
 
-			change_relation = { target = SOV value = -30 }
+            add_opinion_modifier = {
+                target = SOV
+                modifier = medium_decrease
+            }
 		}
         584 = { add_claim_by = ROOT }
         229 = { add_claim_by = ROOT }
@@ -169,7 +181,10 @@ country_event = { ## WE RECEIVED ASHKHABAD
 			add_political_power = 25
 			add_war_support = 0.05
 
-			change_relation = { target = SOV value = 20 }
+            add_opinion_modifier = {
+                target = PER
+                modifier = medium_increase
+            }
 		}
         584 = { transfer_state_to = ROOT }
     }
@@ -188,7 +203,10 @@ country_event = { ## WE RECEIVED ASHKHABAD AND AZERBAIJAN
 			add_political_power = 50
 			add_stability = 0.10
 
-			change_relation = { target = SOV value = 50 }
+            add_opinion_modifier = {
+                target = PER
+                modifier = huge_increase
+            }
 		}
         229 = { transfer_state_to = ROOT } 
         584 = { transfer_state_to = ROOT } 
@@ -240,7 +258,10 @@ country_event = {
 
         PER = {
             add_political_power = 50
-            change_relation = { target = OMA value = 25 }
+            add_opinion_modifier = {
+                target = OMA
+                modifier = large_increase
+            }
             country_event = iran_sultanate_crisis.4
         }
     }

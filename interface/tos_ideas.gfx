@@ -61,15 +61,20 @@ spriteTypes = {
 		name = "GFX_idea_TUR_christianity_state_idea"
 		texturefile = "gfx/interface/ideas/tos_idea_TUR_christianity_state_idea.dds"
 	}
-
-	# IIIIII  RRRR    QQQQ
-	#   II    R   R  Q    Q
-	#   II    RRRR   Q    Q
-	#   II    R R    Q   QQ  Q
-	# IIIIII  R  RR   QQQQQQQ
-	
 	spriteType = {
 		name = "GFX_idea_IRQ_baghdad_pact_idea"
 		texturefile = "gfx/interface/ideas/tos_idea_IRQ_baghdad_pact.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PER_war_plan_horoborrow_idea"
+		texturefile = "gfx/interface/ideas/tos_idea_TUR_warplan_horoborrow.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PER_war_plan_satrapies_idea"
+		texturefile = "gfx/interface/ideas/tos_idea_TUR_warplan_satrapies.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PER_war_plan_musleew_idea"
+		texturefile = "gfx/interface/ideas/tos_idea_TUR_warplan_musleew.dds"
 	}
 }						

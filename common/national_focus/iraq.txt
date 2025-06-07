@@ -799,6 +799,10 @@ focus_tree = {
 		y = 8
 		cost = 10
 
+		ai_will_do = {
+			base = 1
+		}
+
 		available = { 
 			OR = {
 				656 = {
@@ -830,6 +834,9 @@ focus_tree = {
 
 		cost = 6
 
+		ai_will_do = {
+			base = 1
+		}
 		available = {
 			656 = {
 				is_controlled_by = ROOT
@@ -866,7 +873,9 @@ focus_tree = {
 		y = 1
 
 		cost = 6
-
+		ai_will_do = {
+			base = 1
+		}
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD FOCUS_FILTER_INDUSTRY }
 
 		available = {
@@ -902,6 +911,9 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 6
+		ai_will_do = {
+			base = 1
+		}
 
 		available = {
 			455 = {
@@ -936,7 +948,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 6
-
+		ai_will_do = {
+			base = 1
+		}
 		available = {
 			859 = {
 				is_controlled_by = ROOT
@@ -965,7 +979,9 @@ focus_tree = {
 		icon = GFX_focus_generic_resource_extraction
 		
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD FOCUS_FILTER_INDUSTRY }
-
+		ai_will_do = {
+			base = 1
+		}
 		x = 4
 		y = 1
 		cost = 5
@@ -1001,6 +1017,10 @@ focus_tree = {
 		y = 1
 		cost = 5
 
+		ai_will_do = {
+			base = 1
+		}
+
 		available = {
 			449 = { is_controlled_by = ROOT }
 			662 = { is_controlled_by = ROOT }
@@ -1032,7 +1052,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 6
-
+		ai_will_do = {
+			base = 1
+		}
 		available = {
 			838 = { is_controlled_by = ROOT }
 			837 = { is_controlled_by = ROOT }
@@ -6144,7 +6166,9 @@ focus_tree = {
 	
 		cost = 5
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_TREATYOFSAADABAD }  #CHANGEIT
-	
+		ai_will_do = {
+			base = 1
+		}
 		completion_reward = { ## +10
 			custom_effect_tooltip = IRQ_digrifle
 					country_event = {
@@ -6702,7 +6726,9 @@ focus_tree = {
 		relative_position_id = IRQ_arab_free_legion
 	
 		cost = 5
-	
+		ai_will_do = {
+			base = 1
+		}
 		available = {
 			neutrality > 0.40
 			has_army_manpower = {
@@ -6808,7 +6834,9 @@ focus_tree = {
 		cost = 5
 		x = -4
 		y = 1
-
+		ai_will_do = {
+			base = 1
+		}
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 
 		completion_reward = {
@@ -7440,7 +7468,7 @@ focus_tree = {
 	focus = {
 		id = IRQ_partition_of_saudi_arabia
 		icon = GFX_focus_ETH_an_arabic_base
-		mutually_exclusive = { focus = IRQ_partition_of_saudi_arabia}
+		mutually_exclusive = { focus = IRQ_raising_arabian_peninsula }
 		prerequisite = { focus = IRQ_secret_baghdad_pact }
 		x = 7
 		y = 1
@@ -7834,6 +7862,11 @@ focus_tree = {
 		relative_position_id = IRQ_rally_the_arab_world
 
 		cost = 10
+
+		ai_will_do = {
+			base = 1
+		}
+
 		search_filters = { FOCUS_FILTER_TREATYOFSAADABAD }
 
 		completion_reward = {
@@ -9910,6 +9943,11 @@ focus = {
 	available_if_capitulated = no
 	
     cost = 10
+
+	ai_will_do = {
+		base = 1
+	}
+
     search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_TREATYOFSAADABAD }  #CHANGEIT
 
 	completion_reward = {
@@ -9961,6 +9999,11 @@ focus = {
 	available_if_capitulated = no
 
     cost = 5
+
+	ai_will_do = {
+		base = 1
+	}
+
     search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_TREATYOFSAADABAD }  #CHANGEIT
 
     completion_reward = {

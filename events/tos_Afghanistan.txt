@@ -18,14 +18,14 @@ country_event = {
         name = tos_afghanistan.1000.a
         ai_chance = { base = 60 }
         AFG = {
-            country_event = tos_afghanistan.1001
+            country_event = { id = tos_afghanistan.1001 }
         }
     }
     option = {
         name = tos_afghanistan.1000.b
         ai_chance = { base = 40 }
         AFG = {
-            country_event = tos_afghanistan.1002
+            country_event = { id = tos_afghanistan.1002 }
         }
     }
 }
@@ -49,6 +49,7 @@ country_event = { ## THANKS FOR EQUIPMENTS
         }
     }
 }
+
 country_event = { ## UNLUCKY, THEY DON'T WANT TO HELP US
     id = tos_afghanistan.1002
     title = tos_afghanistan.1002.t
@@ -75,10 +76,13 @@ country_event = { ## UNLUCKY, THEY DON'T WANT TO HELP US
 
     option = {
         name = tos_afghanistan.555.a
-        ROOT = {
+        FROM = {
+            add_timed_idea = {
+                idea = AFG_tos_send_volunteers_buff
+                days = 180
+            }
             set_rule = {
                 can_send_volunteers = yes
-                send_volunteers_tension = 0
             }
         }
     }
@@ -213,7 +217,6 @@ country_event = {
         }
     }
 }
-
 
 country_event = {
     id = tos_afghanistan.2
@@ -583,4 +586,3 @@ country_event = {
         }
     }
 }
-

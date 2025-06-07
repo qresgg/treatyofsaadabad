@@ -7211,17 +7211,17 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			every_state = {
-				limit = {
-					is_core_of = ITA
-				}
+				limit = { is_core_of = ITA }
 				add_claim_by = TUR
-				create_wargoal = {
-					type = take_claimed_state
-					target = ITA
-				}
 			}
-			custom_effect_tooltip = TUR_open_decision_to_core_two_sicilias_tt
+
+			create_wargoal = {
+				type = take_claimed_state
+				target = ITA
+			}
+
 			add_stability = 0.05
+			custom_effect_tooltip = TUR_open_decision_to_core_two_sicilias_tt
 		}
 		search_filters = {
 			FOCUS_FILTER_TREATYOFSAADABAD

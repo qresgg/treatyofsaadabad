@@ -2111,11 +2111,11 @@ country_event = {
 	fire_only_once = yes
 		
 	trigger = {
-		has_completed_focus = IRQ_dig_up_a_rifles  # Потрібно завершити фокус
+		has_completed_focus = IRQ_grand_excavations
 	}
 
 	option = {
-		name = IRQ_saadabad.1.a  # Кнопка "Чудово!"
+		name = IRQ_saadabad.1.a
 		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 10000 }
 	}
 }

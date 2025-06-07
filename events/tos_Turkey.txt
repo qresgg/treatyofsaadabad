@@ -175,6 +175,7 @@ country_event = {
 	desc = turkey.100.d
 	is_triggered_only = yes
 	picture = GFX_report_event_tur_britain
+
 	option = { # We accept
 		name = turkey.100.a
 		ai_chance = {
@@ -186,15 +187,21 @@ country_event = {
 				hours = 4
 				random_hours = 2
 			}
-			effect_tooltip = {
-				add_offsite_building = { type = industrial_complex level = 3 }
-				add_opinion_modifier = {
-					target = ENG
-					modifier = TUR_english_industral_aid
-				}
+		}
+		add_offsite_building = { type = industrial_complex level = 3 }
+		add_opinion_modifier = {
+			target = ENG
+			modifier = TUR_english_industral_aid
+		}
+		effect_tooltip = {
+			add_offsite_building = { type = industrial_complex level = 3 }
+			add_opinion_modifier = {
+				target = ENG
+				modifier = TUR_english_industral_aid
 			}
 		}
 	}
+
 	option = { # We have no reason to help the Turks
 		name = turkey.100.b
 		ai_chance = {
@@ -206,15 +213,20 @@ country_event = {
 				hours = 4
 				random_hours = 2
 			}
-			effect_tooltip = {
-				add_opinion_modifier = {
-					target = ENG
-					modifier = TUR_english_industral_aid_rejected
-				}
+		}
+		add_opinion_modifier = {
+			target = ENG
+			modifier = TUR_english_industral_aid_rejected
+		}
+		effect_tooltip = {
+			add_opinion_modifier = {
+				target = ENG
+				modifier = TUR_english_industral_aid_rejected
 			}
 		}
 	}
 }
+
 #TUR - ENG offers us industral aid
 country_event = {
 	id = turkey.101

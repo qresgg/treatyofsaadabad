@@ -1032,7 +1032,12 @@ ideas = {
 				weekly_manpower = 25
 			}
 		}
-
+		AFG_tos_send_volunteers_buff = {
+			picture = CHL_ligas_patrioticas
+			modifier = {
+				send_volunteers_tension = -1.0
+			}
+		}
 	}
 
 	industrial_concern = {
