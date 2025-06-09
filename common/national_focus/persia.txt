@@ -6420,12 +6420,11 @@ focus_tree = {
 
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
-			FOCUS_FILTER_STABILITY
 			FOCUS_FILTER_TREATYOFSAADABAD
 		}
 
 		completion_reward = {
-			set_cosmetic_tag = PER_sasanian_kingdom
+			set_cosmetic_tag = SSE_kingdom_UNIFIED_tos
 			add_political_power = 100
 		}
 	}
@@ -7224,6 +7223,14 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = PER_persepolis_idea
+
+			hidden_effect = {
+				set_province_name = { id = 8031 name = "Persepolis"}
+				add_victory_points = {
+					province = 8031
+					value = 4
+				}
+			}
 		}
 	}
 

@@ -1,30 +1,4 @@
 ﻿l_russian:
-PER_sasanian_kingdom_fascism: "Сасанидское царство"
-PER_sasanian_kingdom_fascism_DEF: "Королевство Сасанидов"
-PER_sasanian_kingdom_fascism_ADJ: "Сасанидская"
-PER_sasanian_kingdom_communism: "Сасанидская Народная Республика"
-PER_sasanian_kingdom_communism_DEF: "Сасанидская Народная Республика"
-PER_sasanian_kingdom_communism_ADJ: "Сасанидская"
-PER_sasanian_kingdom_democratic: "Сасанидская республика"
-PER_sasanian_kingdom_democratic_DEF: "Сасанидская республика"
-PER_sasanian_kingdom_democratic_ADJ: "Сасанидская"
-PER_sasanian_kingdom_neutrality: "Сасанидское царство"
-PER_sasanian_kingdom_neutrality_DEF: "Королевство Сасанидов"
-PER_sasanian_kingdom_neutrality_ADJ: "Сасанидская"
-
-PER_second_sasanian_empire_fascism: "Вторая Сасанидская Империя"
-PER_second_sasanian_empire_fascism_DEF: "Вторая Сасанидская Империя"
-PER_second_sasanian_empire_fascism_ADJ: "Сасанидский"
-PER_second_sasanian_empire_communism: "Социалистическая Республика Сасанидская"
-PER_second_sasanian_empire_communism_DEF: "Социалистическая Республика Сасанидская"
-PER_second_sasanian_empire_communism_ADJ: "Сасанидская"
-PER_second_sasanian_empire_democratic: "Вторая Сасанидская Держава"
-PER_second_sasanian_empire_democratic_DEF: "Вторая Сасанидская Держава"
-PER_second_sasanian_empire_democratic_ADJ: "Сасанидский"
-PER_second_sasanian_empire_neutrality: "Вторая Сасанидская Империя"
-PER_second_sasanian_empire_neutrality_DEF: "Вторая Сасанидская Империя"
-PER_second_sasanian_empire_neutrality_ADJ: "Сасанидская"
-
 IRQ_greater_mesopotamia_fascism: "Великая Месопотамия"
 IRQ_greater_mesopotamia_fascism_DEF: "Великая Месопотамия"
 IRQ_greater_mesopotamia_fascism_ADJ: "Месопотамская"
@@ -51,26 +25,42 @@ IRQ_middle_east_reichprotectorate_democratic: "Федерация Ближнег
 IRQ_middle_east_reichprotectorate_democratic_DEF: "Федерация Ближнего Востока"
 IRQ_middle_east_reichprotectorate_democratic_ADJ: "Арабская"
 
-AFG_kushan_empire_fascism: "Кушанская Империя"
-AFG_kushan_empire_fascism_DEF: "Кушанская Империя"
-AFG_kushan_empire_fascism_ADJ: "Кушанская"
-AFG_kushan_empire_neutrality: "Империя Кушан"
-AFG_kushan_empire_neutrality_DEF: "Кушанская Империя"
-AFG_kushan_empire_neutrality_ADJ: "Кушанская"
-AFG_kushan_empire_communism: "Кушания"
-AFG_kushan_empire_communism_DEF: "Союз Кушанцев"
-AFG_kushan_empire_communism_ADJ: "Кушанская"
-AFG_kushan_empire_democratic: "Конфедерация Кушан"
-AFG_kushan_empire_democratic_DEF: "Кушанская конфедерация"
-AFG_kushan_empire_democratic_ADJ: "Кушанская"
+## FORMED COUNTRIES
+
+####################
+######  TUR  #######
+###  BYZANTINE   ###
+####################
 
 BYZ_byzantium_UNIFIED_tos: "Византиум"
 BYZ_byzantium_UNIFIED_tos_DEF: "Византиум"
 BYZ_byzantium_UNIFIED_tos_ADJ: "Византийская"
 
-BYZ_empire_UNIFIED_tos: "Вторая Византийская империя"
-BYZ_empire_UNIFIED_tos_DEF: "Византийская империя"
+BYZ_empire_UNIFIED_tos: "Вторая Византийская Империя"
+BYZ_empire_UNIFIED_tos_DEF: "Византийская Империя"
 BYZ_empire_UNIFIED_tos_ADJ: "Византийская"
+
+####################
+######  PER  #######
+###   SASANIAN   ###
+####################
+
+SSE_kingdom_UNIFIED_tos: "Королевство Сасанидов"
+SSE_kingdom_UNIFIED_tos_DEF: "Королевство Сасанидов"
+SSE_kingdom_UNIFIED_tos_ADJ: "Сасанидская"
+
+SSE_empire_UNIFIED_tos: "Вторая Сасанидская Империя"
+SSE_empire_UNIFIED_tos_DEF: "Сасанидская Империя"
+SSE_empire_UNIFIED_tos_ADJ: "Сасанидская"
+
+####################
+######  PER  #######
+###   SASANIAN   ###
+####################
+
+KSE_empire_UNIFIED_tos: "Кушанская Империя"
+KSE_empire_UNIFIED_tos_DEF: "Кушанская Империя"
+KSE_empire_UNIFIED_tos_ADJ: "Кушанская"
 
 ## ВИЗАНТИЙСКИЕ МАРИОНЕТКИ
 BUL_byzantine_dux: "Фема Болгариасов"

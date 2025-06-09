@@ -224,27 +224,27 @@ form_sasanian_empire_category = {
 		fire_only_once = yes
 		complete_effect = {
 			hidden_effect = { drop_cosmetic_tag = yes }
-			set_cosmetic_tag = PER_second_sasanian_empire
+			set_cosmetic_tag = SSE_empire_UNIFIED_tos
 			custom_effect_tooltip = form_sasanian_cities_change_name_tt
 			hidden_effect = {
 				## PENINSULA
 				1014 = { add_core_of = ROOT }
-				set_province_name = { id = 13313 name = "Awal"}
+				set_province_name = { id = 13313 name = SSE_PROVINCE_13313}
 				765 = { add_core_of = ROOT }
-				765 = { set_state_name = "Western Mazun"}
-				set_province_name = { id = 8051 name = "Al-Bidda"}
+				765 = { set_state_name = SSE_STATE_765}
+				set_province_name = { id = 8051 name = SSE_PROVINCE_8051}
 				658 = { add_core_of = ROOT }
-				658 = { set_state_name = "Mazun" }
-				set_province_name = { id = 7960 name = "ed-Dur"}
+				658 = { set_state_name = SSE_STATE_658 }
+				set_province_name = { id = 7960 name = SSE_PROVINCE_7960}
 				1013 = { add_core_of = ROOT }
-				1013 = { set_state_name = "Jazirat al-Ghanam"}
+				1013 = { set_state_name = SSE_STATE_1013}
 				add_victory_points = {
 					province = 13369
 					value = 2
 				}
 				294 = { add_core_of = ROOT }
-				294 = { set_state_name = "Eastern Mazun"}
-				set_province_name = { id = 10760 name = "Moscha Portus"}
+				294 = { set_state_name = SSE_STATE_294}
+				set_province_name = { id = 10760 name = SSE_PROVINCE_10760}
 				add_victory_points = {
 					province = 10760
 					value = 4
@@ -257,27 +257,27 @@ form_sasanian_empire_category = {
 					province = 8020
 					value = 1
 				}
-				set_province_name = { id = 8020 name = "Sur"}
+				set_province_name = { id = 8020 name = SSE_PROVINCE_8020}
 				1015 = { add_core_of = ROOT }
-				1015 = { set_state_name = "Southern Mazun"}
+				1015 = { set_state_name = SSE_STATE_1015}
 
 				## IRAN
-				set_province_name = { id = 1896 name = "Tauris"}
+				set_province_name = { id = 1896 name = SSE_PROVINCE_1896}
 				add_victory_points = {
 					province = 7953
 					value = 3
 				}
-				set_province_name = { id = 7953 name = "Ohrmazd-Ardaser"}
+				set_province_name = { id = 7953 name = SSE_PROVINCE_7953}
 				add_victory_points = {
 					province = 2026
 					value = 3
 				}
-				set_province_name = { id = 2026 name = "Spahan"}
+				set_province_name = { id = 2026 name = SSE_PROVINCE_2026}
 				add_victory_points = {
 					province = 12832
 					value = 3
 				}
-				set_province_name = { id = 12832 name = "Boxt-Artaxsir"}
+				set_province_name = { id = 12832 name = SSE_PROVINCE_12832}
 			}
 		}
 	}
@@ -310,29 +310,26 @@ form_sasanian_empire_category = {
 			}
 		}
 		visible = {
-			AND = {
-				has_cosmetic_tag = PER_second_sasanian_empire
-				has_completed_focus = PER_demand_sov_territory
-			}
+			has_cosmetic_tag = PER_second_sasanian_empire
 		}
 		complete_effect = {
 			custom_effect_tooltip = form_sasanian_cities_change_name_tt
 			hidden_effect = {
 				## ARMENIA
 				230 = { add_core_of = ROOT }
-				230 = { set_state_name = "Armin" }
-				set_province_name = { id = 12320 name = "Erebuni" }
-				set_province_name = { id = 12441 name = "Kumayri" }
+				230 = { set_state_name = SSE_STATE_230 }
+				set_province_name = { id = 12320 name = SSE_PROVINCE_12320 }
+				set_province_name = { id = 12441 name = SSE_PROVINCE_12441 }
 				## GEORGIA
 				231 = { add_core_of = ROOT }
-				231 = { set_state_name = "Kartii" }
-				set_province_name = { id = 3653 name = "Bathus" }
-				set_province_name = { id = 1599 name = "Tp'ilisi" }
+				231 = { set_state_name = SSE_STATE_231 }
+				set_province_name = { id = 3653 name = SSE_PROVINCE_3653 }
+				set_province_name = { id = 1599 name = SSE_PROVINCE_1599 }
 				## AZERBAIJANI
 				229 = { add_core_of = ROOT }
-				229 = { set_state_name = "Arran"}
-				set_province_name = { id = 7661 name = "Bagavan" }
-				set_province_name = { id = 11674 name = "Partav" }
+				229 = { set_state_name = SSE_STATE_229 }
+				set_province_name = { id = 7661 name = SSE_PROVINCE_7661 }
+				set_province_name = { id = 11674 name = SSE_PROVINCE_11674 }
 			}
 		}
 	}
@@ -371,17 +368,17 @@ form_sasanian_empire_category = {
 			hidden_effect = {
 				## ASHKHABAD
 				584 = { add_core_of = ROOT }
-				584 = { set_state_name = "Marv region" }
+				584 = { set_state_name = SSE_STATE_584 }
 				add_victory_points = {
 					province = 12333
 					value = 3
 				}
-				set_province_name = { id = 12333 name = "Mehrabad"}
+				set_province_name = { id = 12333 name = SSE_PROVINCE_12333}
 				add_victory_points = {
 					province = 7477
 					value = 2
 				}
-				set_province_name = { id = 7477 name = "Gurgān-i-Khurāsān"}
+				set_province_name = { id = 7477 name = SSE_PROVINCE_7477}
 			}
 		}
 	}
@@ -454,46 +451,46 @@ form_sasanian_empire_category = {
 		complete_effect = {
 			hidden_effect = {
 				232 = { add_core_of = ROOT }
-				232 = { set_state_name = "Varəna-abādagān"}
-				set_province_name = { id = 7624 name = "Darband"}
-				set_province_name = { id = 6701 name = "Vārāz-Ardāšīr"}
+				232 = { set_state_name = SSE_STATE_232}
+				set_province_name = { id = 7624 name = SSE_PROVINCE_7624}
+				set_province_name = { id = 6701 name = SSE_PROVINCE_6701}
 				237 = { add_core_of = ROOT }
-				237 = { set_state_name = "Dašt-i-Sūkhta"}
-				set_province_name = { id = 11724 name = "Dasht-i-Hun"}
+				237 = { set_state_name = SSE_STATE_237}
+				set_province_name = { id = 11724 name = SSE_PROVINCE_11724}
 				245 = { add_core_of = ROOT }
-				245 = { set_state_name = "Duzakān"}
-				set_province_name = { id = 11476 name = "Ābād-i-Kang"}
+				245 = { set_state_name = SSE_STATE_245}
+				set_province_name = { id = 11476 name = SSE_PROVINCE_11476}
 				265 = { add_core_of = ROOT }
-				265 = { set_state_name = "Sūrānābād"}
-				set_province_name = { id = 487 name = "Sūrānābād"}
+				265 = { set_state_name = SSE_STATE_265}
+				set_province_name = { id = 487 name = SSE_PROVINCE_487}
 				217 = { add_core_of = ROOT }
-				217 = { set_state_name = "Rūdān-Mehr"}
-				set_province_name = { id = 3529 name = Rūdān-i-Hun}
+				217 = { set_state_name = SSE_STATE_217}
+				set_province_name = { id = 3529 name = SSE_PROVINCE_3529}
 				236 = { add_core_of = ROOT }
-				236 = { set_state_name = "Ābādān-i-Kasp"}
-				set_province_name = { id = 9753 name = "Āstarkān"}
+				236 = { set_state_name = SSE_STATE_236}
+				set_province_name = { id = 9753 name = SSE_PROVINCE_9753}
 				829 = { add_core_of = ROOT }
-				829 = { set_state_name = "Ābān-Varəna"}
-				set_province_name = { id = 11523 name = "Ābān-Varena"}
-				set_province_name = { id = 9432 name = "Ādurbād-šahr"}
+				829 = { set_state_name = SSE_STATE_829}
+				set_province_name = { id = 11523 name = SSE_PROVINCE_11523}
+				set_province_name = { id = 9432 name = SSE_PROVINCE_9432}
 				260 = { add_core_of = ROOT }
-				260 = { set_state_name = "Varan-daryā"}
-				set_province_name = { id = 413 name = "Varnāk"}
+				260 = { set_state_name = SSE_STATE_260}
+				set_province_name = { id = 413 name = SSE_PROVINCE_413}
 				238 = { add_core_of = ROOT }
-				238 = { set_state_name = "Sardārān"}
-				set_province_name = { id = 775 name = "Sārān"}
+				238 = { set_state_name = SSE_STATE_238}
+				set_province_name = { id = 775 name = SSE_PROVINCE_775}
 				235 = { add_core_of = ROOT }
-				235 = { set_state_name = "Varnāspād"}
-				set_province_name = { id = 11696 name = "Pahlavān-gird"}
+				235 = { set_state_name = SSE_STATE_235}
+				set_province_name = { id = 11696 name = SSE_PROVINCE_11696}
 				827 = { add_core_of = ROOT }
-				827 = { set_state_name = "Rūdān-i-Deylam"}
-				set_province_name = { id = 11614 name = "Alān-gird"}
+				827 = { set_state_name = SSE_STATE_827}
+				set_province_name = { id = 11614 name = SSE_PROVINCE_11614}
 				828 = { add_core_of = ROOT }
-				828 = { set_state_name = "Alān-šahr"}
-				set_province_name = { id = 9628 name = "Aspān-i-Rōxšan"}
+				828 = { set_state_name = SSE_STATE_828}
+				set_province_name = { id = 9628 name = SSE_PROVINCE_9628}
 				821 = { add_core_of = ROOT }
-				821 = { set_state_name = "Spāhān-Kavād"}
-				set_province_name = { id = 3672 name = "Dāz-Ābād"}
+				821 = { set_state_name = SSE_STATE_821}
+				set_province_name = { id = 3672 name = SSE_PROVINCE_3672}
 			}
 		}
 	}
@@ -720,20 +717,20 @@ form_sasanian_empire_category = {
 		complete_effect = {
 			custom_effect_tooltip = form_sasanian_cities_change_name_tt
 			hidden_effect = {
-				444 = { set_state_name = "West Makran" }
-				1012 = { set_state_name = "North Makran" }
-				443 = { set_state_name = "East Makran" }
-				428 = { set_state_name = "Anartta" }
+				444 = { set_state_name = SSE_STATE_444 }
+				1012 = { set_state_name = SSE_STATE_1012 }
+				443 = { set_state_name = SSE_STATE_443 }
+				428 = { set_state_name = SSE_STATE_428 }
 
 				1012 = { add_core_of = ROOT }
 				444 = { add_core_of = ROOT }
 
 				428 = { add_core_of = ROOT }
-				set_province_name = { id = 10118 name = "Gujjarān" }
-				set_province_name = { id = 9975 name = "Vallabh" }
+				set_province_name = { id = 10118 name = SSE_PROVINCE_10118 }
+				set_province_name = { id = 9975 name = SSE_PROVINCE_9975 }
 				443 = { add_core_of = ROOT }
-				set_province_name = { id = 3456 name = "Debal" }
-				set_province_name = { id = 8098 name = "Qalʿa-i Makran" }
+				set_province_name = { id = 3456 name = SSE_PROVINCE_3456 }
+				set_province_name = { id = 8098 name = SSE_PROVINCE_8098 }
 			}
 		}
 	}
@@ -785,8 +782,8 @@ form_kushan_empire_category = {
 		}
 		fire_only_once = yes
 		complete_effect = {
-			set_country_flag = AFG_kushan_empire_restored_flag
-			set_cosmetic_tag = AFG_kushan_empire
+			set_country_flag = KSE_empire_UNIFIED_tos
+			set_cosmetic_tag = KSE_empire_UNIFIED_tos
 
 			custom_effect_tooltip = form_country_afghanistan_and_border_states_coring_tt
 			hidden_effect = {
@@ -1173,8 +1170,8 @@ form_neo_byzantine_empire_category = {
 			set_cosmetic_tag = BYZ_byzantium_UNIFIED_tos
 			set_capital = { state = 797 }
 			797 = { add_core_of = ROOT }
-			hidden_effect = { 797 = { set_state_name = "Constantinople" } }
-			set_province_name = { id = 9833 name = "Constantinople" }
+			hidden_effect = { 797 = { set_state_name = BYZ_STATE_797 } }
+			set_province_name = { id = 9833 name = BYZ_PROVINCE_9833 }
 			# Greece
 			custom_effect_tooltip = form_country_greece_coring_states_tt
 			hidden_effect = {
@@ -1185,84 +1182,82 @@ form_neo_byzantine_empire_category = {
 				184 = { add_core_of = ROOT }
 				187 = { add_core_of = ROOT }
 				182 = { add_core_of = ROOT }
-				731 = { set_state_name = "Thessalonica" }
-				184 = { set_state_name = "Strymon" }
+				731 = { set_state_name = BYZ_STATE_731 }
+				184 = { set_state_name = BYZ_STATE_184 }
 				
 				# Turkey
 			custom_effect_tooltip = form_country_turkey_coring_states_tt
 			hidden_effect = {
 				341 = { add_core_of = ROOT }
-				340 = { set_state_name = "Thracia" }
-				set_province_name = { id = 947 name = "Prusa" }
+				340 = { set_state_name = BYZ_STATE_340 }
 				340 = { add_core_of = ROOT }
-				340 = { set_state_name = "Prusa" }
-				set_province_name = { id = 947 name = "Prusa" }
+				set_province_name = { id = 947 name = BYZ_PROVINCE_947 }
 				339 = { add_core_of = ROOT }
-				339 = { set_state_name = "Samos" }
-				set_province_name = { id = 4112 name = "Smyrna" }
+				339 = { set_state_name = BYZ_STATE_339 }
+				set_province_name = { id = 4112 name = BYZ_PROVINCE_4112 }
 				342 = { add_core_of = ROOT }
-				342 = { set_state_name = "Cibyrrhaeot" }
-				set_province_name = { id = 1005 name = "Attaleia" }
+				342 = { set_state_name = BYZ_STATE_342 }
+				set_province_name = { id = 1005 name = BYZ_PROVINCE_1005 }
 				343 = { add_core_of = ROOT }
-				343 = { set_state_name = "Thrakesion" }
-				set_province_name = { id = 9878 name = "Nicopolis" }
-				set_province_name = { id = 10041 name = "Attouda" }
+				343 = { set_state_name = BYZ_STATE_343 }
+				set_province_name = { id = 9878 name = BYZ_PROVINCE_9878 }
+				set_province_name = { id = 10041 name = BYZ_PROVINCE_10041 }
 				347 = { add_core_of = ROOT }
-				347 = { set_state_name = "Optimaton" }
-				set_province_name = { id = 11811 name = "Nikomedeia" }
-				set_province_name = { id = 904 name = "Pontoheraclea" }
+				347 = { set_state_name = BYZ_STATE_347 }
+				set_province_name = { id = 11811 name = BYZ_PROVINCE_11811 }
+				set_province_name = { id = 904 name = BYZ_PROVINCE_904 }
 				49 = { add_core_of = ROOT }
-				49 = { set_state_name = "Bukellarion" }
-				set_province_name = { id = 11747 name = "Ancyra" }
-				set_province_name = { id = 3951 name = "Dorylaion" }
+				49 = { set_state_name = BYZ_STATE_49 }
+				set_province_name = { id = 11747 name = BYZ_PROVINCE_11747 }
+				set_province_name = { id = 3951 name = BYZ_PROVINCE_3951 }
 				346 = { add_core_of = ROOT }
-				346 = { set_state_name = "Anatolikon" }
-				set_province_name = { id = 940 name = "Ikonion" }
+				346 = { set_state_name = BYZ_STATE_346 }
+				set_province_name = { id = 940 name = BYZ_PROVINCE_940 }
 				345 = { add_core_of = ROOT }
-				345 = { set_state_name = "Seleucia" }
-				set_province_name = { id = 10056 name = "Hadrianopolis" }
+				345 = { set_state_name = BYZ_STATE_345 }
+				set_province_name = { id = 10056 name = BYZ_PROVINCE_10056 }
 				356 = { add_core_of = ROOT }
-				356 = { set_state_name = "Paphlagonia" }
-				set_province_name = { id = 6995 name = "Sinope" }
-				set_province_name = { id = 6938 name = "Kastamone" }
+				356 = { set_state_name = BYZ_STATE_356 }
+				set_province_name = { id = 6995 name = BYZ_PROVINCE_6995 }
+				set_province_name = { id = 6938 name = BYZ_PROVINCE_6938 }
 				348 = { add_core_of = ROOT }
-				348 = { set_state_name = "Cappadocia" }
-				set_province_name = { id = 3870 name = "Caesarea" }
+				348 = { set_state_name = BYZ_STATE_348 }
+				set_province_name = { id = 3870 name = BYZ_PROVINCE_3870 }
 				344 = { add_core_of = ROOT }
-				344 = { set_state_name = "Cilicia" }
-				set_province_name = { id = 11746 name = "Tarsus" }
-				set_province_name = { id = 886 name = "Germanicia" }
-				set_province_name = { id = 9893 name = "Ravanda" }
+				344 = { set_state_name = BYZ_STATE_344 }
+				set_province_name = { id = 11746 name = BYZ_PROVINCE_11746 }
+				set_province_name = { id = 886 name = BYZ_PROVINCE_886 }
+				set_province_name = { id = 9893 name = BYZ_PROVINCE_9893 }
 				355 = { add_core_of = ROOT }
-				355 = { set_state_name = "Armeniakon" }
-				set_province_name = { id = 11881 name = "Amisos" }
+				355 = { set_state_name = BYZ_STATE_355 }
+				set_province_name = { id = 11881 name = BYZ_PROVINCE_11881 }
 				349 = { add_core_of = ROOT }
-				349 = { set_state_name = "Koloneia" }
-				set_province_name = { id = 9777 name = "Sebasteia" }
+				349 = { set_state_name = BYZ_STATE_349 }
+				set_province_name = { id = 9777 name = BYZ_PROVINCE_9777 }
 				798 = { add_core_of = ROOT }
-				798 = { set_state_name = "Carsiano" }
-				set_province_name = { id = 919 name = "Amaseia" }
-				set_province_name = { id = 3862 name = "Taouion" }
+				798 = { set_state_name = BYZ_STATE_798 }
+				set_province_name = { id = 919 name = BYZ_PROVINCE_919 }
+				set_province_name = { id = 3862 name = BYZ_PROVINCE_3862 }
 				350 = { add_core_of = ROOT }
-				350 = { set_state_name = "Melitene" }
-				set_province_name = { id = 7620 name = "Melitene" }
-				set_province_name = { id = 9823 name = "Justinopolis" }
-				set_province_name = { id = 4512 name = "Amida" }
+				350 = { set_state_name = BYZ_STATE_350 }
+				set_province_name = { id = 7620 name = BYZ_PROVINCE_7620 }
+				set_province_name = { id = 9823 name = BYZ_PROVINCE_9823 }
+				set_province_name = { id = 4512 name = BYZ_PROVINCE_4512 }
 				354 = { add_core_of = ROOT }
-				354 = { set_state_name = "Chaldia" }
-				set_province_name = { id = 9932 name = "Trebizond" }
+				354 = { set_state_name = BYZ_STATE_354 }
+				set_province_name = { id = 9932 name = BYZ_PROVINCE_9932 }
 				353 = { add_core_of = ROOT }
-				353 = { set_state_name = "Manzikert" }
-				set_province_name = { id = 11853 name = "Theodosiopolis" }
+				353 = { set_state_name = BYZ_STATE_353 }
+				set_province_name = { id = 11853 name = BYZ_PROVINCE_11853 }
 				352 = { add_core_of = ROOT }
-				352 = { set_state_name = "Hubushkia" }
-				set_province_name = { id = 12476 name = "Kondylis" }
+				352 = { set_state_name = BYZ_STATE_352 }
+				set_province_name = { id = 12476 name = BYZ_PROVINCE_12476 }
 				800 = { add_core_of = ROOT }
-				800 = { set_state_name = "Vaspurakan" }
-				set_province_name = { id = 6935 name = "Eua" }
+				800 = { set_state_name = BYZ_STATE_800 }
+				set_province_name = { id = 6935 name = BYZ_PROVINCE_6935 }
 				799 = { add_core_of = ROOT }
-				799 = { set_state_name = "Antioch" }
-				set_province_name = { id = 12029 name = "Antiochia" }
+				799 = { set_state_name = BYZ_STATE_799 }
+				set_province_name = { id = 12029 name = BYZ_PROVINCE_12029 }
 			}
 			hidden_effect = {
 				news_event = { id = wtt_news.66 hours = 6 }
@@ -1303,7 +1298,7 @@ form_neo_byzantine_empire_category = {
 			}
 		}
 		ai_will_do = {
-			base = 10
+			base = 50
 		}
 		complete_effect = {
 			custom_effect_tooltip = neo_byz_form_bulgarian_dux_tt
@@ -1370,7 +1365,7 @@ form_neo_byzantine_empire_category = {
 			}
 		}
 		ai_will_do = {
-			base = 10
+			base = 50
 		}
 		visible = {
 			BUL = {
@@ -1451,7 +1446,7 @@ form_neo_byzantine_empire_category = {
 			}
 		}
 		ai_will_do = {
-			base = 10
+			base = 50
 		}
 		complete_effect = {
 			custom_effect_tooltip = neo_byz_form_serbian_dux_tt
@@ -2766,8 +2761,6 @@ form_neo_byzantine_empire_category = {
 			set_cosmetic_tag = BYZ_empire_UNIFIED_tos
 			set_capital = { state = 341 }
 			341 = { add_core_of = ROOT }
-			hidden_effect = { 341 = { set_state_name = "Constantinople" } }
-			set_province_name = { id = 9833 name = "Constantinople" }
 			82 = { add_core_of = ROOT }
 			81 = { add_core_of = ROOT }
 			46 = { add_core_of = ROOT }

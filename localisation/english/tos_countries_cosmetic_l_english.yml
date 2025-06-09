@@ -1,36 +1,4 @@
 ﻿l_english:
-PER_sasanian_kingdom: "Sasanian Kingdom"
-PER_sasanian_kingdom_DEF: "the Sasanian Kingdom"
-PER_sasanian_kingdom_ADJ: "Sasanian"
-PER_sasanian_kingdom_fascism: "Sasanian Kingdom"
-PER_sasanian_kingdom_fascism_DEF: "the Sasanian Kingdom"
-PER_sasanian_kingdom_fascism_ADJ: "Sasanian"
-PER_sasanian_kingdom_communism: "Sasanian People's Republic"
-PER_sasanian_kingdom_communism_DEF: "the Sasanian People's Republic"
-PER_sasanian_kingdom_communism_ADJ: "Sasanian"
-PER_sasanian_kingdom_democratic: "Sasanian Republic"
-PER_sasanian_kingdom_democratic_DEF: "the Sasanian Republic"
-PER_sasanian_kingdom_democratic_ADJ: "Sasanian"
-PER_sasanian_kingdom_neutrality: "Sasanian Kingdom"
-PER_sasanian_kingdom_neutrality_DEF: "the Sasanian Kingdom"
-PER_sasanian_kingdom_neutrality_ADJ: "Sasanian"
-
-PER_second_sasanian_empire: "Second Sasanian Empire"
-PER_second_sasanian_empire_DEF: "the Second Sasanian Empire"
-PER_second_sasanian_empire_ADJ: "Sasanian"
-PER_second_sasanian_empire_fascism: "Second Sasanian Empire"
-PER_second_sasanian_empire_fascism_DEF: "the Second Sasanian Empire"
-PER_second_sasanian_empire_fascism_ADJ: "Sasanian"
-PER_second_sasanian_empire_communism: "Socialist Republic of Sasanian"
-PER_second_sasanian_empire_communism_DEF: "the Socialist Republic of Sasanian"
-PER_second_sasanian_empire_communism_ADJ: "Sasanian"
-PER_second_sasanian_empire_democratic: "Second Sasanian Empire"
-PER_second_sasanian_empire_democratic_DEF: "the Second Sasanian Empire"
-PER_second_sasanian_empire_democratic_ADJ: "Sasanian"
-PER_second_sasanian_empire_neutrality: "Second Sasanian Empire"
-PER_second_sasanian_empire_neutrality_DEF: "the Second Sasanian Empire"
-PER_second_sasanian_empire_neutrality_ADJ: "Sasanian"
-
 IRQ_greater_mesopotamia_fascism: "Greater Mesopotamia"
 IRQ_greater_mesopotamia_fascism_DEF: "the Greater Mesopotamia"
 IRQ_greater_mesopotamia_fascism_ADJ: "Mesopotamia"
@@ -70,13 +38,42 @@ AFG_kushan_empire_democratic: "Kushanian Confederation"
 AFG_kushan_empire_democratic_DEF: "the Kushanian Confederation"
 AFG_kushan_empire_democratic_ADJ: "Kushan"
 
+## FORMED COUNTRIES
+
+####################
+######  TUR  #######
+###  BYZANTINE   ###
+####################
+
 BYZ_byzantium_UNIFIED_tos: "Byzantium"
 BYZ_byzantium_UNIFIED_tos_DEF: "the Byzantium"
-BYZ_byzantium_UNIFIED_tos_ADJ: "Byzantiums"
+BYZ_byzantium_UNIFIED_tos_ADJ: "Byzantine"
 
 BYZ_empire_UNIFIED_tos: "Second Byzantine Empire"
 BYZ_empire_UNIFIED_tos_DEF: "the Byzantine Empire"
-BYZ_empire_UNIFIED_tos_ADJ: "Byzantines"
+BYZ_empire_UNIFIED_tos_ADJ: "Byzantine"
+
+####################
+######  PER  #######
+###   SASANIAN   ###
+####################
+
+SSE_kingdom_UNIFIED_tos: "Sasanian Kingdom"
+SSE_kingdom_UNIFIED_tos_DEF: "the Sasanian Kingdom"
+SSE_kingdom_UNIFIED_tos_ADJ: "Sasanian"
+
+SSE_empire_UNIFIED_tos: "Second Sasanian Empire"
+SSE_empire_UNIFIED_tos_DEF: "the Sasanian Empire"
+SSE_empire_UNIFIED_tos_ADJ: "Sasanian"
+
+####################
+######  PER  #######
+###   SASANIAN   ###
+####################
+
+KSE_empire_UNIFIED_tos: "Kushan Empire"
+KSE_empire_UNIFIED_tos_DEF: "the Kushan Empire"
+KSE_empire_UNIFIED_tos_ADJ: "Kushan"
 
 ## BYZANTINE PUPPETS
 BUL_byzantine_dux: "Thema of Bulgarias"

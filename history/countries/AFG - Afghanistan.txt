@@ -68,6 +68,7 @@ IF = {
 	recruit_character = AFG_fayzulla_xojayev
 	recruit_character = AFG_korsirmat
 	recruit_character = AFG_junaid_khan
+	recruit_character = AFG_allah
 
 	# Generics
 	recruit_character = AFG_generic_army_1
@@ -242,6 +243,7 @@ IF = {
 	limit = {
 		NOT = { has_dlc = "Graveyard of Empires"}
 	}
+	recruit_character = AFG_allah
 	recruit_character = AFG_mohammed_zahir_shah
 	recruit_character = AFG_akram_sattari
 	recruit_character = AFG_yaqub_khan

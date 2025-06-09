@@ -50,13 +50,16 @@ form_kushan_empire_category = {
 
 	picture = GFX_decision_category_kushan_empire
 
-	priority = 20
+	priority = 0
 
 	allowed = {
 		original_tag = AFG
 	}
 	visible = {
-		has_completed_focus = AFG_recreate_second_kashuan_empire
+		OR = {
+			has_cosmetic_tag = KSE_empire_UNIFIED_tos
+			has_completed_focus = AFG_recreate_second_kashuan_empire
+		}
 	}
 }
 
@@ -74,7 +77,10 @@ form_sasanian_empire_category = {
 		}
 	}
 	visible = {
-		has_completed_focus = PER_second_sasanian_empire
+		OR = {
+			has_cosmetic_tag = SSE_kingdom_UNIFIED_tos
+			has_completed_focus = PER_second_sasanian_empire
+		}
 	}
 }
 

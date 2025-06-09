@@ -1,5 +1,34 @@
 characters={
 
+	### MODDING
+	AFG_allah={
+		advisor={
+			slot = political_advisor
+			idea_token = AFG_allah
+			allowed = {
+				original_tag = AFG
+			}
+			traits = {
+				allah
+			}
+			cost = 250
+			ai_will_do = {
+				factor = 10
+			}
+			available = {
+				has_completed_focus = AFG_make_official_faith
+			}
+		}
+		name = AFG_allah
+		portraits={
+			civilian={
+				small = GFX_tos_idea_allah
+			}
+		}
+	}
+	
+
+	### DEFAULT
 	AFG_mohammed_zahir_shah={
 		instance = {
 			allowed = { NOT = { has_dlc = "Graveyard of Empires" } }
