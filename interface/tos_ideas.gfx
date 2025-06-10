@@ -103,4 +103,4 @@ spriteTypes = {
 		name = "GFX_tos_idea_allah_small"
 		texturefile = "gfx/interface/ideas/tos_idea_allah.dds"
 	}
-}						
+}

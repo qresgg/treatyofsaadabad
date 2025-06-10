@@ -22,7 +22,7 @@ characters={
 		name = AFG_allah
 		portraits={
 			civilian={
-				small = GFX_tos_idea_allah
+				small = GFX_tos_idea_allah_small
 			}
 		}
 	}
